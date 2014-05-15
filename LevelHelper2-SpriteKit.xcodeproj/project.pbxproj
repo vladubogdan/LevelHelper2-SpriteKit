@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E12265D1924F45F005E8532 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E12265C1924F45F005E8532 /* Foundation.framework */; };
+		6E12265F1924F45F005E8532 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E12265E1924F45F005E8532 /* CoreGraphics.framework */; };
+		6E1226611924F45F005E8532 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1226601924F45F005E8532 /* UIKit.framework */; };
+		6E1226631924F45F005E8532 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1226621924F45F005E8532 /* SpriteKit.framework */; };
+		6E1226691924F45F005E8532 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E1226671924F45F005E8532 /* InfoPlist.strings */; };
+		6E12266B1924F45F005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12266A1924F45F005E8532 /* main.m */; };
+		6E12266F1924F45F005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12266E1924F45F005E8532 /* AppDelegate.m */; };
+		6E1226721924F45F005E8532 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1226701924F45F005E8532 /* Main_iPhone.storyboard */; };
+		6E1226751924F45F005E8532 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1226731924F45F005E8532 /* Main_iPad.storyboard */; };
+		6E1226781924F45F005E8532 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1226771924F45F005E8532 /* ViewController.m */; };
+		6E12267B1924F45F005E8532 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E12267A1924F45F005E8532 /* MyScene.m */; };
+		6E12267D1924F45F005E8532 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E12267C1924F45F005E8532 /* Spaceship.png */; };
+		6E12267F1924F45F005E8532 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E12267E1924F45F005E8532 /* Images.xcassets */; };
+		6E1226861924F45F005E8532 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1226851924F45F005E8532 /* XCTest.framework */; };
+		6E1226871924F45F005E8532 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E12265C1924F45F005E8532 /* Foundation.framework */; };
+		6E1226881924F45F005E8532 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1226601924F45F005E8532 /* UIKit.framework */; };
+		6E1226901924F45F005E8532 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E12268E1924F45F005E8532 /* InfoPlist.strings */; };
+		6E1226921924F45F005E8532 /* LevelHelper2_SpriteKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1226911924F45F005E8532 /* LevelHelper2_SpriteKitTests.m */; };
+		6E1227841924FAD1005E8532 /* libLevelHelper2API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1227831924FAD1005E8532 /* libLevelHelper2API.a */; };
+		6E1227871924FB54005E8532 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 6E1227851924FB54005E8532 /* images */; };
+		6E1227881924FB54005E8532 /* levels in Resources */ = {isa = PBXBuildFile; fileRef = 6E1227861924FB54005E8532 /* levels */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E1226891924F45F005E8532 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E1226511924F45F005E8532 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E1226581924F45F005E8532;
+			remoteInfo = "LevelHelper2-SpriteKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E1226591924F45F005E8532 /* LevelHelper2-SpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-SpriteKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E12265C1924F45F005E8532 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6E12265E1924F45F005E8532 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6E1226601924F45F005E8532 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6E1226621924F45F005E8532 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		6E1226661924F45F005E8532 /* LevelHelper2-SpriteKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LevelHelper2-SpriteKit-Info.plist"; sourceTree = "<group>"; };
+		6E1226681924F45F005E8532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6E12266A1924F45F005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E12266C1924F45F005E8532 /* LevelHelper2-SpriteKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LevelHelper2-SpriteKit-Prefix.pch"; sourceTree = "<group>"; };
+		6E12266D1924F45F005E8532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6E12266E1924F45F005E8532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6E1226711924F45F005E8532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		6E1226741924F45F005E8532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		6E1226761924F45F005E8532 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6E1226771924F45F005E8532 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6E1226791924F45F005E8532 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		6E12267A1924F45F005E8532 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		6E12267C1924F45F005E8532 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		6E12267E1924F45F005E8532 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6E1226841924F45F005E8532 /* LevelHelper2-SpriteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LevelHelper2-SpriteKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E1226851924F45F005E8532 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6E12268D1924F45F005E8532 /* LevelHelper2-SpriteKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LevelHelper2-SpriteKitTests-Info.plist"; sourceTree = "<group>"; };
+		6E12268F1924F45F005E8532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6E1226911924F45F005E8532 /* LevelHelper2_SpriteKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LevelHelper2_SpriteKitTests.m; sourceTree = "<group>"; };
+		6E12276D1924FAD1005E8532 /* LevelHelper2API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelHelper2API.h; sourceTree = "<group>"; };
+		6E12276E1924FAD1005E8532 /* LHAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHAnimation.h; sourceTree = "<group>"; };
+		6E12276F1924FAD1005E8532 /* LHAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHAsset.h; sourceTree = "<group>"; };
+		6E1227701924FAD1005E8532 /* LHBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBezier.h; sourceTree = "<group>"; };
+		6E1227711924FAD1005E8532 /* LHCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHCamera.h; sourceTree = "<group>"; };
+		6E1227721924FAD1005E8532 /* LHDistanceJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDistanceJointNode.h; sourceTree = "<group>"; };
+		6E1227731924FAD1005E8532 /* LHGravityArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGravityArea.h; sourceTree = "<group>"; };
+		6E1227741924FAD1005E8532 /* LHNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNode.h; sourceTree = "<group>"; };
+		6E1227751924FAD1005E8532 /* LHNodeAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodeAnimationProtocol.h; sourceTree = "<group>"; };
+		6E1227761924FAD1005E8532 /* LHNodeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodeProtocol.h; sourceTree = "<group>"; };
+		6E1227771924FAD1005E8532 /* LHParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHParallax.h; sourceTree = "<group>"; };
+		6E1227781924FAD1005E8532 /* LHParallaxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHParallaxLayer.h; sourceTree = "<group>"; };
+		6E1227791924FAD1005E8532 /* LHPrismaticJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHPrismaticJointNode.h; sourceTree = "<group>"; };
+		6E12277A1924FAD1005E8532 /* LHRevoluteJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRevoluteJointNode.h; sourceTree = "<group>"; };
+		6E12277B1924FAD1005E8532 /* LHRopeJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRopeJointNode.h; sourceTree = "<group>"; };
+		6E12277C1924FAD1005E8532 /* LHScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHScene.h; sourceTree = "<group>"; };
+		6E12277D1924FAD1005E8532 /* LHShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHShape.h; sourceTree = "<group>"; };
+		6E12277E1924FAD1005E8532 /* LHSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSprite.h; sourceTree = "<group>"; };
+		6E12277F1924FAD1005E8532 /* LHUserPropertyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUserPropertyProtocol.h; sourceTree = "<group>"; };
+		6E1227801924FAD1005E8532 /* LHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUtils.h; sourceTree = "<group>"; };
+		6E1227811924FAD1005E8532 /* LHWater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWater.h; sourceTree = "<group>"; };
+		6E1227821924FAD1005E8532 /* LHWeldJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWeldJointNode.h; sourceTree = "<group>"; };
+		6E1227831924FAD1005E8532 /* libLevelHelper2API.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLevelHelper2API.a; sourceTree = "<group>"; };
+		6E1227851924FB54005E8532 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = SOURCE_ROOT; };
+		6E1227861924FB54005E8532 /* levels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = levels; sourceTree = SOURCE_ROOT; };
+		6E632D00192505D3008324C6 /* LHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHConfig.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E1226561924F45F005E8532 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1227841924FAD1005E8532 /* libLevelHelper2API.a in Frameworks */,
+				6E12265F1924F45F005E8532 /* CoreGraphics.framework in Frameworks */,
+				6E1226611924F45F005E8532 /* UIKit.framework in Frameworks */,
+				6E1226631924F45F005E8532 /* SpriteKit.framework in Frameworks */,
+				6E12265D1924F45F005E8532 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E1226811924F45F005E8532 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1226861924F45F005E8532 /* XCTest.framework in Frameworks */,
+				6E1226881924F45F005E8532 /* UIKit.framework in Frameworks */,
+				6E1226871924F45F005E8532 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E1226501924F45F005E8532 = {
+			isa = PBXGroup;
+			children = (
+				6E1226641924F45F005E8532 /* LevelHelper2-SpriteKit */,
+				6E12268B1924F45F005E8532 /* LevelHelper2-SpriteKitTests */,
+				6E12265B1924F45F005E8532 /* Frameworks */,
+				6E12265A1924F45F005E8532 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E12265A1924F45F005E8532 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E1226591924F45F005E8532 /* LevelHelper2-SpriteKit.app */,
+				6E1226841924F45F005E8532 /* LevelHelper2-SpriteKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E12265B1924F45F005E8532 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E12265C1924F45F005E8532 /* Foundation.framework */,
+				6E12265E1924F45F005E8532 /* CoreGraphics.framework */,
+				6E1226601924F45F005E8532 /* UIKit.framework */,
+				6E1226621924F45F005E8532 /* SpriteKit.framework */,
+				6E1226851924F45F005E8532 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E1226641924F45F005E8532 /* LevelHelper2-SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				6E12276B1924FAD1005E8532 /* LevelHelper2-API */,
+				6E12266D1924F45F005E8532 /* AppDelegate.h */,
+				6E12266E1924F45F005E8532 /* AppDelegate.m */,
+				6E1226701924F45F005E8532 /* Main_iPhone.storyboard */,
+				6E1226731924F45F005E8532 /* Main_iPad.storyboard */,
+				6E1226761924F45F005E8532 /* ViewController.h */,
+				6E1226771924F45F005E8532 /* ViewController.m */,
+				6E1226791924F45F005E8532 /* MyScene.h */,
+				6E12267A1924F45F005E8532 /* MyScene.m */,
+				6E12267C1924F45F005E8532 /* Spaceship.png */,
+				6E12267E1924F45F005E8532 /* Images.xcassets */,
+				6E1226651924F45F005E8532 /* Supporting Files */,
+			);
+			path = "LevelHelper2-SpriteKit";
+			sourceTree = "<group>";
+		};
+		6E1226651924F45F005E8532 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E1227851924FB54005E8532 /* images */,
+				6E1227861924FB54005E8532 /* levels */,
+				6E1226661924F45F005E8532 /* LevelHelper2-SpriteKit-Info.plist */,
+				6E1226671924F45F005E8532 /* InfoPlist.strings */,
+				6E12266A1924F45F005E8532 /* main.m */,
+				6E12266C1924F45F005E8532 /* LevelHelper2-SpriteKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E12268B1924F45F005E8532 /* LevelHelper2-SpriteKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E1226911924F45F005E8532 /* LevelHelper2_SpriteKitTests.m */,
+				6E12268C1924F45F005E8532 /* Supporting Files */,
+			);
+			path = "LevelHelper2-SpriteKitTests";
+			sourceTree = "<group>";
+		};
+		6E12268C1924F45F005E8532 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E12268D1924F45F005E8532 /* LevelHelper2-SpriteKitTests-Info.plist */,
+				6E12268E1924F45F005E8532 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E12276B1924FAD1005E8532 /* LevelHelper2-API */ = {
+			isa = PBXGroup;
+			children = (
+				6E12276C1924FAD1005E8532 /* include */,
+				6E1227831924FAD1005E8532 /* libLevelHelper2API.a */,
+			);
+			path = "LevelHelper2-API";
+			sourceTree = SOURCE_ROOT;
+		};
+		6E12276C1924FAD1005E8532 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6E632D00192505D3008324C6 /* LHConfig.h */,
+				6E12276D1924FAD1005E8532 /* LevelHelper2API.h */,
+				6E12276E1924FAD1005E8532 /* LHAnimation.h */,
+				6E12276F1924FAD1005E8532 /* LHAsset.h */,
+				6E1227701924FAD1005E8532 /* LHBezier.h */,
+				6E1227711924FAD1005E8532 /* LHCamera.h */,
+				6E1227721924FAD1005E8532 /* LHDistanceJointNode.h */,
+				6E1227731924FAD1005E8532 /* LHGravityArea.h */,
+				6E1227741924FAD1005E8532 /* LHNode.h */,
+				6E1227751924FAD1005E8532 /* LHNodeAnimationProtocol.h */,
+				6E1227761924FAD1005E8532 /* LHNodeProtocol.h */,
+				6E1227771924FAD1005E8532 /* LHParallax.h */,
+				6E1227781924FAD1005E8532 /* LHParallaxLayer.h */,
+				6E1227791924FAD1005E8532 /* LHPrismaticJointNode.h */,
+				6E12277A1924FAD1005E8532 /* LHRevoluteJointNode.h */,
+				6E12277B1924FAD1005E8532 /* LHRopeJointNode.h */,
+				6E12277C1924FAD1005E8532 /* LHScene.h */,
+				6E12277D1924FAD1005E8532 /* LHShape.h */,
+				6E12277E1924FAD1005E8532 /* LHSprite.h */,
+				6E12277F1924FAD1005E8532 /* LHUserPropertyProtocol.h */,
+				6E1227801924FAD1005E8532 /* LHUtils.h */,
+				6E1227811924FAD1005E8532 /* LHWater.h */,
+				6E1227821924FAD1005E8532 /* LHWeldJointNode.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E1226581924F45F005E8532 /* LevelHelper2-SpriteKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E1226951924F45F005E8532 /* Build configuration list for PBXNativeTarget "LevelHelper2-SpriteKit" */;
+			buildPhases = (
+				6E1226551924F45F005E8532 /* Sources */,
+				6E1226561924F45F005E8532 /* Frameworks */,
+				6E1226571924F45F005E8532 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LevelHelper2-SpriteKit";
+			productName = "LevelHelper2-SpriteKit";
+			productReference = 6E1226591924F45F005E8532 /* LevelHelper2-SpriteKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E1226831924F45F005E8532 /* LevelHelper2-SpriteKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E1226981924F45F005E8532 /* Build configuration list for PBXNativeTarget "LevelHelper2-SpriteKitTests" */;
+			buildPhases = (
+				6E1226801924F45F005E8532 /* Sources */,
+				6E1226811924F45F005E8532 /* Frameworks */,
+				6E1226821924F45F005E8532 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E12268A1924F45F005E8532 /* PBXTargetDependency */,
+			);
+			name = "LevelHelper2-SpriteKitTests";
+			productName = "LevelHelper2-SpriteKitTests";
+			productReference = 6E1226841924F45F005E8532 /* LevelHelper2-SpriteKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E1226511924F45F005E8532 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "VLADU BOGDAN DANIEL PFA";
+				TargetAttributes = {
+					6E1226831924F45F005E8532 = {
+						TestTargetID = 6E1226581924F45F005E8532;
+					};
+				};
+			};
+			buildConfigurationList = 6E1226541924F45F005E8532 /* Build configuration list for PBXProject "LevelHelper2-SpriteKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E1226501924F45F005E8532;
+			productRefGroup = 6E12265A1924F45F005E8532 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E1226581924F45F005E8532 /* LevelHelper2-SpriteKit */,
+				6E1226831924F45F005E8532 /* LevelHelper2-SpriteKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E1226571924F45F005E8532 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1227871924FB54005E8532 /* images in Resources */,
+				6E12267D1924F45F005E8532 /* Spaceship.png in Resources */,
+				6E12267F1924F45F005E8532 /* Images.xcassets in Resources */,
+				6E1227881924FB54005E8532 /* levels in Resources */,
+				6E1226751924F45F005E8532 /* Main_iPad.storyboard in Resources */,
+				6E1226721924F45F005E8532 /* Main_iPhone.storyboard in Resources */,
+				6E1226691924F45F005E8532 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E1226821924F45F005E8532 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1226901924F45F005E8532 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E1226551924F45F005E8532 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E12267B1924F45F005E8532 /* MyScene.m in Sources */,
+				6E1226781924F45F005E8532 /* ViewController.m in Sources */,
+				6E12266F1924F45F005E8532 /* AppDelegate.m in Sources */,
+				6E12266B1924F45F005E8532 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E1226801924F45F005E8532 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1226921924F45F005E8532 /* LevelHelper2_SpriteKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E12268A1924F45F005E8532 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E1226581924F45F005E8532 /* LevelHelper2-SpriteKit */;
+			targetProxy = 6E1226891924F45F005E8532 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E1226671924F45F005E8532 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E1226681924F45F005E8532 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6E1226701924F45F005E8532 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E1226711924F45F005E8532 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		6E1226731924F45F005E8532 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E1226741924F45F005E8532 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		6E12268E1924F45F005E8532 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E12268F1924F45F005E8532 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E1226931924F45F005E8532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E1226941924F45F005E8532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E1226961924F45F005E8532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Prefix.pch";
+				INFOPLIST_FILE = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LevelHelper2-API",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6E1226971924F45F005E8532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Prefix.pch";
+				INFOPLIST_FILE = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LevelHelper2-API",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6E1226991924F45F005E8532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LevelHelper2-SpriteKit.app/LevelHelper2-SpriteKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LevelHelper2-SpriteKitTests/LevelHelper2-SpriteKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6E12269A1924F45F005E8532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LevelHelper2-SpriteKit.app/LevelHelper2-SpriteKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Prefix.pch";
+				INFOPLIST_FILE = "LevelHelper2-SpriteKitTests/LevelHelper2-SpriteKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E1226541924F45F005E8532 /* Build configuration list for PBXProject "LevelHelper2-SpriteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E1226931924F45F005E8532 /* Debug */,
+				6E1226941924F45F005E8532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E1226951924F45F005E8532 /* Build configuration list for PBXNativeTarget "LevelHelper2-SpriteKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E1226961924F45F005E8532 /* Debug */,
+				6E1226971924F45F005E8532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E1226981924F45F005E8532 /* Build configuration list for PBXNativeTarget "LevelHelper2-SpriteKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E1226991924F45F005E8532 /* Debug */,
+				6E12269A1924F45F005E8532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E1226511924F45F005E8532 /* Project object */;
+}
