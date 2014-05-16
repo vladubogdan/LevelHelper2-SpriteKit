@@ -10,20 +10,28 @@
 
 @implementation MyScene
 
--(id)initWithSize:(CGSize)size {    
-    if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
-        
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-        
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
+
++(id)scene{
+    
+    [[LHConfig sharedInstance] enableDebug];
+    
+    NSString* levelPath = @"levels/officerLevel.plist";
+//    NSString* levelPath = @"levels/cameraTest.plist";
+//    NSString* levelPath = @"levels/assetTestLevel.plist";
+//    NSString* levelPath = @"levels/level01.plist";
+//    NSString* levelPath = @"levels/level02-beziers.plist";
+//    NSString* levelPath = @"levels/movementAnimationTest.plist";
+//    NSString* levelPath = @"levels/parallaxTest.plist";
+//    NSString* levelPath = @"levels/rectangleGravityArea.plist";
+    
+    return [[self alloc] initWithContentOfFile:levelPath];
+}
+
+-(id)initWithContentOfFile:(NSString *)levelPlistFile
+{
+    self = [super initWithContentOfFile:levelPlistFile];
+    if(self){
+        /*YOUR INITIALIZING CODE HERE*/
     }
     return self;
 }
@@ -31,23 +39,9 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
-}
-
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    //DONT FORGET TO CALL SUPER
+    [super touchesBegan:touches withEvent:event];
+   
 }
 
 @end

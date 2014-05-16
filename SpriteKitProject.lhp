@@ -132,6 +132,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>ropeLevel.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>testCamera.lhs</key>
 				<dict>
 					<key>publish</key>
@@ -141,7 +146,7 @@
 			<key>publisherPluginName</key>
 			<string>Sprite Kit</string>
 			<key>selectedPublishTypeName</key>
-			<string>All Selected Scenes</string>
+			<string>Current Scene Only</string>
 		</dict>
 	</dict>
 	<key>uuid</key>

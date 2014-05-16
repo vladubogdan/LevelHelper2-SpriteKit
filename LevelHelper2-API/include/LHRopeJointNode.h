@@ -13,7 +13,7 @@
  The equivalent in SpriteKit is a SKPhysicsJointLimit joint object, which is a wrapper over Box2d b2RopeJoint.
  */
 
-@interface LHRopeJointNode : SKShapeNode <LHNodeProtocol>
+@interface LHRopeJointNode : SKNode <LHNodeProtocol>
 
 +(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
                                     parent:(SKNode*)prnt;
