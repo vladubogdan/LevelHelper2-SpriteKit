@@ -45,18 +45,23 @@
 
 /**
  Returns a node with the specified unique identifier or nil if that node is not found in the children hierarchy.
+ @param uuid The unique idenfier of the node.
+ @return A node or or nil.
  */
 -(id <LHNodeProtocol, LHNodeAnimationProtocol>)childNodeWithUUID:(NSString*)uuid;
 
 /**
- Returns all children nodes that have the specified tag values. 
- If containsAny is true a node needs to have at least one tag value in common with the one passed to this function.
- If containsAny is false a node needs to have all tags exactly the same as the ones passed to this function.
+ Returns all children nodes that have the specified tag values.
+ @param tagValues An array containing tag names. Array of NSString's.
+ @param any Specify if all or just one tag value of the node needs to be in common with the passed ones.
+ @return An array of nodes.
  */
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValue containsAny:(BOOL)any;
+-(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any;
 
 /**
  Returns all children nodes that are of specified class type.
+ @param type A "Class" type.
+ @return An array with all the found nodes of the specified class.
  */
 -(NSMutableArray*)childrenOfType:(Class)type;
 

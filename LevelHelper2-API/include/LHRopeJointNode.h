@@ -50,6 +50,8 @@
 
 /**
  If the line described by ptA and ptB intersects with the rope joint, the rope will be cut in two. This method ignores "canBeCut".
+ @param ptA The start point of the line used to cut the rope. In scene coordinates.
+ @param ptB The end point of the line used to cut the rope. In scene coordinates.
  */
 -(void)cutWithLineFromPointA:(CGPoint)ptA
                     toPointB:(CGPoint)ptB;

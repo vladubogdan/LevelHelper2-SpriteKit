@@ -39,8 +39,10 @@
  Returns the followed node or nil if no node is being fallowed;
  */
 -(SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)followedNode;
+
 /**
  Set a node that should be followed by this parallax.
+ @param node The node that should be followed by the parallax. Usually a camera node.
  */
 -(void)followNode:(SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)node;
 

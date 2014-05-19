@@ -84,7 +84,6 @@
 		6E12277D1924FAD1005E8532 /* LHShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHShape.h; sourceTree = "<group>"; };
 		6E12277E1924FAD1005E8532 /* LHSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSprite.h; sourceTree = "<group>"; };
 		6E12277F1924FAD1005E8532 /* LHUserPropertyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUserPropertyProtocol.h; sourceTree = "<group>"; };
-		6E1227801924FAD1005E8532 /* LHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUtils.h; sourceTree = "<group>"; };
 		6E1227811924FAD1005E8532 /* LHWater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWater.h; sourceTree = "<group>"; };
 		6E1227821924FAD1005E8532 /* LHWeldJointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWeldJointNode.h; sourceTree = "<group>"; };
 		6E1227831924FAD1005E8532 /* libLevelHelper2API.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLevelHelper2API.a; sourceTree = "<group>"; };
@@ -232,7 +231,6 @@
 				6E12277D1924FAD1005E8532 /* LHShape.h */,
 				6E12277E1924FAD1005E8532 /* LHSprite.h */,
 				6E12277F1924FAD1005E8532 /* LHUserPropertyProtocol.h */,
-				6E1227801924FAD1005E8532 /* LHUtils.h */,
 				6E1227811924FAD1005E8532 /* LHWater.h */,
 				6E1227821924FAD1005E8532 /* LHWeldJointNode.h */,
 			);
