@@ -66,10 +66,9 @@
 		6E89FCF8192E0A390040478F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6E89FCFA192E0A390040478F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6E89FCFC192E0A390040478F /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		6E89FD00192E0A390040478F /* LevelHelper2-SpriteKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LevelHelper2-SpriteKit-Info.plist"; sourceTree = "<group>"; };
+		6E89FD00192E0A390040478F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E89FD02192E0A390040478F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E89FD04192E0A390040478F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6E89FD06192E0A390040478F /* LevelHelper2-SpriteKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LevelHelper2-SpriteKit-Prefix.pch"; sourceTree = "<group>"; };
 		6E89FD07192E0A390040478F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E89FD08192E0A390040478F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6E89FD0B192E0A390040478F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -229,10 +228,9 @@
 		6E89FCFF192E0A390040478F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E89FD00192E0A390040478F /* LevelHelper2-SpriteKit-Info.plist */,
+				6E89FD00192E0A390040478F /* Info.plist */,
 				6E89FD01192E0A390040478F /* InfoPlist.strings */,
 				6E89FD04192E0A390040478F /* main.m */,
-				6E89FD06192E0A390040478F /* LevelHelper2-SpriteKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -598,8 +596,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Prefix.pch";
-				INFOPLIST_FILE = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/LevelHelper2-SpriteKit/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -612,8 +609,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Prefix.pch";
-				INFOPLIST_FILE = "LevelHelper2-SpriteKit/LevelHelper2-SpriteKit-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/LevelHelper2-SpriteKit/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
