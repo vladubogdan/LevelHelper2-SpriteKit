@@ -20,20 +20,6 @@
 +(instancetype)gravityAreaWithDictionary:(NSDictionary*)dict
                                   parent:(SKNode*)prnt;
 
-/**
- Returns the unique identifier of this node.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
 
 /**
  Returns the size as defined in LevelHelper.

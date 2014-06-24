@@ -14,9 +14,7 @@
 
 @implementation LHPrismaticJointNode
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     
     SKPhysicsJointSliding* joint;
     
@@ -47,9 +45,7 @@
     nodeA = nil;
     nodeB = nil;
     
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(nodeAUUID);
     LH_SAFE_RELEASE(nodeBUUID);
@@ -63,12 +59,9 @@
     if(self = [super init]){
         
         [prnt addChild:self];
-        [self setName:[dict objectForKey:@"name"]];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
         
         nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
         nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
@@ -78,12 +71,7 @@
         
         _enableLimits = [dict boolForKey:@"enablePrismaticLimit"];
         _lowerTranslation = [dict floatForKey:@"lowerTranslation"];
-        _upperTranslation = [dict floatForKey:@"upperTranslation"];;
-        
-        
-//        LHScene* scene = (LHScene*)[self scene];
-//        nodeA = [scene childNodeWithUUID:[dict objectForKey:@"spriteAUUID"]];
-//        nodeB = [scene childNodeWithUUID:[dict objectForKey:@"spriteBUUID"]];
+        _upperTranslation = [dict floatForKey:@"upperTranslation"];;        
     }
     return self;
 }
@@ -138,17 +126,8 @@
     return 0;
 }
 
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
+#pragma mark LHNodeProtocol Required
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt{
     if(debugShapeNode){

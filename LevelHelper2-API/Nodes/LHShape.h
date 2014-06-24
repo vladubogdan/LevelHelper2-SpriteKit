@@ -23,21 +23,6 @@
 
 
 /**
- Returns the unique identifier of this shape node.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
-
-/**
  Returns the size of the shape node by computing the bounding box of the points.
  */
 -(CGSize)size;

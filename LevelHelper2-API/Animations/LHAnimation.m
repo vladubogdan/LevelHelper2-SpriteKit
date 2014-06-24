@@ -40,6 +40,7 @@
 
 #import "LHCameraActivateProperty.h"
 
+#import "LHGameWorldNode.h"
 
 @implementation LHAnimation
 {
@@ -343,7 +344,7 @@
     LHScene* scene = [self scene];
     CGPoint offset = [scene designOffset];
     
-    if([animNode parent] == nil || [animNode parent] == scene || [animNode parent] == [scene sceneNode])
+    if([animNode parent] == nil || [animNode parent] == scene || [animNode parent] == [scene gameWorldNode])
     {
         newPos.x += offset.x;
         newPos.y += offset.y;

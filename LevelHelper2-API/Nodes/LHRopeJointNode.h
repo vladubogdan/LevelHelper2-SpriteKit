@@ -18,20 +18,6 @@
 +(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
                                     parent:(SKNode*)prnt;
 
-/**
- Returns the unique identifier of this joint node.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
 
 /**
  Returns the point where the joint is connected by the first body. In scene coordinates.

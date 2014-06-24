@@ -161,15 +161,6 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
 +(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
                          parent:(SKNode*)prnt;
 
-+(SKNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid
-                                     forNode:(SKNode*)selfNode;
-
-+(NSMutableArray*)childrenOfType:(Class)type
-                         forNode:(SKNode*)selfNode;
-
-+(NSMutableArray*)childrenWithTags:(NSArray*)tagValues
-                       containsAny:(BOOL)any
-                           forNode:(SKNode*)selfNode;
 
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 
@@ -180,8 +171,6 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
 -(CGPoint)designOffset;
 
 -(NSString*)relativePath;
-
--(void)removeRopeJointNode:(LHRopeJointNode*)node;;
 
 @end
 

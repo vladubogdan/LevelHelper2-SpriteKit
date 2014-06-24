@@ -12,6 +12,8 @@
 #import "LHScene.h"
 #import "LHAsset.h"
 #import "NSDictionary+LHDictionary.h"
+#import "LHGameWorldNode.h"
+
 
 double bisection(double g0, double g1, double epsilon,
                  double (*fp)(double, void *), void *data)
@@ -67,9 +69,7 @@ double fcat(double x, void *data)
 
 @implementation LHRopeJointNode
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     
     __unsafe_unretained SKPhysicsJointLimit* joint;
     SKShapeNode* debugShapeNode;
@@ -115,9 +115,7 @@ double fcat(double x, void *data)
     LH_SAFE_RELEASE(nodeAUUID);
     LH_SAFE_RELEASE(nodeBUUID);
     
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SUPER_DEALLOC();
 }
@@ -133,12 +131,9 @@ double fcat(double x, void *data)
     if(self = [super init]){
      
         [prnt addChild:self];
-        [self setName:[dict objectForKey:@"name"]];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
         
         thickness = [dict floatForKey:@"thickness"];
         segments = [dict intForKey:@"segments"];
@@ -214,10 +209,6 @@ double fcat(double x, void *data)
 }
 
 -(void)removeFromParent{
-    
-    if([[self scene] isKindOfClass:[LHScene class]]){
-        [(LHScene*)[self scene] removeRopeJointNode:self];
-    }
     
     if(cutJointA){
         [[self scene].physicsWorld removeJoint:cutJointA];
@@ -306,8 +297,8 @@ double fcat(double x, void *data)
     CGPoint a = [self anchorA];
     CGPoint b = [self anchorB];
     
-    ptA = [[self scene] convertPoint:ptA toNode:[[self scene] sceneNode]];
-    ptB = [[self scene] convertPoint:ptB toNode:[[self scene] sceneNode]];
+    ptA = [[self scene] convertPoint:ptA toNode:[[self scene] gameWorldNode]];
+    ptB = [[self scene] convertPoint:ptB toNode:[[self scene] gameWorldNode]];
     
     
     BOOL flipped = NO;
@@ -714,18 +705,7 @@ double fcat(double x, void *data)
 }
 
 #pragma mark LHNodeProtocol Required
-
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt{
     

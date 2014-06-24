@@ -12,12 +12,11 @@
 #import "LHScene.h"
 #import "LHConfig.h"
 #import "LHAnimation.h"
+#import "LHGameWorldNode.h"
 
 @implementation LHCamera
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     
     BOOL _active;
     BOOL _restricted;
@@ -34,9 +33,7 @@
     _followedNode = nil;
     LH_SAFE_RELEASE(_followedNodeUUID);
 
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SAFE_RELEASE(_animations);
     activeAnimation = nil;
@@ -60,11 +57,12 @@
         [prnt addChild:self];
         [self setName:[dict objectForKey:@"name"]];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
+        
+        
+        
+        
         
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
@@ -156,7 +154,7 @@
     if(_active)
     {
         CGPoint transPoint = [self transformToRestrictivePosition:[self position]];
-        [[[self scene] sceneNode] setPosition:transPoint];
+        [[[self scene] gameWorldNode] setPosition:transPoint];
     }
 }
 
@@ -193,17 +191,8 @@
 
 #pragma mark LHNodeProtocol Required
 
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
+#pragma mark LHNodeProtocol Required
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt{
 

@@ -18,12 +18,9 @@
  End users will have to subclass this class in order to add they're game logic.
  */
 
-@class LHCamera;
 @class LHScene;
-
-@interface LHSceneNode : SKNode
-+(instancetype)nodeWithScene:(LHScene*)val;
-@end
+@class LHGameWorldNode;
+@class LHUINode;
 
 
 @interface LHScene : SKScene <LHNodeProtocol>
@@ -58,10 +55,16 @@
 
 
 /**
- Because of the restrictions impose by SpriteKit all nodes are added to a subnode of the scene.
- This method, returns that subnode.
+ Returns the game world node. All children of this node will move with the camera. For UI elements use the uiNode.
  */
--(SKNode*)sceneNode;
+-(LHGameWorldNode*)gameWorldNode;
+
+/**
+ Returns the UI node. All children of this node will NOT move with the camera.
+ */
+-(LHUINode*)uiNode;
+
+
 
 /**
  Returns the informations that can be used to create an asset dynamically by specifying the file name.
@@ -72,59 +75,6 @@
  @return A dictionary containing the asset information or nil.
  */
 -(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
-
-
-
-#pragma mark - LHNodeProtocol
-
-/**
- Returns the unique identifier of the node.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
-
-/**
- Returns the scene to which this node belongs to.
- */
--(LHScene*)scene;
-
-/**
- Returns a node with the specified unique name or nil if that node is not found in the children hierarchy.
- @param name The unique name of the node.
- @return A node or or nil.
- */
--(SKNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name;
-
-/**
- Returns a node with the specified unique identifier or nil if that node is not found in the children hierarchy.
- @param uuid The unique idenfier of the node.
- @return A node or or nil.
- */
--(SKNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;
-
-/**
- Returns all children nodes that have the specified tag values.
- @param tagValues An array containing tag names. Array of NSString's.
- @param any Specify if all or just one tag value of the node needs to be in common with the passed ones.
- @return A node or or nil.
- */
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any;
-
-/**
- Returns all children nodes that are of specified class type.
- @param type A "Class" type.
- @return An array with all the found nodes of the specified class.
- */
--(NSMutableArray*)childrenOfType:(Class)type;
 
 
 @end

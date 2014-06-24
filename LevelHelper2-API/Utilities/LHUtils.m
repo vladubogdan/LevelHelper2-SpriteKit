@@ -11,6 +11,8 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHUserPropertyProtocol.h"
 #import "LHAnimation.h"
+#import "LHGameWorldNode.h"
+
 @implementation LHUtils
 
 +(id)userPropertyForNode:(id)node fromDictionary:(NSDictionary*)dict
@@ -103,7 +105,7 @@
     designPos = CGPointMake(designSize.width*unitPos.x,
                             designSize.height*(-unitPos.y));
 
-    if([node parent] == nil || [node parent] == scene || [node parent] == [scene sceneNode])
+    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode])
     {
         designPos.x += offset.x;
         designPos.y -= offset.y;

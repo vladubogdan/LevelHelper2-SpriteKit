@@ -21,21 +21,6 @@
                                   parent:(SKNode*)prnt;
 
 
-/**
- Returns the unique identifier of this sprite node.
- */
--(NSString*)uuid;
-
-/**
- Returns all the tags of the node. (array with NSString's);
- */
--(NSArray*)tags;
-
-/**
-Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
-
 -(void)setSpriteFrameWithName:(NSString*)spriteFrame;
 
 @end

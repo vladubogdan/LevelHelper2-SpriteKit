@@ -14,9 +14,7 @@
 
 @implementation LHGravityArea
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     
     CGSize _size;
 
@@ -26,9 +24,8 @@
 }
 
 -(void)dealloc{
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+
     LH_SUPER_DEALLOC();
 }
 
@@ -46,12 +43,12 @@
     if(self = [super init]){
         
         [prnt addChild:self];
-        [self setName:[dict objectForKey:@"name"]];
-
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
+        
+        
+        
         
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
@@ -139,17 +136,8 @@
 }
 
 #pragma mark LHNodeProtocol Required
--(NSString*)uuid{
-    return _uuid;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
 
 -(void)update:(NSTimeInterval)currentTime delta:(float)dt
 {

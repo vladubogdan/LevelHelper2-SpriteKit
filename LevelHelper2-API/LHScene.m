@@ -25,51 +25,22 @@
 #import "LHRevoluteJointNode.h"
 #import "LHDistanceJointNode.h"
 #import "LHPrismaticJointNode.h"
-
-
-
-@implementation LHSceneNode
-{
-    LHScene* _scene;
-}
-
--(void)dealloc{
-    _scene = nil;
-    LH_SUPER_DEALLOC();
-}
-
-+(instancetype)nodeWithScene:(LHScene*)val{
-    return LH_AUTORELEASED([[self alloc] initNodeWithScene:val]);
-}
-
-- (instancetype)initNodeWithScene:(LHScene*)scn{
-    if(self = [super init]){
-        _scene = scn;
-    }
-    return self;
-}
--(SKNode*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
--(NSString*)uuid{
-    return [_scene uuid];
-}
-
-@end
-
-
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"
 
 
 @implementation LHScene
 {
-    SKNode* _sceneNode;
+    __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
+    __unsafe_unretained LHUINode*           _uiNode;
+    
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+
+    LHNodeProtocolImpl*         _nodeProtocolImp;
+    
+    
     
     NSMutableDictionary* loadedTextures;
     NSMutableDictionary* loadedTextureAtlases;
@@ -84,7 +55,6 @@
     SKNode* touchedNode;
     BOOL touchedNodeWasDynamic;
     
-    NSMutableArray* ropeJoints;
     CGPoint ropeJointsCutStartPt;
     
     NSMutableDictionary* _loadedAssetsInformations;
@@ -98,11 +68,8 @@
 
 -(void)dealloc{
     
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_userProperty);
-    LH_SAFE_RELEASE(_tags);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
-    LH_SAFE_RELEASE(ropeJoints);
     LH_SAFE_RELEASE(relativePath);
     LH_SAFE_RELEASE(loadedTextures);
     LH_SAFE_RELEASE(loadedTextureAtlases);
@@ -191,30 +158,28 @@
         childrenOffset.y = (sceneSize.height - designResolution.height)*0.5;
     }
 
+
     if (self = [super initWithSize:sceneSize])
     {
-        _sceneNode = [LHSceneNode nodeWithScene:self];
-        [_sceneNode setName:@"LHSceneNode"];
-        self.anchorPoint = CGPointMake(0, 1);
-        [super addChild:_sceneNode];
-        
         relativePath = [[NSString alloc] initWithString:[levelPlistFile stringByDeletingLastPathComponent]];
         
         designResolutionSize = designResolution;
         designOffset         = childrenOffset;
         self.scaleMode       = scaleMode;
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        
         NSDictionary* tracedFixInfo = [dict objectForKey:@"tracedFixtures"];
         if(tracedFixInfo){
             tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFixInfo];
         }
-
         supportedDevices = [[NSArray alloc] initWithArray:devices];
+        
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+        
+        
+        
         
         if([dict boolForKey:@"useGlobalGravity"])
         {
@@ -229,13 +194,6 @@
         [self setBackgroundColor:[dict colorForKey:@"backgroundColor"]];
         
         
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        for(NSDictionary* childInfo in childrenInfo)
-        {
-            SKNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                        parent:_sceneNode];
-            #pragma unused (node)
-        }
         
         
         
@@ -262,15 +220,15 @@
                                             bRect.size.width*designSize.width ,
                                             -(bRect.size.height)*designSize.height);
                 
-                _sceneNode.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:skBRect];
-                _sceneNode.physicsBody.dynamic = NO;
+                [self gameWorldNode].physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:skBRect];
+                [self gameWorldNode].physicsBody.dynamic = NO;
                 if([[LHConfig sharedInstance] isDebug])
                 {
                     SKShapeNode* debugShapeNode = [SKShapeNode node];
                     debugShapeNode.path = CGPathCreateWithRect(skBRect,
                                                                nil);
                     debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:1];
-                    [_sceneNode addChild:debugShapeNode];
+                    [[self gameWorldNode] addChild:debugShapeNode];
                 }
             }
         }
@@ -313,7 +271,7 @@
                     debugShapeNode.path = CGPathCreateWithRect(gameWorldRectT,nil);
                     
                     debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:0 blue:1 alpha:1];
-                    [_sceneNode addChild:debugShapeNode];
+                    [[self gameWorldNode] addChild:debugShapeNode];
                 }
             }
         }
@@ -447,7 +405,7 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        for(LHRopeJointNode* rope in ropeJoints){
+        for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
             if([rope canBeCut]){
                 [rope cutWithLineFromPointA:ropeJointsCutStartPt
                                    toPointB:location];
@@ -535,46 +493,32 @@
 }
 #endif
 
--(SKNode*)sceneNode{
-    return _sceneNode;
+-(LHGameWorldNode*)gameWorldNode
+{
+    if(!_gameWorldNode){
+        for(SKNode* n in [self children]){
+            if([n isKindOfClass:[LHGameWorldNode class]]){
+                _gameWorldNode = (LHGameWorldNode*)n;
+                break;
+            }
+        }
+    }
+    return _gameWorldNode;
 }
-
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
+-(LHUINode*)uiNode{
+    if(!_uiNode){
+        for(SKNode* n in [self children]){
+            if([n isKindOfClass:[LHUINode class]]){
+                _uiNode = (LHUINode*)n;
+                break;
+            }
+        }
+    }
+    return _uiNode;
 }
 
 -(LHScene*)scene{
     return self;
-}
-
-- (SKNode*)childNodeWithName:(NSString *)name{
-    return [_sceneNode childNodeWithName:name];
-}
-
--(SKNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues
-                       containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues
-                         containsAny:any
-                            forNode:_sceneNode];
-}
-
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:_sceneNode];
 }
 
 
@@ -594,14 +538,11 @@
     previousUpdateTime = currentTime;
 }
 
+#pragma mark LHNodeProtocol Required
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
+
 -(void)update:(NSTimeInterval)currentTime delta:(float)dt{
-    
-    for(SKNode<LHNodeProtocol>* n in [_sceneNode children]){
-        if([n conformsToProtocol:@protocol(LHNodeProtocol)]){
-            [n update:currentTime
-                delta:dt];
-        }
-    }
+    [_nodeProtocolImp update:currentTime delta:dt];
 }
 
 @end
@@ -624,7 +565,20 @@
         scene = (LHScene*)[prnt scene];
     }
 
-    
+    if([nodeType isEqualToString:@"LHGameWorldNode"])
+    {
+        LHGameWorldNode* pNode = [LHGameWorldNode gameWorldNodeWithDictionary:childInfo
+                                                                       parent:prnt];
+        
+        //[pNode setDebugDraw:YES];
+        return pNode;
+    }
+    else if([nodeType isEqualToString:@"LHUINode"])
+    {
+        LHUINode* pNode = [LHUINode uiNodeWithDictionary:childInfo
+                                                  parent:prnt];
+        return pNode;
+    }
     if([nodeType isEqualToString:@"LHSprite"])
     {
         LHSprite* spr = [LHSprite spriteNodeWithDictionary:childInfo
@@ -691,7 +645,6 @@
         {
             LHRopeJointNode* jt = [LHRopeJointNode ropeJointNodeWithDictionary:childInfo
                                                                         parent:prnt];
-            [scene addRopeJointNode:jt];
             [scene addLateLoadingNode:jt];
         }
     }
@@ -730,110 +683,9 @@
     return nil;
 }
 
-+(SKNode<LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid
-                                    forNode:(SKNode <LHNodeProtocol>*)selfNode{
-    for(SKNode <LHNodeProtocol>* node in [selfNode children])
-    {
-        if([node respondsToSelector:@selector(uuid)]){
-            NSString* nodeUUID = [node performSelector:@selector(uuid)];
-            if(nodeUUID && [nodeUUID isEqualToString:uuid]){
-                return node;
-            }
-            
-            if([node respondsToSelector:@selector(childNodeWithUUID:)])
-            {
-                SKNode<LHNodeProtocol>* retNode = [node performSelector:@selector(childNodeWithUUID:)
-                                             withObject:uuid];
-                if(retNode){
-                    return retNode;
-                }
-            }
-        }
-    }
-    return nil;
-}
-
-+(NSMutableArray*)childrenOfType:(Class)type
-                         forNode:(SKNode*)selfNode{
-    
-    NSMutableArray* temp = [NSMutableArray array];
-    for(SKNode* child in [selfNode children]){
-        if([child isKindOfClass:type]){
-            [temp addObject:child];
-        }
-        
-        if([child respondsToSelector:@selector(childrenOfType:)])
-        {
-            NSMutableArray* childArray = [child performSelector:@selector(childrenOfType:)
-                                          withObject:type];
-            if(childArray){
-                [temp addObjectsFromArray:childArray];
-            }
-        }
-    }
-    return temp;
-}
-
-+(NSMutableArray*)childrenWithTags:(NSArray*)tagValues
-                       containsAny:(BOOL)any
-                          forNode:(SKNode*)selfNode
-{
-    NSMutableArray* temp = [NSMutableArray array];
-    for(id<LHNodeProtocol> child in [selfNode children]){
-        if([child conformsToProtocol:@protocol(LHNodeProtocol)])
-        {
-            NSArray* childTags =[child tags];
-
-            int foundCount = 0;
-            BOOL foundAtLeastOne = NO;
-            for(NSString* tg in childTags)
-            {
-                for(NSString* st in tagValues){
-                    if([st isEqualToString:tg])
-                    {
-                        ++foundCount;
-                        foundAtLeastOne = YES;
-                        if(any){
-                            break;
-                        }
-                    }
-                }
-                
-                if(any && foundAtLeastOne){
-                    [temp addObject:child];
-                    break;
-                }
-            }
-            if(!any && foundAtLeastOne && foundCount == [tagValues count] && [childTags count] == [tagValues count]){
-                [temp addObject:child];
-            }
-
-            if([child respondsToSelector:@selector(childrenWithTags:containsAny:)])
-            {
-                NSMutableArray* childArray = [child childrenWithTags:tagValues containsAny:any];
-                if(childArray){
-                    [temp addObjectsFromArray:childArray];
-                }
-            }
-        }
-    }
-    return temp;
-}
-
-
 
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
     return [tracedFixtures objectForKey:uuid];
-}
-
--(void)removeRopeJointNode:(LHRopeJointNode*)node{
-    [ropeJoints removeObject:node];
-}
--(void)addRopeJointNode:(LHRopeJointNode*)node{
-    if(!ropeJoints){
-        ropeJoints = [[NSMutableArray alloc] init];
-    }
-    [ropeJoints addObject:node];
 }
 
 -(void)addLateLoadingNode:(SKNode*)node{

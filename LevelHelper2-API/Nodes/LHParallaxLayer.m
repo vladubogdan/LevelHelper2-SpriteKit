@@ -14,18 +14,15 @@
 
 @implementation LHParallaxLayer
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     
     float _xRatio;
     float _yRatio;
 }
 
 -(void)dealloc{
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+
     LH_SUPER_DEALLOC();
 }
 
@@ -42,12 +39,11 @@
     if(self = [super init]){
                 
         [prnt addChild:self];
-        [self setName:[dict objectForKey:@"name"]];
-    
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
+        
+        
+        
         
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
@@ -75,22 +71,11 @@
         
         [self setPosition:pos];
         
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZPosition:z];
-        
         _xRatio = [dict floatForKey:@"xRatio"];
         _yRatio = [dict floatForKey:@"yRatio"];
         
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                SKNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-#pragma unused (node)
-            }
-        }
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+        
     }
     
     return self;
@@ -105,35 +90,12 @@
 }
 
 #pragma mark LHNodeProtocol Required
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
--(NSString*)uuid{
-    return _uuid;
+
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt
+{
+    [_nodeProtocolImp update:currentTime delta:dt];
 }
 
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
--(SKNode*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues containsAny:any forNode:self];
-}
-
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:self];
-}
-
-- (void)update:(NSTimeInterval)currentTime delta:(float)dt{
-    
-}
 @end

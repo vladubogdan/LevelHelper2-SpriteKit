@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 GameDevHelper.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
 /**
  Most of the LevelHelper-2 nodes conforms to this protocol.
@@ -20,6 +20,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
+ Returns the unique name of the node.
+ */
+-(NSString*)name;
+
+/**
  Returns the unique identifier of the node.
  */
 -(NSString*)uuid;
@@ -28,6 +33,7 @@
  Returns all tag values of the node.
  */
 -(NSArray*)tags;
+
 /**
  Returns the user property object assigned to this object or nil.
  */
@@ -37,6 +43,7 @@
  Returns the scene to which this node belongs to.
  */
 -(LHScene*)scene;
+
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt;
 
@@ -48,7 +55,7 @@
  @param uuid The unique idenfier of the node.
  @return A node or or nil.
  */
--(id <LHNodeProtocol, LHNodeAnimationProtocol>)childNodeWithUUID:(NSString*)uuid;
+-(SKNode<LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;
 
 /**
  Returns all children nodes that have the specified tag values.
@@ -65,8 +72,62 @@
  */
 -(NSMutableArray*)childrenOfType:(Class)type;
 
-
-
 -(BOOL)lateLoading;
 
 @end
+
+
+
+#pragma mark - LHNodeProtocol Implementation
+
+@interface LHNodeProtocolImpl : NSObject
+
++ (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
+- (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
+- (instancetype)initNodeProtocolImpWithNode:(SKNode*)nd;
+
++(void)loadChildrenForNode:(SKNode*)prntNode fromDictionary:(NSDictionary*)dict;
+
+-(NSString*)uuid;
+-(NSArray*)tags;
+-(id<LHUserPropertyProtocol>)userProperty;
+
+-(SKNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name;
+-(SKNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;
+-(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any;
+-(NSMutableArray*)childrenOfType:(Class)type;
+
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt;
+@end
+
+
+#define LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION  \
+-(NSString*)uuid{\
+return [_nodeProtocolImp uuid];\
+}\
+\
+-(NSArray*)tags{ \
+return [_nodeProtocolImp tags]; \
+} \
+\
+-(id<LHUserPropertyProtocol>)userProperty{\
+return [_nodeProtocolImp userProperty];\
+}\
+\
+-(SKNode*)childNodeWithName:(NSString*)name{\
+return [_nodeProtocolImp childNodeWithName:name];\
+}\
+\
+-(SKNode*)childNodeWithUUID:(NSString*)uuid{\
+return [_nodeProtocolImp childNodeWithUUID:uuid];\
+}\
+\
+-(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{\
+return [_nodeProtocolImp childrenWithTags:tagValues containsAny:any];\
+}\
+\
+-(NSMutableArray*)childrenOfType:(Class)type{\
+return [_nodeProtocolImp childrenOfType:type];\
+}\
+
+

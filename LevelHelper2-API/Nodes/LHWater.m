@@ -122,9 +122,7 @@ offset, increment, velocity, left, right, halfWidth, middle;
 ////////////////////////////////////////////////////////////////////////////////
 @implementation LHWater
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     
     CGPoint _scale;
     CGSize _size;
@@ -149,10 +147,11 @@ offset, increment, velocity, left, right, halfWidth, middle;
 }
 
 -(void)dealloc{
-    LH_SAFE_RELEASE(_uuid);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+
     LH_SAFE_RELEASE(bodySplashes);
     LH_SAFE_RELEASE(waves);
-    LH_SAFE_RELEASE(_userProperty);
+    
     LH_SUPER_DEALLOC();
 }
 
@@ -171,12 +170,10 @@ offset, increment, velocity, left, right, halfWidth, middle;
         
         [prnt addChild:self];
         
-        [self setName:[dict objectForKey:@"name"]];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
+        
         
         _size = [dict sizeForKey:@"size"];
         
@@ -234,28 +231,8 @@ offset, increment, velocity, left, right, halfWidth, middle;
         self.strokeColor = [dict colorForKey:@"colorOverlay"];
         self.fillColor = [dict colorForKey:@"colorOverlay"];
         
-        float alpha = [dict floatForKey:@"alpha"];
-        [self setAlpha:alpha/255.0f];
-        
-        float rot = [dict floatForKey:@"rotation"];
-        [self setZRotation:LH_DEGREES_TO_RADIANS(-rot)];
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZPosition:z];
-        
 
-        
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                SKNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-                #pragma unused (node)
-            }
-        }
-        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         [self createTurbulence];
         
@@ -388,17 +365,7 @@ offset, increment, velocity, left, right, halfWidth, middle;
 }
 
 #pragma mark LHNodeProtocol Required
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {

@@ -58,6 +58,11 @@
 		6E89FDB2192E0C510040478F /* LHConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD8C192E0C510040478F /* LHConfig.m */; };
 		6E89FDB3192E0C510040478F /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD8E192E0C510040478F /* LHUtils.m */; };
 		6E89FDB6192E0C930040478F /* LHSceneSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDB5192E0C930040478F /* LHSceneSubclass.m */; };
+		6EBEA2D6195984D800726044 /* LHSceneDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2D5195984D800726044 /* LHSceneDemo.m */; };
+		6EBEA2D9195985CA00726044 /* LHSceneCameraDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2D8195985CA00726044 /* LHSceneCameraDemo.m */; };
+		6EBEA2E019598A1400726044 /* LHUINode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2DF19598A1400726044 /* LHUINode.m */; };
+		6EBEA2E319598AC000726044 /* LHGameWorldNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E219598AC000726044 /* LHGameWorldNode.m */; };
+		6EBEA2E519598E2B00726044 /* LHNodeProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +164,15 @@
 		6E89FD8E192E0C510040478F /* LHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHUtils.m; sourceTree = "<group>"; };
 		6E89FDB4192E0C930040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneSubclass.h; sourceTree = "<group>"; };
 		6E89FDB5192E0C930040478F /* LHSceneSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSceneSubclass.m; sourceTree = "<group>"; };
+		6EBEA2D4195984D800726044 /* LHSceneDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneDemo.h; sourceTree = "<group>"; };
+		6EBEA2D5195984D800726044 /* LHSceneDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSceneDemo.m; sourceTree = "<group>"; };
+		6EBEA2D7195985CA00726044 /* LHSceneCameraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraDemo.h; sourceTree = "<group>"; };
+		6EBEA2D8195985CA00726044 /* LHSceneCameraDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSceneCameraDemo.m; sourceTree = "<group>"; };
+		6EBEA2DE19598A1400726044 /* LHUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUINode.h; sourceTree = "<group>"; };
+		6EBEA2DF19598A1400726044 /* LHUINode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHUINode.m; sourceTree = "<group>"; };
+		6EBEA2E119598AC000726044 /* LHGameWorldNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGameWorldNode.h; sourceTree = "<group>"; };
+		6EBEA2E219598AC000726044 /* LHGameWorldNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHGameWorldNode.m; sourceTree = "<group>"; };
+		6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +225,7 @@
 		6E89FCFE192E0A390040478F /* LevelHelper2-SpriteKit */ = {
 			isa = PBXGroup;
 			children = (
+				6EBEA2D3195984D800726044 /* DemoExamples */,
 				6E89FDB4192E0C930040478F /* LHSceneSubclass.h */,
 				6E89FDB5192E0C930040478F /* LHSceneSubclass.m */,
 				6E89FD07192E0A390040478F /* AppDelegate.h */,
@@ -321,6 +336,10 @@
 		6E89FD67192E0C510040478F /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				6EBEA2DE19598A1400726044 /* LHUINode.h */,
+				6EBEA2DF19598A1400726044 /* LHUINode.m */,
+				6EBEA2E119598AC000726044 /* LHGameWorldNode.h */,
+				6EBEA2E219598AC000726044 /* LHGameWorldNode.m */,
 				6E89FD68192E0C510040478F /* LHAsset.h */,
 				6E89FD69192E0C510040478F /* LHAsset.m */,
 				6E89FD6A192E0C510040478F /* LHBezier.h */,
@@ -360,6 +379,7 @@
 			children = (
 				6E89FD87192E0C510040478F /* LHNodeAnimationProtocol.h */,
 				6E89FD88192E0C510040478F /* LHNodeProtocol.h */,
+				6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */,
 				6E89FD89192E0C510040478F /* LHUserPropertyProtocol.h */,
 			);
 			path = Protocols;
@@ -374,6 +394,17 @@
 				6E89FD8E192E0C510040478F /* LHUtils.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6EBEA2D3195984D800726044 /* DemoExamples */ = {
+			isa = PBXGroup;
+			children = (
+				6EBEA2D4195984D800726044 /* LHSceneDemo.h */,
+				6EBEA2D5195984D800726044 /* LHSceneDemo.m */,
+				6EBEA2D7195985CA00726044 /* LHSceneCameraDemo.h */,
+				6EBEA2D8195985CA00726044 /* LHSceneCameraDemo.m */,
+			);
+			path = DemoExamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,18 +500,23 @@
 				6E89FDAA192E0C510040478F /* LHParallaxLayer.m in Sources */,
 				6E89FD96192E0C510040478F /* LHCameraActivateProperty.m in Sources */,
 				6E89FDA8192E0C510040478F /* LHNode.m in Sources */,
+				6EBEA2D6195984D800726044 /* LHSceneDemo.m in Sources */,
 				6E89FDA5192E0C510040478F /* LHCamera.m in Sources */,
 				6E89FDAE192E0C510040478F /* LHShape.m in Sources */,
 				6E89FD9B192E0C510040478F /* LHOpacityProperty.m in Sources */,
 				6E89FD12192E0A390040478F /* ViewController.m in Sources */,
 				6E89FDB0192E0C510040478F /* LHWater.m in Sources */,
 				6E89FDB2192E0C510040478F /* LHConfig.m in Sources */,
+				6EBEA2E319598AC000726044 /* LHGameWorldNode.m in Sources */,
 				6E89FDB3192E0C510040478F /* LHUtils.m in Sources */,
+				6EBEA2E019598A1400726044 /* LHUINode.m in Sources */,
+				6EBEA2E519598E2B00726044 /* LHNodeProtocol.m in Sources */,
 				6E89FD09192E0A390040478F /* AppDelegate.m in Sources */,
 				6E89FDA1192E0C510040478F /* NSDictionary+LHDictionary.m in Sources */,
 				6E89FDA4192E0C510040478F /* LHBezier.m in Sources */,
 				6E89FD9F192E0C510040478F /* LHSpriteFrameProperty.m in Sources */,
 				6E89FDA6192E0C510040478F /* LHDistanceJointNode.m in Sources */,
+				6EBEA2D9195985CA00726044 /* LHSceneCameraDemo.m in Sources */,
 				6E89FDB6192E0C930040478F /* LHSceneSubclass.m in Sources */,
 				6E89FDA2192E0C510040478F /* LHScene.m in Sources */,
 				6E89FDAC192E0C510040478F /* LHRevoluteJointNode.m in Sources */,

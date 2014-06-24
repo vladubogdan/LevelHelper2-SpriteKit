@@ -20,21 +20,6 @@
 +(instancetype)parallaxLayerWithDictionary:(NSDictionary*)dict
                                     parent:(SKNode*)prnt;
 
-/**
- Returns the unique identifier of this parallax.
- */
--(NSString*)uuid;
-
-/**
- Returns all tag values of the node.
- */
--(NSArray*)tags;
-
-/**
- Returns the user property object assigned to this object or nil.
- */
--(id<LHUserPropertyProtocol>)userProperty;
-
 
 /**
  Returns the x ratio that is used to calculate the children position.

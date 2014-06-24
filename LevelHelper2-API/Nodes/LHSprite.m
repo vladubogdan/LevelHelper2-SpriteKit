@@ -15,10 +15,8 @@
 
 @implementation LHSprite
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
-
+    LHNodeProtocolImpl*         _nodeProtocolImp;
+    
     NSMutableArray* _animations;
     __weak LHAnimation* activeAnimation;
     
@@ -27,9 +25,8 @@
 
 -(void)dealloc{
     atlas = nil;
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+
     LH_SAFE_RELEASE(_animations);
     activeAnimation = nil;
     LH_SUPER_DEALLOC();
@@ -50,12 +47,8 @@
         
         [prnt addChild:self];
         
-        [self setName:[dict objectForKey:@"name"]];
-        
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
         
         LHScene* scene = (LHScene*)[self scene];
@@ -108,15 +101,6 @@
 
         [self setColor:[dict colorForKey:@"colorOverlay"]];
                 
-        float alpha = [dict floatForKey:@"alpha"];
-        [self setAlpha:alpha/255.0f];
-        
-        
-        float rot = [dict floatForKey:@"rotation"];
-        [self setZRotation:LH_DEGREES_TO_RADIANS(-rot)];
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZPosition:z];
         
         [self loadPhysicsFromDict:[dict objectForKey:@"nodePhysics"]];
 
@@ -141,16 +125,8 @@
         [self setPosition:pos];
 
 
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                SKNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-                #pragma unused (node)
-            }
-        }
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+        
         
         [LHUtils createAnimationsForNode:self
                          animationsArray:&_animations
@@ -364,46 +340,20 @@
 }
 
 
--(SKNode*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
+#pragma mark LHNodeProtocol Required
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues containsAny:any forNode:self];
-}
-
--(NSString*)uuid{
-    return _uuid;
-}
-
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
     if(activeAnimation){
         [activeAnimation updateTimeWithDelta:dt];
     }
-    
-    for(SKNode<LHNodeProtocol>* n in [self children]){
-        if([n conformsToProtocol:@protocol(LHNodeProtocol)]){
-            [n update:currentTime delta:dt];
-        }
-    }
+
+    [_nodeProtocolImp update:currentTime delta:dt];
 }
 
-#pragma mark - 
+#pragma mark -
 -(void)setActiveAnimation:(LHAnimation*)anim{
     activeAnimation = anim;
 }

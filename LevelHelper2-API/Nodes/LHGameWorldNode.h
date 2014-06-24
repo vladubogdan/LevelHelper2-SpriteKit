@@ -1,5 +1,5 @@
 //
-//  LHNode.h
+//  LHGameWorldNode.h
 //  LevelHelper2-SpriteKit
 //
 //  Created by Bogdan Vladu on 31/03/14.
@@ -8,17 +8,15 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
-#import "LHNodeAnimationProtocol.h"
 /**
- LHNode class is used to load a node object from a level file.
+ LHNode class is used to load the game world elements.
  Users can retrieve node objects by calling the scene (LHScene) childNodeWithName: method.
  */
 
 
-@interface LHNode : SKSpriteNode <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHGameWorldNode : SKNode <LHNodeProtocol>
 
-+(instancetype)nodeWithDictionary:(NSDictionary*)dict
-                           parent:(SKNode*)prnt;
-
++(instancetype)gameWorldNodeWithDictionary:(NSDictionary*)dict
+                                    parent:(SKNode*)prnt;
 
 @end

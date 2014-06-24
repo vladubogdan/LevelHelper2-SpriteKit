@@ -16,18 +16,15 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
 @implementation LHBezier
 {
-    NSString* _uuid;
-    NSArray* _tags;
-    id<LHUserPropertyProtocol> _userProperty;
+    LHNodeProtocolImpl*         _nodeProtocolImp;
     
     NSMutableArray* _animations;
     __weak LHAnimation* activeAnimation;
 }
 
 -(void)dealloc{
-    LH_SAFE_RELEASE(_uuid);
-    LH_SAFE_RELEASE(_tags);
-    LH_SAFE_RELEASE(_userProperty);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
+
     
     LH_SAFE_RELEASE(_animations);
     activeAnimation = nil;
@@ -50,13 +47,13 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         [prnt addChild:self];
         
-        [self setName:[dict objectForKey:@"name"]];
+
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
+                                                                                    node:self];
         
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
-        [LHUtils tagsFromDictionary:dict
-                       savedToArray:&_tags];
-        _userProperty = [LHUtils userPropertyForNode:self fromDictionary:dict];
-                
+        
+        
+        
         CGPoint unitPos = [dict pointForKey:@"generalPosition"];
         CGPoint pos = [LHUtils positionForNode:self
                                       fromUnit:unitPos];
@@ -86,14 +83,6 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         self.strokeColor = [dict colorForKey:@"colorOverlay"];
         
-        float alpha = [dict floatForKey:@"alpha"];
-        [self setAlpha:alpha/255.0f];
-        
-        float rot = [dict floatForKey:@"rotation"];
-        [self setZRotation:LH_DEGREES_TO_RADIANS(-rot)];
-        
-        float z = [dict floatForKey:@"zOrder"];
-        [self setZPosition:z];
         
         
         NSArray* points = [dict objectForKey:@"points"];
@@ -175,22 +164,8 @@ static float MAX_BEZIER_STEPS = 24.0f;
         [self loadPhysicsFromDict:[dict objectForKey:@"nodePhysics"]];
         
         
-        //scale must be set after loading the physic info or else spritekit will not resize the body
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setXScale:scl.x];
-        [self setYScale:scl.y];
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
-        
-        NSArray* childrenInfo = [dict objectForKey:@"children"];
-        if(childrenInfo)
-        {
-            for(NSDictionary* childInfo in childrenInfo)
-            {
-                SKNode* node = [LHScene createLHNodeWithDictionary:childInfo
-                                                            parent:self];
-#pragma unused (node)
-            }
-        }
         
         [LHUtils createAnimationsForNode:self
                          animationsArray:&_animations
@@ -378,36 +353,13 @@ static float MAX_BEZIER_STEPS = 24.0f;
 }
 
 #pragma mark LHNodeProtocol Required
--(NSString*)uuid{
-    return _uuid;
+LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
+
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt
+{
+    [_nodeProtocolImp update:currentTime delta:dt];
 }
 
--(NSArray*)tags{
-    return _tags;
-}
-
--(id<LHUserPropertyProtocol>)userProperty{
-    return _userProperty;
-}
-
--(SKNode*)childNodeWithUUID:(NSString*)uuid{
-    return [LHScene childNodeWithUUID:uuid
-                              forNode:self];
-}
-
--(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any{
-    return [LHScene childrenWithTags:tagValues containsAny:any forNode:self];
-}
-
-
--(NSMutableArray*)childrenOfType:(Class)type{
-    return [LHScene childrenOfType:type
-                           forNode:self];
-}
-
--(void)update:(NSTimeInterval)currentTime delta:(float)dt{
-    
-}
 
 #pragma mark - LHNodeAnimationProtocol
 -(void)setActiveAnimation:(LHAnimation*)anim{
