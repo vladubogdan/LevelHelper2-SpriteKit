@@ -17,17 +17,13 @@
     CGSize _size;
     
     LHNodeProtocolImpl*         _nodeProtocolImp;
- 
+    LHNodeAnimationProtocolImp* _animationProtocolImp;
     
-    NSMutableArray* _animations;
-    __weak LHAnimation* activeAnimation;
 }
 
 -(void)dealloc{
     LH_SAFE_RELEASE(_nodeProtocolImp);
-
-    LH_SAFE_RELEASE(_animations);
-    activeAnimation = nil;
+    LH_SAFE_RELEASE(_animationProtocolImp);
     
     LH_SUPER_DEALLOC();
 }
@@ -100,11 +96,8 @@
             NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
         }
         
-        [LHUtils createAnimationsForNode:self
-                         animationsArray:&_animations
-                         activeAnimation:&activeAnimation
-                          fromDictionary:dict];
-
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
+                                                                                                      node:self];
     }
     
     return self;
@@ -299,12 +292,11 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
     [_nodeProtocolImp update:currentTime delta:dt];
+    [_animationProtocolImp update:currentTime delta:dt];
 }
 
 
-#pragma mark - LHNodeAnimationProtocol
--(void)setActiveAnimation:(LHAnimation*)anim{
-    activeAnimation = anim;
-}
+#pragma mark - LHNodeAnimationProtocol Required
+LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION
 
 @end

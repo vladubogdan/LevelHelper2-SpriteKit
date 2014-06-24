@@ -16,19 +16,16 @@
 @implementation LHSprite
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
+    LHNodeAnimationProtocolImp* _animationProtocolImp;
     
-    NSMutableArray* _animations;
-    __weak LHAnimation* activeAnimation;
-    
-    __weak SKTextureAtlas* atlas;
+    __unsafe_unretained SKTextureAtlas* atlas;
 }
 
 -(void)dealloc{
     atlas = nil;
     LH_SAFE_RELEASE(_nodeProtocolImp);
+    LH_SAFE_RELEASE(_animationProtocolImp);
 
-    LH_SAFE_RELEASE(_animations);
-    activeAnimation = nil;
     LH_SUPER_DEALLOC();
 }
 
@@ -128,11 +125,8 @@
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
-        [LHUtils createAnimationsForNode:self
-                         animationsArray:&_animations
-                         activeAnimation:&activeAnimation
-                          fromDictionary:dict];
-        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
+                                                                                                      node:self];
         
     }
     return self;
@@ -346,16 +340,11 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
-    if(activeAnimation){
-        [activeAnimation updateTimeWithDelta:dt];
-    }
-
+    [_animationProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
 }
 
-#pragma mark -
--(void)setActiveAnimation:(LHAnimation*)anim{
-    activeAnimation = anim;
-}
+#pragma mark - LHNodeAnimationProtocol Required
+LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION
 
 @end

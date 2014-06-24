@@ -15,16 +15,12 @@
 @implementation LHShape
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
-    
-    NSMutableArray* _animations;
-    __weak LHAnimation* activeAnimation;
+    LHNodeAnimationProtocolImp* _animationProtocolImp;
 }
 
 -(void)dealloc{
     LH_SAFE_RELEASE(_nodeProtocolImp);
-    
-    LH_SAFE_RELEASE(_animations);
-    activeAnimation = nil;
+    LH_SAFE_RELEASE(_animationProtocolImp);
 
     LH_SUPER_DEALLOC();
 }
@@ -113,10 +109,9 @@
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
-        [LHUtils createAnimationsForNode:self
-                         animationsArray:&_animations
-                         activeAnimation:&activeAnimation
-                          fromDictionary:dict];
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
+                                                                                                      node:self];
+        
     }
     
     return self;
@@ -348,13 +343,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
+    [_animationProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
 }
 
-#pragma mark - LHNodeAnimationProtocol
--(void)setActiveAnimation:(LHAnimation*)anim{
-    activeAnimation = anim;
-}
 
+#pragma mark - LHNodeAnimationProtocol Required
+LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION
 
 @end

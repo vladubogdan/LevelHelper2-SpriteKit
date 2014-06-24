@@ -63,6 +63,7 @@
 		6EBEA2E019598A1400726044 /* LHUINode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2DF19598A1400726044 /* LHUINode.m */; };
 		6EBEA2E319598AC000726044 /* LHGameWorldNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E219598AC000726044 /* LHGameWorldNode.m */; };
 		6EBEA2E519598E2B00726044 /* LHNodeProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */; };
+		6EBEA2E71959980F00726044 /* LHNodeAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E61959980F00726044 /* LHNodeAnimationProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +174,7 @@
 		6EBEA2E119598AC000726044 /* LHGameWorldNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGameWorldNode.h; sourceTree = "<group>"; };
 		6EBEA2E219598AC000726044 /* LHGameWorldNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHGameWorldNode.m; sourceTree = "<group>"; };
 		6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeProtocol.m; sourceTree = "<group>"; };
+		6EBEA2E61959980F00726044 /* LHNodeAnimationProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeAnimationProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				6E89FD87192E0C510040478F /* LHNodeAnimationProtocol.h */,
+				6EBEA2E61959980F00726044 /* LHNodeAnimationProtocol.m */,
 				6E89FD88192E0C510040478F /* LHNodeProtocol.h */,
 				6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */,
 				6E89FD89192E0C510040478F /* LHUserPropertyProtocol.h */,
@@ -521,6 +524,7 @@
 				6E89FDA2192E0C510040478F /* LHScene.m in Sources */,
 				6E89FDAC192E0C510040478F /* LHRevoluteJointNode.m in Sources */,
 				6E89FD05192E0A390040478F /* main.m in Sources */,
+				6EBEA2E71959980F00726044 /* LHNodeAnimationProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

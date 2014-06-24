@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 GameDevHelper.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
 @class LHAnimation;
 
@@ -24,6 +23,17 @@
  @param animation The animation that is about to get activated.
  */
 -(void)setActiveAnimation:(LHAnimation*)animation;
+
+/**
+ Returns the active animation on a node or nil if no active animation.
+ */
+-(LHAnimation*)activeAnimation;
+
+/**
+ Returns the animation with a given name or nil if no animation with the specified name is found on the node.
+ */
+-(LHAnimation*)animationWithName:(NSString*)animName;
+
 
 /**
  Set position on the node controlled by the animation.
@@ -56,3 +66,30 @@ Set x scale on the node controlled by the animation.
 -(void)setAlpha:(float)opacity;
 
 @end
+
+
+@interface LHNodeAnimationProtocolImp : NSObject
+
++ (instancetype)animationProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
+- (instancetype)initAnimationProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
+
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt;
+
+-(void)setActiveAnimation:(LHAnimation*)anim;
+-(LHAnimation*)activeAnimation;
+-(LHAnimation*)animationWithName:(NSString*)animName;
+
+@end
+
+#define LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION  \
+-(void)setActiveAnimation:(LHAnimation*)anim{\
+[_animationProtocolImp setActiveAnimation:anim];\
+}\
+-(LHAnimation*)activeAnimation{\
+return [_animationProtocolImp activeAnimation];\
+}\
+-(LHAnimation*)animationWithName:(NSString*)animName{\
+return [_animationProtocolImp animationWithName:animName];\
+}
+
+

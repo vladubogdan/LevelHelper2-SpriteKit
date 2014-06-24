@@ -15,59 +15,6 @@
 
 @implementation LHUtils
 
-+(id)userPropertyForNode:(id)node fromDictionary:(NSDictionary*)dict
-{
-    id _userProperty = nil;
-    
-    NSDictionary* userPropInfo = [dict objectForKey:@"userPropertyInfo"];
-    NSString* userPropClassName = [dict objectForKey:@"userPropertyName"];
-    if(userPropInfo && userPropClassName)
-    {
-        Class userPropClass = NSClassFromString(userPropClassName);
-        if(userPropClass){
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wundeclared-selector"
-            _userProperty = [userPropClass performSelector:@selector(customClassInstanceWithNode:)
-                                                withObject:node];
-    #pragma clang diagnostic pop
-            if(_userProperty){
-                [_userProperty setPropertiesFromDictionary:userPropInfo];
-            }
-        }
-    }
-    
-    return _userProperty;
-}
-
-+(void)tagsFromDictionary:(NSDictionary*)dict
-             savedToArray:(NSArray* __strong*)_tags
-{
-    NSArray* loadedTags = [dict objectForKey:@"tags"];
-    if(loadedTags){
-        *_tags = [[NSArray alloc] initWithArray:loadedTags];
-    }
-}
-
-+(void)createAnimationsForNode:(id)node
-               animationsArray:(NSMutableArray* __strong*)_animations
-               activeAnimation:(LHAnimation* __weak*)activeAnimation
-                fromDictionary:(NSDictionary*)dict
-{
-    NSArray* animsInfo = [dict objectForKey:@"animations"];
-    for(NSDictionary* anim in animsInfo){
-        if(!*_animations){
-            *_animations = [[NSMutableArray alloc] init];
-        }
-        LHAnimation* animation = [LHAnimation animationWithDictionary:anim
-                                                                 node:node];
-        if([animation isActive]){
-            *activeAnimation = animation;
-        }
-        [*_animations addObject:animation];
-    }
-
-}
-
 +(NSString*)imagePathWithFilename:(NSString*)filename
                            folder:(NSString*)folder
                            suffix:(NSString*)suffix
