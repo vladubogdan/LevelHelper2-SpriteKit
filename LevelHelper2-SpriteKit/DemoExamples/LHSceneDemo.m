@@ -12,7 +12,6 @@
 
 +(id)scene
 {
-    [[LHConfig sharedInstance] enableDebug];
     return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/officerLevel.plist"];
     
 }
@@ -51,6 +50,20 @@
                 [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
                 [[self uiNode] addChild:label];
             }
+            
+            {
+                SKLabelNode* label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+                [label setName:@"NextLabel"];
+                [label setFontSize:32];
+                [label setZPosition:60];
+                [label setText:@"Next"];
+                [label setFontColor:[SKColor greenColor]];
+                [label setPosition:CGPointMake(size.width- 50, 150)];
+                [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
+                [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
+                [[self uiNode] addChild:label];
+            }
+
         }
     }
     

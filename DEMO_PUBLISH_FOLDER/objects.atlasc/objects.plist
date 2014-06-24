@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>appName</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan Daniel</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>format</key>
+	<string>APPL</string>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>objects.png</string>
+			<key>size</key>
+			<string>{254, 254}</string>
+			<key>subimages</key>
+			<array>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>object_bananabunch</string>
+					<key>spriteOffset</key>
+					<string>{7, 5}</string>
+					<key>spriteSourceSize</key>
+					<string>{88, 65}</string>
+					<key>textureRect</key>
+					<string>{{152, 62}, {55, 78}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>object_hat</string>
+					<key>spriteOffset</key>
+					<string>{6, 6}</string>
+					<key>spriteSourceSize</key>
+					<string>{122, 75}</string>
+					<key>textureRect</key>
+					<string>{{1, 143}, {64, 110}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>object_banana</string>
+					<key>spriteOffset</key>
+					<string>{5, 3}</string>
+					<key>spriteSourceSize</key>
+					<string>{92, 64}</string>
+					<key>textureRect</key>
+					<string>{{153, 1}, {82, 57}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>object_canteen</string>
+					<key>spriteOffset</key>
+					<string>{7, 7}</string>
+					<key>spriteSourceSize</key>
+					<string>{60, 78}</string>
+					<key>textureRect</key>
+					<string>{{210, 61}, {43, 65}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>object_pineapple</string>
+					<key>spriteOffset</key>
+					<string>{6, 5}</string>
+					<key>spriteSourceSize</key>
+					<string>{61, 134}</string>
+					<key>textureRect</key>
+					<string>{{98, 2}, {51, 127}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>object_statue</string>
+					<key>spriteOffset</key>
+					<string>{7, 5}</string>
+					<key>spriteSourceSize</key>
+					<string>{105, 148}</string>
+					<key>textureRect</key>
+					<string>{{1, 2}, {93, 139}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>object_backpack</string>
+					<key>spriteOffset</key>
+					<string>{5, 5}</string>
+					<key>spriteSourceSize</key>
+					<string>{90, 106}</string>
+					<key>textureRect</key>
+					<string>{{69, 144}, {80, 96}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

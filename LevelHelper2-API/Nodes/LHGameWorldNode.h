@@ -14,7 +14,7 @@
  */
 
 
-@interface LHGameWorldNode : SKNode <LHNodeProtocol>
+@interface LHGameWorldNode : SKSpriteNode <LHNodeProtocol>
 
 +(instancetype)gameWorldNodeWithDictionary:(NSDictionary*)dict
                                     parent:(SKNode*)prnt;

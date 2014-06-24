@@ -222,14 +222,14 @@
                 
                 [self gameWorldNode].physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:skBRect];
                 [self gameWorldNode].physicsBody.dynamic = NO;
-                if([[LHConfig sharedInstance] isDebug])
-                {
+
+                #if LH_DEBUG
                     SKShapeNode* debugShapeNode = [SKShapeNode node];
                     debugShapeNode.path = CGPathCreateWithRect(skBRect,
                                                                nil);
                     debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:1];
                     [[self gameWorldNode] addChild:debugShapeNode];
-                }
+                #endif
             }
         }
         
@@ -259,8 +259,7 @@
                                            -(bRect.size.height)*designSize.height);
                 gameWorldRect.origin.y -= sceneSize.height;
                 
-                if([[LHConfig sharedInstance] isDebug])
-                {
+#if LH_DEBUG
                     CGRect gameWorldRectT = gameWorldRect;
                     gameWorldRectT.origin.x += 2;
                     gameWorldRectT.size.width -= 4;
@@ -272,7 +271,7 @@
                     
                     debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:0 blue:1 alpha:1];
                     [[self gameWorldNode] addChild:debugShapeNode];
-                }
+#endif
             }
         }
         

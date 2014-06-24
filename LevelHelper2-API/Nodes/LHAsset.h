@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
+#import "LHNodePhysicsProtocol.h"
 
 /**
  LHAsset class is used to load an asset object from a level file or from the resources folder.
@@ -16,10 +17,14 @@
  */
 
 
-@interface LHAsset : SKNode <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHAsset : SKNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
 +(instancetype)assetWithDictionary:(NSDictionary*)dict
                             parent:(SKNode*)prnt;
 
 
+/**
+ Returns the asset node size as defined in LevelHelper.
+ */
+-(CGSize)size;
 @end

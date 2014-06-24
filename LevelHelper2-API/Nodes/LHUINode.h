@@ -14,7 +14,7 @@
  */
 
 
-@interface LHUINode : SKNode <LHNodeProtocol>
+@interface LHUINode : SKSpriteNode <LHNodeProtocol>
 
 +(instancetype)uiNodeWithDictionary:(NSDictionary*)dict
                              parent:(SKNode*)prnt;

@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
+#import "LHNodePhysicsProtocol.h"
 
 /**
  LHBezier class is used to load and display a bezier from a level file.
@@ -16,7 +17,7 @@
  */
 
 
-@interface LHBezier : SKShapeNode <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHBezier : SKShapeNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
 + (instancetype)bezierNodeWithDictionary:(NSDictionary*)dict
                                   parent:(SKNode*)prnt;

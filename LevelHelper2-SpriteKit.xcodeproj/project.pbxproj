@@ -55,7 +55,6 @@
 		6E89FDAF192E0C510040478F /* LHSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD81192E0C510040478F /* LHSprite.m */; };
 		6E89FDB0192E0C510040478F /* LHWater.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD83192E0C510040478F /* LHWater.m */; };
 		6E89FDB1192E0C510040478F /* LHWeldJointNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD85192E0C510040478F /* LHWeldJointNode.m */; };
-		6E89FDB2192E0C510040478F /* LHConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD8C192E0C510040478F /* LHConfig.m */; };
 		6E89FDB3192E0C510040478F /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD8E192E0C510040478F /* LHUtils.m */; };
 		6E89FDB6192E0C930040478F /* LHSceneSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDB5192E0C930040478F /* LHSceneSubclass.m */; };
 		6EBEA2D6195984D800726044 /* LHSceneDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2D5195984D800726044 /* LHSceneDemo.m */; };
@@ -64,6 +63,8 @@
 		6EBEA2E319598AC000726044 /* LHGameWorldNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E219598AC000726044 /* LHGameWorldNode.m */; };
 		6EBEA2E519598E2B00726044 /* LHNodeProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */; };
 		6EBEA2E71959980F00726044 /* LHNodeAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2E61959980F00726044 /* LHNodeAnimationProtocol.m */; };
+		6EBEA2ED19599BCE00726044 /* LHNodePhysicsProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2EC19599BCE00726044 /* LHNodePhysicsProtocol.mm */; };
+		6EBEA2F51959A46700726044 /* LHScenePhysicsBodiesDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,8 +160,6 @@
 		6E89FD87192E0C510040478F /* LHNodeAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodeAnimationProtocol.h; sourceTree = "<group>"; };
 		6E89FD88192E0C510040478F /* LHNodeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodeProtocol.h; sourceTree = "<group>"; };
 		6E89FD89192E0C510040478F /* LHUserPropertyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUserPropertyProtocol.h; sourceTree = "<group>"; };
-		6E89FD8B192E0C510040478F /* LHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHConfig.h; sourceTree = "<group>"; };
-		6E89FD8C192E0C510040478F /* LHConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHConfig.m; sourceTree = "<group>"; };
 		6E89FD8D192E0C510040478F /* LHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUtils.h; sourceTree = "<group>"; };
 		6E89FD8E192E0C510040478F /* LHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHUtils.m; sourceTree = "<group>"; };
 		6E89FDB4192E0C930040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneSubclass.h; sourceTree = "<group>"; };
@@ -175,6 +174,11 @@
 		6EBEA2E219598AC000726044 /* LHGameWorldNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHGameWorldNode.m; sourceTree = "<group>"; };
 		6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeProtocol.m; sourceTree = "<group>"; };
 		6EBEA2E61959980F00726044 /* LHNodeAnimationProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNodeAnimationProtocol.m; sourceTree = "<group>"; };
+		6EBEA2EB19599BCE00726044 /* LHNodePhysicsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNodePhysicsProtocol.h; sourceTree = "<group>"; };
+		6EBEA2EC19599BCE00726044 /* LHNodePhysicsProtocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHNodePhysicsProtocol.mm; sourceTree = "<group>"; };
+		6EBEA2F31959A46700726044 /* LHScenePhysicsBodiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHScenePhysicsBodiesDemo.h; sourceTree = "<group>"; };
+		6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHScenePhysicsBodiesDemo.m; sourceTree = "<group>"; };
+		6EBEA2F61959A5EC00726044 /* LHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 				6E89FD64192E0C510040478F /* LevelHelper2API.h */,
 				6E89FD65192E0C510040478F /* LHScene.h */,
 				6E89FD66192E0C510040478F /* LHScene.m */,
+				6EBEA2F61959A5EC00726044 /* LHConfig.h */,
 				6E89FD67192E0C510040478F /* Nodes */,
 				6E89FD86192E0C510040478F /* Protocols */,
 				6E89FD8A192E0C510040478F /* Utilities */,
@@ -384,6 +389,8 @@
 				6E89FD88192E0C510040478F /* LHNodeProtocol.h */,
 				6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */,
 				6E89FD89192E0C510040478F /* LHUserPropertyProtocol.h */,
+				6EBEA2EB19599BCE00726044 /* LHNodePhysicsProtocol.h */,
+				6EBEA2EC19599BCE00726044 /* LHNodePhysicsProtocol.mm */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -391,8 +398,6 @@
 		6E89FD8A192E0C510040478F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6E89FD8B192E0C510040478F /* LHConfig.h */,
-				6E89FD8C192E0C510040478F /* LHConfig.m */,
 				6E89FD8D192E0C510040478F /* LHUtils.h */,
 				6E89FD8E192E0C510040478F /* LHUtils.m */,
 			);
@@ -406,6 +411,8 @@
 				6EBEA2D5195984D800726044 /* LHSceneDemo.m */,
 				6EBEA2D7195985CA00726044 /* LHSceneCameraDemo.h */,
 				6EBEA2D8195985CA00726044 /* LHSceneCameraDemo.m */,
+				6EBEA2F31959A46700726044 /* LHScenePhysicsBodiesDemo.h */,
+				6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.m */,
 			);
 			path = DemoExamples;
 			sourceTree = "<group>";
@@ -509,10 +516,11 @@
 				6E89FD9B192E0C510040478F /* LHOpacityProperty.m in Sources */,
 				6E89FD12192E0A390040478F /* ViewController.m in Sources */,
 				6E89FDB0192E0C510040478F /* LHWater.m in Sources */,
-				6E89FDB2192E0C510040478F /* LHConfig.m in Sources */,
+				6EBEA2ED19599BCE00726044 /* LHNodePhysicsProtocol.mm in Sources */,
 				6EBEA2E319598AC000726044 /* LHGameWorldNode.m in Sources */,
 				6E89FDB3192E0C510040478F /* LHUtils.m in Sources */,
 				6EBEA2E019598A1400726044 /* LHUINode.m in Sources */,
+				6EBEA2F51959A46700726044 /* LHScenePhysicsBodiesDemo.m in Sources */,
 				6EBEA2E519598E2B00726044 /* LHNodeProtocol.m in Sources */,
 				6E89FD09192E0A390040478F /* AppDelegate.m in Sources */,
 				6E89FDA1192E0C510040478F /* NSDictionary+LHDictionary.m in Sources */,

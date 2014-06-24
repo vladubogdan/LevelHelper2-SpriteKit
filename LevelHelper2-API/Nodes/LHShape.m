@@ -16,11 +16,15 @@
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
+    NSMutableArray* _shapeTriangles;
+    LHNodePhysicsProtocolImp*   _physicsProtocolImp;
 }
 
 -(void)dealloc{
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
+    LH_SAFE_RELEASE(_shapeTriangles);
+    LH_SAFE_RELEASE(_physicsProtocolImp);
 
     LH_SUPER_DEALLOC();
 }
@@ -43,34 +47,6 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        
-        
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
-
         
         self.strokeColor = [dict colorForKey:@"colorOverlay"];
         self.fillColor = [dict colorForKey:@"colorOverlay"];
@@ -95,19 +71,22 @@
             self.path = linePath;
             CGPathRelease(linePath);
         }
+        
+        NSArray* triangles = [dict objectForKey:@"triangles"];
+        if(triangles){
+            _shapeTriangles = [[NSMutableArray alloc] initWithArray:triangles];
+        }
 
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
+                                                                                                node:self];
         
-        [self loadPhysicsFromDict:[dict objectForKey:@"nodePhysics"] nodeDict:dict];
-        
-        
-        //scale must be set after loading the physic info or else spritekit will not resize the body
+        //scale must be set after loading the physic info or else spritekit will not resize the sprite anymore - bug
         CGPoint scl = [dict pointForKey:@"scale"];
         [self setXScale:scl.x];
         [self setYScale:scl.y];
         
-        
+
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
-        
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
@@ -117,216 +96,8 @@
     return self;
 }
 
--(void)loadPhysicsFromDict:(NSDictionary*)dict nodeDict:(NSDictionary*)nodedict{
-    
-    if(!dict)return;
-    
-    int shape = [dict intForKey:@"shape"];
-    
-    NSArray* fixturesInfo = nil;
-    
-    NSMutableArray* debugShapeNodes = [NSMutableArray array];
-
-    if(shape == 0)//RECTANGLE
-    {
-        CGPoint offset = CGPointMake(0, 0);
-        CGRect rect = CGRectMake(-self.size.width*0.5 + offset.x,
-                                 -self.size.height*0.5 + offset.y,
-                                 self.size.width,
-                                 self.size.height);
-        
-        CGSize rectSize = CGSizeMake(rect.size.width,
-                                     rect.size.height);
-
-        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:rectSize];
-        
-        if([[LHConfig sharedInstance] isDebug]){
-            SKShapeNode* debugShapeNode = [SKShapeNode node];
-            debugShapeNode.path = CGPathCreateWithRect(rect,
-                                                       nil);
-            
-            [debugShapeNodes addObject:debugShapeNode];
-        }
-        
-    }
-    else if(shape == 1)//CIRCLE
-    {
-        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.width*0.5];
-        if([[LHConfig sharedInstance] isDebug]){
-            CGPoint offset = CGPointMake(0, 0);
-            SKShapeNode* debugShapeNode = [SKShapeNode node];
-            debugShapeNode.path = CGPathCreateWithEllipseInRect(CGRectMake(-self.size.width*0.5 + offset.x,
-                                                                           -self.size.width*0.5 + offset.y,
-                                                                           self.size.width,
-                                                                           self.size.width),
-                                                                nil);
-            [debugShapeNodes addObject:debugShapeNode];
-        }
-    }
-    else if(shape == 3)//CHAIN
-    {
-        self.physicsBody = [SKPhysicsBody bodyWithEdgeChainFromPath:self.path];
-        
-        if([[LHConfig sharedInstance] isDebug]){
-            SKShapeNode* debugShapeNode = [SKShapeNode node];
-            debugShapeNode.path = self.path;
-            [debugShapeNodes addObject:debugShapeNode];
-        }
-    }
-    else if(shape == 4)//OVAL
-    {
-        fixturesInfo = [dict objectForKey:@"ovalShape"];
-    }
-    else if(shape == 2)//POLYGON
-    {
-        NSArray* triangles = [nodedict objectForKey:@"triangles"];
-        
-        NSMutableArray* trianglebodies = [NSMutableArray array];
-        
-        CGMutablePathRef trianglePath = nil;
-        int i = 0;
-        for(NSDictionary* trDict in triangles)
-        {
-            CGPoint vPoint = [trDict pointForKey:@"point"];
-            if(!trianglePath){
-                trianglePath = CGPathCreateMutable();
-                CGPathMoveToPoint(trianglePath, nil, vPoint.x, -vPoint.y);
-            }
-            else{
-                CGPathAddLineToPoint(trianglePath, nil, vPoint.x, -vPoint.y);
-            }
-
-            ++i;
-            
-            if(trianglePath && i == 3){
-                CGPathCloseSubpath(trianglePath);
-                SKPhysicsBody* trBody = [SKPhysicsBody bodyWithPolygonFromPath:trianglePath];
-                [trianglebodies addObject:trBody];
-                
-                if([[LHConfig sharedInstance] isDebug]){
-                    SKShapeNode* debugShapeNode = [SKShapeNode node];
-                    debugShapeNode.path = trianglePath;
-                    [debugShapeNodes addObject:debugShapeNode];
-                }
-                
-                CGPathRelease(trianglePath);
-                trianglePath = nil;
-                i = 0;
-            }
-        }
-        
-        
-#if TARGET_OS_IPHONE
-        self.physicsBody = [SKPhysicsBody bodyWithBodies:trianglebodies];
-#endif
-
-    }
-    
-    
-    if(fixturesInfo)
-    {
-        NSMutableArray* fixBodies = [NSMutableArray array];
-        
-        for(NSArray* fixPoints in fixturesInfo)
-        {
-            int count = (int)[fixPoints count];
-            CGPoint points[count];
-            
-            int i = count - 1;
-            for(int j = 0; j< count; ++j)
-            {
-                NSString* pointStr = [fixPoints objectAtIndex:(NSUInteger)j];
-                CGPoint point = LHPointFromString(pointStr);
-                
-                //flip y for sprite kit coordinate system
-                point.y =  -point.y;
-                points[j] = point;
-                i = i-1;
-            }
-            
-            CGMutablePathRef fixPath = CGPathCreateMutable();
-            
-            bool first = true;
-            for(int k = 0; k < count; ++k)
-            {
-                CGPoint point = points[k];
-                if(first){
-                    CGPathMoveToPoint(fixPath, nil, point.x, point.y);
-                }
-                else{
-                    CGPathAddLineToPoint(fixPath, nil, point.x, point.y);
-                }
-                first = false;
-            }
-            
-            CGPathCloseSubpath(fixPath);
-            
-            if([[LHConfig sharedInstance] isDebug]){
-                SKShapeNode* debugShapeNode = [SKShapeNode node];
-                debugShapeNode.path = fixPath;
-                [debugShapeNodes addObject:debugShapeNode];
-            }
-            
-            [fixBodies addObject:[SKPhysicsBody bodyWithPolygonFromPath:fixPath]];
-            
-            CGPathRelease(fixPath);
-        }
-#if TARGET_OS_IPHONE
-        self.physicsBody = [SKPhysicsBody bodyWithBodies:fixBodies];
-#endif
-        
-    }
-    
-    
-    int type = [dict intForKey:@"type"];
-    if(type == 0)//static
-    {
-        [self.physicsBody setDynamic:NO];
-    }
-    else if(type == 1)//kinematic
-    {
-    }
-    else if(type == 2)//dynamic
-    {
-        [self.physicsBody setDynamic:YES];
-    }
-    
-    
-    NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
-    if(fixInfo && self.physicsBody)
-    {
-        self.physicsBody.categoryBitMask = [fixInfo intForKey:@"category"];
-        self.physicsBody.collisionBitMask = [fixInfo intForKey:@"mask"];
-        
-        self.physicsBody.density = [fixInfo floatForKey:@"density"];
-        self.physicsBody.friction = [fixInfo floatForKey:@"friction"];
-        self.physicsBody.restitution = [fixInfo floatForKey:@"restitution"];
-        
-        self.physicsBody.allowsRotation = ![dict boolForKey:@"fixedRotation"];
-        self.physicsBody.usesPreciseCollisionDetection = [dict boolForKey:@"bullet"];
-        
-        if([dict intForKey:@"gravityScale"] == 0){
-            self.physicsBody.affectedByGravity = NO;
-        }
-    }
-    
-    
-    if([[LHConfig sharedInstance] isDebug]){
-        for(SKShapeNode* debugShapeNode in debugShapeNodes)
-        {
-            debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:0.5];
-            if(shape != 3){//chain
-                debugShapeNode.fillColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:0.1];
-            }
-            debugShapeNode.lineWidth = 0.1;
-            if(self.physicsBody.isDynamic){
-                debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:0.5];
-                debugShapeNode.fillColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:0.1];
-            }
-            [self addChild:debugShapeNode];
-        }
-    }
-    
+-(NSMutableArray*)shapeTriangles{
+    return _shapeTriangles;
 }
 
 
@@ -337,6 +108,17 @@
 -(CGRect)boundingBox{
     return CGPathGetBoundingBox(self.path);
 }
+
+
+#pragma mark - Box2D Support
+#if LH_USE_BOX2D
+LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
+#endif //LH_USE_BOX2D
+
+
+#pragma mark - Common Physics Engines Support
+LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
+
 
 #pragma mark LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION

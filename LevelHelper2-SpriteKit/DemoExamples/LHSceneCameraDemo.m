@@ -7,6 +7,7 @@
 //
 
 #import "LHSceneCameraDemo.h"
+#import "LHScenePhysicsBodiesDemo.h"
 
 @implementation LHSceneCameraDemo
 
@@ -38,7 +39,7 @@
 }
 
 -(void)nextDemo{
-    
+    [[self view] presentScene:[LHScenePhysicsBodiesDemo scene]];
 }
 
 @end

@@ -44,7 +44,6 @@
  */
 -(LHScene*)scene;
 
-
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt;
 
 @optional

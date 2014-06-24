@@ -12,6 +12,9 @@
 #import "LHScene.h"
 #import "LHUserPropertyProtocol.h"
 
+#import "LHSprite.h"
+
+
 @implementation LHNodeProtocolImpl
 {
     __unsafe_unretained SKNode* _node;
@@ -71,6 +74,55 @@
             }
         }
         
+        
+        
+        if([dict objectForKey:@"generalPosition"])
+        {
+            CGPoint unitPos = [dict pointForKey:@"generalPosition"];
+            CGPoint pos = [LHUtils positionForNode:_node
+                                          fromUnit:unitPos];
+            
+            NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
+            if(devPositions)
+            {
+                
+    #if TARGET_OS_IPHONE
+                NSString* unitPosStr = [LHUtils devicePosition:devPositions
+                                                       forSize:LH_SCREEN_RESOLUTION];
+    #else
+                NSString* unitPosStr = [LHUtils devicePosition:devPositions
+                                                       forSize:[_node scene].size];
+    #endif
+                
+                if(unitPosStr){
+                    CGPoint unitPos = LHPointFromString(unitPosStr);
+                    pos = [LHUtils positionForNode:_node
+                                          fromUnit:unitPos];
+                }
+            }
+            
+            if([dict objectForKey:@"anchor"] && [_node respondsToSelector:@selector(anchorPoint)]){
+                CGPoint anchor = [dict pointForKey:@"anchor"];
+                anchor.y = 1.0f - anchor.y;
+                [(LHSprite*)_node setAnchorPoint:anchor];
+            }
+
+            SKNode* prnt = [_node parent];
+            if([prnt isKindOfClass:[SKSpriteNode class]]){
+                SKSpriteNode* p = (SKSpriteNode*)prnt;
+                CGPoint anc = [p anchorPoint];
+                pos.x -= p.size.width*(anc.x - 0.5f);
+                pos.y -= p.size.height*(anc.y- 0.5f);
+            }
+            
+            [_node setPosition:pos];
+        }
+        
+        
+        if([dict objectForKey:@"size"] && [_node respondsToSelector:@selector(setSize:)]){
+            ((SKSpriteNode*)_node).size = [dict sizeForKey:@"size"];
+        }
+        
         if([dict objectForKey:@"alpha"])
             [_node setAlpha:[dict floatForKey:@"alpha"]/255.0f];
         
@@ -79,14 +131,8 @@
         
         if([dict objectForKey:@"zOrder"])
             [_node setZPosition:[dict floatForKey:@"zOrder"]];
+
         
-        
-        if([dict objectForKey:@"scale"])
-        {
-            CGPoint scl = [dict pointForKey:@"scale"];
-            [_node setXScale:scl.x];
-            [_node setYScale:scl.y];
-        }
     }
     return self;
 }

@@ -85,7 +85,7 @@
         _force = [dict floatForKey:@"force"];
         _radial = [dict intForKey:@"type"] == 1;
         
-        if([[LHConfig sharedInstance] isDebug]){
+#if LH_DEBUG
             SKShapeNode* debugShapeNode = [SKShapeNode node];
             if(_radial){
                 debugShapeNode.path = CGPathCreateWithEllipseInRect(CGRectMake(-_size.width*0.5,
@@ -103,7 +103,7 @@
             }
             debugShapeNode.strokeColor = [SKColor greenColor];
             [self addChild:debugShapeNode];
-        }
+#endif
 
     }
     

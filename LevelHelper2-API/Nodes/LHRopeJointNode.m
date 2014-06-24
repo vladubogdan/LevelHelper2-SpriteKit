@@ -366,16 +366,14 @@ double fcat(double x, void *data)
                     //create a new body at cut position and a joint between bodyA and this new body
                     {
                         SKNode* cutBodyA = nil;
-                        if([[LHConfig sharedInstance] isDebug])
-                        {
+#if LH_DEBUG
                             cutBodyA = [SKShapeNode node];
                             ((SKShapeNode*)cutBodyA).path = CGPathCreateWithRect(CGRectMake(-4, -4, 8, 8), nil);
                             ((SKShapeNode*)cutBodyA).fillColor = [SKColor redColor];
                             ((SKShapeNode*)cutBodyA).strokeColor = [SKColor redColor];
-                        }
-                        else{
+#else
                             cutBodyA = [SKNode node];
-                        }
+#endif
                         
                         
                         cutBodyA.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:3];
@@ -403,7 +401,7 @@ double fcat(double x, void *data)
                         [[self scene].physicsWorld addJoint:cutJointA];
                         
 
-                        if([[LHConfig sharedInstance] isDebug])
+#if LH_DEBUG
                         {
                             debugCutAShapeNode = [SKShapeNode node];
                             
@@ -419,22 +417,22 @@ double fcat(double x, void *data)
                                                                              alpha:0.8];
                             [self addChild:debugCutAShapeNode];
                         }
+#endif
+                        
                     }
                     
                     //create a new body at cut position and a joint between bodyB and this new body
                     {
 
                         SKNode* cutBodyB = nil;
-                        if([[LHConfig sharedInstance] isDebug])
-                        {
+#if LH_DEBUG
                             cutBodyB = [SKShapeNode node];
                             ((SKShapeNode*)cutBodyB).path = CGPathCreateWithRect(CGRectMake(-4, -4, 8, 8), nil);
                             ((SKShapeNode*)cutBodyB).fillColor = [SKColor redColor];
                             ((SKShapeNode*)cutBodyB).strokeColor = [SKColor redColor];
-                        }
-                        else {
+#else
                             cutBodyB = [SKNode node];
-                        }
+#endif
                         
                         cutBodyB.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:3];
                         cutBodyB.physicsBody.dynamic = YES;
@@ -459,7 +457,7 @@ double fcat(double x, void *data)
                         
                         [[self scene].physicsWorld addJoint:cutJointB];
                         
-                        if([[LHConfig sharedInstance] isDebug])
+#if LH_DEBUG
                         {
                             debugCutBShapeNode = [SKShapeNode node];
                             
@@ -474,6 +472,7 @@ double fcat(double x, void *data)
                                                                              alpha:0.8];
                             [self addChild:debugCutBShapeNode];
                         }
+#endif
                     }
                 }
                 
@@ -713,8 +712,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     CGPoint anchorB = [self anchorB];
 
     
-if([[LHConfig sharedInstance] isDebug])
-{
+#if LH_DEBUG
     if(isnan(anchorA.x) || isnan(anchorA.y) || isnan(anchorB.x) || isnan(anchorB.y)){
         return;
     }
@@ -748,7 +746,7 @@ if([[LHConfig sharedInstance] isDebug])
         debugCutBShapeNode.path = debugLineBPath;
         CGPathRelease(debugLineBPath);
     }
-}
+#endif
     
     if(ropeShape){
         [self drawRopeShape:ropeShape
@@ -842,8 +840,7 @@ if([[LHConfig sharedInstance] isDebug])
         [scene.physicsWorld addJoint:joint];
         
         
-if([[LHConfig sharedInstance] isDebug])
-{
+#if LH_DEBUG
         debugShapeNode = [SKShapeNode node];
         
         CGMutablePathRef debugLinePath = CGPathCreateMutable();
@@ -857,7 +854,7 @@ if([[LHConfig sharedInstance] isDebug])
         debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:0.8];
         
         [self addChild:debugShapeNode];
-}
+#endif
         
         LH_SAFE_RELEASE(nodeAUUID);
         LH_SAFE_RELEASE(nodeBUUID);

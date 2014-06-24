@@ -9,6 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
+#import "LHNodePhysicsProtocol.h"
+
 /**
  LHShape class is used to load and display a shape from a level file.
  Users can retrieve a shape objects by calling the scene (LHScene) childNodeWithName: method.
@@ -16,7 +18,7 @@
  */
 
 
-@interface LHShape : SKShapeNode <LHNodeProtocol, LHNodeAnimationProtocol>
+@interface LHShape : SKShapeNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
 + (instancetype)shapeNodeWithDictionary:(NSDictionary*)dict
                                  parent:(SKNode*)prnt;

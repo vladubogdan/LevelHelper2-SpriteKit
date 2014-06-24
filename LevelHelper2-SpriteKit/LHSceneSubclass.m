@@ -12,7 +12,6 @@
 
 +(id)scene
 {
-    [[LHConfig sharedInstance] enableDebug];
     return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/officerLevel.plist"];
     
 }
