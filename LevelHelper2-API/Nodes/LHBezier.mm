@@ -16,12 +16,14 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
 @implementation LHBezier
 {
+    NSMutableArray*             _linePoints;
     LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
     LHNodePhysicsProtocolImp*   _physicsProtocolImp;
 }
 
 -(void)dealloc{
+    LH_SAFE_RELEASE(_linePoints);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
     LH_SAFE_RELEASE(_physicsProtocolImp);
@@ -44,6 +46,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
         [prnt addChild:self];
         
+        _linePoints = [[NSMutableArray alloc] init];
 
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
@@ -83,9 +86,11 @@ static float MAX_BEZIER_STEPS = 24.0f;
                     if(!linePath){
                         linePath = CGPathCreateMutable();
                         CGPathMoveToPoint(linePath, nil, vPoint.x, -vPoint.y);
+                        [_linePoints addObject:LHValueWithCGPoint(CGPointMake(vPoint.x, -vPoint.y))];
                     }
                     else{
                         CGPathAddLineToPoint(linePath, nil, vPoint.x, -vPoint.y);
+                        [_linePoints addObject:LHValueWithCGPoint(CGPointMake(vPoint.x, -vPoint.y))];
                     }
                 }
             }
@@ -117,6 +122,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
                  
                     if(linePath){
                         CGPathAddLineToPoint(linePath, nil, vPoint.x, -vPoint.y);
+                        [_linePoints addObject:LHValueWithCGPoint(CGPointMake(vPoint.x, -vPoint.y))];
                     }
                 }
             }
@@ -146,6 +152,10 @@ static float MAX_BEZIER_STEPS = 24.0f;
     return self;
 }
 
+-(NSMutableArray*)linePoints{
+    return _linePoints;
+}
+
 -(CGSize)size{
     return CGPathGetBoundingBox(self.path).size;
 }
@@ -171,6 +181,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 {
     [_nodeProtocolImp update:currentTime delta:dt];
     [_animationProtocolImp update:currentTime delta:dt];
+    [_physicsProtocolImp update:currentTime delta:dt];
 }
 
 

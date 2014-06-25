@@ -71,6 +71,25 @@
 
 #pragma mark - BOX2D SUPPORT
 
+-(void)setupFixture:(b2FixtureDef*)fixture withInfo:(NSDictionary*)fixInfo
+{
+    fixture->density     = [fixInfo floatForKey:@"density"];
+    fixture->friction    = [fixInfo floatForKey:@"friction"];
+    fixture->restitution = [fixInfo floatForKey:@"restitution"];
+    fixture->isSensor    = [fixInfo boolForKey:@"sensor"];
+    //            fixture.filter.maskBits = [fixInfo mask].intValue;
+    //            fixture.filter.categoryBits = [fixInfo category].intValue;
+    
+    
+    //            NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
+    //            NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
+    //            if(!ignoreCats || [ignoreCats count] == 0){
+    //                collisionCats = nil;
+    //                ignoreCats = nil;
+    //            }
+
+}
+
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(SKNode*)nd{
     
     if(self = [super init])
@@ -87,6 +106,11 @@
         int shapeType = [dict intForKey:@"shape"];
         int type = [dict intForKey:@"type"];
         
+        NSLog(@"BODY TYPE %d", type);
+        
+        NSLog(@"PHY DICT %@", dict);
+        
+        
         LHScene* scene = (LHScene*)[_node scene];
         b2World* world = [scene box2dWorld];
         
@@ -94,41 +118,7 @@
         b2BodyDef bodyDef;
         bodyDef.type = (b2BodyType)type;
         
-        
-//        CGPoint position = [_node convertToWorldSpace:CGPointZero];
         CGPoint position = [_node convertPoint:CGPointZero toNode:scene];
-        
-//        NSLog(@"CONVERT POS %f %f", position.x, position.y);
-        
-//        position = [_node position];
-        
-//        NSLog(@"%@ local pos %f %f", [_node name], position.x, position.y);
-        
-//        position = [_node convertToWorldSpace:CGPointZero];
-        
-//        position = [_node convertPoint:CGPointZero toNode:[scene gameWorldNode]];
-        
-        
-//        startPointInNodeSpace = CGPointMake(0, size.height/2);
-//        endPointInNodeSpace = CGPointMake(startPointInNodeSpace.x, startPointInNodeSpace.y + 100);
-//        CGPoint start = [self.scene convertPoint:startPointInNodeSpace fromNode:self];
-//        CGPoint end = [self.scene convertPoint:endPointInNodeSpace fromNode:self];
-        
-        
-        
-//        NSLog(@"%@ world pos %f %f", [_node name], position.x, position.y);
-        
-        
-        //CGPoint position = [_node convertToWorldSpaceAR:CGPointZero];
-//        NSLog(@"WORLD POS %f %f", position.x, position.y);
-//        b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-//        _body->SetTransform(b2Pos, [_node zRotation]);
-
-        
-//        position = [scene convertPoint:CGPointZero fromNode:_node];
-        
-//        CGPoint position = [_node convertToWorldSpace:CGPointZero];
-        
         
         b2Vec2 bodyPos = [scene metersFromPoint:position];
         bodyDef.position = bodyPos;
@@ -160,116 +150,149 @@
         previousScale = CGPointMake(scaleX, scaleY);
 
        
-
-         
         sizet.width *= scaleX;
         sizet.height*= scaleY;
         
-        b2FixtureDef fixture;
-        
         NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
-        if(fixInfo && _body)
-        {
-            fixture.density     = [fixInfo floatForKey:@"density"];
-            fixture.friction    = [fixInfo floatForKey:@"friction"];
-            fixture.restitution = [fixInfo floatForKey:@"restitution"];
-            fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
-//            fixture.filter.maskBits = [fixInfo mask].intValue;
-//            fixture.filter.categoryBits = [fixInfo category].intValue;
 
-            
-//            NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
-//            NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
-//            if(!ignoreCats || [ignoreCats count] == 0){
-//                collisionCats = nil;
-//                ignoreCats = nil;
-//            }
-        }
-
-        
-        b2Shape* shape= NULL;
-
-//        NSMutableArray* fixShapes = [NSMutableArray array];
         NSArray* fixturesInfo = nil;
+        
         
         if(shapeType == 0)//RECTANGLE
         {
-            shape = new b2PolygonShape();
+            b2Shape* shape = new b2PolygonShape();
             ((b2PolygonShape*)shape)->SetAsBox(sizet.width*0.5f, sizet.height*0.5f);
+        
+            b2FixtureDef fixture;
+            [self setupFixture:&fixture withInfo:fixInfo];
+            
+            fixture.shape = shape;
+            _body->CreateFixture(&fixture);
+            
+            delete shape;
+            shape = NULL;
         }
+        
         else if(shapeType == 1)//CIRCLE
         {
-            shape = new b2CircleShape();
+            b2Shape* shape = new b2CircleShape();
             ((b2CircleShape*)shape)->m_radius = sizet.width*0.5;
+            
+            b2FixtureDef fixture;
+            [self setupFixture:&fixture withInfo:fixInfo];
+            
+            fixture.shape = shape;
+            _body->CreateFixture(&fixture);
+            
+            delete shape;
+            shape = NULL;
+        }
+        else if(shapeType == 2)//POLYGON
+        {
+            if([_node isKindOfClass:[LHShape class]])
+            {
+                NSArray* triangles = [(LHShape*)_node shapeTriangles];
+                for(int i = 0;  i < [triangles count]; i=i+3)
+                {
+                    NSDictionary* trDictA = [triangles objectAtIndex:i];
+                    NSDictionary* trDictB = [triangles objectAtIndex:i+1];
+                    NSDictionary* trDictC = [triangles objectAtIndex:i+2];
+                    
+                    CGPoint ptA = [trDictA pointForKey:@"point"];
+                    ptA.y = -ptA.y;
+                    
+                    CGPoint ptB = [trDictB pointForKey:@"point"];
+                    ptB.y = -ptB.y;
+                    
+                    CGPoint ptC = [trDictC pointForKey:@"point"];
+                    ptC.y = -ptC.y;
+                    
+                    ptA.x *= scaleX; ptA.y *= scaleY;
+                    ptB.x *= scaleX; ptB.y *= scaleY;
+                    ptC.x *= scaleX; ptC.y *= scaleY;
+                    
+                    b2Vec2 *verts = new b2Vec2[3];
+                    
+                    verts[2] = [scene metersFromPoint:ptA];
+                    verts[1] = [scene metersFromPoint:ptB];
+                    verts[0] = [scene metersFromPoint:ptC];
+                    
+                    b2PolygonShape shapeDef;
+                    
+                    shapeDef.Set(verts, 3);
+                    
+                    b2FixtureDef fixture;
+                    
+                    [self setupFixture:&fixture withInfo:fixInfo];
+                    
+                    fixture.shape = &shapeDef;
+                    _body->CreateFixture(&fixture);
+                    delete[] verts;
+                    
+                }
+            }
         }
         else if(shapeType == 3)//CHAIN
         {
-//            if([_node isKindOfClass:[LHBezier class]])
-//            {
-//                NSMutableArray* points = [(LHBezier*)_node linePoints];
-//                
-//                std::vector< b2Vec2 > verts;
-//                
-//                for(NSValue* val in points){
-//                    CGPoint pt = CGPointFromValue(val);
-//                    pt.x *= scaleX;
-//                    pt.y *= scaleY;
-//                    
-//                    verts.push_back([scene metersFromPoint:pt]);
-//                }
-//                
-//                shape = new b2ChainShape();
-//                ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
-//            }
-//            else if([_node isKindOfClass:[LHShape class]])
-//            {
-//                NSArray* points = [(LHShape*)_node outlinePoints];
-//                
-//                NSValue* firstValue = nil;
-//                NSValue* prevValue = nil;
-//                for(NSValue* val in points){
-//                    
-//                    if(prevValue)
-//                    {
-//                        CGPoint ptA = CGPointFromValue(prevValue);
-//                        CGPoint ptB = CGPointFromValue(val);
-//                        CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
-//                                                                           to:ptB
-//                                                                 cornerRadius:0];
-//                        [fixShapes addObject:shape];
-//                    }
-//                    
-//                    if(nil == firstValue){
-//                        firstValue = val;
-//                    }
-//                    prevValue = val;
-//                }
-//                
-//                //close the shape
-//                if(prevValue && firstValue){
-//                    CGPoint ptA = CGPointFromValue(prevValue);
-//                    CGPoint ptB = CGPointFromValue(firstValue);
-//                    CCPhysicsShape* shape = [CCPhysicsShape pillShapeFrom:ptA
-//                                                                       to:ptB
-//                                                             cornerRadius:0];
-//                    [fixShapes addObject:shape];
-//                }
-//                
-//                _node.physicsBody =  [CCPhysicsBody bodyWithShapes:fixShapes];
-//            }
-//            else{
-//                type = 0;
-//                
-//                CGPoint offset = CGPointMake(0, 0);
-//                CGRect bodyRect = CGRectMake(offset.x,
-//                                             offset.y,
-//                                             _node.contentSize.width,
-//                                             _node.contentSize.height);
-//                
-//                _node.physicsBody = [CCPhysicsBody bodyWithPolylineFromRect:bodyRect
-//                                                               cornerRadius:0];
-//            }
-            
+            if([_node isKindOfClass:[LHBezier class]])
+            {
+                NSMutableArray* points = [(LHBezier*)_node linePoints];
+                
+                std::vector< b2Vec2 > verts;
+                
+                for(NSValue* val in points){
+                    CGPoint pt = CGPointFromValue(val);
+                    pt.x *= scaleX;
+                    pt.y *= scaleY;
+                    
+                    verts.push_back([scene metersFromPoint:pt]);
+                }
+                
+                b2Shape* shape = new b2ChainShape();
+                ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
+                
+                b2FixtureDef fixture;
+                [self setupFixture:&fixture withInfo:fixInfo];
+                
+                fixture.shape = shape;
+                _body->CreateFixture(&fixture);
+                
+                delete shape;
+                shape = NULL;
+            }
+            else if([_node isKindOfClass:[LHShape class]])
+            {
+                NSLog(@"DID CREATE CHAIN SHAPE FOR SHAPE %d", _body->GetType());
+                
+                
+                NSArray* points = [(LHShape*)_node outlinePoints];
+
+                std::vector< b2Vec2 > verts;
+                
+                for(NSValue* val in points){
+                    CGPoint pt = CGPointFromValue(val);
+                    pt.x *= scaleX;
+                    pt.y *= scaleY;
+                    
+                    verts.push_back([scene metersFromPoint:pt]);
+                }
+                
+                b2Shape* shape = new b2ChainShape();
+                ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
+                
+                b2FixtureDef fixture;
+                [self setupFixture:&fixture withInfo:fixInfo];
+                
+                fixture.shape = shape;
+                _body->CreateFixture(&fixture);
+                
+                delete shape;
+                shape = NULL;
+            }
+            else{
+
+                
+            }
         }
         else if(shapeType == 4)//OVAL
         {
@@ -281,57 +304,7 @@
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
         }
-        else if(shapeType == 2)//POLYGON
-        {
-//            if([_node isKindOfClass:[LHShape class]])
-//            {
-//                NSArray* trianglePoints = [(LHShape*)_node trianglePoints];
-//                
-//                for(int i = 0; i < [trianglePoints count]; i+=3)
-//                {
-//                    NSValue* valA = [trianglePoints objectAtIndex:i];
-//                    NSValue* valB = [trianglePoints objectAtIndex:i+1];
-//                    NSValue* valC = [trianglePoints objectAtIndex:i+2];
-//                    
-//                    CGPoint ptA = CGPointFromValue(valA);
-//                    CGPoint ptB = CGPointFromValue(valB);
-//                    CGPoint ptC = CGPointFromValue(valC);
-//                    
-//                    ptA.x *= scaleX;
-//                    ptA.y *= scaleY;
-//
-//                    ptB.x *= scaleX;
-//                    ptB.y *= scaleY;
-//
-//                    ptC.x *= scaleX;
-//                    ptC.y *= scaleY;
-//
-//                    b2Vec2 *verts = new b2Vec2[3];
-//                    
-//                    verts[2] = [scene metersFromPoint:ptA];
-//                    verts[1] = [scene metersFromPoint:ptB];
-//                    verts[0] = [scene metersFromPoint:ptC];
-//                    
-//                    b2PolygonShape shapeDef;
-//                    
-//                    shapeDef.Set(verts, 3);
-//                    
-//                    b2FixtureDef fixture;
-//                    
-//                    fixture.density     = [fixInfo floatForKey:@"density"];
-//                    fixture.friction    = [fixInfo floatForKey:@"friction"];
-//                    fixture.restitution = [fixInfo floatForKey:@"restitution"];
-//                    fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
-//                    
-//                    //                    fixture.filter.maskBits = [fixInfo mask].intValue;
-//                    //                    fixture.filter.categoryBits = [fixInfo category].intValue;
-//                    
-//                    fixture.shape = &shapeDef;
-//                    _body->CreateFixture(&fixture);
-//                    delete[] verts;
-//                }
-//            }
-        }
+        
         
         if(fixturesInfo)
         {
@@ -366,95 +339,14 @@
                     
                     b2FixtureDef fixture;
                     
-                    fixture.density     = [fixInfo floatForKey:@"density"];
-                    fixture.friction    = [fixInfo floatForKey:@"friction"];
-                    fixture.restitution = [fixInfo floatForKey:@"restitution"];
-                    fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
-                    
-//                    fixture.filter.maskBits = [fixInfo mask].intValue;
-//                    fixture.filter.categoryBits = [fixInfo category].intValue;
+                    [self setupFixture:&fixture withInfo:fixInfo];
                     
                     fixture.shape = &shapeDef;
                     _body->CreateFixture(&fixture);
                     delete[] verts;
                 }
             }
-            
         }
-//        if([fixShapes count] > 0){
-//            _node.physicsBody =  [CCPhysicsBody bodyWithShapes:fixShapes];
-//        }
-//        
-//        if(type == 0)//static
-//        {
-//            [_node.physicsBody setType:CCPhysicsBodyTypeStatic];
-//        }
-//        else if(type == 1)//kinematic
-//        {
-//        }
-//        else if(type == 2)//dynamic
-//        {
-//            [_node.physicsBody setType:CCPhysicsBodyTypeDynamic];
-//        }
-//        
-//        NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
-//        if(fixInfo && _node.physicsBody)
-//        {
-//            NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
-//            NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
-//            if(!ignoreCats || [ignoreCats count] == 0){
-//                collisionCats = nil;
-//                ignoreCats = nil;
-//            }
-//            
-//            if([fixShapes count] > 0)
-//            {
-//                for(CCPhysicsShape* shape in fixShapes)
-//                {
-//                    shape.density = [fixInfo floatForKey:@"density"];
-//                    shape.friction = [fixInfo floatForKey:@"friction"];
-//                    shape.elasticity = [fixInfo floatForKey:@"restitution"];
-//                    shape.sensor = [fixInfo boolForKey:@"sensor"];
-//                    
-//                    if(ignoreCats)
-//                        [shape setCollisionCategories:ignoreCats];//member of
-//                    if(collisionCats)
-//                        [shape setCollisionMask:collisionCats];//wants to collide with
-//                }
-//            }
-//            else{
-//                
-//                if(ignoreCats)
-//                    [_node.physicsBody setCollisionCategories:ignoreCats];//member of
-//                if(collisionCats)
-//                    [_node.physicsBody setCollisionMask:collisionCats];//wants to collide with
-//                
-//                if(shape != 3){
-//                    _node.physicsBody.density = [fixInfo floatForKey:@"density"];
-//                    _node.physicsBody.friction = [fixInfo floatForKey:@"friction"];
-//                    _node.physicsBody.elasticity = [fixInfo floatForKey:@"restitution"];
-//                    _node.physicsBody.sensor = [fixInfo boolForKey:@"sensor"];
-//                }
-//            }
-//            
-//            if(_node.physicsBody.type == CCPhysicsBodyTypeDynamic)
-//                _node.physicsBody.allowsRotation = ![dict boolForKey:@"fixedRotation"];
-//            
-//            if([dict intForKey:@"gravityScale"] == 0){
-//                _node.physicsBody.affectedByGravity = NO;
-//            }
-//        }
-        
-        if(shape){
-            fixture.shape = shape;
-            _body->CreateFixture(&fixture);
-        }
-        
-        if(shape){
-            delete shape;
-            shape = NULL;
-        }
-        
     }
     return self;
 }
@@ -549,7 +441,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
     transform = CGAffineTransformTranslate(transform, globalPos.x, globalPos.y);
     transform = CGAffineTransformRotate(transform, [self body]->GetAngle());
     
-    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
+//    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
 //        transform = CGAffineTransformTranslate(transform, - ((SKSpriteNode*)_node).size.width*0.5*_node.xScale, - ((SKSpriteNode*)_node).size.height*0.5*_node.yScale);
         transform = CGAffineTransformTranslate(transform, - ((SKSpriteNode*)_node).size.width*0.5, - ((SKSpriteNode*)_node).size.height*0.5);
     

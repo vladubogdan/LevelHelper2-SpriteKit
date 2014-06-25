@@ -24,6 +24,11 @@
 
 
 /**
+ Returns the points used to draw this bezier node. Array of NSValue with CGPoints;
+ */
+-(NSMutableArray*)linePoints;
+
+/**
  Returns the size of the bezier node by computing the bounding box of the points.
  */
 -(CGSize)size;

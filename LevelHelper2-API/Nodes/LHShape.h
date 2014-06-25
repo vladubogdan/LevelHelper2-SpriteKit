@@ -24,9 +24,14 @@
                                  parent:(SKNode*)prnt;
 
 
+
 /**
  Returns the size of the shape node by computing the bounding box of the points.
  */
 -(CGSize)size;
 
+/**
+ Returns the outline points of the shape. Array with NSValue with CGPoint.
+ */
+-(NSMutableArray*)outlinePoints;
 @end

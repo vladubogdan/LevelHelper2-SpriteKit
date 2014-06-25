@@ -17,6 +17,7 @@
     LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
     NSMutableArray* _shapeTriangles;
+    NSMutableArray* _outlinePoints;
     LHNodePhysicsProtocolImp*   _physicsProtocolImp;
 }
 
@@ -24,6 +25,7 @@
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
     LH_SAFE_RELEASE(_shapeTriangles);
+    LH_SAFE_RELEASE(_outlinePoints);
     LH_SAFE_RELEASE(_physicsProtocolImp);
 
     LH_SUPER_DEALLOC();
@@ -53,6 +55,8 @@
         
         NSArray* points = [dict objectForKey:@"points"];
         
+        _outlinePoints = [[NSMutableArray alloc] init];
+        
         CGMutablePathRef linePath = nil;
         for(NSDictionary* pointDict in points)
         {
@@ -64,6 +68,7 @@
             else{
                 CGPathAddLineToPoint(linePath, nil, vPoint.x, -vPoint.y);
             }
+            [_outlinePoints addObject:LHValueWithCGPoint(CGPointMake(vPoint.x, -vPoint.y))];
         }
 
         if(linePath){
@@ -76,7 +81,7 @@
         if(triangles){
             _shapeTriangles = [[NSMutableArray alloc] initWithArray:triangles];
         }
-
+        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
@@ -100,6 +105,12 @@
     return _shapeTriangles;
 }
 
+/**
+ Returns the outline points of the shape. Array with NSValue with CGPoint.
+ */
+-(NSMutableArray*)outlinePoints{
+    return _outlinePoints;
+}
 
 -(CGSize)size{
     return CGPathGetBoundingBox(self.path).size;
@@ -127,6 +138,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 {
     [_animationProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
+    [_physicsProtocolImp update:currentTime delta:dt];
 }
 
 
