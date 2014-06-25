@@ -16,7 +16,10 @@
 
 #import "LHConfig.h"
 
+#import "SKNode+Transforms.h"
+
 #import "LHGameWorldNode.h"
+#import "LHNode.h"
 
 #if LH_USE_BOX2D
 
@@ -91,18 +94,51 @@
         b2BodyDef bodyDef;
         bodyDef.type = (b2BodyType)type;
         
-        CGPoint position = [_node convertToNodeSpaceAR:CGPointZero];
+        
+//        CGPoint position = [_node convertToWorldSpace:CGPointZero];
+        CGPoint position = [_node convertPoint:CGPointZero toNode:scene];
+        
+//        NSLog(@"CONVERT POS %f %f", position.x, position.y);
+        
+//        position = [_node position];
+        
+//        NSLog(@"%@ local pos %f %f", [_node name], position.x, position.y);
+        
+//        position = [_node convertToWorldSpace:CGPointZero];
+        
+//        position = [_node convertPoint:CGPointZero toNode:[scene gameWorldNode]];
+        
+        
+//        startPointInNodeSpace = CGPointMake(0, size.height/2);
+//        endPointInNodeSpace = CGPointMake(startPointInNodeSpace.x, startPointInNodeSpace.y + 100);
+//        CGPoint start = [self.scene convertPoint:startPointInNodeSpace fromNode:self];
+//        CGPoint end = [self.scene convertPoint:endPointInNodeSpace fromNode:self];
+        
+        
+        
+//        NSLog(@"%@ world pos %f %f", [_node name], position.x, position.y);
+        
+        
+        //CGPoint position = [_node convertToWorldSpaceAR:CGPointZero];
+//        NSLog(@"WORLD POS %f %f", position.x, position.y);
+//        b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
+//        _body->SetTransform(b2Pos, [_node zRotation]);
+
+        
+//        position = [scene convertPoint:CGPointZero fromNode:_node];
+        
+//        CGPoint position = [_node convertToWorldSpace:CGPointZero];
+        
+        
         b2Vec2 bodyPos = [scene metersFromPoint:position];
         bodyDef.position = bodyPos;
 
+        bodyDef.angle = [_node zRotation];//already in radians
 
-        float angle = [_node rotation];
-        bodyDef.angle = CC_DEGREES_TO_RADIANS(angle);
-
-        bodyDef.userData = LH_VOID_BRIDGE_CAST(self);
+        bodyDef.userData = LH_VOID_BRIDGE_CAST(_node);
         
         _body = world->CreateBody(&bodyDef);
-        _body->SetUserData(LH_VOID_BRIDGE_CAST(self));
+        _body->SetUserData(LH_VOID_BRIDGE_CAST(_node));
 
         _body->SetFixedRotation([dict boolForKey:@"fixedRotation"]);
         _body->SetGravityScale([dict floatForKey:@"gravityScale"]);
@@ -110,15 +146,22 @@
         _body->SetSleepingAllowed([dict boolForKey:@"allowSleep"]);
         _body->SetBullet([dict boolForKey:@"bullet"]);
         
-        CGSize sizet = [_node contentSize];
+        CGSize sizet = CGSizeMake(16, 16);
+        if([_node respondsToSelector:@selector(size)]){
+            sizet = [(SKSpriteNode*)_node size];//we cast so that we dont get a compiler error
+        }
+        
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
         
-        float scaleX = [_node scaleX];
-        float scaleY = [_node scaleY];
+        float scaleX = [_node xScale];
+        float scaleY = [_node yScale];
 
         previousScale = CGPointMake(scaleX, scaleY);
-        
+
+       
+
+         
         sizet.width *= scaleX;
         sizet.height*= scaleY;
         
@@ -161,23 +204,23 @@
         }
         else if(shapeType == 3)//CHAIN
         {
-            if([_node isKindOfClass:[LHBezier class]])
-            {
-                NSMutableArray* points = [(LHBezier*)_node linePoints];
-                
-                std::vector< b2Vec2 > verts;
-                
-                for(NSValue* val in points){
-                    CGPoint pt = CGPointFromValue(val);
-                    pt.x *= scaleX;
-                    pt.y *= scaleY;
-                    
-                    verts.push_back([scene metersFromPoint:pt]);
-                }
-                
-                shape = new b2ChainShape();
-                ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
-            }
+//            if([_node isKindOfClass:[LHBezier class]])
+//            {
+//                NSMutableArray* points = [(LHBezier*)_node linePoints];
+//                
+//                std::vector< b2Vec2 > verts;
+//                
+//                for(NSValue* val in points){
+//                    CGPoint pt = CGPointFromValue(val);
+//                    pt.x *= scaleX;
+//                    pt.y *= scaleY;
+//                    
+//                    verts.push_back([scene metersFromPoint:pt]);
+//                }
+//                
+//                shape = new b2ChainShape();
+//                ((b2ChainShape*)shape)->CreateChain (&(verts.front()), (int)verts.size());
+//            }
 //            else if([_node isKindOfClass:[LHShape class]])
 //            {
 //                NSArray* points = [(LHShape*)_node outlinePoints];
@@ -240,60 +283,60 @@
         }
         else if(shapeType == 2)//POLYGON
         {
-            if([_node isKindOfClass:[LHShape class]])
-            {
-                NSArray* trianglePoints = [(LHShape*)_node trianglePoints];
-                
-                for(int i = 0; i < [trianglePoints count]; i+=3)
-                {
-                    NSValue* valA = [trianglePoints objectAtIndex:i];
-                    NSValue* valB = [trianglePoints objectAtIndex:i+1];
-                    NSValue* valC = [trianglePoints objectAtIndex:i+2];
-                    
-                    CGPoint ptA = CGPointFromValue(valA);
-                    CGPoint ptB = CGPointFromValue(valB);
-                    CGPoint ptC = CGPointFromValue(valC);
-                    
-                    ptA.x *= scaleX;
-                    ptA.y *= scaleY;
-
-                    ptB.x *= scaleX;
-                    ptB.y *= scaleY;
-
-                    ptC.x *= scaleX;
-                    ptC.y *= scaleY;
-
-                    b2Vec2 *verts = new b2Vec2[3];
-                    
-                    verts[2] = [scene metersFromPoint:ptA];
-                    verts[1] = [scene metersFromPoint:ptB];
-                    verts[0] = [scene metersFromPoint:ptC];
-                    
-                    b2PolygonShape shapeDef;
-                    
-                    shapeDef.Set(verts, 3);
-                    
-                    b2FixtureDef fixture;
-                    
-                    fixture.density     = [fixInfo floatForKey:@"density"];
-                    fixture.friction    = [fixInfo floatForKey:@"friction"];
-                    fixture.restitution = [fixInfo floatForKey:@"restitution"];
-                    fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
-                    
-                    //                    fixture.filter.maskBits = [fixInfo mask].intValue;
-                    //                    fixture.filter.categoryBits = [fixInfo category].intValue;
-                    
-                    fixture.shape = &shapeDef;
-                    _body->CreateFixture(&fixture);
-                    delete[] verts;
-                }
-            }
+//            if([_node isKindOfClass:[LHShape class]])
+//            {
+//                NSArray* trianglePoints = [(LHShape*)_node trianglePoints];
+//                
+//                for(int i = 0; i < [trianglePoints count]; i+=3)
+//                {
+//                    NSValue* valA = [trianglePoints objectAtIndex:i];
+//                    NSValue* valB = [trianglePoints objectAtIndex:i+1];
+//                    NSValue* valC = [trianglePoints objectAtIndex:i+2];
+//                    
+//                    CGPoint ptA = CGPointFromValue(valA);
+//                    CGPoint ptB = CGPointFromValue(valB);
+//                    CGPoint ptC = CGPointFromValue(valC);
+//                    
+//                    ptA.x *= scaleX;
+//                    ptA.y *= scaleY;
+//
+//                    ptB.x *= scaleX;
+//                    ptB.y *= scaleY;
+//
+//                    ptC.x *= scaleX;
+//                    ptC.y *= scaleY;
+//
+//                    b2Vec2 *verts = new b2Vec2[3];
+//                    
+//                    verts[2] = [scene metersFromPoint:ptA];
+//                    verts[1] = [scene metersFromPoint:ptB];
+//                    verts[0] = [scene metersFromPoint:ptC];
+//                    
+//                    b2PolygonShape shapeDef;
+//                    
+//                    shapeDef.Set(verts, 3);
+//                    
+//                    b2FixtureDef fixture;
+//                    
+//                    fixture.density     = [fixInfo floatForKey:@"density"];
+//                    fixture.friction    = [fixInfo floatForKey:@"friction"];
+//                    fixture.restitution = [fixInfo floatForKey:@"restitution"];
+//                    fixture.isSensor    = [fixInfo boolForKey:@"sensor"];
+//                    
+//                    //                    fixture.filter.maskBits = [fixInfo mask].intValue;
+//                    //                    fixture.filter.categoryBits = [fixInfo category].intValue;
+//                    
+//                    fixture.shape = &shapeDef;
+//                    _body->CreateFixture(&fixture);
+//                    delete[] verts;
+//                }
+//            }
         }
         
         if(fixturesInfo)
         {
-            int flipx = [_node scaleX] < 0 ? -1 : 1;
-            int flipy = [_node scaleY] < 0 ? -1 : 1;
+            int flipx = [_node xScale] < 0 ? -1 : 1;
+            int flipy = [_node yScale] < 0 ? -1 : 1;
             
             for(NSArray* fixPoints in fixturesInfo)
             {
@@ -412,7 +455,6 @@
             shape = NULL;
         }
         
-        
     }
     return self;
 }
@@ -459,21 +501,31 @@
     }
 }
 
--(void)visit{
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt{
+    
     if(_body && scheduledForRemoval){
         [self removeBody];
     }
+    
+    if(_body){
+        if(_body){
+            CGAffineTransform trans = b2BodyToParentTransform(_node, self);
+            CGPoint localPos = CGPointApplyAffineTransform([_node anchorPointInPoints], trans);
+            
+            [((LHNode*)_node) updatePosition:localPos];
+            [((LHNode*)_node) updateZRotation:_body->GetAngle()];
+        }
+    }
 }
 
-
-static inline CGAffineTransform b2BodyToParentTransform(CCNode *node, LHNodePhysicsProtocolImp *physicsImp)
+static inline CGAffineTransform b2BodyToParentTransform(SKNode *node, LHNodePhysicsProtocolImp *physicsImp)
 {
 	return CGAffineTransformConcat(physicsImp.absoluteTransform, CGAffineTransformInvert(NodeToB2BodyTransform(node.parent)));
 }
-static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
+static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 {
 	CGAffineTransform transform = CGAffineTransformIdentity;
-	for(CCNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]; n = n.parent){
+	for(SKNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]; n = n.parent){
 		transform = CGAffineTransformConcat(transform, n.nodeToParentTransform);
 	}
 	return transform;
@@ -483,7 +535,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
 {
     if([self body]){
         CGAffineTransform rigidTransform = b2BodyToParentTransform(_node, self);
-		return CGAffineTransformConcat(CGAffineTransformMakeScale([_node scaleX], [_node scaleY]), rigidTransform);
+		return CGAffineTransformConcat(CGAffineTransformMakeScale([_node xScale], [_node yScale]), rigidTransform);
     }
     return CGAffineTransformIdentity;//should never get here
 }
@@ -493,13 +545,14 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     LHScene* scene = (LHScene*)[_node scene];
     b2Vec2 b2Pos = [self body]->GetPosition();
     CGPoint globalPos = [scene pointFromMeters:b2Pos];
-
+    
     transform = CGAffineTransformTranslate(transform, globalPos.x, globalPos.y);
     transform = CGAffineTransformRotate(transform, [self body]->GetAngle());
-
+    
     if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
-        transform = CGAffineTransformTranslate(transform, - _node.contentSize.width*0.5*_node.scaleX, - _node.contentSize.height*0.5*_node.scaleY);
-
+//        transform = CGAffineTransformTranslate(transform, - ((SKSpriteNode*)_node).size.width*0.5*_node.xScale, - ((SKSpriteNode*)_node).size.height*0.5*_node.yScale);
+        transform = CGAffineTransformTranslate(transform, - ((SKSpriteNode*)_node).size.width*0.5, - ((SKSpriteNode*)_node).size.height*0.5);
+    
 	return transform;
 }
 
@@ -509,23 +562,66 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     {
         CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-        _body->SetTransform(b2Pos, CC_DEGREES_TO_RADIANS(-[_node rotation]));
+        _body->SetTransform(b2Pos, [_node zRotation]);
+        _body->SetAwake(true);
     }
 }
 
--(CGPoint)position
-{
-	if(_body){
-        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
-		return [_node convertPositionFromPoints:pt type:[_node positionType]];
-	}
-	return CGPointZero;
-}
+//-(CGPoint)position
+//{
+//	if(_body){
+//        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
+//		return [_node convertPositionFromPoints:pt type:[_node positionType]];
+//	}
+//	return CGPointZero;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+//-(void)updateTransform
+//{
+//    if([self body])
+//    {
+//        LHScene* scene = (LHScene*)[_node scene];
+//        CGPoint worldPos = [_node convertPoint:CGPointZero toNode:scene];
+//        
+//        NSLog(@"WORLD POS %f %f", worldPos.x, worldPos.y);
+//        
+//        CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
+//        b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
+//        _body->SetTransform(b2Pos, [_node zRotation]);
+//    }
+//}
+
+//-(CGPoint)position
+//{
+//	if(_body){
+//        b2Vec2 pos = _body->GetPosition();
+//        LHScene* scene = (LHScene*)[_node scene];
+//        CGPoint worldPos = [scene pointFromMeters:pos];
+//        CGPoint localPos = [_node convertPoint:worldPos fromNode:scene];
+////        [_node setPosition:localPos];
+//  
+//        return localPos;
+//        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
+//		return [_node convertPositionFromPoints:pt type:[_node positionType]];
+//	}
+//	return CGPointZero;
+//}
 -(float)rotation{
     if([self body]){
-        return CC_RADIANS_TO_DEGREES([self body]->GetAngle());
+        return [self body]->GetAngle();
     }
-    return 0.0f;
+    return 0.0f;//should never get here
 }
 
 -(BOOL) validCentroid:(b2Vec2*)vs count:(int)count
@@ -576,11 +672,11 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     if(_body){
         
         //this will update the transform
-        [_node position];
-        [_node rotation];
+//        [_node position];
+//        [_node rotation];
         
-        float scaleX = [_node scaleX];
-        float scaleY = [_node scaleY];
+        float scaleX = [_node xScale];
+        float scaleY = [_node yScale];
         
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
@@ -716,11 +812,6 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
         [_node setPhysicsBody:nil];        
     }
 }
-
--(void)visit{
-    //nothing to do for chipmunk
-}
-
 
 
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(SKNode*)nd{
@@ -982,6 +1073,9 @@ static inline CGAffineTransform NodeToB2BodyTransform(CCNode *node)
     return self;
 }
 
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt{
+    //nothing for spritekit
+}
 #endif //LH_USE_BOX2D
 
 @end

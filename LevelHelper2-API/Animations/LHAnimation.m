@@ -350,12 +350,13 @@
         newPos.y += offset.y;
     }
     
-    SKSpriteNode* p = (SKSpriteNode*)[animNode parent];
-    if([p isKindOfClass:[SKSpriteNode class]]){
-        CGPoint anc = [p anchorPoint];
-        newPos.x -= p.size.width*(anc.x - 0.5f);
-        newPos.y -= p.size.height*(anc.y- 0.5f);
-    }
+//    SKSpriteNode* p = (SKSpriteNode*)[animNode parent];
+//    if([p isKindOfClass:[SKSpriteNode class]]){
+//        CGPoint anc = [p anchorPoint];
+//        newPos.x -= p.size.width*(anc.x - 0.5f);
+//        newPos.y -= p.size.height*(anc.y- 0.5f);
+//    }
+    
     return newPos;
 }
 

@@ -64,6 +64,9 @@ typedef enum
 #endif //LH_USE_BOX2D
 
 
+-(void)updatePosition:(CGPoint)pos;
+-(void)updateZRotation:(float)rotation;
+
 @end
 
 
@@ -79,8 +82,6 @@ typedef enum
 
 -(void)removeBody;
 
--(void)visit;
-
 #if LH_USE_BOX2D
 #ifdef __cplusplus
 -(b2Body*)body;
@@ -90,9 +91,11 @@ typedef enum
 -(CGPoint)position;
 -(float)rotation;
 -(void)updateScale;
+
 #endif
 #endif //LH_USE_BOX2D
 
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt;
 @end
 
 #define LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
@@ -100,12 +103,9 @@ typedef enum
 {\
     return [_physicsProtocolImp body];\
 }\
-- (CGAffineTransform)nodeToParentTransform\
+-(void)updatePosition:(CGPoint)position\
 {\
-    if([_physicsProtocolImp body])\
-        _transform = [_physicsProtocolImp nodeTransform];\
-        \
-        return [super nodeToParentTransform];\
+    [super setPosition:position];\
 }\
 -(void)setPosition:(CGPoint)position\
 {\
@@ -114,24 +114,16 @@ typedef enum
         [_physicsProtocolImp updateTransform];\
     }\
 }\
--(CGPoint)position{\
-    if([_physicsProtocolImp body]){\
-        return [_physicsProtocolImp position];\
-    }\
-    return [super position];\
-}\
--(void)setRotation:(float)rotation\
+-(void)updateZRotation:(float)rotation\
 {\
-    [super setRotation:rotation];\
+    [super setZRotation:rotation];\
+}\
+-(void)setZRotation:(float)rotation\
+{\
+    [super setZRotation:rotation];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateTransform];\
     }\
-}\
--(float)rotation{\
-    if([_physicsProtocolImp body]){\
-        return [_physicsProtocolImp rotation];\
-    }\
-    return [super rotation];\
 }\
 -(void)setScale:(float)scale{\
     [super setScale:scale];\
@@ -139,18 +131,32 @@ typedef enum
         [_physicsProtocolImp updateScale];\
     }\
 }\
--(void)setScaleX:(float)scaleX{\
-    [super setScaleX:scaleX];\
+-(void)setXScale:(float)scaleX{\
+    [super setXScale:scaleX];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
     }\
 }\
--(void)setScaleY:(float)scaleY{\
-    [super setScaleY:scaleY];\
+-(void)setYScale:(float)scaleY{\
+    [super setYScale:scaleY];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
     }\
 }
+
+//-(CGPoint)position{\
+//    if([_physicsProtocolImp body]){\
+//        return [_physicsProtocolImp position];\
+//    }\
+//    return [super position];\
+//}\
+//- (CGAffineTransform)nodeToParentTransform\
+//{\
+//    if([_physicsProtocolImp body])\
+//        _transform = [_physicsProtocolImp nodeTransform];\
+//        \
+//        return [super nodeToParentTransform];\
+//}\
 
 #define LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
 -(int)physicsType{\

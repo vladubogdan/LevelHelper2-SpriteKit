@@ -176,9 +176,8 @@
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
+        self.position = CGPointZero;
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
-        
-        
         
         
         if([dict boolForKey:@"useGlobalGravity"])
@@ -186,10 +185,12 @@
             //more or less the same as box2d
             CGPoint gravityVector = [dict pointForKey:@"globalGravityDirection"];
             float gravityForce    = [dict floatForKey:@"globalGravityForce"];
-            [self.physicsWorld setGravity:CGVectorMake(gravityVector.x,
-                                                       gravityVector.y*gravityForce)];
-//            [self.physicsWorld setSpeed:gravityForce];
+            
+            CGPoint gravity = CGPointMake(gravityVector.x*gravityForce,
+                                          gravityVector.y*gravityForce);
+            [self setGlobalGravity:gravity];
         }
+        
         
         [self setBackgroundColor:[dict colorForKey:@"backgroundColor"]];
         
@@ -211,18 +212,55 @@
             }
             
             if(rectInf){
+//                CGRect bRect = LHRectFromString(rectInf);
+//                CGSize designSize = [self designResolutionSize];
+//                CGPoint offset = [self designOffset];
+//                offset.y -= self.size.height;
+//                CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
+//                                            (1.0f - bRect.origin.y)*designSize.height + offset.y,
+//                                            bRect.size.width*designSize.width ,
+//                                            -(bRect.size.height)*designSize.height);
+
+                
                 CGRect bRect = LHRectFromString(rectInf);
                 CGSize designSize = [self designResolutionSize];
                 CGPoint offset = [self designOffset];
-                offset.y -= self.size.height;
                 CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
-                                            (1.0f - bRect.origin.y)*designSize.height + offset.y,
+                                            self.size.height - bRect.origin.y*designSize.height + offset.y,
                                             bRect.size.width*designSize.width ,
-                                            -(bRect.size.height)*designSize.height);
-                
-                [self gameWorldNode].physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:skBRect];
-                [self gameWorldNode].physicsBody.dynamic = NO;
+                                            -bRect.size.height*designSize.height);
 
+                
+                
+//                [self gameWorldNode].physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:skBRect];
+//                [self gameWorldNode].physicsBody.dynamic = NO;
+
+                {
+                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
+                                                        to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
+                                                  withName:@"LHPhysicsBottomBoundary"];
+                }
+                
+                {
+                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
+                                                        to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
+                                                  withName:@"LHPhysicsRightBoundary"];
+                    
+                }
+                
+                {
+                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
+                                                        to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
+                                                  withName:@"LHPhysicsTopBoundary"];
+                }
+                
+                {
+                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
+                                                        to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
+                                                  withName:@"LHPhysicsLeftBoundary"];
+                }
+
+                
                 #if LH_DEBUG
                     SKShapeNode* debugShapeNode = [SKShapeNode node];
                     debugShapeNode.path = CGPathCreateWithRect(skBRect,
@@ -296,6 +334,59 @@
         LH_SAFE_RELEASE(lateLoadingNodes);
     }
 }
+
+-(void)createPhysicsBoundarySectionFrom:(CGPoint)from
+                                     to:(CGPoint)to
+                               withName:(NSString*)sectionName
+{
+//    SKShapeNode* drawNode = [SKShapeNode node];
+//    [self addChild:drawNode];
+//    [drawNode setZPosition:100];
+//    [drawNode setName:sectionName];
+    
+//#ifndef NDEBUG
+//    [drawNode drawSegmentFrom:from
+//                           to:to
+//                       radius:1
+//                        color:[CCColor redColor]];
+//#endif
+    
+#if LH_USE_BOX2D
+    
+    float PTM_RATIO = [self ptm];
+    
+    // Define the ground body.
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0, 0); // bottom-left corner
+    
+    b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
+    
+    // Define the ground box shape.
+    b2EdgeShape groundBox;
+    
+    // top
+    groundBox.Set(b2Vec2(from.x/PTM_RATIO,
+                         from.y/PTM_RATIO),
+                  b2Vec2(to.x/PTM_RATIO,
+                         to.y/PTM_RATIO));
+    physicsBoundariesBody->CreateFixture(&groundBox,0);
+    
+    
+#else //spritekit
+//    SKShapeNode* drawNode = [SKShapeNode node];
+//    [self addChild:drawNode];
+//    [drawNode setZPosition:100];
+//    [drawNode setName:sectionName];
+    
+    
+//    CCPhysicsBody* boundariesBody = [CCPhysicsBody bodyWithPillFrom:from to:to cornerRadius:0];
+//    [boundariesBody setType:CCPhysicsBodyTypeStatic];
+//    [drawNode setPhysicsBody:boundariesBody];
+#endif
+    
+}
+
+
 
 -(SKTextureAtlas*)textureAtlasWithImagePath:(NSString*)atlasPath
 {
@@ -544,7 +635,55 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     [_nodeProtocolImp update:currentTime delta:dt];
 }
 
+
+#pragma mark - BOX2D INTEGRATION
+
+#if LH_USE_BOX2D
+-(b2World*)box2dWorld{
+    return [[self gameWorldNode] box2dWorld];
+}
+-(float)ptm{
+    return 32.0f;
+}
+-(b2Vec2)metersFromPoint:(CGPoint)point{
+    return b2Vec2(point.x/[self ptm], point.y/[self ptm]);
+}
+-(CGPoint)pointFromMeters:(b2Vec2)vec{
+    return CGPointMake(vec.x*[self ptm], vec.y*[self ptm]);
+}
+-(float)metersFromValue:(float)val{
+    return val/[self ptm];
+}
+-(float)valueFromMeters:(float)meter{
+    return meter*[self ptm];
+}
+#endif //LH_USE_BOX2D
+
+-(CGPoint)globalGravity{
+    return [[self gameWorldNode] gravity];
+}
+-(void)setGlobalGravity:(CGPoint)gravity{
+    [[self gameWorldNode] setGravity:gravity];
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - PRIVATE CATEGORY
 

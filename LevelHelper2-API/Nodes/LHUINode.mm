@@ -41,7 +41,10 @@
                                                                                     node:self];
         
         
+        self.position = CGPointZero;
+        
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
+        
         
     }
     

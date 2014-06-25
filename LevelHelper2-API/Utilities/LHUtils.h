@@ -16,11 +16,16 @@
 #define LH_SAFE_RELEASE(X) if(X){ X = nil;}
 #define LH_AUTORELEASED(X) X
 #define LH_SUPER_DEALLOC() self
+#define LH_VOID_BRIDGE_CAST(X) (__bridge void*)X
+#define LH_ID_BRIDGE_CAST(X) (__bridge id)X;
+
 #else
 
 #define LH_SAFE_RELEASE(X) if(X){[X release]; X = nil;}
 #define LH_AUTORELEASED(X) [X autorelease]
 #define LH_SUPER_DEALLOC() [super dealloc]
+#define LH_VOID_BRIDGE_CAST(X) X
+#define LH_ID_BRIDGE_CAST(X) X;
 
 #endif
 

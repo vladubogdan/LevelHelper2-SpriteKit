@@ -113,7 +113,7 @@ return [_nodeProtocolImp tags]; \
 return [_nodeProtocolImp userProperty];\
 }\
 \
--(SKNode*)childNodeWithName:(NSString*)name{\
+-(SKNode<LHNodeProtocol>*)childNodeWithName:(NSString*)name{\
 return [_nodeProtocolImp childNodeWithName:name];\
 }\
 \

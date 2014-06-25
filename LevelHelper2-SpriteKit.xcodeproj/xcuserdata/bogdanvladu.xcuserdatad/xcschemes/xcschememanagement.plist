@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>LevelHelper2-SpriteKit + Box2d.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>LevelHelper2-SpriteKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>6E89FD1D192E0A390040478F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EBEA2F71959BFD000726044</key>
 		<dict>
 			<key>primary</key>
 			<true/>

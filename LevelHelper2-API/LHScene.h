@@ -9,6 +9,15 @@
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
 
+#import "LHConfig.h"
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+#include "Box2D.h"
+#endif
+#endif //LH_USE_BOX2D
+
+
 #if __has_feature(objc_arc) && __clang_major__ >= 3
 #define LH_ARC_ENABLED 1
 #endif // __has_feature(objc_arc)
@@ -65,7 +74,6 @@
 -(LHUINode*)uiNode;
 
 
-
 /**
  Returns the informations that can be used to create an asset dynamically by specifying the file name.
  The asset file must be in the same folder as the scene file.
@@ -75,6 +83,33 @@
  @return A dictionary containing the asset information or nil.
  */
 -(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+
+
+#pragma mark - Box2d Support
+
+#if LH_USE_BOX2D
+#ifdef __cplusplus
+-(b2World*)box2dWorld;
+
+-(float)ptm;
+
+-(b2Vec2)metersFromPoint:(CGPoint)point;
+-(CGPoint)pointFromMeters:(b2Vec2)vec;
+
+-(float)metersFromValue:(float)val;
+-(float)valueFromMeters:(float)meter;
+
+#endif
+#endif //LH_USE_BOX2D
+
+
+/*Get the global gravity force.
+ */
+-(CGPoint)globalGravity;
+/*Sets the global gravity force
+ @param gravity A point representing the gravity force in x and y direction.
+ */
+-(void)setGlobalGravity:(CGPoint)gravity;
 
 
 @end

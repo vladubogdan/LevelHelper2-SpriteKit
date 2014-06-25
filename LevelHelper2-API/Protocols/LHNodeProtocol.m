@@ -173,9 +173,26 @@
     return _userProperty;
 }
 
--(SKNode*)childNodeWithName:(NSString*)name
+-(SKNode<LHNodeProtocol>*)childNodeWithName:(NSString*)name
 {
-    return [_node childNodeWithName:name];
+    if([[_node name] isEqualToString:name]){
+        return (SKNode<LHNodeProtocol>*)_node;
+    }
+    
+    for(SKNode<LHNodeProtocol>* node in [_node children])
+    {
+        if([node respondsToSelector:@selector(childNodeWithName:)])
+        {
+            if([[node name] isEqualToString:name]){
+                return node;
+            }
+            SKNode <LHNodeProtocol>* retNode = (SKNode <LHNodeProtocol>*)[node childNodeWithName:name];
+            if(retNode){
+                return retNode;
+            }
+        }
+    }
+    return nil;
 }
 
 -(SKNode<LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;

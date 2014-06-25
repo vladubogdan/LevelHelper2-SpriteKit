@@ -12,6 +12,7 @@
 #import "LHUserPropertyProtocol.h"
 #import "LHAnimation.h"
 #import "LHGameWorldNode.h"
+#import "LHUINode.h"
 
 @implementation LHUtils
 
@@ -49,13 +50,25 @@
     CGPoint designPos = CGPointZero;
     
 
+//    designPos = CGPointMake(designSize.width*unitPos.x,
+//                            designSize.height*(-unitPos.y));
+
+//    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode])
+//    {
+//        designPos.x += offset.x;
+//        designPos.y -= offset.y;
+//    }
+
     designPos = CGPointMake(designSize.width*unitPos.x,
                             designSize.height*(-unitPos.y));
-
-    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode])
+    
+    
+    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode] || [node parent] == [scene uiNode])
     {
+        designPos.y = designSize.height + designPos.y;
+        
         designPos.x += offset.x;
-        designPos.y -= offset.y;
+        designPos.y += offset.y;
     }
 
     return designPos;
