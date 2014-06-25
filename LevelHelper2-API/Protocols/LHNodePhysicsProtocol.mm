@@ -106,11 +106,6 @@
         int shapeType = [dict intForKey:@"shape"];
         int type = [dict intForKey:@"type"];
         
-        NSLog(@"BODY TYPE %d", type);
-        
-        NSLog(@"PHY DICT %@", dict);
-        
-        
         LHScene* scene = (LHScene*)[_node scene];
         b2World* world = [scene box2dWorld];
         
@@ -262,9 +257,6 @@
             }
             else if([_node isKindOfClass:[LHShape class]])
             {
-                NSLog(@"DID CREATE CHAIN SHAPE FOR SHAPE %d", _body->GetType());
-                
-                
                 NSArray* points = [(LHShape*)_node outlinePoints];
 
                 std::vector< b2Vec2 > verts;
@@ -441,9 +433,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
     transform = CGAffineTransformTranslate(transform, globalPos.x, globalPos.y);
     transform = CGAffineTransformRotate(transform, [self body]->GetAngle());
     
-//    if(![_node isKindOfClass:[LHShape class]] && ![_node isKindOfClass:[LHBezier class]])//whats going on here? Why?
-//        transform = CGAffineTransformTranslate(transform, - ((SKSpriteNode*)_node).size.width*0.5*_node.xScale, - ((SKSpriteNode*)_node).size.height*0.5*_node.yScale);
-        transform = CGAffineTransformTranslate(transform, - ((SKSpriteNode*)_node).size.width*0.5, - ((SKSpriteNode*)_node).size.height*0.5);
+    transform = CGAffineTransformTranslate(transform, - ((SKSpriteNode*)_node).size.width*0.5, - ((SKSpriteNode*)_node).size.height*0.5);
     
 	return transform;
 }

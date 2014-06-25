@@ -176,7 +176,7 @@
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
-        self.position = CGPointZero;
+
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         

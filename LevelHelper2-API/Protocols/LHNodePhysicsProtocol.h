@@ -103,20 +103,12 @@ typedef enum
 {\
     return [_physicsProtocolImp body];\
 }\
--(void)updatePosition:(CGPoint)position\
-{\
-    [super setPosition:position];\
-}\
 -(void)setPosition:(CGPoint)position\
 {\
     [super setPosition:position];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateTransform];\
     }\
-}\
--(void)updateZRotation:(float)rotation\
-{\
-    [super setZRotation:rotation];\
 }\
 -(void)setZRotation:(float)rotation\
 {\
@@ -144,19 +136,6 @@ typedef enum
     }\
 }
 
-//-(CGPoint)position{\
-//    if([_physicsProtocolImp body]){\
-//        return [_physicsProtocolImp position];\
-//    }\
-//    return [super position];\
-//}\
-//- (CGAffineTransform)nodeToParentTransform\
-//{\
-//    if([_physicsProtocolImp body])\
-//        _transform = [_physicsProtocolImp nodeTransform];\
-//        \
-//        return [super nodeToParentTransform];\
-//}\
 
 #define LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
 -(int)physicsType{\
@@ -167,6 +146,13 @@ typedef enum
 }\
 -(void)removeBody{\
     [_physicsProtocolImp removeBody];\
+}\
+-(void)updatePosition:(CGPoint)position\
+{\
+    [super setPosition:position];\
+}\
+-(void)updateZRotation:(float)rotation\
+{\
+    [super setZRotation:rotation];\
 }
-
 

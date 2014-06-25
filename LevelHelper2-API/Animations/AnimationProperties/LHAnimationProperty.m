@@ -74,7 +74,7 @@
         for(NSString* subUUID in allKeys){
             
             NSDictionary* subInfo = [subsInfo objectForKey:subUUID];
-            id<LHNodeAnimationProtocol, LHNodeProtocol> child = [parentNode childNodeWithUUID:subUUID];
+            id<LHNodeAnimationProtocol, LHNodeProtocol> child = (id<LHNodeAnimationProtocol, LHNodeProtocol>)[parentNode childNodeWithUUID:subUUID];
             
             if(child && subInfo){
                 
