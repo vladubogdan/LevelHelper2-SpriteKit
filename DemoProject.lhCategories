@@ -10,19 +10,19 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Category_02</string>
+		<string>pink</string>
 		<key>value</key>
 		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Category_03</string>
+		<string>blue</string>
 		<key>value</key>
 		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Category_04</string>
+		<string>green</string>
 		<key>value</key>
 		<integer>8</integer>
 	</dict>

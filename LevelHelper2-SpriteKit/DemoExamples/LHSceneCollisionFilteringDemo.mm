@@ -6,15 +6,13 @@
 //  Copyright (c) 2014 VLADU BOGDAN DANIEL PFA. All rights reserved.
 //
 
-#import "LHScenePhysicsBodiesDemo.h"
-#import "LHSceneCameraDemo.h"
 #import "LHSceneCollisionFilteringDemo.h"
-
-@implementation LHScenePhysicsBodiesDemo
+#import "LHScenePhysicsBodiesDemo.h"
+@implementation LHSceneCollisionFilteringDemo
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/physicsBodiesTest.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionFilteringTest.plist"];
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{
@@ -30,7 +28,7 @@
             [label setName:@"InfoLabel"];
             [label setFontSize:16];
             [label setZPosition:60];
-            [label setText:@"Physics Bodies Test"];
+            [label setText:@"Collision Filtering Test"];
             [label setFontColor:[SKColor redColor]];
             [label setColor:[SKColor whiteColor]];
             [label setPosition:CGPointMake(size.width*0.5, size.height-50)];
@@ -40,32 +38,31 @@
             
             {
             SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"Test physics bodies on various node types."];
+            [labelLine setText:@"PINK collides only with BLUE"];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-70)];
             [[self uiNode] addChild:labelLine];
             }
             
             {
             SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"Click to set a sprite to that position (position setting test)."];
+            [labelLine setText:@"BLUE collides only with PINK and GREEN"];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-90)];
             [[self uiNode] addChild:labelLine];
             }
             
             {
                 SKLabelNode* labelLine = [label copy];
-                [labelLine setText:@"Click to rotate a sprite by 45 deg (rotation setting test)."];
+                [labelLine setText:@"GREEN collides with ALL"];
                 [labelLine setPosition:CGPointMake(size.width*0.5, size.height-110)];
                 [[self uiNode] addChild:labelLine];
             }
             
             {
                 SKLabelNode* labelLine = [label copy];
-                [labelLine setText:@"Click on left side to scale sprite down / right side to scale sprite up (scale setting test)."];
+                [labelLine setText:@"Click and drag to move the robots."];
                 [labelLine setPosition:CGPointMake(size.width*0.5, size.height-130)];
                 [[self uiNode] addChild:labelLine];
             }
-
         }
     }
     
@@ -73,11 +70,11 @@
 }
 
 -(void)previousDemo{
-        [[self view] presentScene:[LHSceneCameraDemo scene]];
+    [[self view] presentScene:[LHScenePhysicsBodiesDemo scene]];
 }
 
 -(void)nextDemo{
-        [[self view] presentScene:[LHSceneCollisionFilteringDemo scene]];
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

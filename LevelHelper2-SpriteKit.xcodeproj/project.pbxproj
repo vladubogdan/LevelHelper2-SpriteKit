@@ -59,6 +59,8 @@
 		6E89FDB1192E0C510040478F /* LHWeldJointNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD85192E0C510040478F /* LHWeldJointNode.mm */; };
 		6E89FDB3192E0C510040478F /* LHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FD8E192E0C510040478F /* LHUtils.m */; };
 		6E89FDB6192E0C930040478F /* LHSceneSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FDB5192E0C930040478F /* LHSceneSubclass.m */; };
+		6EBD3D92195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBD3D91195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm */; };
+		6EBD3D93195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBD3D91195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm */; };
 		6EBEA2D6195984D800726044 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2D5195984D800726044 /* LHSceneDemo.mm */; };
 		6EBEA2D9195985CA00726044 /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2D8195985CA00726044 /* LHSceneCameraDemo.mm */; };
 		6EBEA2E019598A1400726044 /* LHUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA2DF19598A1400726044 /* LHUINode.mm */; };
@@ -274,6 +276,8 @@
 		6E89FD8E192E0C510040478F /* LHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHUtils.m; sourceTree = "<group>"; };
 		6E89FDB4192E0C930040478F /* LHSceneSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneSubclass.h; sourceTree = "<group>"; };
 		6E89FDB5192E0C930040478F /* LHSceneSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSceneSubclass.m; sourceTree = "<group>"; };
+		6EBD3D90195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionFilteringDemo.h; sourceTree = "<group>"; };
+		6EBD3D91195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionFilteringDemo.mm; sourceTree = "<group>"; };
 		6EBEA2D4195984D800726044 /* LHSceneDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneDemo.h; sourceTree = "<group>"; };
 		6EBEA2D5195984D800726044 /* LHSceneDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneDemo.mm; sourceTree = "<group>"; };
 		6EBEA2D7195985CA00726044 /* LHSceneCameraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraDemo.h; sourceTree = "<group>"; };
@@ -634,6 +638,8 @@
 				6EBEA2D8195985CA00726044 /* LHSceneCameraDemo.mm */,
 				6EBEA2F31959A46700726044 /* LHScenePhysicsBodiesDemo.h */,
 				6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.mm */,
+				6EBD3D90195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.h */,
+				6EBD3D91195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm */,
 			);
 			path = DemoExamples;
 			sourceTree = "<group>";
@@ -942,6 +948,7 @@
 				6E89FDB6192E0C930040478F /* LHSceneSubclass.m in Sources */,
 				6E89FDA2192E0C510040478F /* LHScene.mm in Sources */,
 				6E4C5055195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */,
+				6EBD3D92195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm in Sources */,
 				6E89FDAC192E0C510040478F /* LHRevoluteJointNode.mm in Sources */,
 				6E89FD05192E0A390040478F /* main.m in Sources */,
 				6EBEA2E71959980F00726044 /* LHNodeAnimationProtocol.m in Sources */,
@@ -978,6 +985,7 @@
 				6EBEA3BE1959C0F600726044 /* b2Contact.cpp in Sources */,
 				6EBEA3051959BFD000726044 /* LHAsset.mm in Sources */,
 				6EBEA3B41959C0F600726044 /* b2Timer.cpp in Sources */,
+				6EBD3D93195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm in Sources */,
 				6EBEA3CD1959C0F600726044 /* b2WeldJoint.cpp in Sources */,
 				6EBEA3CE1959C0F600726044 /* b2WheelJoint.cpp in Sources */,
 				6EBEA3061959BFD000726044 /* LHParallax.m in Sources */,

@@ -77,17 +77,9 @@
     fixture->friction    = [fixInfo floatForKey:@"friction"];
     fixture->restitution = [fixInfo floatForKey:@"restitution"];
     fixture->isSensor    = [fixInfo boolForKey:@"sensor"];
-    //            fixture.filter.maskBits = [fixInfo mask].intValue;
-    //            fixture.filter.categoryBits = [fixInfo category].intValue;
-    
-    
-    //            NSArray* collisionCats = [fixInfo objectForKey:@"collisionCategories"];
-    //            NSArray* ignoreCats = [fixInfo objectForKey:@"ignoreCategories"];
-    //            if(!ignoreCats || [ignoreCats count] == 0){
-    //                collisionCats = nil;
-    //                ignoreCats = nil;
-    //            }
 
+    fixture->filter.maskBits = [fixInfo intForKey:@"mask"];
+    fixture->filter.categoryBits = [fixInfo intForKey:@"category"];
 }
 
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(SKNode*)nd{
@@ -135,6 +127,8 @@
         if([_node respondsToSelector:@selector(size)]){
             sizet = [(SKSpriteNode*)_node size];//we cast so that we dont get a compiler error
         }
+        
+        NSLog(@"SIZE OF SPRITE %f %f %@", sizet.width, sizet.height, [_node name]);
         
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
