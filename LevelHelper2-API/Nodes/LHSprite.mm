@@ -76,6 +76,10 @@
         [self setColor:[dict colorForKey:@"colorOverlay"]];
 
         
+        if(texture){
+            [self setSize:texture.size];
+        }
+
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         

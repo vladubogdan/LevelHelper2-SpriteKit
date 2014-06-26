@@ -28,7 +28,7 @@
 					<key>name</key>
 					<string>blueRobot</string>
 					<key>spriteOffset</key>
-					<string>{12, 7}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
 					<string>{110, 133}</string>
 					<key>textureRect</key>
@@ -42,7 +42,7 @@
 					<key>name</key>
 					<string>pinkRobot</string>
 					<key>spriteOffset</key>
-					<string>{12, 7}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
 					<string>{110, 133}</string>
 					<key>textureRect</key>
@@ -56,11 +56,11 @@
 					<key>name</key>
 					<string>greenRobot</string>
 					<key>spriteOffset</key>
-					<string>{7, 12}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
 					<string>{110, 133}</string>
 					<key>textureRect</key>
-					<string>{{4, 135}, {133, 110}}</string>
+					<string>{{2, 139}, {133, 110}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>

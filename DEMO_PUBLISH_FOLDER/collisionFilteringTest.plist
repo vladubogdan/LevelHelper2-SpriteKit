@@ -77,7 +77,7 @@
 					<key>spriteName</key>
 					<string>blueRobot</string>
 					<key>spriteUUID</key>
-					<string>FCFC0493-94EA-407A-90B3-B16867251D67</string>
+					<string>2F3A5F3F-DA9C-471B-930F-35601F2AE875</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -149,7 +149,7 @@
 					<key>spriteName</key>
 					<string>pinkRobot</string>
 					<key>spriteUUID</key>
-					<string>5E54F500-945C-4CC9-A1F5-58E447E0AD8E</string>
+					<string>68189927-8EF2-4BEE-BDC3-20BA98F11C64</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -221,7 +221,7 @@
 					<key>spriteName</key>
 					<string>greenRobot</string>
 					<key>spriteUUID</key>
-					<string>E13176B4-FC55-4D7B-AE17-F2D417148E93</string>
+					<string>9C8173A8-5D80-4F56-AFDB-115E6D744990</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -293,7 +293,7 @@
 					<key>spriteName</key>
 					<string>pinkRobot</string>
 					<key>spriteUUID</key>
-					<string>5E54F500-945C-4CC9-A1F5-58E447E0AD8E</string>
+					<string>68189927-8EF2-4BEE-BDC3-20BA98F11C64</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -365,7 +365,7 @@
 					<key>spriteName</key>
 					<string>blueRobot</string>
 					<key>spriteUUID</key>
-					<string>FCFC0493-94EA-407A-90B3-B16867251D67</string>
+					<string>2F3A5F3F-DA9C-471B-930F-35601F2AE875</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -437,7 +437,7 @@
 					<key>spriteName</key>
 					<string>greenRobot</string>
 					<key>spriteUUID</key>
-					<string>E13176B4-FC55-4D7B-AE17-F2D417148E93</string>
+					<string>9C8173A8-5D80-4F56-AFDB-115E6D744990</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
