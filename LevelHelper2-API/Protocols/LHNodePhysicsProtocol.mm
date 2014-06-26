@@ -127,9 +127,7 @@
         if([_node respondsToSelector:@selector(size)]){
             sizet = [(SKSpriteNode*)_node size];//we cast so that we dont get a compiler error
         }
-        
-        NSLog(@"SIZE OF SPRITE %f %f %@", sizet.width, sizet.height, [_node name]);
-        
+                
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
         

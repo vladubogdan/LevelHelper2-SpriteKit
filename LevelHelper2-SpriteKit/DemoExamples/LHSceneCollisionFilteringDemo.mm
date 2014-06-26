@@ -9,6 +9,12 @@
 #import "LHSceneCollisionFilteringDemo.h"
 #import "LHScenePhysicsBodiesDemo.h"
 @implementation LHSceneCollisionFilteringDemo
+{
+#if LH_USE_BOX2D
+    b2MouseJoint* mouseJoint;
+#endif
+}
+
 
 +(id)scene
 {
@@ -52,7 +58,7 @@
             
             {
                 SKLabelNode* labelLine = [label copy];
-                [labelLine setText:@"GREEN collides with ALL"];
+                [labelLine setText:@"GREEN collides with BLUE AND GREEN"];
                 [labelLine setPosition:CGPointMake(size.width*0.5, size.height-110)];
                 [[self uiNode] addChild:labelLine];
             }
@@ -82,49 +88,103 @@
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
 
-    NSLog(@"................................................");
-//    {//position test
-//        SKNode* node = [self childNodeWithName:@"candy"];
-//        NSLog(@"SET SPRITE %@ POSITION TO %f %f", [node name], location.x, location.y);
-//        [node setPosition:location];
-//    }
-//    
-//    {//rotation test
-//        SKNode* node = [self childNodeWithName:@"statue"];
-//        
-//        float zRot = [node zRotation] -  0.785398163/*45deg*/;
-//        
-//        NSLog(@"SET SPRITE %@ ROTATION TO %f", [node name], zRot);
-//        [node setZRotation:zRot];
-//    }
-    
-    {//scale test
-        SKNode* node = [self childNodeWithName:@"backpack"];
-        
-        float value = -0.1;
-        if(location.x > self.size.width*0.5){
-            value = 0.1;
-        }
-        
-        float xScale = [node xScale] + value;
-        float yScale = [node yScale] + value;
-        
-        
-        NSLog(@"SET SPRITE %@ SCALE TO %f %f", [node name], xScale, yScale);
-        [node setXScale:xScale];
-        [node setYScale:yScale];
-        
-        [node setPosition:location];
-        
-        float zRot = [node zRotation] -  0.785398163/*45deg*/;
-        
-        [node setZRotation:zRot];
-    }
-    
-    
-    
+    [self createMouseJointForTouchLocation:location];
+
     //dont forget to call super
     [super touchesBegan:touches withEvent:event];
+}
+
+
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+
+    [self setTargetOnMouseJoint:location];
+    
+    [super touchesMoved:touches withEvent:event];
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    [self destroyMouseJoint];
+    [super touchesEnded:touches withEvent:event];
+}
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+
+    [self destroyMouseJoint];
+    
+    [super touchesCancelled:touches withEvent:event];
+}
+
+
+-(void)createMouseJointForTouchLocation:(CGPoint)point
+{
+#if LH_USE_BOX2D
+    b2Body* ourBody = NULL;
+    
+    LHNode* mouseJointDummySpr = (LHNode*)[self childNodeWithName:@"dummyBodyForMouseJoint"];
+    b2Body* mouseJointBody = [mouseJointDummySpr box2dBody];
+    
+    if(!mouseJointBody)return;
+    
+    b2Vec2 pointToTest = [self metersFromPoint:point];
+    
+    for (b2Body* b = [self box2dWorld]->GetBodyList(); b; b = b->GetNext())
+    {
+        if(b != mouseJointBody)
+        {
+            b2Fixture* stFix = b->GetFixtureList();
+            while(stFix != 0){
+                if(stFix->TestPoint(pointToTest)){
+                    ourBody = b;
+                    break;//exit for loop
+                }
+                stFix = stFix->GetNext();
+            }
+        }
+    }
+    
+    if(ourBody == NULL)
+        return;
+    
+    
+    b2MouseJointDef md;
+    md.bodyA = mouseJointBody;
+    md.bodyB = ourBody;
+    b2Vec2 locationWorld = pointToTest;
+    
+    md.target = locationWorld;
+    md.collideConnected = true;
+    md.maxForce = 1000.0f * ourBody->GetMass();
+    ourBody->SetAwake(true);
+    
+    if(mouseJoint){
+        [self box2dWorld]->DestroyJoint(mouseJoint);
+        mouseJoint = NULL;
+    }
+    mouseJoint = (b2MouseJoint *)[self box2dWorld]->CreateJoint(&md);
+#endif
+}
+
+-(void) setTargetOnMouseJoint:(CGPoint)point
+{
+#if LH_USE_BOX2D
+    if(mouseJoint == 0)
+        return;
+    b2Vec2 locationWorld = b2Vec2([self metersFromPoint:point]);
+    mouseJoint->SetTarget(locationWorld);
+#endif
+}
+
+-(void)destroyMouseJoint{
+    
+#if LH_USE_BOX2D
+    if(mouseJoint){
+        [self box2dWorld]->DestroyJoint(mouseJoint);
+    }
+    mouseJoint = NULL;
+#endif
 }
 
 
