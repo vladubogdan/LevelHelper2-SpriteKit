@@ -195,123 +195,11 @@
         [self setBackgroundColor:[dict colorForKey:@"backgroundColor"]];
         
         
+        [self createPhysicsBoundaries:dict];
         
         
-        
-        NSDictionary* phyBoundInfo = [dict objectForKey:@"physicsBoundaries"];
-        if(phyBoundInfo)
-        {
-#if TARGET_OS_IPHONE
-            CGSize scr = LH_SCREEN_RESOLUTION;
-#else
-            CGSize scr = self.size;
-#endif
-            NSString* rectInf = [phyBoundInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
-            if(!rectInf){
-                rectInf = [phyBoundInfo objectForKey:@"general"];
-            }
-            
-            if(rectInf){
-//                CGRect bRect = LHRectFromString(rectInf);
-//                CGSize designSize = [self designResolutionSize];
-//                CGPoint offset = [self designOffset];
-//                offset.y -= self.size.height;
-//                CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
-//                                            (1.0f - bRect.origin.y)*designSize.height + offset.y,
-//                                            bRect.size.width*designSize.width ,
-//                                            -(bRect.size.height)*designSize.height);
+        [self createGameWorld:dict];
 
-                
-                CGRect bRect = LHRectFromString(rectInf);
-                CGSize designSize = [self designResolutionSize];
-                CGPoint offset = [self designOffset];
-                CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
-                                            self.size.height - bRect.origin.y*designSize.height + offset.y,
-                                            bRect.size.width*designSize.width ,
-                                            -bRect.size.height*designSize.height);
-
-                
-                
-//                [self gameWorldNode].physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:skBRect];
-//                [self gameWorldNode].physicsBody.dynamic = NO;
-
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
-                                                        to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
-                                                  withName:@"LHPhysicsBottomBoundary"];
-                }
-                
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
-                                                        to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
-                                                  withName:@"LHPhysicsRightBoundary"];
-                    
-                }
-                
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
-                                                        to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
-                                                  withName:@"LHPhysicsTopBoundary"];
-                }
-                
-                {
-                    [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
-                                                        to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
-                                                  withName:@"LHPhysicsLeftBoundary"];
-                }
-
-                
-                #if LH_DEBUG
-                    SKShapeNode* debugShapeNode = [SKShapeNode node];
-                    debugShapeNode.path = CGPathCreateWithRect(skBRect,
-                                                               nil);
-                    debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:1];
-                    [[self gameWorldNode] addChild:debugShapeNode];
-                #endif
-            }
-        }
-        
-
-        NSDictionary* gameWorldInfo = [dict objectForKey:@"gameWorld"];
-        if(gameWorldInfo)
-        {
-#if TARGET_OS_IPHONE
-            CGSize scr = LH_SCREEN_RESOLUTION;
-#else
-            CGSize scr = self.size;
-#endif
-
-            NSString* rectInf = [gameWorldInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
-            if(!rectInf){
-                rectInf = [gameWorldInfo objectForKey:@"general"];
-            }
-            
-            if(rectInf){
-                CGRect bRect = LHRectFromString(rectInf);
-                CGSize designSize = [self designResolutionSize];
-                CGPoint offset = [self designOffset];
-
-                gameWorldRect = CGRectMake(bRect.origin.x*designSize.width+ offset.x,
-                                           (1.0f - bRect.origin.y)*designSize.height + offset.y,
-                                           bRect.size.width*designSize.width ,
-                                           -(bRect.size.height)*designSize.height);
-                gameWorldRect.origin.y -= sceneSize.height;
-                
-#if LH_DEBUG
-                    CGRect gameWorldRectT = gameWorldRect;
-                    gameWorldRectT.origin.x += 2;
-                    gameWorldRectT.size.width -= 4;
-                    gameWorldRectT.origin.y -= 2;
-                    gameWorldRectT.size.height += 4;
-                    
-                    SKShapeNode* debugShapeNode = [SKShapeNode node];
-                    debugShapeNode.path = CGPathCreateWithRect(gameWorldRectT,nil);
-                    
-                    debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:0 blue:1 alpha:1];
-                    [[self gameWorldNode] addChild:debugShapeNode];
-#endif
-            }
-        }
         
         [self performLateLoading];
     }
@@ -335,22 +223,71 @@
     }
 }
 
+-(void)createPhysicsBoundaries:(NSDictionary*)dict
+{
+    NSDictionary* phyBoundInfo = [dict objectForKey:@"physicsBoundaries"];
+    if(phyBoundInfo)
+    {
+#if TARGET_OS_IPHONE
+        CGSize scr = LH_SCREEN_RESOLUTION;
+#else
+        CGSize scr = self.size;
+#endif
+        NSString* rectInf = [phyBoundInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
+        if(!rectInf){
+            rectInf = [phyBoundInfo objectForKey:@"general"];
+        }
+        
+        if(rectInf){
+            CGRect bRect = LHRectFromString(rectInf);
+            CGSize designSize = [self designResolutionSize];
+            CGPoint offset = [self designOffset];
+            CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
+                                        self.size.height - bRect.origin.y*designSize.height + offset.y,
+                                        bRect.size.width*designSize.width ,
+                                        -bRect.size.height*designSize.height);
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
+                                                    to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
+                                              withName:@"LHPhysicsBottomBoundary"];
+            }
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
+                                                    to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
+                                              withName:@"LHPhysicsRightBoundary"];
+                
+            }
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMaxY(skBRect))
+                                                    to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
+                                              withName:@"LHPhysicsTopBoundary"];
+            }
+            
+            {
+                [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMaxY(skBRect))
+                                                    to:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
+                                              withName:@"LHPhysicsLeftBoundary"];
+            }
+            
+            
+#if LH_DEBUG
+            SKShapeNode* debugShapeNode = [SKShapeNode node];
+            debugShapeNode.path = CGPathCreateWithRect(skBRect,
+                                                       nil);
+            debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:1];
+            [[self gameWorldNode] addChild:debugShapeNode];
+#endif
+        }
+    }
+}
+
 -(void)createPhysicsBoundarySectionFrom:(CGPoint)from
                                      to:(CGPoint)to
                                withName:(NSString*)sectionName
 {
-//    SKShapeNode* drawNode = [SKShapeNode node];
-//    [self addChild:drawNode];
-//    [drawNode setZPosition:100];
-//    [drawNode setName:sectionName];
-    
-//#ifndef NDEBUG
-//    [drawNode drawSegmentFrom:from
-//                           to:to
-//                       radius:1
-//                        color:[CCColor redColor]];
-//#endif
-    
 #if LH_USE_BOX2D
     
     float PTM_RATIO = [self ptm];
@@ -373,17 +310,59 @@
     
     
 #else //spritekit
-//    SKShapeNode* drawNode = [SKShapeNode node];
-//    [self addChild:drawNode];
-//    [drawNode setZPosition:100];
-//    [drawNode setName:sectionName];
     
+    SKNode* pNode = [SKNode node];
+    pNode.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:from toPoint:to];
+    pNode.physicsBody.dynamic = NO;
+    [pNode setName:sectionName];
+    [[self gameWorldNode] addChild:pNode];
     
-//    CCPhysicsBody* boundariesBody = [CCPhysicsBody bodyWithPillFrom:from to:to cornerRadius:0];
-//    [boundariesBody setType:CCPhysicsBodyTypeStatic];
-//    [drawNode setPhysicsBody:boundariesBody];
 #endif
     
+}
+
+-(void)createGameWorld:(NSDictionary*)dict
+{
+    NSDictionary* gameWorldInfo = [dict objectForKey:@"gameWorld"];
+    if(gameWorldInfo)
+    {
+#if TARGET_OS_IPHONE
+        CGSize scr = LH_SCREEN_RESOLUTION;
+#else
+        CGSize scr = self.size;
+#endif
+        
+        NSString* rectInf = [gameWorldInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
+        if(!rectInf){
+            rectInf = [gameWorldInfo objectForKey:@"general"];
+        }
+        
+        if(rectInf){
+            CGRect bRect = LHRectFromString(rectInf);
+            CGSize designSize = [self designResolutionSize];
+            CGPoint offset = [self designOffset];
+            
+            gameWorldRect = CGRectMake(bRect.origin.x*designSize.width+ offset.x,
+                                       (1.0f - bRect.origin.y)*designSize.height + offset.y,
+                                       bRect.size.width*designSize.width ,
+                                       -(bRect.size.height)*designSize.height);
+//            gameWorldRect.origin.y -= sceneSize.height;
+            
+#if LH_DEBUG
+            CGRect gameWorldRectT = gameWorldRect;
+            gameWorldRectT.origin.x += 2;
+            gameWorldRectT.size.width -= 4;
+            gameWorldRectT.origin.y -= 2;
+            gameWorldRectT.size.height += 4;
+            
+            SKShapeNode* debugShapeNode = [SKShapeNode node];
+            debugShapeNode.path = CGPathCreateWithRect(gameWorldRectT,nil);
+            
+            debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:0 blue:1 alpha:1];
+            [[self gameWorldNode] addChild:debugShapeNode];
+#endif
+        }
+    }
 }
 
 
@@ -454,41 +433,14 @@
 #if TARGET_OS_IPHONE
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
-//    CGVector grv = self.physicsWorld.gravity;
-//    
-//    [self.physicsWorld setGravity:CGVectorMake(grv.dx,
-//                                              -grv.dy)];
-//    
-//    return;
-    
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
-        
         ropeJointsCutStartPt = location;
-        
-//        NSArray* foundNodes = [self nodesAtPoint:location];
-//        for(SKNode* foundNode in foundNodes)
-//        {
-//            if(foundNode.physicsBody){
-//                touchedNode = foundNode;
-//                touchedNodeWasDynamic = touchedNode.physicsBody.affectedByGravity;
-//                [touchedNode.physicsBody setAffectedByGravity:NO];                
-//                return;
-//            }
-//        }
     }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//
-//        if(touchedNode && touchedNode.physicsBody){
-//            [touchedNode setPosition:location];
-//        }
-//    }
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
@@ -502,19 +454,10 @@
             }
         }
     }
-    
-    
-    
-//    if(touchedNode){
-//    [touchedNode.physicsBody setAffectedByGravity:touchedNodeWasDynamic];
-//    touchedNode = nil;
-//    }
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
-//    if(touchedNode){
-//    touchedNode.physicsBody.affectedByGravity = touchedNodeWasDynamic;
-//    touchedNode = nil;
-//    }
+
+    
 }
 #else
 -(void)mouseDown:(NSEvent *)theEvent{

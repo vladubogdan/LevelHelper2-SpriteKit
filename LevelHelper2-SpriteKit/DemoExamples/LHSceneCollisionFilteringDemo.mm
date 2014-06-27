@@ -12,6 +12,11 @@
 {
 #if LH_USE_BOX2D
     b2MouseJoint* mouseJoint;
+
+#else//spritekit
+    SKNode* touchedNode;
+    BOOL touchedNodeWasDynamic;
+    
 #endif
 }
 
@@ -164,6 +169,21 @@
         mouseJoint = NULL;
     }
     mouseJoint = (b2MouseJoint *)[self box2dWorld]->CreateJoint(&md);
+
+#else
+    
+    NSArray* foundNodes = [self nodesAtPoint:point];
+    for(SKNode* foundNode in foundNodes)
+    {
+        if(foundNode.physicsBody){
+            touchedNode = foundNode;
+            touchedNodeWasDynamic = touchedNode.physicsBody.affectedByGravity;
+            [touchedNode.physicsBody setAffectedByGravity:NO];
+            return;
+        }
+    }
+
+    
 #endif
 }
 
@@ -174,6 +194,13 @@
         return;
     b2Vec2 locationWorld = b2Vec2([self metersFromPoint:point]);
     mouseJoint->SetTarget(locationWorld);
+
+#else//spritekit
+    
+    if(touchedNode && touchedNode.physicsBody){
+        [touchedNode setPosition:point];
+    }
+
 #endif
 }
 
@@ -184,6 +211,14 @@
         [self box2dWorld]->DestroyJoint(mouseJoint);
     }
     mouseJoint = NULL;
+
+#else//spritekit
+    
+    if(touchedNode){
+        [touchedNode.physicsBody setAffectedByGravity:touchedNodeWasDynamic];
+        touchedNode = nil;
+    }
+
 #endif
 }
 

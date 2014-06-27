@@ -83,16 +83,17 @@ typedef enum
 -(void)removeBody;
 
 #if LH_USE_BOX2D
+
 #ifdef __cplusplus
 -(b2Body*)body;
 -(CGAffineTransform)nodeTransform;
 -(CGAffineTransform)absoluteTransform;
 -(void)updateTransform;
--(CGPoint)position;
 -(float)rotation;
 -(void)updateScale;
 
 #endif
+
 #endif //LH_USE_BOX2D
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt;
