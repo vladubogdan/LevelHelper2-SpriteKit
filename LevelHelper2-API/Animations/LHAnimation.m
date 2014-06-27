@@ -337,7 +337,7 @@
     if([animNode isKindOfClass:[LHCamera class]]){
         CGSize winSize = [[self scene] size];
         return CGPointMake(winSize.width*0.5  - newPos.x,
-                           winSize.height*0.5 - newPos.y);
+                        - newPos.y - winSize.height*0.5);
         
     }
 

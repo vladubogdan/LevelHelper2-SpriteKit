@@ -28,7 +28,7 @@
 					<key>name</key>
 					<string>candy</string>
 					<key>spriteOffset</key>
-					<string>{7, 3}</string>
+					<string>{1, 1}</string>
 					<key>spriteSourceSize</key>
 					<string>{65, 61}</string>
 					<key>textureRect</key>
@@ -42,7 +42,7 @@
 					<key>name</key>
 					<string>thumb_tack</string>
 					<key>spriteOffset</key>
-					<string>{7, 1}</string>
+					<string>{-1.5, 1}</string>
 					<key>spriteSourceSize</key>
 					<string>{62, 72}</string>
 					<key>textureRect</key>

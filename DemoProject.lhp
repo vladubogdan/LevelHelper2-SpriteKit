@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.094531312584877014, 0}, {0.041878394782543182, 1}}</string>
+			<string>{{0.059077192097902298, 0}, {0.041193246841430664, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,7 +32,7 @@
 			<key>SuffixName</key>
 			<string>-568</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.078244157135486603, 1}}</string>
+			<string>{{1, 1}, {0.078244656324386597, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.06940925121307373, 0}, {0.77115875482559204, 1}}</string>
+			<string>{{0.03831230103969574, 0}, {0.66219508647918701, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.06940925121307373, 0}, {0.77115875482559204, 1}}</string>
+			<string>{{0.03831230103969574, 0}, {0.66219508647918701, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -73,6 +73,16 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>cameraAnimationTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>cameraFollowNodeTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>collisionFilteringTest.lhs</key>
 				<dict>
 					<key>publish</key>

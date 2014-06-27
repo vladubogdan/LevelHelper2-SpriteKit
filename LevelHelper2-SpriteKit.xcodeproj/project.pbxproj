@@ -175,6 +175,8 @@
 		6EBEA3CD1959C0F600726044 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA39A1959C0F600726044 /* b2WeldJoint.cpp */; };
 		6EBEA3CE1959C0F600726044 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA39C1959C0F600726044 /* b2WheelJoint.cpp */; };
 		6EBEA3CF1959C0F600726044 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA39F1959C0F600726044 /* b2Rope.cpp */; };
+		6ED5C4FC195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */; };
+		6ED5C4FD195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -388,6 +390,8 @@
 		6EBEA39D1959C0F600726044 /* b2WheelJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WheelJoint.h; sourceTree = "<group>"; };
 		6EBEA39F1959C0F600726044 /* b2Rope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Rope.cpp; sourceTree = "<group>"; };
 		6EBEA3A01959C0F600726044 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
+		6ED5C4FA195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowNodeDemo.h; sourceTree = "<group>"; };
+		6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowNodeDemo.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,6 +640,8 @@
 				6EBEA2D5195984D800726044 /* LHSceneDemo.mm */,
 				6EBEA2D7195985CA00726044 /* LHSceneCameraDemo.h */,
 				6EBEA2D8195985CA00726044 /* LHSceneCameraDemo.mm */,
+				6ED5C4FA195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.h */,
+				6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */,
 				6EBEA2F31959A46700726044 /* LHScenePhysicsBodiesDemo.h */,
 				6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.mm */,
 				6EBD3D90195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.h */,
@@ -979,6 +985,7 @@
 				6E89FDA6192E0C510040478F /* LHDistanceJointNode.mm in Sources */,
 				6EBEA2D9195985CA00726044 /* LHSceneCameraDemo.mm in Sources */,
 				6E89FDB6192E0C930040478F /* LHSceneSubclass.m in Sources */,
+				6ED5C4FC195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm in Sources */,
 				6E89FDA2192E0C510040478F /* LHScene.mm in Sources */,
 				6E4C5055195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */,
 				6EBD3D92195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm in Sources */,
@@ -1039,6 +1046,7 @@
 				6EBEA3B91959C0F600726044 /* b2World.cpp in Sources */,
 				6EBEA30F1959BFD000726044 /* LHParallaxLayer.m in Sources */,
 				6EBEA3101959BFD000726044 /* LHCameraActivateProperty.m in Sources */,
+				6ED5C4FD195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm in Sources */,
 				6EBEA3BB1959C0F600726044 /* b2ChainAndCircleContact.cpp in Sources */,
 				6EBEA3B31959C0F600726044 /* b2StackAllocator.cpp in Sources */,
 				6EBEA3111959BFD000726044 /* LHNode.mm in Sources */,

@@ -28,7 +28,7 @@
 					<key>name</key>
 					<string>object_bananabunch</string>
 					<key>spriteOffset</key>
-					<string>{7, 5}</string>
+					<string>{0, 2}</string>
 					<key>spriteSourceSize</key>
 					<string>{88, 65}</string>
 					<key>textureRect</key>
@@ -42,7 +42,7 @@
 					<key>name</key>
 					<string>object_hat</string>
 					<key>spriteOffset</key>
-					<string>{6, 6}</string>
+					<string>{0.5, 0}</string>
 					<key>spriteSourceSize</key>
 					<string>{122, 75}</string>
 					<key>textureRect</key>
@@ -56,7 +56,7 @@
 					<key>name</key>
 					<string>object_banana</string>
 					<key>spriteOffset</key>
-					<string>{5, 3}</string>
+					<string>{0, 0.5}</string>
 					<key>spriteSourceSize</key>
 					<string>{92, 64}</string>
 					<key>textureRect</key>
@@ -70,7 +70,7 @@
 					<key>name</key>
 					<string>object_canteen</string>
 					<key>spriteOffset</key>
-					<string>{7, 7}</string>
+					<string>{-1.5, -0.5}</string>
 					<key>spriteSourceSize</key>
 					<string>{60, 78}</string>
 					<key>textureRect</key>
@@ -84,7 +84,7 @@
 					<key>name</key>
 					<string>object_pineapple</string>
 					<key>spriteOffset</key>
-					<string>{6, 5}</string>
+					<string>{1, -1.5}</string>
 					<key>spriteSourceSize</key>
 					<string>{61, 134}</string>
 					<key>textureRect</key>
@@ -98,7 +98,7 @@
 					<key>name</key>
 					<string>object_statue</string>
 					<key>spriteOffset</key>
-					<string>{7, 5}</string>
+					<string>{1, -0.5}</string>
 					<key>spriteSourceSize</key>
 					<string>{105, 148}</string>
 					<key>textureRect</key>
@@ -112,7 +112,7 @@
 					<key>name</key>
 					<string>object_backpack</string>
 					<key>spriteOffset</key>
-					<string>{5, 5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
 					<string>{90, 106}</string>
 					<key>textureRect</key>

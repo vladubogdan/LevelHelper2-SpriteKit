@@ -587,11 +587,11 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 }
 
 -(CGPoint)gravity{
-    return CGPointZero;
+    CGVector grv = [[[self scene] physicsWorld] gravity];
+    return CGPointMake(grv.dx, grv.dy);
 }
 -(void)setGravity:(CGPoint)val{
     [[[self scene] physicsWorld] setGravity:CGVectorMake(val.x, val.y)];
-    //            [self.physicsWorld setSpeed:gravityForce];
 
 }
 

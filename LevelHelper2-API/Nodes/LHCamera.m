@@ -163,6 +163,8 @@
     CGSize winSize = [(LHScene*)[self scene] size];
     CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
     
+    CGPoint offset = [[(LHScene*)self scene] designOffset];
+    
     float x = position.x;
     float y = position.y;
     
@@ -178,8 +180,8 @@
         y = MAX(y, worldRect.origin.y + worldRect.size.height + winSize.height*0.5);
         y = MIN(y, worldRect.origin.y - winSize.height*0.5);
     }
-    CGPoint pt = CGPointMake(winSize.width*0.5  - x,
-                             - winSize.height*0.5 - y);
+    CGPoint pt = CGPointMake(winSize.width*0.5  - x + offset.x,
+                             winSize.height*0.5 - y+ offset.y);
     
     return pt;
 }
