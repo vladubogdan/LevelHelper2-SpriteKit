@@ -15,6 +15,7 @@
 #import "LHSceneCollisionFilteringDemo.h"
 #import "LHSceneAnimationsDemo.h"
 #import "LHSceneParallaxDemo.h"
+#import "LHSceneAssetsDemo.h"
 
 @implementation LHSceneDemo
 {
@@ -44,6 +45,7 @@
         [availableScenes addObject:[LHSceneCameraFollowNodeDemo class]];
         [availableScenes addObject:[LHSceneAnimationsDemo class]];
         [availableScenes addObject:[LHSceneParallaxDemo class]];
+        [availableScenes addObject:[LHSceneAssetsDemo class]];
         [availableScenes addObject:[LHScenePhysicsBodiesDemo class]];
         [availableScenes addObject:[LHSceneCollisionFilteringDemo class]];
         

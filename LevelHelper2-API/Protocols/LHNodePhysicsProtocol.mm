@@ -67,6 +67,20 @@
     return _node;
 }
 
+- (instancetype)initPhysicsProtocolWithNode:(SKNode*)nd
+{
+    if(self = [super init])
+    {
+        _node = nd;
+        
+        #if LH_USE_BOX2D
+        _body = NULL;
+        #endif
+        
+    }
+    return self;
+}
+
 #if LH_USE_BOX2D
 
 #pragma mark - BOX2D SUPPORT

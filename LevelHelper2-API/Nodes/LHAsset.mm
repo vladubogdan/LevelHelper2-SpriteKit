@@ -79,6 +79,56 @@
     return self;
 }
 
+
+
+
++(instancetype)createWithName:(NSString*)assetName
+                assetFileName:(NSString*)fileName
+                       parent:(SKNode*)prnt
+{
+    return LH_AUTORELEASED([[self alloc] initWithName:assetName
+                                        assetFileName:fileName
+                                               parent:prnt]);
+}
+
+- (instancetype)initWithName:(NSString*)newName
+               assetFileName:(NSString*)fileName
+                      parent:(SKNode*)prnt{
+    
+    
+    if(self = [super init]){
+        
+        [prnt addChild:self];
+        [self setName:newName];
+        
+        LHScene* scene = (LHScene*)[prnt scene];
+
+        NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
+        
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
+        
+        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolWithNode:self];
+        
+        
+        if(assetInfo)
+        {
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+        }
+        else{
+            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+        }
+        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:nil
+                                                                                                      node:self];
+    }
+    
+    return self;
+}
+
+
+
+
 -(CGSize)size{
     return _size;
 }

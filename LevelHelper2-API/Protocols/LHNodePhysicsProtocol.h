@@ -74,6 +74,7 @@ typedef enum
 
 + (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
+- (instancetype)initPhysicsProtocolWithNode:(SKNode*)nd;
 
 -(SKNode*)node;
 

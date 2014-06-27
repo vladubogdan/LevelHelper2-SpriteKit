@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.045863140374422073, 0}, {0.040915034711360931, 1}}</string>
+			<string>{{0.043054815381765366, 0}, {0.040849294513463974, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,7 +32,7 @@
 			<key>SuffixName</key>
 			<string>-568</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.078244797885417938, 1}}</string>
+			<string>{{1, 1}, {0.078244827687740326, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.027807718142867088, 0}, {0.52510148286819458, 1}}</string>
+			<string>{{0.025378793478012085, 0}, {0.44966089725494385, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.027807718142867088, 0}, {0.52510148286819458, 1}}</string>
+			<string>{{0.025378793478012085, 0}, {0.44966089725494385, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -73,6 +73,11 @@
 		<dict>
 			<key>ScenesOptions</key>
 			<dict>
+				<key>assetsTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>cameraAnimationTest.lhs</key>
 				<dict>
 					<key>publish</key>
