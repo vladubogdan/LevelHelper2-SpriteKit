@@ -11,37 +11,25 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
+#import "SKNode+Transforms.h"
 
 @implementation LHDistanceJointNode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
-
-    
-    SKPhysicsJointSpring* joint;
+    LHJointNodeProtocolImp*     _jointProtocolImp;
     
     SKShapeNode* debugShapeNode;
-    
-    CGPoint relativePosA;
-    CGPoint relativePosB;
-    
-    NSString* nodeAUUID;
-    NSString* nodeBUUID;
-    
-    __weak SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeA;
-    __weak SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeB;
     
     float _dampingRatio;
     float _frequency;
 }
 
 -(void)dealloc{
-    nodeA = nil;
-    nodeB = nil;
     
+    [_jointProtocolImp setJoint:nil];//at this point joint is already released
+    LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
 
-    LH_SAFE_RELEASE(nodeAUUID);
-    LH_SAFE_RELEASE(nodeBUUID);
     
     LH_SUPER_DEALLOC();
 }
@@ -63,12 +51,9 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                    node:self];
         
-        
-        relativePosA = [dict pointForKey:@"relativePosA"];
-        relativePosB = [dict pointForKey:@"relativePosB"];
+        _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
+                                                                                         node:self];
 
-        nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
-        nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
         
         _dampingRatio =[dict floatForKey:@"dampingRatio"];
         _frequency = [dict floatForKey:@"frequency"];
@@ -77,53 +62,22 @@
 }
 
 -(void)removeFromParent{
-    if(joint){
-        [[self scene].physicsWorld removeJoint:joint];
-        joint = nil;
-    }
-    
+    LH_SAFE_RELEASE(_jointProtocolImp);
     [super removeFromParent];
 }
 
--(CGPoint)anchorA{
-    CGAffineTransform transformA = CGAffineTransformRotate(CGAffineTransformIdentity,
-                                                           joint.bodyA.node.zRotation);
-    
-    CGPoint curAnchorA = CGPointApplyAffineTransform(CGPointMake(relativePosA.x, -relativePosA.y),
-                                                     transformA);
-    
-    return CGPointMake(nodeA.position.x + curAnchorA.x,
-                       nodeA.position.y + curAnchorA.y);
-}
-
--(CGPoint)anchorB{
-    CGAffineTransform transformB = CGAffineTransformRotate(CGAffineTransformIdentity,
-                                                           joint.bodyB.node.zRotation);
-    
-    CGPoint curAnchorB = CGPointApplyAffineTransform(CGPointMake(relativePosB.x, -relativePosB.y),
-                                                     transformB);
-    
-    return CGPointMake(nodeB.position.x + curAnchorB.x,
-                       nodeB.position.y + curAnchorB.y);
-}
-
--(SKPhysicsJointSpring*)joint{
-    return joint;
-}
-
 -(CGFloat)damping{
-    if(joint){
-        return joint.damping;
-    }
-    return 0;
+    return _dampingRatio;
 }
 
 -(CGFloat)frequency{
-    if(joint){
-        return joint.frequency;
-    }
-    return 0;
+    return _frequency;
 }
+
+#pragma mark - LHJointNodeProtocol Required
+LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
+LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
+
 
 #pragma mark LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
@@ -145,53 +99,48 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(BOOL)lateLoading
 {
-    if(!nodeAUUID || !nodeBUUID)
-        return true;
+    [_jointProtocolImp findConnectedNodes];
     
-    LHScene* scene = (LHScene*)[self scene];
+    SKNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
+    SKNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
     
-    if([[self parent] conformsToProtocol:@protocol(LHNodeProtocol)])
+    CGPoint relativePosA = [_jointProtocolImp localAnchorA];
+    CGPoint relativePosB = [_jointProtocolImp localAnchorB];
+    
+    if(nodeA && nodeB)
     {
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeBUUID];
-    }
-    else{
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeBUUID];
-    }
+        
+#if LH_USE_BOX2D
+        
+#else//spritekit
+        
+        if(nodeA.physicsBody && nodeB.physicsBody)
+        {
 
-    
-    
-    if(nodeA && nodeB && nodeA.physicsBody && nodeB.physicsBody)
-    {
-        CGPoint ptA = [scene convertPoint:CGPointZero fromNode:nodeA];
-        CGPoint ptB = [scene convertPoint:CGPointZero fromNode:nodeB];
-        
-        CGPoint anchorA = CGPointMake(ptA.x + relativePosA.x,
-                                      ptA.y - relativePosA.y);
-        
-        CGPoint anchorB = CGPointMake(ptB.x + relativePosB.x,
-                                      ptB.y - relativePosB.y);
-        
-        joint = [SKPhysicsJointSpring jointWithBodyA:nodeA.physicsBody
-                                               bodyB:nodeB.physicsBody
-                                             anchorA:anchorA
-                                             anchorB:anchorB];
-        
-        
-        joint.damping = _dampingRatio;
-        joint.frequency = _frequency;
-        
-        [scene.physicsWorld addJoint:joint];
-        
-#if LH_DEBUG
-            debugShapeNode = [SKShapeNode node];
-            debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
-            [self addChild:debugShapeNode];
+            CGPoint anchorA = [nodeA convertToWorldSpace:relativePosA];
+            CGPoint anchorB = [nodeB convertToWorldSpace:relativePosB];
+
+            
+            SKPhysicsJointSpring* joint = [SKPhysicsJointSpring jointWithBodyA:nodeA.physicsBody
+                                                                         bodyB:nodeB.physicsBody
+                                                                       anchorA:anchorA
+                                                                       anchorB:anchorB];
+            
+            joint.damping = _dampingRatio;
+            joint.frequency = _frequency;
+            
+            [[self scene].physicsWorld addJoint:joint];
+            [_jointProtocolImp setJoint:joint];
+            
+    #if LH_DEBUG
+                debugShapeNode = [SKShapeNode node];
+                debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
+                [self addChild:debugShapeNode];
+    #endif
+
 #endif
+        }
         
-        LH_SAFE_RELEASE(nodeAUUID);
-        LH_SAFE_RELEASE(nodeBUUID);
         return true;
     }
     return false;

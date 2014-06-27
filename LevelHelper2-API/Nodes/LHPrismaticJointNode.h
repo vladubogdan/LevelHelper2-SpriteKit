@@ -8,26 +8,18 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
+#import "LHJointNodeProtocol.h"
+
 /**
  LHPrismaticJointNode class is used to load a LevelHelper prismatic joint.
  The equivalent in SpriteKit is a SKPhysicsJointSliding joint object, which is a wrapper over Box2d b2PrismaticJoint.
  */
 
-@interface LHPrismaticJointNode : SKNode <LHNodeProtocol>
+@interface LHPrismaticJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
 +(instancetype)prismaticJointNodeWithDictionary:(NSDictionary*)dict
                                          parent:(SKNode*)prnt;
 
-/**
- Returns the joint connection point. In scene coordinates.
- */
--(CGPoint)anchor;
-
-
-/**
- Returns the actual SpriteKit joint that connects the two bodies together.
- */
--(SKPhysicsJointSliding*)joint;
 
 /**
  Returns the axis vector that defines the direction that the joint is allowed to slide.

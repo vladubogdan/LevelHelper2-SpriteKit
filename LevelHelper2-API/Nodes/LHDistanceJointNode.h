@@ -8,30 +8,18 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
+#import "LHJointNodeProtocol.h"
+
 /**
  LHDistanceJointNode class is used to load a LevelHelper distance joint.
  The equivalent in SpriteKit is a SKPhysicsJointSpring joint object, which is a wrapper over Box2d b2DistanceJoint.
  */
 
-@interface LHDistanceJointNode : SKNode <LHNodeProtocol>
+@interface LHDistanceJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
 +(instancetype)distanceJointNodeWithDictionary:(NSDictionary*)dict
                                         parent:(SKNode*)prnt;
 
-/**
- Returns the point where the joint is connected with the first body. In scene coordinates.
- */
--(CGPoint)anchorA;
-
-/**
- Returns the point where the joint is connected with the second body. In scene coordinates.
- */
--(CGPoint)anchorB;
-
-/**
- Returns the actual SpriteKit joint that connects the two bodies together.
- */
--(SKPhysicsJointSpring*)joint;
 
 /**
  Returns the damping ratio of the SpriteKit joint.

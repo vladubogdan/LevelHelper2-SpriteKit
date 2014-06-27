@@ -64,6 +64,9 @@
 
 -(void)dealloc{
     
+    [self removeAllActions];
+    [self removeAllChildren];
+    
     _gameWorldNode = nil;
     _uiNode = nil;
     
@@ -417,18 +420,20 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
+        CGPoint location = [touch locationInNode:[self gameWorldNode]];
         ropeJointsCutStartPt = location;
     }
+    [super touchesBegan:touches withEvent:event];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super touchesMoved:touches withEvent:event];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
     for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
+        CGPoint location = [touch locationInNode:[self gameWorldNode]];
         
         for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
             if([rope canBeCut]){
@@ -437,12 +442,14 @@
             }
         }
     }
+    [super touchesEnded:touches withEvent:event];
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
-
-    
+    [super touchesCancelled:touches withEvent:event];
 }
+
 #else
+
 -(void)mouseDown:(NSEvent *)theEvent{
     
     CGPoint location = [theEvent locationInNode:self];

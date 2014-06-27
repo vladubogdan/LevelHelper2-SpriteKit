@@ -28,9 +28,9 @@
 					<key>name</key>
 					<string>candy</string>
 					<key>spriteOffset</key>
-					<string>{2, 2}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{129, 121}</string>
+					<string>{105, 105}</string>
 					<key>textureRect</key>
 					<string>{{4, 4}, {105, 105}}</string>
 					<key>textureRotated</key>
@@ -42,11 +42,11 @@
 					<key>name</key>
 					<string>thumb_tack</string>
 					<key>spriteOffset</key>
-					<string>{-3, 1}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{123, 143}</string>
+					<string>{99, 133}</string>
 					<key>textureRect</key>
-					<string>{{117, 4}, {133, 99}}</string>
+					<string>{{126, 3}, {133, 99}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>
@@ -65,9 +65,9 @@
 					<key>name</key>
 					<string>candy</string>
 					<key>spriteOffset</key>
-					<string>{1, 1}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{65, 61}</string>
+					<string>{53, 53}</string>
 					<key>textureRect</key>
 					<string>{{2, 2}, {53, 53}}</string>
 					<key>textureRotated</key>
@@ -79,11 +79,11 @@
 					<key>name</key>
 					<string>thumb_tack</string>
 					<key>spriteOffset</key>
-					<string>{-1.5, 1}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{62, 72}</string>
+					<string>{50, 67}</string>
 					<key>textureRect</key>
-					<string>{{59, 2}, {67, 50}}</string>
+					<string>{{63, 3}, {67, 50}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>

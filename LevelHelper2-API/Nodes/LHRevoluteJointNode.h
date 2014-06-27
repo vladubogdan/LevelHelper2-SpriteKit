@@ -8,25 +8,17 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
+#import "LHJointNodeProtocol.h"
+
 /**
  LHRevoluteJointNode class is used to load a LevelHelper revolute joint.
  The equivalent in SpriteKit is a SKPhysicsJointPin joint object, which is a wrapper over Box2d b2RevoluteJoint.
  */
 
-@interface LHRevoluteJointNode : SKNode <LHNodeProtocol>
+@interface LHRevoluteJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
 +(instancetype)revoluteJointNodeWithDictionary:(NSDictionary*)dict
                                         parent:(SKNode*)prnt;
-
-/**
- Returns the point where the two bodies are connected together. In scene coordinates.
- */
--(CGPoint)anchorA;
-
-/**
- Returns the actual SpriteKit joint that connects the two bodies together.
- */
--(SKPhysicsJointPin*)joint;
 
 /**
  Returns whether or not this joint has a rotation limit.

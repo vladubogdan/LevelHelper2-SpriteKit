@@ -183,6 +183,12 @@
 		6ED5C505195D610D00B6DF33 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C503195D610D00B6DF33 /* LHSceneParallaxDemo.mm */; };
 		6ED5C508195D648F00B6DF33 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C507195D648F00B6DF33 /* LHSceneAssetsDemo.mm */; };
 		6ED5C509195D649000B6DF33 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C507195D648F00B6DF33 /* LHSceneAssetsDemo.mm */; };
+		6ED5C50D195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C50C195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm */; };
+		6ED5C50E195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C50C195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm */; };
+		6ED5C511195D8B6800B6DF33 /* LHJointNodeProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C510195D8B6800B6DF33 /* LHJointNodeProtocol.mm */; };
+		6ED5C512195D8B6800B6DF33 /* LHJointNodeProtocol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C510195D8B6800B6DF33 /* LHJointNodeProtocol.mm */; };
+		6ED5C515195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C514195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm */; };
+		6ED5C516195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C514195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -404,6 +410,12 @@
 		6ED5C503195D610D00B6DF33 /* LHSceneParallaxDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneParallaxDemo.mm; sourceTree = "<group>"; };
 		6ED5C506195D648F00B6DF33 /* LHSceneAssetsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsDemo.h; sourceTree = "<group>"; };
 		6ED5C507195D648F00B6DF33 /* LHSceneAssetsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsDemo.mm; sourceTree = "<group>"; };
+		6ED5C50B195D7ECC00B6DF33 /* LHSceneRopeJointDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRopeJointDemo.h; sourceTree = "<group>"; };
+		6ED5C50C195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRopeJointDemo.mm; sourceTree = "<group>"; };
+		6ED5C50F195D8B6800B6DF33 /* LHJointNodeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHJointNodeProtocol.h; sourceTree = "<group>"; };
+		6ED5C510195D8B6800B6DF33 /* LHJointNodeProtocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHJointNodeProtocol.mm; sourceTree = "<group>"; };
+		6ED5C513195D99EE00B6DF33 /* LHSceneOtherJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneOtherJointsDemo.h; sourceTree = "<group>"; };
+		6ED5C514195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneOtherJointsDemo.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -630,6 +642,8 @@
 				6E89FD89192E0C510040478F /* LHUserPropertyProtocol.h */,
 				6EBEA2EB19599BCE00726044 /* LHNodePhysicsProtocol.h */,
 				6EBEA2EC19599BCE00726044 /* LHNodePhysicsProtocol.mm */,
+				6ED5C50F195D8B6800B6DF33 /* LHJointNodeProtocol.h */,
+				6ED5C510195D8B6800B6DF33 /* LHJointNodeProtocol.mm */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -664,6 +678,10 @@
 				6ED5C503195D610D00B6DF33 /* LHSceneParallaxDemo.mm */,
 				6ED5C506195D648F00B6DF33 /* LHSceneAssetsDemo.h */,
 				6ED5C507195D648F00B6DF33 /* LHSceneAssetsDemo.mm */,
+				6ED5C50B195D7ECC00B6DF33 /* LHSceneRopeJointDemo.h */,
+				6ED5C50C195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm */,
+				6ED5C513195D99EE00B6DF33 /* LHSceneOtherJointsDemo.h */,
+				6ED5C514195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm */,
 			);
 			path = DemoExamples;
 			sourceTree = "<group>";
@@ -969,7 +987,9 @@
 				6E89FDA7192E0C510040478F /* LHGravityArea.mm in Sources */,
 				6E89FDA0192E0C510040478F /* LHAnimation.m in Sources */,
 				6E89FD90192E0C510040478F /* LHOpacityFrame.m in Sources */,
+				6ED5C50D195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm in Sources */,
 				6E89FDAF192E0C510040478F /* LHSprite.mm in Sources */,
+				6ED5C515195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm in Sources */,
 				6E89FD93192E0C510040478F /* LHScaleFrame.m in Sources */,
 				6E89FDA3192E0C510040478F /* LHAsset.mm in Sources */,
 				6E89FDA9192E0C510040478F /* LHParallax.m in Sources */,
@@ -980,6 +1000,7 @@
 				6E89FD98192E0C510040478F /* LHChildrenPositionsProperty.m in Sources */,
 				6E89FD9C192E0C510040478F /* LHPositionProperty.m in Sources */,
 				6E89FD9D192E0C510040478F /* LHRotationProperty.m in Sources */,
+				6ED5C511195D8B6800B6DF33 /* LHJointNodeProtocol.mm in Sources */,
 				6E89FD9E192E0C510040478F /* LHScaleProperty.m in Sources */,
 				6ED5C504195D610D00B6DF33 /* LHSceneParallaxDemo.mm in Sources */,
 				6E89FDAA192E0C510040478F /* LHParallaxLayer.m in Sources */,
@@ -1091,6 +1112,7 @@
 				6EBEA3191959BFD000726044 /* LHGameWorldNode.mm in Sources */,
 				6EBEA3A81959C0F600726044 /* b2Distance.cpp in Sources */,
 				6E4C5056195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */,
+				6ED5C512195D8B6800B6DF33 /* LHJointNodeProtocol.mm in Sources */,
 				6EBEA31A1959BFD000726044 /* LHUtils.m in Sources */,
 				6EBEA31B1959BFD000726044 /* LHUINode.mm in Sources */,
 				6EBEA3C81959C0F600726044 /* b2MouseJoint.cpp in Sources */,
@@ -1100,6 +1122,8 @@
 				6EBEA31D1959BFD000726044 /* LHNodeProtocol.m in Sources */,
 				6EBEA31E1959BFD000726044 /* AppDelegate.m in Sources */,
 				6EBEA3BF1959C0F600726044 /* b2ContactSolver.cpp in Sources */,
+				6ED5C516195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm in Sources */,
+				6ED5C50E195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm in Sources */,
 				6EBEA31F1959BFD000726044 /* NSDictionary+LHDictionary.m in Sources */,
 				6EBEA3201959BFD000726044 /* LHBezier.mm in Sources */,
 				6EBEA3211959BFD000726044 /* LHSpriteFrameProperty.m in Sources */,

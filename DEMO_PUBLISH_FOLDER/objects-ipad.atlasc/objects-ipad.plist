@@ -28,11 +28,11 @@
 					<key>name</key>
 					<string>object_bananabunch</string>
 					<key>spriteOffset</key>
-					<string>{-0.5, 3.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{175, 130}</string>
+					<string>{154, 109}</string>
 					<key>textureRect</key>
-					<string>{{304, 123}, {109, 154}}</string>
+					<string>{{306, 124}, {109, 154}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>
@@ -42,11 +42,11 @@
 					<key>name</key>
 					<string>object_hat</string>
 					<key>spriteOffset</key>
-					<string>{1, 0.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{244, 150}</string>
+					<string>{217, 126}</string>
 					<key>textureRect</key>
-					<string>{{4, 288}, {126, 217}}</string>
+					<string>{{3, 289}, {126, 217}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>
@@ -56,9 +56,9 @@
 					<key>name</key>
 					<string>object_banana</string>
 					<key>spriteOffset</key>
-					<string>{0, 1}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{183, 127}</string>
+					<string>{163, 111}</string>
 					<key>textureRect</key>
 					<string>{{305, 4}, {163, 111}}</string>
 					<key>textureRotated</key>
@@ -70,9 +70,9 @@
 					<key>name</key>
 					<string>object_canteen</string>
 					<key>spriteOffset</key>
-					<string>{-2.5, -1.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{119, 156}</string>
+					<string>{84, 129}</string>
 					<key>textureRect</key>
 					<string>{{421, 123}, {84, 129}}</string>
 					<key>textureRotated</key>
@@ -84,9 +84,9 @@
 					<key>name</key>
 					<string>object_pineapple</string>
 					<key>spriteOffset</key>
-					<string>{2.5, -2}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{121, 267}</string>
+					<string>{100, 251}</string>
 					<key>textureRect</key>
 					<string>{{196, 4}, {100, 251}}</string>
 					<key>textureRotated</key>
@@ -98,9 +98,9 @@
 					<key>name</key>
 					<string>object_statue</string>
 					<key>spriteOffset</key>
-					<string>{2, -0.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{210, 295}</string>
+					<string>{184, 276}</string>
 					<key>textureRect</key>
 					<string>{{4, 4}, {184, 276}}</string>
 					<key>textureRotated</key>
@@ -114,7 +114,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{179, 212}</string>
+					<string>{159, 190}</string>
 					<key>textureRect</key>
 					<string>{{138, 288}, {159, 190}}</string>
 					<key>textureRotated</key>
@@ -135,11 +135,11 @@
 					<key>name</key>
 					<string>object_bananabunch</string>
 					<key>spriteOffset</key>
-					<string>{0, 2}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{88, 65}</string>
+					<string>{78, 55}</string>
 					<key>textureRect</key>
-					<string>{{152, 62}, {55, 78}}</string>
+					<string>{{152, 64}, {55, 78}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>
@@ -149,11 +149,11 @@
 					<key>name</key>
 					<string>object_hat</string>
 					<key>spriteOffset</key>
-					<string>{0.5, 0}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{122, 75}</string>
+					<string>{110, 64}</string>
 					<key>textureRect</key>
-					<string>{{1, 143}, {64, 110}}</string>
+					<string>{{-1, 146}, {64, 110}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>
@@ -163,9 +163,9 @@
 					<key>name</key>
 					<string>object_banana</string>
 					<key>spriteOffset</key>
-					<string>{0, 0.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{92, 64}</string>
+					<string>{82, 57}</string>
 					<key>textureRect</key>
 					<string>{{153, 1}, {82, 57}}</string>
 					<key>textureRotated</key>
@@ -177,9 +177,9 @@
 					<key>name</key>
 					<string>object_canteen</string>
 					<key>spriteOffset</key>
-					<string>{-1.5, -0.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{60, 78}</string>
+					<string>{43, 65}</string>
 					<key>textureRect</key>
 					<string>{{210, 61}, {43, 65}}</string>
 					<key>textureRotated</key>
@@ -191,9 +191,9 @@
 					<key>name</key>
 					<string>object_pineapple</string>
 					<key>spriteOffset</key>
-					<string>{1, -1.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{61, 134}</string>
+					<string>{51, 127}</string>
 					<key>textureRect</key>
 					<string>{{98, 2}, {51, 127}}</string>
 					<key>textureRotated</key>
@@ -205,9 +205,9 @@
 					<key>name</key>
 					<string>object_statue</string>
 					<key>spriteOffset</key>
-					<string>{1, -0.5}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{105, 148}</string>
+					<string>{93, 139}</string>
 					<key>textureRect</key>
 					<string>{{1, 2}, {93, 139}}</string>
 					<key>textureRotated</key>
@@ -221,435 +221,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{90, 106}</string>
-					<key>textureRect</key>
-					<string>{{69, 144}, {80, 96}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>path</key>
-			<string>objects-ipad.png</string>
-			<key>size</key>
-			<string>{254, 254}</string>
-			<key>subimages</key>
-			<array>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_bananabunch</string>
-					<key>spriteOffset</key>
-					<string>{0, 2}</string>
-					<key>spriteSourceSize</key>
-					<string>{88, 65}</string>
-					<key>textureRect</key>
-					<string>{{152, 62}, {55, 78}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_hat</string>
-					<key>spriteOffset</key>
-					<string>{0.5, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{122, 75}</string>
-					<key>textureRect</key>
-					<string>{{1, 143}, {64, 110}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_banana</string>
-					<key>spriteOffset</key>
-					<string>{0, 0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{92, 64}</string>
-					<key>textureRect</key>
-					<string>{{153, 1}, {82, 57}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_canteen</string>
-					<key>spriteOffset</key>
-					<string>{-1.5, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{60, 78}</string>
-					<key>textureRect</key>
-					<string>{{210, 61}, {43, 65}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_pineapple</string>
-					<key>spriteOffset</key>
-					<string>{1, -1.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{61, 134}</string>
-					<key>textureRect</key>
-					<string>{{98, 2}, {51, 127}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_statue</string>
-					<key>spriteOffset</key>
-					<string>{1, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{105, 148}</string>
-					<key>textureRect</key>
-					<string>{{1, 2}, {93, 139}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_backpack</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{90, 106}</string>
-					<key>textureRect</key>
-					<string>{{69, 144}, {80, 96}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>path</key>
-			<string>objects-ipad.png</string>
-			<key>size</key>
-			<string>{254, 254}</string>
-			<key>subimages</key>
-			<array>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_bananabunch</string>
-					<key>spriteOffset</key>
-					<string>{0, 2}</string>
-					<key>spriteSourceSize</key>
-					<string>{88, 65}</string>
-					<key>textureRect</key>
-					<string>{{152, 62}, {55, 78}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_hat</string>
-					<key>spriteOffset</key>
-					<string>{0.5, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{122, 75}</string>
-					<key>textureRect</key>
-					<string>{{1, 143}, {64, 110}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_banana</string>
-					<key>spriteOffset</key>
-					<string>{0, 0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{92, 64}</string>
-					<key>textureRect</key>
-					<string>{{153, 1}, {82, 57}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_canteen</string>
-					<key>spriteOffset</key>
-					<string>{-1.5, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{60, 78}</string>
-					<key>textureRect</key>
-					<string>{{210, 61}, {43, 65}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_pineapple</string>
-					<key>spriteOffset</key>
-					<string>{1, -1.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{61, 134}</string>
-					<key>textureRect</key>
-					<string>{{98, 2}, {51, 127}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_statue</string>
-					<key>spriteOffset</key>
-					<string>{1, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{105, 148}</string>
-					<key>textureRect</key>
-					<string>{{1, 2}, {93, 139}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_backpack</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{90, 106}</string>
-					<key>textureRect</key>
-					<string>{{69, 144}, {80, 96}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>path</key>
-			<string>objects-ipad.png</string>
-			<key>size</key>
-			<string>{254, 254}</string>
-			<key>subimages</key>
-			<array>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_bananabunch</string>
-					<key>spriteOffset</key>
-					<string>{0, 2}</string>
-					<key>spriteSourceSize</key>
-					<string>{88, 65}</string>
-					<key>textureRect</key>
-					<string>{{152, 62}, {55, 78}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_hat</string>
-					<key>spriteOffset</key>
-					<string>{0.5, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{122, 75}</string>
-					<key>textureRect</key>
-					<string>{{1, 143}, {64, 110}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_banana</string>
-					<key>spriteOffset</key>
-					<string>{0, 0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{92, 64}</string>
-					<key>textureRect</key>
-					<string>{{153, 1}, {82, 57}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_canteen</string>
-					<key>spriteOffset</key>
-					<string>{-1.5, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{60, 78}</string>
-					<key>textureRect</key>
-					<string>{{210, 61}, {43, 65}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_pineapple</string>
-					<key>spriteOffset</key>
-					<string>{1, -1.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{61, 134}</string>
-					<key>textureRect</key>
-					<string>{{98, 2}, {51, 127}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_statue</string>
-					<key>spriteOffset</key>
-					<string>{1, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{105, 148}</string>
-					<key>textureRect</key>
-					<string>{{1, 2}, {93, 139}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_backpack</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{90, 106}</string>
-					<key>textureRect</key>
-					<string>{{69, 144}, {80, 96}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>path</key>
-			<string>objects-ipad.png</string>
-			<key>size</key>
-			<string>{254, 254}</string>
-			<key>subimages</key>
-			<array>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_bananabunch</string>
-					<key>spriteOffset</key>
-					<string>{0, 2}</string>
-					<key>spriteSourceSize</key>
-					<string>{88, 65}</string>
-					<key>textureRect</key>
-					<string>{{152, 62}, {55, 78}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_hat</string>
-					<key>spriteOffset</key>
-					<string>{0.5, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{122, 75}</string>
-					<key>textureRect</key>
-					<string>{{1, 143}, {64, 110}}</string>
-					<key>textureRotated</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_banana</string>
-					<key>spriteOffset</key>
-					<string>{0, 0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{92, 64}</string>
-					<key>textureRect</key>
-					<string>{{153, 1}, {82, 57}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_canteen</string>
-					<key>spriteOffset</key>
-					<string>{-1.5, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{60, 78}</string>
-					<key>textureRect</key>
-					<string>{{210, 61}, {43, 65}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_pineapple</string>
-					<key>spriteOffset</key>
-					<string>{1, -1.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{61, 134}</string>
-					<key>textureRect</key>
-					<string>{{98, 2}, {51, 127}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_statue</string>
-					<key>spriteOffset</key>
-					<string>{1, -0.5}</string>
-					<key>spriteSourceSize</key>
-					<string>{105, 148}</string>
-					<key>textureRect</key>
-					<string>{{1, 2}, {93, 139}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>object_backpack</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{90, 106}</string>
+					<string>{80, 96}</string>
 					<key>textureRect</key>
 					<string>{{69, 144}, {80, 96}}</string>
 					<key>textureRotated</key>

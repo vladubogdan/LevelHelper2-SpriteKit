@@ -11,22 +11,14 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
+#import "SKNode+Transforms.h"
 
 @implementation LHRevoluteJointNode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
-    
-    SKPhysicsJointPin* joint;
+    LHJointNodeProtocolImp*     _jointProtocolImp;
     
     SKShapeNode* debugShapeNode;
-    
-    CGPoint relativePosA;
-    
-    NSString* nodeAUUID;
-    NSString* nodeBUUID;
-
-    __weak SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeA;
-    __weak SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeB;
     
     BOOL    _enableLimit;
     float   _lowerAngleRadians;
@@ -35,12 +27,11 @@
 }
 
 -(void)dealloc{
-    nodeA = nil;
-    nodeB = nil;
+    
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
-    LH_SAFE_RELEASE(nodeAUUID);
-    LH_SAFE_RELEASE(nodeBUUID);
+    [_jointProtocolImp setJoint:nil];//at this point the joint no longer exits
+    LH_SAFE_RELEASE(_jointProtocolImp);
     
     LH_SUPER_DEALLOC();
 }
@@ -62,11 +53,9 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
+        _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
+                                                                                         node:self];
         
-        nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
-        nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
-        relativePosA = [dict pointForKey:@"relativePosA"];
-
         _enableLimit = [dict boolForKey:@"enableLimit"];
         _lowerAngleRadians = LH_DEGREES_TO_RADIANS([dict boolForKey:@"lowerAngle"] - 90);
         _upperAngleRadians = LH_DEGREES_TO_RADIANS([dict boolForKey:@"upperAngle"] - 90);
@@ -77,47 +66,24 @@
 }
 
 -(void)removeFromParent{
-    if(joint){
-        [[self scene].physicsWorld removeJoint:joint];
-        joint = nil;
-    }
-    
+    LH_SAFE_RELEASE(_jointProtocolImp);
     [super removeFromParent];
 }
 
--(CGPoint)anchorA{
-    CGAffineTransform transformA = CGAffineTransformRotate(CGAffineTransformIdentity,
-                                                           joint.bodyA.node.zRotation);
-    
-    CGPoint curAnchorA = CGPointApplyAffineTransform(CGPointMake(relativePosA.x, -relativePosA.y),
-                                                     transformA);
-    
-    return CGPointMake(nodeA.position.x + curAnchorA.x,
-                       nodeA.position.y + curAnchorA.y);
-}
-
--(SKPhysicsJointPin*)joint{
-    return joint;
-}
-
 -(BOOL)hasLimit{
-    if(joint){
-        return joint.shouldEnableLimits;
-    }
-    return NO;
+    return _enableLimit;
 }
 -(float)lowerAngleLimit{
-    if(joint){
-        return LH_RADIANS_TO_DEGREES(joint.lowerAngleLimit);
-    }
-    return 0;
+    return LH_RADIANS_TO_DEGREES(_lowerAngleRadians);
 }
 -(float)upperAngleLimit{
-    if(joint){
-        return LH_RADIANS_TO_DEGREES(joint.upperAngleLimit);
-    }
-    return 0;
+    return LH_RADIANS_TO_DEGREES(_upperAngleRadians);
 }
+
+#pragma mark - LHJointNodeProtocol Required
+LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
+LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
+
 
 #pragma mark LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
@@ -132,30 +98,28 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(BOOL)lateLoading{
     
-    if(!nodeAUUID || !nodeBUUID)
-        return true;
+    [_jointProtocolImp findConnectedNodes];
     
-    LHScene* scene = (LHScene*)[self scene];
+    SKNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
+    SKNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
     
-    if([[self parent] conformsToProtocol:@protocol(LHNodeProtocol)])
+    CGPoint relativePosA = [_jointProtocolImp localAnchorA];
+    
+    if(nodeA && nodeB)
     {
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeBUUID];
-    }
-    else{
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeBUUID];
-    }
-    
-    if(nodeA && nodeB && nodeA.physicsBody && nodeB.physicsBody)
-    {
-        CGPoint ptA = [scene convertPoint:CGPointZero fromNode:nodeA];
-        CGPoint anchorA = CGPointMake(ptA.x + relativePosA.x,
-                                      ptA.y - relativePosA.y);
+#if LH_USE_BOX2D
         
-        joint = [SKPhysicsJointPin jointWithBodyA:nodeA.physicsBody
-                                            bodyB:nodeB.physicsBody
-                                           anchor:anchorA];
+#else//spritekit
+        
+    if(nodeA.physicsBody && nodeB.physicsBody)
+    {
+        LHScene* scene = [self scene];
+
+        CGPoint anchorA = [nodeA convertToWorldSpace:relativePosA];
+                
+        SKPhysicsJointPin* joint = [SKPhysicsJointPin jointWithBodyA:nodeA.physicsBody
+                                                               bodyB:nodeB.physicsBody
+                                                              anchor:anchorA];
         
         joint.shouldEnableLimits= _enableLimit;
         joint.lowerAngleLimit   = _lowerAngleRadians;
@@ -163,19 +127,22 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         joint.frictionTorque    = _maxMotorTorque;
         
         [scene.physicsWorld addJoint:joint];
+        [_jointProtocolImp setJoint:joint];
         
 #if LH_DEBUG
             debugShapeNode = [SKShapeNode node];
-            debugShapeNode.position = anchorA;
-            CGPathRef pathRef = CGPathCreateWithEllipseInRect(CGRectMake(-10, -10, 20, 20), nil);
+            debugShapeNode.position = anchorA;//[self anchorA];
+            CGPathRef pathRef = CGPathCreateWithEllipseInRect(CGRectMake(-8, -8, 16, 16), nil);
             debugShapeNode.path = pathRef;
             CGPathRelease(pathRef);
             debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
             [self addChild:debugShapeNode];
 #endif
         
-        LH_SAFE_RELEASE(nodeAUUID);
-        LH_SAFE_RELEASE(nodeBUUID);
+    }
+        
+#endif
+        
         return true;
     }
     return false;

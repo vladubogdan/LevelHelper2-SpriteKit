@@ -13,6 +13,7 @@
 #import "LHAsset.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHGameWorldNode.h"
+#import "SKNode+Transforms.h"
 
 
 double bisection(double g0, double g1, double epsilon,
@@ -69,12 +70,13 @@ double fcat(double x, void *data)
 @implementation LHRopeJointNode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
+    LHJointNodeProtocolImp*     _jointProtocolImp;
     
-    __unsafe_unretained SKPhysicsJointLimit* joint;
+    
     SKShapeNode* debugShapeNode;
     
-    CGPoint relativePosA;
-    CGPoint relativePosB;
+//    CGPoint relativePosA;
+//    CGPoint relativePosB;
     
     int     segments;
     float   thickness;
@@ -85,13 +87,7 @@ double fcat(double x, void *data)
     float   fadeOutDelay;
     float   _length;
     
-    NSString* nodeAUUID;
-    NSString* nodeBUUID;
-    
     SKShapeNode* ropeShape;//nil if drawing is not enabled
-    
-    __unsafe_unretained SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeA;
-    __unsafe_unretained SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeB;
     
     SKShapeNode* debugCutAShapeNode;
     SKPhysicsJointLimit* cutJointA;
@@ -108,12 +104,10 @@ double fcat(double x, void *data)
 }
 
 -(void)dealloc{
-    nodeA = nil;
-    nodeB = nil;
 
-    LH_SAFE_RELEASE(nodeAUUID);
-    LH_SAFE_RELEASE(nodeBUUID);
+    [_jointProtocolImp setJoint:nil];
     
+    LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SUPER_DEALLOC();
@@ -133,6 +127,8 @@ double fcat(double x, void *data)
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
+        _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
+                                                                                         node:self];
         
         thickness = [dict floatForKey:@"thickness"];
         segments = [dict intForKey:@"segments"];
@@ -154,56 +150,22 @@ double fcat(double x, void *data)
                                                     green:colorInfo.origin.y
                                                      blue:colorInfo.size.width
                                                     alpha:colorInfo.size.height];
-            ropeShape.lineWidth = thickness;
+            
+            ropeShape.fillColor = [SKColor colorWithRed:colorInfo.origin.x
+                                                    green:colorInfo.origin.y
+                                                     blue:colorInfo.size.width
+                                                    alpha:colorInfo.size.height];
+
+            ropeShape.lineWidth = 0.5;//thickness;
             ropeShape.antialiased = NO;
             ropeShape.zPosition = [dict floatForKey:@"zOrder"];
         }
 
-        if([dict objectForKey:@"spriteAUUID"])//there may not be a connected node
-        nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
-        
-        if([dict objectForKey:@"spriteBUUID"])//there may not be a connected node
-        nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
-        
-        relativePosA = [dict pointForKey:@"relativePosA"];
-        relativePosB = [dict pointForKey:@"relativePosB"];
         _length = [dict floatForKey:@"length"];
-        
         
         [self setPosition:CGPointZero];
     }
     return self;
-}
-
--(CGPoint)anchorA{
-//    CGAffineTransform transformA = CGAffineTransformRotate(CGAffineTransformIdentity,
-//                                                           joint.bodyA.node.zRotation);
-//    
-//    CGPoint curAnchorA = CGPointApplyAffineTransform(CGPointMake(relativePosA.x, -relativePosA.y),
-//                                                     transformA);
-//    
-//    CGPoint ptA = [[self scene] convertPoint:CGPointZero fromNode:nodeA];
-    return nodeA.position;
-
-//    return ptA;
-    
-//    return CGPointMake(ptA.x + curAnchorA.x,
-//                       ptA.y + curAnchorA.y);
-}
-
--(CGPoint)anchorB{
-//    CGAffineTransform transformB = CGAffineTransformRotate(CGAffineTransformIdentity,
-//                                                           joint.bodyB.node.zRotation);
-//    
-//    CGPoint curAnchorB = CGPointApplyAffineTransform(CGPointMake(relativePosB.x, -relativePosB.y),
-//                                                     transformB);
-    
-    //CGPoint ptB = [[self scene] convertPoint:CGPointZero fromNode:nodeB];
-    return nodeB.position;
-
-//    return ptB;
-//    return  CGPointMake(ptB.x + curAnchorB.x,
-//                        ptB.y + curAnchorB.y);
 }
 
 -(BOOL)canBeCut{
@@ -221,12 +183,9 @@ double fcat(double x, void *data)
         [[self scene].physicsWorld removeJoint:cutJointB];
         cutJointB = nil;
     }
-    
-    if(joint){
-        [[self scene].physicsWorld removeJoint:joint];
-        joint = nil;
-    }
-    
+
+    LH_SAFE_RELEASE(_jointProtocolImp);
+
     [super removeFromParent];
 }
 
@@ -279,7 +238,24 @@ double fcat(double x, void *data)
             prevA = valA;
             prevB = valB;
         }
-        
+
+        for(int i = (int)[sPoints count]-1; i >=0; i-=2)
+        {
+            NSValue* valA = [sPoints objectAtIndex:i];
+            NSValue* valB = [sPoints objectAtIndex:i-1];
+            
+            if(prevA && prevB)
+            {
+                CGPoint a = CGPointFromValue(valA);
+                CGPoint pa = CGPointFromValue(prevA);
+                
+                CGPathAddLineToPoint(ropePath, nil, pa.x, pa.y);
+                CGPathAddLineToPoint(ropePath, nil, a.x, a.y);
+            }
+            prevA = valA;
+            prevB = valB;
+        }
+
         shape.path = ropePath;
         
         CGPathRelease(ropePath);
@@ -290,22 +266,19 @@ double fcat(double x, void *data)
                     toPointB:(CGPoint)ptB
 {
     if(cutJointA || cutJointB) return; //dont cut again
-    
-    if(!joint)return;
+    if(![_jointProtocolImp joint])return;
     
     CGPoint a = [self anchorA];
     CGPoint b = [self anchorB];
     
-    ptA = [[self scene] convertPoint:ptA toNode:[[self scene] gameWorldNode]];
-    ptB = [[self scene] convertPoint:ptB toNode:[[self scene] gameWorldNode]];
-    
-    
     BOOL flipped = NO;
     NSMutableArray* rPoints = [self ropePointsFromPointA:a
                                                 toPointB:b
-                                              withLength:[joint maxLength]
+                                              withLength:_length
                                                 segments:segments
                                                  flipped:&flipped];
+    
+    NSLog(@"ROPE CUT FROM %@ TO %@", NSStringFromCGPoint(ptA), NSStringFromCGPoint(ptB));
     
     NSValue* prevValue = nil;
     float cutLength = 0.0f;
@@ -319,23 +292,26 @@ double fcat(double x, void *data)
             
             cutLength += LHDistanceBetweenPoints(ropeA, ropeB);
             
+            NSLog(@"ROPE A %@ ROPE B %@", NSStringFromCGPoint(ropeA), NSStringFromCGPoint(ropeB));
+            
             NSValue* interVal = LHLinesIntersection(ropeA, ropeB, ptA, ptB);
+            
             
             if(interVal){
                 CGPoint interPt = CGPointFromValue(interVal);
                 
                 //need to destroy the joint and create 2 other joints
-                if(joint){
+                if([_jointProtocolImp joint]){
     
                     cutTimer = [NSDate timeIntervalSinceReferenceDate];
                     
-                    nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)joint.bodyA.node;
-                    nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)joint.bodyB.node;
+                    SKNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
+                    SKNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
+                    
+                    float length = _length;
 
-                    float length = joint.maxLength;
-
-                    [[self scene].physicsWorld removeJoint:joint];
-                    joint = nil;
+                    [_jointProtocolImp removeJoint];
+                    
                     
                     if(debugShapeNode){
                         [debugShapeNode removeFromParent];
@@ -347,6 +323,8 @@ double fcat(double x, void *data)
                         cutShapeNodeA = [SKShapeNode node];
                         [self addChild:cutShapeNodeA];
                         cutShapeNodeA.strokeColor = ropeShape.strokeColor;
+                        cutShapeNodeA.fillColor   = ropeShape.fillColor;
+                        
                         cutShapeNodeA.lineWidth = ropeShape.lineWidth;
                         cutShapeNodeA.antialiased = NO;
                         cutShapeNodeA.zPosition = ropeShape.zPosition;
@@ -354,6 +332,8 @@ double fcat(double x, void *data)
                         cutShapeNodeB = [SKShapeNode node];
                         [self addChild:cutShapeNodeB];
                         cutShapeNodeB.strokeColor = ropeShape.strokeColor;
+                        cutShapeNodeB.fillColor   = ropeShape.fillColor;
+                        
                         cutShapeNodeB.lineWidth = ropeShape.lineWidth;
                         cutShapeNodeB.antialiased = NO;
                         cutShapeNodeB.zPosition = ropeShape.zPosition;
@@ -717,7 +697,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         return;
     }
     
-    if(debugShapeNode && joint){
+    if(debugShapeNode && [_jointProtocolImp joint]){
         CGMutablePathRef debugLinePath = CGPathCreateMutable();
         CGPathMoveToPoint(debugLinePath, nil, anchorA.x, anchorA.y);
         CGPathAddLineToPoint(debugLinePath, nil, anchorB.x, anchorB.y);
@@ -752,7 +732,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [self drawRopeShape:ropeShape
                     anchorA:anchorA
                     anchorB:anchorB
-                     length:joint.maxLength
+                     length:_length
                    segments:segments];
     }
     
@@ -774,6 +754,17 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                                                     green:colorInfo.origin.y
                                                      blue:colorInfo.size.width
                                                     alpha:alphaValue];
+        
+        cutShapeNodeA.fillColor = [SKColor colorWithRed:colorInfo.origin.x
+                                                    green:colorInfo.origin.y
+                                                     blue:colorInfo.size.width
+                                                    alpha:alphaValue];
+        
+        cutShapeNodeB.fillColor = [SKColor colorWithRed:colorInfo.origin.x
+                                                    green:colorInfo.origin.y
+                                                     blue:colorInfo.size.width
+                                                    alpha:alphaValue];
+
         if(unit >=1){
             [self removeFromParent];
             return;
@@ -804,48 +795,45 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(BOOL)lateLoading
 {
-    if(!nodeAUUID || !nodeBUUID)
-        return true;
+    [_jointProtocolImp findConnectedNodes];
     
-    LHScene* scene = (LHScene*)[self scene];
+    SKNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
+    SKNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
     
-    if([[self parent] conformsToProtocol:@protocol(LHNodeProtocol)])
+    CGPoint relativePosA = [_jointProtocolImp localAnchorA];
+    CGPoint relativePosB = [_jointProtocolImp localAnchorB];
+    
+    if(nodeA && nodeB)
     {
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeBUUID];
-    }
-    else{
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeBUUID];
-    }
-    
-    if(nodeA && nodeB && nodeA.physicsBody && nodeB.physicsBody)
-    {
-        CGPoint ptA = [scene convertPoint:CGPointZero fromNode:nodeA];
-        CGPoint ptB = [scene convertPoint:CGPointZero fromNode:nodeB];
+#if LH_USE_BOX2D
+            
+#else //spritekit
+      
+        if(!nodeA.physicsBody || !nodeB.physicsBody)
+            return NO;
         
-        CGPoint anchorA = CGPointMake(ptA.x + relativePosA.x,
-                                      ptA.y - relativePosA.y);
+        LHScene* scene = [self scene];
         
-        CGPoint anchorB = CGPointMake(ptB.x + relativePosB.x,
-                                      ptB.y - relativePosB.y);
         
-        joint = [SKPhysicsJointLimit jointWithBodyA:nodeA.physicsBody
-                                              bodyB:nodeB.physicsBody
-                                            anchorA:anchorA
-                                            anchorB:anchorB];
+        CGPoint worldPointA = [nodeA convertToWorldSpaceAR:relativePosA];
+        CGPoint worldPointB = [nodeB convertToWorldSpaceAR:relativePosB];
+        
+        SKPhysicsJointLimit* joint = [SKPhysicsJointLimit jointWithBodyA:nodeA.physicsBody
+                                                                   bodyB:nodeB.physicsBody
+                                                                 anchorA:worldPointA
+                                                                 anchorB:worldPointB];
         
         [joint setMaxLength:_length];
-        
         [scene.physicsWorld addJoint:joint];
-        
+    
+        [_jointProtocolImp setJoint:joint];
         
 #if LH_DEBUG
         debugShapeNode = [SKShapeNode node];
         
         CGMutablePathRef debugLinePath = CGPathCreateMutable();
-        CGPathMoveToPoint(debugLinePath, nil, anchorA.x, anchorA.y);
-        CGPathAddLineToPoint(debugLinePath, nil, anchorB.x, anchorB.y);
+        CGPathMoveToPoint(debugLinePath, nil, worldPointA.x, worldPointA.y);
+        CGPathAddLineToPoint(debugLinePath, nil, worldPointB.x, worldPointB.y);
         
         debugShapeNode.path = debugLinePath;
         
@@ -856,12 +844,18 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [self addChild:debugShapeNode];
 #endif
         
-        LH_SAFE_RELEASE(nodeAUUID);
-        LH_SAFE_RELEASE(nodeBUUID);
+        
+#endif
         return true;
     }
     
     return false;
 }
+
+#pragma mark - LHJointNodeProtocol Required
+LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
+LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
+
+
 
 @end

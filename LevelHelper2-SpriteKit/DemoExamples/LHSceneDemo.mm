@@ -16,6 +16,8 @@
 #import "LHSceneAnimationsDemo.h"
 #import "LHSceneParallaxDemo.h"
 #import "LHSceneAssetsDemo.h"
+#import "LHSceneRopeJointDemo.h"
+#import "LHSceneOtherJointsDemo.h"
 
 @implementation LHSceneDemo
 {
@@ -46,9 +48,10 @@
         [availableScenes addObject:[LHSceneAnimationsDemo class]];
         [availableScenes addObject:[LHSceneParallaxDemo class]];
         [availableScenes addObject:[LHSceneAssetsDemo class]];
+        [availableScenes addObject:[LHSceneRopeJointDemo class]];
+        [availableScenes addObject:[LHSceneOtherJointsDemo class]];
         [availableScenes addObject:[LHScenePhysicsBodiesDemo class]];
         [availableScenes addObject:[LHSceneCollisionFilteringDemo class]];
-        
         
         
         {
@@ -116,6 +119,10 @@
     if ([node.name isEqualToString:@"NextLabel"]) {
         [self nextDemo];
     }
+    
+    
+    //dont forget to call super
+    [super touchesBegan:touches withEvent:event];
 }
 
 -(void)previousDemo{
@@ -127,7 +134,7 @@
         {
             int nextIdx = idx-1;
             if(nextIdx < 0){
-                nextIdx = [availableScenes count] -1;
+                nextIdx = (int)[availableScenes count] -1;
             }
             
             if(0 <= nextIdx && nextIdx < [availableScenes count] )
