@@ -7,8 +7,6 @@
 //
 
 #import "LHScenePhysicsBodiesDemo.h"
-#import "LHSceneCameraDemo.h"
-#import "LHSceneCollisionFilteringDemo.h"
 
 @implementation LHScenePhysicsBodiesDemo
 
@@ -70,14 +68,6 @@
     }
     
     return self;
-}
-
--(void)previousDemo{
-        [[self view] presentScene:[LHSceneCameraDemo scene]];
-}
-
--(void)nextDemo{
-        [[self view] presentScene:[LHSceneCollisionFilteringDemo scene]];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

@@ -160,7 +160,10 @@ double fcat(double x, void *data)
             ropeShape.zPosition = [dict floatForKey:@"zOrder"];
         }
 
+        if([dict objectForKey:@"spriteAUUID"])//there may not be a connected node
         nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
+        
+        if([dict objectForKey:@"spriteBUUID"])//there may not be a connected node
         nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
         
         relativePosA = [dict pointForKey:@"relativePosA"];

@@ -431,12 +431,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         
         self.position = CGPointZero;
         
-        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
-    
-//        SKScene* scene = [prnt scene];
-//        self.position = CGPointMake(0, scene.size.height);
-        
-        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];        
     }
     
     return self;
@@ -477,8 +472,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [self addChild:drawNode];
         _debugNode = drawNode;
         
-        SKScene* scene = [self scene];
-//        _debugNode.position = CGPointMake(0, -scene.size.height);
         _debugNode.position = CGPointZero;
     }
     return _box2dWorld;
@@ -531,45 +524,6 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 		[self afterStep:dt]; // process collisions and result from callbacks called by the step
 	}
 	[self box2dWorld]->ClearForces ();
-    
-    LHScene* scene = [self scene];
-    CGSize size = scene.size;
-    
-    //Iterate over the bodies in the physics world
-//	for (b2Body* b = [self box2dWorld]->GetBodyList(); b; b = b->GetNext())
-//	{
-//		if (b->GetUserData() != NULL) {
-//			//Synchronize the AtlasSprites position and rotation with the corresponding body
-//			SKSpriteNode *myActor = LH_ID_BRIDGE_CAST(b->GetUserData());
-//            
-//            b2Vec2 pos = b->GetPosition();
-//            float ang = b->GetAngle();
-//            
-//            CGPoint worldPos = [scene pointFromMeters:pos];
-//            //worldPos.y += size.height*0.5;
-//            
-//            NSLog(@"NODE SIZE %f %f", myActor.size.width, myActor.size.height);
-//            NSLog(@"WORLD POS %f %f", worldPos.x, worldPos.y);
-//            
-////            CGPoint localPos = [scene lh_convertPoint:worldPos toNode:myActor];
-//            
-//            
-//            CGPoint localPos = [myActor convertToNodeSpace:worldPos];
-//
-//            NSLog(@"LOCAL POS %f %f", localPos.x, localPos.y);
-//            
-////            CGPoint localPos = [myActor convertPoint:worldPos fromNode:scene];
-////            localPos.y += size.height*0.5;
-//            
-//            
-//            myActor.position = localPos;
-////            myActor.zRotation = ang;
-//            
-////			myActor.position = CGPointMake( b->GetPosition().x * PTM_RATIO, b->GetPosition().y * PTM_RATIO);
-////			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
-//		}
-//	}
-
     
     [_debugNode draw];
 }

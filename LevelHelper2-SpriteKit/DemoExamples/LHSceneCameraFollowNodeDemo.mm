@@ -7,7 +7,6 @@
 //
 
 #import "LHSceneCameraFollowNodeDemo.h"
-#import "LHScenePhysicsBodiesDemo.h"
 
 @implementation LHSceneCameraFollowNodeDemo
 
@@ -90,15 +89,6 @@
     
     return self;
 }
-
--(void)previousDemo{
-    
-}
-
--(void)nextDemo{
-    [[self view] presentScene:[LHScenePhysicsBodiesDemo scene]];
-}
-
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

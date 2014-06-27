@@ -177,6 +177,8 @@
 		6EBEA3CF1959C0F600726044 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA39F1959C0F600726044 /* b2Rope.cpp */; };
 		6ED5C4FC195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */; };
 		6ED5C4FD195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */; };
+		6ED5C500195D575F00B6DF33 /* LHSceneAnimationsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */; };
+		6ED5C501195D575F00B6DF33 /* LHSceneAnimationsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -392,6 +394,8 @@
 		6EBEA3A01959C0F600726044 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
 		6ED5C4FA195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowNodeDemo.h; sourceTree = "<group>"; };
 		6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowNodeDemo.mm; sourceTree = "<group>"; };
+		6ED5C4FE195D575F00B6DF33 /* LHSceneAnimationsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAnimationsDemo.h; sourceTree = "<group>"; };
+		6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAnimationsDemo.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -646,6 +650,8 @@
 				6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.mm */,
 				6EBD3D90195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.h */,
 				6EBD3D91195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm */,
+				6ED5C4FE195D575F00B6DF33 /* LHSceneAnimationsDemo.h */,
+				6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */,
 			);
 			path = DemoExamples;
 			sourceTree = "<group>";
@@ -991,6 +997,7 @@
 				6EBD3D92195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm in Sources */,
 				6E89FDAC192E0C510040478F /* LHRevoluteJointNode.mm in Sources */,
 				6E89FD05192E0A390040478F /* main.m in Sources */,
+				6ED5C500195D575F00B6DF33 /* LHSceneAnimationsDemo.mm in Sources */,
 				6EBEA2E71959980F00726044 /* LHNodeAnimationProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1011,6 +1018,7 @@
 				6EBEA2FE1959BFD000726044 /* LHChildrenRotationsProperty.m in Sources */,
 				6EBEA2FF1959BFD000726044 /* LHPrismaticJointNode.mm in Sources */,
 				6EBEA3001959BFD000726044 /* LHGravityArea.mm in Sources */,
+				6ED5C501195D575F00B6DF33 /* LHSceneAnimationsDemo.mm in Sources */,
 				6EBEA3C21959C0F600726044 /* b2PolygonAndCircleContact.cpp in Sources */,
 				6EBEA3011959BFD000726044 /* LHAnimation.m in Sources */,
 				6EBEA3AF1959C0F600726044 /* b2BlockAllocator.cpp in Sources */,

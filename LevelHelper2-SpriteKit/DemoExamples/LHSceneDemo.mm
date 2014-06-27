@@ -7,13 +7,28 @@
 //
 
 #import "LHSceneDemo.h"
+#import "LHUtils.h"
+
+#import "LHSceneCameraDemo.h"
+#import "LHSceneCameraFollowNodeDemo.h"
+#import "LHScenePhysicsBodiesDemo.h"
+#import "LHSceneCollisionFilteringDemo.h"
+#import "LHSceneAnimationsDemo.h"
 
 @implementation LHSceneDemo
-
+{
+    NSMutableArray* availableScenes;
+}
 +(id)scene
 {
     return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/officerLevel.plist"];
     
+}
+
+-(void)dealloc{
+    
+    LH_SAFE_RELEASE(availableScenes);
+    LH_SUPER_DEALLOC();
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{
@@ -21,6 +36,15 @@
     if(self = [super initWithContentOfFile:levelPlistFile])
     {
         /*INIT YOUR CONTENT HERE*/
+        
+        availableScenes = [[NSMutableArray alloc] init];
+        
+        [availableScenes addObject:[LHSceneCameraDemo class]];
+        [availableScenes addObject:[LHSceneCameraFollowNodeDemo class]];
+        [availableScenes addObject:[LHSceneAnimationsDemo class]];
+        [availableScenes addObject:[LHScenePhysicsBodiesDemo class]];
+        [availableScenes addObject:[LHSceneCollisionFilteringDemo class]];
+        
         
         {
             CGSize size = [self size];
@@ -90,7 +114,25 @@
 }
 
 -(void)previousDemo{
-//     [[self view] presentScene:[[self class] scene]];
+
+    int idx = 0;
+    for(Class cls in availableScenes)
+    {
+        if(cls == [self class])
+        {
+            int nextIdx = idx-1;
+            if(nextIdx < 0){
+                nextIdx = [availableScenes count] -1;
+            }
+            
+            if(0 <= nextIdx && nextIdx < [availableScenes count] )
+            {
+                Class goTo = [availableScenes objectAtIndex:nextIdx];
+                [[self view] presentScene:[goTo scene]];
+            }
+        }
+        ++idx;
+    }
 }
 
 -(void)restartDemo{
@@ -98,7 +140,25 @@
 }
 
 -(void)nextDemo{
-//    [[self view] presentScene:[[self class] scene]];    
+    
+    int idx = 0;
+    for(Class cls in availableScenes)
+    {
+        if(cls == [self class])
+        {
+            int nextIdx = idx+1;
+            if(nextIdx >= [availableScenes count]){
+                nextIdx = 0;
+            }
+            
+            if(0 <= nextIdx && nextIdx < [availableScenes count] )
+            {
+                Class goTo = [availableScenes objectAtIndex:nextIdx];
+                [[self view] presentScene:[goTo scene]];
+            }
+        }
+        ++idx;
+    }
 }
 
 @end

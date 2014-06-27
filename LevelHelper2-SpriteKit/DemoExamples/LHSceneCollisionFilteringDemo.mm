@@ -7,7 +7,8 @@
 //
 
 #import "LHSceneCollisionFilteringDemo.h"
-#import "LHScenePhysicsBodiesDemo.h"
+
+
 @implementation LHSceneCollisionFilteringDemo
 {
 #if LH_USE_BOX2D
@@ -78,14 +79,6 @@
     }
     
     return self;
-}
-
--(void)previousDemo{
-    [[self view] presentScene:[LHScenePhysicsBodiesDemo scene]];
-}
-
--(void)nextDemo{
-    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

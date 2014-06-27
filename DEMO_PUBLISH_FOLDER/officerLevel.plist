@@ -80,10 +80,6 @@
 					<real>21</real>
 					<key>shouldDraw</key>
 					<true/>
-					<key>spriteAUUID</key>
-					<string>34C4A623-4330-46DF-AA07-DD46F474FE6C</string>
-					<key>spriteBUUID</key>
-					<string>56424CEF-F45F-491B-AB57-ED8840799870</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -1745,16 +1741,16 @@
 						<key>0x0</key>
 						<string>{0.17107211963406635, 0.74629477214600359}</string>
 						<key>1024x768</key>
-						<string>{0.1520564619354749, 0.84979492151760494}</string>
+						<string>{0.92380208011988241, 0.85489746058010496}</string>
 						<key>1136x640</key>
-						<string>{0.15493894901398264, 0.74743530476116571}</string>
+						<string>{0.47585286782705233, 0.74743530476116571}</string>
 						<key>2048x1536</key>
-						<string>{0.13645541882585915, 0.84622397374893943}</string>
+						<string>{0.076191745361401969, 0.84622397374893943}</string>
 						<key>960x640</key>
 						<string>{0.17107211963406635, 0.74629477214600359}</string>
 					</dict>
 					<key>generalPosition</key>
-					<string>{0.17107211963406635, 0.74629477214600359}</string>
+					<string>{0.076191745361401969, 0.84622397374893943}</string>
 					<key>name</key>
 					<string>Officer</string>
 					<key>nodeType</key>
@@ -1777,150 +1773,6 @@
 					<string>B1AA51E8-6D95-46D7-9905-12F0B818A1D0</string>
 					<key>zOrder</key>
 					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
-					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
-					<key>generalPosition</key>
-					<string>{0.83397653361082691, 0.22684829434718951}</string>
-					<key>imageFileName</key>
-					<string>ropeAssets.png</string>
-					<key>name</key>
-					<string>candy</string>
-					<key>nodePhysics</key>
-					<dict>
-						<key>allowSleep</key>
-						<true/>
-						<key>bullet</key>
-						<false/>
-						<key>fixedRotation</key>
-						<false/>
-						<key>genericFixture</key>
-						<dict>
-							<key>category</key>
-							<integer>1</integer>
-							<key>density</key>
-							<real>0.10000000149011612</real>
-							<key>fixtureID</key>
-							<integer>0</integer>
-							<key>friction</key>
-							<real>0.20000000298023224</real>
-							<key>mask</key>
-							<integer>65535</integer>
-							<key>name</key>
-							<string>GenericFixture</string>
-							<key>restitution</key>
-							<real>0.0</real>
-							<key>sensor</key>
-							<false/>
-						</dict>
-						<key>gravityScale</key>
-						<real>1</real>
-						<key>shape</key>
-						<integer>1</integer>
-						<key>type</key>
-						<integer>2</integer>
-					</dict>
-					<key>nodeType</key>
-					<string>LHSprite</string>
-					<key>parentUUID</key>
-					<string>C8EAC234-6E4B-40DB-A2AF-8003EC624E9E</string>
-					<key>relativeImagePath</key>
-					<string>DEMO_PUBLISH_FOLDER/</string>
-					<key>rotation</key>
-					<real>0.0</real>
-					<key>scale</key>
-					<string>{1, 1}</string>
-					<key>size</key>
-					<string>{65, 61}</string>
-					<key>spriteName</key>
-					<string>candy</string>
-					<key>spriteUUID</key>
-					<string>554683CF-2615-41EF-956A-933D6F02D016</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>56424CEF-F45F-491B-AB57-ED8840799870</string>
-					<key>zOrder</key>
-					<integer>2</integer>
-				</dict>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
-					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
-					<key>generalPosition</key>
-					<string>{0.75163872347483718, 0.27159040901814252}</string>
-					<key>imageFileName</key>
-					<string>ropeAssets.png</string>
-					<key>name</key>
-					<string>thumb_tack</string>
-					<key>nodePhysics</key>
-					<dict>
-						<key>allowSleep</key>
-						<true/>
-						<key>bullet</key>
-						<false/>
-						<key>fixedRotation</key>
-						<false/>
-						<key>genericFixture</key>
-						<dict>
-							<key>category</key>
-							<integer>1</integer>
-							<key>density</key>
-							<real>0.10000000149011612</real>
-							<key>fixtureID</key>
-							<integer>0</integer>
-							<key>friction</key>
-							<real>0.20000000298023224</real>
-							<key>mask</key>
-							<integer>65535</integer>
-							<key>name</key>
-							<string>GenericFixture</string>
-							<key>restitution</key>
-							<real>0.0</real>
-							<key>sensor</key>
-							<false/>
-						</dict>
-						<key>gravityScale</key>
-						<real>1</real>
-						<key>shape</key>
-						<integer>0</integer>
-						<key>type</key>
-						<integer>0</integer>
-					</dict>
-					<key>nodeType</key>
-					<string>LHSprite</string>
-					<key>parentUUID</key>
-					<string>C8EAC234-6E4B-40DB-A2AF-8003EC624E9E</string>
-					<key>relativeImagePath</key>
-					<string>DEMO_PUBLISH_FOLDER/</string>
-					<key>rotation</key>
-					<real>0.0</real>
-					<key>scale</key>
-					<string>{1, 1}</string>
-					<key>size</key>
-					<string>{62, 72}</string>
-					<key>spriteName</key>
-					<string>thumb_tack</string>
-					<key>spriteUUID</key>
-					<string>B647FA4A-442F-4032-8164-8FEF3601430D</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>34C4A623-4330-46DF-AA07-DD46F474FE6C</string>
-					<key>zOrder</key>
-					<integer>2</integer>
 				</dict>
 			</array>
 			<key>colorOverlay</key>
