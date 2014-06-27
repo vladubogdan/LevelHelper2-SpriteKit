@@ -66,7 +66,6 @@
             [labelLine setText:@"The background is using a standalone image (not a sprite sheet) and its also different on each device."];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
             [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
         }
         
     }

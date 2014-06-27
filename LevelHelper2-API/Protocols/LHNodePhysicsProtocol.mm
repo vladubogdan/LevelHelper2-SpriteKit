@@ -733,12 +733,14 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 #if LH_DEBUG
                 CGPoint offset = CGPointMake(0, 0);
                 SKShapeNode* debugShapeNode = [SKShapeNode node];
-                debugShapeNode.path = CGPathCreateWithRect(CGRectMake(-size.width*0.5  + offset.x,
-                                                                      -size.height*0.5 + offset.y,
-                                                                      size.width,
-                                                                      size.height),
-                                                           nil);
-                
+                CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-size.width*0.5  + offset.x,
+                                                                -size.height*0.5 + offset.y,
+                                                                size.width,
+                                                                size.height),
+                                                     nil);
+                debugShapeNode.path = pathRef;
+                CGPathRelease(pathRef);
+            
                 [debugShapeNodes addObject:debugShapeNode];
 #endif
             
@@ -750,11 +752,13 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 #if LH_DEBUG
                 CGPoint offset = CGPointMake(0, 0);
                 SKShapeNode* debugShapeNode = [SKShapeNode node];
-                debugShapeNode.path = CGPathCreateWithEllipseInRect(CGRectMake(-size.width*0.5 + offset.x,
-                                                                               -size.width*0.5 + offset.y,
-                                                                               size.width,
-                                                                               size.width),
-                                                                    nil);
+                CGPathRef pathRef= CGPathCreateWithEllipseInRect(CGRectMake(-size.width*0.5 + offset.x,
+                                                                        -size.width*0.5 + offset.y,
+                                                                        size.width,
+                                                                        size.width),
+                                                             nil);
+                debugShapeNode.path = pathRef;
+                CGPathRelease(pathRef);
                 [debugShapeNodes addObject:debugShapeNode];
 #endif
         }
@@ -782,8 +786,10 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
                 _node.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:rect];
     #if LH_DEBUG
                     SKShapeNode* debugShapeNode = [SKShapeNode node];
-                    debugShapeNode.path = CGPathCreateWithRect(rect,
-                                                               nil);
+                
+                    CGPathRef pathRef = CGPathCreateWithRect(rect, nil);
+                    debugShapeNode.path = pathRef;
+                    CGPathRelease(pathRef);
                     [debugShapeNodes addObject:debugShapeNode];
     #endif
             }

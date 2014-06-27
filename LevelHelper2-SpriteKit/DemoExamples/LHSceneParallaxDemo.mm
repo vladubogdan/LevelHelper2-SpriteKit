@@ -66,7 +66,6 @@
             [labelLine setText:@"This text is added as UI element so it won't move with the camera."];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
             [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
         }
         
     }

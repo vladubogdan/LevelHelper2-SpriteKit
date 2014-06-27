@@ -88,18 +88,23 @@
 #if LH_DEBUG
             SKShapeNode* debugShapeNode = [SKShapeNode node];
             if(_radial){
-                debugShapeNode.path = CGPathCreateWithEllipseInRect(CGRectMake(-_size.width*0.5,
-                                                                               -_size.width*0.5,
-                                                                               _size.width,
-                                                                               _size.width),
-                                                                    nil);
+                CGPathRef pathRef = CGPathCreateWithEllipseInRect(CGRectMake(-_size.width*0.5,
+                                                                             -_size.width*0.5,
+                                                                             _size.width,
+                                                                             _size.width),
+                                                                  nil);
+                
+                debugShapeNode.path = pathRef;
+                CGPathRelease(pathRef);
             }
             else{
-                debugShapeNode.path = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
-                                                                      -_size.height*0.5,
-                                                                      _size.width,
-                                                                      _size.height),
-                                                                        nil);
+                CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
+                                                                    -_size.height*0.5,
+                                                                    _size.width,
+                                                                    _size.height),
+                                                         nil);
+                debugShapeNode.path = pathRef;
+                CGPathRelease(pathRef);
             }
             debugShapeNode.strokeColor = [SKColor greenColor];
             [self addChild:debugShapeNode];

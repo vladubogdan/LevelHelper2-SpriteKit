@@ -167,7 +167,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #if LH_DEBUG
             debugShapeNode = [SKShapeNode node];
             debugShapeNode.position = anchorA;
-            debugShapeNode.path = CGPathCreateWithEllipseInRect(CGRectMake(-10, -10, 20, 20), nil);
+            CGPathRef pathRef = CGPathCreateWithEllipseInRect(CGRectMake(-10, -10, 20, 20), nil);
+            debugShapeNode.path = pathRef;
+            CGPathRelease(pathRef);
             debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
             [self addChild:debugShapeNode];
 #endif

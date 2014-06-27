@@ -20,9 +20,8 @@ double bisection(double g0, double g1, double epsilon,
 {
     if(!data)return 0;
     
-    double v0, v1, g, v;
+    double v0, g, v;
     v0 = fp(g0, data);
-    v1 = fp(g1, data);
     
     while(fabs(g1-g0) > fabs(epsilon)){
         g = (g0+g1)/2.0;
@@ -30,7 +29,7 @@ double bisection(double g0, double g1, double epsilon,
         if(v == 0.0)
             return g;
         else if(v*v0 < 0.0){
-            g1 = g;   v1 = v;
+            g1 = g;
         } else {
             g0 = g;   v0 = v;
         }
@@ -253,10 +252,7 @@ double fcat(double x, void *data)
         
         NSValue* prevA = nil;
         NSValue* prevB = nil;
-        float prevV = 0.0f;
-        if(isFlipped){
-            prevV = 1.0f;
-        }
+
         
         CGMutablePathRef ropePath = nil;
         
@@ -371,7 +367,9 @@ double fcat(double x, void *data)
                         SKNode* cutBodyA = nil;
 #if LH_DEBUG
                             cutBodyA = [SKShapeNode node];
-                            ((SKShapeNode*)cutBodyA).path = CGPathCreateWithRect(CGRectMake(-4, -4, 8, 8), nil);
+                            CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-4, -4, 8, 8), nil);
+                            ((SKShapeNode*)cutBodyA).path = pathRef;
+                            CGPathRelease(pathRef);
                             ((SKShapeNode*)cutBodyA).fillColor = [SKColor redColor];
                             ((SKShapeNode*)cutBodyA).strokeColor = [SKColor redColor];
 #else
@@ -430,7 +428,9 @@ double fcat(double x, void *data)
                         SKNode* cutBodyB = nil;
 #if LH_DEBUG
                             cutBodyB = [SKShapeNode node];
-                            ((SKShapeNode*)cutBodyB).path = CGPathCreateWithRect(CGRectMake(-4, -4, 8, 8), nil);
+                            CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-4, -4, 8, 8), nil);
+                            ((SKShapeNode*)cutBodyB).path = pathRef;
+                            CGPathRelease(pathRef);
                             ((SKShapeNode*)cutBodyB).fillColor = [SKColor redColor];
                             ((SKShapeNode*)cutBodyB).strokeColor = [SKColor redColor];
 #else
@@ -508,7 +508,7 @@ double fcat(double x, void *data)
     double x0, y0, A;
     double delX, delY, guess1, guess2;
     double Q, B, K;
-    double step, x;
+    double step;
     
     float gravityAngle = -[self gravityDirectionAngle];
     CGPoint c = CGPointMake((a.x + b.x)*0.5, (a.y + b.y)*0.5);
@@ -586,7 +586,6 @@ double fcat(double x, void *data)
     transform = CGAffineTransformTranslate(transform, -c.x, -c.y);
     
     CGPoint prevPt = CGPointZero;
-    x = data[0];
     for(float x= data[0]; x <  data[2]; )
     {
         CGPoint point = CGPointMake(x, fcat(x, constants));
@@ -626,7 +625,6 @@ double fcat(double x, void *data)
 {
     NSMutableArray* shapePoints = [NSMutableArray array];
     
-    bool first = true;
     bool added = false;
     NSValue* prvVal = nil;
     for(NSValue* val in rPoints){
@@ -661,7 +659,6 @@ double fcat(double x, void *data)
                     [shapePoints addObject:[points objectAtIndex:2]];//P
                 }
             }
-            first = false;
         }
         prvVal = val;
     }

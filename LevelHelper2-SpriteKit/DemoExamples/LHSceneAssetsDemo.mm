@@ -58,7 +58,6 @@
             [labelLine setText:@"Assets are special objects that when edited they will change to the new edited state everywhere they are used in your project."];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
             [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
         }
         
     }

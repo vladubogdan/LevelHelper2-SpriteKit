@@ -82,7 +82,7 @@
             [labelLine setText:@"This text is added to the uiNode and as such it will not move with the camera."];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
             [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
+//            txtOffset += 20;
         }
         
     }

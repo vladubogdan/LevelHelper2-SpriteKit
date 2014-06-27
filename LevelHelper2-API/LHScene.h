@@ -74,16 +74,6 @@
 -(LHUINode*)uiNode;
 
 
-/**
- Returns the informations that can be used to create an asset dynamically by specifying the file name.
- The asset file must be in the same folder as the scene file.
- If the asset file is not found it will return nil.
- 
- @param assetFileName The name of the asset that. Do not provide an extension. E.g If file is named "myAsset.lhasset.plist" then yous should pass @"myAsset.lhasset"
- @return A dictionary containing the asset information or nil.
- */
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
-
 
 #pragma mark - Box2d Support
 

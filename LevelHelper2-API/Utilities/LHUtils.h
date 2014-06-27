@@ -177,6 +177,8 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
 
 -(NSString*)relativePath;
 
+-(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+
 @end
 
 

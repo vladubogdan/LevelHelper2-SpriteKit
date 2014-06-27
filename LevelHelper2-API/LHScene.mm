@@ -52,15 +52,11 @@
     
     NSString* relativePath;
     
-    SKNode* touchedNode;
-    BOOL touchedNodeWasDynamic;
-    
     CGPoint ropeJointsCutStartPt;
     
     NSMutableDictionary* _loadedAssetsInformations;
     
     CGRect gameWorldRect;
-    NSMutableArray* cameras;
     
     NSTimeInterval previousUpdateTime;
 }
@@ -68,14 +64,17 @@
 
 -(void)dealloc{
     
+    _gameWorldNode = nil;
+    _uiNode = nil;
+    
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
+    LH_SAFE_RELEASE(lateLoadingNodes);
     LH_SAFE_RELEASE(relativePath);
     LH_SAFE_RELEASE(loadedTextures);
     LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(supportedDevices);
-    LH_SAFE_RELEASE(cameras);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
     LH_SUPER_DEALLOC();
@@ -275,8 +274,9 @@
             
 #if LH_DEBUG
             SKShapeNode* debugShapeNode = [SKShapeNode node];
-            debugShapeNode.path = CGPathCreateWithRect(skBRect,
-                                                       nil);
+            CGPathRef pathRef = CGPathCreateWithRect(skBRect, nil);
+            debugShapeNode.path = pathRef;
+            CGPathRelease(pathRef);
             debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:1];
             [[self gameWorldNode] addChild:debugShapeNode];
 #endif
@@ -356,7 +356,9 @@
             gameWorldRectT.size.height += 4;
             
             SKShapeNode* debugShapeNode = [SKShapeNode node];
-            debugShapeNode.path = CGPathCreateWithRect(gameWorldRectT,nil);
+            CGPathRef pathRef = CGPathCreateWithRect(gameWorldRectT,nil);
+            debugShapeNode.path = pathRef;
+            CGPathRelease(pathRef);
             
             debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:0 blue:1 alpha:1];
             [[self gameWorldNode] addChild:debugShapeNode];
@@ -409,25 +411,6 @@
 
 -(CGRect)gameWorldRect{
     return gameWorldRect;
-}
-
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName{
-    if(!_loadedAssetsInformations){
-        _loadedAssetsInformations = [[NSMutableDictionary alloc] init];
-    }
-    NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
-    if(!info){
-        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
-                                                         ofType:@"plist"
-                                                    inDirectory:[self relativePath]];
-        if(path){
-            info = [NSDictionary dictionaryWithContentsOfFile:path];
-            if(info){
-                [_loadedAssetsInformations setObject:info forKey:assetFileName];
-            }
-        }
-    }
-    return info;
 }
 
 #if TARGET_OS_IPHONE
@@ -631,6 +614,26 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 #pragma mark - PRIVATE CATEGORY
 
 @implementation LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+
+-(NSDictionary*)assetInfoForFile:(NSString*)assetFileName{
+    if(!_loadedAssetsInformations){
+        _loadedAssetsInformations = [[NSMutableDictionary alloc] init];
+    }
+    NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
+    if(!info){
+        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
+                                                         ofType:@"plist"
+                                                    inDirectory:[self relativePath]];
+        if(path){
+            info = [NSDictionary dictionaryWithContentsOfFile:path];
+            if(info){
+                [_loadedAssetsInformations setObject:info forKey:assetFileName];
+            }
+        }
+    }
+    return info;
+}
+
 
 +(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
                          parent:(SKNode*)prnt
