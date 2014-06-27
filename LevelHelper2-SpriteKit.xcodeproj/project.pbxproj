@@ -179,6 +179,8 @@
 		6ED5C4FD195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */; };
 		6ED5C500195D575F00B6DF33 /* LHSceneAnimationsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */; };
 		6ED5C501195D575F00B6DF33 /* LHSceneAnimationsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */; };
+		6ED5C504195D610D00B6DF33 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C503195D610D00B6DF33 /* LHSceneParallaxDemo.mm */; };
+		6ED5C505195D610D00B6DF33 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5C503195D610D00B6DF33 /* LHSceneParallaxDemo.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -396,6 +398,8 @@
 		6ED5C4FB195D515800B6DF33 /* LHSceneCameraFollowNodeDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowNodeDemo.mm; sourceTree = "<group>"; };
 		6ED5C4FE195D575F00B6DF33 /* LHSceneAnimationsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAnimationsDemo.h; sourceTree = "<group>"; };
 		6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAnimationsDemo.mm; sourceTree = "<group>"; };
+		6ED5C502195D610D00B6DF33 /* LHSceneParallaxDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneParallaxDemo.h; sourceTree = "<group>"; };
+		6ED5C503195D610D00B6DF33 /* LHSceneParallaxDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneParallaxDemo.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -652,6 +656,8 @@
 				6EBD3D91195B13AB00C7B929 /* LHSceneCollisionFilteringDemo.mm */,
 				6ED5C4FE195D575F00B6DF33 /* LHSceneAnimationsDemo.h */,
 				6ED5C4FF195D575F00B6DF33 /* LHSceneAnimationsDemo.mm */,
+				6ED5C502195D610D00B6DF33 /* LHSceneParallaxDemo.h */,
+				6ED5C503195D610D00B6DF33 /* LHSceneParallaxDemo.mm */,
 			);
 			path = DemoExamples;
 			sourceTree = "<group>";
@@ -969,6 +975,7 @@
 				6E89FD9C192E0C510040478F /* LHPositionProperty.m in Sources */,
 				6E89FD9D192E0C510040478F /* LHRotationProperty.m in Sources */,
 				6E89FD9E192E0C510040478F /* LHScaleProperty.m in Sources */,
+				6ED5C504195D610D00B6DF33 /* LHSceneParallaxDemo.mm in Sources */,
 				6E89FDAA192E0C510040478F /* LHParallaxLayer.m in Sources */,
 				6E89FD96192E0C510040478F /* LHCameraActivateProperty.m in Sources */,
 				6E89FDA8192E0C510040478F /* LHNode.mm in Sources */,
@@ -1092,6 +1099,7 @@
 				6EBEA3A91959C0F600726044 /* b2DynamicTree.cpp in Sources */,
 				6EBEA3AD1959C0F600726044 /* b2EdgeShape.cpp in Sources */,
 				6EBEA3231959BFD000726044 /* LHSceneCameraDemo.mm in Sources */,
+				6ED5C505195D610D00B6DF33 /* LHSceneParallaxDemo.mm in Sources */,
 				6EBEA3C41959C0F600726044 /* b2DistanceJoint.cpp in Sources */,
 				6EBEA3AB1959C0F600726044 /* b2ChainShape.cpp in Sources */,
 				6EBEA3241959BFD000726044 /* LHSceneSubclass.m in Sources */,
