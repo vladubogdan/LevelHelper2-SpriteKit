@@ -12,6 +12,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
 #import "SKNode+Transforms.h"
+#import "LHGameWorldNode.h"
 
 
 @implementation LHPrismaticJointNode
@@ -21,10 +22,16 @@
     
     SKShapeNode* debugShapeNode;
     
-    CGPoint axis;
-    BOOL _enableLimits;
+    BOOL _enableLimit;
+    BOOL _enableMotor;
+    
     float _lowerTranslation;
     float _upperTranslation;
+    
+    float _maxMotorForce;
+    float _motorSpeed;
+    
+    CGPoint _axis;
 }
 
 +(instancetype)prismaticJointNodeWithDictionary:(NSDictionary*)dict
@@ -58,12 +65,17 @@
                                                                                          node:self];
 
 
-        axis = [dict pointForKey:@"axis"];
-        axis.y = -axis.y;
+        _enableLimit = [dict boolForKey:@"enablePrismaticLimit"];
+        _enableMotor = [dict boolForKey:@"enablePrismaticMotor"];
         
-        _enableLimits = [dict boolForKey:@"enablePrismaticLimit"];
         _lowerTranslation = [dict floatForKey:@"lowerTranslation"];
-        _upperTranslation = [dict floatForKey:@"upperTranslation"];;        
+        _upperTranslation = [dict floatForKey:@"upperTranslation"];
+        
+        _maxMotorForce = [dict floatForKey:@"maxMotorForce"];
+        _motorSpeed = [dict floatForKey:@"prismaticMotorSpeed"];
+        
+        _axis = [dict pointForKey:@"axis"];
+        _axis.y = -_axis.y;
     }
     return self;
 }
@@ -73,20 +85,26 @@
     [super removeFromParent];
 }
 
--(CGPoint)axis{
-    return axis;
+-(BOOL)enableLimit{
+    return _enableLimit;
 }
-
--(BOOL)shouldEnableLimits{
-    return _enableLimits;
+-(BOOL)enableMotor{
+    return _enableMotor;
 }
-
--(CGFloat)lowerDistanceLimit{
+-(CGFloat)lowerTranslation{
     return _lowerTranslation;
 }
-
--(CGFloat)upperDistanceLimit{
+-(CGFloat)upperTranslation{
     return _upperTranslation;
+}
+-(CGFloat)maxMotorForce{
+    return _maxMotorForce;
+}
+-(CGFloat)motorSpeed{
+    return _motorSpeed;
+}
+-(CGPoint)axis{
+    return _axis;
 }
 
 #pragma mark - LHJointNodeProtocol Required
@@ -101,13 +119,13 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     if(debugShapeNode){
         CGPoint a = [self anchorA];
         
-        CGPoint axisInfoA = CGPointMake(a.x+ (-10*axis.x), a.y + (-10*axis.y));
-        CGPoint axisInfoB = CGPointMake(a.x+ ( 10*axis.x), a.y + ( 10*axis.y));
+        CGPoint axisInfoA = CGPointMake(a.x+ (-10*_axis.x), a.y + (-10*_axis.y));
+        CGPoint axisInfoB = CGPointMake(a.x+ ( 10*_axis.x), a.y + ( 10*_axis.y));
         
-        if([self shouldEnableLimits])
+        if([self enableLimit])
         {
-            axisInfoA = CGPointMake(a.x+ ( [self lowerDistanceLimit]*axis.x), a.y + ( [self lowerDistanceLimit]*axis.y));
-            axisInfoB = CGPointMake(a.x+ ( [self upperDistanceLimit]*axis.x), a.y + ( [self upperDistanceLimit]*axis.y));
+            axisInfoA = CGPointMake(a.x+ ( [self lowerTranslation]*_axis.x), a.y + ( [self lowerTranslation]*_axis.y));
+            axisInfoB = CGPointMake(a.x+ ( [self upperTranslation]*_axis.x), a.y + ( [self upperTranslation]*_axis.y));
         }
 
         CGMutablePathRef debugLinePath = CGPathCreateMutable();
@@ -132,6 +150,40 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
 #if LH_USE_BOX2D
         
+        LHScene* scene = (LHScene*)[self scene];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
+        
+        b2World* world = [pNode box2dWorld];
+        
+        if(world == nil)return NO;
+        
+        b2Body* bodyA = [nodeA box2dBody];
+        b2Body* bodyB = [nodeB box2dBody];
+        
+        if(!bodyA || !bodyB)return NO;
+        
+        b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
+        
+        b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
+        
+        b2PrismaticJointDef jointDef;
+        
+        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(_axis.x,_axis.y));
+        
+        jointDef.enableLimit = _enableLimit;
+        jointDef.enableMotor = _enableMotor;
+        jointDef.maxMotorForce = _maxMotorForce;
+        jointDef.motorSpeed = LH_DEGREES_TO_RADIANS(_motorSpeed);
+        jointDef.upperTranslation = [scene metersFromValue:_upperTranslation];
+        jointDef.lowerTranslation = [scene metersFromValue:_lowerTranslation];
+        
+        
+        jointDef.collideConnected = [_jointProtocolImp collideConnected];
+        
+        b2PrismaticJoint* joint = (b2PrismaticJoint*)world->CreateJoint(&jointDef);
+        
+        [_jointProtocolImp setJoint:joint];
+        
 #else//spritekit
         
         if(nodeA.physicsBody && nodeB.physicsBody)
@@ -141,9 +193,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
             SKPhysicsJointSliding* joint = [SKPhysicsJointSliding jointWithBodyA:nodeA.physicsBody
                                                                            bodyB:nodeB.physicsBody
                                                                           anchor:anchorA
-                                                                            axis:CGVectorMake(axis.x, axis.y)];
+                                                                            axis:CGVectorMake(_axis.x, _axis.y)];
             
-            joint.shouldEnableLimits = _enableLimits;
+            joint.shouldEnableLimits = _enableLimit;
             joint.lowerDistanceLimit = _lowerTranslation;
             joint.upperDistanceLimit = _upperTranslation;
             

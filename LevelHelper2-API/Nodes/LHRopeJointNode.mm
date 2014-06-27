@@ -75,9 +75,6 @@ double fcat(double x, void *data)
     
     SKShapeNode* debugShapeNode;
     
-//    CGPoint relativePosA;
-//    CGPoint relativePosB;
-    
     int     segments;
     float   thickness;
     
@@ -88,12 +85,21 @@ double fcat(double x, void *data)
     float   _length;
     
     SKShapeNode* ropeShape;//nil if drawing is not enabled
-    
     SKShapeNode* debugCutAShapeNode;
-    SKPhysicsJointLimit* cutJointA;
     SKShapeNode* debugCutBShapeNode;
-    SKPhysicsJointLimit* cutJointB;
     
+#if LH_USE_BOX2D
+    b2RopeJoint* cutJointA;
+    b2RopeJoint* cutJointB;
+    b2Body* cutBodyA;
+    b2Body* cutBodyB;
+    
+#else//spritekit
+    __unsafe_unretained SKPhysicsJointLimit* cutJointA;
+    __unsafe_unretained SKPhysicsJointLimit* cutJointB;
+#endif
+    
+
     SKShapeNode* cutShapeNodeA;//nil if drawing is not enabled
     SKShapeNode* cutShapeNodeB;//nil if drawing is not enabled
     
@@ -173,7 +179,44 @@ double fcat(double x, void *data)
 }
 
 -(void)removeFromParent{
-    
+
+#if LH_USE_BOX2D
+    LHScene* scene = (LHScene*)[self scene];
+    if(scene)
+    {
+        LHGameWorldNode* pNode = [scene gameWorldNode];
+        if(pNode)
+        {
+            //if we dont have the scene it means the scene was changed so the box2d world will be deleted, deleting the joints also - safe
+            //if we do have the scene it means the node was deleted so we need to delete the joint manually
+            //if we dont have the scene it means
+            b2World* world = [pNode box2dWorld];
+            if(world){
+                if(cutJointA)
+                {
+                    world->DestroyJoint(cutJointA);
+                    cutJointA = NULL;
+                }
+                if(cutBodyA){
+                    world->DestroyBody(cutBodyA);
+                    cutBodyA = NULL;
+                }
+                
+                if(cutJointB)
+                {
+                    world->DestroyJoint(cutJointB);
+                    cutJointB = NULL;
+                }
+                if(cutBodyB){
+                    world->DestroyBody(cutBodyB);
+                    cutBodyB = NULL;
+                }
+            }
+        }
+    }
+
+#else //spritekit
+            
     if(cutJointA){
         [[self scene].physicsWorld removeJoint:cutJointA];
         cutJointA = nil;
@@ -183,6 +226,9 @@ double fcat(double x, void *data)
         [[self scene].physicsWorld removeJoint:cutJointB];
         cutJointB = nil;
     }
+            
+#endif
+    
 
     LH_SAFE_RELEASE(_jointProtocolImp);
 
@@ -278,8 +324,6 @@ double fcat(double x, void *data)
                                                 segments:segments
                                                  flipped:&flipped];
     
-    NSLog(@"ROPE CUT FROM %@ TO %@", NSStringFromCGPoint(ptA), NSStringFromCGPoint(ptB));
-    
     NSValue* prevValue = nil;
     float cutLength = 0.0f;
     for(NSValue* val in rPoints)
@@ -292,10 +336,7 @@ double fcat(double x, void *data)
             
             cutLength += LHDistanceBetweenPoints(ropeA, ropeB);
             
-            NSLog(@"ROPE A %@ ROPE B %@", NSStringFromCGPoint(ropeA), NSStringFromCGPoint(ropeB));
-            
             NSValue* interVal = LHLinesIntersection(ropeA, ropeB, ptA, ptB);
-            
             
             if(interVal){
                 CGPoint interPt = CGPointFromValue(interVal);
@@ -342,6 +383,67 @@ double fcat(double x, void *data)
                         ropeShape = nil;
                     }
                     
+#if LH_USE_BOX2D
+                    {
+                    CGPoint relativePosA = [_jointProtocolImp localAnchorA];
+                    
+                    LHScene* scene = [self scene];
+                    LHGameWorldNode* pNode = [scene gameWorldNode];
+                    b2World* world = [pNode box2dWorld];
+                    b2Vec2 bodyPos = [scene metersFromPoint:interPt];
+                    
+                    b2BodyDef bodyDef;
+                    bodyDef.type = b2_dynamicBody;
+                    bodyDef.position = bodyPos;
+                    cutBodyA = world->CreateBody(&bodyDef);
+                    cutBodyA->SetFixedRotation(NO);
+                    cutBodyA->SetGravityScale(1);
+                    cutBodyA->SetSleepingAllowed(YES);
+                    
+                    b2FixtureDef fixture;
+                    fixture.density = 1.0f;
+                    fixture.friction = 0.2;
+                    fixture.restitution = 0.2;
+                    fixture.isSensor = YES;
+                    
+                    float radius = [scene metersFromValue:thickness];
+                    
+                    b2Shape* shape = new b2CircleShape();
+                    ((b2CircleShape*)shape)->m_radius = radius*0.5;
+                    
+                    if(shape){
+                        fixture.shape = shape;
+                        cutBodyA->CreateFixture(&fixture);
+                    }
+                    
+                    if(shape){
+                        delete shape;
+                        shape = NULL;
+                    }
+                    
+                    //create joint
+                    b2RopeJointDef jointDef;
+                    
+                    jointDef.localAnchorA = [scene metersFromPoint:relativePosA];// jointALocalAnchor;
+                    jointDef.localAnchorB = b2Vec2(0,0);
+                    
+                    jointDef.bodyA = [nodeA box2dBody];// bodyA;
+                    jointDef.bodyB = cutBodyA;
+                    
+                    if(!flipped){
+                        cutJointALength = cutLength;
+                    }
+                    else{
+                        cutJointALength = length - cutLength;
+                    }
+                    jointDef.maxLength = [scene metersFromValue:cutJointALength];
+                    jointDef.collideConnected = [_jointProtocolImp collideConnected];
+                    
+                    cutJointA = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                    }
+                    
+                    
+#else //spritekit
                     //create a new body at cut position and a joint between bodyA and this new body
                     {
                         SKNode* cutBodyA = nil;
@@ -401,6 +503,69 @@ double fcat(double x, void *data)
 #endif
                         
                     }
+#endif
+                    
+#if LH_USE_BOX2D
+                    {
+                    CGPoint relativePosB = [_jointProtocolImp localAnchorB];
+                        
+                    LHScene* scene = [self scene];
+                    LHGameWorldNode* pNode = [scene gameWorldNode];
+                    b2World* world = [pNode box2dWorld];
+                    
+                    b2Vec2 bodyPos = [scene metersFromPoint:interPt];
+                    b2BodyDef bodyDef;
+                    bodyDef.type = b2_dynamicBody;
+                    bodyDef.position = bodyPos;
+                    cutBodyB = world->CreateBody(&bodyDef);
+                    cutBodyB->SetFixedRotation(NO);
+                    cutBodyB->SetGravityScale(1);
+                    cutBodyB->SetSleepingAllowed(YES);
+                    
+                    b2FixtureDef fixture;
+                    fixture.density = 1.0f;
+                    fixture.friction = 0.2;
+                    fixture.restitution = 0.2;
+                    fixture.isSensor = YES;
+                    
+                    float radius = [scene metersFromValue:thickness];
+                    
+                    b2Shape* shape = new b2CircleShape();
+                    ((b2CircleShape*)shape)->m_radius = radius*0.5;
+                    
+                    if(shape){
+                        fixture.shape = shape;
+                        cutBodyB->CreateFixture(&fixture);
+                    }
+                    
+                    if(shape){
+                        delete shape;
+                        shape = NULL;
+                    }
+                    
+                    //create joint
+                    b2RopeJointDef jointDef;
+                    
+                    jointDef.localAnchorA = b2Vec2(0,0);
+                    jointDef.localAnchorB = [scene metersFromPoint:relativePosB];
+                    
+                    jointDef.bodyA = cutBodyB;
+                    jointDef.bodyB = [nodeB box2dBody];
+                    
+                    if(!flipped){
+                        cutJointBLength = length - cutLength;
+                    }
+                    else{
+                        cutJointBLength = cutLength;
+                    }
+                    jointDef.maxLength = [scene metersFromValue:cutJointBLength];
+                    
+                    jointDef.collideConnected = [_jointProtocolImp collideConnected];
+                    
+                    cutJointB = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                    }
+                    
+#else //spritekit
                     
                     //create a new body at cut position and a joint between bodyB and this new body
                     {
@@ -457,6 +622,8 @@ double fcat(double x, void *data)
                         }
 #endif
                     }
+#endif
+                    
                 }
                 
                 return;
@@ -697,6 +864,10 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         return;
     }
     
+#if LH_USE_BOX2D
+    
+#else
+    
     if(debugShapeNode && [_jointProtocolImp joint]){
         CGMutablePathRef debugLinePath = CGPathCreateMutable();
         CGPathMoveToPoint(debugLinePath, nil, anchorA.x, anchorA.y);
@@ -726,6 +897,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         debugCutBShapeNode.path = debugLineBPath;
         CGPathRelease(debugLineBPath);
     }
+#endif
+    
 #endif
     
     if(ropeShape){
@@ -772,19 +945,35 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
     }
     
-    if(cutShapeNodeA && cutJointA){
-
+    if(cutShapeNodeA)
+    {
+#if LH_USE_BOX2D
+        b2Vec2 pos = cutBodyA->GetPosition();
+        LHScene* scene = [self scene];
+        
+        CGPoint B = [scene pointFromMeters:pos];
+#else
+        CGPoint B = cutJointA.bodyB.node.position;
+#endif
         [self drawRopeShape:cutShapeNodeA
                     anchorA:anchorA
-                    anchorB:cutJointA.bodyB.node.position
+                    anchorB:B
                      length:cutJointALength
                    segments:segments];
     }
-    
-    if(cutShapeNodeB && cutJointB){
 
+
+    if(cutShapeNodeB){
+#if LH_USE_BOX2D
+        b2Vec2 pos = cutBodyB->GetPosition();
+        LHScene* scene = [self scene];
+        CGPoint A = [scene pointFromMeters:pos];
+#else
+        CGPoint A = cutJointB.bodyA.node.position;
+#endif
+        
         [self drawRopeShape:cutShapeNodeB
-                    anchorA:cutJointB.bodyA.node.position
+                    anchorA:A
                     anchorB:anchorB
                      length:cutJointBLength
                    segments:segments];
@@ -806,7 +995,36 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     if(nodeA && nodeB)
     {
 #if LH_USE_BOX2D
-            
+        
+        LHScene* scene = [self scene];
+        LHGameWorldNode* pNode = [scene gameWorldNode];
+        b2World* world = [pNode box2dWorld];
+        if(world == nil)return NO;
+        
+        b2Body* bodyA = [nodeA box2dBody];
+        b2Body* bodyB = [nodeB box2dBody];
+        
+        if(!bodyA || !bodyB)return NO;
+        
+        b2Vec2 posA = [scene metersFromPoint:relativePosA];
+        b2Vec2 posB = [scene metersFromPoint:relativePosB];
+        
+        b2RopeJointDef jointDef;
+        
+        jointDef.localAnchorA = posA;
+        jointDef.localAnchorB = posB;
+        
+        jointDef.bodyA = bodyA;
+        jointDef.bodyB = bodyB;
+        
+        jointDef.maxLength = [scene metersFromValue:_length];
+        
+        jointDef.collideConnected = [_jointProtocolImp collideConnected];
+        
+        b2RopeJoint* joint = (b2RopeJoint*)world->CreateJoint(&jointDef);
+        
+        [_jointProtocolImp setJoint:joint];
+        
 #else //spritekit
       
         if(!nodeA.physicsBody || !nodeB.physicsBody)
@@ -815,13 +1033,13 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         LHScene* scene = [self scene];
         
         
-        CGPoint worldPointA = [nodeA convertToWorldSpaceAR:relativePosA];
-        CGPoint worldPointB = [nodeB convertToWorldSpaceAR:relativePosB];
+        CGPoint anchorA = [nodeA convertToWorldSpace:relativePosA];
+        CGPoint anchorB = [nodeB convertToWorldSpace:relativePosB];
         
         SKPhysicsJointLimit* joint = [SKPhysicsJointLimit jointWithBodyA:nodeA.physicsBody
                                                                    bodyB:nodeB.physicsBody
-                                                                 anchorA:worldPointA
-                                                                 anchorB:worldPointB];
+                                                                 anchorA:anchorA
+                                                                 anchorB:anchorB];
         
         [joint setMaxLength:_length];
         [scene.physicsWorld addJoint:joint];
@@ -832,8 +1050,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         debugShapeNode = [SKShapeNode node];
         
         CGMutablePathRef debugLinePath = CGPathCreateMutable();
-        CGPathMoveToPoint(debugLinePath, nil, worldPointA.x, worldPointA.y);
-        CGPathAddLineToPoint(debugLinePath, nil, worldPointB.x, worldPointB.y);
+        CGPathMoveToPoint(debugLinePath, nil, anchorA.x, anchorA.y);
+        CGPathAddLineToPoint(debugLinePath, nil, anchorB.x, anchorB.y);
         
         debugShapeNode.path = debugLinePath;
         

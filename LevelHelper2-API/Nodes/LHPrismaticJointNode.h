@@ -22,24 +22,39 @@
 
 
 /**
- Returns the axis vector that defines the direction that the joint is allowed to slide.
+ Returns whether or not the limit is enabled on the joint.
+ */
+-(BOOL)enableLimit;
+
+/**
+ Returns whether or not the motor is enabled on the joint.
+ */
+-(BOOL)enableMotor;
+
+/**
+ Returns the lower translation limit.
+ */
+-(CGFloat)lowerTranslation;
+
+/**
+ Returns the upper translation limit.
+ */
+-(CGFloat)upperTranslation;
+
+/**
+ Returns the maximum motor force.
+ */
+-(CGFloat)maxMotorForce;
+
+/**
+ Returns the motor speed in degrees.
+ */
+-(CGFloat)motorSpeed;
+
+/**
+ Returns the axis on which this joint is moving.
  */
 -(CGPoint)axis;
-
-/**
- A Boolean value that indicates whether the sliding joint is restricted so that the objects may only slide a finite distance from the initial anchor point.
- */
--(BOOL)shouldEnableLimits;
-
-/**
-The smallest distance allowed for the sliding joint.
- */
--(CGFloat)lowerDistanceLimit;
-
-/**
- The largest distance allowed for the sliding joint.
- */
--(CGFloat)upperDistanceLimit;
 
 /**
  Removes the joint from the world.

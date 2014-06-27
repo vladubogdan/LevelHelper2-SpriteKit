@@ -12,6 +12,8 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
 #import "SKNode+Transforms.h"
+#import "LHGameWorldNode.h"
+
 
 @implementation LHRevoluteJointNode
 {
@@ -20,10 +22,14 @@
     
     SKShapeNode* debugShapeNode;
     
-    BOOL    _enableLimit;
-    float   _lowerAngleRadians;
-    float   _upperAngleRadians;
-    BOOL    _maxMotorTorque;
+    BOOL _enableLimit;
+    BOOL _enableMotor;
+    
+    float _lowerAngle;
+    float _upperAngle;
+    
+    float _maxMotorTorque;
+    float _motorSpeed;
 }
 
 -(void)dealloc{
@@ -57,9 +63,13 @@
                                                                                          node:self];
         
         _enableLimit = [dict boolForKey:@"enableLimit"];
-        _lowerAngleRadians = LH_DEGREES_TO_RADIANS([dict boolForKey:@"lowerAngle"] - 90);
-        _upperAngleRadians = LH_DEGREES_TO_RADIANS([dict boolForKey:@"upperAngle"] - 90);
-        _maxMotorTorque = [dict boolForKey:@"maxMotorTorque"];
+        _enableMotor = [dict boolForKey:@"enableMotor"];
+        
+        _lowerAngle = LH_DEGREES_TO_RADIANS([dict floatForKey:@"lowerAngle"] - 90.0f);
+        _upperAngle = LH_DEGREES_TO_RADIANS([dict floatForKey:@"upperAngle"] - 90.0f);
+        
+        _maxMotorTorque = [dict floatForKey:@"maxMotorTorque"];
+        _motorSpeed = [dict floatForKey:@"motorSpeed"];
         
     }
     return self;
@@ -70,14 +80,23 @@
     [super removeFromParent];
 }
 
--(BOOL)hasLimit{
+-(BOOL)enableLimit{
     return _enableLimit;
 }
--(float)lowerAngleLimit{
-    return LH_RADIANS_TO_DEGREES(_lowerAngleRadians);
+-(BOOL)enableMotor{
+    return _enableMotor;
 }
--(float)upperAngleLimit{
-    return LH_RADIANS_TO_DEGREES(_upperAngleRadians);
+-(CGFloat)lowerAngle{
+    return _lowerAngle;
+}
+-(CGFloat)upperAngle{
+    return _upperAngle;
+}
+-(CGFloat)maxMotorTorque{
+    return _maxMotorTorque;
+}
+-(CGFloat)motorSpeed{
+    return _motorSpeed;
 }
 
 #pragma mark - LHJointNodeProtocol Required
@@ -108,6 +127,41 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     if(nodeA && nodeB)
     {
 #if LH_USE_BOX2D
+        LHScene* scene = (LHScene*)[self scene];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
+        
+        b2World* world = [pNode box2dWorld];
+        
+        if(world == nil)return NO;
+        
+        b2Body* bodyA = [nodeA box2dBody];
+        b2Body* bodyB = [nodeB box2dBody];
+        
+        if(!bodyA || !bodyB)return NO;
+        
+        b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
+        b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
+        
+        b2RevoluteJointDef jointDef;
+        
+        jointDef.Initialize(bodyA,
+                            bodyB,
+                            posA);
+        
+        jointDef.collideConnected = [_jointProtocolImp collideConnected];
+        
+        jointDef.enableLimit = _enableLimit;
+        jointDef.enableMotor = _enableMotor;
+        
+        jointDef.lowerAngle = _lowerAngle;
+        jointDef.upperAngle = _upperAngle;
+        
+        jointDef.maxMotorTorque = _maxMotorTorque;
+        jointDef.motorSpeed = _motorSpeed;
+        
+        b2RevoluteJoint* joint = (b2RevoluteJoint*)world->CreateJoint(&jointDef);
+        
+        [_jointProtocolImp setJoint:joint];
         
 #else//spritekit
         
@@ -122,8 +176,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                                                               anchor:anchorA];
         
         joint.shouldEnableLimits= _enableLimit;
-        joint.lowerAngleLimit   = _lowerAngleRadians;
-        joint.upperAngleLimit   = _upperAngleRadians;
+        joint.lowerAngleLimit   = _lowerAngle;
+        joint.upperAngleLimit   = _upperAngle;
+        
         joint.frictionTorque    = _maxMotorTorque;
         
         [scene.physicsWorld addJoint:joint];

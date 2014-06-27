@@ -258,8 +258,12 @@ void LHBox2dDebug::DrawSegment(const b2Vec2& p1, const b2Vec2& p2, const b2Color
     
     SKShapeNode* shape = [SKShapeNode node];
     [shape setFillColor:borderColor];
-    [shape setLineWidth:0.1];
+    [shape setLineWidth:1];
     [shape setStrokeColor:borderColor];
+    shape.path = linePath;
+    
+    CGPathRelease(linePath);
+    
     
     [drawNode addChild:shape];
 }

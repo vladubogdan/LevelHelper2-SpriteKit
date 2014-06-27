@@ -11,6 +11,8 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
+#import "LHGameWorldNode.h"
+
 #import "SKNode+Transforms.h"
 
 @implementation LHDistanceJointNode
@@ -112,6 +114,40 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
 #if LH_USE_BOX2D
         
+        LHScene* scene = (LHScene*)[self scene];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
+        
+        b2World* world = [pNode box2dWorld];
+        
+        if(world == nil)return NO;
+        
+        b2Body* bodyA = [nodeA box2dBody];
+        b2Body* bodyB = [nodeB box2dBody];
+        
+        if(!bodyA || !bodyB)return NO;
+        
+        b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
+        b2Vec2 relativeB = [scene metersFromPoint:relativePosB];
+        
+        b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
+        b2Vec2 posB = bodyB->GetWorldPoint(relativeB);
+        
+        b2DistanceJointDef jointDef;
+        
+        jointDef.Initialize(bodyA,
+                            bodyB,
+                            posA,
+                            posB);
+        
+        jointDef.collideConnected = [_jointProtocolImp collideConnected];
+        
+        jointDef.frequencyHz  = _frequency;
+        jointDef.dampingRatio = _dampingRatio;
+        
+        b2DistanceJoint* joint = (b2DistanceJoint*)world->CreateJoint(&jointDef);
+        
+        [_jointProtocolImp setJoint:joint];
+        
 #else//spritekit
         
         if(nodeA.physicsBody && nodeB.physicsBody)
@@ -137,9 +173,10 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                 debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
                 [self addChild:debugShapeNode];
     #endif
-
-#endif
+            
         }
+#endif
+
         
         return true;
     }

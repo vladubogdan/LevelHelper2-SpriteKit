@@ -21,23 +21,34 @@
                                         parent:(SKNode*)prnt;
 
 /**
- Returns whether or not this joint has a rotation limit.
+ Returns whether or not the limit is enabled on the joint.
  */
--(BOOL)hasLimit;
+-(BOOL)enableLimit;
 
 /**
- Returns the smallest angle allowed for the joint to rotate. In degrees.
+ Returns whether or not the motor is enabled on the joint.
  */
--(float)lowerAngleLimit;
+-(BOOL)enableMotor;
 
 /**
- Returns the largest angle allowed for the joint to rotate. In degrees.
+ Returns the lower angle limit
  */
--(float)upperAngleLimit;
+-(CGFloat)lowerAngle;
 
 /**
- Removes the joint from the world.
+ Returns the upper angle limit
  */
--(void)removeFromParent;
+-(CGFloat)upperAngle;
+
+
+/**
+ Returns the maximum motor torque
+ */
+-(CGFloat)maxMotorTorque;
+
+/**
+ Returns the motor speed.
+ */
+-(CGFloat)motorSpeed;
 
 @end

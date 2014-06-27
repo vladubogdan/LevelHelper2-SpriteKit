@@ -12,6 +12,8 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
 #import "SKNode+Transforms.h"
+#import "LHGameWorldNode.h"
+
 
 @implementation LHWeldJointNode
 {
@@ -19,6 +21,9 @@
     LHJointNodeProtocolImp*     _jointProtocolImp;
     
     SKShapeNode* debugShapeNode;
+    
+    float _frequency;
+    float _damping;
 }
 
 -(void)dealloc{
@@ -48,6 +53,9 @@
         
         _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
                                                                                          node:self];
+        
+        _frequency  = [dict floatForKey:@"frequency"];
+        _damping    = [dict floatForKey:@"dampingRatio"];
     }
     return self;
 }
@@ -56,6 +64,15 @@
 -(void)removeFromParent{
     LH_SAFE_RELEASE(_jointProtocolImp);
     [super removeFromParent];
+}
+
+#pragma mark - Properties
+-(CGFloat)frequency{
+    return _frequency;
+}
+
+-(CGFloat)dampingRatio{
+    return _damping;
 }
 
 #pragma mark - LHJointNodeProtocol Required
@@ -88,6 +105,35 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     {
         
 #if LH_USE_BOX2D
+        
+        LHScene* scene = (LHScene*)[self scene];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
+        
+        b2World* world = [pNode box2dWorld];
+        
+        if(world == nil)return NO;
+        
+        b2Body* bodyA = [nodeA box2dBody];
+        b2Body* bodyB = [nodeB box2dBody];
+        
+        if(!bodyA || !bodyB)return NO;
+        
+        b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
+        b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
+        
+        b2WeldJointDef jointDef;
+        
+        jointDef.Initialize(bodyA, bodyB, posA);
+        
+        jointDef.frequencyHz = _frequency;
+        jointDef.dampingRatio = _damping;
+        
+        
+        jointDef.collideConnected = [_jointProtocolImp collideConnected];
+        
+        b2WeldJoint* joint = (b2WeldJoint*)world->CreateJoint(&jointDef);
+        
+        [_jointProtocolImp setJoint:joint];
         
 #else//spritekit
         

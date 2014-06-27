@@ -23,6 +23,17 @@
 
 
 /**
+ Returns the frequency used by this joint.
+ */
+-(CGFloat)frequency;
+
+/**
+ Returns the damping ratio used by this joint.
+ */
+-(CGFloat)dampingRatio;
+
+
+/**
  Removes the joint from the world.
  */
 -(void)removeFromParent;
