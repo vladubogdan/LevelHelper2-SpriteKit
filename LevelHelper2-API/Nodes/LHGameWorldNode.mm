@@ -433,6 +433,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
+        self.zPosition = 0;
         self.position = CGPointZero;
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];        
@@ -506,8 +507,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
 const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-const int32 VELOCITY_ITERATIONS = 16;
-const int32 POSITION_ITERATIONS = 16;
+const int32 VELOCITY_ITERATIONS = 8;
+const int32 POSITION_ITERATIONS = 8;
 const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 
 -(void)step:(float)dt

@@ -12,6 +12,10 @@
 #import "LHScene.h"
 #import "LHConfig.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+@end
+
 @implementation LHAsset
 {
     CGSize _size;

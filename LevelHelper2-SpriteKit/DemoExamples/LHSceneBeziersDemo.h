@@ -1,5 +1,5 @@
 //
-//  MyScene.h
+//  LHSceneBeziersDemo.h
 //  SpriteKitAPI-DEVELOPMENT
 //
 
@@ -9,6 +9,6 @@
 #import "LevelHelper2API.h"
 #import "LHSceneDemo.h"
 
-@interface LHSceneCameraFollowNodeDemo : LHSceneDemo
+@interface LHSceneBeziersDemo : LHSceneDemo
 
 @end

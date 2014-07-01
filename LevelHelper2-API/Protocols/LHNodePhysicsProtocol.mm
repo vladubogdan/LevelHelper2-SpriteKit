@@ -28,9 +28,12 @@
 
 #else
 
-//#import "CCPhysics+ObjectiveChipmunk.h"
-
 #endif //LH_USE_BOX2D
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
+@end
+
 
 @interface LHShape (PHYSICS_TRIANGLES)
 -(NSMutableArray*)shapeTriangles;

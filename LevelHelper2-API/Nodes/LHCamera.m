@@ -14,6 +14,11 @@
 #import "LHAnimation.h"
 #import "LHGameWorldNode.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
+@end
+
 @implementation LHCamera
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
@@ -99,6 +104,8 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
         
+        
+         [super setPosition:[self transformToRestrictivePosition:self.position]];
     }
     
     return self;
@@ -142,7 +149,12 @@
 }
 
 -(void)setPosition:(CGPoint)position{
-    [super setPosition:[self transformToRestrictivePosition:position]];
+    if(_active){
+        [super setPosition:[self transformToRestrictivePosition:position]];
+    }
+    else{
+        [super setPosition:position];
+    }
 }
 
 -(void)setSceneView{

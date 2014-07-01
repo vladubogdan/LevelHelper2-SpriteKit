@@ -143,8 +143,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
             CGPoint anchorA = [nodeA convertToWorldSpace:relativePosA];
             
             SKPhysicsJointFixed* joint = [SKPhysicsJointFixed jointWithBodyA:nodeA.physicsBody
-                                                  bodyB:nodeB.physicsBody
-                                                 anchor:anchorA];
+                                                                       bodyB:nodeB.physicsBody
+                                                                      anchor:anchorA];
             [[self scene].physicsWorld addJoint:joint];
             [_jointProtocolImp setJoint:joint];
             

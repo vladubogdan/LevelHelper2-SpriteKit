@@ -21,52 +21,10 @@
     {
         /*INIT YOUR CONTENT HERE*/
         
-
-        CGSize size = [[self scene] size];
-        
-        SKLabelNode* label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
-        [label setName:@"InfoLabel"];
-        [label setFontSize:16];
-        [label setZPosition:60];
-        [label setText:@"Rope Joint Test"];
-        [label setFontColor:[SKColor magentaColor]];
-        [label setColor:[SKColor whiteColor]];
-        [label setPosition:CGPointMake(size.width*0.5, size.height-50)];
-        [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
-        [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
-        [[self uiNode] addChild:label];
-        
-        float txtOffset = 70;
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"This test demonstrate rope joints."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-        
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"Draw a line over the joint on the right side to cut it. Click to flip gravity."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"The rope on the left side is setup so that you cannot cut it."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"You can also control the z order of the joint drawing. Left rop joint is draw on top."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-        }
-        
+        CGSize size = [self size];
+        [LHSceneDemo createMultilineLabelAtPosition:CGPointMake(size.width*0.5, size.height - 150)
+                                      asChildOfNode:[self uiNode]
+                                           withText:@"ROPE JOINTS DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\n\nThe right most joint can be cut - Make a line to cut it."];
     }
     
     return self;

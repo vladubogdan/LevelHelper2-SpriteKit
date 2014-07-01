@@ -15,4 +15,8 @@
 -(void)nextDemo;
 -(void)previousDemo;
 
++(void)createMultilineLabelAtPosition:(CGPoint)labelPosition
+                        asChildOfNode:(SKNode*)parent
+                             withText:(NSString*)text;
+
 @end

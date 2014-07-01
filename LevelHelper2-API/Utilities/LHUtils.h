@@ -155,31 +155,13 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
     return(vPoint);
 }
 
-
-@class LHRopeJointNode;
-@class LHWater;
-@class LHGravityArea;
-@class LHParallax;
-@class LHCamera;
-@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
-
-+(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
-                         parent:(SKNode*)prnt;
-
-
--(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
-
--(NSString*)currentDeviceSuffix;
--(float)currentDeviceRatio;
-
--(CGSize)designResolutionSize;
--(CGPoint)designOffset;
-
--(NSString*)relativePath;
-
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
-
-@end
+NS_INLINE BOOL LHRectOverlapsRect(CGRect r1,  CGRect r2)
+{
+    return !(r1.origin.x + r1.size.width < r2.origin.x ||
+             r1.origin.y + r1.size.height < r2.origin.y ||
+             r1.origin.x > r2.origin.x + r2.size.width ||
+             r1.origin.y > r2.origin.y + r2.size.height);
+}
 
 
 @class SKNode;

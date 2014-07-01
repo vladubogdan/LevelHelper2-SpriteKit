@@ -53,7 +53,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>thickness</key>
-					<real>9.6999998092651367</real>
+					<real>15</real>
 					<key>useTexture</key>
 					<false/>
 					<key>uuid</key>
@@ -359,7 +359,7 @@
 					<key>collideConnected</key>
 					<false/>
 					<key>colorOverlay</key>
-					<string>{{0.62356674671173096, 0.26961600780487061}, {0.092645496129989624, 1}}</string>
+					<string>{{0.11638426035642624, 0.54883646965026855}, {0.47869956493377686, 1}}</string>
 					<key>fadeOutDelay</key>
 					<real>1</real>
 					<key>length</key>
@@ -389,7 +389,7 @@
 						<string>DEFAULT</string>
 					</array>
 					<key>thickness</key>
-					<real>9.6999998092651367</real>
+					<real>8</real>
 					<key>useTexture</key>
 					<false/>
 					<key>uuid</key>
@@ -435,7 +435,7 @@
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>USER INTERFACE</string>
+			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
 			<string>LHUINode</string>
 			<key>parentUUID</key>
@@ -453,7 +453,7 @@
 			<key>uuid</key>
 			<string>51C1E53E-FDAE-492E-991C-551E175F9DA9</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -507,7 +507,7 @@
 		<string>{{0, 0}, {1, 1}}</string>
 	</dict>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>

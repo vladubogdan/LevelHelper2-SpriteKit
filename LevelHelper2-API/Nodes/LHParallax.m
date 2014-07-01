@@ -13,6 +13,11 @@
 #import "LHParallaxLayer.h"
 #import "LHAnimation.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
+@end
+
 @implementation LHParallax
 {
     CGPoint lastPosition;
@@ -57,31 +62,31 @@
         
         
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
+//        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
+//        CGPoint pos = [LHUtils positionForNode:self
+//                                      fromUnit:unitPos];
+//        
+//        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
+//        if(devPositions)
+//        {
+//            
+//#if TARGET_OS_IPHONE
+//            NSString* unitPosStr = [LHUtils devicePosition:devPositions
+//                                                   forSize:LH_SCREEN_RESOLUTION];
+//#else
+//            LHScene* scene = (LHScene*)[self scene];
+//            NSString* unitPosStr = [LHUtils devicePosition:devPositions
+//                                                   forSize:scene.size];
+//#endif
+//            
+//            if(unitPosStr){
+//                CGPoint unitPos = LHPointFromString(unitPosStr);
+//                pos = [LHUtils positionForNode:self
+//                                      fromUnit:unitPos];
+//            }
+//        }
+//        
+//        [self setPosition:pos];
         
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
@@ -125,6 +130,11 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     SKNode* followed = [self followedNode];
     if(followed){
         parallaxPos = [followed position];
+        
+        CGSize winSize = [(LHScene*)[self scene] designResolutionSize];
+        
+        parallaxPos.x = parallaxPos.x - winSize.width*0.5;
+        parallaxPos.y = parallaxPos.y - winSize.height*0.5;
     }
     
     if(CGPointEqualToPoint(lastPosition, CGPointZero)){
@@ -142,8 +152,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
             {
                 CGPoint curPos = [nd position];
                 
-                CGPoint pt = CGPointMake(curPos.x + deltaPos.x*(-nd.xRatio),
-                                         curPos.y + deltaPos.y*(-nd.yRatio));
+                CGPoint pt = CGPointMake(curPos.x - deltaPos.x*nd.xRatio,
+                                         curPos.y - deltaPos.y*nd.yRatio);
                 [nd setPosition:pt];
             }
         }

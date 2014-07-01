@@ -30,6 +30,7 @@
 @class LHScene;
 @class LHGameWorldNode;
 @class LHUINode;
+@class LHBackUINode;
 
 
 @interface LHScene : SKScene <LHNodeProtocol>
@@ -69,9 +70,20 @@
 -(LHGameWorldNode*)gameWorldNode;
 
 /**
- Returns the UI node. All children of this node will NOT move with the camera.
+ Returns the Front UI node. All children of this node will NOT move with the camera.
  */
 -(LHUINode*)uiNode;
+
+/**
+ Returns the Back UI node. All children of this node will NOT move with the camera.
+ */
+
+-(LHBackUINode*)backUINode;
+
+/**
+ Returns the relative plist path that was used to load this scene information.
+ */
+-(NSString*)relativePath;
 
 
 

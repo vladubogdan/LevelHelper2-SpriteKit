@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>2</integer>
+	<key>backgroundColor</key>
+	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.5, 0.5}</string>
+					<key>imageFileName</key>
+					<string>sky.png</string>
+					<key>name</key>
+					<string>sky</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_BACK_USER_INTERFACE_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_INDIVIDUAL_IMAGES_EXAMPLE/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1, 1}</string>
+					<key>size</key>
+					<string>{960, 640}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>A5E57249-6509-4274-A0B4-9EFCCF28481C</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>A0404089-B03F-49BE-A83A-B6139A9FD34E</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>185125BF-F040-4AD9-BE44-EDDF9A1509AE</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5087999701499939, 0.69511276483535767}</string>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>anim</string>
+							<key>properties</key>
+							<dict>
+								<key>Rotation</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>rotations</key>
+											<dict/>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>19</integer>
+											<key>rotations</key>
+											<dict>
+												<key>15B0FBE4-8209-4EC5-9670-7DDB5CCA56A6</key>
+												<real>2.3728139400482178</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>39</integer>
+											<key>rotations</key>
+											<dict>
+												<key>15B0FBE4-8209-4EC5-9670-7DDB5CCA56A6</key>
+												<real>356.87173461914062</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>59</integer>
+											<key>rotations</key>
+											<dict/>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHRotationProperty</string>
+								</dict>
+								<key>Sprite Frame</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0001</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>4</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0002</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>9</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0003</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0003</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>19</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0005</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>24</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0006</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0007</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>34</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0008</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>39</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0009</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>44</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0010</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>49</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0011</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>54</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0012</string>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>59</integer>
+											<key>spriteSheetName</key>
+											<string>para_man0001</string>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHSpriteFrameProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>60</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.48859730072823976, 0.51078821328410418}</string>
+					<key>imageFileName</key>
+					<string>spritesheetAnim.png</string>
+					<key>name</key>
+					<string>para_man0001</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{2, 2}</string>
+					<key>size</key>
+					<string>{119, 155}</string>
+					<key>spriteName</key>
+					<string>para_man0001</string>
+					<key>spriteUUID</key>
+					<string>C9052053-4B7A-4A0A-A6FC-CDD4742B8AC6</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>15B0FBE4-8209-4EC5-9670-7DDB5CCA56A6</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>A0404089-B03F-49BE-A83A-B6139A9FD34E</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>787DCC52-B2E1-457E-B4CC-A0EEBDE5B336</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>FRONT USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>A0404089-B03F-49BE-A83A-B6139A9FD34E</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>8AF08CBD-7DA4-49AA-A591-B8278BEDD897</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960, 640}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960, 640}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136, 640}</string>
+			<key>suffix</key>
+			<string>-568</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024, 768}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048, 1536}</string>
+			<key>suffix</key>
+			<string>-ipad@2x</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0, -1}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>sceneFormat</key>
+	<real>1</real>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>A0404089-B03F-49BE-A83A-B6139A9FD34E</string>
+</dict>
+</plist>

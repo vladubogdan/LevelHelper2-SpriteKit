@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.04056277871131897, 0}, {0.040784932672977448, 1}}</string>
+			<string>{{0.03942064568400383, 0}, {0.04074874147772789, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.025950860232114792, 0}, {0.30018883943557739, 1}}</string>
+			<string>{{0.039407543838024139, 0}, {0.041003052145242691, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.025950860232114792, 0}, {0.30018883943557739, 1}}</string>
+			<string>{{0.039407543838024139, 0}, {0.041003052145242691, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -78,7 +78,22 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>beziersDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>cameraAnimationTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>cameraDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>cameraFollowDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -88,7 +103,22 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>characterAnimation.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>collisionFilteringTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>gravityAreasDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>introductionScene.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -99,6 +129,11 @@
 					<true/>
 				</dict>
 				<key>otherJointsTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>parallaxDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -114,6 +149,21 @@
 					<true/>
 				</dict>
 				<key>ropeJointTest.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>shapesDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>spriteSheetAnimationDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>waterArea.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
