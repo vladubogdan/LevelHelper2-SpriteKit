@@ -401,13 +401,11 @@
     }
     
     if(_body){
-        if(_body){
-            CGAffineTransform trans = b2BodyToParentTransform(_node, self);
-            CGPoint localPos = CGPointApplyAffineTransform([_node anchorPointInPoints], trans);
-            
-            [((LHNode*)_node) updatePosition:localPos];
-            [((LHNode*)_node) updateZRotation:_body->GetAngle()];
-        }
+        CGAffineTransform trans = b2BodyToParentTransform(_node, self);
+        CGPoint localPos = CGPointApplyAffineTransform([_node anchorPointInPoints], trans);
+        
+        [((LHNode*)_node) updatePosition:localPos];
+        [((LHNode*)_node) updateZRotation:_body->GetAngle()];
     }
 }
 
