@@ -933,6 +933,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         {
             _node.physicsBody.categoryBitMask = [fixInfo intForKey:@"category"];
             _node.physicsBody.collisionBitMask = [fixInfo intForKey:@"mask"];
+            _node.physicsBody.contactTestBitMask = [fixInfo intForKey:@"category"];
             
             _node.physicsBody.density = [fixInfo floatForKey:@"density"];
             _node.physicsBody.friction = [fixInfo floatForKey:@"friction"];

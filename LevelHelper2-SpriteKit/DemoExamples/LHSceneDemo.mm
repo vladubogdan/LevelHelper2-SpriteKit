@@ -24,6 +24,7 @@
 #import "LHSceneSpriteSheetAnimationDemo.h"
 #import "LHSceneShapesDemo.h"
 #import "LHSceneBeziersDemo.h"
+#import "LHSceneCollisionDemo.h"
 
 
 @implementation LHSceneDemo
@@ -63,6 +64,7 @@
         [availableScenes addObject:[LHSceneSpriteSheetAnimationDemo class]];
         [availableScenes addObject:[LHSceneShapesDemo class]];
         [availableScenes addObject:[LHSceneBeziersDemo class]];
+        [availableScenes addObject:[LHSceneCollisionDemo class]];
         
 //        [availableScenes addObject:[LHSceneOtherJointsDemo class]];
 //        [availableScenes addObject:[LHScenePhysicsBodiesDemo class]];

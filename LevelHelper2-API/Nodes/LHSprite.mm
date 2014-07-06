@@ -93,7 +93,6 @@
         [self setYScale:scl.y];
         
         
-
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
