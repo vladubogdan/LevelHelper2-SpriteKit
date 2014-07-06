@@ -13,6 +13,12 @@
 #import "LHAnimation.h"
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
+#import "LHBackUINode.h"
+
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(CGPoint)designOffset;
+-(CGSize)designResolutionSize;
+@end
 
 @implementation LHUtils
 
@@ -49,21 +55,15 @@
     
     CGPoint designPos = CGPointZero;
     
-
-//    designPos = CGPointMake(designSize.width*unitPos.x,
-//                            designSize.height*(-unitPos.y));
-
-//    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode])
-//    {
-//        designPos.x += offset.x;
-//        designPos.y -= offset.y;
-//    }
-
     designPos = CGPointMake(designSize.width*unitPos.x,
                             designSize.height*(-unitPos.y));
     
     
-    if([node parent] == nil || [node parent] == scene || [node parent] == [scene gameWorldNode] || [node parent] == [scene uiNode])
+    if([node parent] == nil ||
+       [node parent] == scene ||
+       [node parent] == [scene gameWorldNode] ||
+       [node parent] == [scene uiNode] ||
+       [node parent] == [scene backUINode])
     {
         designPos.y = designSize.height + designPos.y;
         

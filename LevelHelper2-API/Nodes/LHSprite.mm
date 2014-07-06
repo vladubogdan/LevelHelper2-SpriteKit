@@ -13,6 +13,10 @@
 #import "LHAnimation.h"
 #import "LHConfig.h"
 
+@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
+-(NSString*)currentDeviceSuffix;
+@end
+
 @implementation LHSprite
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;

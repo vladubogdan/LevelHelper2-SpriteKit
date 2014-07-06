@@ -9,13 +9,22 @@
 #import "LHSceneDemo.h"
 #import "LHUtils.h"
 
+#import "LHSceneIntroduction.h"
 #import "LHSceneCameraDemo.h"
-#import "LHSceneCameraFollowNodeDemo.h"
+#import "LHSceneCameraFollowDemo.h"
 #import "LHScenePhysicsBodiesDemo.h"
 #import "LHSceneCollisionFilteringDemo.h"
-#import "LHSceneAnimationsDemo.h"
+#import "LHSceneCharacterAnimationDemo.h"
 #import "LHSceneParallaxDemo.h"
 #import "LHSceneAssetsDemo.h"
+#import "LHSceneRopeJointDemo.h"
+#import "LHSceneOtherJointsDemo.h"
+#import "LHSceneWaterAreaDemo.h"
+#import "LHSceneGravityAreas.h"
+#import "LHSceneSpriteSheetAnimationDemo.h"
+#import "LHSceneShapesDemo.h"
+#import "LHSceneBeziersDemo.h"
+
 
 @implementation LHSceneDemo
 {
@@ -40,19 +49,42 @@
         /*INIT YOUR CONTENT HERE*/
         
         availableScenes = [[NSMutableArray alloc] init];
-        
+
+        [availableScenes addObject:[LHSceneIntroduction class]];
         [availableScenes addObject:[LHSceneCameraDemo class]];
-        [availableScenes addObject:[LHSceneCameraFollowNodeDemo class]];
-        [availableScenes addObject:[LHSceneAnimationsDemo class]];
+        [availableScenes addObject:[LHSceneCameraFollowDemo class]];
         [availableScenes addObject:[LHSceneParallaxDemo class]];
+        [availableScenes addObject:[LHSceneCharacterAnimationDemo class]];
         [availableScenes addObject:[LHSceneAssetsDemo class]];
-        [availableScenes addObject:[LHScenePhysicsBodiesDemo class]];
+        [availableScenes addObject:[LHSceneRopeJointDemo class]];
+        [availableScenes addObject:[LHSceneWaterAreaDemo class]];
+        [availableScenes addObject:[LHSceneGravityAreas class]];
         [availableScenes addObject:[LHSceneCollisionFilteringDemo class]];
+        [availableScenes addObject:[LHSceneSpriteSheetAnimationDemo class]];
+        [availableScenes addObject:[LHSceneShapesDemo class]];
+        [availableScenes addObject:[LHSceneBeziersDemo class]];
         
+//        [availableScenes addObject:[LHSceneOtherJointsDemo class]];
+//        [availableScenes addObject:[LHScenePhysicsBodiesDemo class]];
+
         
         
         {
             CGSize size = [self size];
+         
+            {
+                NSInteger demoIdx = [availableScenes indexOfObject:[self class]];
+                
+                SKLabelNode* ttf = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+                [ttf setText:[NSString stringWithFormat:@"Demo %d/%d",(int)demoIdx+1, (int)[availableScenes count]]];
+                [ttf setFontSize:20];
+                [ttf setZPosition:60];
+                [ttf setFontColor:[SKColor blackColor]];
+                [ttf setPosition:CGPointMake(20, size.height-50)];
+                [ttf setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
+                [ttf setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeLeft];
+                [[self uiNode]  addChild:ttf];
+            }
             
             {
                 SKLabelNode* label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
@@ -60,8 +92,8 @@
                 [label setFontSize:32];
                 [label setZPosition:60];
                 [label setText:@"Previous"];
-                [label setFontColor:[SKColor greenColor]];
-                [label setPosition:CGPointMake(80, 150)];
+                [label setFontColor:[SKColor magentaColor]];
+                [label setPosition:CGPointMake(size.width*0.5 - 200, size.height-50)];
                 [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
                 [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
                 [[self uiNode] addChild:label];
@@ -73,8 +105,8 @@
                 [label setFontSize:32];
                 [label setZPosition:60];
                 [label setText:@"Restart"];
-                [label setFontColor:[SKColor greenColor]];
-                [label setPosition:CGPointMake(size.width*0.5, 150)];
+                [label setFontColor:[SKColor magentaColor]];
+                [label setPosition:CGPointMake(size.width*0.5, size.height-50)];
                 [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
                 [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
                 [[self uiNode] addChild:label];
@@ -86,8 +118,8 @@
                 [label setFontSize:32];
                 [label setZPosition:60];
                 [label setText:@"Next"];
-                [label setFontColor:[SKColor greenColor]];
-                [label setPosition:CGPointMake(size.width- 50, 150)];
+                [label setFontColor:[SKColor magentaColor]];
+                [label setPosition:CGPointMake(size.width*0.5 + 200, size.height-50)];
                 [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
                 [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
                 [[self uiNode] addChild:label];
@@ -116,6 +148,10 @@
     if ([node.name isEqualToString:@"NextLabel"]) {
         [self nextDemo];
     }
+    
+    
+    //dont forget to call super
+    [super touchesBegan:touches withEvent:event];
 }
 
 -(void)previousDemo{
@@ -127,7 +163,7 @@
         {
             int nextIdx = idx-1;
             if(nextIdx < 0){
-                nextIdx = [availableScenes count] -1;
+                nextIdx = (int)[availableScenes count] -1;
             }
             
             if(0 <= nextIdx && nextIdx < [availableScenes count] )
@@ -163,6 +199,39 @@
             }
         }
         ++idx;
+    }
+}
+
++(void)createMultilineLabelAtPosition:(CGPoint)labelPosition
+                        asChildOfNode:(SKNode*)parent
+                             withText:(NSString*)text
+{
+    NSArray* lines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    
+    if([lines count] == 0)return;
+    
+    
+    SKLabelNode* label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+    [label setName:@"InfoLabel"];
+    [label setFontSize:16];
+    [label setZPosition:60];
+    [label setText:[lines objectAtIndex:0]];
+    [label setFontColor:[SKColor blackColor]];
+    [label setColor:[SKColor whiteColor]];
+    [label setPosition:labelPosition];
+    [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
+    [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
+    [parent addChild:label];
+    
+    float yPos = label.position.y-40;
+    
+    for(int i = 1; i < [lines count]; ++i)
+    {
+        SKLabelNode* labelLine = [label copy];
+        [labelLine setText:[lines objectAtIndex:i]];
+        [labelLine setPosition:CGPointMake(labelPosition.x, yPos)];
+        [parent addChild:labelLine];
+        yPos-=20;
     }
 }
 

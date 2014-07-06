@@ -8,26 +8,18 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
+#import "LHJointNodeProtocol.h"
+
 /**
  LHRopeJointNode class is used to load a LevelHelper rope joint.
  The equivalent in SpriteKit is a SKPhysicsJointLimit joint object, which is a wrapper over Box2d b2RopeJoint.
  */
 
-@interface LHRopeJointNode : SKNode <LHNodeProtocol>
+@interface LHRopeJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
 +(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
                                     parent:(SKNode*)prnt;
 
-
-/**
- Returns the point where the joint is connected by the first body. In scene coordinates.
- */
--(CGPoint)anchorA;
-
-/**
- Returns the point where the joint is connected by the second body. In scene coordinates.
- */
--(CGPoint)anchorB;
 
 /**
  Returns whether or not this rope joint can be cut.

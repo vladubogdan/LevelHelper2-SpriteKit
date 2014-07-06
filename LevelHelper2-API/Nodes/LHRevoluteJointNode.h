@@ -8,44 +8,47 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "LHNodeProtocol.h"
+#import "LHJointNodeProtocol.h"
+
 /**
  LHRevoluteJointNode class is used to load a LevelHelper revolute joint.
  The equivalent in SpriteKit is a SKPhysicsJointPin joint object, which is a wrapper over Box2d b2RevoluteJoint.
  */
 
-@interface LHRevoluteJointNode : SKNode <LHNodeProtocol>
+@interface LHRevoluteJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
 +(instancetype)revoluteJointNodeWithDictionary:(NSDictionary*)dict
                                         parent:(SKNode*)prnt;
 
 /**
- Returns the point where the two bodies are connected together. In scene coordinates.
+ Returns whether or not the limit is enabled on the joint.
  */
--(CGPoint)anchorA;
+-(BOOL)enableLimit;
 
 /**
- Returns the actual SpriteKit joint that connects the two bodies together.
+ Returns whether or not the motor is enabled on the joint.
  */
--(SKPhysicsJointPin*)joint;
+-(BOOL)enableMotor;
 
 /**
- Returns whether or not this joint has a rotation limit.
+ Returns the lower angle limit
  */
--(BOOL)hasLimit;
+-(CGFloat)lowerAngle;
 
 /**
- Returns the smallest angle allowed for the joint to rotate. In degrees.
+ Returns the upper angle limit
  */
--(float)lowerAngleLimit;
+-(CGFloat)upperAngle;
+
 
 /**
- Returns the largest angle allowed for the joint to rotate. In degrees.
+ Returns the maximum motor torque
  */
--(float)upperAngleLimit;
+-(CGFloat)maxMotorTorque;
 
 /**
- Removes the joint from the world.
+ Returns the motor speed.
  */
--(void)removeFromParent;
+-(CGFloat)motorSpeed;
 
 @end

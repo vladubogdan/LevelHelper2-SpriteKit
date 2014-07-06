@@ -11,6 +11,8 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
+#import "LHGameWorldNode.h"
+
 
 @implementation LHGravityArea
 {
@@ -48,34 +50,6 @@
                                                                                     node:self];
         
         
-        
-        
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
-        
         CGPoint scl = [dict pointForKey:@"scale"];
         _size = [dict sizeForKey:@"size"];
         _size.width *= scl.x;
@@ -88,18 +62,23 @@
 #if LH_DEBUG
             SKShapeNode* debugShapeNode = [SKShapeNode node];
             if(_radial){
-                debugShapeNode.path = CGPathCreateWithEllipseInRect(CGRectMake(-_size.width*0.5,
-                                                                               -_size.width*0.5,
-                                                                               _size.width,
-                                                                               _size.width),
-                                                                    nil);
+                CGPathRef pathRef = CGPathCreateWithEllipseInRect(CGRectMake(-_size.width*0.5,
+                                                                             -_size.width*0.5,
+                                                                             _size.width,
+                                                                             _size.width),
+                                                                  nil);
+                
+                debugShapeNode.path = pathRef;
+                CGPathRelease(pathRef);
             }
             else{
-                debugShapeNode.path = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
-                                                                      -_size.height*0.5,
-                                                                      _size.width,
-                                                                      _size.height),
-                                                                        nil);
+                CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
+                                                                    -_size.height*0.5,
+                                                                    _size.width,
+                                                                    _size.height),
+                                                         nil);
+                debugShapeNode.path = pathRef;
+                CGPathRelease(pathRef);
             }
             debugShapeNode.strokeColor = [SKColor greenColor];
             [self addChild:debugShapeNode];
@@ -139,6 +118,62 @@
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 
+#if LH_USE_BOX2D
+-(void)update:(NSTimeInterval)currentTime delta:(float)dt
+{
+    LHScene* scene = (LHScene*)[self scene];
+    LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
+    
+    b2World* world =  [pNode box2dWorld];
+    
+    if(!world)return;
+    
+    CGSize size = [self size];
+    float ptm = [scene ptm];
+    CGRect rect = [self rect];
+    
+    for (b2Body* b = world->GetBodyList(); b; b = b->GetNext())
+	{
+        if([self isRadial])
+        {
+            CGPoint globalPos = [[self scene] convertPoint:CGPointZero
+                                                      fromNode:self];
+            
+            
+            b2Vec2 b2TouchPosition = [scene metersFromPoint:globalPos];
+            b2Vec2 b2BodyPosition = b2Vec2(b->GetPosition().x, b->GetPosition().y);
+            
+            float maxDistance = [scene metersFromValue:(size.width*0.5)];
+            float maxForce = -[self force]/ptm;
+            
+            CGFloat distance = b2Distance(b2BodyPosition, b2TouchPosition);
+            if(distance < maxDistance)
+            {
+                CGFloat strength = (maxDistance - distance) / maxDistance;
+                float force = strength * maxForce;
+                CGFloat angle = atan2f(b2BodyPosition.y - b2TouchPosition.y, b2BodyPosition.x - b2TouchPosition.x);
+                
+                b->ApplyLinearImpulse(b2Vec2(cosf(angle) * force, sinf(angle) * force), b->GetPosition());
+            }
+        }
+        else{
+            b2Vec2 b2BodyPosition = b2Vec2(b->GetPosition().x, b->GetPosition().y);
+            
+            CGPoint pos = [scene pointFromMeters:b2BodyPosition];
+            
+            if(CGRectContainsPoint(rect, pos))
+            {
+                float force = [self force]/ptm;
+                
+                float directionX = [self direction].x;
+                float directionY = [self direction].y;
+                b->ApplyLinearImpulse(b2Vec2(directionX * force, directionY * force), b->GetPosition());
+            }
+        }
+	}
+}
+#else //spritekit
+
 -(void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
     SKPhysicsWorld* world = [[self scene] physicsWorld];
@@ -177,7 +212,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
          }
      }];
 }
-
+#endif
 
 
 @end

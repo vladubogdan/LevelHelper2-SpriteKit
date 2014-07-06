@@ -21,46 +21,10 @@
     {
         /*INIT YOUR CONTENT HERE*/
         
-
-        CGSize size = [[self scene] size];
-        
-        SKLabelNode* label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
-        [label setName:@"InfoLabel"];
-        [label setFontSize:16];
-        [label setZPosition:60];
-        [label setText:@"ASSETS Test"];
-        [label setFontColor:[SKColor magentaColor]];
-        [label setColor:[SKColor whiteColor]];
-        [label setPosition:CGPointMake(size.width*0.5, size.height-50)];
-        [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
-        [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
-        [[self uiNode] addChild:label];
-        
-        float txtOffset = 70;
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"This test demonstrate assets."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-        
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"Click to create a new officer (asset) of a random scale."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"Assets are special objects that when edited they will change to the new edited state everywhere they are used in your project."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-        
+        CGSize size = [self size];
+        [LHSceneDemo createMultilineLabelAtPosition:CGPointMake(size.width*0.5, size.height - 150)
+                                      asChildOfNode:[self uiNode]
+                                           withText:@"ASSETS DEMO\nAssets are special objects that when edited they will change\nto the new edited state everywhere they are used in your project.\n\nClick to create a new officer (asset) of a random scale and rotation."];
     }
     
     return self;

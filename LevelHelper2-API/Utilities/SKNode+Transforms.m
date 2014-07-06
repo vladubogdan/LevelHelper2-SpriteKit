@@ -107,7 +107,7 @@
     CGRect sprRect = [self rect];
     
     CGPoint pt = CGPointMake(nodePoint.x + (sprRect.origin.x + [self anchor].x * sprRect.size.width),
-                             nodePoint.y + (sprRect.origin.y + [self anchor].y * sprRect.size.height));
+                             - nodePoint.y + (sprRect.origin.y + [self anchor].y * sprRect.size.height));
     
     return [self convertToWorldSpace:pt];
 }

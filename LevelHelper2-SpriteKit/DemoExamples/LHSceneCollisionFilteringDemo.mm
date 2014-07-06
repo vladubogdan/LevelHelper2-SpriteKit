@@ -33,49 +33,12 @@
     {
         /*INIT YOUR CONTENT HERE*/
         
-        {
-            CGSize size = [[self scene] size];
-            
-            SKLabelNode* label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
-            [label setName:@"InfoLabel"];
-            [label setFontSize:16];
-            [label setZPosition:60];
-            [label setText:@"Collision Filtering Test"];
-            [label setFontColor:[SKColor redColor]];
-            [label setColor:[SKColor whiteColor]];
-            [label setPosition:CGPointMake(size.width*0.5, size.height-50)];
-            [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
-            [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
-            [[self uiNode] addChild:label];
-            
-            {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"PINK collides only with BLUE"];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-70)];
-            [[self uiNode] addChild:labelLine];
-            }
-            
-            {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"BLUE collides only with PINK and GREEN"];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-90)];
-            [[self uiNode] addChild:labelLine];
-            }
-            
-            {
-                SKLabelNode* labelLine = [label copy];
-                [labelLine setText:@"GREEN collides with BLUE AND GREEN"];
-                [labelLine setPosition:CGPointMake(size.width*0.5, size.height-110)];
-                [[self uiNode] addChild:labelLine];
-            }
-            
-            {
-                SKLabelNode* labelLine = [label copy];
-                [labelLine setText:@"Click and drag to move the robots."];
-                [labelLine setPosition:CGPointMake(size.width*0.5, size.height-130)];
-                [[self uiNode] addChild:labelLine];
-            }
-        }
+        CGSize size = [self size];
+        
+        [LHSceneDemo createMultilineLabelAtPosition:CGPointMake(size.width*0.5, size.height - 150)
+                                      asChildOfNode:[self uiNode]
+                                           withText:@"Collision Filtering Demo\nPINK collides only with BLUE\nBLUE collides only with PINK and GREEN\nGREEN collides with BLUE AND GREEN\n\nClick and drag to move the robots."];
+
     }
     
     return self;

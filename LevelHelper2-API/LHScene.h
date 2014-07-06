@@ -30,6 +30,7 @@
 @class LHScene;
 @class LHGameWorldNode;
 @class LHUINode;
+@class LHBackUINode;
 
 
 @interface LHScene : SKScene <LHNodeProtocol>
@@ -69,20 +70,21 @@
 -(LHGameWorldNode*)gameWorldNode;
 
 /**
- Returns the UI node. All children of this node will NOT move with the camera.
+ Returns the Front UI node. All children of this node will NOT move with the camera.
  */
 -(LHUINode*)uiNode;
 
+/**
+ Returns the Back UI node. All children of this node will NOT move with the camera.
+ */
+
+-(LHBackUINode*)backUINode;
 
 /**
- Returns the informations that can be used to create an asset dynamically by specifying the file name.
- The asset file must be in the same folder as the scene file.
- If the asset file is not found it will return nil.
- 
- @param assetFileName The name of the asset that. Do not provide an extension. E.g If file is named "myAsset.lhasset.plist" then yous should pass @"myAsset.lhasset"
- @return A dictionary containing the asset information or nil.
+ Returns the relative plist path that was used to load this scene information.
  */
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
+-(NSString*)relativePath;
+
 
 
 #pragma mark - Box2d Support

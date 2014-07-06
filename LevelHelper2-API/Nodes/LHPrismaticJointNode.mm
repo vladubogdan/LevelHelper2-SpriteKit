@@ -11,27 +11,27 @@
 #import "LHScene.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHConfig.h"
+#import "SKNode+Transforms.h"
+#import "LHGameWorldNode.h"
+
 
 @implementation LHPrismaticJointNode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
-    
-    SKPhysicsJointSliding* joint;
+    LHJointNodeProtocolImp*     _jointProtocolImp;
     
     SKShapeNode* debugShapeNode;
     
-    CGPoint axis;
-    CGPoint relativePosA;
+    BOOL _enableLimit;
+    BOOL _enableMotor;
     
-    __weak SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeA;
-    __weak SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* nodeB;
-    
-    NSString* nodeAUUID;
-    NSString* nodeBUUID;
-    
-    BOOL _enableLimits;
     float _lowerTranslation;
     float _upperTranslation;
+    
+    float _maxMotorForce;
+    float _motorSpeed;
+    
+    CGPoint _axis;
 }
 
 +(instancetype)prismaticJointNodeWithDictionary:(NSDictionary*)dict
@@ -42,13 +42,11 @@
 }
 
 -(void)dealloc{
-    nodeA = nil;
-    nodeB = nil;
+
+    [_jointProtocolImp setJoint:nil];//at this point the joint is released
     
+    LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
-    
-    LH_SAFE_RELEASE(nodeAUUID);
-    LH_SAFE_RELEASE(nodeBUUID);
     
     LH_SUPER_DEALLOC();
 }
@@ -63,83 +61,71 @@
                                                                                     node:self];
         
         
-        nodeAUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteAUUID"]];
-        nodeBUUID = [[NSString alloc] initWithString:[dict objectForKey:@"spriteBUUID"]];
-        relativePosA = [dict pointForKey:@"relativePosA"];
-        axis = [dict pointForKey:@"axis"];
-        axis.y = -axis.y;
+        _jointProtocolImp= [[LHJointNodeProtocolImp alloc] initJointProtocolImpWithDictionary:dict
+                                                                                         node:self];
+
+
+        _enableLimit = [dict boolForKey:@"enablePrismaticLimit"];
+        _enableMotor = [dict boolForKey:@"enablePrismaticMotor"];
         
-        _enableLimits = [dict boolForKey:@"enablePrismaticLimit"];
         _lowerTranslation = [dict floatForKey:@"lowerTranslation"];
-        _upperTranslation = [dict floatForKey:@"upperTranslation"];;        
+        _upperTranslation = [dict floatForKey:@"upperTranslation"];
+        
+        _maxMotorForce = [dict floatForKey:@"maxMotorForce"];
+        _motorSpeed = [dict floatForKey:@"prismaticMotorSpeed"];
+        
+        _axis = [dict pointForKey:@"axis"];
+        _axis.y = -_axis.y;
     }
     return self;
 }
 
 -(void)removeFromParent{
-    if(joint){
-        [[self scene].physicsWorld removeJoint:joint];
-        joint = nil;
-    }
-    
+    LH_SAFE_RELEASE(_jointProtocolImp);
     [super removeFromParent];
 }
 
--(CGPoint)anchor{
-    CGAffineTransform transformA = CGAffineTransformRotate(CGAffineTransformIdentity,
-                                                           joint.bodyA.node.zRotation);
-    
-    CGPoint curAnchorA = CGPointApplyAffineTransform(CGPointMake(relativePosA.x, -relativePosA.y),
-                                                     transformA);
-    
-    return CGPointMake(nodeA.position.x + curAnchorA.x,
-                       nodeA.position.y + curAnchorA.y);
+-(BOOL)enableLimit{
+    return _enableLimit;
 }
-
-
--(SKPhysicsJointSliding*)joint{
-    return joint;
+-(BOOL)enableMotor{
+    return _enableMotor;
 }
-
+-(CGFloat)lowerTranslation{
+    return _lowerTranslation;
+}
+-(CGFloat)upperTranslation{
+    return _upperTranslation;
+}
+-(CGFloat)maxMotorForce{
+    return _maxMotorForce;
+}
+-(CGFloat)motorSpeed{
+    return _motorSpeed;
+}
 -(CGPoint)axis{
-    return axis;
+    return _axis;
 }
 
--(BOOL)shouldEnableLimits{
-    if(joint){
-        return joint.shouldEnableLimits;
-    }
-    return NO;
-}
+#pragma mark - LHJointNodeProtocol Required
+LH_JOINT_PROTOCOL_COMMON_METHODS_IMPLEMENTATION
+LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 
--(CGFloat)lowerDistanceLimit{
-    if(joint){
-        return joint.lowerDistanceLimit;
-    }
-    return 0;
-}
-
--(CGFloat)upperDistanceLimit{
-    if(joint){
-        return joint.upperDistanceLimit;
-    }
-    return 0;
-}
 
 #pragma mark LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt{
     if(debugShapeNode){
-        CGPoint a = [self anchor];
+        CGPoint a = [self anchorA];
         
-        CGPoint axisInfoA = CGPointMake(a.x+ (-10*axis.x), a.y + (-10*axis.y));
-        CGPoint axisInfoB = CGPointMake(a.x+ ( 10*axis.x), a.y + ( 10*axis.y));
+        CGPoint axisInfoA = CGPointMake(a.x+ (-10*_axis.x), a.y + (-10*_axis.y));
+        CGPoint axisInfoB = CGPointMake(a.x+ ( 10*_axis.x), a.y + ( 10*_axis.y));
         
-        if([self shouldEnableLimits])
+        if([self enableLimit])
         {
-            axisInfoA = CGPointMake(a.x+ ( [self lowerDistanceLimit]*axis.x), a.y + ( [self lowerDistanceLimit]*axis.y));
-            axisInfoB = CGPointMake(a.x+ ( [self upperDistanceLimit]*axis.x), a.y + ( [self upperDistanceLimit]*axis.y));
+            axisInfoA = CGPointMake(a.x+ ( [self lowerTranslation]*_axis.x), a.y + ( [self lowerTranslation]*_axis.y));
+            axisInfoB = CGPointMake(a.x+ ( [self upperTranslation]*_axis.x), a.y + ( [self upperTranslation]*_axis.y));
         }
 
         CGMutablePathRef debugLinePath = CGPathCreateMutable();
@@ -152,45 +138,80 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(BOOL)lateLoading{
     
-    if(!nodeAUUID || !nodeBUUID)
-        return true;
+    [_jointProtocolImp findConnectedNodes];
     
-    LHScene* scene = (LHScene*)[self scene];
+    SKNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
+    SKNode<LHNodePhysicsProtocol>* nodeB = [_jointProtocolImp nodeB];
     
-    if([[self parent] conformsToProtocol:@protocol(LHNodeProtocol)])
+    CGPoint relativePosA = [_jointProtocolImp localAnchorA];
+    
+    if(nodeA && nodeB)
     {
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[(id<LHNodeProtocol>)[self parent] childNodeWithUUID:nodeBUUID];
-    }
-    else{
-        nodeA = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeAUUID];
-        nodeB = (SKNode<LHNodeAnimationProtocol, LHNodeProtocol>*)[scene childNodeWithUUID:nodeBUUID];
-    }
-    
-    if(nodeA && nodeB && nodeA.physicsBody && nodeB.physicsBody)
-    {
-        CGPoint anchorA = CGPointMake(nodeA.position.x + relativePosA.x,
-                                      nodeA.position.y - relativePosA.y);
         
-        joint = [SKPhysicsJointSliding jointWithBodyA:nodeA.physicsBody
-                                                bodyB:nodeB.physicsBody
-                                               anchor:anchorA
-                                                 axis:CGVectorMake(axis.x, axis.y)];
+#if LH_USE_BOX2D
         
-        joint.shouldEnableLimits = _enableLimits;
-        joint.lowerDistanceLimit = _lowerTranslation;
-        joint.upperDistanceLimit = _upperTranslation;
+        LHScene* scene = (LHScene*)[self scene];
+        LHGameWorldNode* pNode = (LHGameWorldNode*)[scene gameWorldNode];
         
-        [scene.physicsWorld addJoint:joint];
+        b2World* world = [pNode box2dWorld];
         
-#if LH_DEBUG
-            debugShapeNode = [SKShapeNode node];
-            debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
-            [self addChild:debugShapeNode];
-#endif
+        if(world == nil)return NO;
+        
+        b2Body* bodyA = [nodeA box2dBody];
+        b2Body* bodyB = [nodeB box2dBody];
+        
+        if(!bodyA || !bodyB)return NO;
+        
+        b2Vec2 relativeA = [scene metersFromPoint:relativePosA];
+        
+        b2Vec2 posA = bodyA->GetWorldPoint(relativeA);
+        
+        b2PrismaticJointDef jointDef;
+        
+        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(_axis.x,_axis.y));
+        
+        jointDef.enableLimit = _enableLimit;
+        jointDef.enableMotor = _enableMotor;
+        jointDef.maxMotorForce = _maxMotorForce;
+        jointDef.motorSpeed = LH_DEGREES_TO_RADIANS(_motorSpeed);
+        jointDef.upperTranslation = [scene metersFromValue:_upperTranslation];
+        jointDef.lowerTranslation = [scene metersFromValue:_lowerTranslation];
+        
+        
+        jointDef.collideConnected = [_jointProtocolImp collideConnected];
+        
+        b2PrismaticJoint* joint = (b2PrismaticJoint*)world->CreateJoint(&jointDef);
+        
+        [_jointProtocolImp setJoint:joint];
+        
+#else//spritekit
+        
+        if(nodeA.physicsBody && nodeB.physicsBody)
+        {
+            CGPoint anchorA = [nodeA convertToWorldSpace:relativePosA];
+            
+            SKPhysicsJointSliding* joint = [SKPhysicsJointSliding jointWithBodyA:nodeA.physicsBody
+                                                                           bodyB:nodeB.physicsBody
+                                                                          anchor:anchorA
+                                                                            axis:CGVectorMake(_axis.x, _axis.y)];
+            
+            joint.shouldEnableLimits = _enableLimit;
+            joint.lowerDistanceLimit = _lowerTranslation;
+            joint.upperDistanceLimit = _upperTranslation;
+            
+            [[self scene].physicsWorld addJoint:joint];
+            [_jointProtocolImp setJoint:joint];
+            
+    #if LH_DEBUG
+                debugShapeNode = [SKShapeNode node];
+                debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
+                [self addChild:debugShapeNode];
+    #endif
 
-        LH_SAFE_RELEASE(nodeAUUID);
-        LH_SAFE_RELEASE(nodeBUUID);
+        }
+        
+#endif
+        
         return true;
     }
     return false;

@@ -1,5 +1,5 @@
 //
-//  MyScene.h
+//  LHSceneSpriteSheetAnimationDemo.h
 //  SpriteKitAPI-DEVELOPMENT
 //
 
@@ -9,6 +9,6 @@
 #import "LevelHelper2API.h"
 #import "LHSceneDemo.h"
 
-@interface LHSceneAnimationsDemo : LHSceneDemo
+@interface LHSceneSpriteSheetAnimationDemo : LHSceneDemo
 
 @end

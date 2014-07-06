@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 VLADU BOGDAN DANIEL PFA. All rights reserved.
 //
 
-#import "LHSceneAnimationsDemo.h"
+#import "LHSceneOtherJointsDemo.h"
 
-@implementation LHSceneAnimationsDemo
+@implementation LHSceneOtherJointsDemo
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/officerLevel.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/otherJointsTest.plist"];
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{
@@ -28,8 +28,8 @@
         [label setName:@"InfoLabel"];
         [label setFontSize:16];
         [label setZPosition:60];
-        [label setText:@"Animations Test"];
-        [label setFontColor:[SKColor whiteColor]];
+        [label setText:@"Other Joints Test"];
+        [label setFontColor:[SKColor magentaColor]];
         [label setColor:[SKColor whiteColor]];
         [label setPosition:CGPointMake(size.width*0.5, size.height-50)];
         [label setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
@@ -39,7 +39,7 @@
         float txtOffset = 70;
         {
             SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"This test demonstrate a character animation,"];
+            [labelLine setText:@"This test demonstrate other joint types."];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
             [[self uiNode] addChild:labelLine];
             txtOffset += 20;
@@ -47,31 +47,22 @@
         
         {
             SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"the POSITION of the character is PER DEVICE."];
+            [labelLine setText:@"Click to remove joints."];
             [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
             [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
         }
-
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"Change the device (iPhone/iPad) to see that the police officer is placed in a different position."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-
-        {
-            SKLabelNode* labelLine = [label copy];
-            [labelLine setText:@"The background is using a standalone image (not a sprite sheet) and its also different on each device."];
-            [labelLine setPosition:CGPointMake(size.width*0.5, size.height-txtOffset)];
-            [[self uiNode] addChild:labelLine];
-            txtOffset += 20;
-        }
-        
     }
     
     return self;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+
+    
+    
+    
+    //dont forget to call super
+    [super touchesBegan:touches withEvent:event];
+}
 @end

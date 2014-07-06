@@ -27,12 +27,15 @@
 #import "LHPrismaticJointNode.h"
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
+#import "LHBackUINode.h"
 
 
 @implementation LHScene
 {
     __unsafe_unretained LHGameWorldNode*    _gameWorldNode;
     __unsafe_unretained LHUINode*           _uiNode;
+    __unsafe_unretained LHBackUINode*       _backUINode;
+    
     
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
@@ -52,15 +55,11 @@
     
     NSString* relativePath;
     
-    SKNode* touchedNode;
-    BOOL touchedNodeWasDynamic;
-    
     CGPoint ropeJointsCutStartPt;
     
     NSMutableDictionary* _loadedAssetsInformations;
     
     CGRect gameWorldRect;
-    NSMutableArray* cameras;
     
     NSTimeInterval previousUpdateTime;
 }
@@ -68,14 +67,21 @@
 
 -(void)dealloc{
     
+    [self removeAllActions];
+    [self removeAllChildren];
+    
+    _gameWorldNode = nil;
+    _uiNode = nil;
+    _backUINode = nil;
+    
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
+    LH_SAFE_RELEASE(lateLoadingNodes);
     LH_SAFE_RELEASE(relativePath);
     LH_SAFE_RELEASE(loadedTextures);
     LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
     LH_SAFE_RELEASE(supportedDevices);
-    LH_SAFE_RELEASE(cameras);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
     LH_SUPER_DEALLOC();
@@ -275,8 +281,9 @@
             
 #if LH_DEBUG
             SKShapeNode* debugShapeNode = [SKShapeNode node];
-            debugShapeNode.path = CGPathCreateWithRect(skBRect,
-                                                       nil);
+            CGPathRef pathRef = CGPathCreateWithRect(skBRect, nil);
+            debugShapeNode.path = pathRef;
+            CGPathRelease(pathRef);
             debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:1 blue:0 alpha:1];
             [[self gameWorldNode] addChild:debugShapeNode];
 #endif
@@ -356,7 +363,9 @@
             gameWorldRectT.size.height += 4;
             
             SKShapeNode* debugShapeNode = [SKShapeNode node];
-            debugShapeNode.path = CGPathCreateWithRect(gameWorldRectT,nil);
+            CGPathRef pathRef = CGPathCreateWithRect(gameWorldRectT,nil);
+            debugShapeNode.path = pathRef;
+            CGPathRelease(pathRef);
             
             debugShapeNode.strokeColor = [SKColor colorWithRed:0 green:0 blue:1 alpha:1];
             [[self gameWorldNode] addChild:debugShapeNode];
@@ -411,41 +420,24 @@
     return gameWorldRect;
 }
 
--(NSDictionary*)assetInfoForFile:(NSString*)assetFileName{
-    if(!_loadedAssetsInformations){
-        _loadedAssetsInformations = [[NSMutableDictionary alloc] init];
-    }
-    NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
-    if(!info){
-        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
-                                                         ofType:@"plist"
-                                                    inDirectory:[self relativePath]];
-        if(path){
-            info = [NSDictionary dictionaryWithContentsOfFile:path];
-            if(info){
-                [_loadedAssetsInformations setObject:info forKey:assetFileName];
-            }
-        }
-    }
-    return info;
-}
-
 #if TARGET_OS_IPHONE
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
+        CGPoint location = [touch locationInNode:[self gameWorldNode]];
         ropeJointsCutStartPt = location;
     }
+    [super touchesBegan:touches withEvent:event];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [super touchesMoved:touches withEvent:event];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
     for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
+        CGPoint location = [touch locationInNode:[self gameWorldNode]];
         
         for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
             if([rope canBeCut]){
@@ -454,12 +446,14 @@
             }
         }
     }
+    [super touchesEnded:touches withEvent:event];
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
-
-    
+    [super touchesCancelled:touches withEvent:event];
 }
+
 #else
+
 -(void)mouseDown:(NSEvent *)theEvent{
     
     CGPoint location = [theEvent locationInNode:self];
@@ -550,6 +544,22 @@
     return _uiNode;
 }
 
+-(LHBackUINode*)backUINode{
+    if(!_backUINode){
+        for(SKNode* n in [self children]){
+            if([n isKindOfClass:[LHBackUINode class]]){
+                _backUINode = (LHBackUINode*)n;
+                break;
+            }
+        }
+    }
+    return _backUINode;
+}
+
+-(NSString*)relativePath{
+    return relativePath;
+}
+
 -(LHScene*)scene{
     return self;
 }
@@ -610,159 +620,31 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 }
 
 
-@end
 
 
+#pragma mark - PRIVATES
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#pragma mark - PRIVATE CATEGORY
-
-@implementation LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
-
-+(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
-                         parent:(SKNode*)prnt
-{
-    
-    NSString* nodeType = [childInfo objectForKey:@"nodeType"];
-    
-    LHScene* scene = nil;
-    if([prnt isKindOfClass:[LHScene class]]){
-        scene = (LHScene*)prnt;
+-(NSDictionary*)assetInfoForFile:(NSString*)assetFileName{
+    if(!_loadedAssetsInformations){
+        _loadedAssetsInformations = [[NSMutableDictionary alloc] init];
     }
-    else if([[prnt scene] isKindOfClass:[LHScene class]]){
-        scene = (LHScene*)[prnt scene];
-    }
-
-    if([nodeType isEqualToString:@"LHGameWorldNode"])
-    {
-        LHGameWorldNode* pNode = [LHGameWorldNode gameWorldNodeWithDictionary:childInfo
-                                                                       parent:prnt];
-        
-        //[pNode setDebugDraw:YES];
-        return pNode;
-    }
-    else if([nodeType isEqualToString:@"LHUINode"])
-    {
-        LHUINode* pNode = [LHUINode uiNodeWithDictionary:childInfo
-                                                  parent:prnt];
-        return pNode;
-    }
-    if([nodeType isEqualToString:@"LHSprite"])
-    {
-        LHSprite* spr = [LHSprite spriteNodeWithDictionary:childInfo
-                                                    parent:prnt];
-        return spr;
-    }
-    else if([nodeType isEqualToString:@"LHNode"])
-    {
-        LHNode* nd = [LHNode nodeWithDictionary:childInfo
-                                         parent:prnt];
-        return nd;
-    }
-    else if([nodeType isEqualToString:@"LHBezier"])
-    {
-        LHBezier* bez = [LHBezier bezierNodeWithDictionary:childInfo
-                                                    parent:prnt];
-        return bez;
-    }
-    else if([nodeType isEqualToString:@"LHTexturedShape"])
-    {
-        LHShape* sp = [LHShape shapeNodeWithDictionary:childInfo
-                                                parent:prnt];
-        return sp;
-    }
-    else if([nodeType isEqualToString:@"LHWaves"])
-    {
-        LHWater* wt = [LHWater waterNodeWithDictionary:childInfo
-                                                parent:prnt];
-        return wt;
-    }
-    else if([nodeType isEqualToString:@"LHAreaGravity"])
-    {
-        LHGravityArea* gv = [LHGravityArea gravityAreaWithDictionary:childInfo
-                                                              parent:prnt];
-        return gv;
-    }
-    else if([nodeType isEqualToString:@"LHParallax"])
-    {
-        LHParallax* pr = [LHParallax parallaxWithDictionary:childInfo
-                                                     parent:prnt];
-        return pr;
-    }
-    else if([nodeType isEqualToString:@"LHParallaxLayer"])
-    {
-        LHParallaxLayer* lh = [LHParallaxLayer parallaxLayerWithDictionary:childInfo
-                                                                    parent:prnt];
-        return lh;
-    }
-    else if([nodeType isEqualToString:@"LHAsset"])
-    {
-        LHAsset* as = [LHAsset assetWithDictionary:childInfo
-                                            parent:prnt];
-        return as;
-    }
-    else if([nodeType isEqualToString:@"LHCamera"])
-    {
-        LHCamera* cm = [LHCamera cameraWithDictionary:childInfo
-                                                scene:prnt];
-        return cm;
-    }
-    else if([nodeType isEqualToString:@"LHRopeJoint"])
-    {
-        if(scene)
-        {
-            LHRopeJointNode* jt = [LHRopeJointNode ropeJointNodeWithDictionary:childInfo
-                                                                        parent:prnt];
-            [scene addLateLoadingNode:jt];
+    NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
+    if(!info){
+        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
+                                                         ofType:@"plist"
+                                                    inDirectory:[self relativePath]];
+        if(path){
+            info = [NSDictionary dictionaryWithContentsOfFile:path];
+            if(info){
+                [_loadedAssetsInformations setObject:info forKey:assetFileName];
+            }
         }
     }
-    else if([nodeType isEqualToString:@"LHWeldJoint"])
-    {
-        LHWeldJointNode* jt = [LHWeldJointNode weldJointNodeWithDictionary:childInfo
-                                                                    parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-    else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
-        
-        LHRevoluteJointNode* jt = [LHRevoluteJointNode revoluteJointNodeWithDictionary:childInfo
-                                                                                parent:prnt];
-
-        [scene addLateLoadingNode:jt];
-    }
-    else if([nodeType isEqualToString:@"LHDistanceJoint"]){
-        
-        LHDistanceJointNode* jt = [LHDistanceJointNode distanceJointNodeWithDictionary:childInfo
-                                                                                parent:prnt];
-        [scene addLateLoadingNode:jt];
-
-    }
-    else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
-        
-        LHPrismaticJointNode* jt = [LHPrismaticJointNode prismaticJointNodeWithDictionary:childInfo
-                                                                                   parent:prnt];
-        [scene addLateLoadingNode:jt];
-    }
-
-
-    else{
-//        NSLog(@"UNKNOWN NODE TYPE %@", nodeType);
-    }
-    
-    return nil;
+    return info;
 }
+
+
+
 
 
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
@@ -774,10 +656,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         lateLoadingNodes = [[NSMutableArray alloc] init];
     }
     [lateLoadingNodes addObject:node];
-}
-
--(NSString*)relativePath{
-    return relativePath;
 }
 
 -(float)currentDeviceRatio{

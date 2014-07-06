@@ -28,9 +28,9 @@
 					<key>name</key>
 					<string>candy</string>
 					<key>spriteOffset</key>
-					<string>{1, 1}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{65, 61}</string>
+					<string>{53, 53}</string>
 					<key>textureRect</key>
 					<string>{{2, 2}, {53, 53}}</string>
 					<key>textureRotated</key>
@@ -42,11 +42,11 @@
 					<key>name</key>
 					<string>thumb_tack</string>
 					<key>spriteOffset</key>
-					<string>{-1.5, 1}</string>
+					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{62, 72}</string>
+					<string>{50, 67}</string>
 					<key>textureRect</key>
-					<string>{{59, 2}, {67, 50}}</string>
+					<string>{{63, 3}, {67, 50}}</string>
 					<key>textureRotated</key>
 					<true/>
 				</dict>

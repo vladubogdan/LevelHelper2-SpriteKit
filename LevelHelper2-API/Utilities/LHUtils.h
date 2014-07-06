@@ -15,15 +15,15 @@
 
 #define LH_SAFE_RELEASE(X) if(X){ X = nil;}
 #define LH_AUTORELEASED(X) X
-#define LH_SUPER_DEALLOC() self
+#define LH_SUPER_DEALLOC() nil;
 #define LH_VOID_BRIDGE_CAST(X) (__bridge void*)X
 #define LH_ID_BRIDGE_CAST(X) (__bridge id)X;
 
 #else
 
 #define LH_SAFE_RELEASE(X) if(X){[X release]; X = nil;}
-#define LH_AUTORELEASED(X) [X autorelease]
-#define LH_SUPER_DEALLOC() [super dealloc]
+#define LH_AUTORELEASED(X) [X autorelease];
+#define LH_SUPER_DEALLOC() [super dealloc];
 #define LH_VOID_BRIDGE_CAST(X) X
 #define LH_ID_BRIDGE_CAST(X) X;
 
@@ -155,29 +155,13 @@ NS_INLINE CGPoint LHPointOnCurve(CGPoint p1,
     return(vPoint);
 }
 
-
-@class LHRopeJointNode;
-@class LHWater;
-@class LHGravityArea;
-@class LHParallax;
-@class LHCamera;
-@interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
-
-+(id)createLHNodeWithDictionary:(NSDictionary*)childInfo
-                         parent:(SKNode*)prnt;
-
-
--(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
-
--(NSString*)currentDeviceSuffix;
--(float)currentDeviceRatio;
-
--(CGSize)designResolutionSize;
--(CGPoint)designOffset;
-
--(NSString*)relativePath;
-
-@end
+NS_INLINE BOOL LHRectOverlapsRect(CGRect r1,  CGRect r2)
+{
+    return !(r1.origin.x + r1.size.width < r2.origin.x ||
+             r1.origin.y + r1.size.height < r2.origin.y ||
+             r1.origin.x > r2.origin.x + r2.size.width ||
+             r1.origin.y > r2.origin.y + r2.size.height);
+}
 
 
 @class SKNode;

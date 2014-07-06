@@ -65,7 +65,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>E1C59C96-E82F-4024-AEA7-EA311ED2C1A8</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -137,7 +137,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>E1C59C96-E82F-4024-AEA7-EA311ED2C1A8</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -209,7 +209,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>E1C59C96-E82F-4024-AEA7-EA311ED2C1A8</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -281,7 +281,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>E1C59C96-E82F-4024-AEA7-EA311ED2C1A8</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -353,7 +353,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>E1C59C96-E82F-4024-AEA7-EA311ED2C1A8</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -425,7 +425,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>E1C59C96-E82F-4024-AEA7-EA311ED2C1A8</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -495,7 +495,7 @@
 					<key>nodeType</key>
 					<string>LHNode</string>
 					<key>parentUUID</key>
-					<string>E1C59C96-E82F-4024-AEA7-EA311ED2C1A8</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>

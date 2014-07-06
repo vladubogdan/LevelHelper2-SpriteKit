@@ -29,5 +29,6 @@
 
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
+#import "LHBackUINode.h"
 
 #import "LHUtils.h"
