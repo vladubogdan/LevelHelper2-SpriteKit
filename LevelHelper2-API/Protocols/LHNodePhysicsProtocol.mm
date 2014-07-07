@@ -145,18 +145,17 @@
             sizet = [(SKSpriteNode*)_node size];//we cast so that we dont get a compiler error
         }
                 
-        sizet.width  = [scene metersFromValue:sizet.width];
-        sizet.height = [scene metersFromValue:sizet.height];
-        
         float scaleX = [_node xScale];
         float scaleY = [_node yScale];
 
         previousScale = CGPointMake(scaleX, scaleY);
 
-       
-        sizet.width *= scaleX;
-        sizet.height*= scaleY;
-        
+//        sizet.width *= scaleX;
+//        sizet.height*= scaleY;
+
+        sizet.width  = [scene metersFromValue:sizet.width];
+        sizet.height = [scene metersFromValue:sizet.height];
+
         NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
 
         NSArray* fixturesInfo = nil;
@@ -456,56 +455,6 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
     }
 }
 
-//-(CGPoint)position
-//{
-//	if(_body){
-//        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
-//		return [_node convertPositionFromPoints:pt type:[_node positionType]];
-//	}
-//	return CGPointZero;
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-//-(void)updateTransform
-//{
-//    if([self body])
-//    {
-//        LHScene* scene = (LHScene*)[_node scene];
-//        CGPoint worldPos = [_node convertPoint:CGPointZero toNode:scene];
-//        
-//        NSLog(@"WORLD POS %f %f", worldPos.x, worldPos.y);
-//        
-//        CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
-//        b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-//        _body->SetTransform(b2Pos, [_node zRotation]);
-//    }
-//}
-
-//-(CGPoint)position
-//{
-//	if(_body){
-//        b2Vec2 pos = _body->GetPosition();
-//        LHScene* scene = (LHScene*)[_node scene];
-//        CGPoint worldPos = [scene pointFromMeters:pos];
-//        CGPoint localPos = [_node convertPoint:worldPos fromNode:scene];
-////        [_node setPosition:localPos];
-//  
-//        return localPos;
-//        CGPoint pt = CGPointApplyAffineTransform([_node anchorPointInPoints], [_node nodeToParentTransform]);
-//		return [_node convertPositionFromPoints:pt type:[_node positionType]];
-//	}
-//	return CGPointZero;
-//}
 -(float)rotation{
     if([self body]){
         return [self body]->GetAngle();
@@ -560,10 +509,6 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
     
     if(_body){
         
-        //this will update the transform
-//        [_node position];
-//        [_node rotation];
-        
         float scaleX = [_node xScale];
         float scaleY = [_node yScale];
         
@@ -584,7 +529,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             
             int flipx = scaleX < 0 ? -1 : 1;
             int flipy = scaleY < 0 ? -1 : 1;
-            
+                        
             if(shape->GetType() == b2Shape::e_polygon)
             {
                 b2PolygonShape* polShape = (b2PolygonShape*)shape;
@@ -726,6 +671,13 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         if([_node respondsToSelector:@selector(size)]){
             size = [(SKSpriteNode*)_node size];//we cast so that we dont get a compiler error
         }
+        
+        float xScale =[_node xScale];
+        float yScale = [_node yScale];
+        
+        size.width/=xScale;
+        size.height/=yScale;
+        
         
         if(shape == 0)//RECTANGLE
         {

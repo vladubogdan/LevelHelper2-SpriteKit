@@ -37,10 +37,31 @@ public:
     LHContactListenerPimpl(){};
     ~LHContactListenerPimpl(){};
 	
-    virtual void BeginContact(b2Contact* contact);
-    virtual void EndContact(b2Contact* contact);
-    virtual void PreSolve(b2Contact* contact, const b2Manifold* oldManifold);
-    virtual void PostSolve(b2Contact* contact, const b2ContactImpulse* impulse);
+    /// Called when two fixtures begin to touch.
+	virtual void BeginContact(b2Contact* contact);
+	/// Called when two fixtures cease to touch.
+	virtual void EndContact(b2Contact* contact);
+
+	/// This is called after a contact is updated. This allows you to inspect a
+	/// contact before it goes to the solver. If you are careful, you can modify the
+	/// contact manifold (e.g. disable contact).
+	/// A copy of the old manifold is provided so that you can detect changes.
+	/// Note: this is called only for awake bodies.
+	/// Note: this is called even when the number of contact points is zero.
+	/// Note: this is not called for sensors.
+	/// Note: if you set the number of contact points to zero, you will not
+	/// get an EndContact callback. However, you may get a BeginContact callback
+	/// the next step.
+	virtual void PreSolve(b2Contact* contact, const b2Manifold* oldManifold);
+    
+	/// This lets you inspect a contact after the solver is finished. This is useful
+	/// for inspecting impulses.
+	/// Note: the contact manifold does not include time of impact impulses, which can be
+	/// arbitrarily large if the sub-step is small. Hence the impulse is provided explicitly
+	/// in a separate data structure.
+	/// Note: this is only called for contacts that are touching, solid, and awake.
+	virtual void PostSolve(b2Contact* contact, const b2ContactImpulse* impulse);
+    
 };
 void LHContactListenerPimpl::BeginContact(b2Contact* contact){
     if(contact->GetFixtureA() != NULL && contact->GetFixtureB() != NULL)
@@ -73,6 +94,64 @@ void lhContactBeginContactCaller(void* object,
                                  b2Contact* contact);
 void lhContactEndContactCaller(void* object,
                                b2Contact* contact);
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//@interface LHActiveContact : NSObject
+//{
+//    __unsafe_unretained SKNode* nodeA;
+//    __unsafe_unretained SKNode* nodeB;
+//    CGPoint contactPoint;
+//    BOOL _disabled;
+//}
+//+(instancetype)activeContactWithA:(SKNode*)a
+//                                b:(SKNode*)b
+//                         disabled:(BOOL)disabled
+//                     contactPoint:(CGPoint)pt;
+//
+//-(SKNode*)nodeA;
+//-(SKNode*)nodeB;
+//-(CGPoint)contactPoint;
+//-(BOOL)disabled;
+//@end
+//@implementation LHActiveContact
+//
+//-(id)initActiveContactWithA:(SKNode*)a
+//                          b:(SKNode*)b
+//                   disabled:(BOOL)disabled
+//               contactPoint:(CGPoint)pt
+//{
+//    if(self = [super init])
+//    {
+//        nodeA = a;
+//        nodeB = b;
+//        _disabled = disabled;
+//        contactPoint = pt;
+//    }
+//    return self;
+//}
+//+(instancetype)activeContactWithA:(SKNode *)a
+//                                b:(SKNode *)b
+//                         disabled:(BOOL)disabled
+//                     contactPoint:(CGPoint)pt
+//{
+//    return LH_AUTORELEASED([[self alloc] initActiveContactWithA:a
+//                                                              b:b
+//                                                       disabled:disabled
+//                                                   contactPoint:pt]);
+//}
+//-(SKNode*)nodeA{
+//    return nodeA;
+//}
+//-(SKNode*)nodeB{
+//    return nodeB;
+//}
+//-(BOOL)disabled{
+//    return _disabled;
+//}
+//-(CGPoint)contactPoint{
+//    return contactPoint;
+//}
+//@end
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -109,21 +188,92 @@ void lhContactEndContactCaller(void* object,
     return self;
 }
 
+-(b2Fixture*)getFixtureAFromContact:(b2Contact*)contact{
+    return contact->GetFixtureA();
+}
+
+-(b2Fixture*)getFixtureBFromContact:(b2Contact*)contact{
+    return contact->GetFixtureB();
+}
+
+-(b2Body*)getBodyAFromContact:(b2Contact*)contact{
+    b2Fixture* fixtureA = contact->GetFixtureA();
+    if(!fixtureA)return NULL;
+    return fixtureA->GetBody();
+}
+
+-(b2Body*)getBodyBFromContact:(b2Contact*)contact{
+    b2Fixture* fixtureB = contact->GetFixtureB();
+    if(!fixtureB)return NULL;
+    return fixtureB->GetBody();
+}
+
+-(SKNode*)getNodeAFromContact:(b2Contact*)contact{
+    b2Body* bodyA = [self getBodyAFromContact:contact];
+    if(!bodyA)return nil;
+    return LH_ID_BRIDGE_CAST(bodyA->GetUserData());
+}
+
+-(SKNode*)getNodeBFromContact:(b2Contact*)contact{
+    b2Body* bodyB = [self getBodyBFromContact:contact];
+    if(!bodyB)return nil;
+    return LH_ID_BRIDGE_CAST(bodyB->GetUserData());
+}
+-(CGPoint)getPointFromContact:(b2Contact*)contact{
+    b2WorldManifold worldManifold;
+    contact->GetWorldManifold(&worldManifold);
+    b2Vec2 worldPt = worldManifold.points[0];
+    return [_scene pointFromMeters:worldPt];
+}
+
 -(void)preSolve:(b2Contact*)contact manifold:(const b2Manifold*)oldManifold
 {
+    SKNode* nodeA = [self getNodeAFromContact:contact];
+    SKNode* nodeB = [self getNodeBFromContact:contact];
+    if(!nodeA || !nodeB)return;
     
+    //at this point ask the scene if we should disable this contact
+    BOOL shouldDisable = [_scene shouldDisableContactBetweenNodeA:nodeA andNodeB:nodeB];
+
+    if(shouldDisable){
+        contact->SetEnabled(NO);
+    }
+    //cancel collision here - if needed
 }
--(void)postSolve:(b2Contact*)contact impulse:(const b2ContactImpulse*)impulse
+-(void)postSolve:(b2Contact*)contact impulse:(const b2ContactImpulse*)contactImpulse
 {
-    
+    SKNode* nodeA = [self getNodeAFromContact:contact];
+    SKNode* nodeB = [self getNodeBFromContact:contact];
+    if(!nodeA || !nodeB)return;
+
+    float impulse = 0;
+    if(contactImpulse->count > 0)
+    {
+        impulse = contactImpulse->normalImpulses[0];
+    }
+    [_scene didBeginContactBetweenNodeA:nodeA
+                               andNodeB:nodeB
+                             atLocation:[self getPointFromContact:contact]// [active contactPoint]
+                            withImpulse:impulse];
+    //at this point send the info to the scene
 }
 -(void)beginContact:(b2Contact*)contact
 {
-    NSLog(@"BEGIN CONTACT");
+    SKNode* nodeA = [self getNodeAFromContact:contact];
+    SKNode* nodeB = [self getNodeBFromContact:contact];
+    if(!nodeA || !nodeB)return;
+//    [_activeContacts addObject:[LHActiveContact activeContactWithA:nodeA
+//                                                                 b:nodeB
+//                                                          disabled:NO
+//                                                      contactPoint:[self getPointFromContact:contact]]];
 }
 -(void)endContact:(b2Contact*)contact
 {
-    NSLog(@"END CONTACT");
+    SKNode* nodeA = [self getNodeAFromContact:contact];
+    SKNode* nodeB = [self getNodeBFromContact:contact];
+    if(!nodeA || !nodeB)return;
+
+    [_scene didEndContactBetweenNodeA:nodeA andNodeB:nodeB];
 }
 @end
 

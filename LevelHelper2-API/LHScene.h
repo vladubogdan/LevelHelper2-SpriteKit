@@ -90,6 +90,17 @@
 
 #if LH_USE_BOX2D
 
+-(BOOL)shouldDisableContactBetweenNodeA:(SKNode*)a
+                               andNodeB:(SKNode*)b;
+
+-(void)didBeginContactBetweenNodeA:(SKNode*)a
+                          andNodeB:(SKNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse;
+
+-(void)didEndContactBetweenNodeA:(SKNode*)a
+                        andNodeB:(SKNode*)b;
+
 #else //spritekit
 
 /**

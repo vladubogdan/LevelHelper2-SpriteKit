@@ -68,8 +68,10 @@
 
 
 -(void)dealloc{
-    
+
+#if LH_USE_BOX2D
     LH_SAFE_RELEASE(_box2dCollision);
+#endif
     
     [self removeAllActions];
     [self removeAllChildren];
@@ -577,6 +579,25 @@
 
 #pragma mark- COLLISION HANDLING
 #if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(SKNode*)a
+                               andNodeB:(SKNode*)b{
+    return NO;
+}
+
+-(void)didBeginContactBetweenNodeA:(SKNode*)a
+                          andNodeB:(SKNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse
+{
+    //nothing to do - users should overwrite this method
+}
+
+-(void)didEndContactBetweenNodeA:(SKNode*)a
+                        andNodeB:(SKNode*)b
+{
+    //nothing to do - users should overwrite this method
+}
 
 #else
 

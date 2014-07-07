@@ -155,7 +155,6 @@
         
         if([dict objectForKey:@"zOrder"])
             [_node setZPosition:[dict floatForKey:@"zOrder"]];
-
         
     }
     return self;
