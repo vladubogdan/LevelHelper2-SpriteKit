@@ -134,6 +134,13 @@ static float MAX_BEZIER_STEPS = 24.0f;
         }
 
         
+#if LH_USE_BOX2D
+        {
+            CGPoint scl = [dict pointForKey:@"scale"];
+            [self setXScale:scl.x];
+            [self setYScale:scl.y];
+        }
+#endif
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         

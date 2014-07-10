@@ -117,57 +117,6 @@
 				</dict>
 			</array>
 		</dict>
-		<dict>
-			<key>path</key>
-			<string>carParts-ipad.png</string>
-			<key>size</key>
-			<string>{178, 118}</string>
-			<key>subimages</key>
-			<array>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>carTyre</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{47, 46}</string>
-					<key>textureRect</key>
-					<string>{{0, 72}, {47, 46}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>carBody</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{180, 95}</string>
-					<key>textureRect</key>
-					<string>{{-3, -5}, {180, 95}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>wood</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{128, 32}</string>
-					<key>textureRect</key>
-					<string>{{49, 74}, {128, 32}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-			</array>
-		</dict>
 	</array>
 	<key>version</key>
 	<integer>1</integer>

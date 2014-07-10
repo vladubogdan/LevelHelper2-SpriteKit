@@ -28,7 +28,7 @@
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"
 #import "LHBackUINode.h"
-
+#import "LHBox2dCollisionHandling.h"
 
 @implementation LHScene
 {
@@ -36,7 +36,9 @@
     __unsafe_unretained LHUINode*           _uiNode;
     __unsafe_unretained LHBackUINode*       _backUINode;
     
-    
+#if LH_USE_BOX2D
+    LHBox2dCollisionHandling* _box2dCollision;
+#endif
     
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
@@ -66,10 +68,14 @@
 
 
 -(void)dealloc{
+
+#if LH_USE_BOX2D
+    LH_SAFE_RELEASE(_box2dCollision);
+#endif
     
     [self removeAllActions];
     [self removeAllChildren];
-    
+
     _gameWorldNode = nil;
     _uiNode = nil;
     _backUINode = nil;
@@ -208,6 +214,13 @@
 
         
         [self performLateLoading];
+
+#if LH_USE_BOX2D
+        _box2dCollision = [[LHBox2dCollisionHandling alloc] initWithScene:self];
+#else//spritekit
+        [[self physicsWorld] setContactDelegate:(id<SKPhysicsContactDelegate>)self];
+#endif
+        
     }
     return self;
 }
@@ -563,6 +576,39 @@
 -(LHScene*)scene{
     return self;
 }
+
+#pragma mark- COLLISION HANDLING
+#if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(SKNode*)a
+                               andNodeB:(SKNode*)b{
+    return NO;
+}
+
+-(void)didBeginContactBetweenNodeA:(SKNode*)a
+                          andNodeB:(SKNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse
+{
+    //nothing to do - users should overwrite this method
+}
+
+-(void)didEndContactBetweenNodeA:(SKNode*)a
+                        andNodeB:(SKNode*)b
+{
+    //nothing to do - users should overwrite this method
+}
+
+#else
+
+- (void)didBeginContact:(SKPhysicsContact *)contact{
+    //nothing to do - users should overwrite this method
+}
+- (void)didEndContact:(SKPhysicsContact *)contact{
+    //nothing to do - users should overwrite this method
+}
+
+#endif
 
 
 - (void)update:(NSTimeInterval)currentTime{

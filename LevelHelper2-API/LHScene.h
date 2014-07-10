@@ -86,6 +86,31 @@
 -(NSString*)relativePath;
 
 
+#pragma mark- COLLISION HANDLING
+
+#if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(SKNode*)a
+                               andNodeB:(SKNode*)b;
+
+-(void)didBeginContactBetweenNodeA:(SKNode*)a
+                          andNodeB:(SKNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse;
+
+-(void)didEndContactBetweenNodeA:(SKNode*)a
+                        andNodeB:(SKNode*)b;
+
+#else //spritekit
+
+/**
+ Overwrite this methods to receive collision informations. Available when using SpriteKit own physics engine. This is actually SpriteKit API.
+ Consult Sprite Kit documentation for more info.
+ */
+- (void)didBeginContact:(SKPhysicsContact *)contact;
+- (void)didEndContact:(SKPhysicsContact *)contact;
+#endif
+
 
 #pragma mark - Box2d Support
 

@@ -55,6 +55,13 @@
         _size = [dict sizeForKey:@"size"];
         
 
+#if LH_USE_BOX2D
+        {
+            CGPoint scl = [dict pointForKey:@"scale"];
+            [self setXScale:scl.x];
+            [self setYScale:scl.y];
+        }
+#endif
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
