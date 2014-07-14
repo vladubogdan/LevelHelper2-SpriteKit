@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1AAB831973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB821973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm */; };
+		6E1AAB841973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB821973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm */; };
+		6E1AAB871973C75400E8ECCE /* LHUserProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */; };
+		6E1AAB881973C75400E8ECCE /* LHUserProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */; };
 		6E4C5055195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */; };
 		6E4C5056195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */; };
 		6E60BBAA196295E8001D3906 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBA9196295E8001D3906 /* LHSceneIntroduction.mm */; };
@@ -212,6 +216,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E1AAB811973C6C300E8ECCE /* LHSceneUserPropertiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneUserPropertiesDemo.h; sourceTree = "<group>"; };
+		6E1AAB821973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUserPropertiesDemo.mm; sourceTree = "<group>"; };
+		6E1AAB851973C75400E8ECCE /* LHUserProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUserProperties.h; sourceTree = "<group>"; };
+		6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHUserProperties.mm; sourceTree = "<group>"; };
 		6E4C5053195A82F100E3EAE7 /* SKNode+Transforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+Transforms.h"; sourceTree = "<group>"; };
 		6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+Transforms.m"; sourceTree = "<group>"; };
 		6E60BBA8196295E8001D3906 /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneIntroduction.h; sourceTree = "<group>"; };
@@ -694,6 +702,8 @@
 				6E89FD88192E0C510040478F /* LHNodeProtocol.h */,
 				6EBEA2E419598E2B00726044 /* LHNodeProtocol.m */,
 				6E89FD89192E0C510040478F /* LHUserPropertyProtocol.h */,
+				6E1AAB851973C75400E8ECCE /* LHUserProperties.h */,
+				6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */,
 				6EBEA2EB19599BCE00726044 /* LHNodePhysicsProtocol.h */,
 				6EBEA2EC19599BCE00726044 /* LHNodePhysicsProtocol.mm */,
 				6ED5C50F195D8B6800B6DF33 /* LHJointNodeProtocol.h */,
@@ -752,6 +762,8 @@
 				6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.mm */,
 				6ED5C513195D99EE00B6DF33 /* LHSceneOtherJointsDemo.h */,
 				6ED5C514195D99EE00B6DF33 /* LHSceneOtherJointsDemo.mm */,
+				6E1AAB811973C6C300E8ECCE /* LHSceneUserPropertiesDemo.h */,
+				6E1AAB821973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm */,
 			);
 			path = DemoExamples;
 			sourceTree = "<group>";
@@ -1085,6 +1097,7 @@
 				6E60BBC51962D56B001D3906 /* LHSceneGravityAreas.mm in Sources */,
 				6EBEA2D6195984D800726044 /* LHSceneDemo.mm in Sources */,
 				6E89FDA5192E0C510040478F /* LHCamera.m in Sources */,
+				6E1AAB871973C75400E8ECCE /* LHUserProperties.mm in Sources */,
 				6E89FDAE192E0C510040478F /* LHShape.mm in Sources */,
 				6E89FD9B192E0C510040478F /* LHOpacityProperty.m in Sources */,
 				6E89FD12192E0A390040478F /* ViewController.m in Sources */,
@@ -1102,6 +1115,7 @@
 				6E89FD09192E0A390040478F /* AppDelegate.m in Sources */,
 				6E60BBBB1962CE94001D3906 /* LHSceneWaterAreaDemo.mm in Sources */,
 				6E89FDA1192E0C510040478F /* NSDictionary+LHDictionary.m in Sources */,
+				6E1AAB831973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm in Sources */,
 				6E89FDA4192E0C510040478F /* LHBezier.mm in Sources */,
 				6E89FD9F192E0C510040478F /* LHSpriteFrameProperty.m in Sources */,
 				6E89FDA6192E0C510040478F /* LHDistanceJointNode.mm in Sources */,
@@ -1191,6 +1205,7 @@
 				6EBEA3CB1959C0F600726044 /* b2RevoluteJoint.cpp in Sources */,
 				6E60BBB419629D86001D3906 /* LHBackUINode.mm in Sources */,
 				6EBEA3161959BFD000726044 /* ViewController.m in Sources */,
+				6E1AAB841973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm in Sources */,
 				6EBEA3C01959C0F600726044 /* b2EdgeAndCircleContact.cpp in Sources */,
 				6EBEA3BD1959C0F600726044 /* b2CircleContact.cpp in Sources */,
 				6EBEA3171959BFD000726044 /* LHWater.mm in Sources */,
@@ -1203,6 +1218,7 @@
 				6EBEA31A1959BFD000726044 /* LHUtils.m in Sources */,
 				6EBEA31B1959BFD000726044 /* LHUINode.mm in Sources */,
 				6EBEA3C81959C0F600726044 /* b2MouseJoint.cpp in Sources */,
+				6E1AAB881973C75400E8ECCE /* LHUserProperties.mm in Sources */,
 				6EBEA3C91959C0F600726044 /* b2PrismaticJoint.cpp in Sources */,
 				6EBEA3C31959C0F600726044 /* b2PolygonContact.cpp in Sources */,
 				6EBEA31C1959BFD000726044 /* LHScenePhysicsBodiesDemo.mm in Sources */,

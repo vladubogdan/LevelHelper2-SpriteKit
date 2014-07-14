@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.039420377463102341, 0}, {0.040748719125986099, 1}}</string>
+			<string>{{0.039420340210199356, 0}, {0.040748715400695801, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.039417803287506104, 0}, {0.040794983506202698, 1}}</string>
+			<string>{{0.039419479668140411, 0}, {0.040763560682535172, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.039417803287506104, 0}, {0.040794983506202698, 1}}</string>
+			<string>{{0.039419479668140411, 0}, {0.040763560682535172, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -164,6 +164,11 @@
 					<true/>
 				</dict>
 				<key>spriteSheetAnimationDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>userPropertiesDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
