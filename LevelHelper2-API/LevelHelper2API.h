@@ -26,6 +26,7 @@
 #import "LHNodeProtocol.h"
 #import "LHNodeAnimationProtocol.h"
 #import "LHUserPropertyProtocol.h"
+#import "LHUserProperties.h"
 
 #import "LHGameWorldNode.h"
 #import "LHUINode.h"

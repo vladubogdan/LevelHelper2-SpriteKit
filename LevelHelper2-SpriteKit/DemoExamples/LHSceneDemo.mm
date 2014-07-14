@@ -25,7 +25,7 @@
 #import "LHSceneShapesDemo.h"
 #import "LHSceneBeziersDemo.h"
 #import "LHSceneCollisionDemo.h"
-
+#import "LHSceneUserPropertiesDemo.h"
 
 @implementation LHSceneDemo
 {
@@ -65,6 +65,7 @@
         [availableScenes addObject:[LHSceneShapesDemo class]];
         [availableScenes addObject:[LHSceneBeziersDemo class]];
         [availableScenes addObject:[LHSceneCollisionDemo class]];
+        [availableScenes addObject:[LHSceneUserPropertiesDemo class]];
         
 //        [availableScenes addObject:[LHSceneOtherJointsDemo class]];
 //        [availableScenes addObject:[LHScenePhysicsBodiesDemo class]];
