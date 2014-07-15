@@ -40,6 +40,9 @@
     LHBox2dCollisionHandling* _box2dCollision;
 #endif
     
+    __unsafe_unretained id<LHAnimationNotificationsProtocol> _animationsDelegate;
+    __unsafe_unretained id<LHCollisionHandlingProtocol> _collisionsDelegate;
+    
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
 
@@ -72,6 +75,10 @@
 #if LH_USE_BOX2D
     LH_SAFE_RELEASE(_box2dCollision);
 #endif
+    
+    _animationsDelegate = nil;
+    _collisionsDelegate = nil;
+
     
     [self removeAllActions];
     [self removeAllChildren];
@@ -577,11 +584,36 @@
     return self;
 }
 
+#pragma mark- ANIMATION HANDLING
+-(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del{
+    _animationsDelegate = del;
+}
+
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim{
+    //nothing to do - users should overwrite this method
+    if(_animationsDelegate){
+        [_animationsDelegate didFinishedPlayingAnimation:anim];
+    }
+}
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim{
+    //nothing to do - users should overwrite this method
+    if(_animationsDelegate){
+        [_animationsDelegate didFinishedRepetitionOnAnimation:anim];
+    }
+}
+
+
 #pragma mark- COLLISION HANDLING
 #if LH_USE_BOX2D
-
+-(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del{
+    _collisionsDelegate = del;
+}
 -(BOOL)shouldDisableContactBetweenNodeA:(SKNode*)a
                                andNodeB:(SKNode*)b{
+    if(_collisionsDelegate){
+        return [_collisionsDelegate shouldDisableContactBetweenNodeA:a andNodeB:b];
+    }
+    
     return NO;
 }
 
@@ -590,22 +622,38 @@
                         atLocation:(CGPoint)scenePt
                        withImpulse:(float)impulse
 {
+    if(_collisionsDelegate){
+        [_collisionsDelegate didBeginContactBetweenNodeA:a
+                                                andNodeB:b
+                                              atLocation:scenePt
+                                             withImpulse:impulse];
+    }
     //nothing to do - users should overwrite this method
 }
 
 -(void)didEndContactBetweenNodeA:(SKNode*)a
                         andNodeB:(SKNode*)b
 {
+    if(_collisionsDelegate){
+        [_collisionsDelegate didEndContactBetweenNodeA:a andNodeB:b];
+    }
     //nothing to do - users should overwrite this method
 }
 
 #else
 
 - (void)didBeginContact:(SKPhysicsContact *)contact{
+    if(_collisionsDelegate){
+        [_collisionsDelegate didBeginContact:contact];
+    }
     //nothing to do - users should overwrite this method
 }
 - (void)didEndContact:(SKPhysicsContact *)contact{
     //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didEndContact:contact];
+    }
+
 }
 
 #endif

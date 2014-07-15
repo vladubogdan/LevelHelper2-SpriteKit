@@ -11,11 +11,54 @@
 
 #import "LHConfig.h"
 
+
+@class LHScene;
+@class LHGameWorldNode;
+@class LHUINode;
+@class LHBackUINode;
+@class LHAnimation;
+
+
 #if LH_USE_BOX2D
 #ifdef __cplusplus
 #include "Box2D.h"
 #endif
 #endif //LH_USE_BOX2D
+
+@protocol LHCollisionHandlingProtocol <NSObject>
+
+@required
+#if LH_USE_BOX2D
+
+-(BOOL)shouldDisableContactBetweenNodeA:(SKNode*)a
+                               andNodeB:(SKNode*)b;
+
+-(void)didBeginContactBetweenNodeA:(SKNode*)a
+                          andNodeB:(SKNode*)b
+                        atLocation:(CGPoint)scenePt
+                       withImpulse:(float)impulse;
+
+-(void)didEndContactBetweenNodeA:(SKNode*)a
+                        andNodeB:(SKNode*)b;
+
+#else //spritekit
+
+- (void)didBeginContact:(SKPhysicsContact *)contact;
+- (void)didEndContact:(SKPhysicsContact *)contact;
+
+#endif
+
+@end
+
+
+@protocol LHAnimationNotificationsProtocol <NSObject>
+
+@required
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
+
+@end
+
 
 
 #if __has_feature(objc_arc) && __clang_major__ >= 3
@@ -26,13 +69,6 @@
  LHScene class is used to load a level file into SpriteKit engine.
  End users will have to subclass this class in order to add they're game logic.
  */
-
-@class LHScene;
-@class LHGameWorldNode;
-@class LHUINode;
-@class LHBackUINode;
-
-
 @interface LHScene : SKScene <LHNodeProtocol>
 
 #if TARGET_OS_IPHONE
@@ -85,8 +121,25 @@
  */
 -(NSString*)relativePath;
 
+#pragma mark- ANIMATION HANDLING
+
+/**
+ Set a animation notifications delegate. Will only work if you do not overwrite the animation notifications methods when subclassing LHScene.
+ If you delete the delegate object make sure you nullify the animation notifications delegate.
+ */
+-(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del;
+
+-(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
+-(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
+
 
 #pragma mark- COLLISION HANDLING
+
+/**
+ Set a collision handling delegate. Will only work if you do not overwrite collision handling methods when subclassing LHScene.
+ If you delete the delegate object make sure you nullify the collision handling delegate.
+ */
+-(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del;
 
 #if LH_USE_BOX2D
 

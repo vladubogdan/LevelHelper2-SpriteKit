@@ -67,6 +67,11 @@
 -(int)repetitions;
 
 /**
+ The number of times this animation has looped.
+ */
+-(int)currentRepetition;
+
+/**
  The node on which this animation is assigned.
  */
 -(id< LHNodeAnimationProtocol , LHNodeProtocol >)node;
