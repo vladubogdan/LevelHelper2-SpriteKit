@@ -162,6 +162,7 @@
     [self resetOneShotFrames];
     animating = val;
     currentRepetition = 0;
+    currentTime = 0;
 }
 -(bool)animating{
     return animating;
@@ -175,6 +176,10 @@
 
 -(int)repetitions{
     return _repetitions;
+}
+
+-(int)currentRepetition{
+    return currentRepetition;
 }
 
 -(void)setCurrentTime:(float)val{
@@ -192,6 +197,11 @@
         if(![self didFinishAllRepetitions]){
             currentTime = 0.0f;
             [self resetOneShotFrames];
+            [[node scene] didFinishedRepetitionOnAnimation:self];
+        }
+        else{
+            [[node scene] didFinishedPlayingAnimation:self];
+            [node setActiveAnimation:nil];
         }
     }
     previousTime = currentTime;

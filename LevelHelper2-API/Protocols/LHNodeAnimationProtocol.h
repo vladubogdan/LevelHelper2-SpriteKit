@@ -34,6 +34,11 @@
  */
 -(LHAnimation*)animationWithName:(NSString*)animName;
 
+/**
+ Returns all animations available on this node.
+ */
+-(NSArray*)animations;
+
 
 /**
  Set position on the node controlled by the animation.
@@ -78,7 +83,7 @@ Set x scale on the node controlled by the animation.
 -(void)setActiveAnimation:(LHAnimation*)anim;
 -(LHAnimation*)activeAnimation;
 -(LHAnimation*)animationWithName:(NSString*)animName;
-
+-(NSArray*)animations;
 @end
 
 #define LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION  \
@@ -90,6 +95,9 @@ return [_animationProtocolImp activeAnimation];\
 }\
 -(LHAnimation*)animationWithName:(NSString*)animName{\
 return [_animationProtocolImp animationWithName:animName];\
+}\
+-(NSArray*)animations{\
+    return [_animationProtocolImp animations];\
 }
 
 

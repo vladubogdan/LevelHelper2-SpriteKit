@@ -78,4 +78,7 @@
     }
     return nil;
 }
+-(NSArray*)animations{
+    return _animations;
+}
 @end
