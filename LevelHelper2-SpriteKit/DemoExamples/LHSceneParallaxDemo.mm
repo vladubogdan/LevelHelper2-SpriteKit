@@ -12,7 +12,7 @@
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/parallaxDemo.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/parallaxDemo.lhplist"];
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{

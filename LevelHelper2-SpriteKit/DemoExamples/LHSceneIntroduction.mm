@@ -12,7 +12,7 @@
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/introductionScene.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/introductionScene.lhplist"];
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{

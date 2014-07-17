@@ -12,7 +12,7 @@
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/officerLevel.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/officerLevel.lhplist"];
     
 }
 

@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>0</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<string>{{1, 1}, {1, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -46,7 +46,7 @@
 							<key>scale</key>
 							<string>{1, 1}</string>
 							<key>size</key>
-							<string>{105, 148}</string>
+							<string>{93, 139}</string>
 							<key>spriteName</key>
 							<string>object_statue</string>
 							<key>spriteUUID</key>
@@ -84,7 +84,7 @@
 							<key>scale</key>
 							<string>{1, 1}</string>
 							<key>size</key>
-							<string>{60, 78}</string>
+							<string>{43, 65}</string>
 							<key>spriteName</key>
 							<string>object_canteen</string>
 							<key>spriteUUID</key>
@@ -122,7 +122,7 @@
 							<key>scale</key>
 							<string>{1, 1}</string>
 							<key>size</key>
-							<string>{92, 64}</string>
+							<string>{82, 57}</string>
 							<key>spriteName</key>
 							<string>object_banana</string>
 							<key>spriteUUID</key>
@@ -160,7 +160,7 @@
 							<key>scale</key>
 							<string>{1, 1}</string>
 							<key>size</key>
-							<string>{122, 75}</string>
+							<string>{110, 64}</string>
 							<key>spriteName</key>
 							<string>object_hat</string>
 							<key>spriteUUID</key>
@@ -543,7 +543,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -615,7 +615,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -687,7 +687,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -759,7 +759,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -831,7 +831,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -903,7 +903,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -975,7 +975,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1047,7 +1047,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1119,7 +1119,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1191,7 +1191,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1263,7 +1263,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1335,7 +1335,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1407,7 +1407,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1479,7 +1479,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1551,7 +1551,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1623,7 +1623,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1695,7 +1695,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1767,7 +1767,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1839,7 +1839,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1911,7 +1911,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -1983,7 +1983,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2055,7 +2055,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2127,7 +2127,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2199,7 +2199,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2271,7 +2271,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2343,7 +2343,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2415,7 +2415,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2487,7 +2487,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2559,7 +2559,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2631,7 +2631,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2703,7 +2703,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2775,7 +2775,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2847,7 +2847,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2919,7 +2919,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -2991,7 +2991,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3063,7 +3063,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3135,7 +3135,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3207,7 +3207,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3279,7 +3279,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3351,7 +3351,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3423,7 +3423,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3495,7 +3495,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3567,7 +3567,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3639,7 +3639,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3711,7 +3711,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3783,7 +3783,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3855,7 +3855,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3927,7 +3927,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -3999,7 +3999,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4071,7 +4071,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4143,7 +4143,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4215,7 +4215,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4287,7 +4287,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4359,7 +4359,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4431,7 +4431,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4503,7 +4503,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4575,7 +4575,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4647,7 +4647,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4719,7 +4719,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4791,7 +4791,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4863,7 +4863,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -4935,7 +4935,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5007,7 +5007,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5079,7 +5079,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5151,7 +5151,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5223,7 +5223,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5295,7 +5295,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5367,7 +5367,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5439,7 +5439,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5511,7 +5511,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5583,7 +5583,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5655,7 +5655,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5727,7 +5727,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5799,7 +5799,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5871,7 +5871,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -5943,7 +5943,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6015,7 +6015,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6087,7 +6087,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6159,7 +6159,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6231,7 +6231,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6303,7 +6303,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6375,7 +6375,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6447,7 +6447,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6519,7 +6519,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6591,7 +6591,7 @@
 									<key>scale</key>
 									<string>{1, 1}</string>
 									<key>size</key>
-									<string>{105, 148}</string>
+									<string>{93, 139}</string>
 									<key>spriteName</key>
 									<string>object_statue</string>
 									<key>spriteUUID</key>
@@ -6659,7 +6659,7 @@
 							<key>scale</key>
 							<string>{1, 1}</string>
 							<key>size</key>
-							<string>{105, 148}</string>
+							<string>{93, 139}</string>
 							<key>spriteName</key>
 							<string>object_statue</string>
 							<key>spriteUUID</key>
@@ -6683,7 +6683,7 @@
 					<key>nodeType</key>
 					<string>LHNode</string>
 					<key>parentUUID</key>
-					<string>20E91192-5926-4623-A183-EB13FD85A931</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
@@ -6828,7 +6828,7 @@
 					<key>nodeType</key>
 					<string>LHCamera</string>
 					<key>parentUUID</key>
-					<string>20E91192-5926-4623-A183-EB13FD85A931</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>restrictToGameWorld</key>
 					<false/>
 					<key>tags</key>
@@ -6874,7 +6874,7 @@
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>USER INTERFACE</string>
+			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
 			<string>LHUINode</string>
 			<key>parentUUID</key>
@@ -6892,7 +6892,7 @@
 			<key>uuid</key>
 			<string>403E706C-8123-43BE-A406-9E715E186993</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -6939,7 +6939,7 @@
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>

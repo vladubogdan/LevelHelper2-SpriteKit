@@ -24,7 +24,7 @@
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/shapesDemo.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/shapesDemo.lhplist"];
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{

@@ -24,7 +24,7 @@
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/waterArea.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/waterArea.lhplist"];
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{

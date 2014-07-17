@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>0</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<string>{{1, 1}, {1, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -13,53 +13,16 @@
 			<real>255</real>
 			<key>anchor</key>
 			<string>{0.5, 0.5}</string>
-			<key>children</key>
-			<array>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
-					<key>assetFile</key>
-					<string>OfficerAsset.lhasset</string>
-					<key>assetUUID</key>
-					<string>3E9B9DB9-8C3B-40E2-9014-CB8EDB1A3F31</string>
-					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
-					<key>generalPosition</key>
-					<string>{0.12538557449976603, 0.72943595051765442}</string>
-					<key>name</key>
-					<string>OfficerAsset</string>
-					<key>nodeType</key>
-					<string>LHAsset</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>rotation</key>
-					<real>0.0</real>
-					<key>scale</key>
-					<string>{0.88747072219848633, 0.95835649967193604}</string>
-					<key>size</key>
-					<string>{328.13970947265625, 456.25811767578125}</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>C96302E9-DCB8-459B-98D3-4A4175431EBA</string>
-					<key>zOrder</key>
-					<integer>0</integer>
-				</dict>
-			</array>
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>GAME WORLD</string>
+			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
-			<string>LHGameWorldNode</string>
+			<string>LHBackUINode</string>
 			<key>parentUUID</key>
-			<string>78927DC6-5D00-4748-87DE-744088308C2B</string>
+			<string>44CB97E1-BB34-4A58-A366-2C1CE46F49D9</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -71,7 +34,37 @@
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>5E8DE41F-8300-464B-A4A8-F0CED3CAA6E3</string>
+			<string>CF2DF841-A007-4412-B1EA-DB56428338BC</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>44CB97E1-BB34-4A58-A366-2C1CE46F49D9</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>01B40F22-B79A-497B-93C0-CC3D49C8DACE</string>
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
@@ -85,11 +78,11 @@
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>USER INTERFACE</string>
+			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
 			<string>LHUINode</string>
 			<key>parentUUID</key>
-			<string>78927DC6-5D00-4748-87DE-744088308C2B</string>
+			<string>44CB97E1-BB34-4A58-A366-2C1CE46F49D9</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -101,9 +94,9 @@
 				<string>DEFAULT</string>
 			</array>
 			<key>uuid</key>
-			<string>96970CEA-F613-463E-9495-82BD882D2F07</string>
+			<string>DB803361-E50C-40AF-B0C0-1952C6F0BF7D</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -150,7 +143,7 @@
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>
@@ -158,6 +151,6 @@
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>
-	<string>78927DC6-5D00-4748-87DE-744088308C2B</string>
+	<string>44CB97E1-BB34-4A58-A366-2C1CE46F49D9</string>
 </dict>
 </plist>

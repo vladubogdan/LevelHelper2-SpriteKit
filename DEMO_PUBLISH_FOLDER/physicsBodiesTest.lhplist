@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>0</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<string>{{1, 1}, {1, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -80,7 +80,7 @@
 							<key>scale</key>
 							<string>{1, 1}</string>
 							<key>size</key>
-							<string>{65, 61}</string>
+							<string>{53, 53}</string>
 							<key>spriteName</key>
 							<string>candy</string>
 							<key>spriteUUID</key>
@@ -118,7 +118,7 @@
 							<key>scale</key>
 							<string>{1, 1}</string>
 							<key>size</key>
-							<string>{65, 61}</string>
+							<string>{53, 53}</string>
 							<key>spriteName</key>
 							<string>candy</string>
 							<key>spriteUUID</key>
@@ -178,7 +178,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -186,7 +186,7 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{65, 61}</string>
+					<string>{53, 53}</string>
 					<key>spriteName</key>
 					<string>candy</string>
 					<key>spriteUUID</key>
@@ -222,7 +222,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C31B29C8-CBF9-4D2B-B65A-CE9BEB9A48A7</string>
+						<string>B8F5D6B8-59BF-4704-B713-4DADBC59E207</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -252,7 +252,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -260,7 +260,7 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{88, 65}</string>
+					<string>{78, 55}</string>
 					<key>spriteName</key>
 					<string>object_bananabunch</string>
 					<key>spriteUUID</key>
@@ -324,7 +324,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -332,7 +332,7 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{105, 148}</string>
+					<string>{93, 139}</string>
 					<key>spriteName</key>
 					<string>object_statue</string>
 					<key>spriteUUID</key>
@@ -368,7 +368,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>B0BCB8C2-1C3C-48C6-8FC8-0D68B702AB86</string>
+						<string>0C860B8B-476B-4B61-9A00-FF41CF39F502</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -398,7 +398,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -406,7 +406,7 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{60, 78}</string>
+					<string>{43, 65}</string>
 					<key>spriteName</key>
 					<string>object_canteen</string>
 					<key>spriteUUID</key>
@@ -465,154 +465,54 @@
 						<key>ovalShape</key>
 						<array>
 							<array>
-								<string>{-8.7790644907257906, -51.981619861371207}</string>
-								<string>{-8.2663658942446335e-15, -53}</string>
-								<string>{8.7790644907257729, -51.981619861371215}</string>
+								<string>{-7.3478803743571783e-15, -48}</string>
+								<string>{7.8036127090454102, -47.077693939208984}</string>
+								<string>{15.307337760925293, -44.346218109130859}</string>
+								<string>{22.222808837890625, -39.910541534423828}</string>
+								<string>{28.284271240234375, -33.941123962402344}</string>
+								<string>{-22.222808837890625, -39.910541534423828}</string>
+								<string>{-15.307337760925293, -44.346218109130859}</string>
+								<string>{-7.8036127090454102, -47.077693939208984}</string>
 							</array>
 							<array>
-								<string>{-8.7790644907257906, -51.981619861371207}</string>
-								<string>{8.7790644907257729, -51.981619861371215}</string>
-								<string>{17.220754456429049, -48.96561522309819}</string>
+								<string>{-22.222808837890625, -39.910541534423828}</string>
+								<string>{28.284271240234375, -33.941123962402344}</string>
+								<string>{33.258785247802734, -26.66737174987793}</string>
+								<string>{36.955181121826172, -18.368804931640625}</string>
+								<string>{39.231410980224609, -9.3643350601196289}</string>
+								<string>{-36.955181121826172, -18.368804931640625}</string>
+								<string>{-33.258785247802734, -26.66737174987793}</string>
+								<string>{-28.284271240234375, -33.941123962402344}</string>
 							</array>
 							<array>
-								<string>{-17.220754456429066, -48.965615223098183}</string>
-								<string>{-8.7790644907257906, -51.981619861371207}</string>
-								<string>{17.220754456429049, -48.96561522309819}</string>
+								<string>{-36.955181121826172, -18.368804931640625}</string>
+								<string>{39.231410980224609, -9.3643350601196289}</string>
+								<string>{40, 0}</string>
+								<string>{39.231410980224609, 9.3643350601196289}</string>
+								<string>{-36.955181121826172, 18.368804931640625}</string>
+								<string>{-39.231410980224609, 9.3643350601196289}</string>
+								<string>{-40, 5.8783044688923321e-15}</string>
+								<string>{-39.231410980224609, -9.3643350601196289}</string>
 							</array>
 							<array>
-								<string>{-25.000660485882097, -44.067889452034898}</string>
-								<string>{-17.220754456429066, -48.965615223098183}</string>
-								<string>{17.220754456429049, -48.96561522309819}</string>
+								<string>{39.231410980224609, 9.3643350601196289}</string>
+								<string>{36.955181121826172, 18.368804931640625}</string>
+								<string>{33.258785247802734, 26.66737174987793}</string>
+								<string>{28.284271240234375, 33.941123962402344}</string>
+								<string>{-22.222808837890625, 39.910541534423828}</string>
+								<string>{-28.284271240234375, 33.941123962402344}</string>
+								<string>{-33.258785247802734, 26.66737174987793}</string>
+								<string>{-36.955181121826172, 18.368804931640625}</string>
 							</array>
 							<array>
-								<string>{-25.000660485882097, -44.067889452034898}</string>
-								<string>{17.220754456429049, -48.96561522309819}</string>
-								<string>{25.000660485882083, -44.067889452034912}</string>
-							</array>
-							<array>
-								<string>{-25.000660485882097, -44.067889452034898}</string>
-								<string>{25.000660485882083, -44.067889452034912}</string>
-								<string>{31.819805153394636, -37.47665940288703}</string>
-							</array>
-							<array>
-								<string>{-31.819805153394647, -37.476659402887016}</string>
-								<string>{-25.000660485882097, -44.067889452034898}</string>
-								<string>{31.819805153394636, -37.47665940288703}</string>
-							</array>
-							<array>
-								<string>{-31.819805153394647, -37.476659402887016}</string>
-								<string>{31.819805153394636, -37.47665940288703}</string>
-								<string>{37.416132553614538, -29.445222350038915}</string>
-							</array>
-							<array>
-								<string>{-37.416132553614545, -29.445222350038904}</string>
-								<string>{-31.819805153394647, -37.476659402887016}</string>
-								<string>{37.416132553614538, -29.445222350038915}</string>
-							</array>
-							<array>
-								<string>{-41.574578963007902, -20.282221915349751}</string>
-								<string>{-37.416132553614545, -29.445222350038904}</string>
-								<string>{37.416132553614538, -29.445222350038915}</string>
-							</array>
-							<array>
-								<string>{-41.574578963007902, -20.282221915349751}</string>
-								<string>{37.416132553614538, -29.445222350038915}</string>
-								<string>{41.574578963007895, -20.28222191534979}</string>
-							</array>
-							<array>
-								<string>{-41.574578963007902, -20.282221915349751}</string>
-								<string>{41.574578963007895, -20.28222191534979}</string>
-								<string>{44.135337618145364, -10.339787066854822}</string>
-							</array>
-							<array>
-								<string>{-44.135337618145371, -10.339787066854804}</string>
-								<string>{-41.574578963007902, -20.282221915349751}</string>
-								<string>{44.135337618145364, -10.339787066854822}</string>
-							</array>
-							<array>
-								<string>{-45, 6.4906280354809723e-15}</string>
-								<string>{-44.135337618145371, -10.339787066854804}</string>
-								<string>{44.135337618145364, -10.339787066854822}</string>
-							</array>
-							<array>
-								<string>{-45, 6.4906280354809723e-15}</string>
-								<string>{44.135337618145364, -10.339787066854822}</string>
-								<string>{45, 0}</string>
-							</array>
-							<array>
-								<string>{-45, 6.4906280354809723e-15}</string>
-								<string>{45, 0}</string>
-								<string>{44.135337618145371, 10.339787066854797}</string>
-							</array>
-							<array>
-								<string>{-44.135337618145371, 10.339787066854814}</string>
-								<string>{-45, 6.4906280354809723e-15}</string>
-								<string>{44.135337618145371, 10.339787066854797}</string>
-							</array>
-							<array>
-								<string>{-44.135337618145371, 10.339787066854814}</string>
-								<string>{44.135337618145371, 10.339787066854797}</string>
-								<string>{41.574578963007902, 20.282221915349758}</string>
-							</array>
-							<array>
-								<string>{-41.574578963007902, 20.282221915349762}</string>
-								<string>{-44.135337618145371, 10.339787066854814}</string>
-								<string>{41.574578963007902, 20.282221915349758}</string>
-							</array>
-							<array>
-								<string>{-41.574578963007902, 20.282221915349762}</string>
-								<string>{41.574578963007902, 20.282221915349758}</string>
-								<string>{37.416132553614538, 29.445222350038915}</string>
-							</array>
-							<array>
-								<string>{-37.416132553614538, 29.445222350038915}</string>
-								<string>{-41.574578963007902, 20.282221915349762}</string>
-								<string>{37.416132553614538, 29.445222350038915}</string>
-							</array>
-							<array>
-								<string>{-37.416132553614538, 29.445222350038915}</string>
-								<string>{37.416132553614538, 29.445222350038915}</string>
-								<string>{31.81980515339464, 37.476659402887016}</string>
-							</array>
-							<array>
-								<string>{-31.819805153394636, 37.476659402887023}</string>
-								<string>{-37.416132553614538, 29.445222350038915}</string>
-								<string>{31.81980515339464, 37.476659402887016}</string>
-							</array>
-							<array>
-								<string>{-31.819805153394636, 37.476659402887023}</string>
-								<string>{31.81980515339464, 37.476659402887016}</string>
-								<string>{25.000660485882104, 44.06788945203489}</string>
-							</array>
-							<array>
-								<string>{-25.000660485882086, 44.067889452034912}</string>
-								<string>{-31.819805153394636, 37.476659402887023}</string>
-								<string>{25.000660485882104, 44.06788945203489}</string>
-							</array>
-							<array>
-								<string>{-17.220754456429038, 48.965615223098197}</string>
-								<string>{-25.000660485882086, 44.067889452034912}</string>
-								<string>{25.000660485882104, 44.06788945203489}</string>
-							</array>
-							<array>
-								<string>{-17.220754456429038, 48.965615223098197}</string>
-								<string>{25.000660485882104, 44.06788945203489}</string>
-								<string>{17.220754456429042, 48.965615223098197}</string>
-							</array>
-							<array>
-								<string>{-17.220754456429038, 48.965615223098197}</string>
-								<string>{17.220754456429042, 48.965615223098197}</string>
-								<string>{8.7790644907257729, 51.981619861371215}</string>
-							</array>
-							<array>
-								<string>{-8.7790644907257693, 51.981619861371215}</string>
-								<string>{-17.220754456429038, 48.965615223098197}</string>
-								<string>{8.7790644907257729, 51.981619861371215}</string>
-							</array>
-							<array>
-								<string>{-8.7790644907257693, 51.981619861371215}</string>
-								<string>{8.7790644907257729, 51.981619861371215}</string>
-								<string>{2.7554552980815448e-15, 53}</string>
+								<string>{28.284271240234375, 33.941123962402344}</string>
+								<string>{22.222808837890625, 39.910541534423828}</string>
+								<string>{15.307337760925293, 44.346218109130859}</string>
+								<string>{7.8036127090454102, 47.077693939208984}</string>
+								<string>{2.4492935992912173e-15, 48}</string>
+								<string>{-7.8036127090454102, 47.077693939208984}</string>
+								<string>{-15.307337760925293, 44.346218109130859}</string>
+								<string>{-22.222808837890625, 39.910541534423828}</string>
 							</array>
 						</array>
 						<key>shape</key>
@@ -623,7 +523,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_PUBLISH_FOLDER/</string>
 					<key>rotation</key>
@@ -631,7 +531,7 @@
 					<key>scale</key>
 					<string>{2, 2}</string>
 					<key>size</key>
-					<string>{90, 106}</string>
+					<string>{80, 96}</string>
 					<key>spriteName</key>
 					<string>object_backpack</string>
 					<key>spriteUUID</key>
@@ -695,7 +595,7 @@
 					<key>nodeType</key>
 					<string>LHBezier</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>points</key>
 					<array>
 						<dict>
@@ -786,7 +686,7 @@
 					<key>nodeType</key>
 					<string>LHTexturedShape</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>points</key>
 					<array>
 						<dict>
@@ -966,7 +866,7 @@
 					<key>nodeType</key>
 					<string>LHTexturedShape</string>
 					<key>parentUUID</key>
-					<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>points</key>
 					<array>
 						<dict>
@@ -1121,36 +1021,6 @@
 			</array>
 			<key>uuid</key>
 			<string>B70336B0-BA63-4EE1-90CA-753FAD1D179E</string>
-			<key>zOrder</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>alpha</key>
-			<real>255</real>
-			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
-			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
-			<key>generalPosition</key>
-			<string>{0, 0}</string>
-			<key>name</key>
-			<string>USER INTERFACE</string>
-			<key>nodeType</key>
-			<string>LHUINode</string>
-			<key>parentUUID</key>
-			<string>7A24F9B3-2F39-49C5-A840-0FCAFABEBD3D</string>
-			<key>rotation</key>
-			<real>0.0</real>
-			<key>scale</key>
-			<string>{1, 1}</string>
-			<key>size</key>
-			<string>{128, 128}</string>
-			<key>tags</key>
-			<array>
-				<string>DEFAULT</string>
-			</array>
-			<key>uuid</key>
-			<string>2CB524B6-18F2-4CF3-B417-7AEC057711DB</string>
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
@@ -2210,6 +2080,36 @@
 			<key>zOrder</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.5, 0.5}</string>
+			<key>colorOverlay</key>
+			<string>{{1, 1}, {1, 1}}</string>
+			<key>generalPosition</key>
+			<string>{0, 0}</string>
+			<key>name</key>
+			<string>FRONT USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>7A24F9B3-2F39-49C5-A840-0FCAFABEBD3D</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1, 1}</string>
+			<key>size</key>
+			<string>{128, 128}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>2CB524B6-18F2-4CF3-B417-7AEC057711DB</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>designResolution</key>
 	<string>{960, 640}</string>
@@ -2268,184 +2168,126 @@
 		<string>{{0.026682263240218163, 0.025342131033539772}, {0.95488196611404419, 0.95488607883453369}}</string>
 	</dict>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>B0BCB8C2-1C3C-48C6-8FC8-0D68B702AB86</key>
+		<key>0C860B8B-476B-4B61-9A00-FF41CF39F502</key>
 		<array>
 			<array>
-				<string>{-4.75, -31.5}</string>
-				<string>{5.25, -31.5}</string>
-				<string>{7.25, -30.5}</string>
-				<string>{7.75, -21.5}</string>
-				<string>{-5.25, -31}</string>
+				<string>{-13.5, -19.75}</string>
+				<string>{-8.5, -20.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{-17, -16.25}</string>
 			</array>
 			<array>
-				<string>{-7.75, -29}</string>
-				<string>{-5.25, -31}</string>
-				<string>{7.75, -21.5}</string>
-				<string>{-7.75, -21}</string>
+				<string>{16, -18.25}</string>
+				<string>{20, -3.75}</string>
+				<string>{20.5, 9.75}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{9, -22.25}</string>
 			</array>
 			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{14.75, 29.5}</string>
-				<string>{9.25, 31.5}</string>
+				<string>{-6.5, -29.75}</string>
+				<string>{-4, -31.75}</string>
+				<string>{8.5, -31.25}</string>
+				<string>{-6.5, -21.75}</string>
 			</array>
 			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{9.25, 31.5}</string>
-				<string>{2.25, 32.5}</string>
+				<string>{-18.5, 29.25}</string>
+				<string>{-20, 25.75}</string>
+				<string>{-21, 19.25}</string>
+				<string>{-21, 11.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{20.5, 9.75}</string>
+				<string>{3.5, 31.75}</string>
+				<string>{-15.5, 31.75}</string>
 			</array>
 			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{2.25, 32.5}</string>
-				<string>{-16.75, 32.5}</string>
+				<string>{16, 28.75}</string>
+				<string>{10.5, 30.75}</string>
+				<string>{3.5, 31.75}</string>
+				<string>{20.5, 9.75}</string>
 			</array>
 			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{-16.75, 32.5}</string>
-				<string>{-19.75, 30}</string>
+				<string>{9, -22.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{-8.5, -20.25}</string>
+				<string>{8.5, -31.25}</string>
 			</array>
 			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{-19.75, 30}</string>
-				<string>{-21.25, 26.5}</string>
+				<string>{6.5, -32.25}</string>
+				<string>{8.5, -31.25}</string>
+				<string>{-4, -31.75}</string>
+				<string>{-3.5, -32.25}</string>
 			</array>
 			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{-21.25, 26.5}</string>
-				<string>{-22.25, 20}</string>
-			</array>
-			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{-22.25, 20}</string>
-				<string>{-22.25, 12}</string>
-			</array>
-			<array>
-				<string>{19.25, 10.5}</string>
-				<string>{-22.25, 12}</string>
-				<string>{-19.75, -12.5}</string>
-			</array>
-			<array>
-				<string>{18.75, -3}</string>
-				<string>{19.25, 10.5}</string>
-				<string>{-19.75, -12.5}</string>
-			</array>
-			<array>
-				<string>{14.75, -17.5}</string>
-				<string>{18.75, -3}</string>
-				<string>{-19.75, -12.5}</string>
-			</array>
-			<array>
-				<string>{7.75, -21.5}</string>
-				<string>{14.75, -17.5}</string>
-				<string>{-19.75, -12.5}</string>
-			</array>
-			<array>
-				<string>{-9.75, -19.5}</string>
-				<string>{7.75, -21.5}</string>
-				<string>{-19.75, -12.5}</string>
-			</array>
-			<array>
-				<string>{-9.75, -19.5}</string>
-				<string>{-19.75, -12.5}</string>
-				<string>{-18.25, -15.5}</string>
-			</array>
-			<array>
-				<string>{-18.25, -15.5}</string>
-				<string>{-14.75, -19}</string>
-				<string>{-9.75, -19.5}</string>
-			</array>
-			<array>
-				<string>{-7.75, -21}</string>
-				<string>{7.75, -21.5}</string>
-				<string>{-9.75, -19.5}</string>
+				<string>{-8.5, -20.25}</string>
+				<string>{-6.5, -21.75}</string>
+				<string>{8.5, -31.25}</string>
 			</array>
 		</array>
-		<key>C31B29C8-CBF9-4D2B-B65A-CE9BEB9A48A7</key>
+		<key>B8F5D6B8-59BF-4704-B713-4DADBC59E207</key>
 		<array>
 			<array>
-				<string>{2.75, -10}</string>
-				<string>{25.75, -26.5}</string>
-				<string>{30.75, -25.5}</string>
-				<string>{31.25, -16.5}</string>
-				<string>{30.25, 17.5}</string>
-				<string>{19.25, 24}</string>
-				<string>{6.25, 27}</string>
+				<string>{28.5, -24.75}</string>
+				<string>{29, -15.75}</string>
+				<string>{0.5, -9.25}</string>
+				<string>{23.5, -25.75}</string>
 			</array>
 			<array>
-				<string>{31.25, -16.5}</string>
-				<string>{36.75, -15}</string>
-				<string>{38.25, -11.5}</string>
-				<string>{39.75, 3}</string>
-				<string>{37.25, 9}</string>
-				<string>{30.25, 17.5}</string>
+				<string>{-26.5, -22.25}</string>
+				<string>{-26, -13.25}</string>
+				<string>{-36, -10.25}</string>
+				<string>{-36, -25.75}</string>
+				<string>{-35.5, -26.25}</string>
+				<string>{-32, -26.25}</string>
 			</array>
 			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-33.75, -11}</string>
+				<string>{34.5, -14.25}</string>
+				<string>{36, -10.75}</string>
+				<string>{37.5, 3.75}</string>
+				<string>{35, 9.75}</string>
+				<string>{28, 18.25}</string>
+				<string>{17, 24.75}</string>
+				<string>{0.5, -9.25}</string>
+				<string>{29, -15.75}</string>
 			</array>
 			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-36.75, -15}</string>
+				<string>{-38.5, -13.25}</string>
+				<string>{-38.5, -21.75}</string>
+				<string>{-36, -25.75}</string>
+				<string>{-36, -10.25}</string>
 			</array>
 			<array>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -15}</string>
-				<string>{-36.75, -21}</string>
+				<string>{-38.5, 3.25}</string>
+				<string>{-36, -10.25}</string>
+				<string>{-18.5, -8.75}</string>
+				<string>{-13, -7.25}</string>
+				<string>{-19.5, 24.75}</string>
+				<string>{-28, 19.75}</string>
+				<string>{-35.5, 11.25}</string>
 			</array>
 			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-24.25, -23}</string>
-				<string>{-36.75, -21}</string>
+				<string>{0.5, -9.25}</string>
+				<string>{17, 24.75}</string>
+				<string>{10.5, 26.75}</string>
+				<string>{-13.5, 26.75}</string>
+				<string>{-19.5, 24.75}</string>
+				<string>{-7, -7.25}</string>
 			</array>
 			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-36.75, -21}</string>
-				<string>{-35.75, -24}</string>
+				<string>{-7, -7.25}</string>
+				<string>{-19.5, 24.75}</string>
+				<string>{-13, -7.25}</string>
 			</array>
 			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-35.75, -24}</string>
-				<string>{-33.75, -26.5}</string>
-			</array>
-			<array>
-				<string>{-29.75, -27}</string>
-				<string>{-33.75, -26.5}</string>
-				<string>{-33.25, -27}</string>
-			</array>
-			<array>
-				<string>{-33.25, 10.5}</string>
-				<string>{-36.25, 2.5}</string>
-				<string>{-33.75, -11}</string>
-				<string>{-23.75, -14}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-25.75, 19}</string>
-			</array>
-			<array>
-				<string>{-17.25, 24}</string>
-				<string>{-25.75, 19}</string>
-				<string>{-16.25, -9.5}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-11.25, 26}</string>
-			</array>
-			<array>
-				<string>{-5.25, 27}</string>
-				<string>{-11.25, 26}</string>
-				<string>{-10.75, -8}</string>
-				<string>{-4.75, -8}</string>
-				<string>{6.25, 27}</string>
-			</array>
-			<array>
-				<string>{6.25, 27}</string>
-				<string>{-4.75, -8}</string>
-				<string>{2.75, -10}</string>
+				<string>{-18.5, -8.75}</string>
+				<string>{-36, -10.25}</string>
+				<string>{-26, -13.25}</string>
 			</array>
 		</array>
 	</dict>
