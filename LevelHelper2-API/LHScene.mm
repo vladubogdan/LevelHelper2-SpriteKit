@@ -604,10 +604,12 @@
 
 
 #pragma mark- COLLISION HANDLING
-#if LH_USE_BOX2D
 -(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del{
     _collisionsDelegate = del;
 }
+
+#if LH_USE_BOX2D
+
 -(BOOL)shouldDisableContactBetweenNodeA:(SKNode*)a
                                andNodeB:(SKNode*)b{
     if(_collisionsDelegate){
