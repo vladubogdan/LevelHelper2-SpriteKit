@@ -5,7 +5,7 @@
 	<key>aspect</key>
 	<integer>2</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 0.99997437000274658}, {0.99999129772186279, 1}}</string>
+	<string>{{1, 1}, {1, 1}}</string>
 	<key>children</key>
 	<array>
 		<dict>
@@ -31,7 +31,7 @@
 					<key>nodeType</key>
 					<string>LHSprite</string>
 					<key>parentUUID</key>
-					<string>C8EAC234-6E4B-40DB-A2AF-8003EC624E9E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>DEMO_INDIVIDUAL_IMAGES_EXAMPLE/</string>
 					<key>rotation</key>
@@ -67,7 +67,7 @@
 					<key>nodeType</key>
 					<string>LHRopeJoint</string>
 					<key>parentUUID</key>
-					<string>C8EAC234-6E4B-40DB-A2AF-8003EC624E9E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativeImagePath</key>
 					<string>/LevelHelper2-SpriteKit/Resources/images/cartoonRope.png</string>
 					<key>relativePosA</key>
@@ -1756,7 +1756,7 @@
 					<key>nodeType</key>
 					<string>LHNode</string>
 					<key>parentUUID</key>
-					<string>C8EAC234-6E4B-40DB-A2AF-8003EC624E9E</string>
+					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>perDevicePosition</key>
 					<true/>
 					<key>rotation</key>
@@ -1810,7 +1810,7 @@
 			<key>generalPosition</key>
 			<string>{0, 0}</string>
 			<key>name</key>
-			<string>USER INTERFACE</string>
+			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
 			<string>LHUINode</string>
 			<key>parentUUID</key>
@@ -1828,7 +1828,7 @@
 			<key>uuid</key>
 			<string>E98022D1-98D6-46D8-9660-1F6782D02462</string>
 			<key>zOrder</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>designResolution</key>
@@ -1888,7 +1888,7 @@
 		<string>{{-0.030596526339650154, -0.09926392138004303}, {1.0619012117385864, 1.2009766101837158}}</string>
 	</dict>
 	<key>sceneFormat</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>tags</key>
 	<array>
 		<string>DEFAULT</string>

@@ -24,7 +24,7 @@
 
 +(id)scene
 {
-    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionFilteringTest.plist"];
+    return [[self alloc] initWithContentOfFile:@"DEMO_PUBLISH_FOLDER/collisionFilteringTest.lhplist"];
 }
 
 -(id)initWithContentOfFile:(NSString *)levelPlistFile{

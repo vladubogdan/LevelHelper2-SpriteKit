@@ -13,6 +13,7 @@
 		6E1AAB881973C75400E8ECCE /* LHUserProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */; };
 		6E4C5055195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */; };
 		6E4C5056195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */; };
+		6E5E4A4C1978CEF200DEFB02 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FD0A192E0A390040478F /* Main_iPhone.storyboard */; };
 		6E60BBAA196295E8001D3906 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBA9196295E8001D3906 /* LHSceneIntroduction.mm */; };
 		6E60BBAB196295E8001D3906 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBA9196295E8001D3906 /* LHSceneIntroduction.mm */; };
 		6E60BBB319629D86001D3906 /* LHBackUINode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E60BBB219629D86001D3906 /* LHBackUINode.mm */; };
@@ -151,11 +152,8 @@
 		6EBEA3301959BFD000726044 /* DEMO_PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FD36192E0C280040478F /* DEMO_PUBLISH_FOLDER */; };
 		6EBEA3311959BFD000726044 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FD18192E0A390040478F /* Images.xcassets */; };
 		6EBEA3321959BFD000726044 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FD0D192E0A390040478F /* Main_iPad.storyboard */; };
-		6EBEA3331959BFD000726044 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FD0A192E0A390040478F /* Main_iPhone.storyboard */; };
 		6EBEA3341959BFD000726044 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FD01192E0A390040478F /* InfoPlist.strings */; };
 		6EBEA33B1959C01800726044 /* Info-Box2d.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33A1959C01800726044 /* Info-Box2d.plist */; };
-		6EBEA3A11959C0F600726044 /* Box2DConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33E1959C0F600726044 /* Box2DConfig.cmake */; };
-		6EBEA3A21959C0F600726044 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33F1959C0F600726044 /* CMakeLists.txt */; };
 		6EBEA3A31959C0F600726044 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA3411959C0F600726044 /* b2BroadPhase.cpp */; };
 		6EBEA3A41959C0F600726044 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA3431959C0F600726044 /* b2CollideCircle.cpp */; };
 		6EBEA3A51959C0F600726044 /* b2CollideEdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEA3441959C0F600726044 /* b2CollideEdge.cpp */; };
@@ -358,11 +356,9 @@
 		6EBEA2F31959A46700726044 /* LHScenePhysicsBodiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHScenePhysicsBodiesDemo.h; sourceTree = "<group>"; };
 		6EBEA2F41959A46700726044 /* LHScenePhysicsBodiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHScenePhysicsBodiesDemo.mm; sourceTree = "<group>"; };
 		6EBEA2F61959A5EC00726044 /* LHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHConfig.h; sourceTree = "<group>"; };
-		6EBEA3381959BFD000726044 /* LevelHelper2-SpriteKit copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-SpriteKit copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBEA3381959BFD000726044 /* LevelHelper2-SpriteKit+Box2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-SpriteKit+Box2d.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBEA33A1959C01800726044 /* Info-Box2d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Box2d.plist"; sourceTree = SOURCE_ROOT; };
 		6EBEA33D1959C0F600726044 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
-		6EBEA33E1959C0F600726044 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
-		6EBEA33F1959C0F600726044 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		6EBEA3411959C0F600726044 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
 		6EBEA3421959C0F600726044 /* b2BroadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BroadPhase.h; sourceTree = "<group>"; };
 		6EBEA3431959C0F600726044 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2CollideCircle.cpp; sourceTree = "<group>"; };
@@ -519,7 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				6E89FCF3192E0A390040478F /* LevelHelper2-SpriteKit.app */,
-				6EBEA3381959BFD000726044 /* LevelHelper2-SpriteKit copy.app */,
+				6EBEA3381959BFD000726044 /* LevelHelper2-SpriteKit+Box2d.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -772,8 +768,6 @@
 			isa = PBXGroup;
 			children = (
 				6EBEA33D1959C0F600726044 /* Box2D.h */,
-				6EBEA33E1959C0F600726044 /* Box2DConfig.cmake */,
-				6EBEA33F1959C0F600726044 /* CMakeLists.txt */,
 				6EBEA3401959C0F600726044 /* Collision */,
 				6EBEA3581959C0F600726044 /* Common */,
 				6EBEA3661959C0F600726044 /* Dynamics */,
@@ -960,7 +954,7 @@
 			);
 			name = "LevelHelper2-SpriteKit + Box2d";
 			productName = "LevelHelper2-SpriteKit";
-			productReference = 6EBEA3381959BFD000726044 /* LevelHelper2-SpriteKit copy.app */;
+			productReference = 6EBEA3381959BFD000726044 /* LevelHelper2-SpriteKit+Box2d.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -985,8 +979,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E89FCF2192E0A390040478F /* LevelHelper2-SpriteKit */,
 				6EBEA2F71959BFD000726044 /* LevelHelper2-SpriteKit + Box2d */,
+				6E89FCF2192E0A390040478F /* LevelHelper2-SpriteKit */,
 			);
 		};
 /* End PBXProject section */
@@ -1014,10 +1008,8 @@
 				6EBEA3311959BFD000726044 /* Images.xcassets in Resources */,
 				6EBEA33B1959C01800726044 /* Info-Box2d.plist in Resources */,
 				6EBEA3321959BFD000726044 /* Main_iPad.storyboard in Resources */,
-				6EBEA3A11959C0F600726044 /* Box2DConfig.cmake in Resources */,
-				6EBEA3331959BFD000726044 /* Main_iPhone.storyboard in Resources */,
+				6E5E4A4C1978CEF200DEFB02 /* Main_iPhone.storyboard in Resources */,
 				6EBEA3341959BFD000726044 /* InfoPlist.strings in Resources */,
-				6EBEA3A21959C0F600726044 /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,7 +1028,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#xcode has a problem updating folder referecence so we touch it in order to build with latest changes\n#this script must be before Copy Bundle Resources\ntouch -cm ${SRCROOT}/DEMO_PUBLISH_FOLDER";
+			shellScript = "#xcode has a problem updating folder referecence so we touch it in order to build with latest changes\n#this script must be before Copy Bundle Resources\ntouch -cm ${SRCROOT}";
 		};
 		6EBD3DAB195BDE9A00C7B929 /* Xcode5 Fix */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1050,7 +1042,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#xcode has a problem updating folder referecence so we touch it in order to build with latest changes\n#this script must be before Copy Bundle Resources\ntouch -cm ${SRCROOT}/DEMO_PUBLISH_FOLDER";
+			shellScript = "#xcode has a problem updating folder referecence so we touch it in order to build with latest changes\n#this script must be before Copy Bundle Resources\ntouch -cm ${SRCROOT}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1397,7 +1389,7 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d.plist";
-				PRODUCT_NAME = "LevelHelper2-SpriteKit copy";
+				PRODUCT_NAME = "LevelHelper2-SpriteKit+Box2d";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1416,7 +1408,7 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d.plist";
-				PRODUCT_NAME = "LevelHelper2-SpriteKit copy";
+				PRODUCT_NAME = "LevelHelper2-SpriteKit+Box2d";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};

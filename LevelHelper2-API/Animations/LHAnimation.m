@@ -200,8 +200,8 @@
             [[node scene] didFinishedRepetitionOnAnimation:self];
         }
         else{
-            [[node scene] didFinishedPlayingAnimation:self];
             [node setActiveAnimation:nil];
+            [[node scene] didFinishedPlayingAnimation:self];
         }
     }
     previousTime = currentTime;
