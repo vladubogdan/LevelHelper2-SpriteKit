@@ -13,8 +13,8 @@
 
 /**
  LHShape class is used to load and display a shape from a level file.
- Users can retrieve a shape objects by calling the scene (LHScene) childNodeWithName: method.
- Note: While the class cannot yet display textures but only colored shape, I hope that in the future Apple will add this functionality into SpriteKit.
+
+ Note: LHShape cannot yet display textures but only colored shapes, As soon as Apple adds this functionality into SpriteKit, LevelHelper will support it also.
  */
 
 

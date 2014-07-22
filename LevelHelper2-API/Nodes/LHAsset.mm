@@ -51,10 +51,7 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        
         _size = [dict sizeForKey:@"size"];
-        
-
 #if LH_USE_BOX2D
         {
             CGPoint scl = [dict pointForKey:@"scale"];
@@ -115,28 +112,55 @@
         LHScene* scene = (LHScene*)[prnt scene];
 
         NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
-        
-        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
-        
-        
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolWithNode:self];
-        
-        
-        if(assetInfo)
-        {
-            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
-        }
-        else{
+
+        if(!assetInfo){
             NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+            return self;
         }
+
         
-        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:nil
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:assetInfo
+                                                                                    node:self];
+        _size = [assetInfo sizeForKey:@"size"];
+        
+#if LH_USE_BOX2D
+        {
+            [self setXScale:1];
+            [self setYScale:1];
+        }
+#endif
+        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
+                                                                                                node:self];
+        
+        //scale must be set after loading the physic info or else spritekit will not resize the sprite anymore - bug
+        [self setXScale:1];
+        [self setYScale:1];
+
+        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:assetInfo
                                                                                                       node:self];
+        
+        
+//#if LH_DEBUG
+//        SKShapeNode* debugShapeNode = [SKShapeNode node];
+//        CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
+//                                                            -_size.height*0.5,
+//                                                            _size.width,
+//                                                            _size.height),
+//                                                 nil);
+//        debugShapeNode.path = pathRef;
+//        CGPathRelease(pathRef);
+//        debugShapeNode.strokeColor = [SKColor greenColor];
+//        [self addChild:debugShapeNode];
+//#endif
+
     }
     
     return self;
 }
-
 
 
 
@@ -154,16 +178,16 @@ LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 
 
-
 #pragma mark LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
+
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
+    [_physicsProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
     [_animationProtocolImp update:currentTime delta:dt];
 }
-
 
 #pragma mark - LHNodeAnimationProtocol Required
 LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION

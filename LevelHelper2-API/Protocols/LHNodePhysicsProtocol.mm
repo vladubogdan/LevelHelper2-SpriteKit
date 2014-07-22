@@ -10,6 +10,7 @@
 #import "LHUtils.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
+#import "SKNode+Transforms.h"
 
 #import "LHBezier.h"
 #import "LHShape.h"
@@ -19,6 +20,10 @@
 #import "SKNode+Transforms.h"
 
 #import "LHGameWorldNode.h"
+#import "LHUINode.h"
+#import "LHBackUINode.h"
+
+#import "LHAsset.h"
 #import "LHNode.h"
 
 #if LH_USE_BOX2D
@@ -402,9 +407,8 @@
     if(_body){
         CGAffineTransform trans = b2BodyToParentTransform(_node, self);
         CGPoint localPos = CGPointApplyAffineTransform([_node anchorPointInPoints], trans);
-        
         [((LHNode*)_node) updatePosition:localPos];
-        [((LHNode*)_node) updateZRotation:_body->GetAngle()];
+        [((LHNode*)_node) updateZRotation:[_node localAngleFromGlobalAngle:_body->GetAngle()]];
     }
 }
 
@@ -415,7 +419,10 @@ static inline CGAffineTransform b2BodyToParentTransform(SKNode *node, LHNodePhys
 static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 {
 	CGAffineTransform transform = CGAffineTransformIdentity;
-	for(SKNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]; n = n.parent){
+	for(SKNode *n = node; n &&  ![n isKindOfClass:[LHGameWorldNode class]]&&
+                                ![n isKindOfClass:[LHUINode class]] &&
+                                ![n isKindOfClass:[LHBackUINode class]];
+        n = n.parent){
 		transform = CGAffineTransformConcat(transform, n.nodeToParentTransform);
 	}
 	return transform;
@@ -450,8 +457,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
     {
         CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-        _body->SetTransform(b2Pos, [_node zRotation]);
-        _body->SetAwake(true);
+        
+//        CGAffineTransform trans = [_node nodeToWorldTransform];
+//        float globalAngle = LH_RADIANS_TO_DEGREES(atan2(trans.b, trans.a));
+        
+        _body->SetTransform(b2Pos, [_node globalAngleFromLocalAngle:[_node zRotation]]);
+        _body->SetAwake(true);        
     }
 }
 
@@ -511,6 +522,10 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         
         float scaleX = [_node xScale];
         float scaleY = [_node yScale];
+
+        CGPoint globalScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
+        scaleX = globalScale.x;
+        scaleY = globalScale.y;
         
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");

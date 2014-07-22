@@ -130,4 +130,41 @@
     return [node convertToNodeSpace:worldPt];
 }
 
+-(CGPoint)convertToWorldScale:(CGPoint)nodeScale{
+    for (SKNode *p = self.parent; p != nil && ![p isKindOfClass:[SKScene class]]; p = p.parent)
+    {
+        CGPoint scalePt = CGPointMake(p.xScale, p.yScale);
+        nodeScale.x *= scalePt.x;
+        nodeScale.y *= scalePt.y;
+    }
+    return nodeScale;
+}
+-(CGPoint)convertToNodeScale:(CGPoint)worldScale{
+    for (SKNode *p = self.parent; p != nil && ![p isKindOfClass:[SKScene class]]; p = p.parent)
+    {
+        CGPoint scalePt = CGPointMake(p.xScale, p.yScale);
+        worldScale.x /= scalePt.x;
+        worldScale.y /= scalePt.y;
+    }
+    return worldScale;
+}
+
+-(float)globalAngleFromLocalAngle:(float)la{
+    SKNode* prnt = [self parent];
+    while(prnt && ![prnt isKindOfClass:[SKScene class]]){
+        la += [prnt zRotation];
+        prnt = [prnt parent];
+    }
+    return la;
+}
+
+-(float)localAngleFromGlobalAngle:(float)ga{
+    SKNode* prnt = [self parent];
+    while(prnt && ![prnt isKindOfClass:[SKScene class]]){
+        ga -= [prnt zRotation];
+        prnt = [prnt parent];
+    }
+    return ga;
+}
+
 @end

@@ -113,9 +113,6 @@
     return _shapeTriangles;
 }
 
-/**
- Returns the outline points of the shape. Array with NSValue with CGPoint.
- */
 -(NSMutableArray*)outlinePoints{
     return _outlinePoints;
 }
@@ -144,9 +141,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
-    [_animationProtocolImp update:currentTime delta:dt];
-    [_nodeProtocolImp update:currentTime delta:dt];
     [_physicsProtocolImp update:currentTime delta:dt];
+    [_nodeProtocolImp update:currentTime delta:dt];
+    [_animationProtocolImp update:currentTime delta:dt]; 
 }
 
 

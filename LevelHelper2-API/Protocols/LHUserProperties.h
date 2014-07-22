@@ -6,6 +6,8 @@
 #import "LHUserPropertyProtocol.h"
 
 
+#ifndef __LH_USER_PROPERTY_ROBOTUSERPROPERTY__
+#define __LH_USER_PROPERTY_ROBOTUSERPROPERTY__
 @interface RobotUserProperty : NSObject<LHUserPropertyProtocol>
 
 @property float life;
@@ -24,8 +26,11 @@
 -(void) setPropertiesFromDictionary:(NSDictionary*)dictionary;
 
 @end
+#endif //__LH_USER_PROPERTY_ROBOTUSERPROPERTY__
 
 
+#ifndef __LH_USER_PROPERTY_OTHERPROPERTYCLASS__
+#define __LH_USER_PROPERTY_OTHERPROPERTYCLASS__
 @interface OtherPropertyClass : NSObject<LHUserPropertyProtocol>
 
 @property (nonatomic, retain) NSString* memberA;
@@ -43,4 +48,5 @@
 -(void) setPropertiesFromDictionary:(NSDictionary*)dictionary;
 
 @end
+#endif //__LH_USER_PROPERTY_OTHERPROPERTYCLASS__
 

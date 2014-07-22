@@ -186,9 +186,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
+    [_physicsProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
     [_animationProtocolImp update:currentTime delta:dt];
-    [_physicsProtocolImp update:currentTime delta:dt];
 }
 
 

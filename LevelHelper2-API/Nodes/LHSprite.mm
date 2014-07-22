@@ -94,11 +94,9 @@
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-//#if LH_USE_BOX2D== 0
         CGPoint scl = [dict pointForKey:@"scale"];
         [self setXScale:scl.x];
         [self setYScale:scl.y];
-//#endif
         
     
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
@@ -147,8 +145,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
     [_physicsProtocolImp update:currentTime delta:dt];
-    [_animationProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
+    [_animationProtocolImp update:currentTime delta:dt];    
 }
 
 #pragma mark - LHNodeAnimationProtocol Required
