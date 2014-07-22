@@ -455,12 +455,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
+        CGPoint worldPos = [[_node parent] convertToWorldSpaceAR:CGPointZero];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-        
-//        CGAffineTransform trans = [_node nodeToWorldTransform];
-//        float globalAngle = LH_RADIANS_TO_DEGREES(atan2(trans.b, trans.a));
-        
         _body->SetTransform(b2Pos, [_node globalAngleFromLocalAngle:[_node zRotation]]);
         _body->SetAwake(true);        
     }

@@ -112,8 +112,9 @@
                 }
             }
         }
-    }
 #endif
+        
+    }
     
     return self;
 }
