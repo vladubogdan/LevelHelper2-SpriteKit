@@ -18,6 +18,8 @@
 
 @implementation LHAsset
 {
+    NSDictionary* _tracedFixtures;
+    
     CGSize _size;
     
     LHNodeProtocolImpl*         _nodeProtocolImp;
@@ -26,6 +28,7 @@
 }
 
 -(void)dealloc{
+    LH_SAFE_RELEASE(_tracedFixtures);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
     LH_SAFE_RELEASE(_physicsProtocolImp);
@@ -74,6 +77,11 @@
         
         if(assetInfo)
         {
+            NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+            if(tracedFix){
+                _tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+            }
+
             [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
         }
         else{
@@ -119,16 +127,14 @@
         }
 
         
+        NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+        if(tracedFix){
+            _tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+        }
+
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:assetInfo
                                                                                     node:self];
         _size = [assetInfo sizeForKey:@"size"];
-        
-#if LH_USE_BOX2D
-        {
-            [self setXScale:1];
-            [self setYScale:1];
-        }
-#endif
         
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
                                                                                                 node:self];
@@ -156,13 +162,16 @@
 //        debugShapeNode.strokeColor = [SKColor greenColor];
 //        [self addChild:debugShapeNode];
 //#endif
-
+        
+        [self update:0 delta:0];
     }
     
     return self;
 }
 
-
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
+    return [_tracedFixtures objectForKey:uuid];
+}
 
 -(CGSize)size{
     return _size;

@@ -30,9 +30,9 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{93, 91}</string>
+					<string>{85, 85}</string>
 					<key>textureRect</key>
-					<string>{{0, 144}, {93, 91}}</string>
+					<string>{{268, 4}, {85, 85}}</string>
 					<key>textureRotated</key>
 					<false/>
 				</dict>
@@ -44,9 +44,9 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{359, 190}</string>
+					<string>{335, 135}</string>
 					<key>textureRect</key>
-					<string>{{-6, -10}, {359, 190}}</string>
+					<string>{{4, 97}, {335, 135}}</string>
 					<key>textureRotated</key>
 					<false/>
 				</dict>
@@ -60,7 +60,7 @@
 					<key>spriteSourceSize</key>
 					<string>{256, 64}</string>
 					<key>textureRect</key>
-					<string>{{97, 147}, {256, 64}}</string>
+					<string>{{4, 4}, {256, 64}}</string>
 					<key>textureRotated</key>
 					<false/>
 				</dict>
@@ -81,9 +81,9 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{47, 46}</string>
+					<string>{43, 43}</string>
 					<key>textureRect</key>
-					<string>{{0, 72}, {47, 46}}</string>
+					<string>{{134, 3}, {43, 43}}</string>
 					<key>textureRotated</key>
 					<false/>
 				</dict>
@@ -95,9 +95,9 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{180, 95}</string>
+					<string>{168, 68}</string>
 					<key>textureRect</key>
-					<string>{{-3, -5}, {180, 95}}</string>
+					<string>{{2, 49}, {168, 68}}</string>
 					<key>textureRotated</key>
 					<false/>
 				</dict>
@@ -111,58 +111,7 @@
 					<key>spriteSourceSize</key>
 					<string>{128, 32}</string>
 					<key>textureRect</key>
-					<string>{{49, 74}, {128, 32}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>path</key>
-			<string>carParts-ipad.png</string>
-			<key>size</key>
-			<string>{178, 118}</string>
-			<key>subimages</key>
-			<array>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>carTyre</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{47, 46}</string>
-					<key>textureRect</key>
-					<string>{{0, 72}, {47, 46}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>carBody</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{180, 95}</string>
-					<key>textureRect</key>
-					<string>{{-3, -5}, {180, 95}}</string>
-					<key>textureRotated</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>isFullyOpaque</key>
-					<false/>
-					<key>name</key>
-					<string>wood</string>
-					<key>spriteOffset</key>
-					<string>{0, 0}</string>
-					<key>spriteSourceSize</key>
-					<string>{128, 32}</string>
-					<key>textureRect</key>
-					<string>{{49, 74}, {128, 32}}</string>
+					<string>{{2, 2}, {128, 32}}</string>
 					<key>textureRotated</key>
 					<false/>
 				</dict>

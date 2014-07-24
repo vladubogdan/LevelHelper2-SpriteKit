@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748767554759979, 1}}</string>
+			<string>{{0.039420317858457565, 0}, {0.040748722851276398, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748767554759979, 1}}</string>
+			<string>{{0.039420317858457565, 0}, {0.040748722851276398, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -163,7 +163,17 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>simpleCar.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>spriteSheetAnimationDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>tst.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

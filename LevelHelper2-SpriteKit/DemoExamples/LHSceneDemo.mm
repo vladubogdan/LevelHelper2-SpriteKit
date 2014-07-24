@@ -26,6 +26,7 @@
 #import "LHSceneBeziersDemo.h"
 #import "LHSceneCollisionDemo.h"
 #import "LHSceneUserPropertiesDemo.h"
+#import "LHSceneAssetWithJointsDemo.h"
 
 @implementation LHSceneDemo
 {
@@ -57,6 +58,7 @@
         [availableScenes addObject:[LHSceneParallaxDemo class]];
         [availableScenes addObject:[LHSceneCharacterAnimationDemo class]];
         [availableScenes addObject:[LHSceneAssetsDemo class]];
+        [availableScenes addObject:[LHSceneAssetWithJointsDemo class]];
         [availableScenes addObject:[LHSceneRopeJointDemo class]];
         [availableScenes addObject:[LHSceneWaterAreaDemo class]];
         [availableScenes addObject:[LHSceneGravityAreas class]];

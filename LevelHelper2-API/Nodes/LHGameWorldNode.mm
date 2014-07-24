@@ -478,6 +478,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         _debugNode = drawNode;
         
         _debugNode.position = CGPointZero;
+        
     }
     return _box2dWorld;
 }
@@ -530,7 +531,10 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 	}
 	[self box2dWorld]->ClearForces ();
     
+#if LH_DEBUG
     [_debugNode draw];
+#endif
+    
 }
 
 -(void)afterStep:(float)dt {

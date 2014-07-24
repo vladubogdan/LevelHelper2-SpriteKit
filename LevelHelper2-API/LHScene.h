@@ -131,7 +131,14 @@
  */
 -(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del;
 
+/**
+ Overwrite this method to receive notifications when an animation has finished playing. This method is called once, after all repetitions have finished playing.
+ */
 -(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
+
+/**
+ Overwrite this method to receive notifications when an animation has finished playing a repetition.
+ */
 -(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
 
 
@@ -152,7 +159,7 @@
  This method is called prior the collision happening and lets the user decide whether or not the collision should happen. 
   @param a First node that participates in the collision.
   @param b Second node that participates in the collision.
-  @return A boolean value telling whether or not the 2 nodes should collide. Default is YES.
+  @return A boolean value telling whether or not the 2 nodes should collide.
   @discussion Available only when using Box2d.
   @discussion Useful when you have a character that jumps from platform to platform. When the character is under the platform you want to disable collision, but once the character is on top of the platform you want the collision to be triggers in order for the character to stay on top of the platform.
  */

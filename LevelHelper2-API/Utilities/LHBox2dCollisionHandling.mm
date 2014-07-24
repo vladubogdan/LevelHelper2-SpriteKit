@@ -262,6 +262,13 @@ void lhContactEndContactCaller(void* object,
     SKNode* nodeA = [self getNodeAFromContact:contact];
     SKNode* nodeB = [self getNodeBFromContact:contact];
     if(!nodeA || !nodeB)return;
+    
+    //call this for sensor objects
+    [_scene didBeginContactBetweenNodeA:nodeA
+                               andNodeB:nodeB
+                             atLocation:[self getPointFromContact:contact]
+                            withImpulse:0];
+
 //    [_activeContacts addObject:[LHActiveContact activeContactWithA:nodeA
 //                                                                 b:nodeB
 //                                                          disabled:NO

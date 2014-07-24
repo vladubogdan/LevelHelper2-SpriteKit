@@ -39,6 +39,9 @@
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 @end
 
+@interface LHAsset (LH_ASSET_NODES_PRIVATE_UTILS)
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
+@end
 
 @interface LHShape (PHYSICS_TRIANGLES)
 -(NSMutableArray*)shapeTriangles;
@@ -73,6 +76,16 @@
 
 -(SKNode*)node{
     return _node;
+}
+
+-(LHAsset*)assetParent{
+    SKNode* p = _node;
+    while(p && [p parent]){
+        if([p isKindOfClass:[LHAsset class]])
+            return (LHAsset*)p;
+        p = [p parent];
+    }
+    return nil;
 }
 
 - (instancetype)initPhysicsProtocolWithNode:(SKNode*)nd
@@ -132,7 +145,8 @@
         b2Vec2 bodyPos = [scene metersFromPoint:position];
         bodyDef.position = bodyPos;
 
-        bodyDef.angle = [_node zRotation];//already in radians
+        float angle = [_node globalAngleFromLocalAngle:[_node zRotation]];
+        bodyDef.angle = angle;
 
         bodyDef.userData = LH_VOID_BRIDGE_CAST(_node);
         
@@ -152,15 +166,20 @@
                 
         float scaleX = [_node xScale];
         float scaleY = [_node yScale];
+        
+        CGPoint worldScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
+        scaleX = worldScale.x;
+        scaleY = worldScale.y;
+        
+        previousScale = worldScale;
 
-        previousScale = CGPointMake(scaleX, scaleY);
-
-//        sizet.width *= scaleX;
-//        sizet.height*= scaleY;
-
+        sizet.width *= scaleX;
+        sizet.height*= scaleY;
+        
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
 
+        
         NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
 
         NSArray* fixturesInfo = nil;
@@ -308,13 +327,19 @@
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         
         
         if(fixturesInfo)
         {
-            int flipx = [_node xScale] < 0 ? -1 : 1;
-            int flipy = [_node yScale] < 0 ? -1 : 1;
+            int flipx = scaleX < 0 ? -1 : 1;
+            int flipy = scaleY < 0 ? -1 : 1;
             
             for(NSArray* fixPoints in fixturesInfo)
             {
@@ -455,7 +480,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [[_node parent] convertToWorldSpaceAR:CGPointZero];
+        CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
         _body->SetTransform(b2Pos, [_node globalAngleFromLocalAngle:[_node zRotation]]);
         _body->SetAwake(true);        
@@ -522,6 +547,10 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         CGPoint globalScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
         scaleX = globalScale.x;
         scaleY = globalScale.y;
+        
+        if(scaleX == previousScale.x && scaleY == previousScale.y){
+            return;
+        }
         
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
@@ -768,6 +797,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         else if(shape == 2)//POLYGON
         {

@@ -11,6 +11,8 @@
 		6E1AAB841973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB821973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm */; };
 		6E1AAB871973C75400E8ECCE /* LHUserProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */; };
 		6E1AAB881973C75400E8ECCE /* LHUserProperties.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */; };
+		6E216BB5198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E216BB4198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm */; };
+		6E216BB6198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E216BB4198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm */; };
 		6E4C5055195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */; };
 		6E4C5056195A82F100E3EAE7 /* SKNode+Transforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */; };
 		6E5E4A4C1978CEF200DEFB02 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FD0A192E0A390040478F /* Main_iPhone.storyboard */; };
@@ -218,6 +220,8 @@
 		6E1AAB821973C6C300E8ECCE /* LHSceneUserPropertiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUserPropertiesDemo.mm; sourceTree = "<group>"; };
 		6E1AAB851973C75400E8ECCE /* LHUserProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUserProperties.h; sourceTree = "<group>"; };
 		6E1AAB861973C75400E8ECCE /* LHUserProperties.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHUserProperties.mm; sourceTree = "<group>"; };
+		6E216BB3198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetWithJointsDemo.h; sourceTree = "<group>"; };
+		6E216BB4198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetWithJointsDemo.mm; sourceTree = "<group>"; };
 		6E4C5053195A82F100E3EAE7 /* SKNode+Transforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+Transforms.h"; sourceTree = "<group>"; };
 		6E4C5054195A82F100E3EAE7 /* SKNode+Transforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+Transforms.m"; sourceTree = "<group>"; };
 		6E60BBA8196295E8001D3906 /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneIntroduction.h; sourceTree = "<group>"; };
@@ -662,8 +666,6 @@
 				6E89FD6B192E0C510040478F /* LHBezier.mm */,
 				6E89FD6C192E0C510040478F /* LHCamera.h */,
 				6E89FD6D192E0C510040478F /* LHCamera.m */,
-				6E89FD6E192E0C510040478F /* LHDistanceJointNode.h */,
-				6E89FD6F192E0C510040478F /* LHDistanceJointNode.mm */,
 				6E89FD70192E0C510040478F /* LHGravityArea.h */,
 				6E89FD71192E0C510040478F /* LHGravityArea.mm */,
 				6E89FD72192E0C510040478F /* LHNode.h */,
@@ -674,18 +676,20 @@
 				6E89FD77192E0C510040478F /* LHParallaxLayer.m */,
 				6E89FD78192E0C510040478F /* LHPrismaticJointNode.h */,
 				6E89FD79192E0C510040478F /* LHPrismaticJointNode.mm */,
+				6E89FD6E192E0C510040478F /* LHDistanceJointNode.h */,
+				6E89FD6F192E0C510040478F /* LHDistanceJointNode.mm */,
 				6E89FD7A192E0C510040478F /* LHRevoluteJointNode.h */,
 				6E89FD7B192E0C510040478F /* LHRevoluteJointNode.mm */,
 				6E89FD7C192E0C510040478F /* LHRopeJointNode.h */,
 				6E89FD7D192E0C510040478F /* LHRopeJointNode.mm */,
+				6E89FD84192E0C510040478F /* LHWeldJointNode.h */,
+				6E89FD85192E0C510040478F /* LHWeldJointNode.mm */,
 				6E89FD7E192E0C510040478F /* LHShape.h */,
 				6E89FD7F192E0C510040478F /* LHShape.mm */,
 				6E89FD80192E0C510040478F /* LHSprite.h */,
 				6E89FD81192E0C510040478F /* LHSprite.mm */,
 				6E89FD82192E0C510040478F /* LHWater.h */,
 				6E89FD83192E0C510040478F /* LHWater.mm */,
-				6E89FD84192E0C510040478F /* LHWeldJointNode.h */,
-				6E89FD85192E0C510040478F /* LHWeldJointNode.mm */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -738,6 +742,8 @@
 				6ED5C4FF195D575F00B6DF33 /* LHSceneCharacterAnimationDemo.mm */,
 				6ED5C506195D648F00B6DF33 /* LHSceneAssetsDemo.h */,
 				6ED5C507195D648F00B6DF33 /* LHSceneAssetsDemo.mm */,
+				6E216BB3198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.h */,
+				6E216BB4198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm */,
 				6ED5C50B195D7ECC00B6DF33 /* LHSceneRopeJointDemo.h */,
 				6ED5C50C195D7ECC00B6DF33 /* LHSceneRopeJointDemo.mm */,
 				6E60BBB91962CE94001D3906 /* LHSceneWaterAreaDemo.h */,
@@ -1070,6 +1076,7 @@
 				6E89FD93192E0C510040478F /* LHScaleFrame.m in Sources */,
 				6E89FDA3192E0C510040478F /* LHAsset.mm in Sources */,
 				6E89FDA9192E0C510040478F /* LHParallax.m in Sources */,
+				6E216BB6198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm in Sources */,
 				6E89FD95192E0C510040478F /* LHAnimationProperty.m in Sources */,
 				6E60BBB71962A169001D3906 /* LHSceneCameraFollowDemo.mm in Sources */,
 				6E89FD94192E0C510040478F /* LHSpriteFrame.m in Sources */,
@@ -1171,6 +1178,7 @@
 				6EBEA3BA1959C0F600726044 /* b2WorldCallbacks.cpp in Sources */,
 				6EBEA3081959BFD000726044 /* LHSpriteFrame.m in Sources */,
 				6EBEA3091959BFD000726044 /* LHChildrenOpacitiesProperty.m in Sources */,
+				6E216BB5198116DC00C1F7CF /* LHSceneAssetWithJointsDemo.mm in Sources */,
 				6EBEA30A1959BFD000726044 /* LHRotationFrame.m in Sources */,
 				6EBEA30B1959BFD000726044 /* LHChildrenPositionsProperty.m in Sources */,
 				6EBEA30C1959BFD000726044 /* LHPositionProperty.m in Sources */,

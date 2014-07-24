@@ -103,7 +103,7 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{47, 46}</string>
+					<string>{43, 43}</string>
 					<key>spriteName</key>
 					<string>carTyre</string>
 					<key>spriteUUID</key>
@@ -188,34 +188,6 @@
 					<string>74643E10-D9AF-46C1-A0DF-292FB2B02F6E</string>
 					<key>zOrder</key>
 					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>areaSize</key>
-					<string>{128, 128}</string>
-					<key>direction</key>
-					<string>{0, 1}</string>
-					<key>force</key>
-					<real>6</real>
-					<key>generalPosition</key>
-					<string>{0.46086304982503257, 0.79916749000549314}</string>
-					<key>name</key>
-					<string>UntitledGravityArea</string>
-					<key>nodeType</key>
-					<string>LHAreaGravity</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>scale</key>
-					<string>{1.6416076421737671, 1.8639893531799316}</string>
-					<key>size</key>
-					<string>{128, 128}</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>type</key>
-					<integer>0</integer>
-					<key>uuid</key>
-					<string>B1CCF5A3-5255-46AF-89A8-37845C3A6A68</string>
 				</dict>
 				<dict>
 					<key>alpha</key>
@@ -433,6 +405,34 @@
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
+				<dict>
+					<key>areaSize</key>
+					<string>{128, 128}</string>
+					<key>direction</key>
+					<string>{0, 1}</string>
+					<key>force</key>
+					<real>6</real>
+					<key>generalPosition</key>
+					<string>{0.46086304982503257, 0.82473888397216799}</string>
+					<key>name</key>
+					<string>UntitledGravityArea</string>
+					<key>nodeType</key>
+					<string>LHAreaGravity</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>scale</key>
+					<string>{1.6416076421737671, 2.1197018623352051}</string>
+					<key>size</key>
+					<string>{128, 128}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>type</key>
+					<integer>0</integer>
+					<key>uuid</key>
+					<string>B1CCF5A3-5255-46AF-89A8-37845C3A6A68</string>
+				</dict>
 			</array>
 			<key>colorOverlay</key>
 			<string>{{1, 1}, {1, 1}}</string>
@@ -552,6 +552,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>45490653-2AC1-45E2-AE1A-F6DE66D9148B</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>
