@@ -73,19 +73,25 @@
         
         LHScene* scene = (LHScene*)[self scene];
         
-        NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
-        
-        if(assetInfo)
+        BOOL fileExists = false;
+        if([dict objectForKey:@"assetFile"])
         {
-            NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
-            if(tracedFix){
-                _tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
-            }
+            NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
+        
+            if(assetInfo)
+            {
+                fileExists = true;
+                NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+                if(tracedFix){
+                    _tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+                }
 
-            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
-        }
-        else{
-            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+                [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+            }
+        }        
+        if(!fileExists){
+            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@. This usually means that the asset was created but not saved. Check your level and in the Scene Navigator, click on the lock icon next to the asset name.", [self name]);
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         }
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
