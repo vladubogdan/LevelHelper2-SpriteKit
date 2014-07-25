@@ -101,6 +101,7 @@
         }
         
         if(_active){
+            [self restart];
             [self setAnimating:YES];
         }
         
@@ -159,16 +160,21 @@
     }
 }
 -(void)setAnimating:(bool)val{
-    [self resetOneShotFrames];
     animating = val;
-    currentRepetition = 0;
-    currentTime = 0;
 }
 -(bool)animating{
     return animating;
 }
+
+-(void)restart{
+    [self resetOneShotFrames];
+    currentRepetition = 0;
+    currentTime = 0;
+}
+
 -(void)updateTimeWithDelta:(float)delta{
-    [self setCurrentTime:[self currentTime] + delta];
+    if(animating)
+        [self setCurrentTime:[self currentTime] + delta];
 }
 -(void)updateTimeWithValue:(float)val{
     [self setCurrentTime:val];

@@ -62,6 +62,11 @@
 -(bool)animating;
 
 /**
+ Restarts the animation. Will set the time to 0 and reset all repetitions.
+ */
+-(void)restart;
+
+/**
  The number of times this animation will loop. A 0 repetitions meens it will loop undefinately.
  */
 -(int)repetitions;
