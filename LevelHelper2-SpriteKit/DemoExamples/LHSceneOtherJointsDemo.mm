@@ -56,13 +56,18 @@
     return self;
 }
 
+#if TARGET_OS_IPHONE
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-
-    
-    
-    
     //dont forget to call super
     [super touchesBegan:touches withEvent:event];
 }
+
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    [super mouseDown:theEvent];
+}
+#endif
 @end

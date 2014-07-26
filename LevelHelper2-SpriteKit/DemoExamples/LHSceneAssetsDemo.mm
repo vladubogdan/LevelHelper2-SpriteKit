@@ -34,12 +34,34 @@ float randomFloat(float Min, float Max){
     return ((arc4random()%RAND_MAX)/(RAND_MAX*1.0))*(Max-Min)+Min;
 }
 
+#if TARGET_OS_IPHONE
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
     
+    [self createAssetAtLocation:location];
+    
+    //dont forget to call super
+    [super touchesBegan:touches withEvent:event];
+}
+
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint location = [theEvent locationInNode:self];
+    
+    [self createAssetAtLocation:location];
+    
+    [super mouseDown:theEvent];
+}
+
+#endif
+
+-(void)createAssetAtLocation:(CGPoint)location
+{
     LHAsset* asset = [LHAsset createWithName:@"myNewAsset"
                                assetFileName:@"DEMO_PUBLISH_FOLDER/OfficerAsset.lhasset"
                                       parent:[self gameWorldNode]];
@@ -51,9 +73,6 @@ float randomFloat(float Min, float Max){
     float zRot = randomFloat(-45, 45.0f);
     
     asset.zRotation = LH_DEGREES_TO_RADIANS(zRot);
-    
-    //dont forget to call super
-    [super touchesBegan:touches withEvent:event];
 }
 
 @end

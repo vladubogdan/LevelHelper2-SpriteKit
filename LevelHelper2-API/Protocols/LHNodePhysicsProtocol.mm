@@ -124,6 +124,10 @@
         _node = nd;
         _body = NULL;
         
+        CGPoint scl = [dictionary pointForKey:@"scale"];
+        [_node setXScale:scl.x];
+        [_node setYScale:scl.y];
+
         NSDictionary* dict = [dictionary objectForKey:@"nodePhysics"];
         
         if(!dict){
@@ -173,13 +177,15 @@
         
         previousScale = worldScale;
 
-        sizet.width *= scaleX;
-        sizet.height*= scaleY;
+        CGPoint sizeWorldScale = [_node convertToWorldScale:CGPointMake(1, 1)];
         
+        //CAREFUL - size is returned containing scale - so don't multiply scale to the size but do multiply the world scale
+        sizet.width *= sizeWorldScale.x;
+        sizet.height*= sizeWorldScale.y;
+
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
 
-        
         NSDictionary* fixInfo = [dict objectForKey:@"genericFixture"];
 
         NSArray* fixturesInfo = nil;
@@ -540,9 +546,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 -(void)updateScale{
     
     if(_body){
-        
-        float scaleX = [_node xScale];
-        float scaleY = [_node yScale];
+        CGFloat scaleX = [_node xScale];
+        CGFloat scaleY = [_node yScale];
 
         CGPoint globalScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
         scaleX = globalScale.x;
@@ -551,7 +556,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         if(scaleX == previousScale.x && scaleY == previousScale.y){
             return;
         }
-        
+
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
             return;
@@ -617,9 +622,9 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             if(shape->GetType() == b2Shape::e_circle)
             {
                 b2CircleShape* circleShape = (b2CircleShape*)shape;
-                float radius = circleShape->m_radius;
+                CGFloat radius = circleShape->m_radius;
                 
-                float newRadius = radius/previousScale.x*scaleX;
+                CGFloat newRadius = radius/previousScale.x*scaleX;
                 circleShape->m_radius = newRadius;
             }
             
@@ -697,6 +702,11 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         NSDictionary* dict = [dictionary objectForKey:@"nodePhysics"];
         
         if(!dict){
+            
+            CGPoint scl = [dictionary pointForKey:@"scale"];
+            [_node setXScale:scl.x];
+            [_node setYScale:scl.y];
+            
             return self;
         }
         
@@ -962,6 +972,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             }
 #endif
         
+        
+        
+        CGPoint scl = [dictionary pointForKey:@"scale"];
+        [_node setXScale:scl.x];
+        [_node setYScale:scl.y];
+
         
     }
     return self;

@@ -71,13 +71,8 @@
  */
 @interface LHScene : SKScene <LHNodeProtocol>
 
-#if TARGET_OS_IPHONE
 +(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile;
 -(instancetype)initWithContentOfFile:(NSString*)levelPlistFile;
-#else
-+(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile size:(CGSize)size;
--(instancetype)initWithContentOfFile:(NSString*)levelPlistFile size:(CGSize)size;
-#endif
 
 /**
  Returns a SKTextureAtlas object that was previously loaded or a new one.

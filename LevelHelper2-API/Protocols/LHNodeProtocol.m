@@ -110,14 +110,8 @@
             if(devPositions)
             {
                 
-    #if TARGET_OS_IPHONE
                 NSString* unitPosStr = [LHUtils devicePosition:devPositions
                                                        forSize:LH_SCREEN_RESOLUTION];
-    #else
-                NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                       forSize:[_node scene].size];
-    #endif
-                
                 if(unitPosStr){
                     CGPoint unitPos = LHPointFromString(unitPosStr);
                     pos = [LHUtils positionForNode:_node
@@ -150,8 +144,9 @@
         if([dict objectForKey:@"alpha"])
             [_node setAlpha:[dict floatForKey:@"alpha"]/255.0f];
         
-        if([dict objectForKey:@"rotation"])
-            [_node setZRotation:LH_DEGREES_TO_RADIANS(-[dict floatForKey:@"rotation"])];
+        if([dict objectForKey:@"rotation"]){
+            [_node setZRotation:LH_DEGREES_TO_RADIANS(-[dict floatForKey:@"rotation"])];            
+        }
         
         if([dict objectForKey:@"zOrder"])
             [_node setZPosition:[dict floatForKey:@"zOrder"]];

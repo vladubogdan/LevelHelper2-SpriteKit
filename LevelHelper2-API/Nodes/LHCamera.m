@@ -66,31 +66,23 @@
         
         
         
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
+//        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
+//        CGPoint pos = [LHUtils positionForNode:self
+//                                      fromUnit:unitPos];
+//        
+//        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
+//        if(devPositions)
+//        {            
+//            NSString* unitPosStr = [LHUtils devicePosition:devPositions
+//                                                   forSize:LH_SCREEN_RESOLUTION];
+//            if(unitPosStr){
+//                CGPoint unitPos = LHPointFromString(unitPosStr);
+//                pos = [LHUtils positionForNode:self
+//                                      fromUnit:unitPos];
+//            }
+//        }
+//        
+//        [self setPosition:pos];
         
         NSString* followedUUID = [dict objectForKey:@"followedNodeUUID"];
         if(followedUUID){
@@ -170,12 +162,21 @@
     SKNode* followed = [self followedNode];
     if(followed){
         position = [followed position];
+        
+//        CGPoint anchor = [followed anchorPoint];
+//        CGSize content = [followed contentSize];
+//        
+//        float scaleX = [followed xScale];
+//        float scaleY = [followed yScale];
+//        
+//        position.x -= content.width*scaleX*  (anchor.x -0.5);
+//        position.y -= content.height*scaleY* (anchor.y -0.5);
     }
 
     CGSize winSize = [(LHScene*)[self scene] size];
     CGRect worldRect = [(LHScene*)[self scene] gameWorldRect];
     
-    CGPoint offset = [[(LHScene*)self scene] designOffset];
+//    CGPoint offset = [[(LHScene*)self scene] designOffset];
     
     float x = position.x;
     float y = position.y;
@@ -192,9 +193,12 @@
         y = MAX(y, worldRect.origin.y + worldRect.size.height + winSize.height*0.5);
         y = MIN(y, worldRect.origin.y - winSize.height*0.5);
     }
-    CGPoint pt = CGPointMake(winSize.width*0.5  - x + offset.x,
-                             winSize.height*0.5 - y+ offset.y);
-    
+//    CGPoint pt = CGPointMake(winSize.width*0.5  - x + offset.x,
+//                             winSize.height*0.5 - y+ offset.y);
+
+    CGPoint pt = CGPointMake(winSize.width*0.5  - x,
+                             winSize.height*0.5 - y);
+
     return pt;
 }
 

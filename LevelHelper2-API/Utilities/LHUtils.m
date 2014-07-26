@@ -41,7 +41,6 @@
 }
 
 +(NSString*)devicePosition:(NSDictionary*)availablePositions forSize:(CGSize)curScr{
-//    CGSize curScr = LH_SCREEN_RESOLUTION;
     return [availablePositions objectForKey:[NSString stringWithFormat:@"%dx%d", (int)curScr.width, (int)curScr.height]];
 }
 
@@ -74,12 +73,10 @@
     return designPos;
 }
 
-#if TARGET_OS_IPHONE
 +(LHDevice*)currentDeviceFromArray:(NSArray*)arrayOfDevs{
     return [LHUtils deviceFromArray:arrayOfDevs
                            withSize:LH_SCREEN_RESOLUTION];
 }
-#endif
 
 +(LHDevice*)deviceFromArray:(NSArray*)arrayOfDevs
                    withSize:(CGSize)size

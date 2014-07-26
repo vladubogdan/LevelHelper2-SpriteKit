@@ -81,14 +81,11 @@
         if(triangles){
             _shapeTriangles = [[NSMutableArray alloc] initWithArray:triangles];
         }
-        
+
+        //scale is handled by physics protocol because of diferences between spritekit and box2d handling
+
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
-        
-        //scale must be set after loading the physic info or else spritekit will not resize the sprite anymore - bug        
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setXScale:scl.x];
-        [self setYScale:scl.y];
         
 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];

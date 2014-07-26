@@ -136,11 +136,8 @@
     return self;
 }
 
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)handleLabelsAtLocation:(CGPoint)location
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
     SKNode *node = [self nodeAtPoint:location];
     
     //if fire button touched, bring the rain
@@ -154,10 +151,31 @@
         [self nextDemo];
     }
     
+}
+
+#if TARGET_OS_IPHONE
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    
+    [self handleLabelsAtLocation:location];
     
     //dont forget to call super
     [super touchesBegan:touches withEvent:event];
 }
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent
+{
+    CGPoint location = [theEvent locationInNode:self];
+    
+    [self handleLabelsAtLocation:location];
+    
+    [super mouseDown:theEvent];
+}
+
+#endif
 
 -(void)previousDemo{
 

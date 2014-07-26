@@ -7,7 +7,6 @@
 //
 
 #import "LHFrame.h"
-#import <UIKit/UIKit.h>
 
 @interface LHScaleFrame : LHFrame
 

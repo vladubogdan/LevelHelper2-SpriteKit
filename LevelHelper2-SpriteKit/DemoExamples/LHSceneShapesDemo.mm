@@ -43,7 +43,7 @@
     
     return self;
 }
-
+#if TARGET_OS_IPHONE
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
@@ -77,7 +77,34 @@
     
     [super touchesCancelled:touches withEvent:event];
 }
+#else
 
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint location = [theEvent locationInNode:self];
+    
+    [self createMouseJointForTouchLocation:location];
+    
+    [super mouseDown:theEvent];
+}
+
+-(void)mouseDragged:(NSEvent *)theEvent{
+    
+    CGPoint location = [theEvent locationInNode:self];
+    
+    [self setTargetOnMouseJoint:location];
+    
+    
+    [super mouseDragged:theEvent];
+}
+
+-(void)mouseUp:(NSEvent *)theEvent{
+    
+    [self destroyMouseJoint];
+    [super mouseUp:theEvent];
+}
+
+#endif
 
 -(void)createMouseJointForTouchLocation:(CGPoint)point
 {

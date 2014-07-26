@@ -72,7 +72,7 @@
                         atLocation:(CGPoint)scenePt
                        withImpulse:(float)impulse
 {
-    NSLog(@"DID BEGIN CONTACT %@ %@ scenePt %@ impulse %f", [a name], [b name], NSStringFromCGPoint(scenePt), impulse);
+    NSLog(@"DID BEGIN CONTACT %@ %@ scenePt %@ impulse %f", [a name], [b name], LHStringFromPoint(scenePt), impulse);
 }
 
 -(void)didEndContactBetweenNodeA:(SKNode*)a

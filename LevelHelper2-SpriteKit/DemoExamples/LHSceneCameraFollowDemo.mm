@@ -35,6 +35,8 @@
     return self;
 }
 
+#if TARGET_OS_IPHONE
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint curGravity = [self globalGravity];
@@ -50,5 +52,22 @@
     //dont forget to call super
     [super touchesBegan:touches withEvent:event];
 }
+
+#else
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint curGravity = [self globalGravity];
+    if(didChangeX){
+        [self setGlobalGravity:CGPointMake(curGravity.x, -curGravity.y)];
+        didChangeX = false;
+    }
+    else{
+        didChangeX = true;
+        [self setGlobalGravity:CGPointMake(-curGravity.x, curGravity.y)];
+    }
+    
+    [super mouseDown:theEvent];
+}
+#endif
 
 @end

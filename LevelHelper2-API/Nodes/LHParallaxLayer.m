@@ -51,17 +51,10 @@
         
         NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
         if(devPositions)
-        {
-            
-#if TARGET_OS_IPHONE
+        {            
             NSString* unitPosStr = [LHUtils devicePosition:devPositions
                                                    forSize:LH_SCREEN_RESOLUTION];
-#else
-            LHScene* scene = (LHScene*)[self scene];
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:scene.size];
-#endif
-            
+
             if(unitPosStr){
                 CGPoint unitPos = LHPointFromString(unitPosStr);
                 pos = [LHUtils positionForNode:self

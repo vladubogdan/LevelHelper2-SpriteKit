@@ -908,7 +908,7 @@
 					<key>followedNodeUUID</key>
 					<string>469BD684-4FBA-4B6D-B622-75B24641579B</string>
 					<key>generalPosition</key>
-					<string>{0.50523745218912763, 0.507733678817749}</string>
+					<string>{0.49701843261718748, 0.51156959533691404}</string>
 					<key>name</key>
 					<string>UntitledCamera</string>
 					<key>nodeType</key>
@@ -982,7 +982,7 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{47, 46}</string>
+					<string>{43, 43}</string>
 					<key>spriteName</key>
 					<string>carTyre</string>
 					<key>spriteUUID</key>
@@ -2587,15 +2587,15 @@
 	<key>gameWorld</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.03458235040307045, -0.093224547803401947}, {4.5357699394226074, 1.2403486967086792}}</string>
+		<string>{{-0.032262764871120453, -0.041874196380376816}, {4.495232105255127, 1.1889983415603638}}</string>
 		<key>1136x640</key>
-		<string>{{-0.069894246757030487, 0.0086191575974225998}, {4.5710821151733398, 1.1385051012039185}}</string>
+		<string>{{-0.069894246757030487, -0.0017630389193072915}, {4.5380911827087402, 1.1488872766494751}}</string>
 		<key>2048x1536</key>
-		<string>{{-0.027122844010591507, -0.094780847430229187}, {4.5283107757568359, 1.2419049739837646}}</string>
+		<string>{{-0.028129927814006805, -0.057075105607509613}, {4.493741512298584, 1.2041991949081421}}</string>
 		<key>960x640</key>
-		<string>{{0.0052374540828168392, 0.007733677513897419}, {4.4959502220153809, 1.1393904685974121}}</string>
+		<string>{{-0.0029815516900271177, 0.011569605208933353}, {4.4687628746032715, 1.1355545520782471}}</string>
 		<key>general</key>
-		<string>{{0.0052374540828168392, 0.007733677513897419}, {4.4959502220153809, 1.1393904685974121}}</string>
+		<string>{{-0.0029815516900271177, 0.011569605208933353}, {4.4687628746032715, 1.1355545520782471}}</string>
 	</dict>
 	<key>globalGravityDirection</key>
 	<string>{0, -1}</string>
@@ -2610,11 +2610,11 @@
 		<key>1136x640</key>
 		<string>{{-0.062986299395561218, -0.17812135815620422}, {4.5374102592468262, 1.2922110557556152}}</string>
 		<key>2048x1536</key>
-		<string>{{-0.062986299395561218, -0.17812135815620422}, {4.5374102592468262, 1.2922110557556152}}</string>
+		<string>{{-0.045510485768318176, -0.13692943751811981}, {4.5199346542358398, 1.2510191202163696}}</string>
 		<key>960x640</key>
 		<string>{{-0.062986299395561218, -0.17812135815620422}, {4.5374102592468262, 1.2922110557556152}}</string>
 		<key>general</key>
-		<string>{{-0.062986299395561218, -0.17812135815620422}, {4.5374102592468262, 1.2922110557556152}}</string>
+		<string>{{-0.045510485768318176, -0.13692943751811981}, {4.5199346542358398, 1.2510191202163696}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -2622,6 +2622,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>566BD0CB-4485-4D93-9FF1-8D68A8E9CA9E</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

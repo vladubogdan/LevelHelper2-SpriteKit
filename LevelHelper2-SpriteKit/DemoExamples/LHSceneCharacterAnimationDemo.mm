@@ -43,13 +43,33 @@
     
 }
 
+#if TARGET_OS_IPHONE
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
 
+    [self handleAnimationForLocation:location];
+
+    [super touchesBegan:touches withEvent:event];
+}
+
+#else
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint location = [theEvent locationInNode:self];
+    
+    [self handleAnimationForLocation:location];
+    
+    [super mouseDown:theEvent];
+}
+#endif
+
+-(void)handleAnimationForLocation:(CGPoint)location
+{
     LHNode* officerNode = (LHNode*)[self childNodeWithName:@"Officer"];
-   
+    
     if(officerNode)
     {
         if(location.x > self.size.width*0.5)
@@ -68,8 +88,5 @@
             NSLog(@"ANIMATION: %@ %@.", [anim animating] ? @"Playing" : @"Pausing", [anim name]);
         }
     }
-
-    [super touchesBegan:touches withEvent:event];
 }
-
 @end

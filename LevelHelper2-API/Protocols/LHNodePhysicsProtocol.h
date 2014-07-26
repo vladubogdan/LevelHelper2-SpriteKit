@@ -115,7 +115,7 @@ typedef enum
         [child setPosition:[child position]];\
     }\
 }\
--(void)setZRotation:(float)rotation\
+-(void)setZRotation:(CGFloat)rotation\
 {\
     [super setZRotation:rotation];\
     if([_physicsProtocolImp body]){\
@@ -125,7 +125,7 @@ typedef enum
         [child setZRotation:[child zRotation]];\
     }\
 }\
--(void)setScale:(float)scale{\
+-(void)setScale:(CGFloat)scale{\
     [super setScale:scale];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
@@ -134,7 +134,7 @@ typedef enum
         [child setXScale:[child xScale]];\
     }\
 }\
--(void)setXScale:(float)scaleX{\
+-(void)setXScale:(CGFloat)scaleX{\
     [super setXScale:scaleX];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
@@ -143,7 +143,7 @@ typedef enum
         [child setXScale:[child xScale]];\
     }\
 }\
--(void)setYScale:(float)scaleY{\
+-(void)setYScale:(CGFloat)scaleY{\
     [super setYScale:scaleY];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\

@@ -55,21 +55,11 @@
                                                                                     node:self];
         
         _size = [dict sizeForKey:@"size"];
-#if LH_USE_BOX2D
-        {
-            CGPoint scl = [dict pointForKey:@"scale"];
-            [self setXScale:scl.x];
-            [self setYScale:scl.y];
-        }
-#endif
+
+        //scale is handled by physics protocol because of diferences between spritekit and box2d handling
+        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
-        
-        //scale must be set after loading the physic info or else spritekit will not resize the sprite anymore - bug
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setXScale:scl.x];
-        [self setYScale:scl.y];
-        
         
         LHScene* scene = (LHScene*)[self scene];
         
@@ -142,13 +132,10 @@
                                                                                     node:self];
         _size = [assetInfo sizeForKey:@"size"];
         
+        //scale is handled by physics protocol because of diferences between spritekit and box2d handling
+        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
                                                                                                 node:self];
-        
-        //scale must be set after loading the physic info or else spritekit will not resize the sprite anymore - bug
-        [self setXScale:1];
-        [self setYScale:1];
-
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
         

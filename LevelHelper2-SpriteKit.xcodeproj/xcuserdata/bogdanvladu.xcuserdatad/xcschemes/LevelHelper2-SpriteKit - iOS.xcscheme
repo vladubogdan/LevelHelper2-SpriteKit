@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E89FCF2192E0A390040478F"
-               BuildableName = "LevelHelper2-SpriteKit.app"
-               BlueprintName = "LevelHelper2-SpriteKit"
+               BuildableName = "LevelHelper2-SpriteKit - iOS.app"
+               BlueprintName = "LevelHelper2-SpriteKit - iOS"
                ReferencedContainer = "container:LevelHelper2-SpriteKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E89FCF2192E0A390040478F"
-            BuildableName = "LevelHelper2-SpriteKit.app"
-            BlueprintName = "LevelHelper2-SpriteKit"
+            BuildableName = "LevelHelper2-SpriteKit - iOS.app"
+            BlueprintName = "LevelHelper2-SpriteKit - iOS"
             ReferencedContainer = "container:LevelHelper2-SpriteKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E89FCF2192E0A390040478F"
-            BuildableName = "LevelHelper2-SpriteKit.app"
-            BlueprintName = "LevelHelper2-SpriteKit"
+            BuildableName = "LevelHelper2-SpriteKit - iOS.app"
+            BlueprintName = "LevelHelper2-SpriteKit - iOS"
             ReferencedContainer = "container:LevelHelper2-SpriteKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E89FCF2192E0A390040478F"
-            BuildableName = "LevelHelper2-SpriteKit.app"
-            BlueprintName = "LevelHelper2-SpriteKit"
+            BuildableName = "LevelHelper2-SpriteKit - iOS.app"
+            BlueprintName = "LevelHelper2-SpriteKit - iOS"
             ReferencedContainer = "container:LevelHelper2-SpriteKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

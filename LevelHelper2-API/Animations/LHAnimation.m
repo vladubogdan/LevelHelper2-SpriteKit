@@ -358,7 +358,8 @@
                        forNode:(SKNode*)animNode
 {
     if([animNode isKindOfClass:[LHCamera class]]){
-        CGSize winSize = [[self scene] size];
+//        CGSize winSize = [[self scene] size];
+        CGSize winSize = [[self scene] designResolutionSize];
         return CGPointMake(winSize.width*0.5  - newPos.x,
                         - newPos.y - winSize.height*0.5);
         

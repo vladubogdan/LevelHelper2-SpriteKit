@@ -4,19 +4,29 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LevelHelper2-SpriteKit + Box2d.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>LevelHelper2-SpriteKit.xcscheme</key>
+		<key>LevelHelper2-SpriteKit + Box2d - MacOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>LevelHelper2-SpriteKit + Box2d - iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>LevelHelper2-SpriteKit - iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6E72A5891983747F00143439</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6E89FCF2192E0A390040478F</key>
 		<dict>
 			<key>primary</key>
