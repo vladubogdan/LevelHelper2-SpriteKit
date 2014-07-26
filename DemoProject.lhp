@@ -143,11 +143,6 @@
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>parallaxTest.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
 				<key>physicsBodiesTest.lhs</key>
 				<dict>
 					<key>publish</key>

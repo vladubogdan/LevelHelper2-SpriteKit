@@ -374,7 +374,7 @@
 		6E72A65C198375A400143439 /* SpriteKitMac-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpriteKitMac-Prefix.pch"; sourceTree = "<group>"; };
 		6E72A6601983770000143439 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		6E72A6621983770700143439 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
-		6E89FCF3192E0A390040478F /* LevelHelper2-SpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LevelHelper2-SpriteKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E89FCF3192E0A390040478F /* LevelHelper2-SpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "LevelHelper2-SpriteKit.app"; path = "LevelHelper2-SpriteKit - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E89FCF6192E0A390040478F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E89FCF8192E0A390040478F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6E89FCFA192E0A390040478F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1090,7 +1090,6 @@
 			buildPhases = (
 				6E72A58A1983747F00143439 /* Sources */,
 				6E72A5FE1983747F00143439 /* Frameworks */,
-				6E72A6031983747F00143439 /* Xcode5 Fix */,
 				6E72A6041983747F00143439 /* Resources */,
 			);
 			buildRules = (
@@ -1108,7 +1107,6 @@
 			buildPhases = (
 				6E89FCEF192E0A390040478F /* Sources */,
 				6E89FCF0192E0A390040478F /* Frameworks */,
-				6EBD3DAB195BDE9A00C7B929 /* Xcode5 Fix */,
 				6E89FCF1192E0A390040478F /* Resources */,
 			);
 			buildRules = (
@@ -1126,7 +1124,6 @@
 			buildPhases = (
 				6EBEA2F81959BFD000726044 /* Sources */,
 				6EBEA3291959BFD000726044 /* Frameworks */,
-				6EBD3DAA195BDDC400C7B929 /* Xcode5 Fix */,
 				6EBEA32E1959BFD000726044 /* Resources */,
 			);
 			buildRules = (
@@ -1209,51 +1206,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6E72A6031983747F00143439 /* Xcode5 Fix */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Xcode5 Fix";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#xcode has a problem updating folder referecence so we touch it in order to build with latest changes\n#this script must be before Copy Bundle Resources\ntouch -cm ${SRCROOT}";
-		};
-		6EBD3DAA195BDDC400C7B929 /* Xcode5 Fix */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Xcode5 Fix";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#xcode has a problem updating folder referecence so we touch it in order to build with latest changes\n#this script must be before Copy Bundle Resources\ntouch -cm ${SRCROOT}";
-		};
-		6EBD3DAB195BDE9A00C7B929 /* Xcode5 Fix */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Xcode5 Fix";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#xcode has a problem updating folder referecence so we touch it in order to build with latest changes\n#this script must be before Copy Bundle Resources\ntouch -cm ${SRCROOT}";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E72A58A1983747F00143439 /* Sources */ = {
