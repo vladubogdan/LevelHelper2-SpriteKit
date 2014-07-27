@@ -70,26 +70,48 @@
     return self;
 }
 
+#if TARGET_OS_IPHONE
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
 
+    [self handleBodiesAtLocation:location];
+    
+    //dont forget to call super
+    [super touchesBegan:touches withEvent:event];
+}
+
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    CGPoint location = [theEvent locationInNode:self];
+    
+    [self handleBodiesAtLocation:location];
+    
+    [super mouseDown:theEvent];
+}
+
+#endif
+
+-(void)handleBodiesAtLocation:(CGPoint)location
+{
     NSLog(@"................................................");
-//    {//position test
-//        SKNode* node = [self childNodeWithName:@"candy"];
-//        NSLog(@"SET SPRITE %@ POSITION TO %f %f", [node name], location.x, location.y);
-//        [node setPosition:location];
-//    }
-//    
-//    {//rotation test
-//        SKNode* node = [self childNodeWithName:@"statue"];
-//        
-//        float zRot = [node zRotation] -  0.785398163/*45deg*/;
-//        
-//        NSLog(@"SET SPRITE %@ ROTATION TO %f", [node name], zRot);
-//        [node setZRotation:zRot];
-//    }
+    //    {//position test
+    //        SKNode* node = [self childNodeWithName:@"candy"];
+    //        NSLog(@"SET SPRITE %@ POSITION TO %f %f", [node name], location.x, location.y);
+    //        [node setPosition:location];
+    //    }
+    //
+    //    {//rotation test
+    //        SKNode* node = [self childNodeWithName:@"statue"];
+    //
+    //        float zRot = [node zRotation] -  0.785398163/*45deg*/;
+    //
+    //        NSLog(@"SET SPRITE %@ ROTATION TO %f", [node name], zRot);
+    //        [node setZRotation:zRot];
+    //    }
     
     {//scale test
         SKNode* node = [self childNodeWithName:@"backpack"];
@@ -113,11 +135,7 @@
         
         [node setZRotation:zRot];
     }
-    
-    
-    
-    //dont forget to call super
-    [super touchesBegan:touches withEvent:event];
+
 }
 
 

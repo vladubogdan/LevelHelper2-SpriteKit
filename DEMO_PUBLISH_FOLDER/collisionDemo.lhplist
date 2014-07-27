@@ -103,7 +103,7 @@
 					<key>scale</key>
 					<string>{1, 1}</string>
 					<key>size</key>
-					<string>{47, 46}</string>
+					<string>{43, 43}</string>
 					<key>spriteName</key>
 					<string>carTyre</string>
 					<key>spriteUUID</key>
@@ -190,178 +190,6 @@
 					<integer>0</integer>
 				</dict>
 				<dict>
-					<key>areaSize</key>
-					<string>{128, 128}</string>
-					<key>direction</key>
-					<string>{0, 1}</string>
-					<key>force</key>
-					<real>6</real>
-					<key>generalPosition</key>
-					<string>{0.46086304982503257, 0.79916749000549314}</string>
-					<key>name</key>
-					<string>UntitledGravityArea</string>
-					<key>nodeType</key>
-					<string>LHAreaGravity</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>scale</key>
-					<string>{1.6416076421737671, 1.8639893531799316}</string>
-					<key>size</key>
-					<string>{128, 128}</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>type</key>
-					<integer>0</integer>
-					<key>uuid</key>
-					<string>B1CCF5A3-5255-46AF-89A8-37845C3A6A68</string>
-				</dict>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
-					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
-					<key>generalPosition</key>
-					<string>{0.83577435811360679, 0.75267801284790037}</string>
-					<key>imageFileName</key>
-					<string>carParts.png</string>
-					<key>name</key>
-					<string>wood</string>
-					<key>nodePhysics</key>
-					<dict>
-						<key>allowSleep</key>
-						<true/>
-						<key>bullet</key>
-						<false/>
-						<key>fixedRotation</key>
-						<false/>
-						<key>genericFixture</key>
-						<dict>
-							<key>category</key>
-							<integer>1</integer>
-							<key>density</key>
-							<real>0.10000000149011612</real>
-							<key>fixtureID</key>
-							<integer>0</integer>
-							<key>friction</key>
-							<real>0.20000000298023224</real>
-							<key>mask</key>
-							<integer>65535</integer>
-							<key>name</key>
-							<string>GenericFixture</string>
-							<key>restitution</key>
-							<real>0.0</real>
-							<key>sensor</key>
-							<false/>
-						</dict>
-						<key>gravityScale</key>
-						<real>1</real>
-						<key>shape</key>
-						<integer>0</integer>
-						<key>type</key>
-						<integer>0</integer>
-					</dict>
-					<key>nodeType</key>
-					<string>LHSprite</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>relativeImagePath</key>
-					<string>DEMO_PUBLISH_FOLDER/</string>
-					<key>rotation</key>
-					<real>328.89401245117188</real>
-					<key>scale</key>
-					<string>{2.5288021564483643, 1}</string>
-					<key>size</key>
-					<string>{128, 32}</string>
-					<key>spriteName</key>
-					<string>wood</string>
-					<key>spriteUUID</key>
-					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>9472D672-A8B0-48BD-B75E-4B578B5D0B32</string>
-					<key>zOrder</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
-					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
-					<key>generalPosition</key>
-					<string>{0.46986885070800782, 0.23899269104003906}</string>
-					<key>imageFileName</key>
-					<string>carParts.png</string>
-					<key>name</key>
-					<string>wood_1</string>
-					<key>nodePhysics</key>
-					<dict>
-						<key>allowSleep</key>
-						<true/>
-						<key>bullet</key>
-						<false/>
-						<key>fixedRotation</key>
-						<false/>
-						<key>genericFixture</key>
-						<dict>
-							<key>category</key>
-							<integer>1</integer>
-							<key>density</key>
-							<real>0.10000000149011612</real>
-							<key>fixtureID</key>
-							<integer>0</integer>
-							<key>friction</key>
-							<real>0.20000000298023224</real>
-							<key>mask</key>
-							<integer>65535</integer>
-							<key>name</key>
-							<string>GenericFixture</string>
-							<key>restitution</key>
-							<real>0.0</real>
-							<key>sensor</key>
-							<false/>
-						</dict>
-						<key>gravityScale</key>
-						<real>1</real>
-						<key>shape</key>
-						<integer>0</integer>
-						<key>type</key>
-						<integer>0</integer>
-					</dict>
-					<key>nodeType</key>
-					<string>LHSprite</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>relativeImagePath</key>
-					<string>DEMO_PUBLISH_FOLDER/</string>
-					<key>rotation</key>
-					<real>28.209354400634766</real>
-					<key>scale</key>
-					<string>{2.3505501747131348, 1}</string>
-					<key>size</key>
-					<string>{128, 32}</string>
-					<key>spriteName</key>
-					<string>wood</string>
-					<key>spriteUUID</key>
-					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>31183636-E02B-4AC7-B698-AAE02FA515FB</string>
-					<key>zOrder</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
@@ -430,6 +258,178 @@
 					</array>
 					<key>uuid</key>
 					<string>DBD22D79-26C1-4C0F-9AED-CC6E7B971B7D</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>areaSize</key>
+					<string>{128, 128}</string>
+					<key>direction</key>
+					<string>{0, 1}</string>
+					<key>force</key>
+					<real>6</real>
+					<key>generalPosition</key>
+					<string>{0.46086304982503257, 0.82473888397216799}</string>
+					<key>name</key>
+					<string>UntitledGravityArea</string>
+					<key>nodeType</key>
+					<string>LHAreaGravity</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>scale</key>
+					<string>{1.6416076421737671, 2.1197018623352051}</string>
+					<key>size</key>
+					<string>{128, 128}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>type</key>
+					<integer>0</integer>
+					<key>uuid</key>
+					<string>B1CCF5A3-5255-46AF-89A8-37845C3A6A68</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.54707419077555342, 0.30111303329467776}</string>
+					<key>imageFileName</key>
+					<string>carParts.png</string>
+					<key>name</key>
+					<string>wood_1</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>28.209354400634766</real>
+					<key>scale</key>
+					<string>{3.664724588394165, 1}</string>
+					<key>size</key>
+					<string>{128, 32}</string>
+					<key>spriteName</key>
+					<string>wood</string>
+					<key>spriteUUID</key>
+					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>31183636-E02B-4AC7-B698-AAE02FA515FB</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.5, 0.5}</string>
+					<key>colorOverlay</key>
+					<string>{{1, 1}, {1, 1}}</string>
+					<key>generalPosition</key>
+					<string>{0.82706584930419924, 0.7605597972869873}</string>
+					<key>imageFileName</key>
+					<string>carParts.png</string>
+					<key>name</key>
+					<string>wood</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>DEMO_PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>328.89401245117188</real>
+					<key>scale</key>
+					<string>{3.7530903816223145, 1}</string>
+					<key>size</key>
+					<string>{128, 32}</string>
+					<key>spriteName</key>
+					<string>wood</string>
+					<key>spriteUUID</key>
+					<string>479A7CE8-61E5-46D5-9334-503D86C53BFE</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>9472D672-A8B0-48BD-B75E-4B578B5D0B32</string>
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
@@ -552,6 +552,64 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>DADF27DB-102A-4188-990B-6BFF99C9898C</key>
+		<array>
+			<array>
+				<string>{83.25, 7.25}</string>
+				<string>{83.25, 31.75}</string>
+				<string>{-82.25, 33.25}</string>
+				<string>{-79.75, -6.75}</string>
+				<string>{48.25, -12.25}</string>
+				<string>{60.75, -9.75}</string>
+			</array>
+			<array>
+				<string>{-78.25, -9.75}</string>
+				<string>{-71.25, -9.75}</string>
+				<string>{-79.75, -6.75}</string>
+			</array>
+			<array>
+				<string>{-55.75, -18.25}</string>
+				<string>{-45.75, -18.25}</string>
+				<string>{-57.25, -15.25}</string>
+			</array>
+			<array>
+				<string>{10.75, -33.75}</string>
+				<string>{19.75, -18.25}</string>
+				<string>{-39.75, -33.25}</string>
+				<string>{-39.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-64.25, -14.75}</string>
+				<string>{-57.25, -15.25}</string>
+				<string>{-71.25, -9.75}</string>
+			</array>
+			<array>
+				<string>{-44.75, -25.25}</string>
+				<string>{-39.75, -33.25}</string>
+				<string>{19.75, -18.25}</string>
+				<string>{-45.75, -18.25}</string>
+			</array>
+			<array>
+				<string>{-83.75, -6.75}</string>
+				<string>{-79.75, -6.75}</string>
+				<string>{-82.25, 33.25}</string>
+			</array>
+			<array>
+				<string>{46.25, -15.25}</string>
+				<string>{48.25, -12.25}</string>
+				<string>{-79.75, -6.75}</string>
+				<string>{-45.75, -18.25}</string>
+				<string>{19.75, -18.25}</string>
+			</array>
+			<array>
+				<string>{-57.25, -15.25}</string>
+				<string>{-45.75, -18.25}</string>
+				<string>{-71.25, -9.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

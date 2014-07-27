@@ -111,30 +111,45 @@ typedef enum
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateTransform];\
     }\
+    for(SKNode* child in [self children]){\
+        [child setPosition:[child position]];\
+    }\
 }\
--(void)setZRotation:(float)rotation\
+-(void)setZRotation:(CGFloat)rotation\
 {\
     [super setZRotation:rotation];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateTransform];\
     }\
+    for(SKNode* child in [self children]){\
+        [child setZRotation:[child zRotation]];\
+    }\
 }\
--(void)setScale:(float)scale{\
+-(void)setScale:(CGFloat)scale{\
     [super setScale:scale];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
     }\
+    for(SKNode* child in [self children]){\
+        [child setXScale:[child xScale]];\
+    }\
 }\
--(void)setXScale:(float)scaleX{\
+-(void)setXScale:(CGFloat)scaleX{\
     [super setXScale:scaleX];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
     }\
+    for(SKNode* child in [self children]){\
+        [child setXScale:[child xScale]];\
+    }\
 }\
--(void)setYScale:(float)scaleY{\
+-(void)setYScale:(CGFloat)scaleY{\
     [super setYScale:scaleY];\
     if([_physicsProtocolImp body]){\
         [_physicsProtocolImp updateScale];\
+    }\
+    for(SKNode* child in [self children]){\
+        [child setYScale:[child yScale]];\
     }\
 }
 

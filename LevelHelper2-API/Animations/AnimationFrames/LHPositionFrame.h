@@ -7,8 +7,6 @@
 //
 
 #import "LHFrame.h"
-#import <UIKit/UIKit.h>
-
 @interface LHPositionFrame : LHFrame
 
 -(CGPoint)positionForUUID:(NSString *)uuid;

@@ -10,6 +10,7 @@
 #import "LHUtils.h"
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
+#import "SKNode+Transforms.h"
 
 #import "LHBezier.h"
 #import "LHShape.h"
@@ -19,6 +20,10 @@
 #import "SKNode+Transforms.h"
 
 #import "LHGameWorldNode.h"
+#import "LHUINode.h"
+#import "LHBackUINode.h"
+
+#import "LHAsset.h"
 #import "LHNode.h"
 
 #if LH_USE_BOX2D
@@ -34,6 +39,9 @@
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 @end
 
+@interface LHAsset (LH_ASSET_NODES_PRIVATE_UTILS)
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
+@end
 
 @interface LHShape (PHYSICS_TRIANGLES)
 -(NSMutableArray*)shapeTriangles;
@@ -68,6 +76,16 @@
 
 -(SKNode*)node{
     return _node;
+}
+
+-(LHAsset*)assetParent{
+    SKNode* p = _node;
+    while(p && [p parent]){
+        if([p isKindOfClass:[LHAsset class]])
+            return (LHAsset*)p;
+        p = [p parent];
+    }
+    return nil;
 }
 
 - (instancetype)initPhysicsProtocolWithNode:(SKNode*)nd
@@ -106,6 +124,10 @@
         _node = nd;
         _body = NULL;
         
+        CGPoint scl = [dictionary pointForKey:@"scale"];
+        [_node setXScale:scl.x];
+        [_node setYScale:scl.y];
+
         NSDictionary* dict = [dictionary objectForKey:@"nodePhysics"];
         
         if(!dict){
@@ -127,7 +149,8 @@
         b2Vec2 bodyPos = [scene metersFromPoint:position];
         bodyDef.position = bodyPos;
 
-        bodyDef.angle = [_node zRotation];//already in radians
+        float angle = [_node globalAngleFromLocalAngle:[_node zRotation]];
+        bodyDef.angle = angle;
 
         bodyDef.userData = LH_VOID_BRIDGE_CAST(_node);
         
@@ -147,11 +170,18 @@
                 
         float scaleX = [_node xScale];
         float scaleY = [_node yScale];
+        
+        CGPoint worldScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
+        scaleX = worldScale.x;
+        scaleY = worldScale.y;
+        
+        previousScale = worldScale;
 
-        previousScale = CGPointMake(scaleX, scaleY);
-
-//        sizet.width *= scaleX;
-//        sizet.height*= scaleY;
+        CGPoint sizeWorldScale = [_node convertToWorldScale:CGPointMake(1, 1)];
+        
+        //CAREFUL - size is returned containing scale - so don't multiply scale to the size but do multiply the world scale
+        sizet.width *= sizeWorldScale.x;
+        sizet.height*= sizeWorldScale.y;
 
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
@@ -303,13 +333,19 @@
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         
         
         if(fixturesInfo)
         {
-            int flipx = [_node xScale] < 0 ? -1 : 1;
-            int flipy = [_node yScale] < 0 ? -1 : 1;
+            int flipx = scaleX < 0 ? -1 : 1;
+            int flipy = scaleY < 0 ? -1 : 1;
             
             for(NSArray* fixPoints in fixturesInfo)
             {
@@ -402,9 +438,8 @@
     if(_body){
         CGAffineTransform trans = b2BodyToParentTransform(_node, self);
         CGPoint localPos = CGPointApplyAffineTransform([_node anchorPointInPoints], trans);
-        
         [((LHNode*)_node) updatePosition:localPos];
-        [((LHNode*)_node) updateZRotation:_body->GetAngle()];
+        [((LHNode*)_node) updateZRotation:[_node localAngleFromGlobalAngle:_body->GetAngle()]];
     }
 }
 
@@ -415,7 +450,10 @@ static inline CGAffineTransform b2BodyToParentTransform(SKNode *node, LHNodePhys
 static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 {
 	CGAffineTransform transform = CGAffineTransformIdentity;
-	for(SKNode *n = node; n && ![n isKindOfClass:[LHGameWorldNode class]]; n = n.parent){
+	for(SKNode *n = node; n &&  ![n isKindOfClass:[LHGameWorldNode class]]&&
+                                ![n isKindOfClass:[LHUINode class]] &&
+                                ![n isKindOfClass:[LHBackUINode class]];
+        n = n.parent){
 		transform = CGAffineTransformConcat(transform, n.nodeToParentTransform);
 	}
 	return transform;
@@ -448,10 +486,10 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [_node convertToWorldSpaceAR:CGPointZero];
+        CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
-        _body->SetTransform(b2Pos, [_node zRotation]);
-        _body->SetAwake(true);
+        _body->SetTransform(b2Pos, [_node globalAngleFromLocalAngle:[_node zRotation]]);
+        _body->SetAwake(true);        
     }
 }
 
@@ -508,10 +546,17 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 -(void)updateScale{
     
     if(_body){
+        CGFloat scaleX = [_node xScale];
+        CGFloat scaleY = [_node yScale];
+
+        CGPoint globalScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
+        scaleX = globalScale.x;
+        scaleY = globalScale.y;
         
-        float scaleX = [_node xScale];
-        float scaleY = [_node yScale];
-        
+        if(scaleX == previousScale.x && scaleY == previousScale.y){
+            return;
+        }
+
         if(scaleX < 0.01 && scaleX > -0.01){
             NSLog(@"WARNING - SCALE Y value CANNOT BE 0 - BODY WILL NOT GET SCALED.");
             return;
@@ -577,9 +622,9 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             if(shape->GetType() == b2Shape::e_circle)
             {
                 b2CircleShape* circleShape = (b2CircleShape*)shape;
-                float radius = circleShape->m_radius;
+                CGFloat radius = circleShape->m_radius;
                 
-                float newRadius = radius/previousScale.x*scaleX;
+                CGFloat newRadius = radius/previousScale.x*scaleX;
                 circleShape->m_radius = newRadius;
             }
             
@@ -657,6 +702,11 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         NSDictionary* dict = [dictionary objectForKey:@"nodePhysics"];
         
         if(!dict){
+            
+            CGPoint scl = [dictionary pointForKey:@"scale"];
+            [_node setXScale:scl.x];
+            [_node setYScale:scl.y];
+            
             return self;
         }
         
@@ -757,6 +807,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             NSString* fixUUID = [dict objectForKey:@"fixtureUUID"];
             LHScene* scene = (LHScene*)[_node scene];
             fixturesInfo = [scene tracedFixturesWithUUID:fixUUID];
+            if(!fixturesInfo){
+                LHAsset* asset = [self assetParent];
+                if(asset){
+                    fixturesInfo = [asset tracedFixturesWithUUID:fixUUID];
+                }
+            }
         }
         else if(shape == 2)//POLYGON
         {
@@ -916,6 +972,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             }
 #endif
         
+        
+        
+        CGPoint scl = [dictionary pointForKey:@"scale"];
+        [_node setXScale:scl.x];
+        [_node setYScale:scl.y];
+
         
     }
     return self;

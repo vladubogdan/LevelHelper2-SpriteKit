@@ -100,30 +100,12 @@
     LH_SUPER_DEALLOC();
 }
 
-#if TARGET_OS_IPHONE
 +(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile{
     return LH_AUTORELEASED([[self alloc] initWithContentOfFile:levelPlistFile]);
 }
-#else
-+(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile size:(CGSize)size{
-    return LH_AUTORELEASED([[self alloc] initWithContentOfFile:levelPlistFile size:size]);
-}
-#endif
 
-
-#if TARGET_OS_IPHONE
 -(instancetype)initWithContentOfFile:(NSString*)levelPlistFile
-#else
--(instancetype)initWithContentOfFile:(NSString*)levelPlistFile size:(CGSize)size
-#endif
 {
-    
-#if TARGET_OS_IPHONE
-#else
-    NSLog(@"Please note that support for Mac OS platform is partial. Some key elements are missing from SpriteKit on OS X SDK. When Apple updates the SDK i will be able to give full support.");
-#endif
-    
-    
     NSString* path = [[NSBundle mainBundle] pathForResource:[levelPlistFile stringByDeletingPathExtension]
                                                      ofType:[levelPlistFile pathExtension]];
     if(!path)return nil;
@@ -141,11 +123,7 @@
         [devices addObject:dev];
     }
 
-    #if TARGET_OS_IPHONE
     LHDevice* curDev = [LHUtils currentDeviceFromArray:devices];
-    #else
-    LHDevice* curDev = [LHUtils deviceFromArray:devices withSize:size];
-    #endif
 
     CGPoint childrenOffset = CGPointZero;
     
@@ -177,7 +155,6 @@
         childrenOffset.y = (sceneSize.height - designResolution.height)*0.5;
     }
 
-
     if (self = [super initWithSize:sceneSize])
     {
         relativePath = [[NSString alloc] initWithString:[levelPlistFile stringByDeletingLastPathComponent]];
@@ -199,25 +176,10 @@
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
-        if([dict boolForKey:@"useGlobalGravity"])
-        {
-            //more or less the same as box2d
-            CGPoint gravityVector = [dict pointForKey:@"globalGravityDirection"];
-            float gravityForce    = [dict floatForKey:@"globalGravityForce"];
-            
-            CGPoint gravity = CGPointMake(gravityVector.x*gravityForce,
-                                          gravityVector.y*gravityForce);
-            [self setGlobalGravity:gravity];
-        }
-        
-        
+        [self loadGlobalGravityFromDictionary:dict];
         [self setBackgroundColor:[dict colorForKey:@"backgroundColor"]];
-        
-        
-        [self createPhysicsBoundaries:dict];
-        
-        
-        [self createGameWorld:dict];
+        [self loadPhysicsBoundariesFromDictionary:dict];
+        [self loadGameWorldInfoFromDictionary:dict];
 
         
         [self performLateLoading];
@@ -249,16 +211,12 @@
     }
 }
 
--(void)createPhysicsBoundaries:(NSDictionary*)dict
+-(void)loadPhysicsBoundariesFromDictionary:(NSDictionary*)dict
 {
     NSDictionary* phyBoundInfo = [dict objectForKey:@"physicsBoundaries"];
     if(phyBoundInfo)
     {
-#if TARGET_OS_IPHONE
         CGSize scr = LH_SCREEN_RESOLUTION;
-#else
-        CGSize scr = self.size;
-#endif
         NSString* rectInf = [phyBoundInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
         if(!rectInf){
             rectInf = [phyBoundInfo objectForKey:@"general"];
@@ -269,10 +227,9 @@
             CGSize designSize = [self designResolutionSize];
             CGPoint offset = [self designOffset];
             CGRect skBRect = CGRectMake(bRect.origin.x*designSize.width + offset.x,
-                                        self.size.height - bRect.origin.y*designSize.height + offset.y,
+                                        designSize.height - bRect.origin.y*designSize.height + offset.y,
                                         bRect.size.width*designSize.width ,
                                         -bRect.size.height*designSize.height);
-            
             {
                 [self createPhysicsBoundarySectionFrom:CGPointMake(CGRectGetMinX(skBRect), CGRectGetMinY(skBRect))
                                                     to:CGPointMake(CGRectGetMaxX(skBRect), CGRectGetMinY(skBRect))
@@ -348,17 +305,13 @@
     
 }
 
--(void)createGameWorld:(NSDictionary*)dict
+-(void)loadGameWorldInfoFromDictionary:(NSDictionary*)dict
 {
     NSDictionary* gameWorldInfo = [dict objectForKey:@"gameWorld"];
     if(gameWorldInfo)
     {
-#if TARGET_OS_IPHONE
         CGSize scr = LH_SCREEN_RESOLUTION;
-#else
-        CGSize scr = self.size;
-#endif
-        
+
         NSString* rectInf = [gameWorldInfo objectForKey:[NSString stringWithFormat:@"%dx%d", (int)scr.width, (int)scr.height]];
         if(!rectInf){
             rectInf = [gameWorldInfo objectForKey:@"general"];
@@ -373,7 +326,6 @@
                                        (1.0f - bRect.origin.y)*designSize.height + offset.y,
                                        bRect.size.width*designSize.width ,
                                        -(bRect.size.height)*designSize.height);
-//            gameWorldRect.origin.y -= sceneSize.height;
             
 #if LH_DEBUG
             CGRect gameWorldRectT = gameWorldRect;
@@ -475,66 +427,16 @@
 #else
 
 -(void)mouseDown:(NSEvent *)theEvent{
-    
-    CGPoint location = [theEvent locationInNode:self];
-    
+    CGPoint location = [theEvent locationInNode:[self gameWorldNode]];
     ropeJointsCutStartPt = location;
-    NSArray* foundNodes = [self nodesAtPoint:location];
-    for(SKNode* foundNode in foundNodes)
-    {
-        if(foundNode.physicsBody){
-            touchedNode = foundNode;
-            touchedNodeWasDynamic = touchedNode.physicsBody.affectedByGravity;
-            [touchedNode.physicsBody setAffectedByGravity:NO];
-            break;
-        }
-    }
+}
+-(void)mouseUp:(NSEvent *)theEvent{
     
-    BOOL                dragActive = YES;
-    NSEvent*            event = NULL;
-    NSWindow            *targetWindow = [[NSApplication sharedApplication] mainWindow];
-    
-    while (dragActive) {
-        event = [targetWindow nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)
-                                          untilDate:[NSDate distantFuture]
-                                             inMode:NSEventTrackingRunLoopMode
-                                            dequeue:YES];
-        if(!event){
-            continue;
-        }
-        switch ([event type])
-        {
-            case NSLeftMouseDragged:
-            {
-                CGPoint curLocation = [event locationInNode:self];
-                
-                if(touchedNode && touchedNode.physicsBody){
-                    [touchedNode setPosition:curLocation];
-                }
-            }
-                break;
-                
-                
-            case NSLeftMouseUp:
-                dragActive = NO;
-                
-                CGPoint curLocation = [event locationInNode:self];
-                for(LHRopeJointNode* rope in ropeJoints){
-                    if([rope canBeCut]){
-                        [rope cutWithLineFromPointA:ropeJointsCutStartPt
-                                           toPointB:curLocation];
-                    }
-                }
-                
-                if(touchedNode){
-                    [touchedNode.physicsBody setAffectedByGravity:touchedNodeWasDynamic];
-                    touchedNode = nil;
-                }
-                
-                break;
-                
-            default:
-                break;
+    CGPoint location = [theEvent locationInNode:[self gameWorldNode]];
+    for(LHRopeJointNode* rope in [self childrenOfType:[LHRopeJointNode class]]){
+        if([rope canBeCut]){
+            [rope cutWithLineFromPointA:ropeJointsCutStartPt
+                               toPointB:location];
         }
     }
 }
@@ -708,6 +610,21 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 }
 #endif //LH_USE_BOX2D
 
+-(void)loadGlobalGravityFromDictionary:(NSDictionary*)dict
+{
+    if([dict boolForKey:@"useGlobalGravity"])
+    {
+        //more or less the same as box2d
+        CGPoint gravityVector = [dict pointForKey:@"globalGravityDirection"];
+        float gravityForce    = [dict floatForKey:@"globalGravityForce"];
+        
+        CGPoint gravity = CGPointMake(gravityVector.x*gravityForce,
+                                      gravityVector.y*gravityForce);
+        [self setGlobalGravity:gravity];
+    }
+}
+
+
 -(CGPoint)globalGravity{
     return [[self gameWorldNode] gravity];
 }
@@ -756,11 +673,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(float)currentDeviceRatio{
     
-#if TARGET_OS_IPHONE
     CGSize scrSize = LH_SCREEN_RESOLUTION;
-#else
-    CGSize scrSize = self.size;
-#endif
     
     for(LHDevice* dev in supportedDevices){
         CGSize devSize = [dev size];
@@ -780,11 +693,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(NSString*)currentDeviceSuffix{
     
-#if TARGET_OS_IPHONE
     CGSize scrSize = LH_SCREEN_RESOLUTION;
-#else
-    CGSize scrSize = self.size;
-#endif
     
     for(LHDevice* dev in supportedDevices){
         CGSize devSize = [dev size];

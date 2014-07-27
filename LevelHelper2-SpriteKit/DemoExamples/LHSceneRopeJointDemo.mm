@@ -30,13 +30,21 @@
     return self;
 }
 
+#if TARGET_OS_IPHONE
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-//    CGPoint gravity = [self globalGravity];
-//    NSLog(@"Changing gravity direction %f %f.", gravity.x, gravity.y);
-//    [self setGlobalGravity:CGPointMake(gravity.x, -gravity.y)];
-    
     //dont forget to call super
     [super touchesBegan:touches withEvent:event];
 }
+
+#else
+
+-(void)mouseDown:(NSEvent *)theEvent{
+    
+    [super mouseDown:theEvent];
+}
+#endif
+
+
 @end

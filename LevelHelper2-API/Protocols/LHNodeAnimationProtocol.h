@@ -31,6 +31,7 @@
 
 /**
  Returns the animation with a given name or nil if no animation with the specified name is found on the node.
+ @param animName The name of the animation.
  */
 -(LHAnimation*)animationWithName:(NSString*)animName;
 
@@ -50,25 +51,25 @@
  Set rotation on the node controlled by the animation.
  @param radians A rotation value in radians.
  */
--(void)setZRotation:(float)radians;
+-(void)setZRotation:(CGFloat)radians;
 
 /**
 Set x scale on the node controlled by the animation.
 @param xScale A scale value for the x axis.
 */
--(void)setXScale:(float)xScale;
+-(void)setXScale:(CGFloat)xScale;
 
 /**
  Set y scale on the node controlled by the animation.
  @param yScale A scale value for the y axis.
  */
--(void)setYScale:(float)yScale;
+-(void)setYScale:(CGFloat)yScale;
 
 /**
  Set opacity on the node controlled by the animation.
  @param opacity A opacity value between 0 and 1.
  */
--(void)setAlpha:(float)opacity;
+-(void)setAlpha:(CGFloat)opacity;
 
 @end
 

@@ -28,4 +28,10 @@
 - (CGPoint)lh_convertPoint:(CGPoint)point fromNode:(SKNode *)node;
 - (CGPoint)lh_convertPoint:(CGPoint)point toNode:(SKNode *)node;
 
+-(CGPoint)convertToWorldScale:(CGPoint)nodeScale;
+-(CGPoint)convertToNodeScale:(CGPoint)worldScale;
+
+-(float)globalAngleFromLocalAngle:(float)la;
+-(float)localAngleFromGlobalAngle:(float)ga;
+
 @end

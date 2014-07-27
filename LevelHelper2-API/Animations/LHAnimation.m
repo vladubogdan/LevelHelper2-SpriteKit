@@ -101,6 +101,7 @@
         }
         
         if(_active){
+            [self restart];
             [self setAnimating:YES];
         }
         
@@ -159,16 +160,21 @@
     }
 }
 -(void)setAnimating:(bool)val{
-    [self resetOneShotFrames];
     animating = val;
-    currentRepetition = 0;
-    currentTime = 0;
 }
 -(bool)animating{
     return animating;
 }
+
+-(void)restart{
+    [self resetOneShotFrames];
+    currentRepetition = 0;
+    currentTime = 0;
+}
+
 -(void)updateTimeWithDelta:(float)delta{
-    [self setCurrentTime:[self currentTime] + delta];
+    if(animating)
+        [self setCurrentTime:[self currentTime] + delta];
 }
 -(void)updateTimeWithValue:(float)val{
     [self setCurrentTime:val];
@@ -352,7 +358,8 @@
                        forNode:(SKNode*)animNode
 {
     if([animNode isKindOfClass:[LHCamera class]]){
-        CGSize winSize = [[self scene] size];
+//        CGSize winSize = [[self scene] size];
+        CGSize winSize = [[self scene] designResolutionSize];
         return CGPointMake(winSize.width*0.5  - newPos.x,
                         - newPos.y - winSize.height*0.5);
         
@@ -398,7 +405,8 @@
         double timeUnit = (time-beginTime)/framesTimeDistance; //a value between 0 and 1
         
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 CGPoint beginPosition   = [beginFrame positionForUUID:[child uuid]];
                 CGPoint endPosition     = [endFrame positionForUUID:[child uuid]];
@@ -417,8 +425,10 @@
     else if(beginFrame)
     {
         //we only have begin frame so lets set positions based on this frame
-        for(LHNode* child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+        for(LHNode* child in children)
+        {
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 CGPoint beginPosition = [beginFrame positionForUUID:[child uuid]];
                 
@@ -501,7 +511,8 @@
         
         
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 float beginRotation = [beginFrame rotationForUUID:[child uuid]];
                 float endRotation   = [endFrame rotationForUUID:[child uuid]];
@@ -517,7 +528,8 @@
     else if(beginFrame)
     {
         for(LHNode* child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 //we only have begin frame so lets set value based on this frame
                 float beginRotation = [beginFrame rotationForUUID:[child uuid]];
@@ -583,8 +595,10 @@
         float framesTimeDistance = endTime - beginTime;
         float timeUnit = (time-beginTime)/framesTimeDistance; //a value between 0 and 1
         
-        for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+        for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children)
+        {
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 CGSize beginScale = [beginFrame scaleForUUID:[child uuid]];
                 CGSize endScale = [endFrame scaleForUUID:[child uuid]];
@@ -601,7 +615,8 @@
     else if(beginFrame)
     {
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 CGSize beginScale = [beginFrame scaleForUUID:[child uuid]];
                 [child setXScale:beginScale.width];
@@ -668,7 +683,8 @@
         float timeUnit = (time-beginTime)/framesTimeDistance; //a value between 0 and 1
         
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 float beginValue = [beginFrame opacityForUUID:[child uuid]];
                 float endValue = [endFrame opacityForUUID:[child uuid]];
@@ -683,7 +699,8 @@
     else if(beginFrame)
     {
         for(id<LHNodeProtocol, LHNodeAnimationProtocol> child in children){
-            if(![prop subpropertyForUUID:[child uuid]])
+            if([child respondsToSelector:@selector(uuid)] &&
+               ![prop subpropertyForUUID:[child uuid]])
             {
                 //we only have begin frame so lets set value based on this frame
                 float beginValue = [beginFrame opacityForUUID:[child uuid]];

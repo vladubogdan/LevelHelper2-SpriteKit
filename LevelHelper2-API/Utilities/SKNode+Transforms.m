@@ -39,20 +39,18 @@
     CGSize size = [self size];
     
     
-    float anchorPointX = size.width*[self anchor].x;
-    float anchorPointY = size.height*[self anchor].y;
+    CGFloat anchorPointX = size.width*[self anchor].x;
+    CGFloat anchorPointY = size.height*[self anchor].y;
     
-    float centerPointX = size.width*0.5;
-    float centerPointY = size.height*0.5;
+    CGFloat centerPointX = size.width*0.5;
+    CGFloat centerPointY = size.height*0.5;
     
     CGPoint pos = [self position];
-    float rot = [self zRotation];
+    CGFloat rot = [self zRotation];
     
-    float xScl = [self xScale];
-    float yScl = [self yScale];
+    CGFloat xScl = [self xScale];
+    CGFloat yScl = [self yScale];
     
-
-
     CGAffineTransform nodeTransform = CGAffineTransformMakeTranslation(pos.x, pos.y);
     
     nodeTransform = CGAffineTransformRotate(nodeTransform, rot);
@@ -128,6 +126,43 @@
     
     CGPoint worldPt = [self convertToWorldSpace:point];
     return [node convertToNodeSpace:worldPt];
+}
+
+-(CGPoint)convertToWorldScale:(CGPoint)nodeScale{
+    for (SKNode *p = self.parent; p != nil && ![p isKindOfClass:[SKScene class]]; p = p.parent)
+    {
+        CGPoint scalePt = CGPointMake(p.xScale, p.yScale);
+        nodeScale.x *= scalePt.x;
+        nodeScale.y *= scalePt.y;
+    }
+    return nodeScale;
+}
+-(CGPoint)convertToNodeScale:(CGPoint)worldScale{
+    for (SKNode *p = self.parent; p != nil && ![p isKindOfClass:[SKScene class]]; p = p.parent)
+    {
+        CGPoint scalePt = CGPointMake(p.xScale, p.yScale);
+        worldScale.x /= scalePt.x;
+        worldScale.y /= scalePt.y;
+    }
+    return worldScale;
+}
+
+-(float)globalAngleFromLocalAngle:(float)la{
+    SKNode* prnt = [self parent];
+    while(prnt && ![prnt isKindOfClass:[SKScene class]]){
+        la += [prnt zRotation];
+        prnt = [prnt parent];
+    }
+    return la;
+}
+
+-(float)localAngleFromGlobalAngle:(float)ga{
+    SKNode* prnt = [self parent];
+    while(prnt && ![prnt isKindOfClass:[SKScene class]]){
+        ga -= [prnt zRotation];
+        prnt = [prnt parent];
+    }
+    return ga;
 }
 
 @end

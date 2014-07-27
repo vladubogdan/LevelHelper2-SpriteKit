@@ -47,22 +47,11 @@
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
+
+        //scale is handled by physics protocol because of diferences between spritekit and box2d handling
         
-#if LH_USE_BOX2D
-        {
-            CGPoint scl = [dict pointForKey:@"scale"];
-            [self setXScale:scl.x];
-            [self setYScale:scl.y];
-        }
-#endif
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
-        
-        //scale must be set after loading the physic info or else spritekit will not resize the sprite anymore - bug
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setXScale:scl.x];
-        [self setYScale:scl.y];
-        
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
 
@@ -71,6 +60,19 @@
                                                                                                       node:self];
 
 
+//#if LH_DEBUG
+//        CGSize _size = [dict sizeForKey:@"size"];
+//        SKShapeNode* debugShapeNode = [SKShapeNode node];
+//        CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
+//                                                            -_size.height*0.5,
+//                                                            _size.width,
+//                                                            _size.height),
+//                                                 nil);
+//        debugShapeNode.path = pathRef;
+//        CGPathRelease(pathRef);
+//        debugShapeNode.strokeColor = [SKColor greenColor];
+//        [self addChild:debugShapeNode];
+//#endif
     }
     
     return self;
@@ -94,8 +96,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
-    [_animationProtocolImp update:currentTime delta:dt];
+    [_physicsProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
+    [_animationProtocolImp update:currentTime delta:dt];    
 }
 
 #pragma mark - LHNodeAnimationProtocol Required

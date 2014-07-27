@@ -13,9 +13,7 @@
 
 /**
  LHAsset class is used to load an asset object from a level file or from the resources folder.
- Users can retrieve node objects by calling the scene (LHScene) childNodeWithName: method.
  */
-
 
 @interface LHAsset : SKNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
@@ -27,7 +25,7 @@
 /**
  Creates a new asset node with a specific name.
  @param assetName The name of the new asset node. Can be used later to retrieve the asset from the children hierarchy.
- @param assetFileName The name of the asset file. Do not provide an extension. E.g If file is named "myAsset.lhasset.plist" then yous should pass @"myAsset.lhasset".
+ @param fileName The name of the asset file. Do not provide an extension. E.g If file is named "myAsset.lhasset.plist" then yous should pass @"myAsset.lhasset".
  @param prnt The parent node. Must not be nil and must be a children of the LHScene (or subclass of LHScene).
  @return A new asset node.
  * @code

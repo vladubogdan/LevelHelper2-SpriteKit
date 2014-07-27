@@ -18,6 +18,8 @@
 
 @implementation LHAsset
 {
+    NSDictionary* _tracedFixtures;
+    
     CGSize _size;
     
     LHNodeProtocolImpl*         _nodeProtocolImp;
@@ -26,6 +28,7 @@
 }
 
 -(void)dealloc{
+    LH_SAFE_RELEASE(_tracedFixtures);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
     LH_SAFE_RELEASE(_physicsProtocolImp);
@@ -51,36 +54,34 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
         
-        
         _size = [dict sizeForKey:@"size"];
-        
 
-#if LH_USE_BOX2D
-        {
-            CGPoint scl = [dict pointForKey:@"scale"];
-            [self setXScale:scl.x];
-            [self setYScale:scl.y];
-        }
-#endif
+        //scale is handled by physics protocol because of diferences between spritekit and box2d handling
+        
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-        //scale must be set after loading the physic info or else spritekit will not resize the sprite anymore - bug
-        CGPoint scl = [dict pointForKey:@"scale"];
-        [self setXScale:scl.x];
-        [self setYScale:scl.y];
-        
-        
         LHScene* scene = (LHScene*)[self scene];
         
-        NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
-        
-        if(assetInfo)
+        BOOL fileExists = false;
+        if([dict objectForKey:@"assetFile"])
         {
-            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
-        }
-        else{
-            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+            NSDictionary* assetInfo = [scene assetInfoForFile:[dict objectForKey:@"assetFile"]];
+        
+            if(assetInfo)
+            {
+                fileExists = true;
+                NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+                if(tracedFix){
+                    _tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+                }
+
+                [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+            }
+        }        
+        if(!fileExists){
+            NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@. This usually means that the asset was created but not saved. Check your level and in the Scene Navigator, click on the lock icon next to the asset name.", [self name]);
+            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         }
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
@@ -115,30 +116,55 @@
         LHScene* scene = (LHScene*)[prnt scene];
 
         NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
-        
-        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithNode:self];
-        
-        
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolWithNode:self];
-        
-        
-        if(assetInfo)
-        {
-            [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
-        }
-        else{
+
+        if(!assetInfo){
             NSLog(@"WARNING: COULD NOT FIND INFORMATION FOR ASSET %@", [self name]);
+            return self;
         }
+
         
-        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:nil
+        NSDictionary* tracedFix = [assetInfo objectForKey:@"tracedFixtures"];
+        if(tracedFix){
+            _tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFix];
+        }
+
+        _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:assetInfo
+                                                                                    node:self];
+        _size = [assetInfo sizeForKey:@"size"];
+        
+        //scale is handled by physics protocol because of diferences between spritekit and box2d handling
+        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:assetInfo
+                                                                                                node:self];
+        
+        [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:assetInfo];
+        
+        _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:assetInfo
                                                                                                       node:self];
+        
+        
+//#if LH_DEBUG
+//        SKShapeNode* debugShapeNode = [SKShapeNode node];
+//        CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
+//                                                            -_size.height*0.5,
+//                                                            _size.width,
+//                                                            _size.height),
+//                                                 nil);
+//        debugShapeNode.path = pathRef;
+//        CGPathRelease(pathRef);
+//        debugShapeNode.strokeColor = [SKColor greenColor];
+//        [self addChild:debugShapeNode];
+//#endif
+        
+        [self update:0 delta:0];
     }
     
     return self;
 }
 
-
-
+-(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
+    return [_tracedFixtures objectForKey:uuid];
+}
 
 -(CGSize)size{
     return _size;
@@ -154,16 +180,16 @@ LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 LH_COMMON_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION
 
 
-
 #pragma mark LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
+
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {
+    [_physicsProtocolImp update:currentTime delta:dt];
     [_nodeProtocolImp update:currentTime delta:dt];
     [_animationProtocolImp update:currentTime delta:dt];
 }
-
 
 #pragma mark - LHNodeAnimationProtocol Required
 LH_ANIMATION_PROTOCOL_METHODS_IMPLEMENTATION

@@ -108,9 +108,18 @@ LH_JOINT_PROTOCOL_SPECIFIC_PHYSICS_ENGINE_METHODS_IMPLEMENTATION
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt{
-    if(debugShapeNode){
-        debugShapeNode.position = [self anchorA];
+    
+    if(![_jointProtocolImp nodeA] ||  ![_jointProtocolImp nodeB]){
+        [self lateLoading];
     }
+    
+//    if(debugShapeNode){
+//        CGPoint localAnchorA = [_jointProtocolImp localAnchorA];
+//        localAnchorA = CGPointMake(localAnchorA.x, -localAnchorA.y);
+//        CGPoint worldAnchorA = [[_jointProtocolImp nodeA] convertToWorldSpace:localAnchorA];
+//        localAnchorA = [self convertToNodeSpace:worldAnchorA];
+//        debugShapeNode.position = localAnchorA;
+//    }
 }
 
 #pragma mark LHNodeProtocol Optional
@@ -184,15 +193,15 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [scene.physicsWorld addJoint:joint];
         [_jointProtocolImp setJoint:joint];
         
-#if LH_DEBUG
-            debugShapeNode = [SKShapeNode node];
-            debugShapeNode.position = anchorA;//[self anchorA];
-            CGPathRef pathRef = CGPathCreateWithEllipseInRect(CGRectMake(-8, -8, 16, 16), nil);
-            debugShapeNode.path = pathRef;
-            CGPathRelease(pathRef);
-            debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
-            [self addChild:debugShapeNode];
-#endif
+//#if LH_DEBUG
+//            debugShapeNode = [SKShapeNode node];
+//            debugShapeNode.position = anchorA;//[self anchorA];
+//            CGPathRef pathRef = CGPathCreateWithEllipseInRect(CGRectMake(-8, -8, 16, 16), nil);
+//            debugShapeNode.path = pathRef;
+//            CGPathRelease(pathRef);
+//            debugShapeNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
+//            [self addChild:debugShapeNode];
+//#endif
         
     }
         

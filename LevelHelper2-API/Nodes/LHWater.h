@@ -11,7 +11,6 @@
 
 /**
  LHWater class is used to load and display a water area from a level file.
- Users can retrieve a water objects by calling the scene (LHScene) childNodeWithName: method.
  */
 
 
