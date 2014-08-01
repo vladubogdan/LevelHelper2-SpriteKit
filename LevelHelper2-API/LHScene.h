@@ -128,11 +128,13 @@
 
 /**
  Overwrite this method to receive notifications when an animation has finished playing. This method is called once, after all repetitions have finished playing.
+ @param anim The animation object that just finished playing.
  */
 -(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
 
 /**
  Overwrite this method to receive notifications when an animation has finished playing a repetition.
+ @param anim The animation object that just finished a repetition.
  */
 -(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
 

@@ -1756,7 +1756,7 @@
 			<key>nodeType</key>
 			<string>LHNode</string>
 			<key>parentUUID</key>
-			<string>6F3F5612-A039-45A9-AA0F-424476F444D8</string>
+			<string>3717270B-AFD1-442C-9019-AC8D2270BB2F</string>
 			<key>perDevicePosition</key>
 			<true/>
 			<key>rotation</key>
@@ -1796,7 +1796,7 @@
 		<string>DEFAULT</string>
 	</array>
 	<key>uuid</key>
-	<string>6F3F5612-A039-45A9-AA0F-424476F444D8</string>
+	<string>3717270B-AFD1-442C-9019-AC8D2270BB2F</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>
