@@ -5,32 +5,32 @@
 	<key>aspect</key>
 	<integer>0</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 1}, {1, 1}}</string>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 	<key>children</key>
 	<array>
 		<dict>
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>children</key>
 			<array>
 				<dict>
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>children</key>
 					<array>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.5, 0.5}</string>
+							<string>{0.500000, 0.500000}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{0.0625, 0.09375}</string>
+							<string>{0.062500, 0.093750}</string>
 							<key>imageFileName</key>
 							<string>ropeAssets.png</string>
 							<key>name</key>
@@ -78,9 +78,9 @@
 							<key>rotation</key>
 							<real>0.0</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{53, 53}</string>
+							<string>{53.000000, 53.000000}</string>
 							<key>spriteName</key>
 							<string>candy</string>
 							<key>spriteUUID</key>
@@ -98,11 +98,11 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.5, 0.5}</string>
+							<string>{0.500000, 0.500000}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.0625, 0.09375}</string>
+							<string>{-0.062500, 0.093750}</string>
 							<key>imageFileName</key>
 							<string>ropeAssets.png</string>
 							<key>name</key>
@@ -116,9 +116,9 @@
 							<key>rotation</key>
 							<real>0.0</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{53, 53}</string>
+							<string>{53.000000, 53.000000}</string>
 							<key>spriteName</key>
 							<string>candy</string>
 							<key>spriteUUID</key>
@@ -134,9 +134,9 @@
 						</dict>
 					</array>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.23485497633616129, 0.49506196081638337}</string>
+					<string>{0.234855, 0.495062}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -184,9 +184,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{53, 53}</string>
+					<string>{53.000000, 53.000000}</string>
 					<key>spriteName</key>
 					<string>candy</string>
 					<key>spriteUUID</key>
@@ -204,11 +204,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.83333333333333337, 0.09375}</string>
+					<string>{0.833333, 0.093750}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -222,7 +222,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>B8F5D6B8-59BF-4704-B713-4DADBC59E207</string>
+						<string>DCF04EDF-6DF4-466A-8008-1038576A605B</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -258,9 +258,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{78, 55}</string>
+					<string>{78.000000, 55.000000}</string>
 					<key>spriteName</key>
 					<string>object_bananabunch</string>
 					<key>spriteUUID</key>
@@ -278,11 +278,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -330,9 +330,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{93, 139}</string>
+					<string>{93.000000, 139.000000}</string>
 					<key>spriteName</key>
 					<string>object_statue</string>
 					<key>spriteUUID</key>
@@ -350,11 +350,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.16159997781117758, 0.83494864702224736}</string>
+					<string>{0.161600, 0.834949}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -368,7 +368,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>0C860B8B-476B-4B61-9A00-FF41CF39F502</string>
+						<string>51B858E7-099B-4BEB-98C4-DC7923CF8894</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -404,9 +404,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{43, 65}</string>
+					<string>{43.000000, 65.000000}</string>
 					<key>spriteName</key>
 					<string>object_canteen</string>
 					<key>spriteUUID</key>
@@ -424,11 +424,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.2981641352176666, 0.26078292727470398}</string>
+					<string>{0.298164, 0.260783}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -529,9 +529,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{2, 2}</string>
+					<string>{2.000000, 2.000000}</string>
 					<key>size</key>
-					<string>{80, 96}</string>
+					<string>{80.000000, 96.000000}</string>
 					<key>spriteName</key>
 					<string>object_backpack</string>
 					<key>spriteUUID</key>
@@ -549,13 +549,13 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>closed</key>
 					<false/>
 					<key>colorOverlay</key>
-					<string>{{0, 0}, {0, 1}}</string>
+					<string>{{0.000000, 0.000000}, {0.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.37423156780208566, 0.74466371878026172}</string>
+					<string>{0.374232, 0.744664}</string>
 					<key>name</key>
 					<string>UntitledBezier</string>
 					<key>nodePhysics</key>
@@ -600,35 +600,35 @@
 					<array>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-286.08795166015625, -1.6792411804199219}</string>
+							<string>{-286.087952, -1.679241}</string>
 							<key>ctrl2</key>
-							<string>{-286.08795166015625, -1.6792411804199219}</string>
+							<string>{-286.087952, -1.679241}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-286.08795166015625, -101.67924118041992}</string>
+							<string>{-286.087952, -101.679241}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{286.08795166015625, 171.63245010375977}</string>
+							<string>{286.087952, 171.632450}</string>
 							<key>ctrl2</key>
-							<string>{286.08795166015625, 171.63245010375977}</string>
+							<string>{286.087952, 171.632450}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{286.08795166015619, 71.632450103759822}</string>
+							<string>{286.087952, 71.632450}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{572.1759033203125, 203.35848999023438}</string>
+					<string>{572.175903, 203.358490}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -642,11 +642,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{0.54315447807312012, 1}, {0.54810869693756104, 1}}</string>
+					<string>{{0.543154, 1.000000}, {0.548109, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.75561919095322905, 0.36609311743615319}</string>
+					<string>{0.755619, 0.366093}</string>
 					<key>name</key>
 					<string>UntitledTexturedShape</string>
 					<key>nodePhysics</key>
@@ -691,31 +691,31 @@
 					<array>
 						<dict>
 							<key>point</key>
-							<string>{75, -1.0639915466308594}</string>
+							<string>{75.000000, -1.063992}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{22.458082392811775, 87.66653074324131}</string>
+							<string>{22.458082, 87.666531}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{-74.999999999999972, 85.538548831813017}</string>
+							<string>{-75.000000, 85.538549}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{-75.000000000000043, -87.666531925074693}</string>
+							<string>{-75.000000, -87.666532}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{-12.205819442868233, -0.43103967234492302}</string>
+							<string>{-12.205819, -0.431040}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
 					<real>37.504493713378906</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{150, 175.33306884765625}</string>
+					<string>{150.000000, 175.333069}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -726,91 +726,91 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-74.999999999999972, 85.538548831813017}</string>
+							<string>{-75.000000, 85.538549}</string>
 							<key>uv</key>
-							<string>{0.890625, 0.5}</string>
+							<string>{0.890625, 0.500000}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-75.000000000000043, -87.666531925074693}</string>
+							<string>{-75.000000, -87.666532}</string>
 							<key>uv</key>
-							<string>{0.3046875, 0.83829116821289062}</string>
+							<string>{0.304688, 0.838291}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-12.205819442868233, -0.43103967234492302}</string>
+							<string>{-12.205819, -0.431040}</string>
 							<key>uv</key>
-							<string>{0.3046875, 0.16170883178710938}</string>
+							<string>{0.304688, 0.161709}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{22.458082392811775, 87.66653074324131}</string>
+							<string>{22.458082, 87.666531}</string>
 							<key>uv</key>
-							<string>{-2.8421708795129297e-16, -7.5976052116288884e-09}</string>
+							<string>{-0.000000, -0.000000}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-74.999999999999972, 85.538548831813017}</string>
+							<string>{-75.000000, 85.538549}</string>
 							<key>uv</key>
-							<string>{0.56063836812973022, 0.71492999792098999}</string>
+							<string>{0.560638, 0.714930}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-12.205819442868233, -0.43103967234492302}</string>
+							<string>{-12.205819, -0.431040}</string>
 							<key>uv</key>
-							<string>{1.8947806745745518e-16, 1}</string>
+							<string>{0.000000, 1.000000}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-12.205819442868233, -0.43103967234492302}</string>
+							<string>{-12.205819, -0.431040}</string>
 							<key>uv</key>
-							<string>{0.52104634046554565, 0.24056315422058105}</string>
+							<string>{0.521046, 0.240563}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{75, -1.0639915466308594}</string>
+							<string>{75.000000, -1.063992}</string>
 							<key>uv</key>
-							<string>{1, 0.49393159151077271}</string>
+							<string>{1.000000, 0.493932}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{22.458082392811775, 87.66653074324131}</string>
+							<string>{22.458082, 87.666531}</string>
 							<key>uv</key>
-							<string>{0.64972054958343506, 1}</string>
+							<string>{0.649721, 1.000000}</string>
 						</dict>
 					</array>
 					<key>uuid</key>
@@ -822,11 +822,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 0.55127286911010742}, {0.46307340264320374, 1}}</string>
+					<string>{{1.000000, 0.551273}, {0.463073, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.79613422761113095, 0.70005222834887326}</string>
+					<string>{0.796134, 0.700052}</string>
 					<key>name</key>
 					<string>UntitledTexturedShape_1</string>
 					<key>nodePhysics</key>
@@ -871,31 +871,31 @@
 					<array>
 						<dict>
 							<key>point</key>
-							<string>{32.249433934976075, -1.9604537292284032}</string>
+							<string>{32.249434, -1.960454}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{-4.0495711465321946, 90.255230468130975}</string>
+							<string>{-4.049571, 90.255230}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{-51.582841957493024, -21.753106840536617}</string>
+							<string>{-51.582842, -21.753107}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{-45.088674545288065, -90.255231265895048}</string>
+							<string>{-45.088675, -90.255231}</string>
 						</dict>
 						<dict>
 							<key>point</key>
-							<string>{51.582846598413937, -89.398799760970377}</string>
+							<string>{51.582847, -89.398800}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
 					<real>37.504493713378906</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{103.16569519042969, 180.51046752929688}</string>
+					<string>{103.165695, 180.510468}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -906,91 +906,91 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{32.249433934976075, -1.9604537292284032}</string>
+							<string>{32.249434, -1.960454}</string>
 							<key>uv</key>
-							<string>{0.890625, 0.5}</string>
+							<string>{0.890625, 0.500000}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-4.0495711465321946, 90.255230468130975}</string>
+							<string>{-4.049571, 90.255230}</string>
 							<key>uv</key>
-							<string>{0.3046875, 0.83829116821289062}</string>
+							<string>{0.304688, 0.838291}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-51.582841957493024, -21.753106840536617}</string>
+							<string>{-51.582842, -21.753107}</string>
 							<key>uv</key>
-							<string>{0.3046875, 0.16170883178710938}</string>
+							<string>{0.304688, 0.161709}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-45.088674545288065, -90.255231265895048}</string>
+							<string>{-45.088675, -90.255231}</string>
 							<key>uv</key>
-							<string>{-2.8421708795129297e-16, -7.5976052116288884e-09}</string>
+							<string>{-0.000000, -0.000000}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{51.582846598413937, -89.398799760970377}</string>
+							<string>{51.582847, -89.398800}</string>
 							<key>uv</key>
-							<string>{0.56063836812973022, 0.71492999792098999}</string>
+							<string>{0.560638, 0.714930}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{32.249433934976075, -1.9604537292284032}</string>
+							<string>{32.249434, -1.960454}</string>
 							<key>uv</key>
-							<string>{1.8947806745745518e-16, 1}</string>
+							<string>{0.000000, 1.000000}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-45.088674545288065, -90.255231265895048}</string>
+							<string>{-45.088675, -90.255231}</string>
 							<key>uv</key>
-							<string>{0.52104634046554565, 0.24056315422058105}</string>
+							<string>{0.521046, 0.240563}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{32.249433934976075, -1.9604537292284032}</string>
+							<string>{32.249434, -1.960454}</string>
 							<key>uv</key>
-							<string>{1, 0.49393159151077271}</string>
+							<string>{1.000000, 0.493932}</string>
 						</dict>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>color</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>point</key>
-							<string>{-51.582841957493024, -21.753106840536617}</string>
+							<string>{-51.582842, -21.753107}</string>
 							<key>uv</key>
-							<string>{0.64972054958343506, 1}</string>
+							<string>{0.649721, 1.000000}</string>
 						</dict>
 					</array>
 					<key>uuid</key>
@@ -1000,9 +1000,9 @@
 				</dict>
 			</array>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -1012,9 +1012,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -1028,25 +1028,25 @@
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>children</key>
 			<array>
 				<dict>
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.46979895234107971, 0.045409064739942551}</string>
+					<string>{0.469799, 0.045409}</string>
 					<key>children</key>
 					<array>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.5, 0.5}</string>
+							<string>{0.500000, 0.500000}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.0019094111631563493, -0.082381477818968915}</string>
+							<string>{-0.001909, -0.082381}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1060,9 +1060,9 @@
 							<key>rotation</key>
 							<real>0.0</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{68, 50}</string>
+							<string>{68.000000, 50.000000}</string>
 							<key>spriteName</key>
 							<string>pelvis.png</string>
 							<key>spriteUUID</key>
@@ -1080,25 +1080,25 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.47391897439956665, 0.13728436827659607}</string>
+							<string>{0.473919, 0.137284}</string>
 							<key>children</key>
 							<array>
 								<dict>
 									<key>alpha</key>
 									<real>255</real>
 									<key>anchor</key>
-									<string>{0.45018437504768372, 0.14011798799037933}</string>
+									<string>{0.450184, 0.140118}</string>
 									<key>children</key>
 									<array>
 										<dict>
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.27164581418037415, 0.32847562432289124}</string>
+											<string>{0.271646, 0.328476}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{-0.0040177217955594223, 0.034891857727332012}</string>
+											<string>{-0.004018, 0.034892}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1112,9 +1112,9 @@
 											<key>rotation</key>
 											<real>1.1981198787689209</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{58, 30}</string>
+											<string>{58.000000, 30.000000}</string>
 											<key>spriteName</key>
 											<string>foot_LEFT.png</string>
 											<key>spriteUUID</key>
@@ -1130,9 +1130,9 @@
 										</dict>
 									</array>
 									<key>colorOverlay</key>
-									<string>{{1, 1}, {1, 1}}</string>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.00097772865983400208, 0.036626229711367309}</string>
+									<string>{0.000978, 0.036626}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
 									<key>name</key>
@@ -1146,9 +1146,9 @@
 									<key>rotation</key>
 									<real>3.8631041049957275</real>
 									<key>scale</key>
-									<string>{1, 1}</string>
+									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
-									<string>{40, 66}</string>
+									<string>{40.000000, 66.000000}</string>
 									<key>spriteName</key>
 									<string>leg_lower_L_outline.png</string>
 									<key>spriteUUID</key>
@@ -1164,9 +1164,9 @@
 								</dict>
 							</array>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{0.015046128089828652, -0.065425083693552558}</string>
+							<string>{0.015046, -0.065425}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1180,9 +1180,9 @@
 							<key>rotation</key>
 							<real>356.06317138671875</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{38, 74}</string>
+							<string>{38.000000, 74.000000}</string>
 							<key>spriteName</key>
 							<string>leg_upper_L_outline.png</string>
 							<key>spriteUUID</key>
@@ -1200,25 +1200,25 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.55787175893783569, 0.097570821642875671}</string>
+							<string>{0.557872, 0.097571}</string>
 							<key>children</key>
 							<array>
 								<dict>
 									<key>alpha</key>
 									<real>255</real>
 									<key>anchor</key>
-									<string>{0.7326505184173584, 0.24834446609020233}</string>
+									<string>{0.732651, 0.248344}</string>
 									<key>children</key>
 									<array>
 										<dict>
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.24622276425361633, 0.26522743701934814}</string>
+											<string>{0.246223, 0.265227}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{-0.0078580837587944926, 0.037690172836798763}</string>
+											<string>{-0.007858, 0.037690}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1232,9 +1232,9 @@
 											<key>rotation</key>
 											<real>357.92868041992188</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{58, 30}</string>
+											<string>{58.000000, 30.000000}</string>
 											<key>spriteName</key>
 											<string>foot_RIGHT.png</string>
 											<key>spriteUUID</key>
@@ -1250,9 +1250,9 @@
 										</dict>
 									</array>
 									<key>colorOverlay</key>
-									<string>{{1, 1}, {1, 1}}</string>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.0022093323968301803, 0.038417068792190492}</string>
+									<string>{0.002209, 0.038417}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
 									<key>name</key>
@@ -1266,9 +1266,9 @@
 									<key>rotation</key>
 									<real>5.8066048622131348</real>
 									<key>scale</key>
-									<string>{1, 1}</string>
+									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
-									<string>{42, 63}</string>
+									<string>{42.000000, 63.000000}</string>
 									<key>spriteName</key>
 									<string>leg_lower_R_outline.png</string>
 									<key>spriteUUID</key>
@@ -1284,9 +1284,9 @@
 								</dict>
 							</array>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.016650290175189635, -0.059108761340702198}</string>
+							<string>{-0.016650, -0.059109}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1300,9 +1300,9 @@
 							<key>rotation</key>
 							<real>358.30905151367188</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{45, 69}</string>
+							<string>{45.000000, 69.000000}</string>
 							<key>spriteName</key>
 							<string>leg_upper_R_outline.png</string>
 							<key>spriteUUID</key>
@@ -1318,9 +1318,9 @@
 						</dict>
 					</array>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{-0.015198149407967775, 0.032704379323428331}</string>
+					<string>{-0.015198, 0.032704}</string>
 					<key>name</key>
 					<string>lowerBody</string>
 					<key>nodeType</key>
@@ -1330,9 +1330,9 @@
 					<key>rotation</key>
 					<real>0.57369029521942139</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{116.54508209228516, 144.56781005859375}</string>
+					<string>{116.545082, 144.567810}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -1346,32 +1346,32 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.44440919160842896, 0.90037292242050171}</string>
+					<string>{0.444409, 0.900373}</string>
 					<key>children</key>
 					<array>
 						<dict>
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.22857189178466797, 0.15189126133918762}</string>
+							<string>{0.228572, 0.151891}</string>
 							<key>children</key>
 							<array>
 								<dict>
 									<key>alpha</key>
 									<real>255</real>
 									<key>anchor</key>
-									<string>{0.13908813893795013, 0.28713369369506836}</string>
+									<string>{0.139088, 0.287134}</string>
 									<key>children</key>
 									<array>
 										<dict>
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.24079601466655731, 0.45777952671051025}</string>
+											<string>{0.240796, 0.457780}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{0.013528772415309713, -0.0012630087925814769}</string>
+											<string>{0.013529, -0.001263}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1385,9 +1385,9 @@
 											<key>rotation</key>
 											<real>8.4649419784545898</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{31, 35}</string>
+											<string>{31.000000, 35.000000}</string>
 											<key>spriteName</key>
 											<string>hand_L_outline.png</string>
 											<key>spriteUUID</key>
@@ -1403,9 +1403,9 @@
 										</dict>
 									</array>
 									<key>colorOverlay</key>
-									<string>{{1, 1}, {1, 1}}</string>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.01336355538954089, 0.025298711109749839}</string>
+									<string>{0.013364, 0.025299}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
 									<key>name</key>
@@ -1419,9 +1419,9 @@
 									<key>rotation</key>
 									<real>7.1650009155273438</real>
 									<key>scale</key>
-									<string>{1, 1}</string>
+									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
-									<string>{51, 29}</string>
+									<string>{51.000000, 29.000000}</string>
 									<key>spriteName</key>
 									<string>forearm_L_outline.png</string>
 									<key>spriteUUID</key>
@@ -1437,9 +1437,9 @@
 								</dict>
 							</array>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{0.013813679393315563, 0.033720379907407415}</string>
+							<string>{0.013814, 0.033720}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1453,9 +1453,9 @@
 							<key>rotation</key>
 							<real>-11.89794921875</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{44, 63}</string>
+							<string>{44.000000, 63.000000}</string>
 							<key>spriteName</key>
 							<string>shoulder_L_outline.png</string>
 							<key>spriteUUID</key>
@@ -1473,25 +1473,25 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.33748188614845276, 0.84348529577255249}</string>
+							<string>{0.337482, 0.843485}</string>
 							<key>children</key>
 							<array>
 								<dict>
 									<key>alpha</key>
 									<real>255</real>
 									<key>anchor</key>
-									<string>{0.38864982128143311, 0.93079876899719238}</string>
+									<string>{0.388650, 0.930799}</string>
 									<key>children</key>
 									<array>
 										<dict>
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.5, 0.5}</string>
+											<string>{0.500000, 0.500000}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{0.02068051810546952, 0.03215019373708583}</string>
+											<string>{0.020681, 0.032150}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1505,9 +1505,9 @@
 											<key>rotation</key>
 											<real>-1.9139679670333862</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{24, 16}</string>
+											<string>{24.000000, 16.000000}</string>
 											<key>spriteName</key>
 											<string>mouth.png</string>
 											<key>spriteUUID</key>
@@ -1525,11 +1525,11 @@
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.25314894318580627, 0.2715039849281311}</string>
+											<string>{0.253149, 0.271504}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{0.0064735426762267661, -0.0044527141789890033}</string>
+											<string>{0.006474, -0.004453}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1543,9 +1543,9 @@
 											<key>rotation</key>
 											<real>-1.9139679670333862</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{38, 25}</string>
+											<string>{38.000000, 25.000000}</string>
 											<key>spriteName</key>
 											<string>eyes_OPEN.png</string>
 											<key>spriteUUID</key>
@@ -1563,11 +1563,11 @@
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.5, 0.5}</string>
+											<string>{0.500000, 0.500000}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{-0.000742683047450754, -0.013593555420707526}</string>
+											<string>{-0.000743, -0.013594}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1581,9 +1581,9 @@
 											<key>rotation</key>
 											<real>-1.9139679670333862</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{72, 69}</string>
+											<string>{72.000000, 69.000000}</string>
 											<key>spriteName</key>
 											<string>hair.png</string>
 											<key>spriteUUID</key>
@@ -1601,11 +1601,11 @@
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.5, 0.5}</string>
+											<string>{0.500000, 0.500000}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{0.0038898981454911661, -0.063198337648704778}</string>
+											<string>{0.003890, -0.063198}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1619,9 +1619,9 @@
 											<key>rotation</key>
 											<real>-720.5911865234375</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{100, 58}</string>
+											<string>{100.000000, 58.000000}</string>
 											<key>spriteName</key>
 											<string>hat.png</string>
 											<key>spriteUUID</key>
@@ -1637,9 +1637,9 @@
 										</dict>
 									</array>
 									<key>colorOverlay</key>
-									<string>{{1, 1}, {1, 1}}</string>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{-0.0027485261617955395, 0.0015691837201957763}</string>
+									<string>{-0.002749, 0.001569}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
 									<key>name</key>
@@ -1653,9 +1653,9 @@
 									<key>rotation</key>
 									<real>1.6841177940368652</real>
 									<key>scale</key>
-									<string>{1, 1}</string>
+									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
-									<string>{71, 83}</string>
+									<string>{71.000000, 83.000000}</string>
 									<key>spriteName</key>
 									<string>head.png</string>
 									<key>spriteUUID</key>
@@ -1671,9 +1671,9 @@
 								</dict>
 							</array>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.0049474972174751979, 0.0010971798421587132}</string>
+							<string>{-0.004947, 0.001097}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1687,9 +1687,9 @@
 							<key>rotation</key>
 							<real>359.82867431640625</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{33, 28}</string>
+							<string>{33.000000, 28.000000}</string>
 							<key>spriteName</key>
 							<string>neck_outline.png</string>
 							<key>spriteUUID</key>
@@ -1707,11 +1707,11 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.5, 0.5}</string>
+							<string>{0.500000, 0.500000}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{0.0033416783739334951, 0.1398601103160626}</string>
+							<string>{0.003342, 0.139860}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1725,9 +1725,9 @@
 							<key>rotation</key>
 							<real>-359.287841796875</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{71, 21}</string>
+							<string>{71.000000, 21.000000}</string>
 							<key>spriteName</key>
 							<string>gun-belt.png</string>
 							<key>spriteUUID</key>
@@ -1745,11 +1745,11 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.43700125813484192, 0.81601619720458984}</string>
+							<string>{0.437001, 0.816016}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.002654737265582578, 0.11789666820754086}</string>
+							<string>{-0.002655, 0.117897}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1763,9 +1763,9 @@
 							<key>rotation</key>
 							<real>-357.94183349609375</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{77, 104}</string>
+							<string>{77.000000, 104.000000}</string>
 							<key>spriteName</key>
 							<string>torso_outline.png</string>
 							<key>spriteUUID</key>
@@ -1783,11 +1783,11 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.5, 0.5}</string>
+							<string>{0.500000, 0.500000}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{0.0027910680061346226, 0.065768078306406519}</string>
+							<string>{0.002791, 0.065768}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1801,9 +1801,9 @@
 							<key>rotation</key>
 							<real>-1.4785642623901367</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{76, 93}</string>
+							<string>{76.000000, 93.000000}</string>
 							<key>spriteName</key>
 							<string>vest_outline.png</string>
 							<key>spriteUUID</key>
@@ -1821,11 +1821,11 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.31090718507766724, 0.21464477479457855}</string>
+							<string>{0.310907, 0.214645}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.044730741898208491, 0.11715084070173516}</string>
+							<string>{-0.044731, 0.117151}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1839,9 +1839,9 @@
 							<key>rotation</key>
 							<real>-359.82415771484375</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{31, 42}</string>
+							<string>{31.000000, 42.000000}</string>
 							<key>spriteName</key>
 							<string>gun.png</string>
 							<key>spriteUUID</key>
@@ -1859,11 +1859,11 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.5, 0.5}</string>
+							<string>{0.500000, 0.500000}</string>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.027460901583640524, 0.1398895033318274}</string>
+							<string>{-0.027461, 0.139890}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1877,9 +1877,9 @@
 							<key>rotation</key>
 							<real>-359.287841796875</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{27, 41}</string>
+							<string>{27.000000, 41.000000}</string>
 							<key>spriteName</key>
 							<string>gun-holster.png</string>
 							<key>spriteUUID</key>
@@ -1897,25 +1897,25 @@
 							<key>alpha</key>
 							<real>255</real>
 							<key>anchor</key>
-							<string>{0.83513325452804565, 0.17859967052936554}</string>
+							<string>{0.835133, 0.178600}</string>
 							<key>children</key>
 							<array>
 								<dict>
 									<key>alpha</key>
 									<real>255</real>
 									<key>anchor</key>
-									<string>{0.70623433589935303, 0.1069457158446312}</string>
+									<string>{0.706234, 0.106946}</string>
 									<key>children</key>
 									<array>
 										<dict>
 											<key>alpha</key>
 											<real>255</real>
 											<key>anchor</key>
-											<string>{0.43002957105636597, 0.13123144209384918}</string>
+											<string>{0.430030, 0.131231}</string>
 											<key>colorOverlay</key>
-											<string>{{1, 1}, {1, 1}}</string>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{-0.0035423224971301791, 0.030970150130053487}</string>
+											<string>{-0.003542, 0.030970}</string>
 											<key>imageFileName</key>
 											<string>officer.png</string>
 											<key>name</key>
@@ -1929,9 +1929,9 @@
 											<key>rotation</key>
 											<real>356.08987426757812</real>
 											<key>scale</key>
-											<string>{1, 1}</string>
+											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
-											<string>{34, 36}</string>
+											<string>{34.000000, 36.000000}</string>
 											<key>spriteName</key>
 											<string>hand_R_outline.png</string>
 											<key>spriteUUID</key>
@@ -1947,9 +1947,9 @@
 										</dict>
 									</array>
 									<key>colorOverlay</key>
-									<string>{{1, 1}, {1, 1}}</string>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{-0.012984302640979805, 0.025107004178718473}</string>
+									<string>{-0.012984, 0.025107}</string>
 									<key>imageFileName</key>
 									<string>officer.png</string>
 									<key>name</key>
@@ -1963,9 +1963,9 @@
 									<key>rotation</key>
 									<real>356.3387451171875</real>
 									<key>scale</key>
-									<string>{1, 1}</string>
+									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
-									<string>{32, 54}</string>
+									<string>{32.000000, 54.000000}</string>
 									<key>spriteName</key>
 									<string>forearm_R_outline.png</string>
 									<key>spriteUUID</key>
@@ -1981,9 +1981,9 @@
 								</dict>
 							</array>
 							<key>colorOverlay</key>
-							<string>{{1, 1}, {1, 1}}</string>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 							<key>generalPosition</key>
-							<string>{-0.022170223969201666, 0.026568047874008016}</string>
+							<string>{-0.022170, 0.026568}</string>
 							<key>imageFileName</key>
 							<string>officer.png</string>
 							<key>name</key>
@@ -1997,9 +1997,9 @@
 							<key>rotation</key>
 							<real>-0.84014892578125</real>
 							<key>scale</key>
-							<string>{1, 1}</string>
+							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{54, 54}</string>
+							<string>{54.000000, 54.000000}</string>
 							<key>spriteName</key>
 							<string>shoulder_R_outline.png</string>
 							<key>spriteUUID</key>
@@ -2015,9 +2015,9 @@
 						</dict>
 					</array>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{-0.023220739005605989, 0.025155399996802962}</string>
+					<string>{-0.023221, 0.025155}</string>
 					<key>name</key>
 					<string>upperBody</string>
 					<key>nodeType</key>
@@ -2027,9 +2027,9 @@
 					<key>rotation</key>
 					<real>3.4335906505584717</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{144.59010314941406, 200.13526916503906}</string>
+					<string>{144.590103, 200.135269}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -2041,22 +2041,22 @@
 				</dict>
 			</array>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>devicePositions</key>
 			<dict>
 				<key>0x0</key>
-				<string>{0.17107211963406635, 0.74629477214600359}</string>
+				<string>{0.171072, 0.746295}</string>
 				<key>1024x768</key>
-				<string>{0.1520564619354749, 0.84979492151760494}</string>
+				<string>{0.152056, 0.849795}</string>
 				<key>1136x640</key>
-				<string>{0.15493894901398264, 0.74743530476116571}</string>
+				<string>{0.154939, 0.747435}</string>
 				<key>2048x1536</key>
-				<string>{0.13645541882585915, 0.84622397374893943}</string>
+				<string>{0.136455, 0.846224}</string>
 				<key>960x640</key>
-				<string>{0.57573180198669438, 0.1602765440940857}</string>
+				<string>{0.575732, 0.160277}</string>
 			</dict>
 			<key>generalPosition</key>
-			<string>{0.57573180198669438, 0.1602765440940857}</string>
+			<string>{0.575732, 0.160277}</string>
 			<key>name</key>
 			<string>Officer</string>
 			<key>nodeType</key>
@@ -2068,9 +2068,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{0.4362032413482666, 0.34368479251861572}</string>
+			<string>{0.436203, 0.343685}</string>
 			<key>size</key>
-			<string>{198.40615844726562, 379.31982421875}</string>
+			<string>{198.406158, 379.319824}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -2084,11 +2084,11 @@
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -2098,9 +2098,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -2112,14 +2112,14 @@
 		</dict>
 	</array>
 	<key>designResolution</key>
-	<string>{960, 640}</string>
+	<string>{960.000000, 640.000000}</string>
 	<key>devices</key>
 	<array>
 		<dict>
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{960, 640}</string>
+			<string>{960.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string></string>
 		</dict>
@@ -2127,7 +2127,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1136, 640}</string>
+			<string>{1136.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string>-568</string>
 		</dict>
@@ -2135,7 +2135,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1024, 768}</string>
+			<string>{1024.000000, 768.000000}</string>
 			<key>suffix</key>
 			<string>-ipad</string>
 		</dict>
@@ -2143,13 +2143,13 @@
 			<key>ratio</key>
 			<real>2</real>
 			<key>size</key>
-			<string>{2048, 1536}</string>
+			<string>{2048.000000, 1536.000000}</string>
 			<key>suffix</key>
 			<string>-ipad@2x</string>
 		</dict>
 	</array>
 	<key>globalGravityDirection</key>
-	<string>{0, -1}</string>
+	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
 	<key>nodeType</key>
@@ -2157,15 +2157,15 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>1136x640</key>
-		<string>{{-0.0017000418156385422, 0.020994866266846657}, {0.99667811393737793, 0.95916998386383057}}</string>
+		<string>{{-0.001700, 0.020995}, {0.996678, 0.959170}}</string>
 		<key>2048x1536</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>960x640</key>
-		<string>{{0.026682263240218163, 0.025342131033539772}, {0.95488196611404419, 0.95488607883453369}}</string>
+		<string>{{0.026682, 0.025342}, {0.954882, 0.954886}}</string>
 		<key>general</key>
-		<string>{{0.026682263240218163, 0.025342131033539772}, {0.95488196611404419, 0.95488607883453369}}</string>
+		<string>{{0.026682, 0.025342}, {0.954882, 0.954886}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -2175,7 +2175,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>0C860B8B-476B-4B61-9A00-FF41CF39F502</key>
+		<key>51B858E7-099B-4BEB-98C4-DC7923CF8894</key>
 		<array>
 			<array>
 				<string>{-13.5, -19.75}</string>
@@ -2230,64 +2230,66 @@
 				<string>{8.5, -31.25}</string>
 			</array>
 		</array>
-		<key>B8F5D6B8-59BF-4704-B713-4DADBC59E207</key>
+		<key>DCF04EDF-6DF4-466A-8008-1038576A605B</key>
 		<array>
 			<array>
-				<string>{28.5, -24.75}</string>
-				<string>{29, -15.75}</string>
-				<string>{0.5, -9.25}</string>
-				<string>{23.5, -25.75}</string>
+				<string>{29, -25.75}</string>
+				<string>{29.5, -16.75}</string>
+				<string>{1, -10.25}</string>
+				<string>{24, -26.75}</string>
 			</array>
 			<array>
-				<string>{-26.5, -22.25}</string>
-				<string>{-26, -13.25}</string>
-				<string>{-36, -10.25}</string>
-				<string>{-36, -25.75}</string>
-				<string>{-35.5, -26.25}</string>
-				<string>{-32, -26.25}</string>
+				<string>{-26, -23.25}</string>
+				<string>{-25.5, -14.25}</string>
+				<string>{-35.5, -11.25}</string>
+				<string>{-35.5, -26.75}</string>
+				<string>{-35, -27.25}</string>
+				<string>{-31.5, -27.25}</string>
 			</array>
 			<array>
-				<string>{34.5, -14.25}</string>
-				<string>{36, -10.75}</string>
-				<string>{37.5, 3.75}</string>
-				<string>{35, 9.75}</string>
-				<string>{28, 18.25}</string>
-				<string>{17, 24.75}</string>
-				<string>{0.5, -9.25}</string>
-				<string>{29, -15.75}</string>
+				<string>{35, -15.25}</string>
+				<string>{36.5, -11.75}</string>
+				<string>{38, 2.75}</string>
+				<string>{35.5, 8.75}</string>
+				<string>{28.5, 17.25}</string>
+				<string>{17.5, 23.75}</string>
+				<string>{1, -10.25}</string>
+				<string>{29.5, -16.75}</string>
 			</array>
 			<array>
-				<string>{-38.5, -13.25}</string>
-				<string>{-38.5, -21.75}</string>
-				<string>{-36, -25.75}</string>
-				<string>{-36, -10.25}</string>
+				<string>{-38.5, -15.25}</string>
+				<string>{-38.5, -21.25}</string>
+				<string>{-37.5, -24.25}</string>
+				<string>{-35.5, -26.75}</string>
+				<string>{-35.5, -11.25}</string>
 			</array>
 			<array>
-				<string>{-38.5, 3.25}</string>
-				<string>{-36, -10.25}</string>
-				<string>{-18.5, -8.75}</string>
-				<string>{-13, -7.25}</string>
-				<string>{-19.5, 24.75}</string>
-				<string>{-28, 19.75}</string>
-				<string>{-35.5, 11.25}</string>
+				<string>{-38, 2.25}</string>
+				<string>{-35.5, -11.25}</string>
+				<string>{-18, -9.75}</string>
+				<string>{-12.5, -8.25}</string>
+				<string>{-19, 23.75}</string>
+				<string>{-27.5, 18.75}</string>
+				<string>{-35, 10.25}</string>
 			</array>
 			<array>
-				<string>{0.5, -9.25}</string>
-				<string>{17, 24.75}</string>
-				<string>{10.5, 26.75}</string>
-				<string>{-13.5, 26.75}</string>
-				<string>{-19.5, 24.75}</string>
-				<string>{-7, -7.25}</string>
+				<string>{17.5, 23.75}</string>
+				<string>{4.5, 26.75}</string>
+				<string>{-7, 26.75}</string>
+				<string>{-13, 25.75}</string>
+				<string>{-19, 23.75}</string>
+				<string>{-6.5, -8.25}</string>
+				<string>{1, -10.25}</string>
 			</array>
 			<array>
-				<string>{-7, -7.25}</string>
-				<string>{-19.5, 24.75}</string>
-				<string>{-13, -7.25}</string>
+				<string>{-6.5, -8.25}</string>
+				<string>{-19, 23.75}</string>
+				<string>{-12.5, -8.25}</string>
 			</array>
 			<array>
-				<string>{-18.5, -8.75}</string>
-				<string>{-36, -10.25}</string>
-				<string>{-26, -13.25}</string>
+				<string>{-18, -9.75}</string>
+				<string>{-35.5, -11.25}</string>
+				<string>{-25.5, -14.25}</string>
 			</array>
 		</array>
 	</dict>

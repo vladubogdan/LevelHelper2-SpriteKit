@@ -12,6 +12,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHAnimation.h"
 #import "LHConfig.h"
+#import "LHGameWorldNode.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(NSString*)currentDeviceSuffix;
@@ -27,10 +28,12 @@
 }
 
 -(void)dealloc{
+
     atlas = nil;
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
     LH_SAFE_RELEASE(_physicsProtocolImp);
+
     
     LH_SUPER_DEALLOC();
 }

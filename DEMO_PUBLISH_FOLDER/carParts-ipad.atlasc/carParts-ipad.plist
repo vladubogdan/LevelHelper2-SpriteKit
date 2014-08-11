@@ -19,7 +19,7 @@
 			<key>path</key>
 			<string>carParts-ipad@2x.png</string>
 			<key>size</key>
-			<string>{357, 236}</string>
+			<string>{357.000000, 236.000000}</string>
 			<key>subimages</key>
 			<array>
 				<dict>
@@ -30,7 +30,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{85, 85}</string>
+					<string>{85.000000, 85.000000}</string>
 					<key>textureRect</key>
 					<string>{{268, 4}, {85, 85}}</string>
 					<key>textureRotated</key>
@@ -44,7 +44,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{335, 135}</string>
+					<string>{335.000000, 135.000000}</string>
 					<key>textureRect</key>
 					<string>{{4, 97}, {335, 135}}</string>
 					<key>textureRotated</key>
@@ -58,7 +58,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{256, 64}</string>
+					<string>{256.000000, 64.000000}</string>
 					<key>textureRect</key>
 					<string>{{4, 4}, {256, 64}}</string>
 					<key>textureRotated</key>
@@ -70,7 +70,7 @@
 			<key>path</key>
 			<string>carParts-ipad.png</string>
 			<key>size</key>
-			<string>{178, 118}</string>
+			<string>{178.000000, 118.000000}</string>
 			<key>subimages</key>
 			<array>
 				<dict>
@@ -81,7 +81,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{43, 43}</string>
+					<string>{43.000000, 43.000000}</string>
 					<key>textureRect</key>
 					<string>{{134, 3}, {43, 43}}</string>
 					<key>textureRotated</key>
@@ -95,7 +95,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{168, 68}</string>
+					<string>{168.000000, 68.000000}</string>
 					<key>textureRect</key>
 					<string>{{2, 49}, {168, 68}}</string>
 					<key>textureRotated</key>
@@ -109,7 +109,7 @@
 					<key>spriteOffset</key>
 					<string>{0, 0}</string>
 					<key>spriteSourceSize</key>
-					<string>{128, 32}</string>
+					<string>{128.000000, 32.000000}</string>
 					<key>textureRect</key>
 					<string>{{2, 2}, {128, 32}}</string>
 					<key>textureRotated</key>

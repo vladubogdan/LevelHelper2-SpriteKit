@@ -5,14 +5,14 @@
 	<key>aspect</key>
 	<integer>0</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 1}, {1, 1}}</string>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 	<key>children</key>
 	<array>
 		<dict>
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>children</key>
 			<array>
 				<dict>
@@ -23,7 +23,7 @@
 					<key>collideConnected</key>
 					<false/>
 					<key>colorOverlay</key>
-					<string>{{0.62356674671173096, 0.26961600780487061}, {0.092645496129989624, 1}}</string>
+					<string>{{0.623567, 0.269616}, {0.092645, 1.000000}}</string>
 					<key>fadeOutDelay</key>
 					<real>1.5</real>
 					<key>length</key>
@@ -35,9 +35,9 @@
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
-					<string>{0, 0}</string>
+					<string>{0.000000, 0.000000}</string>
 					<key>relativePosB</key>
-					<string>{0, 0}</string>
+					<string>{0.000000, 0.000000}</string>
 					<key>removeAfterCut</key>
 					<true/>
 					<key>segments</key>
@@ -59,7 +59,7 @@
 					<key>uuid</key>
 					<string>22117342-09D7-42E6-AE10-07D83BEF786D</string>
 					<key>uvRepetitions</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>zOrder</key>
 					<integer>-1</integer>
 				</dict>
@@ -67,11 +67,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.49993472175944287, 0.34611005685583224}</string>
+					<string>{0.499935, 0.346110}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -119,9 +119,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{53, 53}</string>
+					<string>{53.000000, 53.000000}</string>
 					<key>spriteName</key>
 					<string>candy</string>
 					<key>spriteUUID</key>
@@ -139,11 +139,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.14161075294444647, 0.33523657612968238}</string>
+					<string>{0.141611, 0.335237}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -191,9 +191,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{50, 67}</string>
+					<string>{50.000000, 67.000000}</string>
 					<key>spriteName</key>
 					<string>thumb_tack</string>
 					<key>spriteUUID</key>
@@ -211,11 +211,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.40773545007072726, 0.31201093205826053}</string>
+					<string>{0.407735, 0.312011}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -263,9 +263,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{53, 53}</string>
+					<string>{53.000000, 53.000000}</string>
 					<key>spriteName</key>
 					<string>candy</string>
 					<key>spriteUUID</key>
@@ -283,11 +283,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.71772775613709383, 0.29412025787686158}</string>
+					<string>{0.717728, 0.294120}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
 					<key>name</key>
@@ -335,9 +335,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{50, 67}</string>
+					<string>{50.000000, 67.000000}</string>
 					<key>spriteName</key>
 					<string>thumb_tack</string>
 					<key>spriteUUID</key>
@@ -359,7 +359,7 @@
 					<key>collideConnected</key>
 					<false/>
 					<key>colorOverlay</key>
-					<string>{{0.11638426035642624, 0.54883646965026855}, {0.47869956493377686, 1}}</string>
+					<string>{{0.116384, 0.548836}, {0.478700, 1.000000}}</string>
 					<key>fadeOutDelay</key>
 					<real>1</real>
 					<key>length</key>
@@ -371,9 +371,9 @@
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>relativePosA</key>
-					<string>{0, 0}</string>
+					<string>{0.000000, 0.000000}</string>
 					<key>relativePosB</key>
-					<string>{0, 0}</string>
+					<string>{0.000000, 0.000000}</string>
 					<key>removeAfterCut</key>
 					<true/>
 					<key>segments</key>
@@ -395,15 +395,15 @@
 					<key>uuid</key>
 					<string>DDD3B70B-A82E-4179-AFB9-5287F3FC1062</string>
 					<key>uvRepetitions</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>zOrder</key>
 					<integer>1</integer>
 				</dict>
 			</array>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -413,9 +413,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -429,11 +429,11 @@
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -443,9 +443,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -457,14 +457,14 @@
 		</dict>
 	</array>
 	<key>designResolution</key>
-	<string>{960, 640}</string>
+	<string>{960.000000, 640.000000}</string>
 	<key>devices</key>
 	<array>
 		<dict>
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{960, 640}</string>
+			<string>{960.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string></string>
 		</dict>
@@ -472,7 +472,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1136, 640}</string>
+			<string>{1136.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string>-568</string>
 		</dict>
@@ -480,7 +480,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1024, 768}</string>
+			<string>{1024.000000, 768.000000}</string>
 			<key>suffix</key>
 			<string>-ipad</string>
 		</dict>
@@ -488,13 +488,13 @@
 			<key>ratio</key>
 			<real>2</real>
 			<key>size</key>
-			<string>{2048, 1536}</string>
+			<string>{2048.000000, 1536.000000}</string>
 			<key>suffix</key>
 			<string>-ipad@2x</string>
 		</dict>
 	</array>
 	<key>globalGravityDirection</key>
-	<string>{0, -1}</string>
+	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
 	<key>nodeType</key>
@@ -502,9 +502,9 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>960x640</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>

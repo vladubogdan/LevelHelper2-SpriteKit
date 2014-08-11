@@ -29,7 +29,6 @@
     LH_SUPER_DEALLOC();
 }
 
-
 + (instancetype)nodeWithDictionary:(NSDictionary*)dict
                                   parent:(SKNode*)prnt{
     return LH_AUTORELEASED([[self alloc] initNodeWithDictionary:dict

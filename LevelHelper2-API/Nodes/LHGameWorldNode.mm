@@ -393,6 +393,16 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LHNodeProtocolImpl*         _nodeProtocolImp;
     
 #if LH_USE_BOX2D
+    
+    float32 FIXED_TIMESTEP;
+    float32 MINIMUM_TIMESTEP;
+    int32 VELOCITY_ITERATIONS;
+    int32 POSITION_ITERATIONS;
+    int32 MAXIMUM_NUMBER_OF_STEPS;
+    
+    NSMutableArray* _scheduledBeginContact;
+    NSMutableArray* _scheduledEndContact;
+    
     NSTimeInterval  _lastTime;
     LHBox2dDebugDrawNode* __unsafe_unretained _debugNode;
     b2World*        _box2dWorld;
@@ -401,11 +411,15 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 }
 
 -(void)dealloc{
+
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
 #if LH_USE_BOX2D
-    //we need to first destroy all children and then distroy box2d world
-//    [self removeAllChildren];
+    LH_SAFE_RELEASE(_scheduledBeginContact);
+    LH_SAFE_RELEASE(_scheduledEndContact);
+    
+    //we need to first destroy all children and then destroy box2d world
+    [self removeAllChildren];
     LH_SAFE_DELETE(_box2dWorld);
 #endif
 
@@ -427,6 +441,19 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         
         [prnt addChild:self];
 #if LH_USE_BOX2D
+        
+        //        FIXED_TIMESTEP = 1.0f / 24.0f;
+        //        MINIMUM_TIMESTEP = 1.0f / 600.0f;
+        //        VELOCITY_ITERATIONS = 12;
+        //        POSITION_ITERATIONS = 12;
+        //        MAXIMUM_NUMBER_OF_STEPS = 30;
+        
+        FIXED_TIMESTEP = 1.0f / 120.0f;
+        MINIMUM_TIMESTEP = 1.0f / 600.0f;
+        VELOCITY_ITERATIONS = 8;
+        POSITION_ITERATIONS = 8;
+        MAXIMUM_NUMBER_OF_STEPS = 2;
+        
         _box2dWorld = NULL;
 #endif
 
@@ -503,14 +530,28 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     [self box2dWorld]->SetGravity(grv);
 }
 
+-(void)setBox2dFixedTimeStep:(float)val{
+    FIXED_TIMESTEP = val;
+}
+-(void)setBox2dMinimumTimeStep:(float)val{
+    MINIMUM_TIMESTEP = val;
+}
+-(void)setBox2dVelocityIterations:(int)val{
+    VELOCITY_ITERATIONS = val;
+}
+-(void)setBox2dPositionIterations:(int)val{
+    POSITION_ITERATIONS = val;
+}
+-(void)setBox2dMaxSteps:(int)val{
+    MAXIMUM_NUMBER_OF_STEPS = val;
+}
 
 
-
-const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
-const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-const int32 VELOCITY_ITERATIONS = 8;
-const int32 POSITION_ITERATIONS = 8;
-const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
+//const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
+//const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
+//const int32 VELOCITY_ITERATIONS = 8;
+//const int32 POSITION_ITERATIONS = 8;
+//const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 
 -(void)step:(float)dt
 {
@@ -539,7 +580,72 @@ const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 
 -(void)afterStep:(float)dt {
     
+    for(NSDictionary* dict in _scheduledBeginContact)
+    {
+        SKNode* nodeA = [dict objectForKey:@"nodeA"];
+        SKNode* nodeB = [dict objectForKey:@"nodeB"];
+        NSValue* pt = [dict objectForKey:@"contactPoint"];
+        NSNumber* imp = [dict objectForKey:@"impulse"];
+        if(nodeA && nodeB && pt && imp)
+        {
+            [[self scene] didBeginContactBetweenNodeA:nodeA
+                                             andNodeB:nodeB
+                                           atLocation:CGPointFromValue(pt)
+                                          withImpulse:[imp floatValue]];
+        }
+    }
+    [_scheduledBeginContact removeAllObjects];
+    
+    
+    
+    for(NSDictionary* dict in _scheduledEndContact)
+    {
+        SKNode* nodeA = [dict objectForKey:@"nodeA"];
+        SKNode* nodeB = [dict objectForKey:@"nodeB"];
+        if(nodeA && nodeB)
+        {
+            [[self scene] didEndContactBetweenNodeA:nodeA andNodeB:nodeB];
+        }
+    }
+    [_scheduledEndContact removeAllObjects];
+
 }
+
+-(void)scheduleDidBeginContactBetweenNodeA:(SKNode*)nodeA
+                                  andNodeB:(SKNode*)nodeB
+                                atLocation:(CGPoint)contactPoint
+                               withImpulse:(float)impulse
+{
+    if(!_scheduledBeginContact){
+        _scheduledBeginContact = [[NSMutableArray alloc] init];
+    }
+    
+    NSMutableDictionary* infoDict = [NSMutableDictionary dictionary];
+    
+    [infoDict setObject:nodeA forKey:@"nodeA"];
+    [infoDict setObject:nodeB forKey:@"nodeB"];
+    [infoDict setObject:LHValueWithCGPoint(contactPoint) forKey:@"contactPoint"];
+    [infoDict setObject:[NSNumber numberWithFloat:impulse] forKey:@"impulse"];
+    
+    [_scheduledBeginContact addObject:infoDict];
+}
+
+-(void)scheduleDidEndContactBetweenNodeA:(SKNode*)nodeA
+                                andNodeB:(SKNode*)nodeB
+{
+ 
+    if(!_scheduledEndContact){
+        _scheduledEndContact = [[NSMutableArray alloc] init];
+    }
+    
+    NSMutableDictionary* infoDict = [NSMutableDictionary dictionary];
+    
+    [infoDict setObject:nodeA forKey:@"nodeA"];
+    [infoDict setObject:nodeB forKey:@"nodeB"];
+    
+    [_scheduledEndContact addObject:infoDict];
+}
+
 #else //SPRITE KIT
 
 -(void)setDebugDraw:(BOOL)val{

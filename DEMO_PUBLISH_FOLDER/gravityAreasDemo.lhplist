@@ -5,18 +5,18 @@
 	<key>aspect</key>
 	<integer>2</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 1}, {1, 1}}</string>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 	<key>children</key>
 	<array>
 		<dict>
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -26,9 +26,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -42,18 +42,18 @@
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>children</key>
 			<array>
 				<dict>
 					<key>areaSize</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>direction</key>
-					<string>{0, 1}</string>
+					<string>{0.000000, 1.000000}</string>
 					<key>force</key>
 					<real>10</real>
 					<key>generalPosition</key>
-					<string>{0.81644280751546228, 0.76143059730529783}</string>
+					<string>{0.816443, 0.761431}</string>
 					<key>name</key>
 					<string>UntitledGravityArea</string>
 					<key>nodeType</key>
@@ -61,9 +61,9 @@
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
-					<string>{2.4991686344146729, 2.2560791969299316}</string>
+					<string>{2.499169, 2.256079}</string>
 					<key>size</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -75,13 +75,13 @@
 				</dict>
 				<dict>
 					<key>areaSize</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>direction</key>
-					<string>{-0.99999999999999623, 8.7422780003724745e-08}</string>
+					<string>{-1.000000, 0.000000}</string>
 					<key>force</key>
 					<real>10</real>
 					<key>generalPosition</key>
-					<string>{0.8422470857699712, 0.29565790593624114}</string>
+					<string>{0.842247, 0.295658}</string>
 					<key>name</key>
 					<string>UntitledGravityArea_2</string>
 					<key>nodeType</key>
@@ -89,9 +89,9 @@
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
-					<string>{2.2151153087615967, 2.2560791969299316}</string>
+					<string>{2.215115, 2.256079}</string>
 					<key>size</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -103,13 +103,13 @@
 				</dict>
 				<dict>
 					<key>areaSize</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>direction</key>
-					<string>{1, 0}</string>
+					<string>{1.000000, 0.000000}</string>
 					<key>force</key>
 					<real>10</real>
 					<key>generalPosition</key>
-					<string>{0.31551228165626527, 0.77095946334302423}</string>
+					<string>{0.315512, 0.770959}</string>
 					<key>name</key>
 					<string>UntitledGravityArea_1</string>
 					<key>nodeType</key>
@@ -117,9 +117,9 @@
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
-					<string>{4.7763123512268066, 2.2560791969299316}</string>
+					<string>{4.776312, 2.256079}</string>
 					<key>size</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -133,11 +133,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.069851880278050282, 0.11376582577181579}</string>
+					<string>{0.069852, 0.113766}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -151,7 +151,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>B94F7CC0-8F2D-44D5-949B-6631D49F5B97</string>
+						<string>90747FED-96E3-441E-8C4B-BE5B73B162F1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -187,9 +187,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{82, 57}</string>
+					<string>{82.000000, 57.000000}</string>
 					<key>spriteName</key>
 					<string>object_banana</string>
 					<key>spriteUUID</key>
@@ -207,11 +207,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.58571859067790988, 0.14193721310116417}</string>
+					<string>{0.585719, 0.141937}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -225,7 +225,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>25A885DC-8E1D-43F4-9328-B94FDFEEC6B1</string>
+						<string>28395B0E-F4A2-4013-8A4E-80BE6524BA75</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -261,9 +261,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{78, 55}</string>
+					<string>{78.000000, 55.000000}</string>
 					<key>spriteName</key>
 					<string>object_bananabunch</string>
 					<key>spriteUUID</key>
@@ -281,11 +281,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.59651448934940465, 0.41501705300438518}</string>
+					<string>{0.596514, 0.415017}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -299,7 +299,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>D21425DB-F5CB-455F-82F2-5AB5DA585E9E</string>
+						<string>4C005E89-ACB7-4D0D-89D3-F3711701C44F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -335,9 +335,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{43, 65}</string>
+					<string>{43.000000, 65.000000}</string>
 					<key>spriteName</key>
 					<string>object_canteen</string>
 					<key>spriteUUID</key>
@@ -355,11 +355,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.064158520779650036, 0.40059566597306001}</string>
+					<string>{0.064159, 0.400596}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
 					<key>name</key>
@@ -373,7 +373,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>3AA36EF6-A167-4569-AEDA-4E2688A1410B</string>
+						<string>71BA2635-C5A2-49D2-9690-9E9EDD16C1A1</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -409,9 +409,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{51, 127}</string>
+					<string>{51.000000, 127.000000}</string>
 					<key>spriteName</key>
 					<string>object_pineapple</string>
 					<key>spriteUUID</key>
@@ -427,13 +427,13 @@
 				</dict>
 				<dict>
 					<key>areaSize</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>direction</key>
-					<string>{0, 1}</string>
+					<string>{0.000000, 1.000000}</string>
 					<key>force</key>
 					<real>14</real>
 					<key>generalPosition</key>
-					<string>{0.33422994613647461, 0.32739343643188479}</string>
+					<string>{0.334230, 0.327393}</string>
 					<key>name</key>
 					<string>UntitledGravityArea_3</string>
 					<key>nodeType</key>
@@ -441,9 +441,9 @@
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>scale</key>
-					<string>{3.4841704368591309, 3.4841704368591309}</string>
+					<string>{3.484170, 3.484170}</string>
 					<key>size</key>
-					<string>{128, 128}</string>
+					<string>{128.000000, 128.000000}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -455,9 +455,9 @@
 				</dict>
 			</array>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -467,9 +467,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -483,11 +483,11 @@
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -497,9 +497,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -511,14 +511,14 @@
 		</dict>
 	</array>
 	<key>designResolution</key>
-	<string>{960, 640}</string>
+	<string>{960.000000, 640.000000}</string>
 	<key>devices</key>
 	<array>
 		<dict>
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{960, 640}</string>
+			<string>{960.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string></string>
 		</dict>
@@ -526,7 +526,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1136, 640}</string>
+			<string>{1136.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string>-568</string>
 		</dict>
@@ -534,7 +534,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1024, 768}</string>
+			<string>{1024.000000, 768.000000}</string>
 			<key>suffix</key>
 			<string>-ipad</string>
 		</dict>
@@ -542,13 +542,13 @@
 			<key>ratio</key>
 			<real>2</real>
 			<key>size</key>
-			<string>{2048, 1536}</string>
+			<string>{2048.000000, 1536.000000}</string>
 			<key>suffix</key>
 			<string>-ipad@2x</string>
 		</dict>
 	</array>
 	<key>globalGravityDirection</key>
-	<string>{0, -1}</string>
+	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
 	<key>nodeType</key>
@@ -556,15 +556,15 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.01666748896241188, 0.00030272669391706586}, {1.0166674852371216, 0.99969732761383057}}</string>
+		<string>{{-0.016667, 0.000303}, {1.016667, 0.999697}}</string>
 		<key>1136x640</key>
-		<string>{{-0.01666748896241188, 0.00030272669391706586}, {1.0166674852371216, 0.99969732761383057}}</string>
+		<string>{{-0.016667, 0.000303}, {1.016667, 0.999697}}</string>
 		<key>2048x1536</key>
-		<string>{{-0.01666748896241188, 0.00030272669391706586}, {1.0166674852371216, 0.99969732761383057}}</string>
+		<string>{{-0.016667, 0.000303}, {1.016667, 0.999697}}</string>
 		<key>960x640</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
-		<string>{{-0.01666748896241188, 0.00030272669391706586}, {1.0166674852371216, 0.99969732761383057}}</string>
+		<string>{{-0.016667, 0.000303}, {1.016667, 0.999697}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -574,67 +574,124 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>25A885DC-8E1D-43F4-9328-B94FDFEEC6B1</key>
+		<key>28395B0E-F4A2-4013-8A4E-80BE6524BA75</key>
 		<array>
 			<array>
-				<string>{28.5, -24.75}</string>
-				<string>{29, -15.75}</string>
-				<string>{0.5, -9.25}</string>
-				<string>{23.5, -25.75}</string>
+				<string>{29, -25.75}</string>
+				<string>{29.5, -16.75}</string>
+				<string>{1, -10.25}</string>
+				<string>{24, -26.75}</string>
 			</array>
 			<array>
-				<string>{-26.5, -22.25}</string>
-				<string>{-26, -13.25}</string>
-				<string>{-36, -10.25}</string>
-				<string>{-36, -25.75}</string>
-				<string>{-35.5, -26.25}</string>
-				<string>{-32, -26.25}</string>
+				<string>{-26, -23.25}</string>
+				<string>{-25.5, -14.25}</string>
+				<string>{-35.5, -11.25}</string>
+				<string>{-35.5, -26.75}</string>
+				<string>{-35, -27.25}</string>
+				<string>{-31.5, -27.25}</string>
 			</array>
 			<array>
-				<string>{34.5, -14.25}</string>
-				<string>{36, -10.75}</string>
-				<string>{37.5, 3.75}</string>
-				<string>{35, 9.75}</string>
-				<string>{28, 18.25}</string>
-				<string>{17, 24.75}</string>
-				<string>{0.5, -9.25}</string>
-				<string>{29, -15.75}</string>
+				<string>{35, -15.25}</string>
+				<string>{36.5, -11.75}</string>
+				<string>{38, 2.75}</string>
+				<string>{35.5, 8.75}</string>
+				<string>{28.5, 17.25}</string>
+				<string>{17.5, 23.75}</string>
+				<string>{1, -10.25}</string>
+				<string>{29.5, -16.75}</string>
 			</array>
 			<array>
-				<string>{-38.5, -13.25}</string>
-				<string>{-38.5, -21.75}</string>
-				<string>{-36, -25.75}</string>
-				<string>{-36, -10.25}</string>
+				<string>{-38.5, -15.25}</string>
+				<string>{-38.5, -21.25}</string>
+				<string>{-37.5, -24.25}</string>
+				<string>{-35.5, -26.75}</string>
+				<string>{-35.5, -11.25}</string>
 			</array>
 			<array>
-				<string>{-38.5, 3.25}</string>
-				<string>{-36, -10.25}</string>
-				<string>{-18.5, -8.75}</string>
-				<string>{-13, -7.25}</string>
-				<string>{-19.5, 24.75}</string>
-				<string>{-28, 19.75}</string>
-				<string>{-35.5, 11.25}</string>
+				<string>{-38, 2.25}</string>
+				<string>{-35.5, -11.25}</string>
+				<string>{-18, -9.75}</string>
+				<string>{-12.5, -8.25}</string>
+				<string>{-19, 23.75}</string>
+				<string>{-27.5, 18.75}</string>
+				<string>{-35, 10.25}</string>
 			</array>
 			<array>
-				<string>{0.5, -9.25}</string>
-				<string>{17, 24.75}</string>
-				<string>{10.5, 26.75}</string>
-				<string>{-13.5, 26.75}</string>
-				<string>{-19.5, 24.75}</string>
-				<string>{-7, -7.25}</string>
+				<string>{17.5, 23.75}</string>
+				<string>{4.5, 26.75}</string>
+				<string>{-7, 26.75}</string>
+				<string>{-13, 25.75}</string>
+				<string>{-19, 23.75}</string>
+				<string>{-6.5, -8.25}</string>
+				<string>{1, -10.25}</string>
 			</array>
 			<array>
-				<string>{-7, -7.25}</string>
-				<string>{-19.5, 24.75}</string>
-				<string>{-13, -7.25}</string>
+				<string>{-6.5, -8.25}</string>
+				<string>{-19, 23.75}</string>
+				<string>{-12.5, -8.25}</string>
 			</array>
 			<array>
-				<string>{-18.5, -8.75}</string>
-				<string>{-36, -10.25}</string>
-				<string>{-26, -13.25}</string>
+				<string>{-18, -9.75}</string>
+				<string>{-35.5, -11.25}</string>
+				<string>{-25.5, -14.25}</string>
 			</array>
 		</array>
-		<key>3AA36EF6-A167-4569-AEDA-4E2688A1410B</key>
+		<key>4C005E89-ACB7-4D0D-89D3-F3711701C44F</key>
+		<array>
+			<array>
+				<string>{-13.5, -19.75}</string>
+				<string>{-8.5, -20.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{-17, -16.25}</string>
+			</array>
+			<array>
+				<string>{16, -18.25}</string>
+				<string>{20, -3.75}</string>
+				<string>{20.5, 9.75}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{9, -22.25}</string>
+			</array>
+			<array>
+				<string>{-6.5, -29.75}</string>
+				<string>{-4, -31.75}</string>
+				<string>{8.5, -31.25}</string>
+				<string>{-6.5, -21.75}</string>
+			</array>
+			<array>
+				<string>{-18.5, 29.25}</string>
+				<string>{-20, 25.75}</string>
+				<string>{-21, 19.25}</string>
+				<string>{-21, 11.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{20.5, 9.75}</string>
+				<string>{3.5, 31.75}</string>
+				<string>{-15.5, 31.75}</string>
+			</array>
+			<array>
+				<string>{16, 28.75}</string>
+				<string>{10.5, 30.75}</string>
+				<string>{3.5, 31.75}</string>
+				<string>{20.5, 9.75}</string>
+			</array>
+			<array>
+				<string>{9, -22.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{-8.5, -20.25}</string>
+				<string>{8.5, -31.25}</string>
+			</array>
+			<array>
+				<string>{6.5, -32.25}</string>
+				<string>{8.5, -31.25}</string>
+				<string>{-4, -31.75}</string>
+				<string>{-3.5, -32.25}</string>
+			</array>
+			<array>
+				<string>{-8.5, -20.25}</string>
+				<string>{-6.5, -21.75}</string>
+				<string>{8.5, -31.25}</string>
+			</array>
+		</array>
+		<key>71BA2635-C5A2-49D2-9690-9E9EDD16C1A1</key>
 		<array>
 			<array>
 				<string>{-19, -34.75}</string>
@@ -737,7 +794,7 @@
 				<string>{-6.5, -31.75}</string>
 			</array>
 		</array>
-		<key>B94F7CC0-8F2D-44D5-949B-6631D49F5B97</key>
+		<key>90747FED-96E3-441E-8C4B-BE5B73B162F1</key>
 		<array>
 			<array>
 				<string>{38.75, -26.25}</string>
@@ -797,61 +854,6 @@
 				<string>{17.25, -1.25}</string>
 				<string>{38.25, 5.75}</string>
 				<string>{7.25, 3.75}</string>
-			</array>
-		</array>
-		<key>D21425DB-F5CB-455F-82F2-5AB5DA585E9E</key>
-		<array>
-			<array>
-				<string>{-13.5, -19.75}</string>
-				<string>{-8.5, -20.25}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{-17, -16.25}</string>
-			</array>
-			<array>
-				<string>{16, -18.25}</string>
-				<string>{20, -3.75}</string>
-				<string>{20.5, 9.75}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{9, -22.25}</string>
-			</array>
-			<array>
-				<string>{-6.5, -29.75}</string>
-				<string>{-4, -31.75}</string>
-				<string>{8.5, -31.25}</string>
-				<string>{-6.5, -21.75}</string>
-			</array>
-			<array>
-				<string>{-18.5, 29.25}</string>
-				<string>{-20, 25.75}</string>
-				<string>{-21, 19.25}</string>
-				<string>{-21, 11.25}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{20.5, 9.75}</string>
-				<string>{3.5, 31.75}</string>
-				<string>{-15.5, 31.75}</string>
-			</array>
-			<array>
-				<string>{16, 28.75}</string>
-				<string>{10.5, 30.75}</string>
-				<string>{3.5, 31.75}</string>
-				<string>{20.5, 9.75}</string>
-			</array>
-			<array>
-				<string>{9, -22.25}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{-8.5, -20.25}</string>
-				<string>{8.5, -31.25}</string>
-			</array>
-			<array>
-				<string>{6.5, -32.25}</string>
-				<string>{8.5, -31.25}</string>
-				<string>{-4, -31.75}</string>
-				<string>{-3.5, -32.25}</string>
-			</array>
-			<array>
-				<string>{-8.5, -20.25}</string>
-				<string>{-6.5, -21.75}</string>
-				<string>{8.5, -31.25}</string>
 			</array>
 		</array>
 	</dict>

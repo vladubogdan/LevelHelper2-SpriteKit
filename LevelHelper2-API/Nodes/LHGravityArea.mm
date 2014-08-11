@@ -153,7 +153,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                 float force = strength * maxForce;
                 CGFloat angle = atan2f(b2BodyPosition.y - b2TouchPosition.y, b2BodyPosition.x - b2TouchPosition.x);
                 
-                b->ApplyLinearImpulse(b2Vec2(cosf(angle) * force, sinf(angle) * force), b->GetPosition());
+                b->ApplyLinearImpulse(b2Vec2(cosf(angle) * force, sinf(angle) * force), b->GetPosition(), true);
             }
         }
         else{
@@ -167,7 +167,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                 
                 float directionX = [self direction].x;
                 float directionY = [self direction].y;
-                b->ApplyLinearImpulse(b2Vec2(directionX * force, directionY * force), b->GetPosition());
+                b->ApplyLinearImpulse(b2Vec2(directionX * force, directionY * force), b->GetPosition(), true);
             }
         }
 	}

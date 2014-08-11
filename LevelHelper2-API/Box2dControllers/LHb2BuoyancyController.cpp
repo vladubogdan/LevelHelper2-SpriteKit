@@ -101,7 +101,7 @@ float32 LH_b2BuoyancyController::ComputeSubmergedArea(b2Shape* shape,
         
         bool lastSubmerged = false;
         int32 i;
-        for(i=0;i<((b2PolygonShape*)shape)->m_vertexCount;i++){
+        for(i=0;i<((b2PolygonShape*)shape)->m_count;i++){
             depths[i] = b2Dot(normalL,((b2PolygonShape*)shape)->m_vertices[i]) - offsetL;
             
             
@@ -136,14 +136,14 @@ float32 LH_b2BuoyancyController::ComputeSubmergedArea(b2Shape* shape,
                 break;
             case 1:
                 if(intoIndex==-1){
-                    intoIndex = ((b2PolygonShape*)shape)->m_vertexCount-1;
+                    intoIndex = ((b2PolygonShape*)shape)->m_count-1;
                 }else{
-                    outoIndex = ((b2PolygonShape*)shape)->m_vertexCount-1;
+                    outoIndex = ((b2PolygonShape*)shape)->m_count-1;
                 }
                 break;
         }
-        int32 intoIndex2 = (intoIndex+1)%((b2PolygonShape*)shape)->m_vertexCount;
-        int32 outoIndex2 = (outoIndex+1)%((b2PolygonShape*)shape)->m_vertexCount;
+        int32 intoIndex2 = (intoIndex+1)%((b2PolygonShape*)shape)->m_count;
+        int32 outoIndex2 = (outoIndex+1)%((b2PolygonShape*)shape)->m_count;
         
         float32 intoLambda = (0 - depths[intoIndex]) / (depths[intoIndex2] - depths[intoIndex]);
         float32 outoLambda = (0 - depths[outoIndex]) / (depths[outoIndex2] - depths[outoIndex]);
@@ -164,7 +164,7 @@ float32 LH_b2BuoyancyController::ComputeSubmergedArea(b2Shape* shape,
         //An awkward loop from intoIndex2+1 to outIndex2
         i = intoIndex2;
         while(i!=outoIndex2){
-            i=(i+1)%((b2PolygonShape*)shape)->m_vertexCount;
+            i=(i+1)%((b2PolygonShape*)shape)->m_count;
             if(i==outoIndex2)
                 p3 = outoVec;
             else
@@ -263,14 +263,14 @@ bool LH_b2BuoyancyController::ApplyToFixture(b2Fixture* f)
     
     //Buoyancy
     b2Vec2 buoyancyForce = -density*area*gravity;
-    body->ApplyForce(buoyancyForce,massc);
+    body->ApplyForce(buoyancyForce, massc, true);
     //Linear drag
     b2Vec2 dragForce = body->GetLinearVelocityFromWorldPoint(areac) - velocity;
     dragForce *= -linearDrag*area;
-    body->ApplyForce(dragForce,areac);
+    body->ApplyForce(dragForce,areac, true);
     //Angular drag
     //TODO: Something that makes more physical sense?
-    body->ApplyTorque(-body->GetInertia()/body->GetMass()*area*body->GetAngularVelocity()*angularDrag);
+    body->ApplyTorque(-body->GetInertia()/body->GetMass()*area*body->GetAngularVelocity()*angularDrag, true);
     
     return true;
 }

@@ -128,13 +128,11 @@
 
 /**
  Overwrite this method to receive notifications when an animation has finished playing. This method is called once, after all repetitions have finished playing.
- @param anim The animation object that just finished playing.
  */
 -(void)didFinishedPlayingAnimation:(LHAnimation*)anim;
 
 /**
  Overwrite this method to receive notifications when an animation has finished playing a repetition.
- @param anim The animation object that just finished a repetition.
  */
 -(void)didFinishedRepetitionOnAnimation:(LHAnimation*)anim;
 
@@ -249,6 +247,14 @@
  @discussion Available only when using Box2d.
  */
 -(float)valueFromMeters:(float)meter;
+
+
+-(void)setBox2dFixedTimeStep:(float)val; //default 1.0f / 120.0f;
+-(void)setBox2dMinimumTimeStep:(float)val; //default 1.0f/600f;
+-(void)setBox2dVelocityIterations:(int)val;//default 8
+-(void)setBox2dPositionIterations:(int)val;//default 8
+-(void)setBox2dMaxSteps:(int)val; //default 1
+
 
 #endif
 #endif //LH_USE_BOX2D
