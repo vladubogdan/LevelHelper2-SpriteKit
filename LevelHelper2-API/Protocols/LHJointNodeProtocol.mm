@@ -46,7 +46,21 @@
 
 -(void)dealloc{
 
+#if LH_USE_BOX2D
+    if(_joint &&
+       _joint->GetBodyA() &&
+       _joint->GetBodyA()->GetWorld() &&
+       _joint->GetBodyA()->GetWorld()->GetContactManager().m_contactListener != NULL)
+    {
+        //do not remove the joint if the scene is deallocing as the box2d world will be deleted
+        //so we dont need to do this manualy
+        //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
+        [self removeJoint];
+    }
+#else
     [self removeJoint];
+#endif
+    
     
     _node = nil;
     
@@ -159,7 +173,7 @@
             b2World* world = [pNode box2dWorld];
             
             if(world){
-                
+                _joint->SetUserData(NULL);
                 world->DestroyJoint(_joint);
                 _joint = NULL;
             }
@@ -183,6 +197,7 @@
 #if LH_USE_BOX2D
 -(void)setJoint:(b2Joint*)val{
     _joint = val;
+    _joint->SetUserData(LH_VOID_BRIDGE_CAST(_node));
 }
 -(b2Joint*)joint{
     return _joint;

@@ -420,6 +420,7 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     
     //we need to first destroy all children and then destroy box2d world
     [self removeAllChildren];
+    
     LH_SAFE_DELETE(_box2dWorld);
 #endif
 
@@ -441,12 +442,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
         
         [prnt addChild:self];
 #if LH_USE_BOX2D
-        
-        //        FIXED_TIMESTEP = 1.0f / 24.0f;
-        //        MINIMUM_TIMESTEP = 1.0f / 600.0f;
-        //        VELOCITY_ITERATIONS = 12;
-        //        POSITION_ITERATIONS = 12;
-        //        MAXIMUM_NUMBER_OF_STEPS = 30;
         
         FIXED_TIMESTEP = 1.0f / 120.0f;
         MINIMUM_TIMESTEP = 1.0f / 600.0f;
@@ -545,13 +540,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 -(void)setBox2dMaxSteps:(int)val{
     MAXIMUM_NUMBER_OF_STEPS = val;
 }
-
-
-//const float32 FIXED_TIMESTEP = 1.0f / 24.0f;
-//const float32 MINIMUM_TIMESTEP = 1.0f / 600.0f;
-//const int32 VELOCITY_ITERATIONS = 8;
-//const int32 POSITION_ITERATIONS = 8;
-//const int32 MAXIMUM_NUMBER_OF_STEPS = 24;
 
 -(void)step:(float)dt
 {

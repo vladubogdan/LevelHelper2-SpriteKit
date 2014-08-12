@@ -49,9 +49,7 @@
             [n removeFromParent];
         }
     }
-    
 }
-
 
 #if LH_USE_BOX2D
 

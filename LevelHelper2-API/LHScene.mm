@@ -71,14 +71,13 @@
 
 -(void)dealloc
 {
-#if LH_USE_BOX2D
-    LH_SAFE_RELEASE(_box2dCollision);
-#endif
-    
     _animationsDelegate = nil;
     _collisionsDelegate = nil;
 
-    
+#if LH_USE_BOX2D
+    LH_SAFE_RELEASE(_box2dCollision);
+#endif
+
     [self removeAllActions];
     [self removeAllChildren];
 
@@ -97,7 +96,6 @@
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
     LH_SUPER_DEALLOC();
-    
 }
 
 +(instancetype)sceneWithContentOfFile:(NSString*)levelPlistFile{
@@ -193,6 +191,9 @@
     }
     return self;
 }
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - LOADING
+////////////////////////////////////////////////////////////////////////////////
 
 -(void)performLateLoading{
     if(!lateLoadingNodes)return;
@@ -272,6 +273,23 @@
                                      to:(CGPoint)to
                                withName:(NSString*)sectionName
 {
+    SKShapeNode* drawNode = [SKShapeNode node];
+    [[self gameWorldNode] addChild:drawNode];
+    [drawNode setZPosition:100];
+    [drawNode setName:sectionName];
+    
+#if LH_DEBUG
+    
+    CGMutablePathRef linePath = CGPathCreateMutable();
+    CGPathMoveToPoint(linePath, nil, from.x, to.y);
+    CGPathAddLineToPoint(linePath, nil, to.x, to.y);
+    drawNode.path = linePath;
+    CGPathRelease(linePath);
+    drawNode.strokeColor = [SKColor colorWithRed:1 green:0 blue:0 alpha:1];
+    
+#endif
+    
+    
 #if LH_USE_BOX2D
     
     float PTM_RATIO = [self ptm];
@@ -281,6 +299,7 @@
     groundBodyDef.position.Set(0, 0); // bottom-left corner
     
     b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
+    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
     
     // Define the ground box shape.
     b2EdgeShape groundBox;

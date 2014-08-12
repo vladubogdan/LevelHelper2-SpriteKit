@@ -96,64 +96,6 @@ void lhContactEndContactCaller(void* object,
                                b2Contact* contact);
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-//@interface LHActiveContact : NSObject
-//{
-//    __unsafe_unretained SKNode* nodeA;
-//    __unsafe_unretained SKNode* nodeB;
-//    CGPoint contactPoint;
-//    BOOL _disabled;
-//}
-//+(instancetype)activeContactWithA:(SKNode*)a
-//                                b:(SKNode*)b
-//                         disabled:(BOOL)disabled
-//                     contactPoint:(CGPoint)pt;
-//
-//-(SKNode*)nodeA;
-//-(SKNode*)nodeB;
-//-(CGPoint)contactPoint;
-//-(BOOL)disabled;
-//@end
-//@implementation LHActiveContact
-//
-//-(id)initActiveContactWithA:(SKNode*)a
-//                          b:(SKNode*)b
-//                   disabled:(BOOL)disabled
-//               contactPoint:(CGPoint)pt
-//{
-//    if(self = [super init])
-//    {
-//        nodeA = a;
-//        nodeB = b;
-//        _disabled = disabled;
-//        contactPoint = pt;
-//    }
-//    return self;
-//}
-//+(instancetype)activeContactWithA:(SKNode *)a
-//                                b:(SKNode *)b
-//                         disabled:(BOOL)disabled
-//                     contactPoint:(CGPoint)pt
-//{
-//    return LH_AUTORELEASED([[self alloc] initActiveContactWithA:a
-//                                                              b:b
-//                                                       disabled:disabled
-//                                                   contactPoint:pt]);
-//}
-//-(SKNode*)nodeA{
-//    return nodeA;
-//}
-//-(SKNode*)nodeB{
-//    return nodeB;
-//}
-//-(BOOL)disabled{
-//    return _disabled;
-//}
-//-(CGPoint)contactPoint{
-//    return contactPoint;
-//}
-//@end
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
 
 @interface LHGameWorldNode (LH_COLLISION_HANDLING)
 -(void)scheduleDidBeginContactBetweenNodeA:(SKNode*)nodeA
@@ -166,7 +108,8 @@ void lhContactEndContactCaller(void* object,
 @end
 
 
-
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 @implementation LHBox2dCollisionHandling
 {
@@ -175,7 +118,7 @@ void lhContactEndContactCaller(void* object,
 }
 
 -(void)dealloc{
-    [_scene box2dWorld]->SetContactListener(nil);
+    [_scene box2dWorld]->SetContactListener(NULL);
     _scene = nil;
     LH_SAFE_DELETE(_b2Listener);
     LH_SUPER_DEALLOC();

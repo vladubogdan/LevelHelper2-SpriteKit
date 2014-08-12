@@ -109,9 +109,8 @@ double fcat(double x, void *data)
     BOOL wasCutAndDestroyed;
 }
 
--(void)dealloc{
-
-    [_jointProtocolImp setJoint:nil];
+-(void)dealloc{    
+    ropeShape = nil;
     
     LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
@@ -440,6 +439,9 @@ double fcat(double x, void *data)
                     jointDef.collideConnected = [_jointProtocolImp collideConnected];
                     
                     cutJointA = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                    cutJointA->SetUserData(LH_VOID_BRIDGE_CAST(self));
+
+                        
                     }
                     
                     
@@ -563,6 +565,7 @@ double fcat(double x, void *data)
                     jointDef.collideConnected = [_jointProtocolImp collideConnected];
                     
                     cutJointB = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                    cutJointB->SetUserData(LH_VOID_BRIDGE_CAST(self));
                     }
                     
 #else //spritekit

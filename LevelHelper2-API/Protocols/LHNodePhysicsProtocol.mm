@@ -64,7 +64,15 @@
 -(void)dealloc{
     
 #if LH_USE_BOX2D
-    [self removeBody];
+    if(_body &&
+       _body->GetWorld() &&
+       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
+    {
+        //do not remove the body if the scene is deallocing as the box2d world will be deleted
+        //so we dont need to do this manualy
+        //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
+        [self removeBody];
+    }
 #endif
     _node = nil;
     
@@ -496,6 +504,33 @@ bool LHValidateCentroid(b2Vec2* vs, int count)
     }
 }
 
+-(NSArray*) jointList{
+    NSMutableArray* array = [NSMutableArray array];
+    if(_body != NULL){
+        b2JointEdge* jtList = _body->GetJointList();
+        while (jtList) {
+            if(jtList->joint && jtList->joint->GetUserData())
+            {
+                SKNode* ourNode = (LHNode*)LH_ID_BRIDGE_CAST(jtList->joint->GetUserData());
+                if(ourNode != NULL)
+                    [array addObject:ourNode];
+            }
+            jtList = jtList->next;
+        }
+    }
+    return array;
+}
+-(bool) removeAllAttachedJoints{
+    NSArray* list = [self jointList];
+    if(list){
+        for(SKNode* jt in list){
+            [jt removeFromParent];
+        }
+        return true;
+    }
+    return false;
+}
+
 -(void)removeBody{
     
     if(_body){
@@ -503,6 +538,7 @@ bool LHValidateCentroid(b2Vec2* vs, int count)
         if(world){
             _body->SetUserData(NULL);
             if(!world->IsLocked()){
+                [self removeAllAttachedJoints];
                 world->DestroyBody(_body);
                 _body = NULL;
                 scheduledForRemoval = false;
