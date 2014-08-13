@@ -579,52 +579,8 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 
 -(BOOL) validCentroid:(b2Vec2*)vs count:(int)count
 {
-    if(3 < count || count > b2_maxPolygonVertices){
+    if(count < 3 || count > b2_maxPolygonVertices)
         return false;
-    }
-
-    
-	b2Vec2 c; c.Set(0.0f, 0.0f);
-	float32 area = 0.0f;
-    
-	// pRef is the reference point for forming triangles.
-	// It's location doesn't change the result (except for rounding error).
-	b2Vec2 pRef(0.0f, 0.0f);
-#if 0
-	// This code would put the reference point inside the polygon.
-	for (int32 i = 0; i < count; ++i)
-	{
-		pRef += vs[i];
-	}
-	pRef *= 1.0f / count;
-#endif
-    
-	const float32 inv3 = 1.0f / 3.0f;
-    
-	for (int32 i = 0; i < count; ++i)
-	{
-		// Triangle vertices.
-		b2Vec2 p1 = pRef;
-		b2Vec2 p2 = vs[i];
-		b2Vec2 p3 = i + 1 < count ? vs[i+1] : vs[0];
-        
-		b2Vec2 e1 = p2 - p1;
-		b2Vec2 e2 = p3 - p1;
-        
-		float32 D = b2Cross(e1, e2);
-        
-		float32 triangleArea = 0.5f * D;
-		area += triangleArea;
-        
-		// Area weighted centroid
-		c += triangleArea * inv3 * (p1 + p2 + p3);
-	}
-    
-	// Centroid
-    if(area < b2_epsilon){
-        return false;
-    }
-    
     
 	int32 n = b2Min(count, b2_maxPolygonVertices);
     
