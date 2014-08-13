@@ -109,9 +109,8 @@ double fcat(double x, void *data)
     BOOL wasCutAndDestroyed;
 }
 
--(void)dealloc{
-
-    [_jointProtocolImp setJoint:nil];
+-(void)dealloc{    
+    ropeShape = nil;
     
     LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
@@ -317,6 +316,9 @@ double fcat(double x, void *data)
     CGPoint a = [self anchorA];
     CGPoint b = [self anchorB];
     
+    ptA = [self convertToNodeSpace:ptA];
+    ptB = [self convertToNodeSpace:ptB];
+    
     BOOL flipped = NO;
     NSMutableArray* rPoints = [self ropePointsFromPointA:a
                                                 toPointB:b
@@ -385,61 +387,65 @@ double fcat(double x, void *data)
                     
 #if LH_USE_BOX2D
                     {
-                    CGPoint relativePosA = [_jointProtocolImp localAnchorA];
+                        CGPoint relativePosA = [_jointProtocolImp localAnchorA];
                     
-                    LHScene* scene = [self scene];
-                    LHGameWorldNode* pNode = [scene gameWorldNode];
-                    b2World* world = [pNode box2dWorld];
-                    b2Vec2 bodyPos = [scene metersFromPoint:interPt];
+                        LHScene* scene = [self scene];
+                        LHGameWorldNode* pNode = [scene gameWorldNode];
+                        b2World* world = [pNode box2dWorld];
+                        interPt = [self convertToWorldSpace:interPt];
+                        b2Vec2 bodyPos = [scene metersFromPoint:interPt];
                     
-                    b2BodyDef bodyDef;
-                    bodyDef.type = b2_dynamicBody;
-                    bodyDef.position = bodyPos;
-                    cutBodyA = world->CreateBody(&bodyDef);
-                    cutBodyA->SetFixedRotation(NO);
-                    cutBodyA->SetGravityScale(1);
-                    cutBodyA->SetSleepingAllowed(YES);
-                    
-                    b2FixtureDef fixture;
-                    fixture.density = 1.0f;
-                    fixture.friction = 0.2;
-                    fixture.restitution = 0.2;
-                    fixture.isSensor = YES;
-                    
-                    float radius = [scene metersFromValue:thickness];
-                    
-                    b2Shape* shape = new b2CircleShape();
-                    ((b2CircleShape*)shape)->m_radius = radius*0.5;
-                    
-                    if(shape){
-                        fixture.shape = shape;
-                        cutBodyA->CreateFixture(&fixture);
-                    }
-                    
-                    if(shape){
-                        delete shape;
-                        shape = NULL;
-                    }
-                    
-                    //create joint
-                    b2RopeJointDef jointDef;
-                    
-                    jointDef.localAnchorA = [scene metersFromPoint:relativePosA];// jointALocalAnchor;
-                    jointDef.localAnchorB = b2Vec2(0,0);
-                    
-                    jointDef.bodyA = [nodeA box2dBody];// bodyA;
-                    jointDef.bodyB = cutBodyA;
-                    
-                    if(!flipped){
-                        cutJointALength = cutLength;
-                    }
-                    else{
-                        cutJointALength = length - cutLength;
-                    }
-                    jointDef.maxLength = [scene metersFromValue:cutJointALength];
-                    jointDef.collideConnected = [_jointProtocolImp collideConnected];
-                    
-                    cutJointA = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                        b2BodyDef bodyDef;
+                        bodyDef.type = b2_dynamicBody;
+                        bodyDef.position = bodyPos;
+                        cutBodyA = world->CreateBody(&bodyDef);
+                        cutBodyA->SetFixedRotation(NO);
+                        cutBodyA->SetGravityScale(1);
+                        cutBodyA->SetSleepingAllowed(YES);
+                        
+                        b2FixtureDef fixture;
+                        fixture.density = 1.0f;
+                        fixture.friction = 0.2;
+                        fixture.restitution = 0.2;
+                        fixture.isSensor = YES;
+                        
+                        float radius = [scene metersFromValue:thickness];
+                        
+                        b2Shape* shape = new b2CircleShape();
+                        ((b2CircleShape*)shape)->m_radius = radius*0.5;
+                        
+                        if(shape){
+                            fixture.shape = shape;
+                            cutBodyA->CreateFixture(&fixture);
+                        }
+                        
+                        if(shape){
+                            delete shape;
+                            shape = NULL;
+                        }
+                        
+                        //create joint
+                        b2RopeJointDef jointDef;
+                        
+                        jointDef.localAnchorA = [scene metersFromPoint:relativePosA];// jointALocalAnchor;
+                        jointDef.localAnchorB = b2Vec2(0,0);
+                        
+                        jointDef.bodyA = [nodeA box2dBody];// bodyA;
+                        jointDef.bodyB = cutBodyA;
+                        
+                        if(!flipped){
+                            cutJointALength = cutLength;
+                        }
+                        else{
+                            cutJointALength = length - cutLength;
+                        }
+                        jointDef.maxLength = [scene metersFromValue:cutJointALength];
+                        jointDef.collideConnected = [_jointProtocolImp collideConnected];
+                        
+                        cutJointA = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                        cutJointA->SetUserData(LH_VOID_BRIDGE_CAST(self));
+
+                        
                     }
                     
                     
@@ -563,6 +569,7 @@ double fcat(double x, void *data)
                     jointDef.collideConnected = [_jointProtocolImp collideConnected];
                     
                     cutJointB = (b2RopeJoint*)world->CreateJoint(&jointDef);
+                    cutJointB->SetUserData(LH_VOID_BRIDGE_CAST(self));
                     }
                     
 #else //spritekit
@@ -956,6 +963,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         LHScene* scene = [self scene];
         
         CGPoint B = [scene pointFromMeters:pos];
+//        CGPoint B = [self convertToNodeSpaceAR:worldPos];
+        
 #else
         CGPoint B = cutJointA.bodyB.node.position;
 #endif
@@ -972,6 +981,7 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         b2Vec2 pos = cutBodyB->GetPosition();
         LHScene* scene = [self scene];
         CGPoint A = [scene pointFromMeters:pos];
+//        CGPoint A = [self convertToNodeSpaceAR:worldPos];
 #else
         CGPoint A = cutJointB.bodyA.node.position;
 #endif

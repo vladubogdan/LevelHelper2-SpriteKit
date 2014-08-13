@@ -33,11 +33,8 @@
 }
 
 -(void)dealloc{
-    
-    LH_SAFE_RELEASE(_nodeProtocolImp);
-    
-    [_jointProtocolImp setJoint:nil];//at this point the joint no longer exits
     LH_SAFE_RELEASE(_jointProtocolImp);
+    LH_SAFE_RELEASE(_nodeProtocolImp);
     
     LH_SUPER_DEALLOC();
 }

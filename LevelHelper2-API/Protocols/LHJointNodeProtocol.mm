@@ -46,7 +46,21 @@
 
 -(void)dealloc{
 
+#if LH_USE_BOX2D
+    if(_joint &&
+       _joint->GetBodyA() &&
+       _joint->GetBodyA()->GetWorld() &&
+       _joint->GetBodyA()->GetWorld()->GetContactManager().m_contactListener != NULL)
+    {
+        //do not remove the joint if the scene is deallocing as the box2d world will be deleted
+        //so we dont need to do this manualy
+        //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
+        [self removeJoint];
+    }
+#else
     [self removeJoint];
+#endif
+    
     
     _node = nil;
     
@@ -109,8 +123,11 @@
         _nodeA = (SKNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeAUUID];
         _nodeB = (SKNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeBUUID];
     }
-    else{
+
+    if(!_nodeA){
         _nodeA = (SKNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeAUUID];
+    }
+    if(!_nodeB){
         _nodeB = (SKNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeBUUID];
     }
 }
@@ -132,11 +149,13 @@
 }
 
 -(CGPoint)anchorA{
-    return [_nodeA convertToWorldSpaceAR:_relativePosA];
+    CGPoint pt =  [_nodeA convertToWorldSpaceAR:_relativePosA];
+    return [_node convertToNodeSpace:pt];
 }
 
 -(CGPoint)anchorB{
-    return [_nodeB convertToWorldSpaceAR:_relativePosB];
+    CGPoint pt = [_nodeB convertToWorldSpaceAR:_relativePosB];
+    return [_node convertToNodeSpace:pt];
 }
 
 -(BOOL)collideConnected{
@@ -159,7 +178,7 @@
             b2World* world = [pNode box2dWorld];
             
             if(world){
-                
+                _joint->SetUserData(NULL);
                 world->DestroyJoint(_joint);
                 _joint = NULL;
             }
@@ -183,6 +202,7 @@
 #if LH_USE_BOX2D
 -(void)setJoint:(b2Joint*)val{
     _joint = val;
+    _joint->SetUserData(LH_VOID_BRIDGE_CAST(_node));
 }
 -(b2Joint*)joint{
     return _joint;

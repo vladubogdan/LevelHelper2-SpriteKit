@@ -42,9 +42,6 @@
 }
 
 -(void)dealloc{
-
-    [_jointProtocolImp setJoint:nil];//at this point the joint is released
-    
     LH_SAFE_RELEASE(_jointProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     

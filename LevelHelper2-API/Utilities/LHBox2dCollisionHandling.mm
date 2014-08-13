@@ -96,62 +96,18 @@ void lhContactEndContactCaller(void* object,
                                b2Contact* contact);
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-//@interface LHActiveContact : NSObject
-//{
-//    __unsafe_unretained SKNode* nodeA;
-//    __unsafe_unretained SKNode* nodeB;
-//    CGPoint contactPoint;
-//    BOOL _disabled;
-//}
-//+(instancetype)activeContactWithA:(SKNode*)a
-//                                b:(SKNode*)b
-//                         disabled:(BOOL)disabled
-//                     contactPoint:(CGPoint)pt;
-//
-//-(SKNode*)nodeA;
-//-(SKNode*)nodeB;
-//-(CGPoint)contactPoint;
-//-(BOOL)disabled;
-//@end
-//@implementation LHActiveContact
-//
-//-(id)initActiveContactWithA:(SKNode*)a
-//                          b:(SKNode*)b
-//                   disabled:(BOOL)disabled
-//               contactPoint:(CGPoint)pt
-//{
-//    if(self = [super init])
-//    {
-//        nodeA = a;
-//        nodeB = b;
-//        _disabled = disabled;
-//        contactPoint = pt;
-//    }
-//    return self;
-//}
-//+(instancetype)activeContactWithA:(SKNode *)a
-//                                b:(SKNode *)b
-//                         disabled:(BOOL)disabled
-//                     contactPoint:(CGPoint)pt
-//{
-//    return LH_AUTORELEASED([[self alloc] initActiveContactWithA:a
-//                                                              b:b
-//                                                       disabled:disabled
-//                                                   contactPoint:pt]);
-//}
-//-(SKNode*)nodeA{
-//    return nodeA;
-//}
-//-(SKNode*)nodeB{
-//    return nodeB;
-//}
-//-(BOOL)disabled{
-//    return _disabled;
-//}
-//-(CGPoint)contactPoint{
-//    return contactPoint;
-//}
-//@end
+
+@interface LHGameWorldNode (LH_COLLISION_HANDLING)
+-(void)scheduleDidBeginContactBetweenNodeA:(SKNode*)nodeA
+                                  andNodeB:(SKNode*)nodeB
+                                atLocation:(CGPoint)contactPoint
+                               withImpulse:(float)impulse;
+
+-(void)scheduleDidEndContactBetweenNodeA:(SKNode*)nodeA
+                                andNodeB:(SKNode*)nodeB;
+@end
+
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -162,7 +118,7 @@ void lhContactEndContactCaller(void* object,
 }
 
 -(void)dealloc{
-    [_scene box2dWorld]->SetContactListener(nil);
+    [_scene box2dWorld]->SetContactListener(NULL);
     _scene = nil;
     LH_SAFE_DELETE(_b2Listener);
     LH_SUPER_DEALLOC();
@@ -210,13 +166,13 @@ void lhContactEndContactCaller(void* object,
 
 -(SKNode*)getNodeAFromContact:(b2Contact*)contact{
     b2Body* bodyA = [self getBodyAFromContact:contact];
-    if(!bodyA)return nil;
+    if(!bodyA || !bodyA->GetUserData())return nil;
     return LH_ID_BRIDGE_CAST(bodyA->GetUserData());
 }
 
 -(SKNode*)getNodeBFromContact:(b2Contact*)contact{
     b2Body* bodyB = [self getBodyBFromContact:contact];
-    if(!bodyB)return nil;
+    if(!bodyB || !bodyB->GetUserData())return nil;
     return LH_ID_BRIDGE_CAST(bodyB->GetUserData());
 }
 -(CGPoint)getPointFromContact:(b2Contact*)contact{
@@ -251,11 +207,11 @@ void lhContactEndContactCaller(void* object,
     {
         impulse = contactImpulse->normalImpulses[0];
     }
-    [_scene didBeginContactBetweenNodeA:nodeA
-                               andNodeB:nodeB
-                             atLocation:[self getPointFromContact:contact]// [active contactPoint]
-                            withImpulse:impulse];
-    //at this point send the info to the scene
+    
+    [[_scene gameWorldNode] scheduleDidBeginContactBetweenNodeA:nodeA
+                                                       andNodeB:nodeB
+                                                     atLocation:[self getPointFromContact:contact]
+                                                    withImpulse:impulse];
 }
 -(void)beginContact:(b2Contact*)contact
 {
@@ -264,23 +220,19 @@ void lhContactEndContactCaller(void* object,
     if(!nodeA || !nodeB)return;
     
     //call this for sensor objects
-    [_scene didBeginContactBetweenNodeA:nodeA
-                               andNodeB:nodeB
-                             atLocation:[self getPointFromContact:contact]
-                            withImpulse:0];
-
-//    [_activeContacts addObject:[LHActiveContact activeContactWithA:nodeA
-//                                                                 b:nodeB
-//                                                          disabled:NO
-//                                                      contactPoint:[self getPointFromContact:contact]]];
+    [[_scene gameWorldNode] scheduleDidBeginContactBetweenNodeA:nodeA
+                                                       andNodeB:nodeB
+                                                     atLocation:[self getPointFromContact:contact]
+                                                    withImpulse:0];
 }
 -(void)endContact:(b2Contact*)contact
 {
     SKNode* nodeA = [self getNodeAFromContact:contact];
     SKNode* nodeB = [self getNodeBFromContact:contact];
     if(!nodeA || !nodeB)return;
-
-    [_scene didEndContactBetweenNodeA:nodeA andNodeB:nodeB];
+    
+    [[_scene gameWorldNode] scheduleDidEndContactBetweenNodeA:nodeA
+                                                     andNodeB:nodeB];
 }
 @end
 

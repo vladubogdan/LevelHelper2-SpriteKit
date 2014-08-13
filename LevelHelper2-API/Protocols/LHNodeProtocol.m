@@ -342,7 +342,7 @@
             if([[node name] isEqualToString:name]){
                 return node;
             }
-            SKNode <LHNodeProtocol>* retNode = (SKNode <LHNodeProtocol>*)[node childNodeWithName:name];
+            __unsafe_unretained SKNode <LHNodeProtocol>* retNode = (SKNode <LHNodeProtocol>*)[node childNodeWithName:name];
             if(retNode){
                 return retNode;
             }

@@ -62,10 +62,19 @@
 }
 
 -(void)dealloc{
-    _node = nil;
+    
 #if LH_USE_BOX2D
-    //XXXX we need to delete the body
+    if(_body &&
+       _body->GetWorld() &&
+       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
+    {
+        //do not remove the body if the scene is deallocing as the box2d world will be deleted
+        //so we dont need to do this manualy
+        //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
+        [self removeBody];
+    }
 #endif
+    _node = nil;
     
     LH_SUPER_DEALLOC();
 }
@@ -115,6 +124,49 @@
 
     fixture->filter.maskBits = [fixInfo intForKey:@"mask"];
     fixture->filter.categoryBits = [fixInfo intForKey:@"category"];
+}
+
+bool LHValidateCentroid(b2Vec2* vs, int count)
+{
+	b2Vec2 c; c.Set(0.0f, 0.0f);
+	float32 area = 0.0f;
+    
+	// pRef is the reference point for forming triangles.
+	// It's location doesn't change the result (except for rounding error).
+	b2Vec2 pRef(0.0f, 0.0f);
+#if 0
+	// This code would put the reference point inside the polygon.
+	for (int32 i = 0; i < count; ++i)
+	{
+		pRef += vs[i];
+	}
+	pRef *= 1.0f / count;
+#endif
+    
+	const float32 inv3 = 1.0f / 3.0f;
+    
+	for (int32 i = 0; i < count; ++i)
+	{
+		// Triangle vertices.
+		b2Vec2 p1 = pRef;
+		b2Vec2 p2 = vs[i];
+		b2Vec2 p3 = i + 1 < count ? vs[i+1] : vs[0];
+        
+		b2Vec2 e1 = p2 - p1;
+		b2Vec2 e2 = p3 - p1;
+        
+		float32 D = b2Cross(e1, e2);
+        
+		float32 triangleArea = 0.5f * D;
+		area += triangleArea;
+        
+		// Area weighted centroid
+		c += triangleArea * inv3 * (p1 + p2 + p3);
+	}
+    
+	// Centroid
+    return area > b2_epsilon;
+    //	b2Assert(area > b2_epsilon);
 }
 
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(SKNode*)nd{
@@ -273,12 +325,30 @@
                 
                 std::vector< b2Vec2 > verts;
                 
+                NSValue* lastPt = nil;
+                
                 for(NSValue* val in points){
                     CGPoint pt = CGPointFromValue(val);
                     pt.x *= scaleX;
                     pt.y *= scaleY;
                     
-                    verts.push_back([scene metersFromPoint:pt]);
+                    b2Vec2 v2 = [scene metersFromPoint:pt];
+                    
+                    if(lastPt != nil)
+                    {
+                        CGPoint oldPt = CGPointFromValue(lastPt);
+                        b2Vec2 v1 = b2Vec2(oldPt.x, oldPt.y);
+                        
+                        if(b2DistanceSquared(v1, v2) > b2_linearSlop * b2_linearSlop)
+                        {
+                            verts.push_back(v2);
+                        }
+                    }
+                    else{
+                        verts.push_back(v2);
+                    }
+                    
+                    lastPt = LHValueWithCGPoint(CGPointMake(v2.x, v2.y));
                 }
                 
                 b2Shape* shape = new b2ChainShape();
@@ -299,12 +369,30 @@
 
                 std::vector< b2Vec2 > verts;
                 
+                NSValue* lastPt = nil;
+                
                 for(NSValue* val in points){
                     CGPoint pt = CGPointFromValue(val);
                     pt.x *= scaleX;
                     pt.y *= scaleY;
                     
-                    verts.push_back([scene metersFromPoint:pt]);
+                    b2Vec2 v2 = [scene metersFromPoint:pt];
+                    
+                    if(lastPt != nil)
+                    {
+                        CGPoint oldPt = CGPointFromValue(lastPt);
+                        b2Vec2 v1 = b2Vec2(oldPt.x, oldPt.y);
+                        
+                        if(b2DistanceSquared(v1, v2) > b2_linearSlop * b2_linearSlop)
+                        {
+                            verts.push_back(v2);
+                        }
+                    }
+                    else{
+                        verts.push_back(v2);
+                    }
+                    
+                    lastPt = LHValueWithCGPoint(CGPointMake(v2.x, v2.y));
                 }
                 
                 b2Shape* shape = new b2ChainShape();
@@ -371,14 +459,18 @@
                         ++i;
                     }
                     
-                    shapeDef.Set(verts, count);
-                    
-                    b2FixtureDef fixture;
-                    
-                    [self setupFixture:&fixture withInfo:fixInfo];
-                    
-                    fixture.shape = &shapeDef;
-                    _body->CreateFixture(&fixture);
+                    bool valid = LHValidateCentroid(verts, count);
+                    if(valid) {
+                        shapeDef.Set(verts, count);
+                        
+                        b2FixtureDef fixture;
+                        
+                        [self setupFixture:&fixture withInfo:fixInfo];
+                        
+                        fixture.shape = &shapeDef;
+                        _body->CreateFixture(&fixture);
+                        
+                    }
                     delete[] verts;
                 }
             }
@@ -412,12 +504,41 @@
     }
 }
 
+-(NSArray*) jointList{
+    NSMutableArray* array = [NSMutableArray array];
+    if(_body != NULL){
+        b2JointEdge* jtList = _body->GetJointList();
+        while (jtList) {
+            if(jtList->joint && jtList->joint->GetUserData())
+            {
+                SKNode* ourNode = (LHNode*)LH_ID_BRIDGE_CAST(jtList->joint->GetUserData());
+                if(ourNode != NULL)
+                    [array addObject:ourNode];
+            }
+            jtList = jtList->next;
+        }
+    }
+    return array;
+}
+-(bool) removeAllAttachedJoints{
+    NSArray* list = [self jointList];
+    if(list){
+        for(SKNode* jt in list){
+            [jt removeFromParent];
+        }
+        return true;
+    }
+    return false;
+}
+
 -(void)removeBody{
     
     if(_body){
         b2World* world = _body->GetWorld();
         if(world){
+            _body->SetUserData(NULL);
             if(!world->IsLocked()){
+                [self removeAllAttachedJoints];
                 world->DestroyBody(_body);
                 _body = NULL;
                 scheduledForRemoval = false;
@@ -714,7 +835,9 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
         
         NSArray* fixturesInfo = nil;
         
+#if LH_DEBUG
         NSMutableArray* debugShapeNodes = [NSMutableArray array];
+#endif
         
         CGSize size = CGSizeMake(16, 16);
         

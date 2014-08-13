@@ -116,6 +116,7 @@
     b2Body* ourBody = NULL;
     
     LHNode* mouseJointDummySpr = (LHNode*)[self childNodeWithName:@"dummyBodyForMouseJoint"];
+    
     b2Body* mouseJointBody = [mouseJointDummySpr box2dBody];
     
     if(!mouseJointBody)return;

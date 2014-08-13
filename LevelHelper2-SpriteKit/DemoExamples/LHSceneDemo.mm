@@ -25,6 +25,7 @@
 #import "LHSceneShapesDemo.h"
 #import "LHSceneBeziersDemo.h"
 #import "LHSceneCollisionDemo.h"
+#import "LHSceneRemoveOnCollisionDemo.h"
 #import "LHSceneUserPropertiesDemo.h"
 #import "LHSceneAssetWithJointsDemo.h"
 
@@ -67,6 +68,7 @@
         [availableScenes addObject:[LHSceneShapesDemo class]];
         [availableScenes addObject:[LHSceneBeziersDemo class]];
         [availableScenes addObject:[LHSceneCollisionDemo class]];
+        [availableScenes addObject:[LHSceneRemoveOnCollisionDemo class]];
         [availableScenes addObject:[LHSceneUserPropertiesDemo class]];
         
 //        [availableScenes addObject:[LHSceneOtherJointsDemo class]];
@@ -154,7 +156,7 @@
 }
 
 #if TARGET_OS_IPHONE
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
@@ -162,17 +164,17 @@
     [self handleLabelsAtLocation:location];
     
     //dont forget to call super
-    [super touchesBegan:touches withEvent:event];
+    [super touchesEnded:touches withEvent:event];
 }
 #else
 
--(void)mouseDown:(NSEvent *)theEvent
+-(void)mouseUp:(NSEvent *)theEvent
 {
     CGPoint location = [theEvent locationInNode:self];
     
     [self handleLabelsAtLocation:location];
     
-    [super mouseDown:theEvent];
+    [super mouseUp:theEvent];
 }
 
 #endif

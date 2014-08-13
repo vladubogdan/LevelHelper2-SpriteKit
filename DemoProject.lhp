@@ -83,22 +83,12 @@
 					<key>publish</key>
 					<true/>
 				</dict>
-				<key>cameraAnimationTest.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
 				<key>cameraDemo.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
 				</dict>
 				<key>cameraFollowDemo.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
-				<key>cameraFollowNodeTest.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>
@@ -148,6 +138,11 @@
 					<key>publish</key>
 					<true/>
 				</dict>
+				<key>removeOnCollisionDemo.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
 				<key>ropeJointTest.lhs</key>
 				<dict>
 					<key>publish</key>
@@ -164,11 +159,6 @@
 					<true/>
 				</dict>
 				<key>spriteSheetAnimationDemo.lhs</key>
-				<dict>
-					<key>publish</key>
-					<true/>
-				</dict>
-				<key>tst.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

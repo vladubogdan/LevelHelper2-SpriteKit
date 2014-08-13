@@ -15,10 +15,17 @@
     b2MouseJoint* mouseJoint;
 
 #else//spritekit
-    SKNode* touchedNode;
+    __unsafe_unretained SKNode* touchedNode;
     BOOL touchedNodeWasDynamic;
     
 #endif
+}
+
+-(void)dealloc{
+    
+    [self destroyMouseJoint];
+    
+    LH_SUPER_DEALLOC();
 }
 
 
@@ -38,7 +45,7 @@
         [LHSceneDemo createMultilineLabelAtPosition:CGPointMake(size.width*0.5, size.height - 150)
                                       asChildOfNode:[self uiNode]
                                            withText:@"SHAPES DEMO Example.\nShapes can be of any solid color with an alpha value.\nCurrently SpriteKit does not support drawing textured shapes.\n\nDrag shapes to move them."];
-
+        
     }
     
     return self;
@@ -111,7 +118,7 @@
 #if LH_USE_BOX2D
     b2Body* ourBody = NULL;
     
-    LHNode* mouseJointDummySpr = (LHNode*)[self childNodeWithName:@"dummyBodyForMouseJoint"];
+    __unsafe_unretained LHNode* mouseJointDummySpr = (LHNode*)[self childNodeWithName:@"mouseJointDummyBody"];
     b2Body* mouseJointBody = [mouseJointDummySpr box2dBody];
     
     if(!mouseJointBody)return;
@@ -152,7 +159,8 @@
         mouseJoint = NULL;
     }
     mouseJoint = (b2MouseJoint *)[self box2dWorld]->CreateJoint(&md);
-
+    mouseJointDummySpr = nil;
+    
 #else
     
     NSArray* foundNodes = [self nodesAtPoint:point];

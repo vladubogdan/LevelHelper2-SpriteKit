@@ -5,29 +5,29 @@
 	<key>aspect</key>
 	<integer>2</integer>
 	<key>backgroundColor</key>
-	<string>{{1, 1}, {1, 1}}</string>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 	<key>children</key>
 	<array>
 		<dict>
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>children</key>
 			<array>
 				<dict>
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.5, 0.5}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>assetFile</key>
 					<string>OfficerAsset.lhasset</string>
 					<key>assetUUID</key>
 					<string>3E9B9DB9-8C3B-40E2-9014-CB8EDB1A3F31</string>
 					<key>colorOverlay</key>
-					<string>{{1, 1}, {1, 1}}</string>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.50197428552977119, 0.53811497066994884}</string>
+					<string>{0.486667, 0.386596}</string>
 					<key>name</key>
 					<string>OfficerAsset</string>
 					<key>nodeType</key>
@@ -37,9 +37,9 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1, 1}</string>
+					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{328.13970947265625, 456.25811767578125}</string>
+					<string>{328.139709, 456.258118}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -51,9 +51,9 @@
 				</dict>
 			</array>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -63,9 +63,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -79,11 +79,11 @@
 			<key>alpha</key>
 			<real>255</real>
 			<key>anchor</key>
-			<string>{0.5, 0.5}</string>
+			<string>{0.500000, 0.500000}</string>
 			<key>colorOverlay</key>
-			<string>{{1, 1}, {1, 1}}</string>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
-			<string>{0, 0}</string>
+			<string>{0.000000, 0.000000}</string>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -93,9 +93,9 @@
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
-			<string>{1, 1}</string>
+			<string>{1.000000, 1.000000}</string>
 			<key>size</key>
-			<string>{128, 128}</string>
+			<string>{128.000000, 128.000000}</string>
 			<key>tags</key>
 			<array>
 				<string>DEFAULT</string>
@@ -107,14 +107,14 @@
 		</dict>
 	</array>
 	<key>designResolution</key>
-	<string>{960, 640}</string>
+	<string>{960.000000, 640.000000}</string>
 	<key>devices</key>
 	<array>
 		<dict>
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{960, 640}</string>
+			<string>{960.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string></string>
 		</dict>
@@ -122,7 +122,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1136, 640}</string>
+			<string>{1136.000000, 640.000000}</string>
 			<key>suffix</key>
 			<string>-568</string>
 		</dict>
@@ -130,7 +130,7 @@
 			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
-			<string>{1024, 768}</string>
+			<string>{1024.000000, 768.000000}</string>
 			<key>suffix</key>
 			<string>-ipad</string>
 		</dict>
@@ -138,13 +138,13 @@
 			<key>ratio</key>
 			<real>2</real>
 			<key>size</key>
-			<string>{2048, 1536}</string>
+			<string>{2048.000000, 1536.000000}</string>
 			<key>suffix</key>
 			<string>-ipad@2x</string>
 		</dict>
 	</array>
 	<key>globalGravityDirection</key>
-	<string>{0, -1}</string>
+	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
 	<key>nodeType</key>
@@ -152,9 +152,9 @@
 	<key>physicsBoundaries</key>
 	<dict>
 		<key>960x640</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
-		<string>{{0, 0}, {1, 1}}</string>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -164,63 +164,62 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>05E70C51-D607-453A-80C5-6E346FDCF769</key>
+		<key>85DE1469-44E6-4393-B8D5-7E9B20613314</key>
 		<array>
 			<array>
-				<string>{-54.25, 17.5}</string>
-				<string>{-54.25, 10}</string>
-				<string>{30.25, -17.5}</string>
-				<string>{33.75, -5.5}</string>
-				<string>{-5.75, 30.5}</string>
-				<string>{-28.25, 28.5}</string>
-				<string>{-40.25, 26}</string>
-				<string>{-51.25, 21}</string>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
 			</array>
 			<array>
-				<string>{51.75, 4.5}</string>
-				<string>{53.25, 10}</string>
-				<string>{48.75, 19.5}</string>
-				<string>{44.75, 22.5}</string>
-				<string>{34.25, 27}</string>
-				<string>{22.75, 29.5}</string>
-				<string>{33.75, -5.5}</string>
-				<string>{46.25, -1}</string>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
 			</array>
 			<array>
-				<string>{-23.25, -27}</string>
-				<string>{-15.25, -30.5}</string>
-				<string>{-10.75, -31}</string>
-				<string>{-35.75, -3.5}</string>
-				<string>{-33.25, -12}</string>
-				<string>{-29.75, -19.5}</string>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
 			</array>
 			<array>
-				<string>{24.25, -26.5}</string>
-				<string>{28.25, -21.5}</string>
-				<string>{30.25, -17.5}</string>
-				<string>{-35.75, -3.5}</string>
-				<string>{-10.75, -31}</string>
-				<string>{-10.25, -31.5}</string>
-				<string>{10.75, -31.5}</string>
-				<string>{18.75, -29.5}</string>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
 			</array>
 			<array>
-				<string>{52.75, 13.5}</string>
-				<string>{48.75, 19.5}</string>
-				<string>{53.25, 10}</string>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
 			</array>
 			<array>
-				<string>{22.75, 29.5}</string>
-				<string>{12.75, 30.5}</string>
-				<string>{-5.75, 30.5}</string>
-				<string>{33.75, -5.5}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
 			</array>
 			<array>
-				<string>{-45.25, 1}</string>
-				<string>{-35.75, -3.5}</string>
-				<string>{30.25, -17.5}</string>
-				<string>{-54.25, 10}</string>
-				<string>{-52.25, 7}</string>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
 			</array>
 		</array>
 	</dict>
