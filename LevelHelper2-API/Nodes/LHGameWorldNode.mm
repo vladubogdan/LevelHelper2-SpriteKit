@@ -374,9 +374,51 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 
 
+@interface LHScheduledContactInfo : NSObject
 
++(instancetype)scheduledContactWithNodeA:(SKNode*)a
+                                   nodeB:(SKNode*)b
+                                   point:(CGPoint)pt
+                                 impulse:(float)i;
 
+-(SKNode*)nodeA;
+-(SKNode*)nodeB;
+-(CGPoint)contactPoint;
+-(float)impulse;
 
+@end
+
+@implementation LHScheduledContactInfo
+{
+    __unsafe_unretained SKNode* _nodeA;
+    __unsafe_unretained SKNode* _nodeB;
+    CGPoint contactPoint;
+    float impulse;
+}
+
+-(instancetype)initWithNodeA:(SKNode*)a nodeB:(SKNode*)b point:(CGPoint)pt impulse:(float)i
+{
+    if(self = [super init])
+    {
+        _nodeA = a;
+        _nodeB = b;
+        contactPoint = pt;
+        impulse = i;
+    }
+    return self;
+}
+
+-(SKNode*)nodeA{return _nodeA;}
+-(SKNode*)nodeB{return _nodeB;}
+-(CGPoint)contactPoint{return contactPoint;}
+-(float)impulse{return impulse;}
+
++(instancetype)scheduledContactWithNodeA:(SKNode*)a nodeB:(SKNode*)b point:(CGPoint)pt impulse:(float)i
+{
+    return LH_AUTORELEASED([[LHScheduledContactInfo alloc] initWithNodeA:a nodeB:b point:pt impulse:i]);
+}
+
+@end
 
 
 
@@ -568,32 +610,21 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(void)afterStep:(float)dt {
     
-    for(NSDictionary* dict in _scheduledBeginContact)
+    for(LHScheduledContactInfo* info in _scheduledBeginContact)
     {
-        SKNode* nodeA = [dict objectForKey:@"nodeA"];
-        SKNode* nodeB = [dict objectForKey:@"nodeB"];
-        NSValue* pt = [dict objectForKey:@"contactPoint"];
-        NSNumber* imp = [dict objectForKey:@"impulse"];
-        if(nodeA && nodeB && pt && imp)
-        {
-            [[self scene] didBeginContactBetweenNodeA:nodeA
-                                             andNodeB:nodeB
-                                           atLocation:CGPointFromValue(pt)
-                                          withImpulse:[imp floatValue]];
-        }
+        [[self scene] didBeginContactBetweenNodeA:[info nodeA]
+                                         andNodeB:[info nodeB]
+                                       atLocation:[info contactPoint]
+                                      withImpulse:[info impulse]];
     }
     [_scheduledBeginContact removeAllObjects];
     
     
     
-    for(NSDictionary* dict in _scheduledEndContact)
+    for(LHScheduledContactInfo* info in _scheduledEndContact)
     {
-        SKNode* nodeA = [dict objectForKey:@"nodeA"];
-        SKNode* nodeB = [dict objectForKey:@"nodeB"];
-        if(nodeA && nodeB)
-        {
-            [[self scene] didEndContactBetweenNodeA:nodeA andNodeB:nodeB];
-        }
+        [[self scene] didEndContactBetweenNodeA:[info nodeA]
+                                       andNodeB:[info nodeB]];
     }
     [_scheduledEndContact removeAllObjects];
 
@@ -608,14 +639,22 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         _scheduledBeginContact = [[NSMutableArray alloc] init];
     }
     
-    NSMutableDictionary* infoDict = [NSMutableDictionary dictionary];
+    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    {
+        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+           ){
+            return;
+        }
+    }
     
-    [infoDict setObject:nodeA forKey:@"nodeA"];
-    [infoDict setObject:nodeB forKey:@"nodeB"];
-    [infoDict setObject:LHValueWithCGPoint(contactPoint) forKey:@"contactPoint"];
-    [infoDict setObject:[NSNumber numberWithFloat:impulse] forKey:@"impulse"];
     
-    [_scheduledBeginContact addObject:infoDict];
+    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
+                                                                               nodeB:nodeB
+                                                                               point:contactPoint
+                                                                             impulse:impulse];
+    [_scheduledBeginContact addObject:info];
+    
 }
 
 -(void)scheduleDidEndContactBetweenNodeA:(SKNode*)nodeA
@@ -626,12 +665,21 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         _scheduledEndContact = [[NSMutableArray alloc] init];
     }
     
-    NSMutableDictionary* infoDict = [NSMutableDictionary dictionary];
+    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    {
+        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+           ){
+            return;
+        }
+    }
+
     
-    [infoDict setObject:nodeA forKey:@"nodeA"];
-    [infoDict setObject:nodeB forKey:@"nodeB"];
-    
-    [_scheduledEndContact addObject:infoDict];
+    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
+                                                                               nodeB:nodeB
+                                                                               point:CGPointZero
+                                                                             impulse:0];
+    [_scheduledEndContact addObject:info];
 }
 
 #else //SPRITE KIT

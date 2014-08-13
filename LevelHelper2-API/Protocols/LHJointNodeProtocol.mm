@@ -123,8 +123,11 @@
         _nodeA = (SKNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeAUUID];
         _nodeB = (SKNode<LHNodePhysicsProtocol>*)[(id<LHNodeProtocol>)[_node parent] childNodeWithUUID:_nodeBUUID];
     }
-    else{
+
+    if(!_nodeA){
         _nodeA = (SKNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeAUUID];
+    }
+    if(!_nodeB){
         _nodeB = (SKNode<LHNodePhysicsProtocol>*)[scene childNodeWithUUID:_nodeBUUID];
     }
 }
@@ -146,11 +149,13 @@
 }
 
 -(CGPoint)anchorA{
-    return [_nodeA convertToWorldSpaceAR:_relativePosA];
+    CGPoint pt =  [_nodeA convertToWorldSpaceAR:_relativePosA];
+    return [_node convertToNodeSpace:pt];
 }
 
 -(CGPoint)anchorB{
-    return [_nodeB convertToWorldSpaceAR:_relativePosB];
+    CGPoint pt = [_nodeB convertToWorldSpaceAR:_relativePosB];
+    return [_node convertToNodeSpace:pt];
 }
 
 -(BOOL)collideConnected{
