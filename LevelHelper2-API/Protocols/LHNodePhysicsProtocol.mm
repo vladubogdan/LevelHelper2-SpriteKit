@@ -126,49 +126,6 @@
     fixture->filter.categoryBits = [fixInfo intForKey:@"category"];
 }
 
-bool LHValidateCentroid(b2Vec2* vs, int count)
-{
-	b2Vec2 c; c.Set(0.0f, 0.0f);
-	float32 area = 0.0f;
-    
-	// pRef is the reference point for forming triangles.
-	// It's location doesn't change the result (except for rounding error).
-	b2Vec2 pRef(0.0f, 0.0f);
-#if 0
-	// This code would put the reference point inside the polygon.
-	for (int32 i = 0; i < count; ++i)
-	{
-		pRef += vs[i];
-	}
-	pRef *= 1.0f / count;
-#endif
-    
-	const float32 inv3 = 1.0f / 3.0f;
-    
-	for (int32 i = 0; i < count; ++i)
-	{
-		// Triangle vertices.
-		b2Vec2 p1 = pRef;
-		b2Vec2 p2 = vs[i];
-		b2Vec2 p3 = i + 1 < count ? vs[i+1] : vs[0];
-        
-		b2Vec2 e1 = p2 - p1;
-		b2Vec2 e2 = p3 - p1;
-        
-		float32 D = b2Cross(e1, e2);
-        
-		float32 triangleArea = 0.5f * D;
-		area += triangleArea;
-        
-		// Area weighted centroid
-		c += triangleArea * inv3 * (p1 + p2 + p3);
-	}
-    
-	// Centroid
-    return area > b2_epsilon;
-    //	b2Assert(area > b2_epsilon);
-}
-
 - (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(SKNode*)nd{
     
     if(self = [super init])
@@ -459,8 +416,7 @@ bool LHValidateCentroid(b2Vec2* vs, int count)
                         ++i;
                     }
                     
-                    bool valid = LHValidateCentroid(verts, count);
-                    if(valid) {
+                    if([self validCentroid:verts count:count]) {
                         shapeDef.Set(verts, count);
                         
                         b2FixtureDef fixture;
@@ -623,45 +579,42 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 
 -(BOOL) validCentroid:(b2Vec2*)vs count:(int)count
 {
-	b2Vec2 c; c.Set(0.0f, 0.0f);
-	float32 area = 0.0f;
+    if(count < 3 || count > b2_maxPolygonVertices)
+        return false;
     
-	// pRef is the reference point for forming triangles.
-	// It's location doesn't change the result (except for rounding error).
-	b2Vec2 pRef(0.0f, 0.0f);
-#if 0
-	// This code would put the reference point inside the polygon.
-	for (int32 i = 0; i < count; ++i)
+	int32 n = b2Min(count, b2_maxPolygonVertices);
+    
+	// Perform welding and copy vertices into local buffer.
+	b2Vec2 ps[b2_maxPolygonVertices];
+	int32 tempCount = 0;
+	for (int32 i = 0; i < n; ++i)
 	{
-		pRef += vs[i];
-	}
-	pRef *= 1.0f / count;
-#endif
-    
-	const float32 inv3 = 1.0f / 3.0f;
-    
-	for (int32 i = 0; i < count; ++i)
-	{
-		// Triangle vertices.
-		b2Vec2 p1 = pRef;
-		b2Vec2 p2 = vs[i];
-		b2Vec2 p3 = i + 1 < count ? vs[i+1] : vs[0];
+		b2Vec2 v = vs[i];
         
-		b2Vec2 e1 = p2 - p1;
-		b2Vec2 e2 = p3 - p1;
+		bool unique = true;
+		for (int32 j = 0; j < tempCount; ++j)
+		{
+			if (b2DistanceSquared(v, ps[j]) < 0.5f * b2_linearSlop)
+			{
+				unique = false;
+				break;
+			}
+		}
         
-		float32 D = b2Cross(e1, e2);
-        
-		float32 triangleArea = 0.5f * D;
-		area += triangleArea;
-        
-		// Area weighted centroid
-		c += triangleArea * inv3 * (p1 + p2 + p3);
+		if (unique)
+		{
+			ps[tempCount++] = v;
+		}
 	}
     
-	// Centroid
-    return area > b2_epsilon;
-//	b2Assert(area > b2_epsilon);
+	n = tempCount;
+	if (n < 3)
+	{
+        return false;
+	}
+    
+    return true;
+    
 }
 
 -(void)updateScale{
