@@ -346,6 +346,7 @@ double fcat(double x, void *data)
                 //need to destroy the joint and create 2 other joints
                 if([_jointProtocolImp joint]){
     
+                    
                     cutTimer = [NSDate timeIntervalSinceReferenceDate];
                     
                     SKNode<LHNodePhysicsProtocol>* nodeA = [_jointProtocolImp nodeA];
@@ -354,7 +355,6 @@ double fcat(double x, void *data)
                     float length = _length;
 
                     [_jointProtocolImp removeJoint];
-                    
                     
                     if(debugShapeNode){
                         [debugShapeNode removeFromParent];
@@ -630,7 +630,7 @@ double fcat(double x, void *data)
 #endif
                     }
 #endif
-                    
+                    [[self scene] didCutRopeJoint:self];                    
                 }
                 
                 return;

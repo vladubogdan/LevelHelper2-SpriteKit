@@ -523,6 +523,11 @@
     }
 }
 
+#pragma mark- ROPE CUTTING
+-(void)didCutRopeJoint:(LHRopeJointNode*)joint{
+    //nothing to do - users should overwrite this method
+}
+
 
 #pragma mark- COLLISION HANDLING
 -(void)setCollisionHandlingDelegate:(id<LHCollisionHandlingProtocol>)del{
