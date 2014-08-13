@@ -24,10 +24,15 @@
         CGSize size = [self size];
         [LHSceneDemo createMultilineLabelAtPosition:CGPointMake(size.width*0.5, size.height - 150)
                                       asChildOfNode:[self uiNode]
-                                           withText:@"ROPE JOINTS DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\n\nThe right most joint can be cut - Make a line to cut it."];
+                                           withText:@"ROPE JOINTS DEMO\nThe left most joint has a bigger z value then the sprites so its draw on top.\n\nThe right most joint can be cut - Make a line to cut it.\nWatch the console for didCutRopeJoint notification."];
     }
     
     return self;
+}
+
+-(void)didCutRopeJoint:(LHRopeJointNode *)joint
+{
+    NSLog(@"DID CUT ROPE JOINT %@", [joint name]);
 }
 
 #if TARGET_OS_IPHONE

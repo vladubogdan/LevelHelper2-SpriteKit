@@ -41,6 +41,8 @@
 #import "LHCameraActivateProperty.h"
 
 #import "LHGameWorldNode.h"
+#import "LHBackUINode.h"
+#import "LHUINode.h"
 
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
@@ -358,18 +360,27 @@
                        forNode:(SKNode*)animNode
 {
     if([animNode isKindOfClass:[LHCamera class]]){
-//        CGSize winSize = [[self scene] size];
+        
         CGSize winSize = [[self scene] designResolutionSize];
         return CGPointMake(winSize.width*0.5  - newPos.x,
-                        - newPos.y - winSize.height*0.5);
+                           -newPos.y - winSize.height*0.5);
         
     }
-
+    
     LHScene* scene = [self scene];
     CGPoint offset = [scene designOffset];
     
-    if([animNode parent] == nil || [animNode parent] == scene || [animNode parent] == [scene gameWorldNode])
+    if([animNode parent] == nil ||
+       [animNode parent] == scene ||
+       [animNode parent] == [scene gameWorldNode] ||
+       [animNode parent] == [scene backUINode] ||
+       [animNode parent] == [scene uiNode]
+       )
     {
+        CGSize winSize = [[self scene] designResolutionSize];
+        newPos =  CGPointMake(newPos.x,
+                              winSize.height + newPos.y);
+        
         newPos.x += offset.x;
         newPos.y += offset.y;
     }
