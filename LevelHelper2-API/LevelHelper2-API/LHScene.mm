@@ -106,9 +106,19 @@
 {
     NSString* path = [[NSBundle mainBundle] pathForResource:[levelPlistFile stringByDeletingPathExtension]
                                                      ofType:[levelPlistFile pathExtension]];
-    if(!path)return nil;
+
+    if(!path){
+        NSLog(@"ERROR: Could not find level file %@. Make sure the name is correct and the file is located inside a folder added in Xcode as Reference (blue icon).", levelPlistFile);
+    }
+    NSAssert(path, @"");
     
     NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    if(!dict){
+        NSLog(@"ERROR: Could not load level file %@. The file located at %@ does not appear to be valid.", levelPlistFile, path);
+    }
+    NSAssert(dict, @"");
+
     if(!dict)return nil;
 
     int aspect = [dict intForKey:@"aspect"];
