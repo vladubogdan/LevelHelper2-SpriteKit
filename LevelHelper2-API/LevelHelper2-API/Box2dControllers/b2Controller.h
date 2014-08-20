@@ -23,7 +23,7 @@
 #define B2_CONTROLLER_H
 
 
-#include "Box2D.h"
+#include "Box2d/Box2D.h"
 
 /// Base class for controllers. Controllers are a convience for encapsulating common
 /// per-step functionality.

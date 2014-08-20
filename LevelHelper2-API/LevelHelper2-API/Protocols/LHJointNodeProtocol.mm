@@ -15,7 +15,7 @@
 #import "SKNode+Transforms.h"
 
 #if LH_USE_BOX2D
-#include "Box2D.h"
+#include "Box2d/Box2D.h"
 #else
 
 #endif //LH_USE_BOX2D

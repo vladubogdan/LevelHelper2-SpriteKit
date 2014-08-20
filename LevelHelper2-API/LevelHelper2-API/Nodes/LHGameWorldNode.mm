@@ -20,7 +20,7 @@
 #include <cstdio>
 #include <cstdarg>
 #include <cstring>
-#include "Box2D.h"
+#include "Box2d/Box2D.h"
 
 #else
 

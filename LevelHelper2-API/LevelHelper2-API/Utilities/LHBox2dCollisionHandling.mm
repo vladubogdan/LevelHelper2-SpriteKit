@@ -13,7 +13,7 @@
 #import "LHUtils.h"
 #if LH_USE_BOX2D
 
-#include "Box2D.h"
+#include "Box2d/Box2D.h"
 
 class LHContactListenerPimpl : public b2ContactListener
 {
