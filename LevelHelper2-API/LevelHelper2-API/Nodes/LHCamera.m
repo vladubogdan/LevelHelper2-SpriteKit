@@ -76,7 +76,13 @@
                                                                                                       node:self];
         
         
-         [super setPosition:[self transformToRestrictivePosition:self.position]];
+        CGPoint newPos = [self position];
+        CGSize winSize = [[self scene] size];
+        newPos = CGPointMake(winSize.width*0.5  - newPos.x,
+                             winSize.height*0.5 - newPos.y);
+        
+        [super setPosition:[self transformToRestrictivePosition:newPos]];
+
     }
     
     return self;

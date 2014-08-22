@@ -110,14 +110,15 @@
     if(!path){
         NSLog(@"ERROR: Could not find level file %@. Make sure the name is correct and the file is located inside a folder added in Xcode as Reference (blue icon).", levelPlistFile);
     }
-    NSAssert(path, @"");
+    NSAssert(path, @" ");
+    if(!path)return nil;
     
     NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:path];
     
     if(!dict){
         NSLog(@"ERROR: Could not load level file %@. The file located at %@ does not appear to be valid.", levelPlistFile, path);
     }
-    NSAssert(dict, @"");
+    NSAssert(dict, @" ");
 
     if(!dict)return nil;
 
@@ -132,15 +133,17 @@
     }
 
     LHDevice* curDev = [LHUtils currentDeviceFromArray:devices];
-
+    
     CGPoint childrenOffset = CGPointZero;
     
     CGSize sceneSize = curDev.size;
     float ratio = curDev.ratio;
+    
     sceneSize.width = sceneSize.width/ratio;
     sceneSize.height = sceneSize.height/ratio;
     
     SKSceneScaleMode scaleMode = SKSceneScaleModeFill;
+    
     if(aspect == 0)//exact fit
     {
         sceneSize = designResolution;
@@ -170,6 +173,7 @@
         designResolutionSize = designResolution;
         designOffset         = childrenOffset;
         self.scaleMode       = scaleMode;
+        //scale mode is influenced by Images.xcassets - do not remove that
         
         NSDictionary* tracedFixInfo = [dict objectForKey:@"tracedFixtures"];
         if(tracedFixInfo){

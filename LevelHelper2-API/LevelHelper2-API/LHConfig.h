@@ -9,7 +9,7 @@
 #define LevelHelper2_API_LHConfig_h
 
 /*
- To enable Box2D usage you need to define LH_USE_BOX2D as a preprocessor macro.
+ To enable Box2D usage you need to define LH_USE_BOX2D=1 as a preprocessor macro.
  */
 
 // To enable debug mode set LH_DEBUG to 1 or define a LH_DEBUG as a preprocessor macro.

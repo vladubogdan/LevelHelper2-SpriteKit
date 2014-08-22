@@ -630,7 +630,7 @@ double fcat(double x, void *data)
 #endif
                     }
 #endif
-                    [[self scene] didCutRopeJoint:self];                    
+                    [[self scene] didCutRopeJoint:self];
                 }
                 
                 return;

@@ -85,6 +85,9 @@
         if(CGSizeEqualToSize([dev size], size)){
             return dev;
         }
+        if(CGSizeEqualToSize([dev size], CGSizeMake(size.height, size.width))){
+            return dev;
+        }
     }
     return nil;
 }

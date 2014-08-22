@@ -564,6 +564,12 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
     if([self body])
     {
         CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
+        worldPos = [[(LHScene*)[_node scene] gameWorldNode] convertToNodeSpace:worldPos];
+        CGPoint gWPos = [[(LHScene*)[_node scene] gameWorldNode] position];
+        
+        worldPos = CGPointMake(worldPos.x - gWPos.x,
+                               worldPos.y - gWPos.y);
+        
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
         _body->SetTransform(b2Pos, [_node globalAngleFromLocalAngle:[_node zRotation]]);
         _body->SetAwake(true);        
