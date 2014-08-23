@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>appName</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan Daniel</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>format</key>
+	<string>APPL</string>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>officer-568.png</string>
+			<key>size</key>
+			<string>{128.000000, 800.000000}</string>
+			<key>subimages</key>
+			<array>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>hand_R_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{34.000000, 36.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 742}, {36, 34}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>angry_mouth.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{25.000000, 19.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 780}, {25, 19}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>pelvis.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{68.000000, 50.000000}</string>
+					<key>textureRect</key>
+					<string>{{76, 383}, {50, 68}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>gun-belt.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{71.000000, 21.000000}</string>
+					<key>textureRect</key>
+					<string>{{106, 105}, {21, 71}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>handOpenBackHand.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{48.000000, 49.000000}</string>
+					<key>textureRect</key>
+					<string>{{59, 652}, {49, 48}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>torso_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{77.000000, 104.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 2}, {104, 77}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>leg_upper_L_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{38.000000, 74.000000}</string>
+					<key>textureRect</key>
+					<string>{{89, 262}, {38, 74}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>foot_RIGHT.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{58.000000, 30.000000}</string>
+					<key>textureRect</key>
+					<string>{{69, 512}, {58, 30}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>leg_lower_L_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{40.000000, 66.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 444}, {66, 40}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>handOpen.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{44.000000, 53.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 617}, {53, 44}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>gun.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{31.000000, 42.000000}</string>
+					<key>textureRect</key>
+					<string>{{54, 704}, {42, 31}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>hair.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{72.000000, 69.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 299}, {72, 69}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>hand_L_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{31.000000, 35.000000}</string>
+					<key>textureRect</key>
+					<string>{{42, 768}, {35, 31}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>eyes_ANGRY.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{37.000000, 25.000000}</string>
+					<key>textureRect</key>
+					<string>{{43, 739}, {37, 25}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>gun-holster.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{27.000000, 41.000000}</string>
+					<key>textureRect</key>
+					<string>{{99, 217}, {27, 41}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>leg_upper_R_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{45.000000, 69.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 395}, {69, 45}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>vest_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{76.000000, 93.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 144}, {93, 76}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>eyes_OPEN.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{38.000000, 25.000000}</string>
+					<key>textureRect</key>
+					<string>{{100, 734}, {25, 38}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>head.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{71.000000, 83.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 224}, {83, 71}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>leg_lower_R_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{42.000000, 63.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 536}, {63, 42}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>pant_bottom_RIGHT.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{37.000000, 16.000000}</string>
+					<key>textureRect</key>
+					<string>{{110, 37}, {16, 37}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>SUNGLASSES.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{70.000000, 20.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 371}, {70, 20}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>hand_OpenGrab.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{48.000000, 44.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 665}, {48, 44}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>hat.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{100.000000, 58.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 83}, {100, 58}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>handPoint.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{37.000000, 57.000000}</string>
+					<key>textureRect</key>
+					<string>{{69, 579}, {57, 37}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>foot_LEFT.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{58.000000, 30.000000}</string>
+					<key>textureRect</key>
+					<string>{{69, 546}, {58, 30}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>eyes_CLOSED.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{37.000000, 25.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 713}, {37, 25}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>shoulder_L_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{44.000000, 63.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 488}, {63, 44}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>neck_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{33.000000, 28.000000}</string>
+					<key>textureRect</key>
+					<string>{{99, 180}, {28, 33}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>shoulder_R_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{54.000000, 54.000000}</string>
+					<key>textureRect</key>
+					<string>{{72, 454}, {54, 54}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>tennisBall.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{26.000000, 26.000000}</string>
+					<key>textureRect</key>
+					<string>{{100, 704}, {26, 26}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>muzzleFlash.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{17.000000, 31.000000}</string>
+					<key>textureRect</key>
+					<string>{{110, 2}, {17, 31}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>forearm_L_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{51.000000, 29.000000}</string>
+					<key>textureRect</key>
+					<string>{{59, 620}, {51, 29}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>forearm_R_outline.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{32.000000, 54.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 582}, {54, 32}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>handRest.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{40.000000, 49.000000}</string>
+					<key>textureRect</key>
+					<string>{{78, 339}, {49, 40}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>mouth.png</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{24.000000, 16.000000}</string>
+					<key>textureRect</key>
+					<string>{{110, 78}, {16, 24}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

@@ -4,40 +4,49 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LevelHelper2-SpriteKit + Box2d - MacOS.xcscheme</key>
+		<key>Box2D-OSX.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
-		<key>LevelHelper2-SpriteKit + Box2d - iOS.xcscheme</key>
+		<key>Box2D.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>LevelHelper2-SpriteKit - iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6E72A5891983747F00143439</key>
+		<key>6EDE88E219A48EEF00599C48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E89FCF2192E0A390040478F</key>
+		<key>6EDE88F219A48EEF00599C48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E89FD1D192E0A390040478F</key>
+		<key>6EDE8A1019A4934500599C48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EBEA2F71959BFD000726044</key>
+		<key>6EDE8A2119A4934500599C48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EDE8A3719A4935A00599C48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EDE8AA419A4976900599C48</key>
 		<dict>
 			<key>primary</key>
 			<true/>

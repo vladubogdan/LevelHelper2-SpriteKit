@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>alpha</key>
+	<real>255</real>
+	<key>anchor</key>
+	<string>{0.500000, 0.500000}</string>
+	<key>assetUUID</key>
+	<string>4386A083-CAF4-45E7-B7C8-DBB0BAF26BF9</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>imageFileName</key>
+			<string>carParts.png</string>
+			<key>name</key>
+			<string>carBody</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>fixtureUUID</key>
+				<string>40E925B3-30EF-47AA-93F9-FCD28F190A3D</string>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>5</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>97050190-E9D1-4703-A2F5-36ED58441C1E</string>
+			<key>relativeImagePath</key>
+			<string>PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{168.000000, 68.000000}</string>
+			<key>spriteName</key>
+			<string>carBody</string>
+			<key>spriteUUID</key>
+			<string>9015E100-C10C-4DE0-A4C3-A69E08983DEC</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>DE9AC4E6-FF18-4CE1-A8F5-9DDE926F4BD5</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>enableLimit</key>
+			<false/>
+			<key>enableMotor</key>
+			<false/>
+			<key>lowerAngle</key>
+			<real>0.0</real>
+			<key>maxMotorTorque</key>
+			<real>0.0</real>
+			<key>motorSpeed</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>frontWheelJoint</string>
+			<key>nodeType</key>
+			<string>LHRevoluteJoint</string>
+			<key>parentUUID</key>
+			<string>97050190-E9D1-4703-A2F5-36ED58441C1E</string>
+			<key>relativePosA</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>spriteAUUID</key>
+			<string>E763CC2D-CAFD-4F0E-AC67-8F52FF68020F</string>
+			<key>spriteBUUID</key>
+			<string>DE9AC4E6-FF18-4CE1-A8F5-9DDE926F4BD5</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>upperAngle</key>
+			<real>0.0</real>
+			<key>uuid</key>
+			<string>121DBE44-8668-48D0-924C-B10261348048</string>
+		</dict>
+		<dict>
+			<key>collideConnected</key>
+			<false/>
+			<key>enableLimit</key>
+			<false/>
+			<key>enableMotor</key>
+			<false/>
+			<key>lowerAngle</key>
+			<real>0.0</real>
+			<key>maxMotorTorque</key>
+			<real>0.0</real>
+			<key>motorSpeed</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>backWheelJoint</string>
+			<key>nodeType</key>
+			<string>LHRevoluteJoint</string>
+			<key>parentUUID</key>
+			<string>97050190-E9D1-4703-A2F5-36ED58441C1E</string>
+			<key>relativePosA</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>spriteAUUID</key>
+			<string>CB0B4F48-2B23-48E1-800A-AD4F06FD4495</string>
+			<key>spriteBUUID</key>
+			<string>DE9AC4E6-FF18-4CE1-A8F5-9DDE926F4BD5</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>upperAngle</key>
+			<real>0.0</real>
+			<key>uuid</key>
+			<string>008ED7A0-BC13-47CC-82D6-29E2835D9A1D</string>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{-0.052083, 0.031250}</string>
+			<key>imageFileName</key>
+			<string>carParts.png</string>
+			<key>name</key>
+			<string>backWheel</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>97050190-E9D1-4703-A2F5-36ED58441C1E</string>
+			<key>relativeImagePath</key>
+			<string>PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{43.000000, 43.000000}</string>
+			<key>spriteName</key>
+			<string>carTyre</string>
+			<key>spriteUUID</key>
+			<string>F2BF5807-ACFF-44E8-BAA8-94A87CAC4F40</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>CB0B4F48-2B23-48E1-800A-AD4F06FD4495</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.052083, 0.031250}</string>
+			<key>imageFileName</key>
+			<string>carParts.png</string>
+			<key>name</key>
+			<string>frontWheel</string>
+			<key>nodePhysics</key>
+			<dict>
+				<key>allowSleep</key>
+				<true/>
+				<key>bullet</key>
+				<false/>
+				<key>fixedRotation</key>
+				<false/>
+				<key>genericFixture</key>
+				<dict>
+					<key>category</key>
+					<integer>1</integer>
+					<key>density</key>
+					<real>0.10000000149011612</real>
+					<key>fixtureID</key>
+					<integer>0</integer>
+					<key>friction</key>
+					<real>0.20000000298023224</real>
+					<key>mask</key>
+					<integer>65535</integer>
+					<key>name</key>
+					<string>GenericFixture</string>
+					<key>restitution</key>
+					<real>0.0</real>
+					<key>sensor</key>
+					<false/>
+				</dict>
+				<key>gravityScale</key>
+				<real>1</real>
+				<key>shape</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>nodeType</key>
+			<string>LHSprite</string>
+			<key>parentUUID</key>
+			<string>97050190-E9D1-4703-A2F5-36ED58441C1E</string>
+			<key>relativeImagePath</key>
+			<string>PUBLISH_FOLDER/</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{43.000000, 43.000000}</string>
+			<key>spriteName</key>
+			<string>carTyre</string>
+			<key>spriteUUID</key>
+			<string>F2BF5807-ACFF-44E8-BAA8-94A87CAC4F40</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>E763CC2D-CAFD-4F0E-AC67-8F52FF68020F</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>colorOverlay</key>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+	<key>generalPosition</key>
+	<string>{0.066667, 0.100000}</string>
+	<key>name</key>
+	<string>Untitled</string>
+	<key>nodeType</key>
+	<string>LHAsset</string>
+	<key>parentUUID</key>
+	<string>B07D2B01-EF9E-4B3D-A2DB-A8B7CFC51CE6</string>
+	<key>rotation</key>
+	<real>0.0</real>
+	<key>scale</key>
+	<string>{1.000000, 1.000000}</string>
+	<key>size</key>
+	<string>{180.434769, 95.839417}</string>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>40E925B3-30EF-47AA-93F9-FCD28F190A3D</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
+	<key>uuid</key>
+	<string>97050190-E9D1-4703-A2F5-36ED58441C1E</string>
+	<key>zOrder</key>
+	<integer>0</integer>
+</dict>
+</plist>

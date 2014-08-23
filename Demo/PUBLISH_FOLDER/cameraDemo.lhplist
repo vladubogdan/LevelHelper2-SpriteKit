@@ -1,0 +1,2921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>2</integer>
+	<key>backgroundColor</key>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>imageFileName</key>
+					<string>sky.png</string>
+					<key>name</key>
+					<string>sky</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_BACK_USER_INTERFACE_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>INDIVIDUAL_IMAGES_EXAMPLE/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{960.000000, 640.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>BB35E0F5-47C9-48AF-B509-421A1C01B7B3</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>7303BC3F-5D0A-45C6-BE6F-1028FB95FE1F</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>66854BEC-E59C-47A7-9CE8-A5CC95436EA7</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.433333, 0.850000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain02</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B92F68D3-0129-4424-BB87-B92CF9AE3A2A</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{874.000000, 232.000000}</string>
+							<key>spriteName</key>
+							<string>mountain02.png</string>
+							<key>spriteUUID</key>
+							<string>D5E1B534-5E70-4D5B-B10E-50D9C997C7C1</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>1772A25D-8F9E-439A-8266-BD05FC67218B</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.466667, 0.875000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain02_1</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B92F68D3-0129-4424-BB87-B92CF9AE3A2A</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{874.000000, 232.000000}</string>
+							<key>spriteName</key>
+							<string>mountain02.png</string>
+							<key>spriteUUID</key>
+							<string>D5E1B534-5E70-4D5B-B10E-50D9C997C7C1</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>DE2A6543-0CD4-4A1C-A79F-212A5A299536</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.783333, 0.850000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain02_2</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B92F68D3-0129-4424-BB87-B92CF9AE3A2A</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{874.000000, 232.000000}</string>
+							<key>spriteName</key>
+							<string>mountain02.png</string>
+							<key>spriteUUID</key>
+							<string>D5E1B534-5E70-4D5B-B10E-50D9C997C7C1</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>F2EDC370-076A-428F-90FC-632ECDC45FDE</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.450000, 0.900000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain02_3</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B92F68D3-0129-4424-BB87-B92CF9AE3A2A</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{874.000000, 232.000000}</string>
+							<key>spriteName</key>
+							<string>mountain02.png</string>
+							<key>spriteUUID</key>
+							<string>D5E1B534-5E70-4D5B-B10E-50D9C997C7C1</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>F6BA7CF4-92D3-4E04-AAC8-3DC71702D343</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{-0.400000, -0.075000}</string>
+					<key>name</key>
+					<string>backMountains</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{256.000000, 256.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>B92F68D3-0129-4424-BB87-B92CF9AE3A2A</string>
+					<key>zOrder</key>
+					<integer>-2</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.733333, 0.250000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain03</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B29DF678-9A5B-4084-8A7B-261711870D02</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{1125.000000, 277.000000}</string>
+							<key>spriteName</key>
+							<string>mountain03.png</string>
+							<key>spriteUUID</key>
+							<string>ECFBF842-DB73-4B3A-9A1D-B1E0878E6F51</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>AE2456C9-463E-4C84-892F-C2975B8371BF</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.866667, 0.425000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain03_1</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B29DF678-9A5B-4084-8A7B-261711870D02</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{1125.000000, 277.000000}</string>
+							<key>spriteName</key>
+							<string>mountain03.png</string>
+							<key>spriteUUID</key>
+							<string>ECFBF842-DB73-4B3A-9A1D-B1E0878E6F51</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>E2934360-1169-4601-B4B5-963163A4B8AC</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.750000, 0.275000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain03_2</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B29DF678-9A5B-4084-8A7B-261711870D02</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{1125.000000, 277.000000}</string>
+							<key>spriteName</key>
+							<string>mountain03.png</string>
+							<key>spriteUUID</key>
+							<string>ECFBF842-DB73-4B3A-9A1D-B1E0878E6F51</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>DC0F2641-0C30-4F54-B528-FDB41DE61404</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.350000, 0.425000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain03_3</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B29DF678-9A5B-4084-8A7B-261711870D02</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{1125.000000, 277.000000}</string>
+							<key>spriteName</key>
+							<string>mountain03.png</string>
+							<key>spriteUUID</key>
+							<string>ECFBF842-DB73-4B3A-9A1D-B1E0878E6F51</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>AFD9B3B7-B078-4702-B065-CF0F34D0EE64</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.683333, 0.300000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mountain03_4</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>B29DF678-9A5B-4084-8A7B-261711870D02</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{1125.000000, 277.000000}</string>
+							<key>spriteName</key>
+							<string>mountain03.png</string>
+							<key>spriteUUID</key>
+							<string>ECFBF842-DB73-4B3A-9A1D-B1E0878E6F51</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>69708BDE-957A-4594-B1C0-D9BEA706DA21</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{-0.400000, 0.450000}</string>
+					<key>name</key>
+					<string>frontMountains</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{256.000000, 256.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>B29DF678-9A5B-4084-8A7B-261711870D02</string>
+					<key>zOrder</key>
+					<integer>-1</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.096645, -0.621465}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mushrooms</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 103.000000}</string>
+							<key>spriteName</key>
+							<string>mushrooms.png</string>
+							<key>spriteUUID</key>
+							<string>53407796-1F65-4887-BF24-69FA8F41AD7A</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>9080C833-9042-44A7-8527-1E97F3457D3A</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.533333, -0.590104}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>bush</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{83.000000, 65.000000}</string>
+							<key>spriteName</key>
+							<string>bush.png</string>
+							<key>spriteUUID</key>
+							<string>6305779C-1F18-4EDD-B6E7-5C410A967F3B</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>74A02D52-E8F8-46C2-B38D-6678070F9DB5</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.556993, -0.597622}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>bush_1</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{83.000000, 65.000000}</string>
+							<key>spriteName</key>
+							<string>bush.png</string>
+							<key>spriteUUID</key>
+							<string>6305779C-1F18-4EDD-B6E7-5C410A967F3B</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>671BA2B3-021B-4C01-A643-19081E8F18A0</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.168817, -0.575119}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>bush_2</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{83.000000, 65.000000}</string>
+							<key>spriteName</key>
+							<string>bush.png</string>
+							<key>spriteUUID</key>
+							<string>6305779C-1F18-4EDD-B6E7-5C410A967F3B</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>39E1DA08-171C-4476-8764-0CB9258939D4</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.371364, -0.610887}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mushrooms_1</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 103.000000}</string>
+							<key>spriteName</key>
+							<string>mushrooms.png</string>
+							<key>spriteUUID</key>
+							<string>53407796-1F65-4887-BF24-69FA8F41AD7A</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>1E69C3AB-6093-4C86-830C-CB9DD42545FC</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.321689, -0.597892}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mushrooms_2</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 103.000000}</string>
+							<key>spriteName</key>
+							<string>mushrooms.png</string>
+							<key>spriteUUID</key>
+							<string>53407796-1F65-4887-BF24-69FA8F41AD7A</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>0DAFCBC7-13D1-4698-B682-C1ACED37AE23</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.315617, -0.607536}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mushrooms_3</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 103.000000}</string>
+							<key>spriteName</key>
+							<string>mushrooms.png</string>
+							<key>spriteUUID</key>
+							<string>53407796-1F65-4887-BF24-69FA8F41AD7A</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>FF854EE3-7D5B-47DF-B614-BA81DB3460DB</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.299332, -0.557929}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>bush_3</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{83.000000, 65.000000}</string>
+							<key>spriteName</key>
+							<string>bush.png</string>
+							<key>spriteUUID</key>
+							<string>6305779C-1F18-4EDD-B6E7-5C410A967F3B</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>0EA74B87-DD14-402B-8EBF-DC135C6766B1</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.509999, -0.588553}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>bush_4</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{83.000000, 65.000000}</string>
+							<key>spriteName</key>
+							<string>bush.png</string>
+							<key>spriteUUID</key>
+							<string>6305779C-1F18-4EDD-B6E7-5C410A967F3B</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>2FB810D4-A29E-4456-9FD1-416E3E5EBD6C</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.930407, -0.607570}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mushrooms_4</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 103.000000}</string>
+							<key>spriteName</key>
+							<string>mushrooms.png</string>
+							<key>spriteUUID</key>
+							<string>53407796-1F65-4887-BF24-69FA8F41AD7A</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>047208C0-DD4B-4907-92CE-AADFFACAD1E0</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.299206, -0.615252}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>mushrooms_5</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 103.000000}</string>
+							<key>spriteName</key>
+							<string>mushrooms.png</string>
+							<key>spriteUUID</key>
+							<string>53407796-1F65-4887-BF24-69FA8F41AD7A</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>2D6ACAEC-F3A3-4490-B925-BE1B0FBB24BC</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{-0.400000, 1.450000}</string>
+					<key>name</key>
+					<string>mushroomsAndBushes</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{256.000000, 256.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>D0713A6A-DBBD-4648-9427-365A51CDEDD0</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>activeCamera</key>
+					<true/>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>cameraMovement</string>
+							<key>properties</key>
+							<dict>
+								<key>Activate Camera</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHCameraActivateProperty</string>
+								</dict>
+								<key>Position</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>positions</key>
+											<dict>
+												<key>DA72C91E-1DD9-4F13-A439-A26DE3365796</key>
+												<string>{480.000000, 320.000000}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>399</integer>
+											<key>positions</key>
+											<dict>
+												<key>DA72C91E-1DD9-4F13-A439-A26DE3365796</key>
+												<string>{5063.133537, 320.000000}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>799</integer>
+											<key>positions</key>
+											<dict>
+												<key>DA72C91E-1DD9-4F13-A439-A26DE3365796</key>
+												<string>{480.000000, 320.000000}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHPositionProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>800</integer>
+						</dict>
+					</array>
+					<key>generalPosition</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>name</key>
+					<string>UntitledCamera</string>
+					<key>nodeType</key>
+					<string>LHCamera</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>restrictToGameWorld</key>
+					<false/>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>DA72C91E-1DD9-4F13-A439-A26DE3365796</string>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{6.233333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_45</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>F6AE0F6D-0066-42C2-9F2C-E50608760EA1</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{6.100000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_44</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>57994D21-8A8E-42A7-9BB7-AC4152E35238</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.966667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_43</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>6FE72E7B-A6C5-4599-B1B4-CE6D5E27FCA8</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.833333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_42</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>E8222CEA-B778-4E8F-B39E-79F0FDBB2FA0</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.700000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_41</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>807D8AC2-0DC5-43E8-A97B-09287B721444</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.566667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_40</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>B25965A1-E2F8-4E66-906E-D28AAC202207</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.433333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_39</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>1899AD60-DB72-43DC-9830-7C7F0CF0310B</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.300000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_38</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>BAB18F57-1022-4D2B-B192-16CFAEC08AAD</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.166667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_37</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>9F7C5E56-DDAE-4541-BDA0-F01DF41DF7EF</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{5.033333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_36</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>262520AB-B25C-4227-A324-8973A6AEA548</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.900000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_35</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>88A8D6CC-8B6E-4364-8B49-37FFE35F1CDA</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.766667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_34</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>F81796C7-6069-4268-B4F3-4AD59D17BD28</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.633333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_33</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>C9E58C98-3242-4E8D-A55E-2996B0D421C1</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.500000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_32</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>4E477711-3832-4505-9F64-468C94C5CAB0</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.366667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_31</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>C21A2041-D070-4034-B5BD-043D1B6B1E6B</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.233333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_30</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>A2132E04-4E7A-4AE4-B1F7-DB07E1CF5A64</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{4.100000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_29</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>539DC6F5-06EA-479A-8F27-9CEAAB7BD6E7</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.966667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_28</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>9F4AA2BC-8A8B-4C7B-B9FD-D41680871665</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.833333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_27</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>EB8B8DED-3B08-4C66-8DBE-0E05F4536944</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.700000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_26</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>8ACD5A20-EBA1-4F3C-891E-B5CB378D6A65</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.566667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_25</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>E5C957A1-1DB5-409E-8970-CA73F483BD57</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.433333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_24</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>AAA094DD-2780-4551-A22E-FC9B3DF8674F</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.300000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_23</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>318599D5-0E42-4430-B1B2-AEEF84115BAA</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.166667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_22</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>B6CA9282-F252-4738-8EE5-18B30681EAB3</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{3.033333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_21</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>7D5CD552-861A-41E1-8E4B-1D2651F38FB7</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.900000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_20</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>F254FD9C-94C9-47F6-A9E1-70F5EC260132</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.766667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_19</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>682149D2-4EB4-4B97-B8A0-04AE9BC799F2</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.633333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_18</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>D16626A2-EB9E-47E1-84F4-63E4C5054C13</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.500000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_17</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>13D67A06-4290-4232-A7F5-596374A52E67</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.366667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_16</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>9D8B4B30-8A75-47F7-B5E2-1D8357F32257</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.233333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_15</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>8B98B2CE-8897-4C89-9657-0710EEB123BA</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{2.100000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_14</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>9359581A-6906-4082-94C3-C868FF7D4ACE</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.966667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_13</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>5B695F4B-D7A7-4C3C-A3A2-553A1B35478D</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.833333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_12</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>38E54EE2-DF4E-45E1-8933-56F71274C78B</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.700000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_11</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>87AA74FB-CFD2-4172-AADA-FE4B0F8CAB39</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.566667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_10</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>D2F17981-42B1-46EB-9A2D-FE99BC57E26B</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.433333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_9</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>52F4E0DC-940B-48F2-B231-8406D165031B</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.300000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_8</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>7D7E2A50-D693-4979-ADEE-E287E2D80513</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.166667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_7</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>27A6D75F-CAB8-4178-B6DF-86799278CAF0</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{1.033333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_6</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>BCE60D59-AB1C-4968-97D4-8ABC6C6D7FAD</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.900000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_5</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>B90D5282-A840-4351-A323-05D7CE40956A</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.766667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_4</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>F9691DDD-F3E5-443F-AEB9-1397EA083767</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.633333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_3</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>669FAF9C-6564-4A93-8CE4-CC07A3CBF2E6</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.500000, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_2</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>B9674F94-8C64-426B-808B-F4A87D49308B</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.366667, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick_1</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>D2E6A8C0-2012-4D55-B9E6-5E6A6ED28919</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.233333, 0.025000}</string>
+							<key>imageFileName</key>
+							<string>platformer.png</string>
+							<key>name</key>
+							<string>brick</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{128.000000, 128.000000}</string>
+							<key>spriteName</key>
+							<string>brick.png</string>
+							<key>spriteUUID</key>
+							<string>4EC4381D-615B-43E4-A952-F710DDE723C7</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>60ED868F-336C-4580-BC6F-2F67C3FB5902</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{-0.400000, 0.975000}</string>
+					<key>name</key>
+					<string>bricks</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{256.000000, 256.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>952CFCD8-A817-4C0C-8C8F-D37C5228AE9B</string>
+					<key>zOrder</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>7303BC3F-5D0A-45C6-BE6F-1028FB95FE1F</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>30B854D7-E868-4DDE-AFC5-EC34001CD30A</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>FRONT USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>7303BC3F-5D0A-45C6-BE6F-1028FB95FE1F</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>4AB7BF19-A690-4F3D-A468-2ED4D8D66AE9</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960.000000, 640.000000}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string>-568</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024.000000, 768.000000}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048.000000, 1536.000000}</string>
+			<key>suffix</key>
+			<string>-ipad@2x</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0.000000, -1.000000}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>sceneFormat</key>
+	<real>1</real>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>7303BC3F-5D0A-45C6-BE6F-1028FB95FE1F</string>
+</dict>
+</plist>
