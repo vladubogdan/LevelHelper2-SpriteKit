@@ -17,8 +17,11 @@
 
 @interface LHRevoluteJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)revoluteJointNodeWithDictionary:(NSDictionary*)dict
-                                        parent:(SKNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt;
 
 /**
  Returns whether or not the limit is enabled on the joint.

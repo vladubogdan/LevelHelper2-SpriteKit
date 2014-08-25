@@ -19,8 +19,11 @@
 
 @interface LHSprite : SKSpriteNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
-+ (instancetype)spriteNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(SKNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
 
 -(void)setSpriteFrameWithName:(NSString*)spriteFrame;

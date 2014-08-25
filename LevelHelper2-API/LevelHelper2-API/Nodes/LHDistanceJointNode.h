@@ -17,9 +17,11 @@
 
 @interface LHDistanceJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)distanceJointNodeWithDictionary:(NSDictionary*)dict
-                                        parent:(SKNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
 /**
  Returns the damping ratio of the SpriteKit joint.

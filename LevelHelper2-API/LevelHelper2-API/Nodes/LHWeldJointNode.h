@@ -17,8 +17,8 @@
 
 @interface LHWeldJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)weldJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(SKNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt;
 
 
 

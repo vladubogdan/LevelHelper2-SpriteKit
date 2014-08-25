@@ -45,14 +45,14 @@
 }
 
 
-+ (instancetype)cameraWithDictionary:(NSDictionary*)dict
-                               scene:(SKNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initCameraWithDictionary:dict
-                                                            scene:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                             scene:(SKNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                      scene:prnt]);
 }
 
-- (instancetype)initCameraWithDictionary:(NSDictionary*)dict
-                                   scene:(SKNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                             scene:(SKNode*)prnt{
     
     
     if(self = [super init]){

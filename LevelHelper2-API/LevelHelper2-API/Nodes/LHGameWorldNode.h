@@ -23,8 +23,11 @@ class b2World;
 
 @interface LHGameWorldNode : SKSpriteNode <LHNodeProtocol>
 
-+(instancetype)gameWorldNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(SKNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
 #if LH_USE_BOX2D
 #ifdef __cplusplus

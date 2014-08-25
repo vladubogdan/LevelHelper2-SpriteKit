@@ -17,10 +17,11 @@
 
 @interface LHAsset : SKNode <LHNodeProtocol, LHNodeAnimationProtocol, LHNodePhysicsProtocol>
 
-+(instancetype)assetWithDictionary:(NSDictionary*)dict
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
                             parent:(SKNode*)prnt;
 
-
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
 /**
  Creates a new asset node with a specific name.

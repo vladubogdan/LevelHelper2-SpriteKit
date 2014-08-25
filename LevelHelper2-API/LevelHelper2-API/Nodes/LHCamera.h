@@ -17,8 +17,11 @@
 @class LHScene;
 @interface LHCamera : SKNode <LHNodeProtocol, LHNodeAnimationProtocol>
 
-+ (instancetype)cameraWithDictionary:(NSDictionary*)dict
-                               scene:(SKNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                             scene:(SKNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                             scene:(SKNode*)prnt;
 
 
 /**

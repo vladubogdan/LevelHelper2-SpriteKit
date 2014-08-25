@@ -116,6 +116,24 @@
  */
 -(NSString*)relativePath;
 
+#pragma mark- NODES SUBCLASSING
+/**
+ Overwrite this method to return your own class type for specific nodes.
+ Setup the class type in "Subclass" property of LevelHelper 2.
+ Check LHSceneNodesSubclassingTest for how to use this method.
+ 
+ Your need to implement this function
+ + (instancetype)nodeWithDictionary:(NSDictionary*)dict parent:(CCNode*)prnt;
+ 
+ and overwrite this method
+ - (instancetype)initWithDictionary:(NSDictionary*)dict parent:(CCNode*)prnt;
+ 
+ @param subclassTypeName The name of the your custom class.
+ @param superTypeName The name of the original LevelHelper node class type. Your class must be a subclass of this type.
+ */
+-(Class)createNodeObjectForSubclassWithName:(NSString*)subclassTypeName superTypeName:(NSString*)superTypeName;
+
+
 #pragma mark- ANIMATION HANDLING
 
 /**

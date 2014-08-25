@@ -23,14 +23,14 @@
 }
 
 
-+ (instancetype)backUINodeWithDictionary:(NSDictionary*)dict
-                                  parent:(SKNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initBackUINodeWithDictionary:dict
-                                                               parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                     parent:prnt]);
 }
 
-- (instancetype)initBackUINodeWithDictionary:(NSDictionary*)dict
-                                      parent:(SKNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
     
     
     if(self = [super init]){

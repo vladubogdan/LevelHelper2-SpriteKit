@@ -37,14 +37,14 @@
 }
 
 
-+ (instancetype)assetWithDictionary:(NSDictionary*)dict
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
                              parent:(SKNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initAssetWithDictionary:dict
-                                                          parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                     parent:prnt]);
 }
 
-- (instancetype)initAssetWithDictionary:(NSDictionary*)dict
-                                 parent:(SKNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
     
     
     if(self = [super init]){

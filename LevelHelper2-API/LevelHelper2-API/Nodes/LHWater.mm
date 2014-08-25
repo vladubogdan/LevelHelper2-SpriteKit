@@ -170,14 +170,14 @@ offset, increment, velocity, left, right, halfWidth, middle;
 }
 
 
-+ (instancetype)waterNodeWithDictionary:(NSDictionary*)dict
-                                 parent:(SKNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initWaterNodeWithDictionary:dict
-                                                               parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                     parent:prnt]);
 }
 
-- (instancetype)initWaterNodeWithDictionary:(NSDictionary*)dict
-                                     parent:(SKNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
     
     
     if(self = [super init]){

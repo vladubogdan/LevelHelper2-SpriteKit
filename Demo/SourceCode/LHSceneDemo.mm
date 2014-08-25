@@ -28,6 +28,7 @@
 #import "LHSceneRemoveOnCollisionDemo.h"
 #import "LHSceneUserPropertiesDemo.h"
 #import "LHSceneAssetWithJointsDemo.h"
+#import "LHSceneNodesSubclassingTest.h"
 
 @implementation LHSceneDemo
 {
@@ -54,6 +55,7 @@
         availableScenes = [[NSMutableArray alloc] init];
 
         [availableScenes addObject:[LHSceneIntroduction class]];
+        [availableScenes addObject:[LHSceneNodesSubclassingTest class]];
         [availableScenes addObject:[LHSceneCameraDemo class]];
         [availableScenes addObject:[LHSceneCameraFollowDemo class]];
         [availableScenes addObject:[LHSceneParallaxDemo class]];

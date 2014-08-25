@@ -192,30 +192,55 @@
         scene = (LHScene*)[prnt scene];
     }
     
+    NSString* subclassNodeType = [childInfo objectForKey:@"subclassNodeType"];
+    if(subclassNodeType && subclassNodeType.length > 0)
+    {
+        //this will not work as we do not have the class included in the api
+        //        Class classObj = NSClassFromString(subclassNodeType);
+        
+        Class classObj = [scene createNodeObjectForSubclassWithName:subclassNodeType
+                                                      superTypeName:nodeType];
+        if(classObj){
+            
+            SKNode* node = [classObj nodeWithDictionary:childInfo parent:prnt];
+            if(node){
+                if([node conformsToProtocol:@protocol(LHJointNodeProtocol)])
+                {
+                    [scene addLateLoadingNode:node];
+                }
+            }
+            return node;
+        }
+        else{
+            NSLog(@"\n\nWARNING: Expected a class of type %@ subclassed from %@, but nothing was returned. Check your \"createNodeObjectForSubclassWithName:superTypeName:\" method and make sure you return a valid Class.\n\n", subclassNodeType, nodeType);
+        }
+    }
+    
+    
     if([nodeType isEqualToString:@"LHGameWorldNode"])
     {
-        LHGameWorldNode* pNode = [LHGameWorldNode gameWorldNodeWithDictionary:childInfo
-                                                                       parent:prnt];
+        LHGameWorldNode* pNode = [LHGameWorldNode nodeWithDictionary:childInfo
+                                                              parent:prnt];
         
         //[pNode setDebugDraw:YES];
         return pNode;
     }
     else if([nodeType isEqualToString:@"LHUINode"])
     {
-        LHUINode* pNode = [LHUINode uiNodeWithDictionary:childInfo
-                                                  parent:prnt];
+        LHUINode* pNode = [LHUINode nodeWithDictionary:childInfo
+                                                parent:prnt];
         return pNode;
     }
     else if([nodeType isEqualToString:@"LHBackUINode"])
     {
-        LHBackUINode* pNode = [LHBackUINode backUINodeWithDictionary:childInfo
-                                                              parent:prnt];
+        LHBackUINode* pNode = [LHBackUINode nodeWithDictionary:childInfo
+                                                        parent:prnt];
         return pNode;
     }
     if([nodeType isEqualToString:@"LHSprite"])
     {
-        LHSprite* spr = [LHSprite spriteNodeWithDictionary:childInfo
-                                                    parent:prnt];
+        LHSprite* spr = [LHSprite nodeWithDictionary:childInfo
+                                              parent:prnt];
         return spr;
     }
     else if([nodeType isEqualToString:@"LHNode"])
@@ -226,85 +251,85 @@
     }
     else if([nodeType isEqualToString:@"LHBezier"])
     {
-        LHBezier* bez = [LHBezier bezierNodeWithDictionary:childInfo
-                                                    parent:prnt];
+        LHBezier* bez = [LHBezier nodeWithDictionary:childInfo
+                                              parent:prnt];
         return bez;
     }
     else if([nodeType isEqualToString:@"LHTexturedShape"])
     {
-        LHShape* sp = [LHShape shapeNodeWithDictionary:childInfo
-                                                parent:prnt];
+        LHShape* sp = [LHShape nodeWithDictionary:childInfo
+                                           parent:prnt];
         return sp;
     }
     else if([nodeType isEqualToString:@"LHWaves"])
     {
-        LHWater* wt = [LHWater waterNodeWithDictionary:childInfo
-                                                parent:prnt];
+        LHWater* wt = [LHWater nodeWithDictionary:childInfo
+                                           parent:prnt];
         return wt;
     }
     else if([nodeType isEqualToString:@"LHAreaGravity"])
     {
-        LHGravityArea* gv = [LHGravityArea gravityAreaWithDictionary:childInfo
-                                                              parent:prnt];
+        LHGravityArea* gv = [LHGravityArea nodeWithDictionary:childInfo
+                                                       parent:prnt];
         return gv;
     }
     else if([nodeType isEqualToString:@"LHParallax"])
     {
-        LHParallax* pr = [LHParallax parallaxWithDictionary:childInfo
-                                                     parent:prnt];
+        LHParallax* pr = [LHParallax nodeWithDictionary:childInfo
+                                                 parent:prnt];
         return pr;
     }
     else if([nodeType isEqualToString:@"LHParallaxLayer"])
     {
-        LHParallaxLayer* lh = [LHParallaxLayer parallaxLayerWithDictionary:childInfo
-                                                                    parent:prnt];
+        LHParallaxLayer* lh = [LHParallaxLayer nodeWithDictionary:childInfo
+                                                           parent:prnt];
         return lh;
     }
     else if([nodeType isEqualToString:@"LHAsset"])
     {
-        LHAsset* as = [LHAsset assetWithDictionary:childInfo
-                                            parent:prnt];
+        LHAsset* as = [LHAsset nodeWithDictionary:childInfo
+                                           parent:prnt];
         return as;
     }
     else if([nodeType isEqualToString:@"LHCamera"])
     {
-        LHCamera* cm = [LHCamera cameraWithDictionary:childInfo
-                                                scene:prnt];
+        LHCamera* cm = [LHCamera nodeWithDictionary:childInfo
+                                              scene:prnt];
         return cm;
     }
     else if([nodeType isEqualToString:@"LHRopeJoint"])
     {
         if(scene)
         {
-            LHRopeJointNode* jt = [LHRopeJointNode ropeJointNodeWithDictionary:childInfo
-                                                                        parent:prnt];
+            LHRopeJointNode* jt = [LHRopeJointNode nodeWithDictionary:childInfo
+                                                               parent:prnt];
             [scene addLateLoadingNode:jt];
         }
     }
     else if([nodeType isEqualToString:@"LHWeldJoint"])
     {
-        LHWeldJointNode* jt = [LHWeldJointNode weldJointNodeWithDictionary:childInfo
-                                                                    parent:prnt];
+        LHWeldJointNode* jt = [LHWeldJointNode nodeWithDictionary:childInfo
+                                                           parent:prnt];
         [scene addLateLoadingNode:jt];
     }
     else if([nodeType isEqualToString:@"LHRevoluteJoint"]){
         
-        LHRevoluteJointNode* jt = [LHRevoluteJointNode revoluteJointNodeWithDictionary:childInfo
-                                                                                parent:prnt];
+        LHRevoluteJointNode* jt = [LHRevoluteJointNode nodeWithDictionary:childInfo
+                                                                   parent:prnt];
         
         [scene addLateLoadingNode:jt];
     }
     else if([nodeType isEqualToString:@"LHDistanceJoint"]){
         
-        LHDistanceJointNode* jt = [LHDistanceJointNode distanceJointNodeWithDictionary:childInfo
-                                                                                parent:prnt];
+        LHDistanceJointNode* jt = [LHDistanceJointNode nodeWithDictionary:childInfo
+                                                                   parent:prnt];
         [scene addLateLoadingNode:jt];
         
     }
     else if([nodeType isEqualToString:@"LHPrismaticJoint"]){
         
-        LHPrismaticJointNode* jt = [LHPrismaticJointNode prismaticJointNodeWithDictionary:childInfo
-                                                                                   parent:prnt];
+        LHPrismaticJointNode* jt = [LHPrismaticJointNode nodeWithDictionary:childInfo
+                                                                     parent:prnt];
         [scene addLateLoadingNode:jt];
     }
     

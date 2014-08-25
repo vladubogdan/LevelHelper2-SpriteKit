@@ -17,9 +17,11 @@
 
 @interface LHParallax : SKNode <LHNodeProtocol, LHNodeAnimationProtocol>
 
-+(instancetype)parallaxWithDictionary:(NSDictionary*)dict
-                               parent:(SKNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
 
 

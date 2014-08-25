@@ -34,11 +34,11 @@
     CGPoint _axis;
 }
 
-+(instancetype)prismaticJointNodeWithDictionary:(NSDictionary*)dict
-                                         parent:(SKNode*)prnt{
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
     
-    return LH_AUTORELEASED([[self alloc] initPrismaticJointNodeWithDictionary:dict
-                                                                       parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                     parent:prnt]);
 }
 
 -(void)dealloc{
@@ -48,8 +48,8 @@
     LH_SUPER_DEALLOC();
 }
 
--(instancetype)initPrismaticJointNodeWithDictionary:(NSDictionary*)dict
-                                             parent:(SKNode*)prnt
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt
 {
     if(self = [super init]){
         

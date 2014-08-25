@@ -39,15 +39,15 @@
     LH_SUPER_DEALLOC();
 }
 
-+(instancetype)revoluteJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(SKNode*)prnt{
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt{
     
-    return LH_AUTORELEASED([[self alloc] initRevoluteJointNodeWithDictionary:dict
-                                                                      parent:prnt]);
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                     parent:prnt]);
 }
 
--(instancetype)initRevoluteJointNodeWithDictionary:(NSDictionary*)dict
-                                            parent:(SKNode*)prnt
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt
 {
     if(self = [super init]){
         

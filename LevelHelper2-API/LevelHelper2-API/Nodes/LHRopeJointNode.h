@@ -17,8 +17,11 @@
 
 @interface LHRopeJointNode : SKNode <LHNodeProtocol, LHJointNodeProtocol>
 
-+(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(SKNode*)prnt;
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt;
 
 
 /**

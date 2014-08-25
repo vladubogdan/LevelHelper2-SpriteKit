@@ -118,8 +118,8 @@ double fcat(double x, void *data)
     LH_SUPER_DEALLOC();
 }
 
-+(instancetype)ropeJointNodeWithDictionary:(NSDictionary*)dict
-                                    parent:(SKNode*)prnt{
++(instancetype)nodeWithDictionary:(NSDictionary*)dict
+                           parent:(SKNode*)prnt{
     return LH_AUTORELEASED([[self alloc] initWithDictionary:dict parent:prnt]);
 }
 

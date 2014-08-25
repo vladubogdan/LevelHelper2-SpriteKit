@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aspect</key>
+	<integer>0</integer>
+	<key>backgroundColor</key>
+	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>BACK USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHBackUINode</string>
+			<key>parentUUID</key>
+			<string>D955B474-03DD-45B9-B551-AEB68C8CE633</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>97E7CBD3-2512-4B98-AA49-C2E2D65C2FC3</string>
+			<key>zOrder</key>
+			<integer>-1</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.364340, 0.511403}</string>
+					<key>imageFileName</key>
+					<string>robots.png</string>
+					<key>name</key>
+					<string>blueRobot</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{110.000000, 133.000000}</string>
+					<key>spriteName</key>
+					<string>blueRobot</string>
+					<key>spriteUUID</key>
+					<string>2F3A5F3F-DA9C-471B-930F-35601F2AE875</string>
+					<key>subclassNodeType</key>
+					<string>BlueRobotSprite</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>35291A8C-6269-4CF6-91C3-920B8F679F87</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.601316, 0.501465}</string>
+					<key>name</key>
+					<string>testCustomNode</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{182.919678, 188.617371}</string>
+					<key>subclassNodeType</key>
+					<string>MyCustomNode</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>33412789-C686-4ECE-BE7F-93AF841E4A53</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.151287, 0.200835}</string>
+					<key>imageFileName</key>
+					<string>robots.png</string>
+					<key>name</key>
+					<string>pinkRobot</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{110.000000, 133.000000}</string>
+					<key>spriteName</key>
+					<string>pinkRobot</string>
+					<key>spriteUUID</key>
+					<string>68189927-8EF2-4BEE-BDC3-20BA98F11C64</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>7E7C1BC5-BC04-49AE-A502-FB772544C5D6</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>GAME WORLD</string>
+			<key>nodeType</key>
+			<string>LHGameWorldNode</string>
+			<key>parentUUID</key>
+			<string>D955B474-03DD-45B9-B551-AEB68C8CE633</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>82F6E2F7-D4E3-46D5-8E37-96D7414FFA05</string>
+			<key>zOrder</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>255</real>
+			<key>anchor</key>
+			<string>{0.500000, 0.500000}</string>
+			<key>colorOverlay</key>
+			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+			<key>generalPosition</key>
+			<string>{0.000000, 0.000000}</string>
+			<key>name</key>
+			<string>FRONT USER INTERFACE</string>
+			<key>nodeType</key>
+			<string>LHUINode</string>
+			<key>parentUUID</key>
+			<string>D955B474-03DD-45B9-B551-AEB68C8CE633</string>
+			<key>rotation</key>
+			<real>0.0</real>
+			<key>scale</key>
+			<string>{1.000000, 1.000000}</string>
+			<key>size</key>
+			<string>{128.000000, 128.000000}</string>
+			<key>tags</key>
+			<array>
+				<string>DEFAULT</string>
+			</array>
+			<key>uuid</key>
+			<string>1E5EA2A7-4635-49A9-8DED-7B870D78BBD6</string>
+			<key>zOrder</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>designResolution</key>
+	<string>{960.000000, 640.000000}</string>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{960.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1136.000000, 640.000000}</string>
+			<key>suffix</key>
+			<string>-568</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>1</real>
+			<key>size</key>
+			<string>{1024.000000, 768.000000}</string>
+			<key>suffix</key>
+			<string>-ipad</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2048.000000, 1536.000000}</string>
+			<key>suffix</key>
+			<string>-ipad@2x</string>
+		</dict>
+	</array>
+	<key>globalGravityDirection</key>
+	<string>{0.000000, -1.000000}</string>
+	<key>globalGravityForce</key>
+	<real>8</real>
+	<key>nodeType</key>
+	<string>LHScene</string>
+	<key>sceneFormat</key>
+	<real>1</real>
+	<key>tags</key>
+	<array>
+		<string>DEFAULT</string>
+	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>2F7BD723-D2CE-4569-804D-F1005C3A6BB6</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
+	<key>useGlobalGravity</key>
+	<true/>
+	<key>uuid</key>
+	<string>D955B474-03DD-45B9-B551-AEB68C8CE633</string>
+</dict>
+</plist>

@@ -43,14 +43,14 @@
 }
 
 
-+ (instancetype)parallaxWithDictionary:(NSDictionary*)dict
-                                parent:(SKNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initParallaxWithDictionary:dict
-                                                             parent:prnt]);
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
+                                                     parent:prnt]);
 }
 
-- (instancetype)initParallaxWithDictionary:(NSDictionary*)dict
-                                    parent:(SKNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
     
     
     if(self = [super init]){

@@ -16,7 +16,10 @@
 
 @interface LHBackUINode : SKSpriteNode <LHNodeProtocol>
 
-+(instancetype)backUINodeWithDictionary:(NSDictionary*)dict
-                                 parent:(SKNode*)prnt;
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt;
 
 @end

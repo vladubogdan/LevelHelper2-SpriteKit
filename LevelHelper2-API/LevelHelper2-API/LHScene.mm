@@ -519,6 +519,14 @@
     return self;
 }
 
+#pragma mark- NODES SUBCLASSING
+-(Class)createNodeObjectForSubclassWithName:(NSString*)subclassTypeName
+                              superTypeName:(NSString*)superTypeName
+{
+    //nothing to do - users should overwrite this method
+    return nil;
+}
+
 #pragma mark- ANIMATION HANDLING
 -(void)setAnimationNotificationsDelegate:(id<LHAnimationNotificationsProtocol>)del{
     _animationsDelegate = del;

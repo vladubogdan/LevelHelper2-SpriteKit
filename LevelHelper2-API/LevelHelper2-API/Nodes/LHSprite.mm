@@ -38,15 +38,15 @@
     LH_SUPER_DEALLOC();
 }
 
-+ (instancetype)spriteNodeWithDictionary:(NSDictionary*)dict
-                                  parent:(SKNode*)prnt{
-    return LH_AUTORELEASED([[self alloc] initSpriteNodeWithDictionary:dict
++ (instancetype)nodeWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
+    return LH_AUTORELEASED([[self alloc] initWithDictionary:dict
                                                                parent:prnt]);
 }
 
 
-- (instancetype)initSpriteNodeWithDictionary:(NSDictionary*)dict
-                                      parent:(SKNode*)prnt{
+- (instancetype)initWithDictionary:(NSDictionary*)dict
+                            parent:(SKNode*)prnt{
 
     
     if(self = [super initWithColor:[SKColor whiteColor] size:CGSizeZero]){
