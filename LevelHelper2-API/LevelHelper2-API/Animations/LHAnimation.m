@@ -107,7 +107,7 @@
             [self setAnimating:YES];
         }
         
-        currentRepetition = -1;
+        currentRepetition = 0;
     }
     return self;
 }
@@ -683,7 +683,7 @@
     LHOpacityFrame* beginFrame    = (LHOpacityFrame*)beginFrm;
     LHOpacityFrame* endFrame      = (LHOpacityFrame*)endFrm;
     
-    NSArray* children = [node childrenOfType:[LHNode class]];
+    NSArray* children = [node childrenOfType:[SKNode class]];
     
     if(beginFrame && endFrame)
     {

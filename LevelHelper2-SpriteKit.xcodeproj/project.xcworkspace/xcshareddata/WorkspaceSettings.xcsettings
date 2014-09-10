@@ -2,11 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Version</key>
-	<string>1.0.2</string>
-	<key>Name</key>
-	<string>LevelHelper2-API</string>
-	<key>RelativePath</key>
-	<string>LevelHelper2-API</string>
+	<key>IDEWorkspaceSharedSettings_AutocreateContextsIfNeeded</key>
+	<true/>
 </dict>
 </plist>
