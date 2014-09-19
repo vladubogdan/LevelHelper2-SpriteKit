@@ -261,16 +261,21 @@
                     verts[1] = [scene metersFromPoint:ptB];
                     verts[0] = [scene metersFromPoint:ptC];
                     
-                    b2PolygonShape shapeDef;
                     
-                    shapeDef.Set(verts, 3);
                     
-                    b2FixtureDef fixture;
+                    if([self validCentroid:verts count:3]) {
                     
-                    [self setupFixture:&fixture withInfo:fixInfo];
-                    
-                    fixture.shape = &shapeDef;
-                    _body->CreateFixture(&fixture);
+                        b2PolygonShape shapeDef;
+                        
+                        shapeDef.Set(verts, 3);
+                        
+                        b2FixtureDef fixture;
+                        
+                        [self setupFixture:&fixture withInfo:fixInfo];
+                        
+                        fixture.shape = &shapeDef;
+                        _body->CreateFixture(&fixture);
+                    }
                     delete[] verts;
                     
                 }

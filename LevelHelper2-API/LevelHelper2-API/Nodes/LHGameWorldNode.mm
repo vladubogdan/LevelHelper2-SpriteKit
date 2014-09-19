@@ -612,10 +612,13 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     
     for(LHScheduledContactInfo* info in _scheduledBeginContact)
     {
-        [[self scene] didBeginContactBetweenNodeA:[info nodeA]
-                                         andNodeB:[info nodeB]
-                                       atLocation:[info contactPoint]
-                                      withImpulse:[info impulse]];
+        if([info nodeA] && [[info nodeA] parent] && [info nodeB] && [[info nodeB] parent])
+        {
+            [[self scene] didBeginContactBetweenNodeA:[info nodeA]
+                                             andNodeB:[info nodeB]
+                                           atLocation:[info contactPoint]
+                                          withImpulse:[info impulse]];
+        }
     }
     [_scheduledBeginContact removeAllObjects];
     
@@ -623,8 +626,11 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     
     for(LHScheduledContactInfo* info in _scheduledEndContact)
     {
-        [[self scene] didEndContactBetweenNodeA:[info nodeA]
-                                       andNodeB:[info nodeB]];
+        if([info nodeA] && [[info nodeA] parent] && [info nodeB] && [[info nodeB] parent])
+        {
+            [[self scene] didEndContactBetweenNodeA:[info nodeA]
+                                           andNodeB:[info nodeB]];
+        }
     }
     [_scheduledEndContact removeAllObjects];
 
@@ -647,6 +653,10 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
             return;
         }
     }
+    
+    //if this happens the objects have been removed but box2d still calls the box2d body
+    if([nodeA parent] == nil)return;
+    if([nodeB parent] == nil)return;
     
     
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
@@ -674,6 +684,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         }
     }
 
+    //if this happens the objects have been removed but box2d still calls the box2d body
+    if([nodeA parent] == nil)return;
+    if([nodeB parent] == nil)return;
     
     LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
                                                                                nodeB:nodeB
