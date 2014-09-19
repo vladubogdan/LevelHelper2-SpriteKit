@@ -17,6 +17,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -47,6 +49,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -77,6 +81,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -140,6 +146,8 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
@@ -161,6 +169,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>EE51967C-3557-448F-91C6-D1E911CC5CC0</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

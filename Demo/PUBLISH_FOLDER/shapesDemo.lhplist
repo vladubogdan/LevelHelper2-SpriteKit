@@ -17,6 +17,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -53,13 +55,19 @@
 					<key>colorOverlay</key>
 					<string>{{0.195850, 1.000000}, {0.251142, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.158421, 0.251750}</string>
+					<string>{0.758882, 0.650634}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledTexturedShape</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -85,6 +93,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>2</integer>
 						<key>type</key>
@@ -119,6 +131,10 @@
 					<array>
 						<string>DEFAULT</string>
 					</array>
+					<key>tileScale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>tileTexture</key>
+					<false/>
 					<key>triangles</key>
 					<array>
 						<dict>
@@ -166,12 +182,18 @@
 					<string>{{1.000000, 0.446110}, {0.525587, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{0.403862, 0.222800}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledTexturedShape_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -197,6 +219,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>2</integer>
 						<key>type</key>
@@ -283,6 +309,10 @@
 					<array>
 						<string>DEFAULT</string>
 					</array>
+					<key>tileScale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>tileTexture</key>
+					<false/>
 					<key>triangles</key>
 					<array>
 						<dict>
@@ -719,13 +749,19 @@
 					<key>colorOverlay</key>
 					<string>{{0.189393, 0.608737}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.241667, 0.675000}</string>
+					<string>{0.266589, 0.547222}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledTexturedShape_2</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -751,6 +787,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>2</integer>
 						<key>type</key>
@@ -797,6 +837,10 @@
 					<array>
 						<string>DEFAULT</string>
 					</array>
+					<key>tileScale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>tileTexture</key>
+					<false/>
 					<key>triangles</key>
 					<array>
 						<dict>
@@ -933,13 +977,19 @@
 					<key>colorOverlay</key>
 					<string>{{0.189393, 0.608737}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.466667, 0.675000}</string>
+					<string>{0.450769, 0.622981}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledTexturedShape_3</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -965,6 +1015,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>2</integer>
 						<key>type</key>
@@ -1035,6 +1089,10 @@
 					<array>
 						<string>DEFAULT</string>
 					</array>
+					<key>tileScale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>tileTexture</key>
+					<false/>
 					<key>triangles</key>
 					<array>
 						<dict>
@@ -1351,13 +1409,19 @@
 					<key>colorOverlay</key>
 					<string>{{0.399893, 1.000000}, {0.798077, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.766667, 0.225000}</string>
+					<string>{0.726366, 0.288889}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledTexturedShape_5</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -1383,6 +1447,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>2</integer>
 						<key>type</key>
@@ -1427,6 +1495,10 @@
 					<array>
 						<string>DEFAULT</string>
 					</array>
+					<key>tileScale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>tileTexture</key>
+					<false/>
 					<key>triangles</key>
 					<array>
 						<dict>
@@ -1534,12 +1606,18 @@
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{-0.235298, 0.392701}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>mouseJointDummyBody</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -1565,6 +1643,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>0</integer>
 						<key>type</key>
@@ -1594,6 +1676,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -1624,6 +1708,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -1683,10 +1769,19 @@
 			<string>-ipad@2x</string>
 		</dict>
 	</array>
+	<key>gameWorld</key>
+	<dict>
+		<key>960x640</key>
+		<string>{{0.622869, 0.586893}, {0.366864, 0.393668}}</string>
+		<key>general</key>
+		<string>{{0.622869, 0.586893}, {0.366864, 0.393668}}</string>
+	</dict>
 	<key>globalGravityDirection</key>
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
@@ -1698,9 +1793,9 @@
 		<key>2048x1536</key>
 		<string>{{-0.035896, -0.099841}, {1.069376, 1.196854}}</string>
 		<key>960x640</key>
-		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<string>{{0.018540, 0.038518}, {0.954238, 0.927212}}</string>
 		<key>general</key>
-		<string>{{-0.035896, -0.099841}, {1.069376, 1.196854}}</string>
+		<string>{{0.018540, 0.038518}, {0.954238, 0.927212}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -1708,6 +1803,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>71C8A5AD-BE8D-41F2-A9F9-32ED43A27362</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

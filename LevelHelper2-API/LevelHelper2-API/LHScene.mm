@@ -142,6 +142,7 @@
     sceneSize.width = sceneSize.width/ratio;
     sceneSize.height = sceneSize.height/ratio;
     
+    
     SKSceneScaleMode scaleMode = SKSceneScaleModeFill;
     
     if(aspect == 0)//exact fit
@@ -201,6 +202,9 @@
 #else//spritekit
         [[self physicsWorld] setContactDelegate:(id<SKPhysicsContactDelegate>)self];
 #endif
+        
+        //call this to update the views when using camera/parallax
+        [self update:0];
         
     }
     return self;
@@ -705,10 +709,11 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         _loadedAssetsInformations = [[NSMutableDictionary alloc] init];
     }
     NSDictionary* info = [_loadedAssetsInformations objectForKey:assetFileName];
-    if(!info){
-        NSString* path = [[NSBundle mainBundle] pathForResource:assetFileName
+    if(!info){        
+        NSString* path = [[NSBundle mainBundle] pathForResource:[assetFileName lastPathComponent]
                                                          ofType:@"plist"
                                                     inDirectory:[self relativePath]];
+        
         if(path){
             info = [NSDictionary dictionaryWithContentsOfFile:path];
             if(info){
@@ -734,15 +739,24 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     [lateLoadingNodes addObject:node];
 }
 
--(float)currentDeviceRatio{
+-(LHDevice*)currentDevice{
     
     CGSize scrSize = LH_SCREEN_RESOLUTION;
     
     for(LHDevice* dev in supportedDevices){
         CGSize devSize = [dev size];
-        if(CGSizeEqualToSize(scrSize, devSize)){
-            return [dev ratio];
+        if(CGSizeEqualToSize(scrSize, devSize)){// ||
+//           CGSizeEqualToSize(scrSize, CGSizeMake(devSize.height, devSize.width))){
+            return dev;
         }
+    }
+    return nil;
+}
+
+-(float)currentDeviceRatio{
+    LHDevice* dev = [self currentDevice];
+    if(dev){
+        return [dev ratio];
     }
     return 1.0f;
 }
@@ -756,16 +770,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(NSString*)currentDeviceSuffix{
     
-    CGSize scrSize = LH_SCREEN_RESOLUTION;
-    
-    for(LHDevice* dev in supportedDevices){
-        CGSize devSize = [dev size];
-        if(CGSizeEqualToSize(scrSize, devSize)){
-            NSString* suffix = [dev suffix];
-            suffix = [suffix stringByReplacingOccurrencesOfString:@"@2x"
-                                                       withString:@""];
-            return suffix;
-        }
+    LHDevice* dev = [self currentDevice];
+    if(dev){
+        NSString* suffix = [dev suffix];
+        suffix = [suffix stringByReplacingOccurrencesOfString:@"@2x"
+                                                   withString:@""];
+        return suffix;
     }
     return @"";
 }

@@ -43,27 +43,6 @@
                                                                                     node:self];
         
         
-        
-        
-        CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-        CGPoint pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-        
-        NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-        if(devPositions)
-        {            
-            NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                   forSize:LH_SCREEN_RESOLUTION];
-
-            if(unitPosStr){
-                CGPoint unitPos = LHPointFromString(unitPosStr);
-                pos = [LHUtils positionForNode:self
-                                      fromUnit:unitPos];
-            }
-        }
-        
-        [self setPosition:pos];
-        
         _xRatio = [dict floatForKey:@"xRatio"];
         _yRatio = [dict floatForKey:@"yRatio"];
         

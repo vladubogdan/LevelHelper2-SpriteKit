@@ -49,6 +49,18 @@
 {
     LHScene* scene = (LHScene*)[node scene];
     
+//    CGSize sceneSize = scene.frame.size;
+//    
+//    
+//    CGPoint scenePos = CGPointZero;
+//    
+//    scenePos = CGPointMake(sceneSize.width*unitPos.x,
+//                           sceneSize.height * (1-unitPos.y) );
+//    
+//    return scenePos;
+    
+    
+    
     CGSize designSize = [scene designResolutionSize];
     CGPoint offset = [scene designOffset];
     

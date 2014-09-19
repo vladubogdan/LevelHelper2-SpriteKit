@@ -12,10 +12,16 @@
 #import "LHScene.h"
 #import "LHParallaxLayer.h"
 #import "LHAnimation.h"
+#import "SKNode+Transforms.h"
+#import "LHCamera.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(CGPoint)designOffset;
 -(CGSize)designResolutionSize;
+@end
+
+@interface LHCamera (LH_PARALLAX_FOLLOW_CAMERA_CHECK)
+-(BOOL)wasUpdated;
 @end
 
 @implementation LHParallax
@@ -92,14 +98,15 @@
 #pragma mark LHNodeProtocol Required
 LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
-- (void)update:(NSTimeInterval)currentTime delta:(float)dt{
-
-    [_animationProtocolImp update:currentTime delta:dt];
- 
-    
+-(void)transformLayerPositions
+{
     CGPoint parallaxPos = [self position];
     SKNode* followed = [self followedNode];
     if(followed){
+        if([followed isKindOfClass:[LHCamera class]]){
+            if(![(LHCamera*)followed wasUpdated])return;
+        }
+        
         parallaxPos = [followed position];
         
         CGSize winSize = [(LHScene*)[self scene] designResolutionSize];
@@ -108,28 +115,40 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         parallaxPos.y = parallaxPos.y - winSize.height*0.5;
     }
     
+    
     if(CGPointEqualToPoint(lastPosition, CGPointZero)){
         lastPosition = parallaxPos;
     }
+    
     
     if(!CGPointEqualToPoint(lastPosition, parallaxPos))
     {
         CGPoint deltaPos = CGPointMake(parallaxPos.x - lastPosition.x,
                                        parallaxPos.y - lastPosition.y);
-
+        
         for(LHParallaxLayer* nd in [self children])
         {
             if([nd isKindOfClass:[LHParallaxLayer class]])
             {
+                
                 CGPoint curPos = [nd position];
                 
-                CGPoint pt = CGPointMake(curPos.x - deltaPos.x*nd.xRatio,
-                                         curPos.y - deltaPos.y*nd.yRatio);
+                CGPoint pt = CGPointMake(curPos.x - deltaPos.x*(nd.xRatio),
+                                         curPos.y - deltaPos.y*(nd.yRatio));
+                
+                
                 [nd setPosition:pt];
             }
         }
     }
     lastPosition = parallaxPos;
+}
+
+- (void)update:(NSTimeInterval)currentTime delta:(float)dt{
+
+    [_animationProtocolImp update:currentTime delta:dt];
+ 
+    [self transformLayerPositions];
 }
 
 #pragma mark - LHNodeAnimationProtocol Required

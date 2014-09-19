@@ -30,6 +30,10 @@
 #import "LHSceneAssetWithJointsDemo.h"
 #import "LHSceneNodesSubclassingTest.h"
 
+
+//test
+#import "LHSceneNodePositioningTest.h"
+
 @implementation LHSceneDemo
 {
     NSMutableArray* availableScenes;
@@ -53,8 +57,10 @@
         /*INIT YOUR CONTENT HERE*/
         
         availableScenes = [[NSMutableArray alloc] init];
-
         [availableScenes addObject:[LHSceneIntroduction class]];
+        
+//        [availableScenes addObject:[LHSceneNodePositioningTest class]];
+                
         [availableScenes addObject:[LHSceneNodesSubclassingTest class]];
         [availableScenes addObject:[LHSceneCameraDemo class]];
         [availableScenes addObject:[LHSceneCameraFollowDemo class]];
@@ -142,19 +148,20 @@
 
 -(void)handleLabelsAtLocation:(CGPoint)location
 {
-    SKNode *node = [self nodeAtPoint:location];
-    
-    //if fire button touched, bring the rain
-    if ([node.name isEqualToString:@"PreviousLabel"]) {
-        [self previousDemo];
+    NSArray* nodes = [self nodesAtPoint:location];
+    for(SKNode* node in nodes)
+    {
+        //if fire button touched, bring the rain
+        if ([node.name isEqualToString:@"PreviousLabel"]) {
+            [self previousDemo];
+        }
+        if ([node.name isEqualToString:@"RestartLabel"]) {
+            [self restartDemo];
+        }
+        if ([node.name isEqualToString:@"NextLabel"]) {
+            [self nextDemo];
+        }
     }
-    if ([node.name isEqualToString:@"RestartLabel"]) {
-        [self restartDemo];
-    }
-    if ([node.name isEqualToString:@"NextLabel"]) {
-        [self nextDemo];
-    }
-    
 }
 
 #if TARGET_OS_IPHONE

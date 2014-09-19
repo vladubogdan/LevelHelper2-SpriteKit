@@ -74,7 +74,7 @@
         if(linePath){
             CGPathCloseSubpath(linePath);
             self.path = linePath;
-            CGPathRelease(linePath);
+            CGPathRelease(linePath);            
         }
         
         NSArray* triangles = [dict objectForKey:@"triangles"];

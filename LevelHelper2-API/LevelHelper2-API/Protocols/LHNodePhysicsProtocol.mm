@@ -64,6 +64,7 @@
 -(void)dealloc{
     
 #if LH_USE_BOX2D
+    
     if(_body &&
        _body->GetWorld() &&
        _body->GetWorld()->GetContactManager().m_contactListener != NULL)
@@ -73,6 +74,7 @@
         //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
         [self removeBody];
     }
+    _body = NULL;
 #endif
     _node = nil;
     
@@ -993,7 +995,9 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
                     [debugShapeNodes addObject:debugShapeNode];
 #endif
                 
-                [fixBodies addObject:[SKPhysicsBody bodyWithPolygonFromPath:fixPath]];
+                SKPhysicsBody* bd = [SKPhysicsBody bodyWithPolygonFromPath:fixPath];
+                if(bd)
+                    [fixBodies addObject:bd];
                 
                 CGPathRelease(fixPath);
             }

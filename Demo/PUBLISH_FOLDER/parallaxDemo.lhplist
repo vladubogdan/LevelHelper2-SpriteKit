@@ -26,6 +26,8 @@
 					<string>{0.500000, 0.500000}</string>
 					<key>imageFileName</key>
 					<string>sky.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>sky</string>
 					<key>nodeType</key>
@@ -54,6 +56,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -99,6 +103,8 @@
 									<string>{3.445986, -1.337436}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain01_4.png</string>
 									<key>nodeType</key>
@@ -137,6 +143,8 @@
 									<string>{2.473728, -1.335671}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain01_3.png</string>
 									<key>nodeType</key>
@@ -175,6 +183,8 @@
 									<string>{2.191601, -1.282583}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain01_2.png</string>
 									<key>nodeType</key>
@@ -213,6 +223,8 @@
 									<string>{1.357626, -1.393282}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain01_1.png</string>
 									<key>nodeType</key>
@@ -251,6 +263,8 @@
 									<string>{0.769291, -1.266676}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain01.png</string>
 									<key>nodeType</key>
@@ -281,6 +295,8 @@
 							</array>
 							<key>generalPosition</key>
 							<string>{0.000000, 0.000000}</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>Untitled_1</string>
 							<key>nodeType</key>
@@ -314,6 +330,8 @@
 									<string>{0.601098, -1.167188}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain03.png</string>
 									<key>nodeType</key>
@@ -352,6 +370,8 @@
 									<string>{1.728971, -1.186283}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain03_1.png</string>
 									<key>nodeType</key>
@@ -390,6 +410,8 @@
 									<string>{2.769748, -1.171277}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain03_2.png</string>
 									<key>nodeType</key>
@@ -428,6 +450,8 @@
 									<string>{2.286396, -1.177078}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain03_3.png</string>
 									<key>nodeType</key>
@@ -466,6 +490,8 @@
 									<string>{3.682396, -1.180142}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain03_4.png</string>
 									<key>nodeType</key>
@@ -496,6 +522,8 @@
 							</array>
 							<key>generalPosition</key>
 							<string>{0.000000, 0.000000}</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>Untitled_2</string>
 							<key>nodeType</key>
@@ -529,6 +557,8 @@
 									<string>{0.995551, -1.093892}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02.png</string>
 									<key>nodeType</key>
@@ -567,6 +597,8 @@
 									<string>{1.847786, -1.094898}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_1.png</string>
 									<key>nodeType</key>
@@ -605,6 +637,8 @@
 									<string>{2.614037, -1.094907}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_2.png</string>
 									<key>nodeType</key>
@@ -643,6 +677,8 @@
 									<string>{3.296286, -1.096856}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_3.png</string>
 									<key>nodeType</key>
@@ -681,6 +717,8 @@
 									<string>{3.999516, -1.114928}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_4.png</string>
 									<key>nodeType</key>
@@ -719,6 +757,8 @@
 									<string>{5.332913, -1.160387}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_6.png</string>
 									<key>nodeType</key>
@@ -757,6 +797,8 @@
 									<string>{5.982913, -1.135387}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_7.png</string>
 									<key>nodeType</key>
@@ -795,6 +837,8 @@
 									<string>{4.535926, -1.128442}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_5.png</string>
 									<key>nodeType</key>
@@ -833,6 +877,8 @@
 									<string>{0.412050, -1.063774}</string>
 									<key>imageFileName</key>
 									<string>platformer.png</string>
+									<key>invisibleInEditor</key>
+									<false/>
 									<key>name</key>
 									<string>mountain02_8.png</string>
 									<key>nodeType</key>
@@ -863,6 +909,8 @@
 							</array>
 							<key>generalPosition</key>
 							<string>{0.000000, 0.000000}</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>Untitled</string>
 							<key>nodeType</key>
@@ -887,6 +935,8 @@
 					<string>577900CE-4DB1-4146-B614-0346AA722564</string>
 					<key>generalPosition</key>
 					<string>{-0.366246, 1.985387}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledParallax</string>
 					<key>nodeType</key>
@@ -908,7 +958,9 @@
 					<key>followedNodeUUID</key>
 					<string>469BD684-4FBA-4B6D-B622-75B24641579B</string>
 					<key>generalPosition</key>
-					<string>{0.505203, 0.544088}</string>
+					<string>{0.497018, 0.524591}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledCamera</string>
 					<key>nodeType</key>
@@ -929,18 +981,85 @@
 					<real>255</real>
 					<key>anchor</key>
 					<string>{0.500000, 0.500000}</string>
+					<key>closed</key>
+					<false/>
+					<key>colorOverlay</key>
+					<string>{{0.000000, 0.000000}, {0.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.404628, 0.213930}</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>name</key>
+					<string>UntitledBezier_1</string>
+					<key>nodeType</key>
+					<string>LHBezier</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>points</key>
+					<array>
+						<dict>
+							<key>ctrl1</key>
+							<string>{-95.598404, 63.564483}</string>
+							<key>ctrl2</key>
+							<string>{-95.598404, 63.564483}</string>
+							<key>hasCtrl1</key>
+							<true/>
+							<key>hasCtrl2</key>
+							<false/>
+							<key>mainPt</key>
+							<string>{-95.598404, -36.435517}</string>
+						</dict>
+						<dict>
+							<key>ctrl1</key>
+							<string>{95.598398, 136.435515}</string>
+							<key>ctrl2</key>
+							<string>{95.598398, 136.435515}</string>
+							<key>hasCtrl1</key>
+							<false/>
+							<key>hasCtrl2</key>
+							<true/>
+							<key>mainPt</key>
+							<string>{95.598398, 36.435515}</string>
+						</dict>
+					</array>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.016774, 1.000000}</string>
+					<key>size</key>
+					<string>{191.196808, 72.871033}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>5ED017F7-1E04-4ADB-B813-923810106428</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{0.183333, 0.075000}</string>
 					<key>imageFileName</key>
 					<string>carParts.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>carTyre</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -966,6 +1085,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -1014,6 +1137,8 @@
 							<string>{4.916667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_35</string>
 							<key>nodeType</key>
@@ -1052,6 +1177,8 @@
 							<string>{4.783333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_34</string>
 							<key>nodeType</key>
@@ -1090,6 +1217,8 @@
 							<string>{4.650000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_33</string>
 							<key>nodeType</key>
@@ -1128,6 +1257,8 @@
 							<string>{4.516667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_32</string>
 							<key>nodeType</key>
@@ -1166,6 +1297,8 @@
 							<string>{4.383333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_31</string>
 							<key>nodeType</key>
@@ -1204,6 +1337,8 @@
 							<string>{4.250000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_30</string>
 							<key>nodeType</key>
@@ -1242,6 +1377,8 @@
 							<string>{4.116667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_29</string>
 							<key>nodeType</key>
@@ -1280,6 +1417,8 @@
 							<string>{3.983333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_28</string>
 							<key>nodeType</key>
@@ -1318,6 +1457,8 @@
 							<string>{3.850000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_27</string>
 							<key>nodeType</key>
@@ -1356,6 +1497,8 @@
 							<string>{3.716667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_26</string>
 							<key>nodeType</key>
@@ -1394,6 +1537,8 @@
 							<string>{3.583333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_25</string>
 							<key>nodeType</key>
@@ -1432,6 +1577,8 @@
 							<string>{3.450000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_24</string>
 							<key>nodeType</key>
@@ -1470,6 +1617,8 @@
 							<string>{3.316667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_23</string>
 							<key>nodeType</key>
@@ -1508,6 +1657,8 @@
 							<string>{3.183333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_22</string>
 							<key>nodeType</key>
@@ -1546,6 +1697,8 @@
 							<string>{3.050000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_21</string>
 							<key>nodeType</key>
@@ -1584,6 +1737,8 @@
 							<string>{2.916667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_20</string>
 							<key>nodeType</key>
@@ -1622,6 +1777,8 @@
 							<string>{2.783333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_19</string>
 							<key>nodeType</key>
@@ -1660,6 +1817,8 @@
 							<string>{2.650000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_18</string>
 							<key>nodeType</key>
@@ -1698,6 +1857,8 @@
 							<string>{2.516667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_17</string>
 							<key>nodeType</key>
@@ -1736,6 +1897,8 @@
 							<string>{2.383333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_16</string>
 							<key>nodeType</key>
@@ -1774,6 +1937,8 @@
 							<string>{2.250000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_15</string>
 							<key>nodeType</key>
@@ -1812,6 +1977,8 @@
 							<string>{2.116667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_14</string>
 							<key>nodeType</key>
@@ -1850,6 +2017,8 @@
 							<string>{1.983333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_13</string>
 							<key>nodeType</key>
@@ -1888,6 +2057,8 @@
 							<string>{1.850000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_12</string>
 							<key>nodeType</key>
@@ -1926,6 +2097,8 @@
 							<string>{1.716667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_11</string>
 							<key>nodeType</key>
@@ -1964,6 +2137,8 @@
 							<string>{1.583333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_10</string>
 							<key>nodeType</key>
@@ -2002,6 +2177,8 @@
 							<string>{1.450000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_9</string>
 							<key>nodeType</key>
@@ -2040,6 +2217,8 @@
 							<string>{1.316667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_8</string>
 							<key>nodeType</key>
@@ -2078,6 +2257,8 @@
 							<string>{1.183333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_7</string>
 							<key>nodeType</key>
@@ -2116,6 +2297,8 @@
 							<string>{1.050000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_6</string>
 							<key>nodeType</key>
@@ -2154,6 +2337,8 @@
 							<string>{0.916667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_5</string>
 							<key>nodeType</key>
@@ -2192,6 +2377,8 @@
 							<string>{0.783333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_4</string>
 							<key>nodeType</key>
@@ -2230,6 +2417,8 @@
 							<string>{0.650000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_3</string>
 							<key>nodeType</key>
@@ -2268,6 +2457,8 @@
 							<string>{0.516667, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_2</string>
 							<key>nodeType</key>
@@ -2306,6 +2497,8 @@
 							<string>{0.383333, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_1</string>
 							<key>nodeType</key>
@@ -2344,6 +2537,8 @@
 							<string>{0.250000, -0.300000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick</string>
 							<key>nodeType</key>
@@ -2376,6 +2571,8 @@
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{-0.283333, 1.400000}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>bricks</string>
 					<key>nodeType</key>
@@ -2408,12 +2605,18 @@
 					<string>{{0.000000, 0.000000}, {0.000000, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{2.211656, 0.433581}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>UntitledBezier</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -2439,6 +2642,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>3</integer>
 						<key>type</key>
@@ -2495,6 +2702,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -2525,6 +2734,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -2601,6 +2812,8 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
@@ -2622,6 +2835,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>09CE209A-AFCD-4011-8C42-5659F3750370</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

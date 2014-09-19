@@ -25,12 +25,16 @@
     LHNodeProtocolImpl*         _nodeProtocolImp;
     LHNodeAnimationProtocolImp* _animationProtocolImp;
     
-    
+    BOOL wasUpdated;
     BOOL _active;
     BOOL _restricted;
     
     NSString* _followedNodeUUID;
     __weak SKNode<LHNodeAnimationProtocol, LHNodeProtocol>* _followedNode;
+}
+
+-(BOOL)wasUpdated{
+    return wasUpdated;
 }
 
 -(void)dealloc{
@@ -82,7 +86,6 @@
                              winSize.height*0.5 - newPos.y);
         
         [super setPosition:[self transformToRestrictivePosition:newPos]];
-
     }
     
     return self;
@@ -189,6 +192,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [self setPosition:pt];
     }
     [self setSceneView];
+    
+    wasUpdated = true;
 }
 
 #pragma mark - LHNodeAnimationProtocol Required

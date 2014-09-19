@@ -27,7 +27,9 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.486667, 0.386596}</string>
+					<string>{0.822325, 0.689418}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>OfficerAsset</string>
 					<key>nodeType</key>
@@ -39,7 +41,7 @@
 					<key>scale</key>
 					<string>{1.000000, 1.000000}</string>
 					<key>size</key>
-					<string>{328.139709, 456.258118}</string>
+					<string>{222.008926, 368.550903}</string>
 					<key>tags</key>
 					<array>
 						<string>DEFAULT</string>
@@ -54,6 +56,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -84,6 +88,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -147,10 +153,18 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
 	<dict>
+		<key>1024x768</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>1136x640</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>2048x1536</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>960x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
@@ -164,7 +178,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>13DA8B67-EA33-4FD6-8C20-696DED8901A9</key>
+		<key>114D3E6A-520E-46E7-8FAE-86D7F6C3E280</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>

@@ -39,7 +39,7 @@ float randomFloat(float Min, float Max){
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
+    CGPoint location = [touch locationInNode:[self gameWorldNode]];
     
     [self createAssetAtLocation:location];
     

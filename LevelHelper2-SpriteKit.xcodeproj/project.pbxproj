@@ -119,6 +119,9 @@
 		6EC5554F19AB69E600CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5554819AB69E600CF0760 /* MyCustomNode.m */; };
 		6EC5555019AB69E600CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5554819AB69E600CF0760 /* MyCustomNode.m */; };
 		6EC5555119AB69E600CF0760 /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5554819AB69E600CF0760 /* MyCustomNode.m */; };
+		6EE7C27519C163E700BCC519 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7C27419C163E700BCC519 /* LHSceneNodePositioningTest.mm */; };
+		6EE7C27619C163E700BCC519 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7C27419C163E700BCC519 /* LHSceneNodePositioningTest.mm */; };
+		6EE7C27719C163E700BCC519 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7C27419C163E700BCC519 /* LHSceneNodePositioningTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +263,8 @@
 		6EC5554619AB69E600CF0760 /* LHSceneNodesSubclassingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneNodesSubclassingTest.mm; sourceTree = "<group>"; };
 		6EC5554719AB69E600CF0760 /* MyCustomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomNode.h; sourceTree = "<group>"; };
 		6EC5554819AB69E600CF0760 /* MyCustomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomNode.m; sourceTree = "<group>"; };
+		6EE7C27319C163E700BCC519 /* LHSceneNodePositioningTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneNodePositioningTest.h; sourceTree = "<group>"; };
+		6EE7C27419C163E700BCC519 /* LHSceneNodePositioningTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneNodePositioningTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +318,7 @@
 		6E03796F19A7BDFA00B70D4A /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				6EE7C27019C163D900BCC519 /* Tests */,
 				6E03798019A7BDFA00B70D4A /* LHSceneDemo.h */,
 				6E03798119A7BDFA00B70D4A /* LHSceneDemo.mm */,
 				6E03797019A7BDFA00B70D4A /* LHSceneAssetsDemo.h */,
@@ -459,6 +465,15 @@
 				6E89FD04192E0A390040478F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EE7C27019C163D900BCC519 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6EE7C27319C163E700BCC519 /* LHSceneNodePositioningTest.h */,
+				6EE7C27419C163E700BCC519 /* LHSceneNodePositioningTest.mm */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,6 +674,7 @@
 				6E0379B719A7BDFA00B70D4A /* LHSceneIntroduction.mm in Sources */,
 				6E0379D219A7BDFA00B70D4A /* LHSceneWaterAreaDemo.mm in Sources */,
 				6EC5555019AB69E600CF0760 /* MyCustomNode.m in Sources */,
+				6EE7C27619C163E700BCC519 /* LHSceneNodePositioningTest.mm in Sources */,
 				6E0379AB19A7BDFA00B70D4A /* LHSceneCollisionDemo.mm in Sources */,
 				6E03799919A7BDFA00B70D4A /* LHSceneAssetsDemo.mm in Sources */,
 				6EC5554D19AB69E600CF0760 /* LHSceneNodesSubclassingTest.mm in Sources */,
@@ -691,6 +707,7 @@
 				6E03799D19A7BDFA00B70D4A /* LHSceneAssetWithJointsDemo.mm in Sources */,
 				6E0379BE19A7BDFA00B70D4A /* LHSceneParallaxDemo.mm in Sources */,
 				6E0379B219A7BDFA00B70D4A /* LHSceneDemo.mm in Sources */,
+				6EE7C27719C163E700BCC519 /* LHSceneNodePositioningTest.mm in Sources */,
 				6E0379D319A7BDFA00B70D4A /* LHSceneWaterAreaDemo.mm in Sources */,
 				6E0379A619A7BDFA00B70D4A /* LHSceneCameraFollowDemo.mm in Sources */,
 				6E89FD09192E0A390040478F /* AppDelegate.m in Sources */,
@@ -725,6 +742,7 @@
 				6E03799B19A7BDFA00B70D4A /* LHSceneAssetWithJointsDemo.mm in Sources */,
 				6E0379BC19A7BDFA00B70D4A /* LHSceneParallaxDemo.mm in Sources */,
 				6E0379B019A7BDFA00B70D4A /* LHSceneDemo.mm in Sources */,
+				6EE7C27519C163E700BCC519 /* LHSceneNodePositioningTest.mm in Sources */,
 				6E0379D119A7BDFA00B70D4A /* LHSceneWaterAreaDemo.mm in Sources */,
 				6E0379A419A7BDFA00B70D4A /* LHSceneCameraFollowDemo.mm in Sources */,
 				6EBEA31E1959BFD000726044 /* AppDelegate.m in Sources */,
@@ -868,10 +886,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -906,6 +921,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

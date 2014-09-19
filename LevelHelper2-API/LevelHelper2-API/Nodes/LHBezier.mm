@@ -55,9 +55,16 @@ static float MAX_BEZIER_STEPS = 24.0f;
         self.strokeColor = [dict colorForKey:@"colorOverlay"];
         
         
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if TARGET_IPHONE_SIMULATOR
+        NSLog(@"Warning: Beziers drawing does not work in iOS 8 when using Simulator.");
+#endif
+#endif
+      
+        
         NSArray* points = [dict objectForKey:@"points"];
         BOOL closed = [dict boolForKey:@"closed"];
-        
+                
         CGMutablePathRef linePath = nil;
         NSDictionary* previousPointDict = nil;
         for(NSDictionary* pointDict in points)
@@ -87,6 +94,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
                         linePath = CGPathCreateMutable();
                         CGPathMoveToPoint(linePath, nil, vPoint.x, -vPoint.y);
                         [_linePoints addObject:LHValueWithCGPoint(CGPointMake(vPoint.x, -vPoint.y))];
+                        
                     }
                     else{
                         CGPathAddLineToPoint(linePath, nil, vPoint.x, -vPoint.y);
@@ -127,13 +135,13 @@ static float MAX_BEZIER_STEPS = 24.0f;
                 }
             }
         }
-        
+                
         if(linePath){
             self.path = linePath;
+            self.lineWidth = 1.0f;
             CGPathRelease(linePath);
         }
 
-        
         //scale is handled by physics protocol because of diferences between spritekit and box2d handling
         
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict

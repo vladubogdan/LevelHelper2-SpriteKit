@@ -100,11 +100,15 @@
         
         
         
-        if([dict objectForKey:@"generalPosition"])
+        if([dict objectForKey:@"generalPosition"]&&
+           ![_node isKindOfClass:[LHUINode class]] &&
+           ![_node isKindOfClass:[LHBackUINode class]] &&
+           ![_node isKindOfClass:[LHGameWorldNode class]])
         {
             CGPoint unitPos = [dict pointForKey:@"generalPosition"];
             CGPoint pos = [LHUtils positionForNode:_node
                                           fromUnit:unitPos];
+            
             
             NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
             if(devPositions)
@@ -112,6 +116,7 @@
                 
                 NSString* unitPosStr = [LHUtils devicePosition:devPositions
                                                        forSize:LH_SCREEN_RESOLUTION];
+                
                 if(unitPosStr){
                     CGPoint unitPos = LHPointFromString(unitPosStr);
                     pos = [LHUtils positionForNode:_node
