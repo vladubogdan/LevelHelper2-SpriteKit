@@ -59,6 +59,7 @@
     CGPoint designOffset;
     
     NSString* relativePath;
+    NSString* fileName;
     
     CGPoint ropeJointsCutStartPt;
     
@@ -89,6 +90,7 @@
     
     LH_SAFE_RELEASE(lateLoadingNodes);
     LH_SAFE_RELEASE(relativePath);
+    LH_SAFE_RELEASE(fileName);
     LH_SAFE_RELEASE(loadedTextures);
     LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
@@ -170,6 +172,7 @@
     if (self = [super initWithSize:sceneSize])
     {
         relativePath = [[NSString alloc] initWithString:[levelPlistFile stringByDeletingLastPathComponent]];
+        fileName = [[NSString alloc] initWithString:[[levelPlistFile lastPathComponent] stringByDeletingPathExtension]];
         
         designResolutionSize = designResolution;
         designOffset         = childrenOffset;
@@ -517,6 +520,10 @@
 
 -(NSString*)relativePath{
     return relativePath;
+}
+
+-(NSString*)fileName{
+    return fileName;
 }
 
 -(LHScene*)scene{

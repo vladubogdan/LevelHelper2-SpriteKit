@@ -116,6 +116,13 @@
  */
 -(NSString*)relativePath;
 
+/**
+ Returns the lhplist file name that was used to load this scene information. String does not contain extension.
+ */
+-(NSString*)fileName;
+
+
+
 #pragma mark- NODES SUBCLASSING
 /**
  Overwrite this method to return your own class type for specific nodes.
