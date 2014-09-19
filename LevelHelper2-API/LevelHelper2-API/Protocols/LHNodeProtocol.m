@@ -41,6 +41,7 @@
 
 @implementation LHNodeProtocolImpl
 {
+    BOOL b2WorldDirty;
     __unsafe_unretained SKNode* _node;
     
     NSString*           _uuid;
@@ -65,6 +66,7 @@
     
     if(self = [super init])
     {
+        b2WorldDirty = false;
         _node = nd;
         
         [_node setName:[dict objectForKey:@"name"]];
@@ -483,5 +485,19 @@
     }
 }
 
+-(BOOL)isB2WorldDirty{
+    return b2WorldDirty;
+}
+-(void)markAsB2WorldDirty
+{
+    b2WorldDirty = true;
+    
+    for(SKNode* child in [_node children])
+    {
+        if([child conformsToProtocol:@protocol(LHNodeProtocol)]){
+            [(LHNode*)child markAsB2WorldDirty];
+        }
+    }
+}
 
 @end

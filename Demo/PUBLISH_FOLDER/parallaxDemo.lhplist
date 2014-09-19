@@ -981,67 +981,6 @@
 					<real>255</real>
 					<key>anchor</key>
 					<string>{0.500000, 0.500000}</string>
-					<key>closed</key>
-					<false/>
-					<key>colorOverlay</key>
-					<string>{{0.000000, 0.000000}, {0.000000, 1.000000}}</string>
-					<key>generalPosition</key>
-					<string>{0.404628, 0.213930}</string>
-					<key>invisibleInEditor</key>
-					<false/>
-					<key>name</key>
-					<string>UntitledBezier_1</string>
-					<key>nodeType</key>
-					<string>LHBezier</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>points</key>
-					<array>
-						<dict>
-							<key>ctrl1</key>
-							<string>{-95.598404, 63.564483}</string>
-							<key>ctrl2</key>
-							<string>{-95.598404, 63.564483}</string>
-							<key>hasCtrl1</key>
-							<true/>
-							<key>hasCtrl2</key>
-							<false/>
-							<key>mainPt</key>
-							<string>{-95.598404, -36.435517}</string>
-						</dict>
-						<dict>
-							<key>ctrl1</key>
-							<string>{95.598398, 136.435515}</string>
-							<key>ctrl2</key>
-							<string>{95.598398, 136.435515}</string>
-							<key>hasCtrl1</key>
-							<false/>
-							<key>hasCtrl2</key>
-							<true/>
-							<key>mainPt</key>
-							<string>{95.598398, 36.435515}</string>
-						</dict>
-					</array>
-					<key>rotation</key>
-					<real>0.0</real>
-					<key>scale</key>
-					<string>{1.016774, 1.000000}</string>
-					<key>size</key>
-					<string>{191.196808, 72.871033}</string>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>5ED017F7-1E04-4ADB-B813-923810106428</string>
-					<key>zOrder</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>alpha</key>
-					<real>255</real>
-					<key>anchor</key>
-					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
@@ -2837,7 +2776,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>09CE209A-AFCD-4011-8C42-5659F3750370</key>
+		<key>B0B753E8-6F4C-4173-8F7A-FA9EACA8C510</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>

@@ -64,10 +64,11 @@
 -(void)dealloc{
     
 #if LH_USE_BOX2D
-    
-    if(_body &&
-       _body->GetWorld() &&
-       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
+
+    if(_body && _node && [_node respondsToSelector:@selector(isB2WorldDirty)] && ![(LHNode*)_node isB2WorldDirty])
+//    if(_body &&
+//       _body->GetWorld() &&
+//       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
     {
         //do not remove the body if the scene is deallocing as the box2d world will be deleted
         //so we dont need to do this manualy

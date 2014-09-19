@@ -29,9 +29,10 @@
 
 -(void)dealloc{
     LH_SAFE_RELEASE(_tracedFixtures);
+    LH_SAFE_RELEASE(_physicsProtocolImp);
     LH_SAFE_RELEASE(_nodeProtocolImp);
     LH_SAFE_RELEASE(_animationProtocolImp);
-    LH_SAFE_RELEASE(_physicsProtocolImp);
+
     
     LH_SUPER_DEALLOC();
 }

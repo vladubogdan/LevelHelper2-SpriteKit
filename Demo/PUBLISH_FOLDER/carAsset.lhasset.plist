@@ -38,7 +38,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>EE51967C-3557-448F-91C6-D1E911CC5CC0</string>
+				<string>B0B753E8-6F4C-4173-8F7A-FA9EACA8C510</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -72,7 +72,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>57EB469A-8A85-4055-AA3E-6CBFEE2F3DEE</string>
+			<string>07EE0701-7948-438E-B282-DBD7338661AD</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -114,7 +114,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>57EB469A-8A85-4055-AA3E-6CBFEE2F3DEE</string>
+			<string>07EE0701-7948-438E-B282-DBD7338661AD</string>
 			<key>relativePosA</key>
 			<string>{0.000000, 0.000000}</string>
 			<key>spriteAUUID</key>
@@ -150,7 +150,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>57EB469A-8A85-4055-AA3E-6CBFEE2F3DEE</string>
+			<string>07EE0701-7948-438E-B282-DBD7338661AD</string>
 			<key>relativePosA</key>
 			<string>{0.000000, 0.000000}</string>
 			<key>spriteAUUID</key>
@@ -226,7 +226,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>57EB469A-8A85-4055-AA3E-6CBFEE2F3DEE</string>
+			<string>07EE0701-7948-438E-B282-DBD7338661AD</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -308,7 +308,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>57EB469A-8A85-4055-AA3E-6CBFEE2F3DEE</string>
+			<string>07EE0701-7948-438E-B282-DBD7338661AD</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -338,11 +338,11 @@
 	<key>invisibleInEditor</key>
 	<false/>
 	<key>name</key>
-	<string>Untitled</string>
+	<string>Untitled_3</string>
 	<key>nodeType</key>
 	<string>LHAsset</string>
 	<key>parentUUID</key>
-	<string>44CB97E1-BB34-4A58-A366-2C1CE46F49D9</string>
+	<string>063A15BD-E950-463D-9B52-96583AE42BB2</string>
 	<key>rotation</key>
 	<real>0.0</real>
 	<key>scale</key>
@@ -355,7 +355,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>EE51967C-3557-448F-91C6-D1E911CC5CC0</key>
+		<key>B0B753E8-6F4C-4173-8F7A-FA9EACA8C510</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>
@@ -415,7 +415,7 @@
 		</array>
 	</dict>
 	<key>uuid</key>
-	<string>57EB469A-8A85-4055-AA3E-6CBFEE2F3DEE</string>
+	<string>07EE0701-7948-438E-B282-DBD7338661AD</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>

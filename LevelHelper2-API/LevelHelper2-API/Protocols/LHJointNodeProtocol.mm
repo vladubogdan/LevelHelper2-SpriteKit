@@ -13,6 +13,7 @@
 #import "LHGameWorldNode.h"
 #import "LHConfig.h"
 #import "SKNode+Transforms.h"
+#import "LHNode.h"
 
 #if LH_USE_BOX2D
 #include "Box2d/Box2D.h"
@@ -47,10 +48,11 @@
 -(void)dealloc{
 
 #if LH_USE_BOX2D
-    if(_joint &&
-       _joint->GetBodyA() &&
-       _joint->GetBodyA()->GetWorld() &&
-       _joint->GetBodyA()->GetWorld()->GetContactManager().m_contactListener != NULL)
+    if(_joint && _node && [_node respondsToSelector:@selector(isB2WorldDirty)] && ![(LHNode*)_node isB2WorldDirty])
+//    if(_joint &&
+//       _joint->GetBodyA() &&
+//       _joint->GetBodyA()->GetWorld() &&
+//       _joint->GetBodyA()->GetWorld()->GetContactManager().m_contactListener != NULL)
     {
         //do not remove the joint if the scene is deallocing as the box2d world will be deleted
         //so we dont need to do this manualy

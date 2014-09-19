@@ -11,7 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
-
+#import "LHNode.h"
 #import "SKNode+Transforms.h"
 
 
@@ -457,15 +457,22 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
     LH_SAFE_RELEASE(_nodeProtocolImp);
     
 #if LH_USE_BOX2D
+    
+    for(SKNode* child in [self children]){
+        if([child conformsToProtocol:@protocol(LHNodeProtocol)]){
+            [(LHNode*)child markAsB2WorldDirty];
+        }
+    }
+    
     LH_SAFE_RELEASE(_scheduledBeginContact);
     LH_SAFE_RELEASE(_scheduledEndContact);
     
     //we need to first destroy all children and then destroy box2d world
+    [self removeAllActions];
     [self removeAllChildren];
     
     LH_SAFE_DELETE(_box2dWorld);
 #endif
-
     
     LH_SUPER_DEALLOC();
 }
