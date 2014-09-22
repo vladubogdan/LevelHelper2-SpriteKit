@@ -170,14 +170,21 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         
         b2PrismaticJointDef jointDef;
         
-        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(_axis.x,_axis.y));
+        jointDef.Initialize(bodyA, bodyB, posA, b2Vec2(-_axis.x,_axis.y));
         
         jointDef.enableLimit = _enableLimit;
         jointDef.enableMotor = _enableMotor;
         jointDef.maxMotorForce = _maxMotorForce;
-        jointDef.motorSpeed = LH_DEGREES_TO_RADIANS(_motorSpeed);
-        jointDef.upperTranslation = [scene metersFromValue:_upperTranslation];
-        jointDef.lowerTranslation = [scene metersFromValue:_lowerTranslation];
+        jointDef.motorSpeed = _motorSpeed;
+
+        if(_lowerTranslation < _upperTranslation){
+            jointDef.upperTranslation = [scene metersFromValue:_upperTranslation];
+            jointDef.lowerTranslation = [scene metersFromValue:_lowerTranslation];
+        }
+        else{
+            jointDef.upperTranslation = [scene metersFromValue:_lowerTranslation];
+            jointDef.lowerTranslation = [scene metersFromValue:_upperTranslation];
+        }
         
         
         jointDef.collideConnected = [_jointProtocolImp collideConnected];
@@ -195,11 +202,19 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
             SKPhysicsJointSliding* joint = [SKPhysicsJointSliding jointWithBodyA:nodeA.physicsBody
                                                                            bodyB:nodeB.physicsBody
                                                                           anchor:anchorA
-                                                                            axis:CGVectorMake(_axis.x, _axis.y)];
+                                                                            axis:CGVectorMake(-_axis.x, _axis.y)];
             
             joint.shouldEnableLimits = _enableLimit;
-            joint.lowerDistanceLimit = _lowerTranslation;
-            joint.upperDistanceLimit = _upperTranslation;
+            
+            if(_lowerTranslation < _upperTranslation){
+                joint.lowerDistanceLimit = _lowerTranslation;
+                joint.upperDistanceLimit = _upperTranslation;
+                
+            }
+            else{
+                joint.lowerDistanceLimit = _upperTranslation;
+                joint.upperDistanceLimit = _lowerTranslation;
+            }
             
             [[self scene].physicsWorld addJoint:joint];
             [_jointProtocolImp setJoint:joint];

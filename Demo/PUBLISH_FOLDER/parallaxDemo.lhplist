@@ -2719,6 +2719,22 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6@2x</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
 			<string>{1024.000000, 768.000000}</string>
@@ -2740,6 +2756,8 @@
 		<string>{{-0.032263, -0.041055}, {4.506639, 1.188179}}</string>
 		<key>1136x640</key>
 		<string>{{-0.069894, -0.001023}, {4.544067, 1.148147}}</string>
+		<key>1334x750</key>
+		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
 		<key>2048x1536</key>
 		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
 		<key>960x640</key>
@@ -2761,6 +2779,8 @@
 		<string>{{-0.062986, -0.178121}, {4.537410, 1.292211}}</string>
 		<key>1136x640</key>
 		<string>{{-0.062986, -0.178121}, {4.537410, 1.292211}}</string>
+		<key>1334x750</key>
+		<string>{{-0.045510, -0.136929}, {4.519935, 1.251019}}</string>
 		<key>2048x1536</key>
 		<string>{{-0.045510, -0.136929}, {4.519935, 1.251019}}</string>
 		<key>960x640</key>
@@ -2774,67 +2794,6 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
-	<key>tracedFixtures</key>
-	<dict>
-		<key>B0B753E8-6F4C-4173-8F7A-FA9EACA8C510</key>
-		<array>
-			<array>
-				<string>{-39.75, -30.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-40.25, -27.75}</string>
-			</array>
-			<array>
-				<string>{11.25, -30.25}</string>
-				<string>{11.25, -28.25}</string>
-				<string>{-35.75, -33.75}</string>
-				<string>{6.75, -33.75}</string>
-				<string>{9.75, -32.25}</string>
-			</array>
-			<array>
-				<string>{83.25, 11.25}</string>
-				<string>{83.25, 28.75}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{43.25, -12.75}</string>
-				<string>{53.25, -9.75}</string>
-				<string>{64.75, -4.25}</string>
-				<string>{76.25, 4.25}</string>
-			</array>
-			<array>
-				<string>{-82.75, 30.75}</string>
-				<string>{-83.75, 27.75}</string>
-				<string>{-83.75, -0.75}</string>
-				<string>{-82.75, -3.25}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{80.25, 32.75}</string>
-				<string>{-79.25, 33.25}</string>
-				<string>{-80.75, 32.75}</string>
-			</array>
-			<array>
-				<string>{82.75, 30.25}</string>
-				<string>{80.25, 32.75}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-35.75, -33.75}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{83.25, 28.75}</string>
-			</array>
-			<array>
-				<string>{11.25, -28.25}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{-35.75, -33.75}</string>
-			</array>
-			<array>
-				<string>{-53.75, -15.75}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{-82.75, -3.25}</string>
-			</array>
-			<array>
-				<string>{-40.25, -27.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-45.75, -15.75}</string>
-			</array>
-		</array>
-	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

@@ -39,6 +39,10 @@
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 @end
 
+@interface LHGameWorldNode (LH_PHYSICS_PROTOCOL_CONTACT_REMOVAL)
+-(void)removeScheduledContactsWithNode:(SKNode*)node;
+@end
+
 @interface LHAsset (LH_ASSET_NODES_PRIVATE_UTILS)
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid;
 @end
@@ -66,10 +70,19 @@
 #if LH_USE_BOX2D
 
     if(_body && _node && [_node respondsToSelector:@selector(isB2WorldDirty)] && ![(LHNode*)_node isB2WorldDirty])
-//    if(_body &&
-//       _body->GetWorld() &&
-//       _body->GetWorld()->GetContactManager().m_contactListener != NULL)
     {
+        //node at this point may not have parent so no scene also
+        LHBox2dWorld* world = (LHBox2dWorld*)_body->GetWorld();
+        if(world){
+            LHScene* scene = (LHScene*)LH_ID_BRIDGE_CAST(world->_scene);
+            if(scene){
+                LHGameWorldNode* gw = [scene gameWorldNode];
+                if(gw){
+                    [gw removeScheduledContactsWithNode:_node];
+                }
+            }
+        }
+        
         //do not remove the body if the scene is deallocing as the box2d world will be deleted
         //so we dont need to do this manualy
         //in some cases the nodes will be retained and removed after the box2d world is already deleted and we may have a crash
@@ -174,6 +187,18 @@
 
         _body->SetSleepingAllowed([dict boolForKey:@"allowSleep"]);
         _body->SetBullet([dict boolForKey:@"bullet"]);
+        
+        if([dict objectForKey:@"angularDamping"])//all this properties were added in the same moment
+        {
+            _body->SetAngularDamping([dict floatForKey:@"angularDamping"]);
+            
+            _body->SetAngularVelocity([dict floatForKey:@"angularVelocity" ]);//radians/second.
+            
+            _body->SetLinearDamping([dict floatForKey:@"linearDamping"]);
+            
+            CGPoint linearVel = [dict pointForKey:@"linearVelocity"];
+            _body->SetLinearVelocity(b2Vec2(linearVel.x,linearVel.y));
+        }
         
         CGSize sizet = CGSizeMake(16, 16);
         if([_node respondsToSelector:@selector(size)]){
@@ -1044,6 +1069,15 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
             
             if([dict intForKey:@"gravityScale"] == 0){
                 _node.physicsBody.affectedByGravity = NO;
+            }
+            
+            if([dict objectForKey:@"angularDamping"])//all this properties were added in the same moment
+            {
+                _node.physicsBody.angularDamping = [dict floatForKey:@"angularDamping"];
+                _node.physicsBody.angularVelocity = [dict floatForKey:@"angularVelocity"];
+                _node.physicsBody.linearDamping = [dict floatForKey:@"linearDamping"];
+                CGPoint linearVel = [dict pointForKey:@"linearVelocity"];
+                _node.physicsBody.velocity = CGVectorMake(linearVel.x, linearVel.y);
             }
         }
         

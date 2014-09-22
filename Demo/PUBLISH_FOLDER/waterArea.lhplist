@@ -17,6 +17,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -56,18 +58,24 @@
 					<string>{0.336929, 0.135807}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_canteen</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>AB772E24-2229-4020-9382-3B8DE967F3A3</string>
+						<string>3910F2AF-785B-4ABA-8075-E5F272ABB90B</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -89,6 +97,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -130,18 +142,24 @@
 					<string>{0.461674, 0.283975}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_hat</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>152D886E-BD9C-41A9-970C-49E8D61DE980</string>
+						<string>EF9DEC45-4811-4DFD-BCE8-9D948B17A86F</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -163,6 +181,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -202,12 +224,18 @@
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{-0.772662, -0.175172}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>dummyBodyForMouseJoint</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -233,6 +261,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>0</integer>
 						<key>type</key>
@@ -268,18 +300,24 @@
 					<string>{0.825549, 0.189808}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_backpack</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>C5283B17-EA81-4AF7-B9A7-A0412BBAB7EC</string>
+						<string>F0996D56-4F30-4DA9-BE3A-B54620E28C26</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -301,6 +339,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -342,18 +384,24 @@
 					<string>{0.561173, 0.171293}</string>
 					<key>imageFileName</key>
 					<string>objects.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>object_banana</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>01009EB0-7EE5-43C8-A9AB-98A1E8DB11A1</string>
+						<string>46866399-3E1C-4735-B11A-9F3170BF3470</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -375,6 +423,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>5</integer>
 						<key>type</key>
@@ -416,6 +468,8 @@
 					<string>{0.498903, 0.805834}</string>
 					<key>height</key>
 					<real>60</real>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>waterArea</string>
 					<key>nodeType</key>
@@ -479,12 +533,18 @@
 							<string>{1.250000, 0.025000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_11</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -510,6 +570,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -551,12 +615,18 @@
 							<string>{1.250000, 0.225000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_10</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -582,6 +652,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -623,12 +697,18 @@
 							<string>{1.250000, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_9</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -654,6 +734,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -695,12 +779,18 @@
 							<string>{1.116667, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_8</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -726,6 +816,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -767,12 +861,18 @@
 							<string>{0.983333, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_7</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -798,6 +898,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -839,12 +943,18 @@
 							<string>{0.850000, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_6</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -870,6 +980,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -911,12 +1025,18 @@
 							<string>{0.716667, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_5</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -942,6 +1062,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -983,12 +1107,18 @@
 							<string>{0.583333, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_4</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1014,6 +1144,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1055,12 +1189,18 @@
 							<string>{0.450000, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_3</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1086,6 +1226,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1127,12 +1271,18 @@
 							<string>{0.316667, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_2</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1158,6 +1308,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1199,12 +1353,18 @@
 							<string>{0.316667, 0.225000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_1</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1230,6 +1390,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1271,12 +1435,18 @@
 							<string>{0.316667, 0.025000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1302,6 +1472,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1343,12 +1517,18 @@
 							<string>{1.383333, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_12</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1374,6 +1554,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1415,12 +1599,18 @@
 							<string>{1.383333, 0.225000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_13</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1446,6 +1636,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1487,12 +1681,18 @@
 							<string>{1.383333, 0.025000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_14</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1518,6 +1718,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1559,12 +1763,18 @@
 							<string>{1.383333, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_15</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1590,6 +1800,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1631,12 +1845,18 @@
 							<string>{1.250000, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_16</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1662,6 +1882,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1703,12 +1927,18 @@
 							<string>{1.116667, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_17</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1734,6 +1964,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1775,12 +2009,18 @@
 							<string>{0.983333, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_18</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1806,6 +2046,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1847,12 +2091,18 @@
 							<string>{0.850000, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_19</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1878,6 +2128,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1919,12 +2173,18 @@
 							<string>{0.716667, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_20</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -1950,6 +2210,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -1991,12 +2255,18 @@
 							<string>{0.583333, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_21</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -2022,6 +2292,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -2063,12 +2337,18 @@
 							<string>{0.450000, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_22</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -2094,6 +2374,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -2135,12 +2419,18 @@
 							<string>{0.316667, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_23</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -2166,6 +2456,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -2207,12 +2501,18 @@
 							<string>{0.183333, 0.625000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_24</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -2238,6 +2538,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -2279,12 +2583,18 @@
 							<string>{0.183333, 0.425000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_25</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -2310,6 +2620,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -2351,12 +2665,18 @@
 							<string>{0.183333, 0.225000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_26</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -2382,6 +2702,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -2423,12 +2747,18 @@
 							<string>{0.183333, 0.025000}</string>
 							<key>imageFileName</key>
 							<string>platformer.png</string>
+							<key>invisibleInEditor</key>
+							<false/>
 							<key>name</key>
 							<string>brick_27</string>
 							<key>nodePhysics</key>
 							<dict>
 								<key>allowSleep</key>
 								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
 								<key>bullet</key>
 								<false/>
 								<key>fixedRotation</key>
@@ -2454,6 +2784,10 @@
 								</dict>
 								<key>gravityScale</key>
 								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
 								<key>shape</key>
 								<integer>0</integer>
 								<key>type</key>
@@ -2489,6 +2823,8 @@
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{-0.283333, 0.575000}</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>bricks</string>
 					<key>nodeType</key>
@@ -2515,6 +2851,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -2545,6 +2883,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -2589,6 +2929,22 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6@2x</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
 			<string>{1024.000000, 768.000000}</string>
@@ -2608,6 +2964,8 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
@@ -2616,12 +2974,16 @@
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>1136x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>1334x750</key>
+		<string>{{0.001836, 0.000000}, {0.998164, 0.981780}}</string>
 		<key>2048x1536</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>2208x1242</key>
+		<string>{{0.001836, 0.000000}, {0.998164, 0.981780}}</string>
 		<key>960x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
-		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<string>{{0.001836, 0.000000}, {0.998164, 0.981780}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -2631,7 +2993,62 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>01009EB0-7EE5-43C8-A9AB-98A1E8DB11A1</key>
+		<key>3910F2AF-785B-4ABA-8075-E5F272ABB90B</key>
+		<array>
+			<array>
+				<string>{-13.5, -19.75}</string>
+				<string>{-8.5, -20.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{-17, -16.25}</string>
+			</array>
+			<array>
+				<string>{16, -18.25}</string>
+				<string>{20, -3.75}</string>
+				<string>{20.5, 9.75}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{9, -22.25}</string>
+			</array>
+			<array>
+				<string>{-6.5, -29.75}</string>
+				<string>{-4, -31.75}</string>
+				<string>{8.5, -31.25}</string>
+				<string>{-6.5, -21.75}</string>
+			</array>
+			<array>
+				<string>{-18.5, 29.25}</string>
+				<string>{-20, 25.75}</string>
+				<string>{-21, 19.25}</string>
+				<string>{-21, 11.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{20.5, 9.75}</string>
+				<string>{3.5, 31.75}</string>
+				<string>{-15.5, 31.75}</string>
+			</array>
+			<array>
+				<string>{16, 28.75}</string>
+				<string>{10.5, 30.75}</string>
+				<string>{3.5, 31.75}</string>
+				<string>{20.5, 9.75}</string>
+			</array>
+			<array>
+				<string>{9, -22.25}</string>
+				<string>{-18.5, -13.25}</string>
+				<string>{-8.5, -20.25}</string>
+				<string>{8.5, -31.25}</string>
+			</array>
+			<array>
+				<string>{6.5, -32.25}</string>
+				<string>{8.5, -31.25}</string>
+				<string>{-4, -31.75}</string>
+				<string>{-3.5, -32.25}</string>
+			</array>
+			<array>
+				<string>{-8.5, -20.25}</string>
+				<string>{-6.5, -21.75}</string>
+				<string>{8.5, -31.25}</string>
+			</array>
+		</array>
+		<key>46866399-3E1C-4735-B11A-9F3170BF3470</key>
 		<array>
 			<array>
 				<string>{38.75, -26.25}</string>
@@ -2693,7 +3110,7 @@
 				<string>{7.25, 3.75}</string>
 			</array>
 		</array>
-		<key>152D886E-BD9C-41A9-970C-49E8D61DE980</key>
+		<key>EF9DEC45-4811-4DFD-BCE8-9D948B17A86F</key>
 		<array>
 			<array>
 				<string>{-54.25, 17}</string>
@@ -2758,62 +3175,7 @@
 				<string>{-19.25, -28.5}</string>
 			</array>
 		</array>
-		<key>AB772E24-2229-4020-9382-3B8DE967F3A3</key>
-		<array>
-			<array>
-				<string>{-13.5, -19.75}</string>
-				<string>{-8.5, -20.25}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{-17, -16.25}</string>
-			</array>
-			<array>
-				<string>{16, -18.25}</string>
-				<string>{20, -3.75}</string>
-				<string>{20.5, 9.75}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{9, -22.25}</string>
-			</array>
-			<array>
-				<string>{-6.5, -29.75}</string>
-				<string>{-4, -31.75}</string>
-				<string>{8.5, -31.25}</string>
-				<string>{-6.5, -21.75}</string>
-			</array>
-			<array>
-				<string>{-18.5, 29.25}</string>
-				<string>{-20, 25.75}</string>
-				<string>{-21, 19.25}</string>
-				<string>{-21, 11.25}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{20.5, 9.75}</string>
-				<string>{3.5, 31.75}</string>
-				<string>{-15.5, 31.75}</string>
-			</array>
-			<array>
-				<string>{16, 28.75}</string>
-				<string>{10.5, 30.75}</string>
-				<string>{3.5, 31.75}</string>
-				<string>{20.5, 9.75}</string>
-			</array>
-			<array>
-				<string>{9, -22.25}</string>
-				<string>{-18.5, -13.25}</string>
-				<string>{-8.5, -20.25}</string>
-				<string>{8.5, -31.25}</string>
-			</array>
-			<array>
-				<string>{6.5, -32.25}</string>
-				<string>{8.5, -31.25}</string>
-				<string>{-4, -31.75}</string>
-				<string>{-3.5, -32.25}</string>
-			</array>
-			<array>
-				<string>{-8.5, -20.25}</string>
-				<string>{-6.5, -21.75}</string>
-				<string>{8.5, -31.25}</string>
-			</array>
-		</array>
-		<key>C5283B17-EA81-4AF7-B9A7-A0412BBAB7EC</key>
+		<key>F0996D56-4F30-4DA9-BE3A-B54620E28C26</key>
 		<array>
 			<array>
 				<string>{10.25, -47}</string>

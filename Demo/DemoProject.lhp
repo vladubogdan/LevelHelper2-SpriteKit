@@ -8,7 +8,7 @@
 	<array>
 		<dict>
 			<key>DeviceName</key>
-			<string>iPhones 3.5 inch Retina</string>
+			<string>iPhone 4 &amp; 4S</string>
 			<key>ScaleRatio</key>
 			<real>1</real>
 			<key>ScreenHeight</key>
@@ -18,11 +18,11 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.039420325309038162, 0}, {0.040748715400695801, 1}}</string>
+			<string>{{0.68458163738250732, 0}, {0.054941799491643906, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
-			<string>iPhone 4 inch Retina</string>
+			<string>iPhone 5 &amp; 5S</string>
 			<key>ScaleRatio</key>
 			<real>1</real>
 			<key>ScreenHeight</key>
@@ -32,7 +32,35 @@
 			<key>SuffixName</key>
 			<string>-568</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.078244850039482117, 1}}</string>
+			<string>{{1, 1}, {0.078046888113021851, 1}}</string>
+		</dict>
+		<dict>
+			<key>DeviceName</key>
+			<string>iPhone 6</string>
+			<key>ScaleRatio</key>
+			<real>1.2000000476837158</real>
+			<key>ScreenHeight</key>
+			<integer>750</integer>
+			<key>ScreenWidth</key>
+			<integer>1334</integer>
+			<key>SuffixName</key>
+			<string>-iphone6</string>
+			<key>color</key>
+			<string>{{0.68458163738250732, 0}, {0.054941799491643906, 1}}</string>
+		</dict>
+		<dict>
+			<key>DeviceName</key>
+			<string>iPhone 6 Plus</string>
+			<key>ScaleRatio</key>
+			<real>2</real>
+			<key>ScreenHeight</key>
+			<integer>1242</integer>
+			<key>ScreenWidth</key>
+			<integer>2208</integer>
+			<key>SuffixName</key>
+			<string>-iphone6@2x</string>
+			<key>color</key>
+			<string>{{0.68458163738250732, 0}, {0.054941799491643906, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +74,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
+			<string>{{0.65943706035614014, 0}, {0.97336786985397339, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +88,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.039420317858457565, 0}, {0.040748715400695801, 1}}</string>
+			<string>{{0.65943706035614014, 0}, {0.97336786985397339, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>

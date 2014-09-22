@@ -160,6 +160,7 @@
 
 /* Begin PBXFileReference section */
 		6E0379D719A7C21700B70D4A /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
+		6E7A847D19D0293900E2E52F /* LH_SPRITEKIT_PROJECT_TEMPLATE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = LH_SPRITEKIT_PROJECT_TEMPLATE.plist; path = ../LH_SPRITEKIT_PROJECT_TEMPLATE.plist; sourceTree = "<group>"; };
 		6EDE843919A483A200599C48 /* libLevelHelper2-API.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLevelHelper2-API.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDE843C19A483A200599C48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6EDE844A19A483A200599C48 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -306,6 +307,7 @@
 		6EDE843019A483A200599C48 = {
 			isa = PBXGroup;
 			children = (
+				6E7A847D19D0293900E2E52F /* LH_SPRITEKIT_PROJECT_TEMPLATE.plist */,
 				6E0379D719A7C21700B70D4A /* LH_API_VERSION.plist */,
 				6EDE843E19A483A200599C48 /* LevelHelper2-API */,
 				6EDE843B19A483A200599C48 /* Frameworks */,

@@ -17,6 +17,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>BACK USER INTERFACE</string>
 			<key>nodeType</key>
@@ -56,6 +58,8 @@
 					<string>{0.066667, 0.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning</string>
 					<key>nodeType</key>
@@ -90,6 +94,8 @@
 					<string>{0.933333, 0.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_1</string>
 					<key>nodeType</key>
@@ -124,6 +130,8 @@
 					<string>{0.933333, 0.900000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_2</string>
 					<key>nodeType</key>
@@ -158,6 +166,8 @@
 					<string>{0.066667, 0.900000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_3</string>
 					<key>nodeType</key>
@@ -192,6 +202,8 @@
 					<string>{0.500000, 0.500000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_4</string>
 					<key>nodeType</key>
@@ -226,6 +238,8 @@
 					<string>{-0.066667, 0.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_5</string>
 					<key>nodeType</key>
@@ -260,6 +274,8 @@
 					<string>{-0.066667, 0.900000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_6</string>
 					<key>nodeType</key>
@@ -294,6 +310,8 @@
 					<string>{1.066667, 0.900000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_7</string>
 					<key>nodeType</key>
@@ -328,6 +346,8 @@
 					<string>{1.066667, 0.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_8</string>
 					<key>nodeType</key>
@@ -362,6 +382,8 @@
 					<string>{0.933333, -0.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_9</string>
 					<key>nodeType</key>
@@ -396,6 +418,8 @@
 					<string>{0.066667, -0.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_10</string>
 					<key>nodeType</key>
@@ -430,6 +454,8 @@
 					<string>{0.066667, 1.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_11</string>
 					<key>nodeType</key>
@@ -464,6 +490,8 @@
 					<string>{0.933333, 1.100000}</string>
 					<key>imageFileName</key>
 					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>positioning_12</string>
 					<key>nodeType</key>
@@ -487,11 +515,205 @@
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.344544, 0.459586}</string>
+					<key>imageFileName</key>
+					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>name</key>
+					<string>positioning_13</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>INDIVIDUAL_IMAGES_EXAMPLE/</string>
+					<key>rotation</key>
+					<real>297.36083984375</real>
+					<key>scale</key>
+					<string>{1.000000, 2.000000}</string>
+					<key>size</key>
+					<string>{128.000000, 128.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>9A35EFB4-212D-400B-90A8-9146B9BF8DE4</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.341885, 0.291040}</string>
+					<key>imageFileName</key>
+					<string>positioning.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>name</key>
+					<string>positioning_14</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>fixtureID</key>
+							<integer>0</integer>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>INDIVIDUAL_IMAGES_EXAMPLE/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{2.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{128.000000, 128.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>11E0578C-6663-4FAF-88FA-6874B1BD914B</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>collideConnected</key>
+					<false/>
+					<key>enableLimit</key>
+					<false/>
+					<key>enableMotor</key>
+					<true/>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>lowerAngle</key>
+					<real>0.0</real>
+					<key>maxMotorTorque</key>
+					<real>140</real>
+					<key>motorSpeed</key>
+					<real>1</real>
+					<key>name</key>
+					<string>UntitledRevoluteJoint</string>
+					<key>nodeType</key>
+					<string>LHRevoluteJoint</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativePosA</key>
+					<string>{37.655823, -46.944061}</string>
+					<key>spriteAUUID</key>
+					<string>9A35EFB4-212D-400B-90A8-9146B9BF8DE4</string>
+					<key>spriteBUUID</key>
+					<string>11E0578C-6663-4FAF-88FA-6874B1BD914B</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>upperAngle</key>
+					<real>0.0</real>
+					<key>uuid</key>
+					<string>D269695E-B634-4823-A3CD-124F95243EEE</string>
+				</dict>
 			</array>
 			<key>colorOverlay</key>
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -522,6 +744,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -566,6 +790,22 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6@2x</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
 			<string>{1024.000000, 768.000000}</string>
@@ -580,21 +820,13 @@
 			<key>suffix</key>
 			<string>-ipad@2x</string>
 		</dict>
-		<dict>
-			<key>ratio</key>
-			<real>1</real>
-			<key>size</key>
-			<string>{1334.000000, 750.000000}</string>
-			<key>suffix</key>
-			<string>-ipad</string>
-		</dict>
 	</array>
-	<key>documentWindowFramebogdanvladu</key>
-	<string>{{121.000000, 190.000000}, {1414.000000, 668.000000}}</string>
 	<key>globalGravityDirection</key>
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>sceneFormat</key>
@@ -603,67 +835,6 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
-	<key>tracedFixtures</key>
-	<dict>
-		<key>6D32B013-2D8E-470E-8F0D-861D2C2EB095</key>
-		<array>
-			<array>
-				<string>{-39.75, -30.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-40.25, -27.75}</string>
-			</array>
-			<array>
-				<string>{11.25, -30.25}</string>
-				<string>{11.25, -28.25}</string>
-				<string>{-35.75, -33.75}</string>
-				<string>{6.75, -33.75}</string>
-				<string>{9.75, -32.25}</string>
-			</array>
-			<array>
-				<string>{83.25, 11.25}</string>
-				<string>{83.25, 28.75}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{43.25, -12.75}</string>
-				<string>{53.25, -9.75}</string>
-				<string>{64.75, -4.25}</string>
-				<string>{76.25, 4.25}</string>
-			</array>
-			<array>
-				<string>{-82.75, 30.75}</string>
-				<string>{-83.75, 27.75}</string>
-				<string>{-83.75, -0.75}</string>
-				<string>{-82.75, -3.25}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{80.25, 32.75}</string>
-				<string>{-79.25, 33.25}</string>
-				<string>{-80.75, 32.75}</string>
-			</array>
-			<array>
-				<string>{82.75, 30.25}</string>
-				<string>{80.25, 32.75}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-35.75, -33.75}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{83.25, 28.75}</string>
-			</array>
-			<array>
-				<string>{11.25, -28.25}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{-35.75, -33.75}</string>
-			</array>
-			<array>
-				<string>{-53.75, -15.75}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{-82.75, -3.25}</string>
-			</array>
-			<array>
-				<string>{-40.25, -27.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-45.75, -15.75}</string>
-			</array>
-		</array>
-	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>
