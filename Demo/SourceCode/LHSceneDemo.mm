@@ -60,7 +60,7 @@
         [availableScenes addObject:[LHSceneIntroduction class]];
         
 //        [availableScenes addObject:[LHSceneNodePositioningTest class]];
-                
+        
         [availableScenes addObject:[LHSceneNodesSubclassingTest class]];
         [availableScenes addObject:[LHSceneCameraDemo class]];
         [availableScenes addObject:[LHSceneCameraFollowDemo class]];

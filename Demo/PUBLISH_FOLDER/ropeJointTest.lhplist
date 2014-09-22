@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>aspect</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>backgroundColor</key>
 	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 	<key>children</key>
@@ -26,6 +26,8 @@
 					<string>{{0.623567, 0.269616}, {0.092645, 1.000000}}</string>
 					<key>fadeOutDelay</key>
 					<real>1.5</real>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>length</key>
 					<real>325.79412841796875</real>
 					<key>name</key>
@@ -74,12 +76,18 @@
 					<string>{0.499935, 0.346110}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>candy</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -105,6 +113,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -146,12 +158,18 @@
 					<string>{0.141611, 0.335237}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>thumb_tack</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -177,6 +195,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>0</integer>
 						<key>type</key>
@@ -218,12 +240,18 @@
 					<string>{0.407735, 0.312011}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>candy_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -249,6 +277,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>1</integer>
 						<key>type</key>
@@ -290,12 +322,18 @@
 					<string>{0.717728, 0.294120}</string>
 					<key>imageFileName</key>
 					<string>ropeAssets.png</string>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>name</key>
 					<string>thumb_tack_1</string>
 					<key>nodePhysics</key>
 					<dict>
 						<key>allowSleep</key>
 						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
 						<key>bullet</key>
 						<false/>
 						<key>fixedRotation</key>
@@ -321,6 +359,10 @@
 						</dict>
 						<key>gravityScale</key>
 						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
 						<key>shape</key>
 						<integer>0</integer>
 						<key>type</key>
@@ -362,6 +404,8 @@
 					<string>{{0.116384, 0.548836}, {0.478700, 1.000000}}</string>
 					<key>fadeOutDelay</key>
 					<real>1</real>
+					<key>invisibleInEditor</key>
+					<false/>
 					<key>length</key>
 					<real>367.21881103515625</real>
 					<key>name</key>
@@ -404,6 +448,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>GAME WORLD</string>
 			<key>nodeType</key>
@@ -434,6 +480,8 @@
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 			<key>generalPosition</key>
 			<string>{0.000000, 0.000000}</string>
+			<key>invisibleInEditor</key>
+			<false/>
 			<key>name</key>
 			<string>FRONT USER INTERFACE</string>
 			<key>nodeType</key>
@@ -478,6 +526,22 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
+			<real>1.2000000476837158</real>
+			<key>size</key>
+			<string>{1334.000000, 750.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
+			<real>2</real>
+			<key>size</key>
+			<string>{2208.000000, 1242.000000}</string>
+			<key>suffix</key>
+			<string>-iphone6@2x</string>
+		</dict>
+		<dict>
+			<key>ratio</key>
 			<real>1</real>
 			<key>size</key>
 			<string>{1024.000000, 768.000000}</string>
@@ -497,14 +561,22 @@
 	<string>{0.000000, -1.000000}</string>
 	<key>globalGravityForce</key>
 	<real>8</real>
+	<key>invisibleInEditor</key>
+	<false/>
 	<key>nodeType</key>
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
 	<dict>
+		<key>1024x768</key>
+		<string>{{0.000000, 0.000000}, {0.995659, 0.985222}}</string>
+		<key>1334x750</key>
+		<string>{{0.000000, 0.000000}, {0.995659, 0.985222}}</string>
+		<key>2208x1242</key>
+		<string>{{0.000000, 0.000000}, {0.995659, 0.985222}}</string>
 		<key>960x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
-		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<string>{{0.000000, 0.000000}, {0.995659, 0.985222}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>

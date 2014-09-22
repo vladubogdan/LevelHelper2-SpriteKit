@@ -142,12 +142,12 @@
 }
 
 -(CGPoint)localAnchorA{
-    return CGPointMake( _relativePosA.x,
-                       -_relativePosA.y);
+    return CGPointMake( _relativePosA.x* [_nodeA xScale],
+                       -_relativePosA.y* [_nodeA yScale]);
 }
 -(CGPoint)localAnchorB{
-    return CGPointMake( _relativePosB.x,
-                       -_relativePosB.y);
+    return CGPointMake( _relativePosB.x* [_nodeB xScale],
+                       -_relativePosB.y* [_nodeB yScale]);
 }
 
 -(CGPoint)anchorA{
@@ -193,10 +193,10 @@
             LHScene* scene = (LHScene*)[_node scene];
             if(scene){
                 [[_node scene].physicsWorld removeJoint:_joint];
-                _joint = nil;
             }
         }
     }
+    _joint = nil;
 #endif
 }
 

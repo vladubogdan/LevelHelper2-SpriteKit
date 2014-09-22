@@ -17,7 +17,18 @@
 
 #if LH_USE_BOX2D
 #ifdef __cplusplus
-class b2World;
+#include "Box2d/Box2D.h"
+
+class LHBox2dWorld : public b2World
+{
+public:
+    
+    LHBox2dWorld(const b2Vec2& gravity, void* sceneObj):b2World(gravity),_scene(sceneObj){}
+    virtual ~LHBox2dWorld(){_scene = NULL;}
+    
+    void* _scene;
+};
+
 #endif
 #endif
 

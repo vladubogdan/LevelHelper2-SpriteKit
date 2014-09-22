@@ -21,7 +21,6 @@
     {
         /*INIT YOUR CONTENT HERE*/
         
-
         CGSize size = [self size];
         [LHSceneDemo createMultilineLabelAtPosition:CGPointMake(size.width*0.5, size.height - 150)
                                       asChildOfNode:[self uiNode]
