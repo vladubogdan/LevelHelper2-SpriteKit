@@ -688,11 +688,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -700,7 +700,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -732,13 +732,13 @@
 		<key>1136x640</key>
 		<string>{{0.021154, 0.030139}, {0.962070, 0.948173}}</string>
 		<key>1334x750</key>
-		<string>{{0.021154, 0.030139}, {0.962070, 0.948173}}</string>
+		<string>{{-0.191424, -0.078985}, {1.387712, 1.159257}}</string>
 		<key>2208x1242</key>
-		<string>{{0.021154, 0.030139}, {0.962070, 0.948173}}</string>
+		<string>{{-0.071488, 0.017184}, {1.148340, 0.966139}}</string>
 		<key>960x640</key>
 		<string>{{0.021154, 0.030139}, {0.962070, 0.948173}}</string>
 		<key>general</key>
-		<string>{{0.021154, 0.030139}, {0.962070, 0.948173}}</string>
+		<string>{{-0.071488, 0.017184}, {1.148340, 0.966139}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>

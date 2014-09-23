@@ -701,7 +701,7 @@
 												<key>2141A3F4-A966-4B18-9655-CB80E46601D0</key>
 												<string>{2.679425, 42.091570}</string>
 												<key>225B2453-0A08-4BCE-8FF5-3CE182ACE728</key>
-												<string>{703.982232, 467.240514}</string>
+												<string>{699.814789, 530.503354}</string>
 												<key>2ABD0DE9-ECA3-4FF0-B6D6-23C767A92514</key>
 												<string>{-22.291909, 16.099456}</string>
 												<key>3AD21554-C280-405B-BAFD-31B9455FFFFD</key>
@@ -762,7 +762,7 @@
 												<key>2141A3F4-A966-4B18-9655-CB80E46601D0</key>
 												<string>{2.679425, 42.091570}</string>
 												<key>225B2453-0A08-4BCE-8FF5-3CE182ACE728</key>
-												<string>{703.982232, 467.240514}</string>
+												<string>{699.814789, 530.503354}</string>
 												<key>2ABD0DE9-ECA3-4FF0-B6D6-23C767A92514</key>
 												<string>{-22.291909, 20.995505}</string>
 												<key>3AD21554-C280-405B-BAFD-31B9455FFFFD</key>
@@ -823,7 +823,7 @@
 												<key>2141A3F4-A966-4B18-9655-CB80E46601D0</key>
 												<string>{2.679425, 42.091570}</string>
 												<key>225B2453-0A08-4BCE-8FF5-3CE182ACE728</key>
-												<string>{703.982232, 467.240514}</string>
+												<string>{699.814789, 530.503354}</string>
 												<key>2ABD0DE9-ECA3-4FF0-B6D6-23C767A92514</key>
 												<string>{-22.291909, 16.099456}</string>
 												<key>3AD21554-C280-405B-BAFD-31B9455FFFFD</key>
@@ -2360,7 +2360,7 @@
 						<key>1136x640</key>
 						<string>{0.111745, 0.747136}</string>
 						<key>1334x750</key>
-						<string>{0.733315, 0.730063}</string>
+						<string>{0.728974, 0.828911}</string>
 						<key>2048x1536</key>
 						<string>{0.228056, 0.845433}</string>
 						<key>2208x1242</key>
@@ -2369,7 +2369,7 @@
 						<string>{0.500982, 0.745908}</string>
 					</dict>
 					<key>generalPosition</key>
-					<string>{0.733315, 0.730063}</string>
+					<string>{0.728974, 0.828911}</string>
 					<key>invisibleInEditor</key>
 					<false/>
 					<key>name</key>
@@ -2478,11 +2478,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -2490,7 +2490,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -2523,67 +2523,6 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
-	<key>tracedFixtures</key>
-	<dict>
-		<key>40759E35-AAE4-488A-8BCA-AE6702B8EAD5</key>
-		<array>
-			<array>
-				<string>{-39.75, -30.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-40.25, -27.75}</string>
-			</array>
-			<array>
-				<string>{11.25, -30.25}</string>
-				<string>{11.25, -28.25}</string>
-				<string>{-35.75, -33.75}</string>
-				<string>{6.75, -33.75}</string>
-				<string>{9.75, -32.25}</string>
-			</array>
-			<array>
-				<string>{83.25, 11.25}</string>
-				<string>{83.25, 28.75}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{43.25, -12.75}</string>
-				<string>{53.25, -9.75}</string>
-				<string>{64.75, -4.25}</string>
-				<string>{76.25, 4.25}</string>
-			</array>
-			<array>
-				<string>{-82.75, 30.75}</string>
-				<string>{-83.75, 27.75}</string>
-				<string>{-83.75, -0.75}</string>
-				<string>{-82.75, -3.25}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{80.25, 32.75}</string>
-				<string>{-79.25, 33.25}</string>
-				<string>{-80.75, 32.75}</string>
-			</array>
-			<array>
-				<string>{82.75, 30.25}</string>
-				<string>{80.25, 32.75}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-35.75, -33.75}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{83.25, 28.75}</string>
-			</array>
-			<array>
-				<string>{11.25, -28.25}</string>
-				<string>{18.25, -15.75}</string>
-				<string>{-35.75, -33.75}</string>
-			</array>
-			<array>
-				<string>{-53.75, -15.75}</string>
-				<string>{-45.75, -15.75}</string>
-				<string>{-82.75, -3.25}</string>
-			</array>
-			<array>
-				<string>{-40.25, -27.75}</string>
-				<string>{-36.25, -33.25}</string>
-				<string>{-45.75, -15.75}</string>
-			</array>
-		</array>
-	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

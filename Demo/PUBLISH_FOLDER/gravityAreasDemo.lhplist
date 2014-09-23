@@ -165,7 +165,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>A6CE6D4A-97E1-4875-8D31-A34E4E938642</string>
+						<string>CF928B9E-A263-426D-B698-26330E7FEBA8</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -249,7 +249,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>EC9AFB9A-1F5F-4715-9CE6-BB7F96219728</string>
+						<string>F6B009CE-9320-4AFC-B8D5-36DCB5126C17</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -333,7 +333,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>A300393D-24FC-44EA-B7B3-DB1AA9207E67</string>
+						<string>73A4B49A-D305-4520-A7DE-E30B711A2D7A</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -417,7 +417,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>9A60ADFB-2F7E-4405-AF0A-2FDDBFD5258D</string>
+						<string>3C71F2A3-1C07-4D29-B8C8-591D137C3ECF</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -586,11 +586,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -598,7 +598,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -650,7 +650,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>9A60ADFB-2F7E-4405-AF0A-2FDDBFD5258D</key>
+		<key>3C71F2A3-1C07-4D29-B8C8-591D137C3ECF</key>
 		<array>
 			<array>
 				<string>{-19, -34.75}</string>
@@ -753,7 +753,7 @@
 				<string>{-6.5, -31.75}</string>
 			</array>
 		</array>
-		<key>A300393D-24FC-44EA-B7B3-DB1AA9207E67</key>
+		<key>73A4B49A-D305-4520-A7DE-E30B711A2D7A</key>
 		<array>
 			<array>
 				<string>{-13.5, -19.75}</string>
@@ -808,7 +808,7 @@
 				<string>{8.5, -31.25}</string>
 			</array>
 		</array>
-		<key>A6CE6D4A-97E1-4875-8D31-A34E4E938642</key>
+		<key>CF928B9E-A263-426D-B698-26330E7FEBA8</key>
 		<array>
 			<array>
 				<string>{38.75, -26.25}</string>
@@ -870,7 +870,7 @@
 				<string>{7.25, 3.75}</string>
 			</array>
 		</array>
-		<key>EC9AFB9A-1F5F-4715-9CE6-BB7F96219728</key>
+		<key>F6B009CE-9320-4AFC-B8D5-36DCB5126C17</key>
 		<array>
 			<array>
 				<string>{29, -25.75}</string>

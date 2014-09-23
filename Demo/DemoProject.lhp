@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.68458163738250732, 0}, {0.054941799491643906, 1}}</string>
+			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,21 +32,21 @@
 			<key>SuffixName</key>
 			<string>-568</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.078046888113021851, 1}}</string>
+			<string>{{1, 1}, {0.069278374314308167, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
 			<string>iPhone 6</string>
 			<key>ScaleRatio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>ScreenHeight</key>
 			<integer>750</integer>
 			<key>ScreenWidth</key>
 			<integer>1334</integer>
 			<key>SuffixName</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 			<key>color</key>
-			<string>{{0.68458163738250732, 0}, {0.054941799491643906, 1}}</string>
+			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -58,9 +58,9 @@
 			<key>ScreenWidth</key>
 			<integer>2208</integer>
 			<key>SuffixName</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 			<key>color</key>
-			<string>{{0.68458163738250732, 0}, {0.054941799491643906, 1}}</string>
+			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -74,7 +74,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.65943706035614014, 0}, {0.97336786985397339, 1}}</string>
+			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -88,7 +88,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.65943706035614014, 0}, {0.97336786985397339, 1}}</string>
+			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -220,7 +220,7 @@
 			<key>publisherPluginName</key>
 			<string>Sprite Kit</string>
 			<key>selectedPublishTypeName</key>
-			<string>Current Scene Only</string>
+			<string>All Selected Scenes</string>
 		</dict>
 	</dict>
 	<key>uuid</key>

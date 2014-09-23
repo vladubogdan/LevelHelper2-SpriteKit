@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>appName</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan Daniel</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>format</key>
+	<string>APPL</string>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>carParts-667.png</string>
+			<key>size</key>
+			<string>{178.000000, 118.000000}</string>
+			<key>subimages</key>
+			<array>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>carTyre</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{43.000000, 43.000000}</string>
+					<key>textureRect</key>
+					<string>{{134, 3}, {43, 43}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>carBody</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{168.000000, 68.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 49}, {168, 68}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>wood</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{128.000000, 32.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 2}, {128, 32}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

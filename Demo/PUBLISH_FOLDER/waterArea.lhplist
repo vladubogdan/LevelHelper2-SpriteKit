@@ -75,7 +75,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>3910F2AF-785B-4ABA-8075-E5F272ABB90B</string>
+						<string>97873E45-38C0-47D2-9E9F-ABF75514342D</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -159,7 +159,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>EF9DEC45-4811-4DFD-BCE8-9D948B17A86F</string>
+						<string>CF1CD102-4704-421E-ACF1-EE8F164324F6</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -317,7 +317,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>F0996D56-4F30-4DA9-BE3A-B54620E28C26</string>
+						<string>C9A7CE50-68A7-4583-810D-357CDB75E44D</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -401,7 +401,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>46866399-3E1C-4735-B11A-9F3170BF3470</string>
+						<string>DA356523-5EEB-4A9F-925B-7238666A2969</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -2929,11 +2929,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -2941,7 +2941,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -2993,7 +2993,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>3910F2AF-785B-4ABA-8075-E5F272ABB90B</key>
+		<key>97873E45-38C0-47D2-9E9F-ABF75514342D</key>
 		<array>
 			<array>
 				<string>{-13.5, -19.75}</string>
@@ -3048,134 +3048,7 @@
 				<string>{8.5, -31.25}</string>
 			</array>
 		</array>
-		<key>46866399-3E1C-4735-B11A-9F3170BF3470</key>
-		<array>
-			<array>
-				<string>{38.75, -26.25}</string>
-				<string>{40.25, -22.25}</string>
-				<string>{40.25, -17.25}</string>
-				<string>{37.25, -13.75}</string>
-				<string>{27.25, -11.75}</string>
-				<string>{34.75, -27.25}</string>
-				<string>{35.25, -27.75}</string>
-			</array>
-			<array>
-				<string>{26.25, -19.25}</string>
-				<string>{32.75, -26.75}</string>
-				<string>{34.75, -27.25}</string>
-				<string>{27.25, -11.75}</string>
-			</array>
-			<array>
-				<string>{-40.75, -3.25}</string>
-				<string>{-38.75, -5.75}</string>
-				<string>{-33.75, -7.25}</string>
-				<string>{-6.75, 4.25}</string>
-				<string>{-23.75, 21.75}</string>
-				<string>{-29.75, 17.75}</string>
-				<string>{-37.25, 9.25}</string>
-				<string>{-40.75, 0.75}</string>
-			</array>
-			<array>
-				<string>{-36.75, -7.25}</string>
-				<string>{-33.75, -7.25}</string>
-				<string>{-38.75, -5.75}</string>
-			</array>
-			<array>
-				<string>{-23.75, 21.75}</string>
-				<string>{-6.75, 4.25}</string>
-				<string>{1.75, 4.75}</string>
-				<string>{22.25, 22.75}</string>
-				<string>{16.25, 25.25}</string>
-				<string>{6.25, 27.25}</string>
-				<string>{-4.25, 27.25}</string>
-				<string>{-15.25, 25.25}</string>
-			</array>
-			<array>
-				<string>{22.25, 22.75}</string>
-				<string>{1.75, 4.75}</string>
-				<string>{7.25, 3.75}</string>
-				<string>{38.25, 5.75}</string>
-				<string>{34.25, 12.75}</string>
-				<string>{27.75, 19.25}</string>
-			</array>
-			<array>
-				<string>{37.25, -13.75}</string>
-				<string>{38.25, 5.75}</string>
-				<string>{17.25, -1.25}</string>
-				<string>{27.25, -11.75}</string>
-			</array>
-			<array>
-				<string>{17.25, -1.25}</string>
-				<string>{38.25, 5.75}</string>
-				<string>{7.25, 3.75}</string>
-			</array>
-		</array>
-		<key>EF9DEC45-4811-4DFD-BCE8-9D948B17A86F</key>
-		<array>
-			<array>
-				<string>{-54.25, 17}</string>
-				<string>{-54.25, 11.5}</string>
-				<string>{30.75, -17}</string>
-				<string>{34.25, -5}</string>
-				<string>{-5.25, 31}</string>
-				<string>{-27.75, 29}</string>
-				<string>{-39.75, 26.5}</string>
-				<string>{-50.75, 21.5}</string>
-			</array>
-			<array>
-				<string>{52.25, 5}</string>
-				<string>{53.75, 10.5}</string>
-				<string>{49.25, 20}</string>
-				<string>{45.25, 23}</string>
-				<string>{34.75, 27.5}</string>
-				<string>{23.25, 30}</string>
-				<string>{34.25, -5}</string>
-				<string>{46.75, -0.5}</string>
-			</array>
-			<array>
-				<string>{24.75, -26}</string>
-				<string>{28.75, -21}</string>
-				<string>{30.75, -17}</string>
-				<string>{-6.25, -31}</string>
-				<string>{-5.75, -31.5}</string>
-				<string>{7.25, -31.5}</string>
-				<string>{14.25, -30.5}</string>
-				<string>{19.25, -29}</string>
-			</array>
-			<array>
-				<string>{53.25, 14}</string>
-				<string>{49.25, 20}</string>
-				<string>{53.75, 10.5}</string>
-			</array>
-			<array>
-				<string>{23.25, 30}</string>
-				<string>{13.25, 31}</string>
-				<string>{-5.25, 31}</string>
-				<string>{34.25, -5}</string>
-			</array>
-			<array>
-				<string>{-46.25, 2.5}</string>
-				<string>{-35.25, -3}</string>
-				<string>{30.75, -17}</string>
-				<string>{-54.25, 11.5}</string>
-				<string>{-53.25, 9.5}</string>
-			</array>
-			<array>
-				<string>{-27.25, -22}</string>
-				<string>{-22.75, -26.5}</string>
-				<string>{-19.25, -28.5}</string>
-				<string>{-6.25, -31}</string>
-				<string>{30.75, -17}</string>
-				<string>{-35.25, -3}</string>
-				<string>{-31.75, -14}</string>
-			</array>
-			<array>
-				<string>{-12.75, -30.5}</string>
-				<string>{-6.25, -31}</string>
-				<string>{-19.25, -28.5}</string>
-			</array>
-		</array>
-		<key>F0996D56-4F30-4DA9-BE3A-B54620E28C26</key>
+		<key>C9A7CE50-68A7-4583-810D-357CDB75E44D</key>
 		<array>
 			<array>
 				<string>{10.25, -47}</string>
@@ -3247,6 +3120,133 @@
 				<string>{16.25, -36}</string>
 				<string>{21.25, -34}</string>
 				<string>{-7.25, -38.5}</string>
+			</array>
+		</array>
+		<key>CF1CD102-4704-421E-ACF1-EE8F164324F6</key>
+		<array>
+			<array>
+				<string>{-54.25, 17}</string>
+				<string>{-54.25, 11.5}</string>
+				<string>{30.75, -17}</string>
+				<string>{34.25, -5}</string>
+				<string>{-5.25, 31}</string>
+				<string>{-27.75, 29}</string>
+				<string>{-39.75, 26.5}</string>
+				<string>{-50.75, 21.5}</string>
+			</array>
+			<array>
+				<string>{52.25, 5}</string>
+				<string>{53.75, 10.5}</string>
+				<string>{49.25, 20}</string>
+				<string>{45.25, 23}</string>
+				<string>{34.75, 27.5}</string>
+				<string>{23.25, 30}</string>
+				<string>{34.25, -5}</string>
+				<string>{46.75, -0.5}</string>
+			</array>
+			<array>
+				<string>{24.75, -26}</string>
+				<string>{28.75, -21}</string>
+				<string>{30.75, -17}</string>
+				<string>{-6.25, -31}</string>
+				<string>{-5.75, -31.5}</string>
+				<string>{7.25, -31.5}</string>
+				<string>{14.25, -30.5}</string>
+				<string>{19.25, -29}</string>
+			</array>
+			<array>
+				<string>{53.25, 14}</string>
+				<string>{49.25, 20}</string>
+				<string>{53.75, 10.5}</string>
+			</array>
+			<array>
+				<string>{23.25, 30}</string>
+				<string>{13.25, 31}</string>
+				<string>{-5.25, 31}</string>
+				<string>{34.25, -5}</string>
+			</array>
+			<array>
+				<string>{-46.25, 2.5}</string>
+				<string>{-35.25, -3}</string>
+				<string>{30.75, -17}</string>
+				<string>{-54.25, 11.5}</string>
+				<string>{-53.25, 9.5}</string>
+			</array>
+			<array>
+				<string>{-27.25, -22}</string>
+				<string>{-22.75, -26.5}</string>
+				<string>{-19.25, -28.5}</string>
+				<string>{-6.25, -31}</string>
+				<string>{30.75, -17}</string>
+				<string>{-35.25, -3}</string>
+				<string>{-31.75, -14}</string>
+			</array>
+			<array>
+				<string>{-12.75, -30.5}</string>
+				<string>{-6.25, -31}</string>
+				<string>{-19.25, -28.5}</string>
+			</array>
+		</array>
+		<key>DA356523-5EEB-4A9F-925B-7238666A2969</key>
+		<array>
+			<array>
+				<string>{38.75, -26.25}</string>
+				<string>{40.25, -22.25}</string>
+				<string>{40.25, -17.25}</string>
+				<string>{37.25, -13.75}</string>
+				<string>{27.25, -11.75}</string>
+				<string>{34.75, -27.25}</string>
+				<string>{35.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{26.25, -19.25}</string>
+				<string>{32.75, -26.75}</string>
+				<string>{34.75, -27.25}</string>
+				<string>{27.25, -11.75}</string>
+			</array>
+			<array>
+				<string>{-40.75, -3.25}</string>
+				<string>{-38.75, -5.75}</string>
+				<string>{-33.75, -7.25}</string>
+				<string>{-6.75, 4.25}</string>
+				<string>{-23.75, 21.75}</string>
+				<string>{-29.75, 17.75}</string>
+				<string>{-37.25, 9.25}</string>
+				<string>{-40.75, 0.75}</string>
+			</array>
+			<array>
+				<string>{-36.75, -7.25}</string>
+				<string>{-33.75, -7.25}</string>
+				<string>{-38.75, -5.75}</string>
+			</array>
+			<array>
+				<string>{-23.75, 21.75}</string>
+				<string>{-6.75, 4.25}</string>
+				<string>{1.75, 4.75}</string>
+				<string>{22.25, 22.75}</string>
+				<string>{16.25, 25.25}</string>
+				<string>{6.25, 27.25}</string>
+				<string>{-4.25, 27.25}</string>
+				<string>{-15.25, 25.25}</string>
+			</array>
+			<array>
+				<string>{22.25, 22.75}</string>
+				<string>{1.75, 4.75}</string>
+				<string>{7.25, 3.75}</string>
+				<string>{38.25, 5.75}</string>
+				<string>{34.25, 12.75}</string>
+				<string>{27.75, 19.25}</string>
+			</array>
+			<array>
+				<string>{37.25, -13.75}</string>
+				<string>{38.25, 5.75}</string>
+				<string>{17.25, -1.25}</string>
+				<string>{27.25, -11.75}</string>
+			</array>
+			<array>
+				<string>{17.25, -1.25}</string>
+				<string>{38.25, 5.75}</string>
+				<string>{7.25, 3.75}</string>
 			</array>
 		</array>
 	</dict>

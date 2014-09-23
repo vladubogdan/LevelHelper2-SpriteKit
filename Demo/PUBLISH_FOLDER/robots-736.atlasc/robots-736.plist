@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>appName</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan Daniel</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>format</key>
+	<string>APPL</string>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>robots-736@2x.png</string>
+			<key>size</key>
+			<string>{454.000000, 501.000000}</string>
+			<key>subimages</key>
+			<array>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>blueRobot</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{219.000000, 266.000000}</string>
+					<key>textureRect</key>
+					<string>{{231, 4}, {219, 266}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>pinkRobot</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{219.000000, 266.000000}</string>
+					<key>textureRect</key>
+					<string>{{4, 4}, {219, 266}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>greenRobot</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{219.000000, 266.000000}</string>
+					<key>textureRect</key>
+					<string>{{4, 278}, {266, 219}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

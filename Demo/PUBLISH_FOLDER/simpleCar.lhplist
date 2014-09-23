@@ -82,7 +82,7 @@
 								<key>fixedRotation</key>
 								<false/>
 								<key>fixtureUUID</key>
-								<string>82C9479A-71FD-4507-A981-B501C6B65400</string>
+								<string>7601FEBB-B0B9-42A2-ACC7-BFF7D5D05D66</string>
 								<key>genericFixture</key>
 								<dict>
 									<key>category</key>
@@ -624,11 +624,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -636,7 +636,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -688,7 +688,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>82C9479A-71FD-4507-A981-B501C6B65400</key>
+		<key>7601FEBB-B0B9-42A2-ACC7-BFF7D5D05D66</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>

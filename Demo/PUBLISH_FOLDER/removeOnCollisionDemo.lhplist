@@ -289,7 +289,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>2E0685F1-ACD8-4265-B793-3BD3B5A340DB</string>
+						<string>20456040-1BD6-43B6-B713-D0D5B1A279A2</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -374,7 +374,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>2E0685F1-ACD8-4265-B793-3BD3B5A340DB</string>
+						<string>20456040-1BD6-43B6-B713-D0D5B1A279A2</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -459,7 +459,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>2E0685F1-ACD8-4265-B793-3BD3B5A340DB</string>
+						<string>20456040-1BD6-43B6-B713-D0D5B1A279A2</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -599,11 +599,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -611,7 +611,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -645,7 +645,7 @@
 		<key>1136x640</key>
 		<string>{{-0.092992, 0.002007}, {1.184146, 0.996560}}</string>
 		<key>1334x750</key>
-		<string>{{-0.089692, 0.002007}, {1.180846, 0.986334}}</string>
+		<string>{{-0.196447, -0.079354}, {1.386330, 1.162142}}</string>
 		<key>2048x1536</key>
 		<string>{{-0.033799, -0.101088}, {1.067110, 1.201729}}</string>
 		<key>2208x1242</key>
@@ -653,7 +653,7 @@
 		<key>960x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
-		<string>{{-0.089692, 0.002007}, {1.180846, 0.986334}}</string>
+		<string>{{-0.196447, -0.079354}, {1.386330, 1.162142}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -663,7 +663,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>2E0685F1-ACD8-4265-B793-3BD3B5A340DB</key>
+		<key>20456040-1BD6-43B6-B713-D0D5B1A279A2</key>
 		<array>
 			<array>
 				<string>{29, -25.75}</string>

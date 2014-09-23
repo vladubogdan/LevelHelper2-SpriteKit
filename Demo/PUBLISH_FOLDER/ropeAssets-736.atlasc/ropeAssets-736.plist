@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>appName</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan Daniel</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>format</key>
+	<string>APPL</string>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>ropeAssets-736@2x.png</string>
+			<key>size</key>
+			<string>{254.000000, 113.000000}</string>
+			<key>subimages</key>
+			<array>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>candy</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{105.000000, 105.000000}</string>
+					<key>textureRect</key>
+					<string>{{145, 4}, {105, 105}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>thumb_tack</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{99.000000, 133.000000}</string>
+					<key>textureRect</key>
+					<string>{{4, 4}, {133, 99}}</string>
+					<key>textureRotated</key>
+					<true/>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

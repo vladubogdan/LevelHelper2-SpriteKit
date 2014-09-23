@@ -958,7 +958,7 @@
 					<key>followedNodeUUID</key>
 					<string>469BD684-4FBA-4B6D-B622-75B24641579B</string>
 					<key>generalPosition</key>
-					<string>{0.497018, 0.524591}</string>
+					<string>{0.666662, 0.530025}</string>
 					<key>invisibleInEditor</key>
 					<false/>
 					<key>name</key>
@@ -2719,11 +2719,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -2731,7 +2731,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -2760,6 +2760,8 @@
 		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
 		<key>2048x1536</key>
 		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
+		<key>2208x1242</key>
+		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
 		<key>960x640</key>
 		<string>{{-0.002982, 0.024591}, {4.477198, 1.122533}}</string>
 		<key>general</key>
@@ -2782,6 +2784,8 @@
 		<key>1334x750</key>
 		<string>{{-0.045510, -0.136929}, {4.519935, 1.251019}}</string>
 		<key>2048x1536</key>
+		<string>{{-0.045510, -0.136929}, {4.519935, 1.251019}}</string>
+		<key>2208x1242</key>
 		<string>{{-0.045510, -0.136929}, {4.519935, 1.251019}}</string>
 		<key>960x640</key>
 		<string>{{-0.062986, -0.178121}, {4.537410, 1.292211}}</string>

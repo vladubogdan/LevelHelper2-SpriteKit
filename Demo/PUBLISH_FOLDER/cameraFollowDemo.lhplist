@@ -3146,63 +3146,63 @@
 					<array>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-1207.051800, -150.914948}</string>
+							<string>{-1207.051861, -150.914948}</string>
 							<key>ctrl2</key>
-							<string>{-1439.008951, 1293.972319}</string>
+							<string>{-1439.009012, 1293.972319}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-1199.008951, -242.027681}</string>
+							<string>{-1199.009012, -242.027681}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-848.912351, 748.727356}</string>
+							<string>{-848.912412, 748.727356}</string>
 							<key>ctrl2</key>
-							<string>{1040.991049, 957.972319}</string>
+							<string>{1040.990988, 957.972319}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{32.991049, 781.972319}</string>
+							<string>{32.990988, 781.972319}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{1415.190054, 1010.136930}</string>
+							<string>{1415.189993, 1010.136930}</string>
 							<key>ctrl2</key>
-							<string>{1392.991049, -1234.027681}</string>
+							<string>{1392.990988, -1234.027681}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{1184.991049, -178.027681}</string>
+							<string>{1184.990988, -178.027681}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{1157.288523, -819.730623}</string>
+							<string>{1157.288462, -819.730623}</string>
 							<key>ctrl2</key>
-							<string>{-1178.711477, -659.730623}</string>
+							<string>{-1178.711538, -659.730623}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-63.008951, -674.027681}</string>
+							<string>{-63.009012, -674.027681}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-1247.008951, -1154.027681}</string>
+							<string>{-1247.009012, -1154.027681}</string>
 							<key>ctrl2</key>
-							<string>{-1182.700460, -142.515737}</string>
+							<string>{-1182.700521, -142.515737}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-1199.008951, -258.027681}</string>
+							<string>{-1199.009012, -258.027681}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
@@ -5740,11 +5740,11 @@
 		</dict>
 		<dict>
 			<key>ratio</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>size</key>
 			<string>{1334.000000, 750.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6</string>
+			<string>-667</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -5752,7 +5752,7 @@
 			<key>size</key>
 			<string>{2208.000000, 1242.000000}</string>
 			<key>suffix</key>
-			<string>-iphone6@2x</string>
+			<string>-736@2x</string>
 		</dict>
 		<dict>
 			<key>ratio</key>
@@ -5777,7 +5777,11 @@
 		<string>{{-0.768918, -1.067885}, {2.940231, 3.028943}}</string>
 		<key>1136x640</key>
 		<string>{{-0.768918, -1.067885}, {2.940231, 3.028943}}</string>
+		<key>1334x750</key>
+		<string>{{-0.768918, -1.067885}, {2.940231, 3.028943}}</string>
 		<key>2048x1536</key>
+		<string>{{-0.768918, -1.067885}, {2.940231, 3.028943}}</string>
+		<key>2208x1242</key>
 		<string>{{-0.768918, -1.067885}, {2.940231, 3.028943}}</string>
 		<key>960x640</key>
 		<string>{{-0.768918, -1.067885}, {2.940231, 3.028943}}</string>
