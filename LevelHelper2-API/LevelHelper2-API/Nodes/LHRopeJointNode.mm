@@ -191,6 +191,21 @@ double fcat(double x, void *data)
             //if we dont have the scene it means
             b2World* world = [pNode box2dWorld];
             if(world){
+                
+                if(ropeShape){
+                    [ropeShape removeFromParent];
+                    ropeShape = nil;
+                }
+                
+                if(cutShapeNodeA){
+                    [cutShapeNodeA removeFromParent];
+                    cutShapeNodeA = nil;
+                }
+                if(cutShapeNodeB){
+                    [cutShapeNodeB removeFromParent];
+                    cutShapeNodeB = nil;
+                }
+                
                 if(cutJointA)
                 {
                     world->DestroyJoint(cutJointA);
@@ -866,6 +881,9 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
         [self lateLoading];
     }
     
+    if(![_jointProtocolImp nodeA])return;
+    if(![_jointProtocolImp nodeB])return;
+    
     CGPoint anchorA = [self anchorA];
     CGPoint anchorB = [self anchorB];
 
@@ -920,51 +938,19 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                    segments:segments];
     }
     
-    NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
-    
-    if(removeAfterCut && cutShapeNodeA && cutShapeNodeB){
-        
-        float unit = (currentTimer - cutTimer)/fadeOutDelay;
-        float alphaValue = colorInfo.size.height;
-        alphaValue -= alphaValue*unit;
-        
-        
-        cutShapeNodeA.strokeColor = [SKColor colorWithRed:colorInfo.origin.x
-                                                    green:colorInfo.origin.y
-                                                     blue:colorInfo.size.width
-                                                    alpha:alphaValue];
-        
-        cutShapeNodeB.strokeColor = [SKColor colorWithRed:colorInfo.origin.x
-                                                    green:colorInfo.origin.y
-                                                     blue:colorInfo.size.width
-                                                    alpha:alphaValue];
-        
-        cutShapeNodeA.fillColor = [SKColor colorWithRed:colorInfo.origin.x
-                                                    green:colorInfo.origin.y
-                                                     blue:colorInfo.size.width
-                                                    alpha:alphaValue];
-        
-        cutShapeNodeB.fillColor = [SKColor colorWithRed:colorInfo.origin.x
-                                                    green:colorInfo.origin.y
-                                                     blue:colorInfo.size.width
-                                                    alpha:alphaValue];
-
-        if(unit >=1){
-            [self removeFromParent];
-            return;
-        }
-        
-    }
     
     if(cutShapeNodeA)
     {
 #if LH_USE_BOX2D
+        if(!cutBodyA)return;
+        
         b2Vec2 pos = cutBodyA->GetPosition();
         LHScene* scene = [self scene];
+        if(!scene)return;
         
         CGPoint B = [scene pointFromMeters:pos];
-//        CGPoint B = [self convertToNodeSpaceAR:worldPos];
         
+        B = [self convertToNodeSpace:B];
 #else
         CGPoint B = cutJointA.bodyB.node.position;
 #endif
@@ -978,10 +964,14 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
     if(cutShapeNodeB){
 #if LH_USE_BOX2D
+        if(!cutBodyB)return;
         b2Vec2 pos = cutBodyB->GetPosition();
         LHScene* scene = [self scene];
+        if(!scene)return;
+        
         CGPoint A = [scene pointFromMeters:pos];
-//        CGPoint A = [self convertToNodeSpaceAR:worldPos];
+        
+        A = [self convertToNodeSpace:A];
 #else
         CGPoint A = cutJointB.bodyA.node.position;
 #endif
@@ -991,6 +981,45 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
                     anchorB:anchorB
                      length:cutJointBLength
                    segments:segments];
+    }
+    
+    
+    NSTimeInterval currentTimer = [NSDate timeIntervalSinceReferenceDate];
+    
+    if(removeAfterCut && cutShapeNodeA && cutShapeNodeB){
+        
+        float unit = (currentTimer - cutTimer)/fadeOutDelay;
+        float alphaValue = colorInfo.size.height;
+        alphaValue -= alphaValue*unit;
+        
+        if(unit >=1){
+            alphaValue = 0.0f;
+        }
+        
+        cutShapeNodeA.strokeColor = [SKColor colorWithRed:colorInfo.origin.x
+                                                    green:colorInfo.origin.y
+                                                     blue:colorInfo.size.width
+                                                    alpha:alphaValue];
+        
+        cutShapeNodeB.strokeColor = [SKColor colorWithRed:colorInfo.origin.x
+                                                    green:colorInfo.origin.y
+                                                     blue:colorInfo.size.width
+                                                    alpha:alphaValue];
+        
+        cutShapeNodeA.fillColor = [SKColor colorWithRed:colorInfo.origin.x
+                                                  green:colorInfo.origin.y
+                                                   blue:colorInfo.size.width
+                                                  alpha:alphaValue];
+        
+        cutShapeNodeB.fillColor = [SKColor colorWithRed:colorInfo.origin.x
+                                                  green:colorInfo.origin.y
+                                                   blue:colorInfo.size.width
+                                                  alpha:alphaValue];
+        
+        if(unit >=1){
+            [self removeFromParent];
+            return;
+        }
     }
 }
 

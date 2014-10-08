@@ -54,7 +54,9 @@
     NSMutableDictionary* loadedTextureAtlases;
     NSDictionary* tracedFixtures;
     
-    NSArray* supportedDevices;
+    NSArray* _supportedDevices;
+    LHDevice* _currentDevice;
+
     CGSize  designResolutionSize;
     CGPoint designOffset;
     
@@ -94,7 +96,8 @@
     LH_SAFE_RELEASE(loadedTextures);
     LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
-    LH_SAFE_RELEASE(supportedDevices);
+    _currentDevice = nil;
+    LH_SAFE_RELEASE(_supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
     
     LH_SUPER_DEALLOC();
@@ -183,7 +186,8 @@
         if(tracedFixInfo){
             tracedFixtures = [[NSDictionary alloc] initWithDictionary:tracedFixInfo];
         }
-        supportedDevices = [[NSArray alloc] initWithArray:devices];
+        _supportedDevices = [[NSArray alloc] initWithArray:devices];
+        _currentDevice = curDev;
         
         
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
@@ -732,9 +736,6 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 }
 
 
-
-
-
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
     return [tracedFixtures objectForKey:uuid];
 }
@@ -748,16 +749,11 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(LHDevice*)currentDevice{
     
-    CGSize scrSize = LH_SCREEN_RESOLUTION;
-    
-    for(LHDevice* dev in supportedDevices){
-        CGSize devSize = [dev size];
-        if(CGSizeEqualToSize(scrSize, devSize)){// ||
-//           CGSizeEqualToSize(scrSize, CGSizeMake(devSize.height, devSize.width))){
-            return dev;
-        }
+    if(_currentDevice){
+        return _currentDevice;
     }
-    return nil;
+    return [LHUtils deviceFromArray:_supportedDevices
+                           withSize:LH_SCREEN_RESOLUTION];
 }
 
 -(float)currentDeviceRatio{
