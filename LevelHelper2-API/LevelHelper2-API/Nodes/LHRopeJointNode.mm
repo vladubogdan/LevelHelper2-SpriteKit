@@ -884,6 +884,12 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     if(![_jointProtocolImp nodeA])return;
     if(![_jointProtocolImp nodeB])return;
     
+    //this means one or both of the nodes that this joint is connected with has been removed
+    //we need to return or else we will have drawing artefacts
+    if(![[_jointProtocolImp nodeA] parent])return;
+    if(![[_jointProtocolImp nodeB] parent])return;
+    
+    
     CGPoint anchorA = [self anchorA];
     CGPoint anchorB = [self anchorB];
 

@@ -58,7 +58,7 @@ static float MAX_BEZIER_STEPS = 24.0f;
         
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
 #if TARGET_IPHONE_SIMULATOR
-        NSLog(@"Warning: Beziers drawing does not work in iOS 8 when using Simulator.");
+        NSLog(@"Warning: Beziers drawing does not work in iOS 8 when using Simulator. Please use a real device for seeing beziers or switch to the Mac OS target.");
 #endif
 #endif
       
