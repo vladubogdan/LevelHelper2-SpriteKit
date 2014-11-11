@@ -60,6 +60,12 @@ typedef enum
  Returns the Box2d body created on this sprite or NULL if sprite has no physics.
  */
 -(b2Body*)box2dBody;
+
+/**
+ Manually set a Box2d body created via code. Do not delete the body, or if you do delete it, call [node setBox2dBody:NULL];
+ */
+-(void)setBox2dBody:(b2Body*)b;
+
 #endif
 #endif //LH_USE_BOX2D
 
@@ -87,6 +93,7 @@ typedef enum
 
 #ifdef __cplusplus
 -(b2Body*)body;
+-(void)setBody:(b2Body*)b;
 -(CGAffineTransform)nodeTransform;
 -(CGAffineTransform)absoluteTransform;
 -(void)updateTransform;
@@ -104,6 +111,10 @@ typedef enum
 -(b2Body*)box2dBody\
 {\
     return [_physicsProtocolImp body];\
+}\
+-(void)setBox2dBody:(b2Body*)b\
+{\
+    [_physicsProtocolImp setBody:b];\
 }\
 -(void)setPosition:(CGPoint)position\
 {\

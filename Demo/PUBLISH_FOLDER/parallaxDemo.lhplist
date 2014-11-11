@@ -958,16 +958,26 @@
 					<key>followedNodeUUID</key>
 					<string>469BD684-4FBA-4B6D-B622-75B24641579B</string>
 					<key>generalPosition</key>
-					<string>{0.666662, 0.530025}</string>
+					<string>{0.470093, 0.394953}</string>
+					<key>importantArea</key>
+					<string>{0.500000, 0.500000}</string>
 					<key>invisibleInEditor</key>
+					<false/>
+					<key>lockX</key>
+					<false/>
+					<key>lockY</key>
 					<false/>
 					<key>name</key>
 					<string>UntitledCamera</string>
 					<key>nodeType</key>
 					<string>LHCamera</string>
+					<key>offset</key>
+					<string>{0.000000, 0.000000}</string>
 					<key>parentUUID</key>
 					<string>_GAME_WORLD_NODE_UUID_</string>
 					<key>restrictToGameWorld</key>
+					<true/>
+					<key>smoothMovement</key>
 					<true/>
 					<key>tags</key>
 					<array>
@@ -975,6 +985,10 @@
 					</array>
 					<key>uuid</key>
 					<string>577900CE-4DB1-4146-B614-0346AA722564</string>
+					<key>zoomOnPinchOrScroll</key>
+					<true/>
+					<key>zoomValue</key>
+					<real>0.73198938369750977</real>
 				</dict>
 				<dict>
 					<key>alpha</key>
@@ -984,7 +998,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.183333, 0.075000}</string>
+					<string>{0.064447, 0.094953}</string>
 					<key>imageFileName</key>
 					<string>carParts.png</string>
 					<key>invisibleInEditor</key>
@@ -2753,11 +2767,11 @@
 	<key>gameWorld</key>
 	<dict>
 		<key>1024x768</key>
-		<string>{{-0.032263, -0.041055}, {4.506639, 1.188179}}</string>
+		<string>{{-0.063240, -0.492244}, {4.537616, 1.639368}}</string>
 		<key>1136x640</key>
 		<string>{{-0.069894, -0.001023}, {4.544067, 1.148147}}</string>
 		<key>1334x750</key>
-		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
+		<string>{{-0.042568, -0.517516}, {4.516533, 1.664640}}</string>
 		<key>2048x1536</key>
 		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
 		<key>2208x1242</key>
@@ -2765,7 +2779,7 @@
 		<key>960x640</key>
 		<string>{{-0.002982, 0.024591}, {4.477198, 1.122533}}</string>
 		<key>general</key>
-		<string>{{-0.028130, -0.055912}, {4.502095, 1.203036}}</string>
+		<string>{{-0.063240, -0.492244}, {4.537616, 1.639368}}</string>
 	</dict>
 	<key>globalGravityDirection</key>
 	<string>{0.000000, -1.000000}</string>
@@ -2798,6 +2812,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>C604CFEE-D3E9-4D91-BCA1-682448598890</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

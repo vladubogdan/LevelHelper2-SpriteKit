@@ -15,6 +15,10 @@
 #import "SKNode+Transforms.h"
 
 
+@interface LHScene (LH_SCENE_LOADING_INFO)
+-(BOOL)loadingInProgress;
+@end
+
 #if LH_USE_BOX2D
 
 #include <cstdio>
@@ -746,7 +750,53 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 #endif
 
+-(CGPoint)position{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return CGPointZero;
+    }
+    return [super position];
+}
+-(void)setPosition:(CGPoint)pos{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return;
+    }
+    [super setPosition:pos];
+}
 
+-(CGFloat)xScale{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return 1;
+    }
+    return [super xScale];
+}
+
+-(CGFloat)yScale{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return 1;
+    }
+    return [super yScale];
+}
+
+-(void)setXScale:(CGFloat)val{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return;
+    }
+    [super setXScale:val];
+}
+
+-(void)setYScale:(CGFloat)val{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return;
+    }
+    [super setYScale:val];
+}
+
+-(void)setScale:(CGFloat)val{
+    if([(LHScene*)[self scene] loadingInProgress]){
+        return;
+    }
+    [super setScale:val];
+}
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt
 {

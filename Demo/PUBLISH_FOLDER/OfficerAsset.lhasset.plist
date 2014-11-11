@@ -1082,7 +1082,7 @@
 							<key>relativeImagePath</key>
 							<string>PUBLISH_FOLDER/</string>
 							<key>rotation</key>
-							<real>306.64208984375</real>
+							<real>-11.89794921875</real>
 							<key>scale</key>
 							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
@@ -1807,7 +1807,7 @@
 			<key>nodeType</key>
 			<string>LHNode</string>
 			<key>parentUUID</key>
-			<string>49D2DA17-8EDD-4463-B284-EE2B9B979F78</string>
+			<string>81663AFD-91B2-41E3-885A-232BDCA031AA</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -1835,7 +1835,7 @@
 	<key>nodeType</key>
 	<string>LHAsset</string>
 	<key>parentUUID</key>
-	<string>78927DC6-5D00-4748-87DE-744088308C2B</string>
+	<string>0842302B-9968-46E7-9647-CD04B88E46ED</string>
 	<key>rotation</key>
 	<real>0.0</real>
 	<key>scale</key>
@@ -1847,7 +1847,7 @@
 		<string>DEFAULT</string>
 	</array>
 	<key>uuid</key>
-	<string>49D2DA17-8EDD-4463-B284-EE2B9B979F78</string>
+	<string>81663AFD-91B2-41E3-885A-232BDCA031AA</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>

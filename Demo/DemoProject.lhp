@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
+			<string>{{0.3754633367061615, 0}, {0.047666311264038086, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -32,7 +32,7 @@
 			<key>SuffixName</key>
 			<string>-568</string>
 			<key>color</key>
-			<string>{{1, 1}, {0.069278374314308167, 1}}</string>
+			<string>{{1, 1}, {0.078228786587715149, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-667</string>
 			<key>color</key>
-			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
+			<string>{{0.3754633367061615, 0}, {0.047666311264038086, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-736@2x</string>
 			<key>color</key>
-			<string>{{0.94685918092727661, 0}, {0.052827715873718262, 1}}</string>
+			<string>{{0.3754633367061615, 0}, {0.047666311264038086, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -74,7 +74,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.33830922842025757, 0}, {0.92545497417449951, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -88,7 +88,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.94225907325744629, 0}, {0.99652361869812012, 1}}</string>
+			<string>{{0.33830922842025757, 0}, {0.92545497417449951, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -102,6 +102,11 @@
 		</array>
 		<key>name</key>
 		<string>DemoProject</string>
+		<key>otherOptions</key>
+		<dict>
+			<key>relativeDocumentsLocation</key>
+			<string>Documents/levels</string>
+		</dict>
 		<key>publishOptions</key>
 		<dict>
 			<key>ScenesOptions</key>
@@ -219,8 +224,10 @@
 			</dict>
 			<key>publisherPluginName</key>
 			<string>Sprite Kit</string>
+			<key>relativePublishLocation</key>
+			<string>PUBLISH_FOLDER</string>
 			<key>selectedPublishTypeName</key>
-			<string>All Selected Scenes</string>
+			<string>Current Scene Only</string>
 		</dict>
 	</dict>
 	<key>uuid</key>

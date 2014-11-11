@@ -33,4 +33,6 @@
  Returns the y ratio that is used to calculate the children position.
  */
 -(float)yRatio;
+
+-(CGPoint)initialPosition;
 @end
