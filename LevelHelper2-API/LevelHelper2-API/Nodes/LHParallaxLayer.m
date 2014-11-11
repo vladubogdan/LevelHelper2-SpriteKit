@@ -16,6 +16,8 @@
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
     
+    CGPoint initialPosition;
+    
     float _xRatio;
     float _yRatio;
 }
@@ -48,6 +50,7 @@
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
+        initialPosition = self.position;
     }
     
     return self;
@@ -59,6 +62,10 @@
 
 -(float)yRatio{
     return _yRatio;
+}
+
+-(CGPoint)initialPosition{
+    return initialPosition;
 }
 
 #pragma mark LHNodeProtocol Required

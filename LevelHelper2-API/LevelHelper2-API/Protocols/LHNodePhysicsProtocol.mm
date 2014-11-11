@@ -14,7 +14,7 @@
 
 #import "LHBezier.h"
 #import "LHShape.h"
-
+#import "LHSprite.h"
 #import "LHConfig.h"
 
 #import "SKNode+Transforms.h"
@@ -200,26 +200,36 @@
             _body->SetLinearVelocity(b2Vec2(linearVel.x,linearVel.y));
         }
         
-        CGSize sizet = CGSizeMake(16, 16);
-        if([_node respondsToSelector:@selector(size)]){
-            sizet = [(SKSpriteNode*)_node size];//we cast so that we dont get a compiler error
-        }
-                
+        
         float scaleX = [_node xScale];
         float scaleY = [_node yScale];
-        
+
         CGPoint worldScale = [_node convertToWorldScale:CGPointMake(scaleX, scaleY)];
         scaleX = worldScale.x;
         scaleY = worldScale.y;
         
         previousScale = worldScale;
-
-        CGPoint sizeWorldScale = [_node convertToWorldScale:CGPointMake(1, 1)];
         
-        //CAREFUL - size is returned containing scale - so don't multiply scale to the size but do multiply the world scale
-        sizet.width *= sizeWorldScale.x;
-        sizet.height*= sizeWorldScale.y;
+        CGSize sizet = CGSizeMake(16, 16);
+        if([_node respondsToSelector:@selector(size)]){
+            sizet = [(SKSpriteNode*)_node size];//we cast so that we dont get a compiler error
+        }
+        
+        
+        if([_node isKindOfClass:[LHSprite class]])
+        {
+            CGPoint sizeWorldScale = [_node convertToWorldScale:CGPointMake(1, 1)];
+            
+            //CAREFUL - size is returned containing scale - so don't multiply scale to the size but do multiply the world scale
+            sizet.width *= sizeWorldScale.x;
+            sizet.height*= sizeWorldScale.y;
+        }
+        else{
+            sizet.width *= worldScale.x;
+            sizet.height*= worldScale.y;
+        }
 
+        
         sizet.width  = [scene metersFromValue:sizet.width];
         sizet.height = [scene metersFromValue:sizet.height];
 
@@ -471,7 +481,9 @@
 -(b2Body*)body{
     return _body;
 }
-
+-(void)setBody:(b2Body*)b{
+    _body = b;
+}
 -(int)bodyType{
     if(_body){
         return (int)_body->GetType();
@@ -596,12 +608,13 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 {
     if([self body])
     {
-        CGPoint worldPos = [[_node parent] convertToWorldSpace:[_node position]];
-        worldPos = [[(LHScene*)[_node scene] gameWorldNode] convertToNodeSpace:worldPos];
-        CGPoint gWPos = [[(LHScene*)[_node scene] gameWorldNode] position];
+        LHGameWorldNode* gWNode = [(LHScene*)[_node scene] gameWorldNode];
         
-        worldPos = CGPointMake(worldPos.x - gWPos.x,
-                               worldPos.y - gWPos.y);
+        CGPoint worldPos = [_node position];
+        if(gWNode != [_node parent]){
+            worldPos = [[_node parent] convertToWorldSpace:worldPos];
+            worldPos = [gWNode convertToNodeSpace:worldPos];
+        }
         
         b2Vec2 b2Pos = [(LHScene*)[_node scene] metersFromPoint:worldPos];
         _body->SetTransform(b2Pos, [_node globalAngleFromLocalAngle:[_node zRotation]]);

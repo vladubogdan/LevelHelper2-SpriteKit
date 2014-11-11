@@ -3146,63 +3146,63 @@
 					<array>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-1207.051861, -150.914948}</string>
+							<string>{-1207.051800, -150.914948}</string>
 							<key>ctrl2</key>
-							<string>{-1439.009012, 1293.972319}</string>
+							<string>{-1439.008951, 1293.972319}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-1199.009012, -242.027681}</string>
+							<string>{-1199.008951, -242.027681}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-848.912412, 748.727356}</string>
+							<string>{-848.912351, 748.727356}</string>
 							<key>ctrl2</key>
-							<string>{1040.990988, 957.972319}</string>
+							<string>{1040.991049, 957.972319}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{32.990988, 781.972319}</string>
+							<string>{32.991049, 781.972319}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{1415.189993, 1010.136930}</string>
+							<string>{1415.190054, 1010.136930}</string>
 							<key>ctrl2</key>
-							<string>{1392.990988, -1234.027681}</string>
+							<string>{1392.991049, -1234.027681}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{1184.990988, -178.027681}</string>
+							<string>{1184.991049, -178.027681}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{1157.288462, -819.730623}</string>
+							<string>{1157.288523, -819.730623}</string>
 							<key>ctrl2</key>
-							<string>{-1178.711538, -659.730623}</string>
+							<string>{-1178.711477, -659.730623}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-63.009012, -674.027681}</string>
+							<string>{-63.008951, -674.027681}</string>
 						</dict>
 						<dict>
 							<key>ctrl1</key>
-							<string>{-1247.009012, -1154.027681}</string>
+							<string>{-1247.008951, -1154.027681}</string>
 							<key>ctrl2</key>
-							<string>{-1182.700521, -142.515737}</string>
+							<string>{-1182.700460, -142.515737}</string>
 							<key>hasCtrl1</key>
 							<true/>
 							<key>hasCtrl2</key>
 							<true/>
 							<key>mainPt</key>
-							<string>{-1199.009012, -258.027681}</string>
+							<string>{-1199.008951, -258.027681}</string>
 						</dict>
 					</array>
 					<key>rotation</key>
@@ -5552,30 +5552,6 @@
 					<integer>0</integer>
 				</dict>
 				<dict>
-					<key>activeCamera</key>
-					<true/>
-					<key>followedNodeUUID</key>
-					<string>95465103-575E-41AC-BEB3-35E9D3D0665F</string>
-					<key>generalPosition</key>
-					<string>{0.666667, 0.300000}</string>
-					<key>invisibleInEditor</key>
-					<false/>
-					<key>name</key>
-					<string>UntitledCamera</string>
-					<key>nodeType</key>
-					<string>LHCamera</string>
-					<key>parentUUID</key>
-					<string>_GAME_WORLD_NODE_UUID_</string>
-					<key>restrictToGameWorld</key>
-					<true/>
-					<key>tags</key>
-					<array>
-						<string>DEFAULT</string>
-					</array>
-					<key>uuid</key>
-					<string>B5ED811C-995F-4048-9292-EFA1DA8DAE8D</string>
-				</dict>
-				<dict>
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
@@ -5583,7 +5559,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.666667, 0.300000}</string>
+					<string>{0.833333, 0.000000}</string>
 					<key>imageFileName</key>
 					<string>carParts.png</string>
 					<key>invisibleInEditor</key>
@@ -5656,6 +5632,44 @@
 					<string>95465103-575E-41AC-BEB3-35E9D3D0665F</string>
 					<key>zOrder</key>
 					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>activeCamera</key>
+					<true/>
+					<key>followedNodeUUID</key>
+					<string>95465103-575E-41AC-BEB3-35E9D3D0665F</string>
+					<key>generalPosition</key>
+					<string>{0.833333, 0.000000}</string>
+					<key>importantArea</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>invisibleInEditor</key>
+					<false/>
+					<key>lockX</key>
+					<false/>
+					<key>lockY</key>
+					<false/>
+					<key>name</key>
+					<string>UntitledCamera</string>
+					<key>nodeType</key>
+					<string>LHCamera</string>
+					<key>offset</key>
+					<string>{0.000000, 0.000000}</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>restrictToGameWorld</key>
+					<true/>
+					<key>smoothMovement</key>
+					<true/>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>B5ED811C-995F-4048-9292-EFA1DA8DAE8D</string>
+					<key>zoomOnPinchOrScroll</key>
+					<true/>
+					<key>zoomValue</key>
+					<real>1</real>
 				</dict>
 			</array>
 			<key>colorOverlay</key>
@@ -5802,6 +5816,67 @@
 	<array>
 		<string>DEFAULT</string>
 	</array>
+	<key>tracedFixtures</key>
+	<dict>
+		<key>E43B6803-F629-4F2F-BD2A-83D43310316B</key>
+		<array>
+			<array>
+				<string>{-39.75, -30.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-40.25, -27.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -30.25}</string>
+				<string>{11.25, -28.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{6.75, -33.75}</string>
+				<string>{9.75, -32.25}</string>
+			</array>
+			<array>
+				<string>{83.25, 11.25}</string>
+				<string>{83.25, 28.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{43.25, -12.75}</string>
+				<string>{53.25, -9.75}</string>
+				<string>{64.75, -4.25}</string>
+				<string>{76.25, 4.25}</string>
+			</array>
+			<array>
+				<string>{-82.75, 30.75}</string>
+				<string>{-83.75, 27.75}</string>
+				<string>{-83.75, -0.75}</string>
+				<string>{-82.75, -3.25}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-79.25, 33.25}</string>
+				<string>{-80.75, 32.75}</string>
+			</array>
+			<array>
+				<string>{82.75, 30.25}</string>
+				<string>{80.25, 32.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-35.75, -33.75}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{83.25, 28.75}</string>
+			</array>
+			<array>
+				<string>{11.25, -28.25}</string>
+				<string>{18.25, -15.75}</string>
+				<string>{-35.75, -33.75}</string>
+			</array>
+			<array>
+				<string>{-53.75, -15.75}</string>
+				<string>{-45.75, -15.75}</string>
+				<string>{-82.75, -3.25}</string>
+			</array>
+			<array>
+				<string>{-40.25, -27.75}</string>
+				<string>{-36.25, -33.25}</string>
+				<string>{-45.75, -15.75}</string>
+			</array>
+		</array>
+	</dict>
 	<key>useGlobalGravity</key>
 	<true/>
 	<key>uuid</key>

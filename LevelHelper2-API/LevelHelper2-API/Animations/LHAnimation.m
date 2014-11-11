@@ -363,7 +363,7 @@
         
         CGSize winSize = [[self scene] designResolutionSize];
         return CGPointMake(winSize.width*0.5  - newPos.x,
-                           -newPos.y - winSize.height*0.5);
+                           -winSize.height*0.5- newPos.y);
         
     }
     

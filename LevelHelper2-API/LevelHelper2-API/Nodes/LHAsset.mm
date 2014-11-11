@@ -11,6 +11,7 @@
 #import "NSDictionary+LHDictionary.h"
 #import "LHScene.h"
 #import "LHConfig.h"
+#import "LHGameWorldNode.h"
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(NSDictionary*)assetInfoForFile:(NSString*)assetFileName;
@@ -51,6 +52,15 @@
     if(self = [super init]){
         
         [prnt addChild:self];
+        
+        LHScene* scene = (LHScene*)[prnt scene];
+        
+        LHGameWorldNode* gwNode = [scene gameWorldNode];
+        float oldScale = gwNode.xScale;
+        CGPoint oldPos = [gwNode position];
+        gwNode.scale = 1.0f;
+        gwNode.position = CGPointZero;
+        
 
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
@@ -62,7 +72,6 @@
         _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
                                                                                                 node:self];
         
-        LHScene* scene = (LHScene*)[self scene];
         
         BOOL fileExists = false;
         if([dict objectForKey:@"assetFile"])
@@ -87,6 +96,9 @@
         
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
+        
+        gwNode.scale = oldScale;
+        gwNode.position = oldPos;
     }
     
     return self;
@@ -115,6 +127,13 @@
         [self setName:newName];
         
         LHScene* scene = (LHScene*)[prnt scene];
+        
+        LHGameWorldNode* gwNode = [scene gameWorldNode];
+        float oldScale = gwNode.xScale;
+        CGPoint oldPos = [gwNode position];
+        gwNode.scale = 1.0f;
+        gwNode.position = CGPointZero;
+        
 
         NSDictionary* assetInfo = [scene assetInfoForFile:fileName];
 
@@ -158,6 +177,10 @@
 //#endif
         
         [self update:0 delta:0];
+        
+        
+        gwNode.scale = oldScale;
+        gwNode.position = oldPos;
     }
     
     return self;

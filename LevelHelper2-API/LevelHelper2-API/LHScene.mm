@@ -29,6 +29,23 @@
 #import "LHUINode.h"
 #import "LHBackUINode.h"
 #import "LHBox2dCollisionHandling.h"
+#import "SKNode+Transforms.h"
+
+#if TARGET_OS_IPHONE
+
+#else
+
+@implementation SKView(_MAC_OS_SCROLL_FORWARDING_)
+- (void)scrollWheel:(NSEvent *)event {
+    [self.scene scrollWheel:event];
+}
+@end
+
+#endif
+
+@interface LHCamera (LH_CAMERA_PINCH_ZOOM)
+-(void)pinchZoomWithScaleDelta:(float)value center:(CGPoint)center;
+@end
 
 @implementation LHScene
 {
@@ -43,6 +60,7 @@
     __unsafe_unretained id<LHAnimationNotificationsProtocol> _animationsDelegate;
     __unsafe_unretained id<LHCollisionHandlingProtocol> _collisionsDelegate;
     
+    bool loadingInProgress;
     NSMutableArray* lateLoadingNodes;//gets nullified after everything is loaded
     
 
@@ -70,10 +88,21 @@
     CGRect gameWorldRect;
     
     NSTimeInterval previousUpdateTime;
+    
+#if TARGET_OS_IPHONE
+    UIPinchGestureRecognizer *pinchRecognizer;
+#endif
+
 }
 
 -(void)dealloc
 {
+    
+#if TARGET_OS_IPHONE
+    [[self view] removeGestureRecognizer:pinchRecognizer];
+    LH_SAFE_RELEASE(pinchRecognizer);
+#endif
+    
     _animationsDelegate = nil;
     _collisionsDelegate = nil;
 
@@ -174,6 +203,8 @@
 
     if (self = [super initWithSize:sceneSize])
     {
+        loadingInProgress = true;
+        
         relativePath = [[NSString alloc] initWithString:[levelPlistFile stringByDeletingLastPathComponent]];
         fileName = [[NSString alloc] initWithString:[[levelPlistFile lastPathComponent] stringByDeletingPathExtension]];
         
@@ -193,14 +224,14 @@
         _nodeProtocolImp = [[LHNodeProtocolImpl alloc] initNodeProtocolImpWithDictionary:dict
                                                                                     node:self];
 
+        [self setBackgroundColor:[dict colorForKey:@"backgroundColor"]];
+        [self loadGameWorldInfoFromDictionary:dict];
+        
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         
         
         [self loadGlobalGravityFromDictionary:dict];
-        [self setBackgroundColor:[dict colorForKey:@"backgroundColor"]];
         [self loadPhysicsBoundariesFromDictionary:dict];
-        [self loadGameWorldInfoFromDictionary:dict];
-
         
         [self performLateLoading];
 
@@ -213,12 +244,25 @@
         //call this to update the views when using camera/parallax
         [self update:0];
         
+        loadingInProgress = false;
     }
     return self;
 }
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - LOADING
 ////////////////////////////////////////////////////////////////////////////////
+
+- (void)didMoveToView:(SKView *)view
+{
+#if TARGET_OS_IPHONE
+    pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+    [[self view] addGestureRecognizer:pinchRecognizer];
+#endif
+}
+
+-(BOOL)loadingInProgress{
+    return loadingInProgress;
+}
 
 -(void)performLateLoading{
     if(!lateLoadingNodes)return;
@@ -437,6 +481,24 @@
 }
 
 #if TARGET_OS_IPHONE
+
+- (void) pinch:(UIPinchGestureRecognizer *)recognizer{
+    
+    CGPoint touchLocation = [recognizer locationInView:recognizer.view];
+    
+    NSLog(@"PINCH %f %f", touchLocation.x, touchLocation.y);
+    
+    touchLocation = [self convertToNodeSpace:touchLocation];
+    
+    for(LHCamera* cam in [self childrenOfType:[LHCamera class]]){
+        if([cam isActive] && [cam usePinchOrScrollWheelToZoom]){
+            [cam pinchZoomWithScaleDelta:recognizer.scale - 1.0 center:touchLocation];
+        }
+    }
+    
+    [recognizer setScale:1.0];
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     for (UITouch *touch in touches) {
@@ -469,6 +531,26 @@
 }
 
 #else
+
+- (void)scrollWheel:(NSEvent *)event
+{
+    CGPoint location = [event locationInNode:self];
+    
+    for(LHCamera* cam in [self childrenOfType:[LHCamera class]]){
+        if([cam isActive] && [cam usePinchOrScrollWheelToZoom]){
+            
+            float newScale = [_gameWorldNode xScale];
+            if([event deltaY] > 0)
+                newScale += 0.025*[_gameWorldNode xScale];
+            else if([event deltaY] <0)
+                newScale -= 0.025*[_gameWorldNode xScale];
+            
+            float delta = newScale - [_gameWorldNode xScale];
+            
+            [cam pinchZoomWithScaleDelta:delta center:location];
+        }
+    }
+}
 
 -(void)mouseDown:(NSEvent *)theEvent{
     CGPoint location = [theEvent locationInNode:[self gameWorldNode]];
