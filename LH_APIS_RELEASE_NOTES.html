@@ -17,6 +17,52 @@
 Updated project structure for faster compilation times.
 </br>
 
+<h4>After Update Compilation Help</h4>
+
+Because of changes in the used libraries files & code structure, user action is required to make an old project compile.</br>
+
+<b>A. Change your Xcode project "Header Search Paths"</b></br>
+</br>
+1. Select you <b>[ProjectName] + Box2d - iOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths in both Debug & Release</br>
+<ul>
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+	<li>"$(SRCROOT)/Box2D" - "recursive"</li>	
+</ul>
+5. Go to LHSceneDemo.mm if still present in your project and change:</br>
+<code>
+<b>#import "LevelHelper2-API/LHUtils.h"</b>
+</code>
+</br>
+to</br>
+<code>
+#import "LHUtils.h"
+</code>
+</br>
+
+<hr>
+1. Select you <b>[ProjectName] + Box2d - MacOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths in both Debug & Release</br>
+<ul>
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>
+	<li>"$(SRCROOT)/Box2D" - "recursive"</li>	
+</ul>
+</br>
+<hr>
+1. Select you <b>[ProjectName] - iOS</b> target</br>
+2. Navigate to Build Settings</br>
+3. Search for "Header Search Paths"</br>
+4. Double click and add the following paths in both Debug & Release</br>
+<ul>
+	<li>"$(SRCROOT)/LevelHelper2-API/LevelHelper2-API" - "recursive"</li>	
+</ul>
+</br>
+
+
 </div><!-- /.container -->
 
 </body>
