@@ -602,7 +602,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#echo 'SRCROOT:'${SRCROOT}\n#cd \"${SRCROOT}\"\n\n#echo 'Copying LevelHelper2-API Headers into Library..'\n#cd ../\n#for H in `find ./LevelHelper2-API -name \"*.h\"`;  do\n#echo \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\n#done";
 		};
 		6EC5553F19AB685B00CF0760 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -615,7 +615,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#echo 'SRCROOT:'${SRCROOT}\n#cd \"${SRCROOT}\"\n\n#echo 'Copying LevelHelper2-API Headers into Library..'\n#cd ../\n#for H in `find ./LevelHelper2-API -name \"*.h\"`;  do\n#echo \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\n#done";
 		};
 		6EC5554019AB686300CF0760 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -628,7 +628,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'SRCROOT:'${SRCROOT}\ncd \"${SRCROOT}\"\n\necho 'Copying LevelHelper2-API Headers into Library..'\ncd ../\nfor H in `find ./LevelHelper2-API -name \"*.h\"`;  do\necho \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\nditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\ndone";
+			shellScript = "#echo 'SRCROOT:'${SRCROOT}\n#cd \"${SRCROOT}\"\n\n#echo 'Copying LevelHelper2-API Headers into Library..'\n#cd ../\n#for H in `find ./LevelHelper2-API -name \"*.h\"`;  do\n#echo \"${H}\"\n#this preserves folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/${H}\"\n\n#this does not preserve folder structure\n#ditto \"${H}\" \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\"\n\n#done";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -873,6 +873,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/LevelHelper2_API.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -887,6 +888,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/LevelHelper2_API.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -908,14 +910,9 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2d/build/Debug-iphoneos",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "LevelHelper2-API";
@@ -933,14 +930,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2d/build/Debug-iphoneos",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "LevelHelper2-API";
@@ -962,15 +954,9 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2d/build/Debug-iphoneos",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug-iphoneos",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "LevelHelper2-API";
@@ -988,15 +974,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../Box2D\"/**",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2d/build/Debug-iphoneos",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug-iphoneos",
-					"/Volumes/PersonalFiles/Projects/PrivateProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "LevelHelper2-API";

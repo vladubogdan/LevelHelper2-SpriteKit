@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegateMac.h"
-#import "LHSceneSubclass.h"
+#import "LHSceneIntroduction.h"
 
 @implementation AppDelegate
 
@@ -16,7 +16,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     /* Pick a size for the scene */
-    SKScene *scene = [LHSceneSubclass scene];
+    SKScene *scene = [LHSceneIntroduction scene];
 
     /* Set the scale mode to scale to fit the window */
     scene.scaleMode = SKSceneScaleModeAspectFit;

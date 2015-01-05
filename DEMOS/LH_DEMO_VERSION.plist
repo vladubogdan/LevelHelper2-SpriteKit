@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Version</key>
-	<string>2.3.0</string>
+	<string>1.0.0</string>
 	<key>Name</key>
-	<string>Box2d</string>
+	<string>DEMOS</string>
 	<key>RelativePath</key>
-	<string>Box2D</string>
+	<string>DEMOS</string>
 	<key>MinimumUpdateableVersion</key>
-	<string>2.3.0</string>
+	<string>1.0.0</string>
 </dict>
 </plist>

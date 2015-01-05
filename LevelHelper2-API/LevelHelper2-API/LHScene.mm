@@ -486,7 +486,7 @@
     
     CGPoint touchLocation = [recognizer locationInView:recognizer.view];
     
-    NSLog(@"PINCH %f %f", touchLocation.x, touchLocation.y);
+//    NSLog(@"PINCH %f %f", touchLocation.x, touchLocation.y);
     
     touchLocation = [self convertToNodeSpace:touchLocation];
     
