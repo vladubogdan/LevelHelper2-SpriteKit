@@ -84,8 +84,10 @@
 
         //scale is handled by physics protocol because of diferences between spritekit and box2d handling
 
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
-                                                                                                node:self];
+        CGPoint scl = [dict pointForKey:@"scale"];        
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
+                                                                                                node:self
+                                                                                               scale:scl];
         
 
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];

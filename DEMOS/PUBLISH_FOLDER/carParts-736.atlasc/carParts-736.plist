@@ -23,6 +23,52 @@
 			<key>subimages</key>
 			<array>
 				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array>
+							<dict>
+								<key>category</key>
+								<integer>1</integer>
+								<key>center</key>
+								<string>{0.000000, 0.000000}</string>
+								<key>density</key>
+								<real>0.10000000000000001</real>
+								<key>friction</key>
+								<real>0.20000000000000001</real>
+								<key>mask</key>
+								<integer>65535</integer>
+								<key>name</key>
+								<string>UntitledCircleShape</string>
+								<key>radius</key>
+								<real>37.015619999999998</real>
+								<key>restitution</key>
+								<integer>0</integer>
+								<key>sensor</key>
+								<false/>
+								<key>shapeID</key>
+								<integer>0</integer>
+							</dict>
+						</array>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
 					<key>isFullyOpaque</key>
 					<false/>
 					<key>name</key>
@@ -37,6 +83,168 @@
 					<false/>
 				</dict>
 				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array>
+							<dict>
+								<key>category</key>
+								<integer>1</integer>
+								<key>density</key>
+								<real>0.10000000000000001</real>
+								<key>friction</key>
+								<real>0.20000000000000001</real>
+								<key>mask</key>
+								<integer>65535</integer>
+								<key>name</key>
+								<string>shapeWithHole</string>
+								<key>points</key>
+								<array>
+									<array>
+										<string>{40, 1}</string>
+										<string>{36, -31}</string>
+										<string>{56, -31}</string>
+									</array>
+									<array>
+										<string>{166, 22}</string>
+										<string>{160, 65}</string>
+										<string>{70, 41}</string>
+									</array>
+									<array>
+										<string>{152, 8}</string>
+										<string>{166, 22}</string>
+										<string>{70, 41}</string>
+									</array>
+									<array>
+										<string>{129, -8}</string>
+										<string>{152, 8}</string>
+										<string>{70, 41}</string>
+									</array>
+									<array>
+										<string>{106, -19}</string>
+										<string>{129, -8}</string>
+										<string>{70, 41}</string>
+									</array>
+									<array>
+										<string>{106, -19}</string>
+										<string>{70, 41}</string>
+										<string>{40, 1}</string>
+									</array>
+									<array>
+										<string>{86, -25}</string>
+										<string>{106, -19}</string>
+										<string>{40, 1}</string>
+									</array>
+									<array>
+										<string>{40, 1}</string>
+										<string>{56, -31}</string>
+										<string>{86, -25}</string>
+									</array>
+									<array>
+										<string>{70, 41}</string>
+										<string>{160, 65}</string>
+										<string>{-158, 66}</string>
+										<string>{-88, 48}</string>
+									</array>
+									<array>
+										<string>{-72, -66}</string>
+										<string>{-71, -67}</string>
+										<string>{13, -67}</string>
+										<string>{36, -31}</string>
+										<string>{40, 1}</string>
+										<string>{-71, 1}</string>
+										<string>{-91, -31}</string>
+									</array>
+									<array>
+										<string>{-107, -31}</string>
+										<string>{-91, -31}</string>
+										<string>{-71, 1}</string>
+									</array>
+									<array>
+										<string>{-107, -31}</string>
+										<string>{-71, 1}</string>
+										<string>{-88, 48}</string>
+									</array>
+									<array>
+										<string>{-165, -6}</string>
+										<string>{-107, -31}</string>
+										<string>{-88, 48}</string>
+									</array>
+									<array>
+										<string>{-165, -6}</string>
+										<string>{-88, 48}</string>
+										<string>{-158, 66}</string>
+									</array>
+									<array>
+										<string>{-167, -1}</string>
+										<string>{-165, -6}</string>
+										<string>{-158, 66}</string>
+									</array>
+									<array>
+										<string>{-167, 55}</string>
+										<string>{-167, -1}</string>
+										<string>{-158, 66}</string>
+									</array>
+									<array>
+										<string>{-165, 61}</string>
+										<string>{-167, 55}</string>
+										<string>{-158, 66}</string>
+									</array>
+									<array>
+										<string>{-161, 65}</string>
+										<string>{-165, 61}</string>
+										<string>{-158, 66}</string>
+									</array>
+								</array>
+								<key>restitution</key>
+								<integer>0</integer>
+								<key>sensor</key>
+								<false/>
+								<key>shapeID</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>category</key>
+								<integer>1</integer>
+								<key>center</key>
+								<string>{149.078125, 15.390625}</string>
+								<key>density</key>
+								<real>0.10000000000000001</real>
+								<key>friction</key>
+								<real>0.20000000000000001</real>
+								<key>mask</key>
+								<integer>65535</integer>
+								<key>name</key>
+								<string>circleSubshape</string>
+								<key>radius</key>
+								<real>34.687640000000002</real>
+								<key>restitution</key>
+								<integer>0</integer>
+								<key>sensor</key>
+								<false/>
+								<key>shapeID</key>
+								<integer>3</integer>
+							</dict>
+						</array>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
 					<key>isFullyOpaque</key>
 					<false/>
 					<key>name</key>
@@ -51,6 +259,57 @@
 					<false/>
 				</dict>
 				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array>
+							<dict>
+								<key>category</key>
+								<integer>1</integer>
+								<key>density</key>
+								<real>0.10000000000000001</real>
+								<key>friction</key>
+								<real>0.20000000000000001</real>
+								<key>mask</key>
+								<integer>65535</integer>
+								<key>name</key>
+								<string>UntitledRectangleShape</string>
+								<key>points</key>
+								<array>
+									<array>
+										<string>{-128, -32}</string>
+										<string>{128, -32}</string>
+										<string>{128, 32}</string>
+										<string>{-128, 32}</string>
+									</array>
+								</array>
+								<key>restitution</key>
+								<integer>0</integer>
+								<key>sensor</key>
+								<false/>
+								<key>shapeID</key>
+								<integer>0</integer>
+							</dict>
+						</array>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
 					<key>isFullyOpaque</key>
 					<false/>
 					<key>name</key>

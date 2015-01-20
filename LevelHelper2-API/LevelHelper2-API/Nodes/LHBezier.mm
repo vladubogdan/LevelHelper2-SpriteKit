@@ -56,11 +56,11 @@ static float MAX_BEZIER_STEPS = 24.0f;
         self.strokeColor = [dict colorForKey:@"colorOverlay"];
         
         
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
-#if TARGET_IPHONE_SIMULATOR
-        NSLog(@"Warning: Beziers drawing does not work in iOS 8 when using Simulator. Please use a real device for seeing beziers or switch to the Mac OS target.");
-#endif
-#endif
+//#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+//#if TARGET_IPHONE_SIMULATOR
+//        NSLog(@"Warning: Beziers drawing does not work in iOS 8 when using Simulator. Please use a real device for seeing beziers or switch to the Mac OS target.");
+//#endif
+//#endif
       
         
         NSArray* points = [dict objectForKey:@"points"];
@@ -145,8 +145,10 @@ static float MAX_BEZIER_STEPS = 24.0f;
 
         //scale is handled by physics protocol because of diferences between spritekit and box2d handling
         
-        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:dict
-                                                                                                node:self];
+        CGPoint scl = [dict pointForKey:@"scale"];
+        _physicsProtocolImp = [[LHNodePhysicsProtocolImp alloc] initPhysicsProtocolImpWithDictionary:[dict objectForKey:@"nodePhysics"]
+                                                                                                node:self
+                                                                                               scale:scl];
         
         [LHNodeProtocolImpl loadChildrenForNode:self fromDictionary:dict];
         

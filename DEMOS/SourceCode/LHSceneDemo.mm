@@ -30,7 +30,8 @@
 #import "LHSceneAssetWithJointsDemo.h"
 #import "LHSceneNodesSubclassingTest.h"
 
-
+#import "LHSceneAdvancedPhysicsDemo.h"
+#import "LHSceneOnTheFlySpritesWithPhysicsDemo.h"
 //test
 #import "LHSceneNodePositioningTest.h"
 
@@ -58,6 +59,9 @@
         
         availableScenes = [[NSMutableArray alloc] init];
         [availableScenes addObject:[LHSceneIntroduction class]];
+        
+        [availableScenes addObject:[LHSceneOnTheFlySpritesWithPhysicsDemo class]];
+        [availableScenes addObject:[LHSceneAdvancedPhysicsDemo class]];
         
 //        [availableScenes addObject:[LHSceneNodePositioningTest class]];
         

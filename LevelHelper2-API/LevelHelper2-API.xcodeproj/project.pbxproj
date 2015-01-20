@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ECA5F911A6E8FD3003F8F0F /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F901A6E8FD3003F8F0F /* LHBodyShape.mm */; };
+		6ECA5F921A6E8FD3003F8F0F /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F901A6E8FD3003F8F0F /* LHBodyShape.mm */; };
+		6ECA5F931A6E8FD3003F8F0F /* LHBodyShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F901A6E8FD3003F8F0F /* LHBodyShape.mm */; };
+		6ECA5F961A6E9CA7003F8F0F /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F951A6E9CA7003F8F0F /* LHContactInfo.mm */; };
+		6ECA5F971A6E9CA7003F8F0F /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F951A6E9CA7003F8F0F /* LHContactInfo.mm */; };
+		6ECA5F981A6E9CA7003F8F0F /* LHContactInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F951A6E9CA7003F8F0F /* LHContactInfo.mm */; };
 		6EDE843D19A483A200599C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE843C19A483A200599C48 /* Foundation.framework */; };
 		6EDE846C19A4840600599C48 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDE846B19A4840600599C48 /* SpriteKit.framework */; };
 		6EDE864519A486FA00599C48 /* LHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE85DE19A486FA00599C48 /* LHFrame.m */; };
@@ -161,6 +167,10 @@
 /* Begin PBXFileReference section */
 		6E0379D719A7C21700B70D4A /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
 		6E7A847D19D0293900E2E52F /* LH_SPRITEKIT_PROJECT_TEMPLATE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = LH_SPRITEKIT_PROJECT_TEMPLATE.plist; path = ../LH_SPRITEKIT_PROJECT_TEMPLATE.plist; sourceTree = "<group>"; };
+		6ECA5F8F1A6E8FD3003F8F0F /* LHBodyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyShape.h; sourceTree = "<group>"; };
+		6ECA5F901A6E8FD3003F8F0F /* LHBodyShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBodyShape.mm; sourceTree = "<group>"; };
+		6ECA5F941A6E9CA7003F8F0F /* LHContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHContactInfo.h; sourceTree = "<group>"; };
+		6ECA5F951A6E9CA7003F8F0F /* LHContactInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHContactInfo.mm; sourceTree = "<group>"; };
 		6EDE843919A483A200599C48 /* libLevelHelper2-API.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLevelHelper2-API.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDE843C19A483A200599C48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6EDE844A19A483A200599C48 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -263,10 +273,10 @@
 		6EDE864219A486FA00599C48 /* LHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHUtils.m; sourceTree = "<group>"; };
 		6EDE864319A486FA00599C48 /* SKNode+Transforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+Transforms.h"; sourceTree = "<group>"; };
 		6EDE864419A486FA00599C48 /* SKNode+Transforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+Transforms.m"; sourceTree = "<group>"; };
-		6EDE871519A4898100599C48 /* libLevelHelper2-API.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLevelHelper2-API.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDE871519A4898100599C48 /* libLevelHelper2-API_Box2d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLevelHelper2-API_Box2d.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDE88D819A48E5100599C48 /* libBox2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2d.a; path = "../Box2d/build/Debug-iphoneos/libBox2d.a"; sourceTree = "<group>"; };
 		6EDE89D319A48F9E00599C48 /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = "../Box2D/build/Debug-iphoneos/libBox2D.a"; sourceTree = "<group>"; };
-		6EDE8B7C19A4986C00599C48 /* libLevelHelper2-API.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLevelHelper2-API.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDE8B7C19A4986C00599C48 /* libLevelHelper2-API_Box2d_OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLevelHelper2-API_Box2d_OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDE8B7D19A4988B00599C48 /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = ../Box2D/build/Debug/libBox2D.a; sourceTree = "<group>"; };
 		6EDE8B8919A499E200599C48 /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = ../Box2D/build/Debug/libBox2D.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,8 +329,8 @@
 			isa = PBXGroup;
 			children = (
 				6EDE843919A483A200599C48 /* libLevelHelper2-API.a */,
-				6EDE871519A4898100599C48 /* libLevelHelper2-API.a */,
-				6EDE8B7C19A4986C00599C48 /* libLevelHelper2-API.a */,
+				6EDE871519A4898100599C48 /* libLevelHelper2-API_Box2d.a */,
+				6EDE8B7C19A4986C00599C48 /* libLevelHelper2-API_Box2d_OSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,6 +490,8 @@
 		6EDE863219A486FA00599C48 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6ECA5F8F1A6E8FD3003F8F0F /* LHBodyShape.h */,
+				6ECA5F901A6E8FD3003F8F0F /* LHBodyShape.mm */,
 				6EDE863319A486FA00599C48 /* LHJointNodeProtocol.h */,
 				6EDE863419A486FA00599C48 /* LHJointNodeProtocol.mm */,
 				6EDE863519A486FA00599C48 /* LHNodeAnimationProtocol.h */,
@@ -498,6 +510,8 @@
 		6EDE863E19A486FA00599C48 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6ECA5F941A6E9CA7003F8F0F /* LHContactInfo.h */,
+				6ECA5F951A6E9CA7003F8F0F /* LHContactInfo.mm */,
 				6EDE863F19A486FA00599C48 /* LHBox2dCollisionHandling.h */,
 				6EDE864019A486FA00599C48 /* LHBox2dCollisionHandling.mm */,
 				6EDE864119A486FA00599C48 /* LHUtils.h */,
@@ -542,7 +556,7 @@
 			);
 			name = "LevelHelper2-API+Box2d";
 			productName = "LevelHelper2-API";
-			productReference = 6EDE871519A4898100599C48 /* libLevelHelper2-API.a */;
+			productReference = 6EDE871519A4898100599C48 /* libLevelHelper2-API_Box2d.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6EDE8B1019A4986C00599C48 /* LevelHelper2-API+Box2d-OSX */ = {
@@ -559,7 +573,7 @@
 			);
 			name = "LevelHelper2-API+Box2d-OSX";
 			productName = "LevelHelper2-API";
-			productReference = 6EDE8B7C19A4986C00599C48 /* libLevelHelper2-API.a */;
+			productReference = 6EDE8B7C19A4986C00599C48 /* libLevelHelper2-API_Box2d_OSX.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -655,6 +669,7 @@
 				6EDE866419A486FA00599C48 /* LHPrismaticJointNode.mm in Sources */,
 				6EDE866119A486FA00599C48 /* LHNode.mm in Sources */,
 				6EDE864519A486FA00599C48 /* LHFrame.m in Sources */,
+				6ECA5F961A6E9CA7003F8F0F /* LHContactInfo.mm in Sources */,
 				6EDE864F19A486FA00599C48 /* LHChildrenRotationsProperty.m in Sources */,
 				6EDE867319A486FA00599C48 /* SKNode+Transforms.m in Sources */,
 				6EDE864619A486FA00599C48 /* LHOpacityFrame.m in Sources */,
@@ -678,6 +693,7 @@
 				6EDE865719A486FA00599C48 /* LHb2BuoyancyController.cpp in Sources */,
 				6EDE866919A486FA00599C48 /* LHUINode.mm in Sources */,
 				6EDE864819A486FA00599C48 /* LHRotationFrame.m in Sources */,
+				6ECA5F911A6E8FD3003F8F0F /* LHBodyShape.mm in Sources */,
 				6EDE866019A486FA00599C48 /* LHGravityArea.mm in Sources */,
 				6EDE865519A486FA00599C48 /* LHSpriteFrameProperty.m in Sources */,
 				6EDE866219A486FA00599C48 /* LHParallax.m in Sources */,
@@ -709,6 +725,7 @@
 				6EDE86BB19A4898100599C48 /* LHPrismaticJointNode.mm in Sources */,
 				6EDE86BC19A4898100599C48 /* LHNode.mm in Sources */,
 				6EDE86BD19A4898100599C48 /* LHFrame.m in Sources */,
+				6ECA5F971A6E9CA7003F8F0F /* LHContactInfo.mm in Sources */,
 				6EDE86BE19A4898100599C48 /* LHChildrenRotationsProperty.m in Sources */,
 				6EDE86BF19A4898100599C48 /* SKNode+Transforms.m in Sources */,
 				6EDE86C019A4898100599C48 /* LHOpacityFrame.m in Sources */,
@@ -732,6 +749,7 @@
 				6EDE86D219A4898100599C48 /* LHb2BuoyancyController.cpp in Sources */,
 				6EDE86D319A4898100599C48 /* LHUINode.mm in Sources */,
 				6EDE86D419A4898100599C48 /* LHRotationFrame.m in Sources */,
+				6ECA5F921A6E8FD3003F8F0F /* LHBodyShape.mm in Sources */,
 				6EDE86D519A4898100599C48 /* LHGravityArea.mm in Sources */,
 				6EDE86D619A4898100599C48 /* LHSpriteFrameProperty.m in Sources */,
 				6EDE86D719A4898100599C48 /* LHParallax.m in Sources */,
@@ -763,6 +781,7 @@
 				6EDE8B2119A4986C00599C48 /* LHPrismaticJointNode.mm in Sources */,
 				6EDE8B2219A4986C00599C48 /* LHNode.mm in Sources */,
 				6EDE8B2319A4986C00599C48 /* LHFrame.m in Sources */,
+				6ECA5F981A6E9CA7003F8F0F /* LHContactInfo.mm in Sources */,
 				6EDE8B2419A4986C00599C48 /* LHChildrenRotationsProperty.m in Sources */,
 				6EDE8B2519A4986C00599C48 /* SKNode+Transforms.m in Sources */,
 				6EDE8B2619A4986C00599C48 /* LHOpacityFrame.m in Sources */,
@@ -786,6 +805,7 @@
 				6EDE8B3819A4986C00599C48 /* LHb2BuoyancyController.cpp in Sources */,
 				6EDE8B3919A4986C00599C48 /* LHUINode.mm in Sources */,
 				6EDE8B3A19A4986C00599C48 /* LHRotationFrame.m in Sources */,
+				6ECA5F931A6E8FD3003F8F0F /* LHBodyShape.mm in Sources */,
 				6EDE8B3B19A4986C00599C48 /* LHGravityArea.mm in Sources */,
 				6EDE8B3C19A4986C00599C48 /* LHSpriteFrameProperty.m in Sources */,
 				6EDE8B3D19A4986C00599C48 /* LHParallax.m in Sources */,
@@ -873,6 +893,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/LevelHelper2_API.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
@@ -904,7 +925,6 @@
 				DSTROOT = /tmp/LevelHelper2_API.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
 					"LH_USE_BOX2D=1",
 				);
@@ -915,7 +935,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "LevelHelper2-API";
+				PRODUCT_NAME = "LevelHelper2-API_Box2d";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -935,7 +955,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "LevelHelper2-API";
+				PRODUCT_NAME = "LevelHelper2-API_Box2d";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -948,7 +968,6 @@
 				DSTROOT = /tmp/LevelHelper2_API.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
 					"LH_USE_BOX2D=1",
 				);
@@ -959,7 +978,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "LevelHelper2-API";
+				PRODUCT_NAME = "LevelHelper2-API_Box2d_OSX";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -979,7 +998,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "LevelHelper2-API";
+				PRODUCT_NAME = "LevelHelper2-API_Box2d_OSX";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

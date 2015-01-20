@@ -78,8 +78,8 @@ typedef enum
 
 @interface LHNodePhysicsProtocolImp : NSObject
 
-+ (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
-- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
++ (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd scale:(CGPoint)scale;
+- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd scale:(CGPoint)scale;
 - (instancetype)initPhysicsProtocolWithNode:(SKNode*)nd;
 
 -(SKNode*)node;

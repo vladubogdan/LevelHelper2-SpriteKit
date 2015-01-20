@@ -69,95 +69,98 @@
         b2WorldDirty = false;
         _node = nd;
         
-        [_node setName:[dict objectForKey:@"name"]];
-        _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
+        if(dict)
+        {
         
-        //tags loading
-        {
-            NSArray* loadedTags = [dict objectForKey:@"tags"];
-            if(loadedTags){
-                _tags = [[NSMutableArray alloc] initWithArray:loadedTags];
-            }
-        }
-
-        //user properties loading
-        {
-            NSDictionary* userPropInfo  = [dict objectForKey:@"userPropertyInfo"];
-            NSString* userPropClassName = [dict objectForKey:@"userPropertyName"];
-            if(userPropInfo && userPropClassName)
+            [_node setName:[dict objectForKey:@"name"]];
+            _uuid = [[NSString alloc] initWithString:[dict objectForKey:@"uuid"]];
+            
+            //tags loading
             {
-                Class userPropClass = NSClassFromString(userPropClassName);
-                if(userPropClass){
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wundeclared-selector"
-                    _userProperty = [userPropClass performSelector:@selector(customClassInstanceWithNode:)
-                                                        withObject:_node];
-    #pragma clang diagnostic pop
-                    if(_userProperty){
-                        [_userProperty setPropertiesFromDictionary:userPropInfo];
+                NSArray* loadedTags = [dict objectForKey:@"tags"];
+                if(loadedTags){
+                    _tags = [[NSMutableArray alloc] initWithArray:loadedTags];
+                }
+            }
+
+            //user properties loading
+            {
+                NSDictionary* userPropInfo  = [dict objectForKey:@"userPropertyInfo"];
+                NSString* userPropClassName = [dict objectForKey:@"userPropertyName"];
+                if(userPropInfo && userPropClassName)
+                {
+                    Class userPropClass = NSClassFromString(userPropClassName);
+                    if(userPropClass){
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wundeclared-selector"
+                        _userProperty = [userPropClass performSelector:@selector(customClassInstanceWithNode:)
+                                                            withObject:_node];
+        #pragma clang diagnostic pop
+                        if(_userProperty){
+                            [_userProperty setPropertiesFromDictionary:userPropInfo];
+                        }
                     }
                 }
             }
-        }
-        
-        
-        
-        if([dict objectForKey:@"generalPosition"]&&
-           ![_node isKindOfClass:[LHUINode class]] &&
-           ![_node isKindOfClass:[LHBackUINode class]] &&
-           ![_node isKindOfClass:[LHGameWorldNode class]])
-        {
-            CGPoint unitPos = [dict pointForKey:@"generalPosition"];
-            CGPoint pos = [LHUtils positionForNode:_node
-                                          fromUnit:unitPos];
             
             
-            NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
-            if(devPositions)
+            
+            if([dict objectForKey:@"generalPosition"]&&
+               ![_node isKindOfClass:[LHUINode class]] &&
+               ![_node isKindOfClass:[LHBackUINode class]] &&
+               ![_node isKindOfClass:[LHGameWorldNode class]])
             {
+                CGPoint unitPos = [dict pointForKey:@"generalPosition"];
+                CGPoint pos = [LHUtils positionForNode:_node
+                                              fromUnit:unitPos];
                 
-                NSString* unitPosStr = [LHUtils devicePosition:devPositions
-                                                       forSize:LH_SCREEN_RESOLUTION];
                 
-                if(unitPosStr){
-                    CGPoint unitPos = LHPointFromString(unitPosStr);
-                    pos = [LHUtils positionForNode:_node
-                                          fromUnit:unitPos];
+                NSDictionary* devPositions = [dict objectForKey:@"devicePositions"];
+                if(devPositions)
+                {
+                    
+                    NSString* unitPosStr = [LHUtils devicePosition:devPositions
+                                                           forSize:LH_SCREEN_RESOLUTION];
+                    
+                    if(unitPosStr){
+                        CGPoint unitPos = LHPointFromString(unitPosStr);
+                        pos = [LHUtils positionForNode:_node
+                                              fromUnit:unitPos];
+                    }
                 }
-            }
-            
-            if([dict objectForKey:@"anchor"] && [_node respondsToSelector:@selector(anchorPoint)]){
-                CGPoint anchor = [dict pointForKey:@"anchor"];
-                anchor.y = 1.0f - anchor.y;
-                [(LHSprite*)_node setAnchorPoint:anchor];
-            }
+                
+                if([dict objectForKey:@"anchor"] && [_node respondsToSelector:@selector(anchorPoint)]){
+                    CGPoint anchor = [dict pointForKey:@"anchor"];
+                    anchor.y = 1.0f - anchor.y;
+                    [(LHSprite*)_node setAnchorPoint:anchor];
+                }
 
-            SKNode* prnt = [_node parent];
-            if([prnt isKindOfClass:[SKSpriteNode class]]){
-                SKSpriteNode* p = (SKSpriteNode*)prnt;
-                CGPoint anc = [p anchorPoint];
-                pos.x -= p.size.width*(anc.x - 0.5f);
-                pos.y -= p.size.height*(anc.y- 0.5f);
+                SKNode* prnt = [_node parent];
+                if([prnt isKindOfClass:[SKSpriteNode class]]){
+                    SKSpriteNode* p = (SKSpriteNode*)prnt;
+                    CGPoint anc = [p anchorPoint];
+                    pos.x -= p.size.width*(anc.x - 0.5f);
+                    pos.y -= p.size.height*(anc.y- 0.5f);
+                }
+                
+                [_node setPosition:pos];
             }
             
-            [_node setPosition:pos];
+            
+            if([dict objectForKey:@"size"] && [_node respondsToSelector:@selector(setSize:)]){
+                ((SKSpriteNode*)_node).size = [dict sizeForKey:@"size"];
+            }
+            
+            if([dict objectForKey:@"alpha"])
+                [_node setAlpha:[dict floatForKey:@"alpha"]/255.0f];
+            
+            if([dict objectForKey:@"rotation"]){
+                [_node setZRotation:LH_DEGREES_TO_RADIANS(-[dict floatForKey:@"rotation"])];            
+            }
+            
+            if([dict objectForKey:@"zOrder"])
+                [_node setZPosition:[dict floatForKey:@"zOrder"]];
         }
-        
-        
-        if([dict objectForKey:@"size"] && [_node respondsToSelector:@selector(setSize:)]){
-            ((SKSpriteNode*)_node).size = [dict sizeForKey:@"size"];
-        }
-        
-        if([dict objectForKey:@"alpha"])
-            [_node setAlpha:[dict floatForKey:@"alpha"]/255.0f];
-        
-        if([dict objectForKey:@"rotation"]){
-            [_node setZRotation:LH_DEGREES_TO_RADIANS(-[dict floatForKey:@"rotation"])];            
-        }
-        
-        if([dict objectForKey:@"zOrder"])
-            [_node setZPosition:[dict floatForKey:@"zOrder"]];
-        
     }
     return self;
 }

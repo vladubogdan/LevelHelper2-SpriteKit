@@ -33,3 +33,10 @@
 #import "LHBackUINode.h"
 
 #import "LHUtils.h"
+
+#ifdef __cplusplus
+
+#import "LHContactInfo.h"
+#import "LHBodyShape.h"
+
+#endif

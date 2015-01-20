@@ -7,108 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E10F3E01A5A762300FCED3B /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B11A5A762300FCED3B /* BlueRobotSprite.m */; };
-		6E10F3E11A5A762300FCED3B /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B11A5A762300FCED3B /* BlueRobotSprite.m */; };
-		6E10F3E21A5A762300FCED3B /* BlueRobotSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B11A5A762300FCED3B /* BlueRobotSprite.m */; };
-		6E10F3E31A5A762300FCED3B /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B31A5A762300FCED3B /* LHSceneAssetsDemo.mm */; };
-		6E10F3E41A5A762300FCED3B /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B31A5A762300FCED3B /* LHSceneAssetsDemo.mm */; };
-		6E10F3E51A5A762300FCED3B /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B31A5A762300FCED3B /* LHSceneAssetsDemo.mm */; };
-		6E10F3E61A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B51A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm */; };
-		6E10F3E71A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B51A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm */; };
-		6E10F3E81A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B51A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm */; };
-		6E10F3E91A5A762300FCED3B /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B71A5A762300FCED3B /* LHSceneBeziersDemo.mm */; };
-		6E10F3EA1A5A762300FCED3B /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B71A5A762300FCED3B /* LHSceneBeziersDemo.mm */; };
-		6E10F3EB1A5A762300FCED3B /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B71A5A762300FCED3B /* LHSceneBeziersDemo.mm */; };
-		6E10F3EC1A5A762300FCED3B /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B91A5A762300FCED3B /* LHSceneCameraDemo.mm */; };
-		6E10F3ED1A5A762300FCED3B /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B91A5A762300FCED3B /* LHSceneCameraDemo.mm */; };
-		6E10F3EE1A5A762300FCED3B /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3B91A5A762300FCED3B /* LHSceneCameraDemo.mm */; };
-		6E10F3EF1A5A762300FCED3B /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BB1A5A762300FCED3B /* LHSceneCameraFollowDemo.mm */; };
-		6E10F3F01A5A762300FCED3B /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BB1A5A762300FCED3B /* LHSceneCameraFollowDemo.mm */; };
-		6E10F3F11A5A762300FCED3B /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BB1A5A762300FCED3B /* LHSceneCameraFollowDemo.mm */; };
-		6E10F3F21A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BD1A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm */; };
-		6E10F3F31A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BD1A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm */; };
-		6E10F3F41A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BD1A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm */; };
-		6E10F3F51A5A762300FCED3B /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BF1A5A762300FCED3B /* LHSceneCollisionDemo.mm */; };
-		6E10F3F61A5A762300FCED3B /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BF1A5A762300FCED3B /* LHSceneCollisionDemo.mm */; };
-		6E10F3F71A5A762300FCED3B /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3BF1A5A762300FCED3B /* LHSceneCollisionDemo.mm */; };
-		6E10F3F81A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C11A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm */; };
-		6E10F3F91A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C11A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm */; };
-		6E10F3FA1A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C11A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm */; };
-		6E10F3FB1A5A762300FCED3B /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C31A5A762300FCED3B /* LHSceneDemo.mm */; };
-		6E10F3FC1A5A762300FCED3B /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C31A5A762300FCED3B /* LHSceneDemo.mm */; };
-		6E10F3FD1A5A762300FCED3B /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C31A5A762300FCED3B /* LHSceneDemo.mm */; };
-		6E10F3FE1A5A762300FCED3B /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C51A5A762300FCED3B /* LHSceneGravityAreas.mm */; };
-		6E10F3FF1A5A762300FCED3B /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C51A5A762300FCED3B /* LHSceneGravityAreas.mm */; };
-		6E10F4001A5A762300FCED3B /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C51A5A762300FCED3B /* LHSceneGravityAreas.mm */; };
-		6E10F4011A5A762300FCED3B /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C71A5A762300FCED3B /* LHSceneIntroduction.mm */; };
-		6E10F4021A5A762300FCED3B /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C71A5A762300FCED3B /* LHSceneIntroduction.mm */; };
-		6E10F4031A5A762300FCED3B /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C71A5A762300FCED3B /* LHSceneIntroduction.mm */; };
-		6E10F4041A5A762300FCED3B /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C91A5A762300FCED3B /* LHSceneNodePositioningTest.mm */; };
-		6E10F4051A5A762300FCED3B /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C91A5A762300FCED3B /* LHSceneNodePositioningTest.mm */; };
-		6E10F4061A5A762300FCED3B /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3C91A5A762300FCED3B /* LHSceneNodePositioningTest.mm */; };
-		6E10F4071A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CB1A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm */; };
-		6E10F4081A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CB1A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm */; };
-		6E10F4091A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CB1A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm */; };
-		6E10F40A1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CD1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm */; };
-		6E10F40B1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CD1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm */; };
-		6E10F40C1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CD1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm */; };
-		6E10F40D1A5A762300FCED3B /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CF1A5A762300FCED3B /* LHSceneParallaxDemo.mm */; };
-		6E10F40E1A5A762300FCED3B /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CF1A5A762300FCED3B /* LHSceneParallaxDemo.mm */; };
-		6E10F40F1A5A762300FCED3B /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3CF1A5A762300FCED3B /* LHSceneParallaxDemo.mm */; };
-		6E10F4101A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D11A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm */; };
-		6E10F4111A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D11A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm */; };
-		6E10F4121A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D11A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm */; };
-		6E10F4131A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D31A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm */; };
-		6E10F4141A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D31A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm */; };
-		6E10F4151A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D31A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm */; };
-		6E10F4161A5A762300FCED3B /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D51A5A762300FCED3B /* LHSceneRopeJointDemo.mm */; };
-		6E10F4171A5A762300FCED3B /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D51A5A762300FCED3B /* LHSceneRopeJointDemo.mm */; };
-		6E10F4181A5A762300FCED3B /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D51A5A762300FCED3B /* LHSceneRopeJointDemo.mm */; };
-		6E10F4191A5A762300FCED3B /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D71A5A762300FCED3B /* LHSceneShapesDemo.mm */; };
-		6E10F41A1A5A762300FCED3B /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D71A5A762300FCED3B /* LHSceneShapesDemo.mm */; };
-		6E10F41B1A5A762300FCED3B /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D71A5A762300FCED3B /* LHSceneShapesDemo.mm */; };
-		6E10F41C1A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D91A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm */; };
-		6E10F41D1A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D91A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm */; };
-		6E10F41E1A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3D91A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm */; };
-		6E10F41F1A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DB1A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm */; };
-		6E10F4201A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DB1A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm */; };
-		6E10F4211A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DB1A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm */; };
-		6E10F4221A5A762300FCED3B /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DD1A5A762300FCED3B /* LHSceneWaterAreaDemo.mm */; };
-		6E10F4231A5A762300FCED3B /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DD1A5A762300FCED3B /* LHSceneWaterAreaDemo.mm */; };
-		6E10F4241A5A762300FCED3B /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DD1A5A762300FCED3B /* LHSceneWaterAreaDemo.mm */; };
-		6E10F4251A5A762300FCED3B /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DF1A5A762300FCED3B /* MyCustomNode.m */; };
-		6E10F4261A5A762300FCED3B /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DF1A5A762300FCED3B /* MyCustomNode.m */; };
-		6E10F4271A5A762300FCED3B /* MyCustomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F3DF1A5A762300FCED3B /* MyCustomNode.m */; };
-		6E10F42A1A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4281A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE */; };
-		6E10F42B1A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4281A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE */; };
-		6E10F42C1A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4281A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE */; };
-		6E10F42D1A5A764A00FCED3B /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4291A5A764A00FCED3B /* PUBLISH_FOLDER */; };
-		6E10F42E1A5A764A00FCED3B /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4291A5A764A00FCED3B /* PUBLISH_FOLDER */; };
-		6E10F42F1A5A764A00FCED3B /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4291A5A764A00FCED3B /* PUBLISH_FOLDER */; };
-		6E10F4311A5A766D00FCED3B /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E10F4301A5A766D00FCED3B /* libLevelHelper2-API.a */; };
-		6E10F4371A5A77F100FCED3B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F4361A5A77F100FCED3B /* ViewController.mm */; };
-		6E10F4381A5A77F100FCED3B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F4361A5A77F100FCED3B /* ViewController.mm */; };
-		6E10F43B1A5A77FF00FCED3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F43A1A5A77FF00FCED3B /* AppDelegate.m */; };
-		6E10F43C1A5A77FF00FCED3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F43A1A5A77FF00FCED3B /* AppDelegate.m */; };
-		6E10F43E1A5A780C00FCED3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F43D1A5A780C00FCED3B /* main.m */; };
-		6E10F43F1A5A780C00FCED3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F43D1A5A780C00FCED3B /* main.m */; };
-		6E10F4411A5A783800FCED3B /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E10F4401A5A783800FCED3B /* libBox2D.a */; };
-		6E10F4431A5A785F00FCED3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4421A5A785F00FCED3B /* Images.xcassets */; };
-		6E10F4441A5A785F00FCED3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4421A5A785F00FCED3B /* Images.xcassets */; };
-		6E10F4451A5A785F00FCED3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4421A5A785F00FCED3B /* Images.xcassets */; };
-		6E10F44A1A5A788300FCED3B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4461A5A788300FCED3B /* Main_iPad.storyboard */; };
-		6E10F44B1A5A788300FCED3B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4461A5A788300FCED3B /* Main_iPad.storyboard */; };
-		6E10F44C1A5A788300FCED3B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4481A5A788300FCED3B /* Main_iPhone.storyboard */; };
-		6E10F44D1A5A788300FCED3B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F4481A5A788300FCED3B /* Main_iPhone.storyboard */; };
-		6E10F4511A5A78B500FCED3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F44F1A5A78B500FCED3B /* InfoPlist.strings */; };
-		6E10F4521A5A78B500FCED3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F44F1A5A78B500FCED3B /* InfoPlist.strings */; };
-		6E10F4531A5A78B500FCED3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F44F1A5A78B500FCED3B /* InfoPlist.strings */; };
-		6E10F4581A5A79B600FCED3B /* AppDelegateMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F4571A5A79B600FCED3B /* AppDelegateMac.mm */; };
-		6E10F45A1A5A79D100FCED3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10F4591A5A79D100FCED3B /* main.m */; };
-		6E10F45C1A5A79DC00FCED3B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E10F45B1A5A79DC00FCED3B /* MainMenu.xib */; };
-		6E10F45E1A5A79EC00FCED3B /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E10F45D1A5A79EC00FCED3B /* libLevelHelper2-API.a */; };
-		6E10F4601A5A79F000FCED3B /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E10F45F1A5A79F000FCED3B /* libBox2D.a */; };
-		6E10F4621A5A7A3000FCED3B /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E10F4611A5A7A3000FCED3B /* libLevelHelper2-API.a */; };
+		6E2BADAB1A6E84BC0089B2E4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */; };
+		6E2BADAC1A6E84BC0089B2E4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */; };
+		6E2BADAF1A6E84D80089B2E4 /* AppDelegateMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADAE1A6E84D80089B2E4 /* AppDelegateMac.mm */; };
+		6E2BADB21A6E84E40089B2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */; };
+		6E2BADB31A6E84E40089B2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */; };
+		6E2BADB81A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */; };
+		6E2BADB91A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */; };
+		6E2BADBA1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */; };
+		6E2BADBB1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */; };
+		6E2BADBF1A6E85360089B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADBC1A6E85360089B2E4 /* main.m */; };
+		6E2BADC01A6E85360089B2E4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADBD1A6E85360089B2E4 /* MainMenu.xib */; };
+		6E2BADC21A6E85490089B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADC11A6E85490089B2E4 /* main.m */; };
+		6E2BADC31A6E85490089B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADC11A6E85490089B2E4 /* main.m */; };
+		6E2BADC61A6E855E0089B2E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */; };
+		6E2BADC71A6E855E0089B2E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */; };
+		6E2BADC81A6E855E0089B2E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */; };
+		6E2BADCA1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E2BADCB1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E2BADCC1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
 		6E72A6081983747F00143439 /* Info-Box2d.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33A1959C01800726044 /* Info-Box2d.plist */; };
 		6E72A6611983770000143439 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E72A6601983770000143439 /* Cocoa.framework */; };
 		6E72A6631983770700143439 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E72A6621983770700143439 /* SpriteKit.framework */; };
@@ -121,83 +38,218 @@
 		6EBEA32C1959BFD000726044 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCFC192E0A390040478F /* SpriteKit.framework */; };
 		6EBEA32D1959BFD000726044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCF6192E0A390040478F /* Foundation.framework */; };
 		6EBEA33B1959C01800726044 /* Info-Box2d.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33A1959C01800726044 /* Info-Box2d.plist */; };
+		6ECA5F8C1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */; };
+		6ECA5F8D1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */; };
+		6ECA5F8E1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */; };
+		6ECA5F9B1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */; };
+		6ECA5F9C1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */; };
+		6ECA5F9D1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */; };
+		6EDACBA71A6E833400BE3867 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */; };
+		6EDACBA81A6E833400BE3867 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */; };
+		6EDACBA91A6E833400BE3867 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */; };
+		6EDACBAA1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */; };
+		6EDACBAB1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */; };
+		6EDACBAC1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */; };
+		6EDACBAD1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */; };
+		6EDACBAE1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */; };
+		6EDACBAF1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */; };
+		6EDACBB01A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */; };
+		6EDACBB11A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */; };
+		6EDACBB21A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */; };
+		6EDACBB31A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */; };
+		6EDACBB41A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */; };
+		6EDACBB51A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */; };
+		6EDACBB61A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */; };
+		6EDACBB71A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */; };
+		6EDACBB81A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */; };
+		6EDACBB91A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */; };
+		6EDACBBA1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */; };
+		6EDACBBB1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */; };
+		6EDACBBC1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */; };
+		6EDACBBD1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */; };
+		6EDACBBE1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */; };
+		6EDACBBF1A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */; };
+		6EDACBC01A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */; };
+		6EDACBC11A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */; };
+		6EDACBC21A6E833400BE3867 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */; };
+		6EDACBC31A6E833400BE3867 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */; };
+		6EDACBC41A6E833400BE3867 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */; };
+		6EDACBC51A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */; };
+		6EDACBC61A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */; };
+		6EDACBC71A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */; };
+		6EDACBC81A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */; };
+		6EDACBC91A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */; };
+		6EDACBCA1A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */; };
+		6EDACBCB1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */; };
+		6EDACBCC1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */; };
+		6EDACBCD1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */; };
+		6EDACBCE1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */; };
+		6EDACBCF1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */; };
+		6EDACBD01A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */; };
+		6EDACBD11A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */; };
+		6EDACBD21A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */; };
+		6EDACBD31A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */; };
+		6EDACBD41A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */; };
+		6EDACBD51A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */; };
+		6EDACBD61A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */; };
+		6EDACBD71A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */; };
+		6EDACBD81A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */; };
+		6EDACBD91A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */; };
+		6EDACBDA1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */; };
+		6EDACBDB1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */; };
+		6EDACBDC1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */; };
+		6EDACBDD1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */; };
+		6EDACBDE1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */; };
+		6EDACBDF1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */; };
+		6EDACBE01A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */; };
+		6EDACBE11A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */; };
+		6EDACBE21A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */; };
+		6EDACBE31A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */; };
+		6EDACBE41A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */; };
+		6EDACBE51A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */; };
+		6EDACBE61A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */; };
+		6EDACBE71A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */; };
+		6EDACBE81A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */; };
+		6EDACBE91A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */; };
+		6EDACBEA1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */; };
+		6EDACBEB1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */; };
+		6EDACBEC1A6E833400BE3867 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */; };
+		6EDACBED1A6E833400BE3867 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */; };
+		6EDACBEE1A6E833400BE3867 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */; };
+		6EDACBF01A6E834700BE3867 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */; };
+		6EDACBF11A6E834700BE3867 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */; };
+		6EDACBF21A6E834700BE3867 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */; };
+		6EDACC051A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */; };
+		6EDACC061A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */; };
+		6EDACC071A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */; };
+		6EDACC081A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */; };
+		6EDACC091A6E835100BE3867 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */; };
+		6EDACC0A1A6E835100BE3867 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */; };
+		6EDACC0B1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */; };
+		6EDACC0C1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */; };
+		6EDACC0D1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */; };
+		6EDACC0E1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */; };
+		6EDACC0F1A6E835100BE3867 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF91A6E835100BE3867 /* Default.png */; };
+		6EDACC101A6E835100BE3867 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF91A6E835100BE3867 /* Default.png */; };
+		6EDACC111A6E835100BE3867 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFA1A6E835100BE3867 /* Default@2x.png */; };
+		6EDACC121A6E835100BE3867 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFA1A6E835100BE3867 /* Default@2x.png */; };
+		6EDACC131A6E835100BE3867 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFB1A6E835100BE3867 /* iPad-old.png */; };
+		6EDACC141A6E835100BE3867 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFB1A6E835100BE3867 /* iPad-old.png */; };
+		6EDACC151A6E835100BE3867 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */; };
+		6EDACC161A6E835100BE3867 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */; };
+		6EDACC171A6E835100BE3867 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFD1A6E835100BE3867 /* iPad.png */; };
+		6EDACC181A6E835100BE3867 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFD1A6E835100BE3867 /* iPad.png */; };
+		6EDACC191A6E835100BE3867 /* iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFE1A6E835100BE3867 /* iPad@2x.png */; };
+		6EDACC1A1A6E835100BE3867 /* iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFE1A6E835100BE3867 /* iPad@2x.png */; };
+		6EDACC1B1A6E835100BE3867 /* iPhone-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFF1A6E835100BE3867 /* iPhone-old.png */; };
+		6EDACC1C1A6E835100BE3867 /* iPhone-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFF1A6E835100BE3867 /* iPhone-old.png */; };
+		6EDACC1D1A6E835100BE3867 /* iPhone-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */; };
+		6EDACC1E1A6E835100BE3867 /* iPhone-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */; };
+		6EDACC1F1A6E835100BE3867 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC011A6E835100BE3867 /* iPhone.png */; };
+		6EDACC201A6E835100BE3867 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC011A6E835100BE3867 /* iPhone.png */; };
+		6EDACC211A6E835100BE3867 /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC021A6E835100BE3867 /* iPhone@2x.png */; };
+		6EDACC221A6E835100BE3867 /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC021A6E835100BE3867 /* iPhone@2x.png */; };
+		6EDACC231A6E835100BE3867 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC031A6E835100BE3867 /* Settings.png */; };
+		6EDACC241A6E835100BE3867 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC031A6E835100BE3867 /* Settings.png */; };
+		6EDACC251A6E835100BE3867 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC041A6E835100BE3867 /* Settings@2x.png */; };
+		6EDACC261A6E835100BE3867 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC041A6E835100BE3867 /* Settings@2x.png */; };
+		6EDACC291A6E837300BE3867 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB681A6E830700BE3867 /* libBox2D.a */; };
+		6EDACC2A1A6E837800BE3867 /* libLevelHelper2-API_Box2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB741A6E831000BE3867 /* libLevelHelper2-API_Box2d.a */; };
+		6EDACC2B1A6E837D00BE3867 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB6A1A6E830700BE3867 /* libBox2D.a */; };
+		6EDACC2C1A6E838200BE3867 /* libLevelHelper2-API_Box2d_OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB761A6E831000BE3867 /* libLevelHelper2-API_Box2d_OSX.a */; };
+		6EDACC2D1A6E838A00BE3867 /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB721A6E831000BE3867 /* libLevelHelper2-API.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6E2BADD81A6E885E0089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE88E219A48EEF00599C48;
+			remoteInfo = Box2D;
+		};
+		6E2BADDA1A6E88640089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE8B1019A4986C00599C48;
+			remoteInfo = "LevelHelper2-API+Box2d-OSX";
+		};
+		6E2BADDC1A6E88640089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE8AA419A4976900599C48;
+			remoteInfo = "Box2D-OSX";
+		};
+		6E2BADDE1A6E886C0089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE843819A483A200599C48;
+			remoteInfo = "LevelHelper2-API";
+		};
+		6E2BADE01A6E89110089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE86AA19A4898100599C48;
+			remoteInfo = "LevelHelper2-API+Box2d";
+		};
+		6EDACB671A6E830700BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE88E319A48EEF00599C48;
+			remoteInfo = Box2D;
+		};
+		6EDACB691A6E830700BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE8B0F19A4976900599C48;
+			remoteInfo = "Box2D-OSX";
+		};
+		6EDACB711A6E831000BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE843919A483A200599C48;
+			remoteInfo = "LevelHelper2-API";
+		};
+		6EDACB731A6E831000BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE871519A4898100599C48;
+			remoteInfo = "LevelHelper2-API+Box2d";
+		};
+		6EDACB751A6E831000BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE8B7C19A4986C00599C48;
+			remoteInfo = "LevelHelper2-API+Box2d-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		6E10F3B01A5A762300FCED3B /* BlueRobotSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueRobotSprite.h; sourceTree = "<group>"; };
-		6E10F3B11A5A762300FCED3B /* BlueRobotSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueRobotSprite.m; sourceTree = "<group>"; };
-		6E10F3B21A5A762300FCED3B /* LHSceneAssetsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetsDemo.h; sourceTree = "<group>"; };
-		6E10F3B31A5A762300FCED3B /* LHSceneAssetsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetsDemo.mm; sourceTree = "<group>"; };
-		6E10F3B41A5A762300FCED3B /* LHSceneAssetWithJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneAssetWithJointsDemo.h; sourceTree = "<group>"; };
-		6E10F3B51A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneAssetWithJointsDemo.mm; sourceTree = "<group>"; };
-		6E10F3B61A5A762300FCED3B /* LHSceneBeziersDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneBeziersDemo.h; sourceTree = "<group>"; };
-		6E10F3B71A5A762300FCED3B /* LHSceneBeziersDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneBeziersDemo.mm; sourceTree = "<group>"; };
-		6E10F3B81A5A762300FCED3B /* LHSceneCameraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraDemo.h; sourceTree = "<group>"; };
-		6E10F3B91A5A762300FCED3B /* LHSceneCameraDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraDemo.mm; sourceTree = "<group>"; };
-		6E10F3BA1A5A762300FCED3B /* LHSceneCameraFollowDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCameraFollowDemo.h; sourceTree = "<group>"; };
-		6E10F3BB1A5A762300FCED3B /* LHSceneCameraFollowDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCameraFollowDemo.mm; sourceTree = "<group>"; };
-		6E10F3BC1A5A762300FCED3B /* LHSceneCharacterAnimationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCharacterAnimationDemo.h; sourceTree = "<group>"; };
-		6E10F3BD1A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCharacterAnimationDemo.mm; sourceTree = "<group>"; };
-		6E10F3BE1A5A762300FCED3B /* LHSceneCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionDemo.h; sourceTree = "<group>"; };
-		6E10F3BF1A5A762300FCED3B /* LHSceneCollisionDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionDemo.mm; sourceTree = "<group>"; };
-		6E10F3C01A5A762300FCED3B /* LHSceneCollisionFilteringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneCollisionFilteringDemo.h; sourceTree = "<group>"; };
-		6E10F3C11A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneCollisionFilteringDemo.mm; sourceTree = "<group>"; };
-		6E10F3C21A5A762300FCED3B /* LHSceneDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneDemo.h; sourceTree = "<group>"; };
-		6E10F3C31A5A762300FCED3B /* LHSceneDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneDemo.mm; sourceTree = "<group>"; };
-		6E10F3C41A5A762300FCED3B /* LHSceneGravityAreas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneGravityAreas.h; sourceTree = "<group>"; };
-		6E10F3C51A5A762300FCED3B /* LHSceneGravityAreas.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneGravityAreas.mm; sourceTree = "<group>"; };
-		6E10F3C61A5A762300FCED3B /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneIntroduction.h; sourceTree = "<group>"; };
-		6E10F3C71A5A762300FCED3B /* LHSceneIntroduction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneIntroduction.mm; sourceTree = "<group>"; };
-		6E10F3C81A5A762300FCED3B /* LHSceneNodePositioningTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneNodePositioningTest.h; sourceTree = "<group>"; };
-		6E10F3C91A5A762300FCED3B /* LHSceneNodePositioningTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneNodePositioningTest.mm; sourceTree = "<group>"; };
-		6E10F3CA1A5A762300FCED3B /* LHSceneNodesSubclassingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneNodesSubclassingTest.h; sourceTree = "<group>"; };
-		6E10F3CB1A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneNodesSubclassingTest.mm; sourceTree = "<group>"; };
-		6E10F3CC1A5A762300FCED3B /* LHSceneOtherJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneOtherJointsDemo.h; sourceTree = "<group>"; };
-		6E10F3CD1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneOtherJointsDemo.mm; sourceTree = "<group>"; };
-		6E10F3CE1A5A762300FCED3B /* LHSceneParallaxDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneParallaxDemo.h; sourceTree = "<group>"; };
-		6E10F3CF1A5A762300FCED3B /* LHSceneParallaxDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneParallaxDemo.mm; sourceTree = "<group>"; };
-		6E10F3D01A5A762300FCED3B /* LHScenePhysicsBodiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHScenePhysicsBodiesDemo.h; sourceTree = "<group>"; };
-		6E10F3D11A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHScenePhysicsBodiesDemo.mm; sourceTree = "<group>"; };
-		6E10F3D21A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRemoveOnCollisionDemo.h; sourceTree = "<group>"; };
-		6E10F3D31A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRemoveOnCollisionDemo.mm; sourceTree = "<group>"; };
-		6E10F3D41A5A762300FCED3B /* LHSceneRopeJointDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneRopeJointDemo.h; sourceTree = "<group>"; };
-		6E10F3D51A5A762300FCED3B /* LHSceneRopeJointDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneRopeJointDemo.mm; sourceTree = "<group>"; };
-		6E10F3D61A5A762300FCED3B /* LHSceneShapesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneShapesDemo.h; sourceTree = "<group>"; };
-		6E10F3D71A5A762300FCED3B /* LHSceneShapesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneShapesDemo.mm; sourceTree = "<group>"; };
-		6E10F3D81A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneSpriteSheetAnimationDemo.h; sourceTree = "<group>"; };
-		6E10F3D91A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneSpriteSheetAnimationDemo.mm; sourceTree = "<group>"; };
-		6E10F3DA1A5A762300FCED3B /* LHSceneUserPropertiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneUserPropertiesDemo.h; sourceTree = "<group>"; };
-		6E10F3DB1A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneUserPropertiesDemo.mm; sourceTree = "<group>"; };
-		6E10F3DC1A5A762300FCED3B /* LHSceneWaterAreaDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSceneWaterAreaDemo.h; sourceTree = "<group>"; };
-		6E10F3DD1A5A762300FCED3B /* LHSceneWaterAreaDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHSceneWaterAreaDemo.mm; sourceTree = "<group>"; };
-		6E10F3DE1A5A762300FCED3B /* MyCustomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomNode.h; sourceTree = "<group>"; };
-		6E10F3DF1A5A762300FCED3B /* MyCustomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomNode.m; sourceTree = "<group>"; };
-		6E10F4281A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE */ = {isa = PBXFileReference; lastKnownFileType = folder; path = INDIVIDUAL_IMAGES_EXAMPLE; sourceTree = SOURCE_ROOT; };
-		6E10F4291A5A764A00FCED3B /* PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PUBLISH_FOLDER; sourceTree = SOURCE_ROOT; };
-		6E10F4301A5A766D00FCED3B /* libLevelHelper2-API.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLevelHelper2-API.a"; path = "../LevelHelper2-API/build/Debug-iphoneos/libLevelHelper2-API.a"; sourceTree = "<group>"; };
-		6E10F4351A5A77F100FCED3B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = SOURCE_ROOT; };
-		6E10F4361A5A77F100FCED3B /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = SOURCE_ROOT; };
-		6E10F4391A5A77FF00FCED3B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		6E10F43A1A5A77FF00FCED3B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		6E10F43D1A5A780C00FCED3B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
-		6E10F4401A5A783800FCED3B /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = "../Box2D/build/Debug-iphoneos/libBox2D.a"; sourceTree = "<group>"; };
-		6E10F4421A5A785F00FCED3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
-		6E10F4471A5A788300FCED3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = SOURCE_ROOT; };
-		6E10F4491A5A788300FCED3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
-		6E10F4501A5A78B500FCED3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		6E10F4551A5A793400FCED3B /* SpriteKitMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SpriteKitMac-Prefix.pch"; path = "MacOS/SpriteKitMac-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		6E10F4561A5A79B600FCED3B /* AppDelegateMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateMac.h; sourceTree = SOURCE_ROOT; };
-		6E10F4571A5A79B600FCED3B /* AppDelegateMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateMac.mm; sourceTree = SOURCE_ROOT; };
-		6E10F4591A5A79D100FCED3B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MacOS/main.m; sourceTree = SOURCE_ROOT; };
-		6E10F45B1A5A79DC00FCED3B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = MacOS/MainMenu.xib; sourceTree = SOURCE_ROOT; };
-		6E10F45D1A5A79EC00FCED3B /* libLevelHelper2-API.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLevelHelper2-API.a"; path = "../LevelHelper2-API/build/Debug/libLevelHelper2-API.a"; sourceTree = "<group>"; };
-		6E10F45F1A5A79F000FCED3B /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBox2D.a; path = ../Box2D/build/Debug/libBox2D.a; sourceTree = "<group>"; };
-		6E10F4611A5A7A3000FCED3B /* libLevelHelper2-API.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLevelHelper2-API.a"; path = "../LevelHelper2-API/build/Release-iphoneos/libLevelHelper2-API.a"; sourceTree = "<group>"; };
-		6E10F4631A5A7A5F00FCED3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
-		6E6A02501A5A828000B85B26 /* HOW_TO_REMOVE_DEMOS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HOW_TO_REMOVE_DEMOS.md; sourceTree = "<group>"; };
-		6E6A02511A5A828000B85B26 /* LH_DEMO_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_DEMO_VERSION.plist; sourceTree = "<group>"; };
+		6E2BADA91A6E84BC0089B2E4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = SOURCE_ROOT; };
+		6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = SOURCE_ROOT; };
+		6E2BADAD1A6E84D80089B2E4 /* AppDelegateMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateMac.h; sourceTree = SOURCE_ROOT; };
+		6E2BADAE1A6E84D80089B2E4 /* AppDelegateMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateMac.mm; sourceTree = SOURCE_ROOT; };
+		6E2BADB01A6E84E40089B2E4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		6E2BADB51A6E84F80089B2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = SOURCE_ROOT; };
+		6E2BADB71A6E84F80089B2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
+		6E2BADBC1A6E85360089B2E4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MacOS/main.m; sourceTree = SOURCE_ROOT; };
+		6E2BADBD1A6E85360089B2E4 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = MacOS/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		6E2BADC11A6E85490089B2E4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		6E2BADC51A6E855E0089B2E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */ = {isa = PBXFileReference; lastKnownFileType = folder; path = INDIVIDUAL_IMAGES_EXAMPLE; sourceTree = SOURCE_ROOT; };
+		6E2BADCE1A6E85C70089B2E4 /* SpriteKitMac-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SpriteKitMac-Prefix.pch"; path = "MacOS/SpriteKitMac-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		6E72A60F1983747F00143439 /* DEMOS + Box2d - MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMOS + Box2d - MacOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E72A6101983748000143439 /* Info-Box2d-Mac.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Box2d-Mac.plist"; path = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/DEMOS/Info-Box2d-Mac.plist"; sourceTree = "<absolute>"; };
+		6E72A6101983748000143439 /* Info-Box2d-Mac.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Box2d-Mac.plist"; path = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/Info-Box2d-Mac.plist"; sourceTree = "<absolute>"; };
 		6E72A6601983770000143439 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		6E72A6621983770700143439 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
 		6E89FCF3192E0A390040478F /* DEMOS - iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMOS - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,9 +257,84 @@
 		6E89FCF8192E0A390040478F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6E89FCFA192E0A390040478F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6E89FCFC192E0A390040478F /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		6E89FD00192E0A390040478F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E89FD1F192E0A390040478F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6EBEA3381959BFD000726044 /* DEMOS+Box2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMOS+Box2d.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBEA33A1959C01800726044 /* Info-Box2d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Box2d.plist"; sourceTree = SOURCE_ROOT; };
+		6ECA5F8A1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAdvancedPhysicsDemo.h; path = SourceCode/LHSceneAdvancedPhysicsDemo.h; sourceTree = SOURCE_ROOT; };
+		6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAdvancedPhysicsDemo.mm; path = SourceCode/LHSceneAdvancedPhysicsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6ECA5F991A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneOnTheFlySpritesWithPhysicsDemo.h; path = SourceCode/LHSceneOnTheFlySpritesWithPhysicsDemo.h; sourceTree = SOURCE_ROOT; };
+		6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneOnTheFlySpritesWithPhysicsDemo.mm; path = SourceCode/LHSceneOnTheFlySpritesWithPhysicsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
+		6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "../LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
+		6EDACB771A6E833400BE3867 /* BlueRobotSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueRobotSprite.h; path = SourceCode/BlueRobotSprite.h; sourceTree = SOURCE_ROOT; };
+		6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlueRobotSprite.mm; path = SourceCode/BlueRobotSprite.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB791A6E833400BE3867 /* LHSceneAssetsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAssetsDemo.h; path = SourceCode/LHSceneAssetsDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAssetsDemo.mm; path = SourceCode/LHSceneAssetsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB7B1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAssetWithJointsDemo.h; path = SourceCode/LHSceneAssetWithJointsDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAssetWithJointsDemo.mm; path = SourceCode/LHSceneAssetWithJointsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB7D1A6E833400BE3867 /* LHSceneBeziersDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneBeziersDemo.h; path = SourceCode/LHSceneBeziersDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneBeziersDemo.mm; path = SourceCode/LHSceneBeziersDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB7F1A6E833400BE3867 /* LHSceneCameraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCameraDemo.h; path = SourceCode/LHSceneCameraDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCameraDemo.mm; path = SourceCode/LHSceneCameraDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB811A6E833400BE3867 /* LHSceneCameraFollowDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCameraFollowDemo.h; path = SourceCode/LHSceneCameraFollowDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCameraFollowDemo.mm; path = SourceCode/LHSceneCameraFollowDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB831A6E833400BE3867 /* LHSceneCharacterAnimationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCharacterAnimationDemo.h; path = SourceCode/LHSceneCharacterAnimationDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCharacterAnimationDemo.mm; path = SourceCode/LHSceneCharacterAnimationDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB851A6E833400BE3867 /* LHSceneCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCollisionDemo.h; path = SourceCode/LHSceneCollisionDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCollisionDemo.mm; path = SourceCode/LHSceneCollisionDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB871A6E833400BE3867 /* LHSceneCollisionFilteringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCollisionFilteringDemo.h; path = SourceCode/LHSceneCollisionFilteringDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCollisionFilteringDemo.mm; path = SourceCode/LHSceneCollisionFilteringDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB891A6E833400BE3867 /* LHSceneDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneDemo.h; path = SourceCode/LHSceneDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneDemo.mm; path = SourceCode/LHSceneDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB8B1A6E833400BE3867 /* LHSceneGravityAreas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneGravityAreas.h; path = SourceCode/LHSceneGravityAreas.h; sourceTree = SOURCE_ROOT; };
+		6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneGravityAreas.mm; path = SourceCode/LHSceneGravityAreas.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB8D1A6E833400BE3867 /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneIntroduction.h; path = SourceCode/LHSceneIntroduction.h; sourceTree = SOURCE_ROOT; };
+		6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneIntroduction.mm; path = SourceCode/LHSceneIntroduction.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB8F1A6E833400BE3867 /* LHSceneNodePositioningTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneNodePositioningTest.h; path = SourceCode/LHSceneNodePositioningTest.h; sourceTree = SOURCE_ROOT; };
+		6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneNodePositioningTest.mm; path = SourceCode/LHSceneNodePositioningTest.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB911A6E833400BE3867 /* LHSceneNodesSubclassingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneNodesSubclassingTest.h; path = SourceCode/LHSceneNodesSubclassingTest.h; sourceTree = SOURCE_ROOT; };
+		6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneNodesSubclassingTest.mm; path = SourceCode/LHSceneNodesSubclassingTest.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB931A6E833400BE3867 /* LHSceneOtherJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneOtherJointsDemo.h; path = SourceCode/LHSceneOtherJointsDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneOtherJointsDemo.mm; path = SourceCode/LHSceneOtherJointsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB951A6E833400BE3867 /* LHSceneParallaxDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneParallaxDemo.h; path = SourceCode/LHSceneParallaxDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneParallaxDemo.mm; path = SourceCode/LHSceneParallaxDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB971A6E833400BE3867 /* LHScenePhysicsBodiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHScenePhysicsBodiesDemo.h; path = SourceCode/LHScenePhysicsBodiesDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHScenePhysicsBodiesDemo.mm; path = SourceCode/LHScenePhysicsBodiesDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB991A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneRemoveOnCollisionDemo.h; path = SourceCode/LHSceneRemoveOnCollisionDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneRemoveOnCollisionDemo.mm; path = SourceCode/LHSceneRemoveOnCollisionDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB9B1A6E833400BE3867 /* LHSceneRopeJointDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneRopeJointDemo.h; path = SourceCode/LHSceneRopeJointDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneRopeJointDemo.mm; path = SourceCode/LHSceneRopeJointDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB9D1A6E833400BE3867 /* LHSceneShapesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneShapesDemo.h; path = SourceCode/LHSceneShapesDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneShapesDemo.mm; path = SourceCode/LHSceneShapesDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB9F1A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSpriteSheetAnimationDemo.h; path = SourceCode/LHSceneSpriteSheetAnimationDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSpriteSheetAnimationDemo.mm; path = SourceCode/LHSceneSpriteSheetAnimationDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBA11A6E833400BE3867 /* LHSceneUserPropertiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneUserPropertiesDemo.h; path = SourceCode/LHSceneUserPropertiesDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneUserPropertiesDemo.mm; path = SourceCode/LHSceneUserPropertiesDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBA31A6E833400BE3867 /* LHSceneWaterAreaDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneWaterAreaDemo.h; path = SourceCode/LHSceneWaterAreaDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneWaterAreaDemo.mm; path = SourceCode/LHSceneWaterAreaDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBA51A6E833400BE3867 /* MyCustomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomNode.h; path = SourceCode/MyCustomNode.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCustomNode.mm; path = SourceCode/MyCustomNode.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PUBLISH_FOLDER; sourceTree = SOURCE_ROOT; };
+		6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-375w-667h@2x~iphone.png"; sourceTree = "<group>"; };
+		6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-414w-736h@3x~iphone.png"; sourceTree = "<group>"; };
+		6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		6EDACBF91A6E835100BE3867 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6EDACBFA1A6E835100BE3867 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6EDACBFB1A6E835100BE3867 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-old.png"; sourceTree = "<group>"; };
+		6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-old@2x.png"; sourceTree = "<group>"; };
+		6EDACBFD1A6E835100BE3867 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
+		6EDACBFE1A6E835100BE3867 /* iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad@2x.png"; sourceTree = "<group>"; };
+		6EDACBFF1A6E835100BE3867 /* iPhone-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-old.png"; sourceTree = "<group>"; };
+		6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-old@2x.png"; sourceTree = "<group>"; };
+		6EDACC011A6E835100BE3867 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		6EDACC021A6E835100BE3867 /* iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone@2x.png"; sourceTree = "<group>"; };
+		6EDACC031A6E835100BE3867 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		6EDACC041A6E835100BE3867 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
+		6EDACC271A6E836500BE3867 /* HOW_TO_REMOVE_DEMOS.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = HOW_TO_REMOVE_DEMOS.md; sourceTree = "<group>"; };
+		6EDACC281A6E836500BE3867 /* LH_DEMO_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_DEMO_VERSION.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,8 +342,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E10F4601A5A79F000FCED3B /* libBox2D.a in Frameworks */,
-				6E10F45E1A5A79EC00FCED3B /* libLevelHelper2-API.a in Frameworks */,
+				6EDACC2C1A6E838200BE3867 /* libLevelHelper2-API_Box2d_OSX.a in Frameworks */,
+				6EDACC2B1A6E837D00BE3867 /* libBox2D.a in Frameworks */,
 				6E72A6631983770700143439 /* SpriteKit.framework in Frameworks */,
 				6E72A6611983770000143439 /* Cocoa.framework in Frameworks */,
 			);
@@ -226,7 +353,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E10F4621A5A7A3000FCED3B /* libLevelHelper2-API.a in Frameworks */,
+				6EDACC2D1A6E838A00BE3867 /* libLevelHelper2-API.a in Frameworks */,
 				6E89FCF9192E0A390040478F /* CoreGraphics.framework in Frameworks */,
 				6E89FCFB192E0A390040478F /* UIKit.framework in Frameworks */,
 				6E89FCFD192E0A390040478F /* SpriteKit.framework in Frameworks */,
@@ -238,8 +365,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E10F4411A5A783800FCED3B /* libBox2D.a in Frameworks */,
-				6E10F4311A5A766D00FCED3B /* libLevelHelper2-API.a in Frameworks */,
+				6EDACC2A1A6E837800BE3867 /* libLevelHelper2-API_Box2d.a in Frameworks */,
+				6EDACC291A6E837300BE3867 /* libBox2D.a in Frameworks */,
 				6EBEA32A1959BFD000726044 /* CoreGraphics.framework in Frameworks */,
 				6EBEA32B1959BFD000726044 /* UIKit.framework in Frameworks */,
 				6EBEA32C1959BFD000726044 /* SpriteKit.framework in Frameworks */,
@@ -250,67 +377,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E10F3AF1A5A762300FCED3B /* SourceCode */ = {
-			isa = PBXGroup;
-			children = (
-				6E10F3B01A5A762300FCED3B /* BlueRobotSprite.h */,
-				6E10F3B11A5A762300FCED3B /* BlueRobotSprite.m */,
-				6E10F3B21A5A762300FCED3B /* LHSceneAssetsDemo.h */,
-				6E10F3B31A5A762300FCED3B /* LHSceneAssetsDemo.mm */,
-				6E10F3B41A5A762300FCED3B /* LHSceneAssetWithJointsDemo.h */,
-				6E10F3B51A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm */,
-				6E10F3B61A5A762300FCED3B /* LHSceneBeziersDemo.h */,
-				6E10F3B71A5A762300FCED3B /* LHSceneBeziersDemo.mm */,
-				6E10F3B81A5A762300FCED3B /* LHSceneCameraDemo.h */,
-				6E10F3B91A5A762300FCED3B /* LHSceneCameraDemo.mm */,
-				6E10F3BA1A5A762300FCED3B /* LHSceneCameraFollowDemo.h */,
-				6E10F3BB1A5A762300FCED3B /* LHSceneCameraFollowDemo.mm */,
-				6E10F3BC1A5A762300FCED3B /* LHSceneCharacterAnimationDemo.h */,
-				6E10F3BD1A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm */,
-				6E10F3BE1A5A762300FCED3B /* LHSceneCollisionDemo.h */,
-				6E10F3BF1A5A762300FCED3B /* LHSceneCollisionDemo.mm */,
-				6E10F3C01A5A762300FCED3B /* LHSceneCollisionFilteringDemo.h */,
-				6E10F3C11A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm */,
-				6E10F3C21A5A762300FCED3B /* LHSceneDemo.h */,
-				6E10F3C31A5A762300FCED3B /* LHSceneDemo.mm */,
-				6E10F3C41A5A762300FCED3B /* LHSceneGravityAreas.h */,
-				6E10F3C51A5A762300FCED3B /* LHSceneGravityAreas.mm */,
-				6E10F3C61A5A762300FCED3B /* LHSceneIntroduction.h */,
-				6E10F3C71A5A762300FCED3B /* LHSceneIntroduction.mm */,
-				6E10F3C81A5A762300FCED3B /* LHSceneNodePositioningTest.h */,
-				6E10F3C91A5A762300FCED3B /* LHSceneNodePositioningTest.mm */,
-				6E10F3CA1A5A762300FCED3B /* LHSceneNodesSubclassingTest.h */,
-				6E10F3CB1A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm */,
-				6E10F3CC1A5A762300FCED3B /* LHSceneOtherJointsDemo.h */,
-				6E10F3CD1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm */,
-				6E10F3CE1A5A762300FCED3B /* LHSceneParallaxDemo.h */,
-				6E10F3CF1A5A762300FCED3B /* LHSceneParallaxDemo.mm */,
-				6E10F3D01A5A762300FCED3B /* LHScenePhysicsBodiesDemo.h */,
-				6E10F3D11A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm */,
-				6E10F3D21A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.h */,
-				6E10F3D31A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm */,
-				6E10F3D41A5A762300FCED3B /* LHSceneRopeJointDemo.h */,
-				6E10F3D51A5A762300FCED3B /* LHSceneRopeJointDemo.mm */,
-				6E10F3D61A5A762300FCED3B /* LHSceneShapesDemo.h */,
-				6E10F3D71A5A762300FCED3B /* LHSceneShapesDemo.mm */,
-				6E10F3D81A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.h */,
-				6E10F3D91A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm */,
-				6E10F3DA1A5A762300FCED3B /* LHSceneUserPropertiesDemo.h */,
-				6E10F3DB1A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm */,
-				6E10F3DC1A5A762300FCED3B /* LHSceneWaterAreaDemo.h */,
-				6E10F3DD1A5A762300FCED3B /* LHSceneWaterAreaDemo.mm */,
-				6E10F3DE1A5A762300FCED3B /* MyCustomNode.h */,
-				6E10F3DF1A5A762300FCED3B /* MyCustomNode.m */,
-			);
-			path = SourceCode;
-			sourceTree = SOURCE_ROOT;
-		};
 		6E72A659198375A400143439 /* MacOS */ = {
 			isa = PBXGroup;
 			children = (
-				6E10F4591A5A79D100FCED3B /* main.m */,
-				6E10F45B1A5A79DC00FCED3B /* MainMenu.xib */,
-				6E10F4551A5A793400FCED3B /* SpriteKitMac-Prefix.pch */,
+				6E2BADCE1A6E85C70089B2E4 /* SpriteKitMac-Prefix.pch */,
+				6E2BADBC1A6E85360089B2E4 /* main.m */,
+				6E2BADBD1A6E85360089B2E4 /* MainMenu.xib */,
 			);
 			path = MacOS;
 			sourceTree = "<group>";
@@ -318,8 +390,10 @@
 		6E89FCEA192E0A390040478F = {
 			isa = PBXGroup;
 			children = (
-				6E6A02501A5A828000B85B26 /* HOW_TO_REMOVE_DEMOS.md */,
-				6E6A02511A5A828000B85B26 /* LH_DEMO_VERSION.plist */,
+				6EDACC271A6E836500BE3867 /* HOW_TO_REMOVE_DEMOS.md */,
+				6EDACC281A6E836500BE3867 /* LH_DEMO_VERSION.plist */,
+				6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */,
+				6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */,
 				6E89FCFE192E0A390040478F /* DEMOS */,
 				6E89FCF5192E0A390040478F /* Frameworks */,
 				6E89FCF4192E0A390040478F /* Products */,
@@ -339,11 +413,6 @@
 		6E89FCF5192E0A390040478F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6E10F4611A5A7A3000FCED3B /* libLevelHelper2-API.a */,
-				6E10F45F1A5A79F000FCED3B /* libBox2D.a */,
-				6E10F45D1A5A79EC00FCED3B /* libLevelHelper2-API.a */,
-				6E10F4401A5A783800FCED3B /* libBox2D.a */,
-				6E10F4301A5A766D00FCED3B /* libLevelHelper2-API.a */,
 				6E72A6621983770700143439 /* SpriteKit.framework */,
 				6E72A6601983770000143439 /* Cocoa.framework */,
 				6E89FCF6192E0A390040478F /* Foundation.framework */,
@@ -358,16 +427,66 @@
 		6E89FCFE192E0A390040478F /* DEMOS */ = {
 			isa = PBXGroup;
 			children = (
-				6E10F3AF1A5A762300FCED3B /* SourceCode */,
-				6E10F4561A5A79B600FCED3B /* AppDelegateMac.h */,
-				6E10F4571A5A79B600FCED3B /* AppDelegateMac.mm */,
-				6E10F4391A5A77FF00FCED3B /* AppDelegate.h */,
-				6E10F43A1A5A77FF00FCED3B /* AppDelegate.m */,
-				6E10F4351A5A77F100FCED3B /* ViewController.h */,
-				6E10F4461A5A788300FCED3B /* Main_iPad.storyboard */,
-				6E10F4481A5A788300FCED3B /* Main_iPhone.storyboard */,
-				6E10F4361A5A77F100FCED3B /* ViewController.mm */,
-				6E10F4421A5A785F00FCED3B /* Images.xcassets */,
+				6EDACB891A6E833400BE3867 /* LHSceneDemo.h */,
+				6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */,
+				6ECA5F8A1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.h */,
+				6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */,
+				6ECA5F991A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.h */,
+				6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */,
+				6EDACB771A6E833400BE3867 /* BlueRobotSprite.h */,
+				6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */,
+				6EDACB791A6E833400BE3867 /* LHSceneAssetsDemo.h */,
+				6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */,
+				6EDACB7B1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.h */,
+				6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */,
+				6EDACB7D1A6E833400BE3867 /* LHSceneBeziersDemo.h */,
+				6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */,
+				6EDACB7F1A6E833400BE3867 /* LHSceneCameraDemo.h */,
+				6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */,
+				6EDACB811A6E833400BE3867 /* LHSceneCameraFollowDemo.h */,
+				6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */,
+				6EDACB831A6E833400BE3867 /* LHSceneCharacterAnimationDemo.h */,
+				6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */,
+				6EDACB851A6E833400BE3867 /* LHSceneCollisionDemo.h */,
+				6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */,
+				6EDACB871A6E833400BE3867 /* LHSceneCollisionFilteringDemo.h */,
+				6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */,
+				6EDACB8B1A6E833400BE3867 /* LHSceneGravityAreas.h */,
+				6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */,
+				6EDACB8D1A6E833400BE3867 /* LHSceneIntroduction.h */,
+				6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */,
+				6EDACB8F1A6E833400BE3867 /* LHSceneNodePositioningTest.h */,
+				6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */,
+				6EDACB911A6E833400BE3867 /* LHSceneNodesSubclassingTest.h */,
+				6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */,
+				6EDACB931A6E833400BE3867 /* LHSceneOtherJointsDemo.h */,
+				6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */,
+				6EDACB951A6E833400BE3867 /* LHSceneParallaxDemo.h */,
+				6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */,
+				6EDACB971A6E833400BE3867 /* LHScenePhysicsBodiesDemo.h */,
+				6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */,
+				6EDACB991A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.h */,
+				6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */,
+				6EDACB9B1A6E833400BE3867 /* LHSceneRopeJointDemo.h */,
+				6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */,
+				6EDACB9D1A6E833400BE3867 /* LHSceneShapesDemo.h */,
+				6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */,
+				6EDACB9F1A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.h */,
+				6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */,
+				6EDACBA11A6E833400BE3867 /* LHSceneUserPropertiesDemo.h */,
+				6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */,
+				6EDACBA31A6E833400BE3867 /* LHSceneWaterAreaDemo.h */,
+				6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */,
+				6EDACBA51A6E833400BE3867 /* MyCustomNode.h */,
+				6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */,
+				6E2BADB01A6E84E40089B2E4 /* AppDelegate.h */,
+				6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */,
+				6E2BADAD1A6E84D80089B2E4 /* AppDelegateMac.h */,
+				6E2BADAE1A6E84D80089B2E4 /* AppDelegateMac.mm */,
+				6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */,
+				6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */,
+				6E2BADA91A6E84BC0089B2E4 /* ViewController.h */,
+				6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */,
 				6E89FCFF192E0A390040478F /* Supporting Files */,
 			);
 			path = DEMOS;
@@ -376,17 +495,61 @@
 		6E89FCFF192E0A390040478F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E10F4281A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE */,
-				6E10F4291A5A764A00FCED3B /* PUBLISH_FOLDER */,
+				6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */,
+				6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */,
+				6EDACBF31A6E835100BE3867 /* Icons */,
 				6E72A659198375A400143439 /* MacOS */,
 				6E72A6101983748000143439 /* Info-Box2d-Mac.plist */,
 				6EBEA33A1959C01800726044 /* Info-Box2d.plist */,
-				6E10F44F1A5A78B500FCED3B /* InfoPlist.strings */,
-				6E10F4631A5A7A5F00FCED3B /* Info.plist */,
-				6E10F43D1A5A780C00FCED3B /* main.m */,
+				6E89FD00192E0A390040478F /* Info.plist */,
+				6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */,
+				6E2BADC11A6E85490089B2E4 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		6EDACB631A6E830700BE3867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EDACB681A6E830700BE3867 /* libBox2D.a */,
+				6EDACB6A1A6E830700BE3867 /* libBox2D.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EDACB6C1A6E831000BE3867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EDACB721A6E831000BE3867 /* libLevelHelper2-API.a */,
+				6EDACB741A6E831000BE3867 /* libLevelHelper2-API_Box2d.a */,
+				6EDACB761A6E831000BE3867 /* libLevelHelper2-API_Box2d_OSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EDACBF31A6E835100BE3867 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */,
+				6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */,
+				6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */,
+				6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */,
+				6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */,
+				6EDACBF91A6E835100BE3867 /* Default.png */,
+				6EDACBFA1A6E835100BE3867 /* Default@2x.png */,
+				6EDACBFB1A6E835100BE3867 /* iPad-old.png */,
+				6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */,
+				6EDACBFD1A6E835100BE3867 /* iPad.png */,
+				6EDACBFE1A6E835100BE3867 /* iPad@2x.png */,
+				6EDACBFF1A6E835100BE3867 /* iPhone-old.png */,
+				6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */,
+				6EDACC011A6E835100BE3867 /* iPhone.png */,
+				6EDACC021A6E835100BE3867 /* iPhone@2x.png */,
+				6EDACC031A6E835100BE3867 /* Settings.png */,
+				6EDACC041A6E835100BE3867 /* Settings@2x.png */,
+			);
+			path = Icons;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -402,6 +565,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E2BADDB1A6E88640089B2E4 /* PBXTargetDependency */,
+				6E2BADDD1A6E88640089B2E4 /* PBXTargetDependency */,
 			);
 			name = "DEMOS + Box2d - MacOS";
 			productName = DEMOS;
@@ -419,6 +584,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E2BADDF1A6E886C0089B2E4 /* PBXTargetDependency */,
 			);
 			name = "DEMOS - iOS";
 			productName = DEMOS;
@@ -436,6 +602,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E2BADE11A6E89110089B2E4 /* PBXTargetDependency */,
+				6E2BADD91A6E885E0089B2E4 /* PBXTargetDependency */,
 			);
 			name = "DEMOS + Box2d - iOS";
 			productName = DEMOS;
@@ -450,11 +618,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "VLADU BOGDAN DANIEL PFA";
-				TargetAttributes = {
-					6E89FCF2192E0A390040478F = {
-						DevelopmentTeam = GJP2J8H7NT;
-					};
-				};
 			};
 			buildConfigurationList = 6E89FCEE192E0A390040478F /* Build configuration list for PBXProject "DEMOS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -467,6 +630,16 @@
 			mainGroup = 6E89FCEA192E0A390040478F;
 			productRefGroup = 6E89FCF4192E0A390040478F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6EDACB631A6E830700BE3867 /* Products */;
+					ProjectRef = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+				},
+				{
+					ProductGroup = 6EDACB6C1A6E831000BE3867 /* Products */;
+					ProjectRef = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6EBEA2F71959BFD000726044 /* DEMOS + Box2d - iOS */,
@@ -476,17 +649,54 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		6EDACB681A6E830700BE3867 /* libBox2D.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBox2D.a;
+			remoteRef = 6EDACB671A6E830700BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB6A1A6E830700BE3867 /* libBox2D.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBox2D.a;
+			remoteRef = 6EDACB691A6E830700BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB721A6E831000BE3867 /* libLevelHelper2-API.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLevelHelper2-API.a";
+			remoteRef = 6EDACB711A6E831000BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB741A6E831000BE3867 /* libLevelHelper2-API_Box2d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLevelHelper2-API_Box2d.a";
+			remoteRef = 6EDACB731A6E831000BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB761A6E831000BE3867 /* libLevelHelper2-API_Box2d_OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLevelHelper2-API_Box2d_OSX.a";
+			remoteRef = 6EDACB751A6E831000BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		6E72A6041983747F00143439 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDACBF11A6E834700BE3867 /* PUBLISH_FOLDER in Resources */,
+				6E2BADC71A6E855E0089B2E4 /* InfoPlist.strings in Resources */,
+				6E2BADCB1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
 				6E72A6081983747F00143439 /* Info-Box2d.plist in Resources */,
-				6E10F4521A5A78B500FCED3B /* InfoPlist.strings in Resources */,
-				6E10F42B1A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
-				6E10F4441A5A785F00FCED3B /* Images.xcassets in Resources */,
-				6E10F42E1A5A764A00FCED3B /* PUBLISH_FOLDER in Resources */,
-				6E10F45C1A5A79DC00FCED3B /* MainMenu.xib in Resources */,
+				6E2BADC01A6E85360089B2E4 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,12 +704,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E10F44B1A5A788300FCED3B /* Main_iPad.storyboard in Resources */,
-				6E10F4531A5A78B500FCED3B /* InfoPlist.strings in Resources */,
-				6E10F42C1A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
-				6E10F44D1A5A788300FCED3B /* Main_iPhone.storyboard in Resources */,
-				6E10F4451A5A785F00FCED3B /* Images.xcassets in Resources */,
-				6E10F42F1A5A764A00FCED3B /* PUBLISH_FOLDER in Resources */,
+				6E2BADCC1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6EDACC241A6E835100BE3867 /* Settings.png in Resources */,
+				6E2BADC81A6E855E0089B2E4 /* InfoPlist.strings in Resources */,
+				6EDACC1C1A6E835100BE3867 /* iPhone-old.png in Resources */,
+				6EDACC0E1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */,
+				6EDACBF21A6E834700BE3867 /* PUBLISH_FOLDER in Resources */,
+				6EDACC0C1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */,
+				6E2BADBB1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */,
+				6E2BADB91A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */,
+				6EDACC141A6E835100BE3867 /* iPad-old.png in Resources */,
+				6EDACC121A6E835100BE3867 /* Default@2x.png in Resources */,
+				6EDACC201A6E835100BE3867 /* iPhone.png in Resources */,
+				6EDACC261A6E835100BE3867 /* Settings@2x.png in Resources */,
+				6EDACC181A6E835100BE3867 /* iPad.png in Resources */,
+				6EDACC1E1A6E835100BE3867 /* iPhone-old@2x.png in Resources */,
+				6EDACC081A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */,
+				6EDACC061A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */,
+				6EDACC1A1A6E835100BE3867 /* iPad@2x.png in Resources */,
+				6EDACC221A6E835100BE3867 /* iPhone@2x.png in Resources */,
+				6EDACC0A1A6E835100BE3867 /* Default-568h@2x.png in Resources */,
+				6EDACC161A6E835100BE3867 /* iPad-old@2x.png in Resources */,
+				6EDACC101A6E835100BE3867 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,13 +733,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDACC111A6E835100BE3867 /* Default@2x.png in Resources */,
+				6EDACC1D1A6E835100BE3867 /* iPhone-old@2x.png in Resources */,
 				6EBEA33B1959C01800726044 /* Info-Box2d.plist in Resources */,
-				6E10F4511A5A78B500FCED3B /* InfoPlist.strings in Resources */,
-				6E10F4431A5A785F00FCED3B /* Images.xcassets in Resources */,
-				6E10F42D1A5A764A00FCED3B /* PUBLISH_FOLDER in Resources */,
-				6E10F44A1A5A788300FCED3B /* Main_iPad.storyboard in Resources */,
-				6E10F42A1A5A764A00FCED3B /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
-				6E10F44C1A5A788300FCED3B /* Main_iPhone.storyboard in Resources */,
+				6EDACC051A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */,
+				6EDACC071A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */,
+				6EDACC211A6E835100BE3867 /* iPhone@2x.png in Resources */,
+				6EDACC0D1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */,
+				6EDACC191A6E835100BE3867 /* iPad@2x.png in Resources */,
+				6EDACC131A6E835100BE3867 /* iPad-old.png in Resources */,
+				6E2BADC61A6E855E0089B2E4 /* InfoPlist.strings in Resources */,
+				6EDACC1B1A6E835100BE3867 /* iPhone-old.png in Resources */,
+				6E2BADBA1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */,
+				6EDACC151A6E835100BE3867 /* iPad-old@2x.png in Resources */,
+				6EDACC0B1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */,
+				6E2BADB81A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */,
+				6EDACC231A6E835100BE3867 /* Settings.png in Resources */,
+				6EDACC091A6E835100BE3867 /* Default-568h@2x.png in Resources */,
+				6E2BADCA1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6EDACC171A6E835100BE3867 /* iPad.png in Resources */,
+				6EDACBF01A6E834700BE3867 /* PUBLISH_FOLDER in Resources */,
+				6EDACC251A6E835100BE3867 /* Settings@2x.png in Resources */,
+				6EDACC0F1A6E835100BE3867 /* Default.png in Resources */,
+				6EDACC1F1A6E835100BE3867 /* iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,32 +766,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E10F45A1A5A79D100FCED3B /* main.m in Sources */,
-				6E10F4171A5A762300FCED3B /* LHSceneRopeJointDemo.mm in Sources */,
-				6E10F40E1A5A762300FCED3B /* LHSceneParallaxDemo.mm in Sources */,
-				6E10F3E11A5A762300FCED3B /* BlueRobotSprite.m in Sources */,
-				6E10F4051A5A762300FCED3B /* LHSceneNodePositioningTest.mm in Sources */,
-				6E10F4201A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm in Sources */,
-				6E10F3F31A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm in Sources */,
-				6E10F4081A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm in Sources */,
-				6E10F4141A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
-				6E10F3F01A5A762300FCED3B /* LHSceneCameraFollowDemo.mm in Sources */,
-				6E10F3ED1A5A762300FCED3B /* LHSceneCameraDemo.mm in Sources */,
-				6E10F4581A5A79B600FCED3B /* AppDelegateMac.mm in Sources */,
-				6E10F40B1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm in Sources */,
-				6E10F3E41A5A762300FCED3B /* LHSceneAssetsDemo.mm in Sources */,
-				6E10F4021A5A762300FCED3B /* LHSceneIntroduction.mm in Sources */,
-				6E10F41A1A5A762300FCED3B /* LHSceneShapesDemo.mm in Sources */,
-				6E10F3FC1A5A762300FCED3B /* LHSceneDemo.mm in Sources */,
-				6E10F4231A5A762300FCED3B /* LHSceneWaterAreaDemo.mm in Sources */,
-				6E10F3FF1A5A762300FCED3B /* LHSceneGravityAreas.mm in Sources */,
-				6E10F3E71A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm in Sources */,
-				6E10F3F61A5A762300FCED3B /* LHSceneCollisionDemo.mm in Sources */,
-				6E10F4261A5A762300FCED3B /* MyCustomNode.m in Sources */,
-				6E10F41D1A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
-				6E10F4111A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm in Sources */,
-				6E10F3F91A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm in Sources */,
-				6E10F3EA1A5A762300FCED3B /* LHSceneBeziersDemo.mm in Sources */,
+				6E2BADBF1A6E85360089B2E4 /* main.m in Sources */,
+				6EDACBC61A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */,
+				6EDACBC01A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */,
+				6EDACBD81A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,
+				6EDACBD51A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
+				6ECA5F8D1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
+				6EDACBDE1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */,
+				6EDACBE71A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6EDACBC91A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */,
+				6EDACBBD1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */,
+				6EDACBED1A6E833400BE3867 /* MyCustomNode.mm in Sources */,
+				6E2BADAF1A6E84D80089B2E4 /* AppDelegateMac.mm in Sources */,
+				6EDACBCC1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */,
+				6EDACBE41A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
+				6EDACBAB1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */,
+				6EDACBB41A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */,
+				6EDACBA81A6E833400BE3867 /* BlueRobotSprite.mm in Sources */,
+				6EDACBBA1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */,
+				6EDACBEA1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */,
+				6EDACBDB1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
+				6EDACBE11A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
+				6ECA5F9C1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */,
+				6EDACBB71A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */,
+				6EDACBC31A6E833400BE3867 /* LHSceneDemo.mm in Sources */,
+				6EDACBB11A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */,
+				6EDACBD21A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */,
+				6EDACBAE1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */,
+				6EDACBCF1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,33 +801,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E10F3EB1A5A762300FCED3B /* LHSceneBeziersDemo.mm in Sources */,
-				6E10F3FD1A5A762300FCED3B /* LHSceneDemo.mm in Sources */,
-				6E10F43C1A5A77FF00FCED3B /* AppDelegate.m in Sources */,
-				6E10F4271A5A762300FCED3B /* MyCustomNode.m in Sources */,
-				6E10F41E1A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
-				6E10F40F1A5A762300FCED3B /* LHSceneParallaxDemo.mm in Sources */,
-				6E10F3FA1A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm in Sources */,
-				6E10F4151A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
-				6E10F3E51A5A762300FCED3B /* LHSceneAssetsDemo.mm in Sources */,
-				6E10F4241A5A762300FCED3B /* LHSceneWaterAreaDemo.mm in Sources */,
-				6E10F41B1A5A762300FCED3B /* LHSceneShapesDemo.mm in Sources */,
-				6E10F3F41A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm in Sources */,
-				6E10F3EE1A5A762300FCED3B /* LHSceneCameraDemo.mm in Sources */,
-				6E10F4061A5A762300FCED3B /* LHSceneNodePositioningTest.mm in Sources */,
-				6E10F3E21A5A762300FCED3B /* BlueRobotSprite.m in Sources */,
-				6E10F4091A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm in Sources */,
-				6E10F43F1A5A780C00FCED3B /* main.m in Sources */,
-				6E10F4031A5A762300FCED3B /* LHSceneIntroduction.mm in Sources */,
-				6E10F3E81A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm in Sources */,
-				6E10F4181A5A762300FCED3B /* LHSceneRopeJointDemo.mm in Sources */,
-				6E10F4121A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm in Sources */,
-				6E10F3F71A5A762300FCED3B /* LHSceneCollisionDemo.mm in Sources */,
-				6E10F4001A5A762300FCED3B /* LHSceneGravityAreas.mm in Sources */,
-				6E10F4211A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm in Sources */,
-				6E10F3F11A5A762300FCED3B /* LHSceneCameraFollowDemo.mm in Sources */,
-				6E10F40C1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm in Sources */,
-				6E10F4381A5A77F100FCED3B /* ViewController.mm in Sources */,
+				6EDACBCD1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */,
+				6EDACBDC1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
+				6ECA5F9D1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */,
+				6E2BADB31A6E84E40089B2E4 /* AppDelegate.m in Sources */,
+				6EDACBBB1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */,
+				6EDACBD61A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
+				6ECA5F8E1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
+				6EDACBE81A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6EDACBE21A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
+				6EDACBE51A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
+				6EDACBD91A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,
+				6EDACBCA1A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */,
+				6EDACBD31A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */,
+				6EDACBB21A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */,
+				6EDACBAF1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */,
+				6EDACBDF1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */,
+				6EDACBC41A6E833400BE3867 /* LHSceneDemo.mm in Sources */,
+				6EDACBB81A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */,
+				6E2BADC31A6E85490089B2E4 /* main.m in Sources */,
+				6EDACBA91A6E833400BE3867 /* BlueRobotSprite.mm in Sources */,
+				6EDACBB51A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */,
+				6EDACBAC1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */,
+				6EDACBC71A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */,
+				6EDACBBE1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */,
+				6EDACBEB1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */,
+				6EDACBD01A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */,
+				6EDACBEE1A6E833400BE3867 /* MyCustomNode.mm in Sources */,
+				6EDACBC11A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */,
+				6E2BADAC1A6E84BC0089B2E4 /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,59 +837,89 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E10F3E91A5A762300FCED3B /* LHSceneBeziersDemo.mm in Sources */,
-				6E10F3FB1A5A762300FCED3B /* LHSceneDemo.mm in Sources */,
-				6E10F43B1A5A77FF00FCED3B /* AppDelegate.m in Sources */,
-				6E10F4251A5A762300FCED3B /* MyCustomNode.m in Sources */,
-				6E10F41C1A5A762300FCED3B /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
-				6E10F40D1A5A762300FCED3B /* LHSceneParallaxDemo.mm in Sources */,
-				6E10F3F81A5A762300FCED3B /* LHSceneCollisionFilteringDemo.mm in Sources */,
-				6E10F4131A5A762300FCED3B /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
-				6E10F3E31A5A762300FCED3B /* LHSceneAssetsDemo.mm in Sources */,
-				6E10F4221A5A762300FCED3B /* LHSceneWaterAreaDemo.mm in Sources */,
-				6E10F4191A5A762300FCED3B /* LHSceneShapesDemo.mm in Sources */,
-				6E10F3F21A5A762300FCED3B /* LHSceneCharacterAnimationDemo.mm in Sources */,
-				6E10F3EC1A5A762300FCED3B /* LHSceneCameraDemo.mm in Sources */,
-				6E10F4041A5A762300FCED3B /* LHSceneNodePositioningTest.mm in Sources */,
-				6E10F3E01A5A762300FCED3B /* BlueRobotSprite.m in Sources */,
-				6E10F4071A5A762300FCED3B /* LHSceneNodesSubclassingTest.mm in Sources */,
-				6E10F43E1A5A780C00FCED3B /* main.m in Sources */,
-				6E10F4011A5A762300FCED3B /* LHSceneIntroduction.mm in Sources */,
-				6E10F3E61A5A762300FCED3B /* LHSceneAssetWithJointsDemo.mm in Sources */,
-				6E10F4161A5A762300FCED3B /* LHSceneRopeJointDemo.mm in Sources */,
-				6E10F4101A5A762300FCED3B /* LHScenePhysicsBodiesDemo.mm in Sources */,
-				6E10F3F51A5A762300FCED3B /* LHSceneCollisionDemo.mm in Sources */,
-				6E10F3FE1A5A762300FCED3B /* LHSceneGravityAreas.mm in Sources */,
-				6E10F41F1A5A762300FCED3B /* LHSceneUserPropertiesDemo.mm in Sources */,
-				6E10F3EF1A5A762300FCED3B /* LHSceneCameraFollowDemo.mm in Sources */,
-				6E10F40A1A5A762300FCED3B /* LHSceneOtherJointsDemo.mm in Sources */,
-				6E10F4371A5A77F100FCED3B /* ViewController.mm in Sources */,
+				6EDACBCB1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */,
+				6EDACBDA1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
+				6ECA5F9B1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */,
+				6E2BADB21A6E84E40089B2E4 /* AppDelegate.m in Sources */,
+				6EDACBB91A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */,
+				6EDACBD41A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
+				6ECA5F8C1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
+				6EDACBE61A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6EDACBE01A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
+				6EDACBE31A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
+				6EDACBD71A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,
+				6EDACBC81A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */,
+				6EDACBD11A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */,
+				6EDACBB01A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */,
+				6EDACBAD1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */,
+				6EDACBDD1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */,
+				6EDACBC21A6E833400BE3867 /* LHSceneDemo.mm in Sources */,
+				6EDACBB61A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */,
+				6E2BADC21A6E85490089B2E4 /* main.m in Sources */,
+				6EDACBA71A6E833400BE3867 /* BlueRobotSprite.mm in Sources */,
+				6EDACBB31A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */,
+				6EDACBAA1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */,
+				6EDACBC51A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */,
+				6EDACBBC1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */,
+				6EDACBE91A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */,
+				6EDACBCE1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */,
+				6EDACBEC1A6E833400BE3867 /* MyCustomNode.mm in Sources */,
+				6EDACBBF1A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */,
+				6E2BADAB1A6E84BC0089B2E4 /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6E2BADD91A6E885E0089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Box2D;
+			targetProxy = 6E2BADD81A6E885E0089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADDB1A6E88640089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LevelHelper2-API+Box2d-OSX";
+			targetProxy = 6E2BADDA1A6E88640089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADDD1A6E88640089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Box2D-OSX";
+			targetProxy = 6E2BADDC1A6E88640089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADDF1A6E886C0089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LevelHelper2-API";
+			targetProxy = 6E2BADDE1A6E886C0089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADE11A6E89110089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LevelHelper2-API+Box2d";
+			targetProxy = 6E2BADE01A6E89110089B2E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		6E10F4461A5A788300FCED3B /* Main_iPad.storyboard */ = {
+		6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6E10F4471A5A788300FCED3B /* Base */,
+				6E2BADB51A6E84F80089B2E4 /* Base */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		6E10F4481A5A788300FCED3B /* Main_iPhone.storyboard */ = {
+		6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6E10F4491A5A788300FCED3B /* Base */,
+				6E2BADB71A6E84F80089B2E4 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		6E10F44F1A5A78B500FCED3B /* InfoPlist.strings */ = {
+		6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6E10F4501A5A78B500FCED3B /* en */,
+				6E2BADC51A6E855E0089B2E4 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -654,7 +930,6 @@
 		6E72A60D1983747F00143439 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -666,15 +941,10 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
 					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d-Mac.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/LevelHelper2-API/build/Debug",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
@@ -688,7 +958,6 @@
 		6E72A60E1983747F00143439 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -696,15 +965,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
 					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d-Mac.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/LevelHelper2-API/build/Debug",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
@@ -788,20 +1052,14 @@
 		6E89FD30192E0A390040478F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/LevelHelper2-API/build/Release-iphoneos",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -813,20 +1071,14 @@
 		6E89FD31192E0A390040478F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/LevelHelper2-API/build/Release-iphoneos",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -838,8 +1090,6 @@
 		6EBEA3361959BFD000726044 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -848,14 +1098,10 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
 					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug-iphoneos",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "DEMOS+Box2d";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
@@ -866,20 +1112,14 @@
 		6EBEA3371959BFD000726044 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../LevelHelper2-API/LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
 					"\"$(SRCROOT)/../Box2D\"/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/Box2D/build/Debug-iphoneos",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "DEMOS+Box2d";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
