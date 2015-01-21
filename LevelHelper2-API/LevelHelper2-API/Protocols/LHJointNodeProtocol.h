@@ -28,6 +28,16 @@ class b2Joint;
 @required
 
 /**
+ Returns the first connected node.
+ */
+-(SKNode*)nodeA;
+
+/**
+ Returns the second connected node.
+ */
+-(SKNode*)nodeB;
+
+/**
  Returns the point where the joint is connected with the first body. In scene coordinates.
  */
 -(CGPoint)anchorA;
@@ -92,6 +102,12 @@ class b2Joint;
 }\
 -(CGPoint)anchorB{\
     return [_jointProtocolImp anchorB];\
+}\
+-(SKNode*)nodeA{\
+    return [_jointProtocolImp nodeA];\
+}\
+-(SKNode*)nodeB{\
+    return [_jointProtocolImp nodeB];\
 }
 
 #if LH_USE_BOX2D

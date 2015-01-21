@@ -689,6 +689,14 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
     }
 }
 
++(b2Body*)LHGetBox2dBody:(SKNode*)_node_
+{
+    if([_node_ respondsToSelector:@selector(box2dBody)]){
+        return [(id<LHNodePhysicsProtocol>)_node_ box2dBody];
+    }
+    return NULL;
+}
+
 #pragma mark - SPRITEKIT SUPPORT
 ////////////////////////////////////////////////////////////////////////////////
 #else //chipmunk
