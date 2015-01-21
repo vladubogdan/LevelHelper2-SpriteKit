@@ -65,14 +65,13 @@
         _enableLimit = [dict boolForKey:@"enablePrismaticLimit"];
         _enableMotor = [dict boolForKey:@"enablePrismaticMotor"];
         
-        _lowerTranslation = [dict floatForKey:@"lowerTranslation"];
-        _upperTranslation = [dict floatForKey:@"upperTranslation"];
+        _lowerTranslation = -[dict floatForKey:@"lowerTranslation"];
+        _upperTranslation = -[dict floatForKey:@"upperTranslation"];
         
         _maxMotorForce = [dict floatForKey:@"maxMotorForce"];
-        _motorSpeed = [dict floatForKey:@"prismaticMotorSpeed"];
+        _motorSpeed = -[dict floatForKey:@"prismaticMotorSpeed"];
         
         _axis = [dict pointForKey:@"axis"];
-        _axis.y = -_axis.y;
     }
     return self;
 }
@@ -121,8 +120,8 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
     if(debugShapeNode){
         CGPoint a = [self anchorA];
         
-        CGPoint axisInfoA = CGPointMake(a.x+ (-10*_axis.x), a.y + (-10*_axis.y));
-        CGPoint axisInfoB = CGPointMake(a.x+ ( 10*_axis.x), a.y + ( 10*_axis.y));
+        CGPoint axisInfoA = CGPointMake(a.x+ ( 10*_axis.x), a.y + ( -10*_axis.y));
+        CGPoint axisInfoB = CGPointMake(a.x+ ( 10*_axis.x), a.y + ( -10*_axis.y));
         
         if([self enableLimit])
         {
