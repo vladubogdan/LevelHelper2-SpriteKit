@@ -92,7 +92,13 @@
             [label setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
             [[self uiNode] addChild:label];
         }
-                
+        
+#if LH_USE_BOX2D
+        NSLog(@"USES BOX2D");
+#else
+        NSLog(@"USES CHIPMUNK");
+#endif
+        
     }
     
     return self;
