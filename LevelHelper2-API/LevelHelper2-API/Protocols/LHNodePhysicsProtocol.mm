@@ -731,7 +731,7 @@ static inline CGAffineTransform NodeToB2BodyTransform(SKNode *node)
 }
 
 
-- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dictionary node:(SKNode*)nd scale:(CGPoint)scl{
+- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd scale:(CGPoint)scl{
     
     if(self = [super init])
     {
