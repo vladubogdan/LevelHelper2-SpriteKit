@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "LHSceneIntroduction.h"
+#import "LHSceneSubclass.h"
 
 
 @implementation ViewController
@@ -22,7 +22,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [LHSceneIntroduction scene];
+    SKScene * scene = [LHSceneSubclass scene];
     
     // Present the scene.
     [skView presentScene:scene];

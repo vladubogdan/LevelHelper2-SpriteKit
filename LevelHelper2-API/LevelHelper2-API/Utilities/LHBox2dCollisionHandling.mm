@@ -11,6 +11,9 @@
 #import "LHGameWorldNode.h"
 #import "LHConfig.h"
 #import "LHUtils.h"
+#import "LHContactInfo.h"
+#import "LHBodyShape.h"
+
 #if LH_USE_BOX2D
 
 #include "Box2d/Box2D.h"
@@ -98,13 +101,10 @@ void lhContactEndContactCaller(void* object,
 ////////////////////////////////////////////////////////////////////////////////
 
 @interface LHGameWorldNode (LH_COLLISION_HANDLING)
--(void)scheduleDidBeginContactBetweenNodeA:(SKNode*)nodeA
-                                  andNodeB:(SKNode*)nodeB
-                                atLocation:(CGPoint)contactPoint
-                               withImpulse:(float)impulse;
 
--(void)scheduleDidEndContactBetweenNodeA:(SKNode*)nodeA
-                                andNodeB:(SKNode*)nodeB;
+-(void)scheduleDidBeginContact:(LHContactInfo*)contact;
+-(void)scheduleDidEndContact:(LHContactInfo*)contact;
+
 @end
 
 
@@ -208,10 +208,22 @@ void lhContactEndContactCaller(void* object,
         impulse = contactImpulse->normalImpulses[0];
     }
     
-    [[_scene gameWorldNode] scheduleDidBeginContactBetweenNodeA:nodeA
-                                                       andNodeB:nodeB
-                                                     atLocation:[self getPointFromContact:contact]
-                                                    withImpulse:impulse];
+    LHBodyShape* shapeA = [LHBodyShape shapeForB2Fixture:contact->GetFixtureA()];
+    LHBodyShape* shapeB = [LHBodyShape shapeForB2Fixture:contact->GetFixtureB()];
+    
+    if(!shapeA || !shapeB)return;
+    
+    LHContactInfo* info = [LHContactInfo contactInfoWithNodeA:nodeA
+                                                        nodeB:nodeB
+                                                   shapeAName:[shapeA shapeName]
+                                                   shapeBName:[shapeB shapeName]
+                                                     shapeAID:[shapeA shapeID]
+                                                     shapeBID:[shapeB shapeID]
+                                                        point:[self getPointFromContact:contact]
+                                                      impulse:impulse
+                                                    b2Contact:contact];
+    
+    [[_scene gameWorldNode] scheduleDidBeginContact:info];
 }
 -(void)beginContact:(b2Contact*)contact
 {
@@ -219,11 +231,23 @@ void lhContactEndContactCaller(void* object,
     SKNode* nodeB = [self getNodeBFromContact:contact];
     if(!nodeA || !nodeB)return;
     
-    //call this for sensor objects
-    [[_scene gameWorldNode] scheduleDidBeginContactBetweenNodeA:nodeA
-                                                       andNodeB:nodeB
-                                                     atLocation:[self getPointFromContact:contact]
-                                                    withImpulse:0];
+    LHBodyShape* shapeA = [LHBodyShape shapeForB2Fixture:contact->GetFixtureA()];
+    LHBodyShape* shapeB = [LHBodyShape shapeForB2Fixture:contact->GetFixtureB()];
+    
+    if(!shapeA || !shapeB)return;
+    
+    //in case of sensors - call begin contact with 0 impulse
+    LHContactInfo* info = [LHContactInfo contactInfoWithNodeA:nodeA
+                                                        nodeB:nodeB
+                                                   shapeAName:[shapeA shapeName]
+                                                   shapeBName:[shapeB shapeName]
+                                                     shapeAID:[shapeA shapeID]
+                                                     shapeBID:[shapeB shapeID]
+                                                        point:[self getPointFromContact:contact]
+                                                      impulse:0
+                                                    b2Contact:contact];
+    
+    [[_scene gameWorldNode] scheduleDidBeginContact:info];
 }
 -(void)endContact:(b2Contact*)contact
 {
@@ -231,8 +255,22 @@ void lhContactEndContactCaller(void* object,
     SKNode* nodeB = [self getNodeBFromContact:contact];
     if(!nodeA || !nodeB)return;
     
-    [[_scene gameWorldNode] scheduleDidEndContactBetweenNodeA:nodeA
-                                                     andNodeB:nodeB];
+    LHBodyShape* shapeA = [LHBodyShape shapeForB2Fixture:contact->GetFixtureA()];
+    LHBodyShape* shapeB = [LHBodyShape shapeForB2Fixture:contact->GetFixtureB()];
+    
+    if(!shapeA || !shapeB)return;
+    
+    LHContactInfo* info = [LHContactInfo contactInfoWithNodeA:nodeA
+                                                        nodeB:nodeB
+                                                   shapeAName:[shapeA shapeName]
+                                                   shapeBName:[shapeB shapeName]
+                                                     shapeAID:[shapeA shapeID]
+                                                     shapeBID:[shapeB shapeID]
+                                                        point:CGPointZero
+                                                      impulse:0
+                                                    b2Contact:contact];
+    
+    [[_scene gameWorldNode] scheduleDidEndContact:info];
 }
 @end
 

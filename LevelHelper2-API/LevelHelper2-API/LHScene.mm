@@ -30,6 +30,7 @@
 #import "LHBackUINode.h"
 #import "LHBox2dCollisionHandling.h"
 #import "SKNode+Transforms.h"
+#import "LHBodyShape.h"
 
 #if TARGET_OS_IPHONE
 
@@ -55,6 +56,7 @@
     
 #if LH_USE_BOX2D
     LHBox2dCollisionHandling* _box2dCollision;
+    NSMutableArray* _phyBoundarySubshapes;
 #endif
     
     __unsafe_unretained id<LHAnimationNotificationsProtocol> _animationsDelegate;
@@ -71,6 +73,7 @@
     NSMutableDictionary* loadedTextures;
     NSMutableDictionary* loadedTextureAtlases;
     NSDictionary* tracedFixtures;
+    NSMutableDictionary* editorBodiesInfo;
     
     NSArray* _supportedDevices;
     LHDevice* _currentDevice;
@@ -107,6 +110,7 @@
     _collisionsDelegate = nil;
 
 #if LH_USE_BOX2D
+    LH_SAFE_RELEASE(_phyBoundarySubshapes);
     LH_SAFE_RELEASE(_box2dCollision);
 #endif
 
@@ -125,6 +129,8 @@
     LH_SAFE_RELEASE(loadedTextures);
     LH_SAFE_RELEASE(loadedTextureAtlases);
     LH_SAFE_RELEASE(tracedFixtures);
+    LH_SAFE_RELEASE(editorBodiesInfo);
+    
     _currentDevice = nil;
     LH_SAFE_RELEASE(_supportedDevices);
     LH_SAFE_RELEASE(_loadedAssetsInformations);
@@ -360,26 +366,20 @@
     
     
 #if LH_USE_BOX2D
+
+    LHBodyShape* bodyShape = [LHBodyShape createWithName:sectionName
+                                                  pointA:from
+                                                  pointB:to
+                                                    node:drawNode
+                                                   scene:self];
     
-    float PTM_RATIO = [self ptm];
+    if(!_phyBoundarySubshapes){
+        _phyBoundarySubshapes = [[NSMutableArray alloc] init];
+    }
     
-    // Define the ground body.
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0, 0); // bottom-left corner
-    
-    b2Body* physicsBoundariesBody = [self box2dWorld]->CreateBody(&groundBodyDef);
-    physicsBoundariesBody->SetUserData(LH_VOID_BRIDGE_CAST(drawNode));
-    
-    // Define the ground box shape.
-    b2EdgeShape groundBox;
-    
-    // top
-    groundBox.Set(b2Vec2(from.x/PTM_RATIO,
-                         from.y/PTM_RATIO),
-                  b2Vec2(to.x/PTM_RATIO,
-                         to.y/PTM_RATIO));
-    physicsBoundariesBody->CreateFixture(&groundBox,0);
-    
+    if(bodyShape){
+        [_phyBoundarySubshapes addObject:bodyShape];
+    }
     
 #else //spritekit
     
@@ -486,7 +486,7 @@
     
     CGPoint touchLocation = [recognizer locationInView:recognizer.view];
     
-    NSLog(@"PINCH %f %f", touchLocation.x, touchLocation.y);
+//    NSLog(@"PINCH %f %f", touchLocation.x, touchLocation.y);
     
     touchLocation = [self convertToNodeSpace:touchLocation];
     
@@ -664,6 +664,14 @@
     return NO;
 }
 
+-(void)didBeginContact:(LHContactInfo *)contact{
+    
+    if(_collisionsDelegate){
+        [_collisionsDelegate didBeginContact:contact];
+    }
+    //nothing to do - users should overwrite this method
+}
+
 -(void)didBeginContactBetweenNodeA:(SKNode*)a
                           andNodeB:(SKNode*)b
                         atLocation:(CGPoint)scenePt
@@ -676,6 +684,13 @@
                                              withImpulse:impulse];
     }
     //nothing to do - users should overwrite this method
+}
+
+-(void)didEndContact:(LHContactInfo *)contact{
+    //nothing to do - users should overwrite this method
+    if(_collisionsDelegate){
+        [_collisionsDelegate didEndContact:contact];
+    }
 }
 
 -(void)didEndContactBetweenNodeA:(SKNode*)a
@@ -821,6 +836,43 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 -(NSArray*)tracedFixturesWithUUID:(NSString*)uuid{
     return [tracedFixtures objectForKey:uuid];
 }
+
+-(void)setEditorBodyInfoForSpriteName:(NSString*)sprName
+                                atlas:(NSString*)atlasPlist
+                             bodyInfo:(NSDictionary*)bodyInfo
+{
+    if(!editorBodiesInfo){
+        editorBodiesInfo = [[NSMutableDictionary alloc] init];
+    }
+    
+    if(!bodyInfo || !sprName || !atlasPlist)return;
+    
+    NSMutableDictionary* imagesDict = [editorBodiesInfo objectForKey:atlasPlist];
+    if(!imagesDict){
+        imagesDict = [NSMutableDictionary dictionary];
+    }
+    
+    if(![imagesDict objectForKey:sprName])
+    {
+        [imagesDict setObject:bodyInfo forKey:sprName];
+        [editorBodiesInfo setObject:imagesDict forKey:atlasPlist];
+    }
+}
+
+-(NSDictionary*)getEditorBodyInfoForSpriteName:(NSString*)sprName atlas:(NSString*)atlasPlist
+{
+    if(!atlasPlist || !sprName)return nil;
+    NSDictionary* spritesInfo = [editorBodiesInfo objectForKey:atlasPlist];
+    if(spritesInfo){
+        return [spritesInfo objectForKey:sprName];
+    }
+    return nil;
+}
+-(BOOL)hasEditorBodyInfoForImageFilePath:(NSString*)atlasImgFile{
+    if(!atlasImgFile)return NO;
+    return [editorBodiesInfo objectForKey:atlasImgFile] != nil;
+}
+
 
 -(void)addLateLoadingNode:(SKNode*)node{
     if(!lateLoadingNodes) {

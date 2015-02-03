@@ -78,8 +78,8 @@ typedef enum
 
 @interface LHNodePhysicsProtocolImp : NSObject
 
-+ (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
-- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd;
++ (instancetype)physicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd scale:(CGPoint)scale;
+- (instancetype)initPhysicsProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd scale:(CGPoint)scale;
 - (instancetype)initPhysicsProtocolWithNode:(SKNode*)nd;
 
 -(SKNode*)node;
@@ -100,12 +100,21 @@ typedef enum
 -(float)rotation;
 -(void)updateScale;
 
++(b2Body*)LHGetBox2dBody:(SKNode*)_node_;
+
 #endif
 
 #endif //LH_USE_BOX2D
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt;
 @end
+
+#if LH_USE_BOX2D
+
+#define LH_GET_BOX2D_BODY(A) [LHNodePhysicsProtocolImp LHGetBox2dBody:A];
+
+#endif
+
 
 #define LH_BOX2D_PHYSICS_PROTOCOL_METHODS_IMPLEMENTATION  \
 -(b2Body*)box2dBody\

@@ -62,8 +62,8 @@
         _enableLimit = [dict boolForKey:@"enableLimit"];
         _enableMotor = [dict boolForKey:@"enableMotor"];
         
-        _lowerAngle = LH_DEGREES_TO_RADIANS([dict floatForKey:@"lowerAngle"] - 180.0f);
-        _upperAngle = LH_DEGREES_TO_RADIANS([dict floatForKey:@"upperAngle"] - 180.0f);
+        _lowerAngle = LH_DEGREES_TO_RADIANS(- [dict floatForKey:@"lowerAngle"]);
+        _upperAngle = LH_DEGREES_TO_RADIANS(- [dict floatForKey:@"upperAngle"]);
         
         _maxMotorTorque = [dict floatForKey:@"maxMotorTorque"];
         _motorSpeed = LH_DEGREES_TO_RADIANS(-360.0f*[dict floatForKey:@"motorSpeed"]);

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EDE86AA19A4898100599C48"
-               BuildableName = "libLevelHelper2-API.a"
+               BuildableName = "libLevelHelper2-API_Box2d.a"
                BlueprintName = "LevelHelper2-API+Box2d"
                ReferencedContainer = "container:LevelHelper2-API.xcodeproj">
             </BuildableReference>
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6EDE86AA19A4898100599C48"
+            BuildableName = "libLevelHelper2-API_Box2d.a"
+            BlueprintName = "LevelHelper2-API+Box2d"
+            ReferencedContainer = "container:LevelHelper2-API.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

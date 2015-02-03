@@ -13,7 +13,7 @@
 #import "LHConfig.h"
 #import "LHNode.h"
 #import "SKNode+Transforms.h"
-
+#import "LHContactInfo.h"
 
 @interface LHScene (LH_SCENE_LOADING_INFO)
 -(BOOL)loadingInProgress;
@@ -25,6 +25,10 @@
 #include <cstdarg>
 #include <cstring>
 
+@interface LHContactInfo (LH_CONTACT_MARKING)
+-(void)setMarked;
+-(BOOL)marked;
+@end
 
 #else
 
@@ -362,78 +366,6 @@ void LHBox2dDebug::DrawAABB(b2AABB* aabb, const b2Color& c)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@interface LHScheduledContactInfo : NSObject
-
-+(instancetype)scheduledContactWithNodeA:(SKNode*)a
-                                   nodeB:(SKNode*)b
-                                   point:(CGPoint)pt
-                                 impulse:(float)i;
-
--(SKNode*)nodeA;
--(SKNode*)nodeB;
--(CGPoint)contactPoint;
--(float)impulse;
-
-@end
-
-@implementation LHScheduledContactInfo
-{
-    __unsafe_unretained SKNode* _nodeA;
-    __unsafe_unretained SKNode* _nodeB;
-    CGPoint contactPoint;
-    float impulse;
-}
-
--(instancetype)initWithNodeA:(SKNode*)a nodeB:(SKNode*)b point:(CGPoint)pt impulse:(float)i
-{
-    if(self = [super init])
-    {
-        _nodeA = a;
-        _nodeB = b;
-        contactPoint = pt;
-        impulse = i;
-    }
-    return self;
-}
-
--(SKNode*)nodeA{return _nodeA;}
--(SKNode*)nodeB{return _nodeB;}
--(CGPoint)contactPoint{return contactPoint;}
--(float)impulse{return impulse;}
-
-+(instancetype)scheduledContactWithNodeA:(SKNode*)a nodeB:(SKNode*)b point:(CGPoint)pt impulse:(float)i
-{
-    return LH_AUTORELEASED([[LHScheduledContactInfo alloc] initWithNodeA:a nodeB:b point:pt impulse:i]);
-}
-
-@end
-
-
-
-
-
-
-
-
-
-
-
 @implementation LHGameWorldNode
 {
     LHNodeProtocolImpl*         _nodeProtocolImp;
@@ -621,112 +553,111 @@ LH_NODE_PROTOCOL_METHODS_IMPLEMENTATION
 
 -(void)afterStep:(float)dt {
     
-    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    for(LHContactInfo* info in _scheduledBeginContact)
     {
-        if([info nodeA] && [[info nodeA] parent] && [info nodeB] && [[info nodeB] parent])
+        if(![info marked] && [info nodeA] && [[info nodeA] parent] && [info nodeB] && [[info nodeB] parent])
         {
+            [[self scene] didBeginContact:info];
+            
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+            
             [[self scene] didBeginContactBetweenNodeA:[info nodeA]
                                              andNodeB:[info nodeB]
                                            atLocation:[info contactPoint]
                                           withImpulse:[info impulse]];
+            
+#pragma clang diagnostic pop
+            
         }
     }
     [_scheduledBeginContact removeAllObjects];
     
     
-    
-    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    for(LHContactInfo* info in _scheduledEndContact)
     {
-        if([info nodeA] && [[info nodeA] parent] && [info nodeB] && [[info nodeB] parent])
+        if(![info marked] && [info nodeA] && [[info nodeA] parent] && [info nodeB] && [[info nodeB] parent])
         {
+            [[self scene] didEndContact:info];
+            
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+            
             [[self scene] didEndContactBetweenNodeA:[info nodeA]
                                            andNodeB:[info nodeB]];
+            
+#pragma clang diagnostic pop
+            
         }
     }
     [_scheduledEndContact removeAllObjects];
 
+    
 }
 
--(void)scheduleDidBeginContactBetweenNodeA:(SKNode*)nodeA
-                                  andNodeB:(SKNode*)nodeB
-                                atLocation:(CGPoint)contactPoint
-                               withImpulse:(float)impulse
+-(void)scheduleDidBeginContact:(LHContactInfo*)contact
 {
     if(!_scheduledBeginContact){
         _scheduledBeginContact = [[NSMutableArray alloc] init];
     }
-
+    
     //this causes losing contacts when same nodes are in contact but at different points
-//    for(LHScheduledContactInfo* info in _scheduledBeginContact)
-//    {
-//        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
-//           ([info nodeA] == nodeB && [info nodeB] == nodeA)
-//           ){
-//            return;
-//        }
-//    }
-    
+    //    for(LHScheduledContactInfo* info in _scheduledBeginContact)
+    //    {
+    //        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+    //           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+    //           ){
+    //            return;
+    //        }
+    //    }
     //if this happens the objects have been removed but box2d still calls the box2d body
-    if([nodeA parent] == nil)return;
-    if([nodeB parent] == nil)return;
+    if(![contact nodeA] || ![[contact nodeA] parent])return;
+    if(![contact nodeB] || ![[contact nodeB] parent])return;
     
-    
-    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
-                                                                               nodeB:nodeB
-                                                                               point:contactPoint
-                                                                             impulse:impulse];
-    [_scheduledBeginContact addObject:info];
-    
+    [_scheduledBeginContact addObject:contact];
 }
 
--(void)scheduleDidEndContactBetweenNodeA:(SKNode*)nodeA
-                                andNodeB:(SKNode*)nodeB
+-(void)scheduleDidEndContact:(LHContactInfo*)contact
 {
- 
+    
     if(!_scheduledEndContact){
         _scheduledEndContact = [[NSMutableArray alloc] init];
     }
-
-    //this causes losing contacts when same nodes are in contact but at different points
-//    for(LHScheduledContactInfo* info in _scheduledEndContact)
-//    {
-//        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
-//           ([info nodeA] == nodeB && [info nodeB] == nodeA)
-//           ){
-//            return;
-//        }
-//    }
-
-    //if this happens the objects have been removed but box2d still calls the box2d body
-    if([nodeA parent] == nil)return;
-    if([nodeB parent] == nil)return;
     
-    LHScheduledContactInfo* info = [LHScheduledContactInfo scheduledContactWithNodeA:nodeA
-                                                                               nodeB:nodeB
-                                                                               point:CGPointZero
-                                                                             impulse:0];
-    [_scheduledEndContact addObject:info];
+    //this causes losing contacts when same nodes are in contact but at different points
+    //    for(LHScheduledContactInfo* info in _scheduledEndContact)
+    //    {
+    //        if(([info nodeA] == nodeA && [info nodeB] == nodeB) ||
+    //           ([info nodeA] == nodeB && [info nodeB] == nodeA)
+    //           ){
+    //            return;
+    //        }
+    //    }
+    
+    //if this happens the objects have been removed but box2d still calls the box2d body
+    if(![contact nodeA] || ![[contact nodeA] parent])return;
+    if(![contact nodeB] || ![[contact nodeB] parent])return;
+    
+    [_scheduledEndContact addObject:contact];
 }
 
 -(void)removeScheduledContactsWithNode:(SKNode*)node
 {
-    NSMutableArray* toRemoveBegin = [NSMutableArray array];
-    for(LHScheduledContactInfo* info in _scheduledBeginContact){
+    for(LHContactInfo* info in _scheduledBeginContact)
+    {
         if([info nodeA] == node || [info nodeB] == node)
         {
-            [toRemoveBegin addObject:info];
+            [info setMarked];
         }
     }
-    [_scheduledBeginContact removeObjectsInArray:toRemoveBegin];
     
-    NSMutableArray* toRemoveEnd = [NSMutableArray array];
-    for(LHScheduledContactInfo* info in _scheduledEndContact){
+    for(LHContactInfo* info in _scheduledEndContact)
+    {
         if([info nodeA] == node || [info nodeB] == node)
         {
-            [toRemoveEnd addObject:info];
+            [info setMarked];
         }
     }
-    [_scheduledEndContact removeObjectsInArray:toRemoveEnd];
 }
 
 #else //SPRITE KIT

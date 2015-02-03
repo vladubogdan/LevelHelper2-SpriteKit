@@ -1,0 +1,1172 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E2BADAB1A6E84BC0089B2E4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */; };
+		6E2BADAC1A6E84BC0089B2E4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */; };
+		6E2BADAF1A6E84D80089B2E4 /* AppDelegateMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADAE1A6E84D80089B2E4 /* AppDelegateMac.mm */; };
+		6E2BADB21A6E84E40089B2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */; };
+		6E2BADB31A6E84E40089B2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */; };
+		6E2BADB81A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */; };
+		6E2BADB91A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */; };
+		6E2BADBA1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */; };
+		6E2BADBB1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */; };
+		6E2BADBF1A6E85360089B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADBC1A6E85360089B2E4 /* main.m */; };
+		6E2BADC01A6E85360089B2E4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADBD1A6E85360089B2E4 /* MainMenu.xib */; };
+		6E2BADC21A6E85490089B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADC11A6E85490089B2E4 /* main.m */; };
+		6E2BADC31A6E85490089B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BADC11A6E85490089B2E4 /* main.m */; };
+		6E2BADC61A6E855E0089B2E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */; };
+		6E2BADC71A6E855E0089B2E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */; };
+		6E2BADC81A6E855E0089B2E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */; };
+		6E2BADCA1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E2BADCB1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E2BADCC1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */ = {isa = PBXBuildFile; fileRef = 6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */; };
+		6E72A6081983747F00143439 /* Info-Box2d.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33A1959C01800726044 /* Info-Box2d.plist */; };
+		6E72A6611983770000143439 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E72A6601983770000143439 /* Cocoa.framework */; };
+		6E72A6631983770700143439 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E72A6621983770700143439 /* SpriteKit.framework */; };
+		6E89FCF7192E0A390040478F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCF6192E0A390040478F /* Foundation.framework */; };
+		6E89FCF9192E0A390040478F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCF8192E0A390040478F /* CoreGraphics.framework */; };
+		6E89FCFB192E0A390040478F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCFA192E0A390040478F /* UIKit.framework */; };
+		6E89FCFD192E0A390040478F /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCFC192E0A390040478F /* SpriteKit.framework */; };
+		6EBEA32A1959BFD000726044 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCF8192E0A390040478F /* CoreGraphics.framework */; };
+		6EBEA32B1959BFD000726044 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCFA192E0A390040478F /* UIKit.framework */; };
+		6EBEA32C1959BFD000726044 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCFC192E0A390040478F /* SpriteKit.framework */; };
+		6EBEA32D1959BFD000726044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCF6192E0A390040478F /* Foundation.framework */; };
+		6EBEA33B1959C01800726044 /* Info-Box2d.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33A1959C01800726044 /* Info-Box2d.plist */; };
+		6ECA5F8C1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */; };
+		6ECA5F8D1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */; };
+		6ECA5F8E1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */; };
+		6ECA5F9B1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */; };
+		6ECA5F9C1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */; };
+		6ECA5F9D1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */; };
+		6EDACBA71A6E833400BE3867 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */; };
+		6EDACBA81A6E833400BE3867 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */; };
+		6EDACBA91A6E833400BE3867 /* BlueRobotSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */; };
+		6EDACBAA1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */; };
+		6EDACBAB1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */; };
+		6EDACBAC1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */; };
+		6EDACBAD1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */; };
+		6EDACBAE1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */; };
+		6EDACBAF1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */; };
+		6EDACBB01A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */; };
+		6EDACBB11A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */; };
+		6EDACBB21A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */; };
+		6EDACBB31A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */; };
+		6EDACBB41A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */; };
+		6EDACBB51A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */; };
+		6EDACBB61A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */; };
+		6EDACBB71A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */; };
+		6EDACBB81A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */; };
+		6EDACBB91A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */; };
+		6EDACBBA1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */; };
+		6EDACBBB1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */; };
+		6EDACBBC1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */; };
+		6EDACBBD1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */; };
+		6EDACBBE1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */; };
+		6EDACBBF1A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */; };
+		6EDACBC01A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */; };
+		6EDACBC11A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */; };
+		6EDACBC21A6E833400BE3867 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */; };
+		6EDACBC31A6E833400BE3867 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */; };
+		6EDACBC41A6E833400BE3867 /* LHSceneDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */; };
+		6EDACBC51A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */; };
+		6EDACBC61A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */; };
+		6EDACBC71A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */; };
+		6EDACBC81A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */; };
+		6EDACBC91A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */; };
+		6EDACBCA1A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */; };
+		6EDACBCB1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */; };
+		6EDACBCC1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */; };
+		6EDACBCD1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */; };
+		6EDACBCE1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */; };
+		6EDACBCF1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */; };
+		6EDACBD01A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */; };
+		6EDACBD11A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */; };
+		6EDACBD21A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */; };
+		6EDACBD31A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */; };
+		6EDACBD41A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */; };
+		6EDACBD51A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */; };
+		6EDACBD61A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */; };
+		6EDACBD71A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */; };
+		6EDACBD81A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */; };
+		6EDACBD91A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */; };
+		6EDACBDA1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */; };
+		6EDACBDB1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */; };
+		6EDACBDC1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */; };
+		6EDACBDD1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */; };
+		6EDACBDE1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */; };
+		6EDACBDF1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */; };
+		6EDACBE01A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */; };
+		6EDACBE11A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */; };
+		6EDACBE21A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */; };
+		6EDACBE31A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */; };
+		6EDACBE41A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */; };
+		6EDACBE51A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */; };
+		6EDACBE61A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */; };
+		6EDACBE71A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */; };
+		6EDACBE81A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */; };
+		6EDACBE91A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */; };
+		6EDACBEA1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */; };
+		6EDACBEB1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */; };
+		6EDACBEC1A6E833400BE3867 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */; };
+		6EDACBED1A6E833400BE3867 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */; };
+		6EDACBEE1A6E833400BE3867 /* MyCustomNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */; };
+		6EDACBF01A6E834700BE3867 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */; };
+		6EDACBF11A6E834700BE3867 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */; };
+		6EDACBF21A6E834700BE3867 /* PUBLISH_FOLDER in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */; };
+		6EDACC051A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */; };
+		6EDACC061A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */; };
+		6EDACC071A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */; };
+		6EDACC081A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */; };
+		6EDACC091A6E835100BE3867 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */; };
+		6EDACC0A1A6E835100BE3867 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */; };
+		6EDACC0B1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */; };
+		6EDACC0C1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */; };
+		6EDACC0D1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */; };
+		6EDACC0E1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */; };
+		6EDACC0F1A6E835100BE3867 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF91A6E835100BE3867 /* Default.png */; };
+		6EDACC101A6E835100BE3867 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBF91A6E835100BE3867 /* Default.png */; };
+		6EDACC111A6E835100BE3867 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFA1A6E835100BE3867 /* Default@2x.png */; };
+		6EDACC121A6E835100BE3867 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFA1A6E835100BE3867 /* Default@2x.png */; };
+		6EDACC131A6E835100BE3867 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFB1A6E835100BE3867 /* iPad-old.png */; };
+		6EDACC141A6E835100BE3867 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFB1A6E835100BE3867 /* iPad-old.png */; };
+		6EDACC151A6E835100BE3867 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */; };
+		6EDACC161A6E835100BE3867 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */; };
+		6EDACC171A6E835100BE3867 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFD1A6E835100BE3867 /* iPad.png */; };
+		6EDACC181A6E835100BE3867 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFD1A6E835100BE3867 /* iPad.png */; };
+		6EDACC191A6E835100BE3867 /* iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFE1A6E835100BE3867 /* iPad@2x.png */; };
+		6EDACC1A1A6E835100BE3867 /* iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFE1A6E835100BE3867 /* iPad@2x.png */; };
+		6EDACC1B1A6E835100BE3867 /* iPhone-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFF1A6E835100BE3867 /* iPhone-old.png */; };
+		6EDACC1C1A6E835100BE3867 /* iPhone-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACBFF1A6E835100BE3867 /* iPhone-old.png */; };
+		6EDACC1D1A6E835100BE3867 /* iPhone-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */; };
+		6EDACC1E1A6E835100BE3867 /* iPhone-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */; };
+		6EDACC1F1A6E835100BE3867 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC011A6E835100BE3867 /* iPhone.png */; };
+		6EDACC201A6E835100BE3867 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC011A6E835100BE3867 /* iPhone.png */; };
+		6EDACC211A6E835100BE3867 /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC021A6E835100BE3867 /* iPhone@2x.png */; };
+		6EDACC221A6E835100BE3867 /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC021A6E835100BE3867 /* iPhone@2x.png */; };
+		6EDACC231A6E835100BE3867 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC031A6E835100BE3867 /* Settings.png */; };
+		6EDACC241A6E835100BE3867 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC031A6E835100BE3867 /* Settings.png */; };
+		6EDACC251A6E835100BE3867 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC041A6E835100BE3867 /* Settings@2x.png */; };
+		6EDACC261A6E835100BE3867 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDACC041A6E835100BE3867 /* Settings@2x.png */; };
+		6EDACC291A6E837300BE3867 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB681A6E830700BE3867 /* libBox2D.a */; };
+		6EDACC2A1A6E837800BE3867 /* libLevelHelper2-API_Box2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB741A6E831000BE3867 /* libLevelHelper2-API_Box2d.a */; };
+		6EDACC2B1A6E837D00BE3867 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB6A1A6E830700BE3867 /* libBox2D.a */; };
+		6EDACC2C1A6E838200BE3867 /* libLevelHelper2-API_Box2d_OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB761A6E831000BE3867 /* libLevelHelper2-API_Box2d_OSX.a */; };
+		6EDACC2D1A6E838A00BE3867 /* libLevelHelper2-API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDACB721A6E831000BE3867 /* libLevelHelper2-API.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E2BADD81A6E885E0089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE88E219A48EEF00599C48;
+			remoteInfo = Box2D;
+		};
+		6E2BADDA1A6E88640089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE8B1019A4986C00599C48;
+			remoteInfo = "LevelHelper2-API+Box2d-OSX";
+		};
+		6E2BADDC1A6E88640089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE8AA419A4976900599C48;
+			remoteInfo = "Box2D-OSX";
+		};
+		6E2BADDE1A6E886C0089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE843819A483A200599C48;
+			remoteInfo = "LevelHelper2-API";
+		};
+		6E2BADE01A6E89110089B2E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EDE86AA19A4898100599C48;
+			remoteInfo = "LevelHelper2-API+Box2d";
+		};
+		6EDACB671A6E830700BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE88E319A48EEF00599C48;
+			remoteInfo = Box2D;
+		};
+		6EDACB691A6E830700BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE8B0F19A4976900599C48;
+			remoteInfo = "Box2D-OSX";
+		};
+		6EDACB711A6E831000BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE843919A483A200599C48;
+			remoteInfo = "LevelHelper2-API";
+		};
+		6EDACB731A6E831000BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE871519A4898100599C48;
+			remoteInfo = "LevelHelper2-API+Box2d";
+		};
+		6EDACB751A6E831000BE3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EDE8B7C19A4986C00599C48;
+			remoteInfo = "LevelHelper2-API+Box2d-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E2BADA91A6E84BC0089B2E4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = SOURCE_ROOT; };
+		6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = SOURCE_ROOT; };
+		6E2BADAD1A6E84D80089B2E4 /* AppDelegateMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateMac.h; sourceTree = SOURCE_ROOT; };
+		6E2BADAE1A6E84D80089B2E4 /* AppDelegateMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateMac.mm; sourceTree = SOURCE_ROOT; };
+		6E2BADB01A6E84E40089B2E4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		6E2BADB51A6E84F80089B2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = SOURCE_ROOT; };
+		6E2BADB71A6E84F80089B2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
+		6E2BADBC1A6E85360089B2E4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MacOS/main.m; sourceTree = SOURCE_ROOT; };
+		6E2BADBD1A6E85360089B2E4 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = MacOS/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		6E2BADC11A6E85490089B2E4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		6E2BADC51A6E855E0089B2E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */ = {isa = PBXFileReference; lastKnownFileType = folder; path = INDIVIDUAL_IMAGES_EXAMPLE; sourceTree = SOURCE_ROOT; };
+		6E2BADCE1A6E85C70089B2E4 /* SpriteKitMac-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SpriteKitMac-Prefix.pch"; path = "MacOS/SpriteKitMac-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		6E72A60F1983747F00143439 /* DEMOS + Box2d - MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMOS + Box2d - MacOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E72A6101983748000143439 /* Info-Box2d-Mac.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Box2d-Mac.plist"; path = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/Info-Box2d-Mac.plist"; sourceTree = "<absolute>"; };
+		6E72A6601983770000143439 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		6E72A6621983770700143439 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		6E89FCF3192E0A390040478F /* DEMOS - iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMOS - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E89FCF6192E0A390040478F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6E89FCF8192E0A390040478F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6E89FCFA192E0A390040478F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6E89FCFC192E0A390040478F /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		6E89FD00192E0A390040478F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E89FD1F192E0A390040478F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6EBEA3381959BFD000726044 /* DEMOS+Box2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMOS+Box2d.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBEA33A1959C01800726044 /* Info-Box2d.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Box2d.plist"; sourceTree = SOURCE_ROOT; };
+		6ECA5F8A1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAdvancedPhysicsDemo.h; path = SourceCode/LHSceneAdvancedPhysicsDemo.h; sourceTree = SOURCE_ROOT; };
+		6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAdvancedPhysicsDemo.mm; path = SourceCode/LHSceneAdvancedPhysicsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6ECA5F991A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneOnTheFlySpritesWithPhysicsDemo.h; path = SourceCode/LHSceneOnTheFlySpritesWithPhysicsDemo.h; sourceTree = SOURCE_ROOT; };
+		6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneOnTheFlySpritesWithPhysicsDemo.mm; path = SourceCode/LHSceneOnTheFlySpritesWithPhysicsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = ../Box2D/Box2D.xcodeproj; sourceTree = "<group>"; };
+		6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LevelHelper2-API.xcodeproj"; path = "../LevelHelper2-API/LevelHelper2-API.xcodeproj"; sourceTree = "<group>"; };
+		6EDACB771A6E833400BE3867 /* BlueRobotSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueRobotSprite.h; path = SourceCode/BlueRobotSprite.h; sourceTree = SOURCE_ROOT; };
+		6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlueRobotSprite.mm; path = SourceCode/BlueRobotSprite.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB791A6E833400BE3867 /* LHSceneAssetsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAssetsDemo.h; path = SourceCode/LHSceneAssetsDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAssetsDemo.mm; path = SourceCode/LHSceneAssetsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB7B1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneAssetWithJointsDemo.h; path = SourceCode/LHSceneAssetWithJointsDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneAssetWithJointsDemo.mm; path = SourceCode/LHSceneAssetWithJointsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB7D1A6E833400BE3867 /* LHSceneBeziersDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneBeziersDemo.h; path = SourceCode/LHSceneBeziersDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneBeziersDemo.mm; path = SourceCode/LHSceneBeziersDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB7F1A6E833400BE3867 /* LHSceneCameraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCameraDemo.h; path = SourceCode/LHSceneCameraDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCameraDemo.mm; path = SourceCode/LHSceneCameraDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB811A6E833400BE3867 /* LHSceneCameraFollowDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCameraFollowDemo.h; path = SourceCode/LHSceneCameraFollowDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCameraFollowDemo.mm; path = SourceCode/LHSceneCameraFollowDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB831A6E833400BE3867 /* LHSceneCharacterAnimationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCharacterAnimationDemo.h; path = SourceCode/LHSceneCharacterAnimationDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCharacterAnimationDemo.mm; path = SourceCode/LHSceneCharacterAnimationDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB851A6E833400BE3867 /* LHSceneCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCollisionDemo.h; path = SourceCode/LHSceneCollisionDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCollisionDemo.mm; path = SourceCode/LHSceneCollisionDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB871A6E833400BE3867 /* LHSceneCollisionFilteringDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneCollisionFilteringDemo.h; path = SourceCode/LHSceneCollisionFilteringDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneCollisionFilteringDemo.mm; path = SourceCode/LHSceneCollisionFilteringDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB891A6E833400BE3867 /* LHSceneDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneDemo.h; path = SourceCode/LHSceneDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneDemo.mm; path = SourceCode/LHSceneDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB8B1A6E833400BE3867 /* LHSceneGravityAreas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneGravityAreas.h; path = SourceCode/LHSceneGravityAreas.h; sourceTree = SOURCE_ROOT; };
+		6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneGravityAreas.mm; path = SourceCode/LHSceneGravityAreas.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB8D1A6E833400BE3867 /* LHSceneIntroduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneIntroduction.h; path = SourceCode/LHSceneIntroduction.h; sourceTree = SOURCE_ROOT; };
+		6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneIntroduction.mm; path = SourceCode/LHSceneIntroduction.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB8F1A6E833400BE3867 /* LHSceneNodePositioningTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneNodePositioningTest.h; path = SourceCode/LHSceneNodePositioningTest.h; sourceTree = SOURCE_ROOT; };
+		6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneNodePositioningTest.mm; path = SourceCode/LHSceneNodePositioningTest.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB911A6E833400BE3867 /* LHSceneNodesSubclassingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneNodesSubclassingTest.h; path = SourceCode/LHSceneNodesSubclassingTest.h; sourceTree = SOURCE_ROOT; };
+		6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneNodesSubclassingTest.mm; path = SourceCode/LHSceneNodesSubclassingTest.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB931A6E833400BE3867 /* LHSceneOtherJointsDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneOtherJointsDemo.h; path = SourceCode/LHSceneOtherJointsDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneOtherJointsDemo.mm; path = SourceCode/LHSceneOtherJointsDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB951A6E833400BE3867 /* LHSceneParallaxDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneParallaxDemo.h; path = SourceCode/LHSceneParallaxDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneParallaxDemo.mm; path = SourceCode/LHSceneParallaxDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB971A6E833400BE3867 /* LHScenePhysicsBodiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHScenePhysicsBodiesDemo.h; path = SourceCode/LHScenePhysicsBodiesDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHScenePhysicsBodiesDemo.mm; path = SourceCode/LHScenePhysicsBodiesDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB991A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneRemoveOnCollisionDemo.h; path = SourceCode/LHSceneRemoveOnCollisionDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneRemoveOnCollisionDemo.mm; path = SourceCode/LHSceneRemoveOnCollisionDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB9B1A6E833400BE3867 /* LHSceneRopeJointDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneRopeJointDemo.h; path = SourceCode/LHSceneRopeJointDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneRopeJointDemo.mm; path = SourceCode/LHSceneRopeJointDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB9D1A6E833400BE3867 /* LHSceneShapesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneShapesDemo.h; path = SourceCode/LHSceneShapesDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneShapesDemo.mm; path = SourceCode/LHSceneShapesDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACB9F1A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSpriteSheetAnimationDemo.h; path = SourceCode/LHSceneSpriteSheetAnimationDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSpriteSheetAnimationDemo.mm; path = SourceCode/LHSceneSpriteSheetAnimationDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBA11A6E833400BE3867 /* LHSceneUserPropertiesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneUserPropertiesDemo.h; path = SourceCode/LHSceneUserPropertiesDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneUserPropertiesDemo.mm; path = SourceCode/LHSceneUserPropertiesDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBA31A6E833400BE3867 /* LHSceneWaterAreaDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneWaterAreaDemo.h; path = SourceCode/LHSceneWaterAreaDemo.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneWaterAreaDemo.mm; path = SourceCode/LHSceneWaterAreaDemo.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBA51A6E833400BE3867 /* MyCustomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomNode.h; path = SourceCode/MyCustomNode.h; sourceTree = SOURCE_ROOT; };
+		6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCustomNode.mm; path = SourceCode/MyCustomNode.mm; sourceTree = SOURCE_ROOT; };
+		6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PUBLISH_FOLDER; sourceTree = SOURCE_ROOT; };
+		6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-375w-667h@2x~iphone.png"; sourceTree = "<group>"; };
+		6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-414w-736h@3x~iphone.png"; sourceTree = "<group>"; };
+		6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		6EDACBF91A6E835100BE3867 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6EDACBFA1A6E835100BE3867 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6EDACBFB1A6E835100BE3867 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-old.png"; sourceTree = "<group>"; };
+		6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-old@2x.png"; sourceTree = "<group>"; };
+		6EDACBFD1A6E835100BE3867 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
+		6EDACBFE1A6E835100BE3867 /* iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad@2x.png"; sourceTree = "<group>"; };
+		6EDACBFF1A6E835100BE3867 /* iPhone-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-old.png"; sourceTree = "<group>"; };
+		6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-old@2x.png"; sourceTree = "<group>"; };
+		6EDACC011A6E835100BE3867 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		6EDACC021A6E835100BE3867 /* iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone@2x.png"; sourceTree = "<group>"; };
+		6EDACC031A6E835100BE3867 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		6EDACC041A6E835100BE3867 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
+		6EDACC271A6E836500BE3867 /* HOW_TO_REMOVE_DEMOS.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = HOW_TO_REMOVE_DEMOS.md; sourceTree = "<group>"; };
+		6EDACC281A6E836500BE3867 /* LH_DEMO_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_DEMO_VERSION.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E72A5FE1983747F00143439 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EDACC2C1A6E838200BE3867 /* libLevelHelper2-API_Box2d_OSX.a in Frameworks */,
+				6EDACC2B1A6E837D00BE3867 /* libBox2D.a in Frameworks */,
+				6E72A6631983770700143439 /* SpriteKit.framework in Frameworks */,
+				6E72A6611983770000143439 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E89FCF0192E0A390040478F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EDACC2D1A6E838A00BE3867 /* libLevelHelper2-API.a in Frameworks */,
+				6E89FCF9192E0A390040478F /* CoreGraphics.framework in Frameworks */,
+				6E89FCFB192E0A390040478F /* UIKit.framework in Frameworks */,
+				6E89FCFD192E0A390040478F /* SpriteKit.framework in Frameworks */,
+				6E89FCF7192E0A390040478F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBEA3291959BFD000726044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EDACC2A1A6E837800BE3867 /* libLevelHelper2-API_Box2d.a in Frameworks */,
+				6EDACC291A6E837300BE3867 /* libBox2D.a in Frameworks */,
+				6EBEA32A1959BFD000726044 /* CoreGraphics.framework in Frameworks */,
+				6EBEA32B1959BFD000726044 /* UIKit.framework in Frameworks */,
+				6EBEA32C1959BFD000726044 /* SpriteKit.framework in Frameworks */,
+				6EBEA32D1959BFD000726044 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E72A659198375A400143439 /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E2BADCE1A6E85C70089B2E4 /* SpriteKitMac-Prefix.pch */,
+				6E2BADBC1A6E85360089B2E4 /* main.m */,
+				6E2BADBD1A6E85360089B2E4 /* MainMenu.xib */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		6E89FCEA192E0A390040478F = {
+			isa = PBXGroup;
+			children = (
+				6EDACC271A6E836500BE3867 /* HOW_TO_REMOVE_DEMOS.md */,
+				6EDACC281A6E836500BE3867 /* LH_DEMO_VERSION.plist */,
+				6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */,
+				6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */,
+				6E89FCFE192E0A390040478F /* DEMOS */,
+				6E89FCF5192E0A390040478F /* Frameworks */,
+				6E89FCF4192E0A390040478F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E89FCF4192E0A390040478F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E89FCF3192E0A390040478F /* DEMOS - iOS.app */,
+				6EBEA3381959BFD000726044 /* DEMOS+Box2d.app */,
+				6E72A60F1983747F00143439 /* DEMOS + Box2d - MacOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E89FCF5192E0A390040478F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E72A6621983770700143439 /* SpriteKit.framework */,
+				6E72A6601983770000143439 /* Cocoa.framework */,
+				6E89FCF6192E0A390040478F /* Foundation.framework */,
+				6E89FCF8192E0A390040478F /* CoreGraphics.framework */,
+				6E89FCFA192E0A390040478F /* UIKit.framework */,
+				6E89FCFC192E0A390040478F /* SpriteKit.framework */,
+				6E89FD1F192E0A390040478F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E89FCFE192E0A390040478F /* DEMOS */ = {
+			isa = PBXGroup;
+			children = (
+				6EDACB891A6E833400BE3867 /* LHSceneDemo.h */,
+				6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */,
+				6ECA5F8A1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.h */,
+				6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */,
+				6ECA5F991A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.h */,
+				6ECA5F9A1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm */,
+				6EDACB771A6E833400BE3867 /* BlueRobotSprite.h */,
+				6EDACB781A6E833400BE3867 /* BlueRobotSprite.mm */,
+				6EDACB791A6E833400BE3867 /* LHSceneAssetsDemo.h */,
+				6EDACB7A1A6E833400BE3867 /* LHSceneAssetsDemo.mm */,
+				6EDACB7B1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.h */,
+				6EDACB7C1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm */,
+				6EDACB7D1A6E833400BE3867 /* LHSceneBeziersDemo.h */,
+				6EDACB7E1A6E833400BE3867 /* LHSceneBeziersDemo.mm */,
+				6EDACB7F1A6E833400BE3867 /* LHSceneCameraDemo.h */,
+				6EDACB801A6E833400BE3867 /* LHSceneCameraDemo.mm */,
+				6EDACB811A6E833400BE3867 /* LHSceneCameraFollowDemo.h */,
+				6EDACB821A6E833400BE3867 /* LHSceneCameraFollowDemo.mm */,
+				6EDACB831A6E833400BE3867 /* LHSceneCharacterAnimationDemo.h */,
+				6EDACB841A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm */,
+				6EDACB851A6E833400BE3867 /* LHSceneCollisionDemo.h */,
+				6EDACB861A6E833400BE3867 /* LHSceneCollisionDemo.mm */,
+				6EDACB871A6E833400BE3867 /* LHSceneCollisionFilteringDemo.h */,
+				6EDACB881A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm */,
+				6EDACB8B1A6E833400BE3867 /* LHSceneGravityAreas.h */,
+				6EDACB8C1A6E833400BE3867 /* LHSceneGravityAreas.mm */,
+				6EDACB8D1A6E833400BE3867 /* LHSceneIntroduction.h */,
+				6EDACB8E1A6E833400BE3867 /* LHSceneIntroduction.mm */,
+				6EDACB8F1A6E833400BE3867 /* LHSceneNodePositioningTest.h */,
+				6EDACB901A6E833400BE3867 /* LHSceneNodePositioningTest.mm */,
+				6EDACB911A6E833400BE3867 /* LHSceneNodesSubclassingTest.h */,
+				6EDACB921A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm */,
+				6EDACB931A6E833400BE3867 /* LHSceneOtherJointsDemo.h */,
+				6EDACB941A6E833400BE3867 /* LHSceneOtherJointsDemo.mm */,
+				6EDACB951A6E833400BE3867 /* LHSceneParallaxDemo.h */,
+				6EDACB961A6E833400BE3867 /* LHSceneParallaxDemo.mm */,
+				6EDACB971A6E833400BE3867 /* LHScenePhysicsBodiesDemo.h */,
+				6EDACB981A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm */,
+				6EDACB991A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.h */,
+				6EDACB9A1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm */,
+				6EDACB9B1A6E833400BE3867 /* LHSceneRopeJointDemo.h */,
+				6EDACB9C1A6E833400BE3867 /* LHSceneRopeJointDemo.mm */,
+				6EDACB9D1A6E833400BE3867 /* LHSceneShapesDemo.h */,
+				6EDACB9E1A6E833400BE3867 /* LHSceneShapesDemo.mm */,
+				6EDACB9F1A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.h */,
+				6EDACBA01A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm */,
+				6EDACBA11A6E833400BE3867 /* LHSceneUserPropertiesDemo.h */,
+				6EDACBA21A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm */,
+				6EDACBA31A6E833400BE3867 /* LHSceneWaterAreaDemo.h */,
+				6EDACBA41A6E833400BE3867 /* LHSceneWaterAreaDemo.mm */,
+				6EDACBA51A6E833400BE3867 /* MyCustomNode.h */,
+				6EDACBA61A6E833400BE3867 /* MyCustomNode.mm */,
+				6E2BADB01A6E84E40089B2E4 /* AppDelegate.h */,
+				6E2BADB11A6E84E40089B2E4 /* AppDelegate.m */,
+				6E2BADAD1A6E84D80089B2E4 /* AppDelegateMac.h */,
+				6E2BADAE1A6E84D80089B2E4 /* AppDelegateMac.mm */,
+				6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */,
+				6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */,
+				6E2BADA91A6E84BC0089B2E4 /* ViewController.h */,
+				6E2BADAA1A6E84BC0089B2E4 /* ViewController.mm */,
+				6E89FCFF192E0A390040478F /* Supporting Files */,
+			);
+			path = DEMOS;
+			sourceTree = "<group>";
+		};
+		6E89FCFF192E0A390040478F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E2BADC91A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE */,
+				6EDACBEF1A6E834700BE3867 /* PUBLISH_FOLDER */,
+				6EDACBF31A6E835100BE3867 /* Icons */,
+				6E72A659198375A400143439 /* MacOS */,
+				6E72A6101983748000143439 /* Info-Box2d-Mac.plist */,
+				6EBEA33A1959C01800726044 /* Info-Box2d.plist */,
+				6E89FD00192E0A390040478F /* Info.plist */,
+				6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */,
+				6E2BADC11A6E85490089B2E4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EDACB631A6E830700BE3867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EDACB681A6E830700BE3867 /* libBox2D.a */,
+				6EDACB6A1A6E830700BE3867 /* libBox2D.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EDACB6C1A6E831000BE3867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EDACB721A6E831000BE3867 /* libLevelHelper2-API.a */,
+				6EDACB741A6E831000BE3867 /* libLevelHelper2-API_Box2d.a */,
+				6EDACB761A6E831000BE3867 /* libLevelHelper2-API_Box2d_OSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EDACBF31A6E835100BE3867 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				6EDACBF41A6E835100BE3867 /* Default-375w-667h@2x~iphone.png */,
+				6EDACBF51A6E835100BE3867 /* Default-414w-736h@3x~iphone.png */,
+				6EDACBF61A6E835100BE3867 /* Default-568h@2x.png */,
+				6EDACBF71A6E835100BE3867 /* Default-Landscape@2x~ipad.png */,
+				6EDACBF81A6E835100BE3867 /* Default-Landscape~ipad.png */,
+				6EDACBF91A6E835100BE3867 /* Default.png */,
+				6EDACBFA1A6E835100BE3867 /* Default@2x.png */,
+				6EDACBFB1A6E835100BE3867 /* iPad-old.png */,
+				6EDACBFC1A6E835100BE3867 /* iPad-old@2x.png */,
+				6EDACBFD1A6E835100BE3867 /* iPad.png */,
+				6EDACBFE1A6E835100BE3867 /* iPad@2x.png */,
+				6EDACBFF1A6E835100BE3867 /* iPhone-old.png */,
+				6EDACC001A6E835100BE3867 /* iPhone-old@2x.png */,
+				6EDACC011A6E835100BE3867 /* iPhone.png */,
+				6EDACC021A6E835100BE3867 /* iPhone@2x.png */,
+				6EDACC031A6E835100BE3867 /* Settings.png */,
+				6EDACC041A6E835100BE3867 /* Settings@2x.png */,
+			);
+			path = Icons;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E72A5891983747F00143439 /* DEMOS + Box2d - MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E72A60C1983747F00143439 /* Build configuration list for PBXNativeTarget "DEMOS + Box2d - MacOS" */;
+			buildPhases = (
+				6E72A58A1983747F00143439 /* Sources */,
+				6E72A5FE1983747F00143439 /* Frameworks */,
+				6E72A6041983747F00143439 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E2BADDB1A6E88640089B2E4 /* PBXTargetDependency */,
+				6E2BADDD1A6E88640089B2E4 /* PBXTargetDependency */,
+			);
+			name = "DEMOS + Box2d - MacOS";
+			productName = DEMOS;
+			productReference = 6E72A60F1983747F00143439 /* DEMOS + Box2d - MacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E89FCF2192E0A390040478F /* DEMOS - iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E89FD2F192E0A390040478F /* Build configuration list for PBXNativeTarget "DEMOS - iOS" */;
+			buildPhases = (
+				6E89FCEF192E0A390040478F /* Sources */,
+				6E89FCF0192E0A390040478F /* Frameworks */,
+				6E89FCF1192E0A390040478F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E2BADDF1A6E886C0089B2E4 /* PBXTargetDependency */,
+			);
+			name = "DEMOS - iOS";
+			productName = DEMOS;
+			productReference = 6E89FCF3192E0A390040478F /* DEMOS - iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EBEA2F71959BFD000726044 /* DEMOS + Box2d - iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EBEA3351959BFD000726044 /* Build configuration list for PBXNativeTarget "DEMOS + Box2d - iOS" */;
+			buildPhases = (
+				6EBEA2F81959BFD000726044 /* Sources */,
+				6EBEA3291959BFD000726044 /* Frameworks */,
+				6EBEA32E1959BFD000726044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E2BADE11A6E89110089B2E4 /* PBXTargetDependency */,
+				6E2BADD91A6E885E0089B2E4 /* PBXTargetDependency */,
+			);
+			name = "DEMOS + Box2d - iOS";
+			productName = DEMOS;
+			productReference = 6EBEA3381959BFD000726044 /* DEMOS+Box2d.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E89FCEB192E0A390040478F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "VLADU BOGDAN DANIEL PFA";
+			};
+			buildConfigurationList = 6E89FCEE192E0A390040478F /* Build configuration list for PBXProject "DEMOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E89FCEA192E0A390040478F;
+			productRefGroup = 6E89FCF4192E0A390040478F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6EDACB631A6E830700BE3867 /* Products */;
+					ProjectRef = 6EDACB621A6E830700BE3867 /* Box2D.xcodeproj */;
+				},
+				{
+					ProductGroup = 6EDACB6C1A6E831000BE3867 /* Products */;
+					ProjectRef = 6EDACB6B1A6E831000BE3867 /* LevelHelper2-API.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6EBEA2F71959BFD000726044 /* DEMOS + Box2d - iOS */,
+				6E72A5891983747F00143439 /* DEMOS + Box2d - MacOS */,
+				6E89FCF2192E0A390040478F /* DEMOS - iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6EDACB681A6E830700BE3867 /* libBox2D.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBox2D.a;
+			remoteRef = 6EDACB671A6E830700BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB6A1A6E830700BE3867 /* libBox2D.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBox2D.a;
+			remoteRef = 6EDACB691A6E830700BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB721A6E831000BE3867 /* libLevelHelper2-API.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLevelHelper2-API.a";
+			remoteRef = 6EDACB711A6E831000BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB741A6E831000BE3867 /* libLevelHelper2-API_Box2d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLevelHelper2-API_Box2d.a";
+			remoteRef = 6EDACB731A6E831000BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6EDACB761A6E831000BE3867 /* libLevelHelper2-API_Box2d_OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLevelHelper2-API_Box2d_OSX.a";
+			remoteRef = 6EDACB751A6E831000BE3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E72A6041983747F00143439 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EDACBF11A6E834700BE3867 /* PUBLISH_FOLDER in Resources */,
+				6E2BADC71A6E855E0089B2E4 /* InfoPlist.strings in Resources */,
+				6E2BADCB1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6E72A6081983747F00143439 /* Info-Box2d.plist in Resources */,
+				6E2BADC01A6E85360089B2E4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E89FCF1192E0A390040478F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2BADCC1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6EDACC241A6E835100BE3867 /* Settings.png in Resources */,
+				6E2BADC81A6E855E0089B2E4 /* InfoPlist.strings in Resources */,
+				6EDACC1C1A6E835100BE3867 /* iPhone-old.png in Resources */,
+				6EDACC0E1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */,
+				6EDACBF21A6E834700BE3867 /* PUBLISH_FOLDER in Resources */,
+				6EDACC0C1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */,
+				6E2BADBB1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */,
+				6E2BADB91A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */,
+				6EDACC141A6E835100BE3867 /* iPad-old.png in Resources */,
+				6EDACC121A6E835100BE3867 /* Default@2x.png in Resources */,
+				6EDACC201A6E835100BE3867 /* iPhone.png in Resources */,
+				6EDACC261A6E835100BE3867 /* Settings@2x.png in Resources */,
+				6EDACC181A6E835100BE3867 /* iPad.png in Resources */,
+				6EDACC1E1A6E835100BE3867 /* iPhone-old@2x.png in Resources */,
+				6EDACC081A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */,
+				6EDACC061A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */,
+				6EDACC1A1A6E835100BE3867 /* iPad@2x.png in Resources */,
+				6EDACC221A6E835100BE3867 /* iPhone@2x.png in Resources */,
+				6EDACC0A1A6E835100BE3867 /* Default-568h@2x.png in Resources */,
+				6EDACC161A6E835100BE3867 /* iPad-old@2x.png in Resources */,
+				6EDACC101A6E835100BE3867 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBEA32E1959BFD000726044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EDACC111A6E835100BE3867 /* Default@2x.png in Resources */,
+				6EDACC1D1A6E835100BE3867 /* iPhone-old@2x.png in Resources */,
+				6EBEA33B1959C01800726044 /* Info-Box2d.plist in Resources */,
+				6EDACC051A6E835100BE3867 /* Default-375w-667h@2x~iphone.png in Resources */,
+				6EDACC071A6E835100BE3867 /* Default-414w-736h@3x~iphone.png in Resources */,
+				6EDACC211A6E835100BE3867 /* iPhone@2x.png in Resources */,
+				6EDACC0D1A6E835100BE3867 /* Default-Landscape~ipad.png in Resources */,
+				6EDACC191A6E835100BE3867 /* iPad@2x.png in Resources */,
+				6EDACC131A6E835100BE3867 /* iPad-old.png in Resources */,
+				6E2BADC61A6E855E0089B2E4 /* InfoPlist.strings in Resources */,
+				6EDACC1B1A6E835100BE3867 /* iPhone-old.png in Resources */,
+				6E2BADBA1A6E84F80089B2E4 /* Main_iPhone.storyboard in Resources */,
+				6EDACC151A6E835100BE3867 /* iPad-old@2x.png in Resources */,
+				6EDACC0B1A6E835100BE3867 /* Default-Landscape@2x~ipad.png in Resources */,
+				6E2BADB81A6E84F80089B2E4 /* Main_iPad.storyboard in Resources */,
+				6EDACC231A6E835100BE3867 /* Settings.png in Resources */,
+				6EDACC091A6E835100BE3867 /* Default-568h@2x.png in Resources */,
+				6E2BADCA1A6E857C0089B2E4 /* INDIVIDUAL_IMAGES_EXAMPLE in Resources */,
+				6EDACC171A6E835100BE3867 /* iPad.png in Resources */,
+				6EDACBF01A6E834700BE3867 /* PUBLISH_FOLDER in Resources */,
+				6EDACC251A6E835100BE3867 /* Settings@2x.png in Resources */,
+				6EDACC0F1A6E835100BE3867 /* Default.png in Resources */,
+				6EDACC1F1A6E835100BE3867 /* iPhone.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E72A58A1983747F00143439 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2BADBF1A6E85360089B2E4 /* main.m in Sources */,
+				6EDACBC61A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */,
+				6EDACBC01A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */,
+				6EDACBD81A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,
+				6EDACBD51A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
+				6ECA5F8D1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
+				6EDACBDE1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */,
+				6EDACBE71A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6EDACBC91A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */,
+				6EDACBBD1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */,
+				6EDACBED1A6E833400BE3867 /* MyCustomNode.mm in Sources */,
+				6E2BADAF1A6E84D80089B2E4 /* AppDelegateMac.mm in Sources */,
+				6EDACBCC1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */,
+				6EDACBE41A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
+				6EDACBAB1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */,
+				6EDACBB41A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */,
+				6EDACBA81A6E833400BE3867 /* BlueRobotSprite.mm in Sources */,
+				6EDACBBA1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */,
+				6EDACBEA1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */,
+				6EDACBDB1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
+				6EDACBE11A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
+				6ECA5F9C1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */,
+				6EDACBB71A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */,
+				6EDACBC31A6E833400BE3867 /* LHSceneDemo.mm in Sources */,
+				6EDACBB11A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */,
+				6EDACBD21A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */,
+				6EDACBAE1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */,
+				6EDACBCF1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E89FCEF192E0A390040478F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EDACBCD1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */,
+				6EDACBDC1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
+				6ECA5F9D1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */,
+				6E2BADB31A6E84E40089B2E4 /* AppDelegate.m in Sources */,
+				6EDACBBB1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */,
+				6EDACBD61A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
+				6ECA5F8E1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
+				6EDACBE81A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6EDACBE21A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
+				6EDACBE51A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
+				6EDACBD91A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,
+				6EDACBCA1A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */,
+				6EDACBD31A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */,
+				6EDACBB21A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */,
+				6EDACBAF1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */,
+				6EDACBDF1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */,
+				6EDACBC41A6E833400BE3867 /* LHSceneDemo.mm in Sources */,
+				6EDACBB81A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */,
+				6E2BADC31A6E85490089B2E4 /* main.m in Sources */,
+				6EDACBA91A6E833400BE3867 /* BlueRobotSprite.mm in Sources */,
+				6EDACBB51A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */,
+				6EDACBAC1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */,
+				6EDACBC71A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */,
+				6EDACBBE1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */,
+				6EDACBEB1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */,
+				6EDACBD01A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */,
+				6EDACBEE1A6E833400BE3867 /* MyCustomNode.mm in Sources */,
+				6EDACBC11A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */,
+				6E2BADAC1A6E84BC0089B2E4 /* ViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EBEA2F81959BFD000726044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EDACBCB1A6E833400BE3867 /* LHSceneNodePositioningTest.mm in Sources */,
+				6EDACBDA1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
+				6ECA5F9B1A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.mm in Sources */,
+				6E2BADB21A6E84E40089B2E4 /* AppDelegate.m in Sources */,
+				6EDACBB91A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */,
+				6EDACBD41A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
+				6ECA5F8C1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
+				6EDACBE61A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6EDACBE01A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
+				6EDACBE31A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
+				6EDACBD71A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,
+				6EDACBC81A6E833400BE3867 /* LHSceneIntroduction.mm in Sources */,
+				6EDACBD11A6E833400BE3867 /* LHSceneOtherJointsDemo.mm in Sources */,
+				6EDACBB01A6E833400BE3867 /* LHSceneBeziersDemo.mm in Sources */,
+				6EDACBAD1A6E833400BE3867 /* LHSceneAssetWithJointsDemo.mm in Sources */,
+				6EDACBDD1A6E833400BE3867 /* LHSceneRopeJointDemo.mm in Sources */,
+				6EDACBC21A6E833400BE3867 /* LHSceneDemo.mm in Sources */,
+				6EDACBB61A6E833400BE3867 /* LHSceneCameraFollowDemo.mm in Sources */,
+				6E2BADC21A6E85490089B2E4 /* main.m in Sources */,
+				6EDACBA71A6E833400BE3867 /* BlueRobotSprite.mm in Sources */,
+				6EDACBB31A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */,
+				6EDACBAA1A6E833400BE3867 /* LHSceneAssetsDemo.mm in Sources */,
+				6EDACBC51A6E833400BE3867 /* LHSceneGravityAreas.mm in Sources */,
+				6EDACBBC1A6E833400BE3867 /* LHSceneCollisionDemo.mm in Sources */,
+				6EDACBE91A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */,
+				6EDACBCE1A6E833400BE3867 /* LHSceneNodesSubclassingTest.mm in Sources */,
+				6EDACBEC1A6E833400BE3867 /* MyCustomNode.mm in Sources */,
+				6EDACBBF1A6E833400BE3867 /* LHSceneCollisionFilteringDemo.mm in Sources */,
+				6E2BADAB1A6E84BC0089B2E4 /* ViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E2BADD91A6E885E0089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Box2D;
+			targetProxy = 6E2BADD81A6E885E0089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADDB1A6E88640089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LevelHelper2-API+Box2d-OSX";
+			targetProxy = 6E2BADDA1A6E88640089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADDD1A6E88640089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Box2D-OSX";
+			targetProxy = 6E2BADDC1A6E88640089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADDF1A6E886C0089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LevelHelper2-API";
+			targetProxy = 6E2BADDE1A6E886C0089B2E4 /* PBXContainerItemProxy */;
+		};
+		6E2BADE11A6E89110089B2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LevelHelper2-API+Box2d";
+			targetProxy = 6E2BADE01A6E89110089B2E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E2BADB41A6E84F80089B2E4 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E2BADB51A6E84F80089B2E4 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		6E2BADB61A6E84F80089B2E4 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E2BADB71A6E84F80089B2E4 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		6E2BADC41A6E855E0089B2E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E2BADC51A6E855E0089B2E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E72A60D1983747F00143439 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacOS/SpriteKitMac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"LH_USE_BOX2D=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d-Mac.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "DEMOS + Box2d - MacOS";
+				SDKROOT = macosx;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6E72A60E1983747F00143439 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacOS/SpriteKitMac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d-Mac.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "DEMOS + Box2d - MacOS";
+				SDKROOT = macosx;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6E89FD2D192E0A390040478F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E89FD2E192E0A390040478F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E89FD30192E0A390040478F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6E89FD31192E0A390040478F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6EBEA3361959BFD000726044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"LH_USE_BOX2D=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "DEMOS+Box2d";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6EBEA3371959BFD000726044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "LH_USE_BOX2D=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../LevelHelper2-API\"/**",
+					"\"$(SRCROOT)/../Box2D\"/**",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info-Box2d.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "DEMOS+Box2d";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E72A60C1983747F00143439 /* Build configuration list for PBXNativeTarget "DEMOS + Box2d - MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E72A60D1983747F00143439 /* Debug */,
+				6E72A60E1983747F00143439 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E89FCEE192E0A390040478F /* Build configuration list for PBXProject "DEMOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E89FD2D192E0A390040478F /* Debug */,
+				6E89FD2E192E0A390040478F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E89FD2F192E0A390040478F /* Build configuration list for PBXNativeTarget "DEMOS - iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E89FD30192E0A390040478F /* Debug */,
+				6E89FD31192E0A390040478F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EBEA3351959BFD000726044 /* Build configuration list for PBXNativeTarget "DEMOS + Box2d - iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EBEA3361959BFD000726044 /* Debug */,
+				6EBEA3371959BFD000726044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E89FCEB192E0A390040478F /* Project object */;
+}
