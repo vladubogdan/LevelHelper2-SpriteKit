@@ -167,6 +167,7 @@
 /* Begin PBXFileReference section */
 		6E0379D719A7C21700B70D4A /* LH_API_VERSION.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LH_API_VERSION.plist; sourceTree = "<group>"; };
 		6E7A847D19D0293900E2E52F /* LH_SPRITEKIT_PROJECT_TEMPLATE.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = LH_SPRITEKIT_PROJECT_TEMPLATE.plist; path = ../LH_SPRITEKIT_PROJECT_TEMPLATE.plist; sourceTree = "<group>"; };
+		6EABE7AF1A81DFD300BD68BF /* LH_APIS_RELEASE_NOTES.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = LH_APIS_RELEASE_NOTES.html; path = ../LH_APIS_RELEASE_NOTES.html; sourceTree = "<group>"; };
 		6ECA5F8F1A6E8FD3003F8F0F /* LHBodyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBodyShape.h; sourceTree = "<group>"; };
 		6ECA5F901A6E8FD3003F8F0F /* LHBodyShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LHBodyShape.mm; sourceTree = "<group>"; };
 		6ECA5F941A6E9CA7003F8F0F /* LHContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHContactInfo.h; sourceTree = "<group>"; };
@@ -317,6 +318,7 @@
 		6EDE843019A483A200599C48 = {
 			isa = PBXGroup;
 			children = (
+				6EABE7AF1A81DFD300BD68BF /* LH_APIS_RELEASE_NOTES.html */,
 				6E7A847D19D0293900E2E52F /* LH_SPRITEKIT_PROJECT_TEMPLATE.plist */,
 				6E0379D719A7C21700B70D4A /* LH_API_VERSION.plist */,
 				6EDE843E19A483A200599C48 /* LevelHelper2-API */,

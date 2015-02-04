@@ -211,14 +211,27 @@ void lhContactEndContactCaller(void* object,
     LHBodyShape* shapeA = [LHBodyShape shapeForB2Fixture:contact->GetFixtureA()];
     LHBodyShape* shapeB = [LHBodyShape shapeForB2Fixture:contact->GetFixtureB()];
     
-    if(!shapeA || !shapeB)return;
+    NSString* shapeAName = @"userShapeA";
+    NSString* shapeBName = @"userShapeB";
+    
+    int shapeAId = 0;
+    int shapeBId = 0;
+    
+    if(shapeA){
+        shapeAName = [shapeA shapeName];
+        shapeAId = [shapeA shapeID];
+    }
+    if(shapeB){
+        shapeBName = [shapeB shapeName];
+        shapeBId = [shapeB shapeID];
+    }
     
     LHContactInfo* info = [LHContactInfo contactInfoWithNodeA:nodeA
                                                         nodeB:nodeB
-                                                   shapeAName:[shapeA shapeName]
-                                                   shapeBName:[shapeB shapeName]
-                                                     shapeAID:[shapeA shapeID]
-                                                     shapeBID:[shapeB shapeID]
+                                                   shapeAName:shapeAName
+                                                   shapeBName:shapeBName
+                                                     shapeAID:shapeAId
+                                                     shapeBID:shapeBId
                                                         point:[self getPointFromContact:contact]
                                                       impulse:impulse
                                                     b2Contact:contact];
@@ -234,15 +247,29 @@ void lhContactEndContactCaller(void* object,
     LHBodyShape* shapeA = [LHBodyShape shapeForB2Fixture:contact->GetFixtureA()];
     LHBodyShape* shapeB = [LHBodyShape shapeForB2Fixture:contact->GetFixtureB()];
     
-    if(!shapeA || !shapeB)return;
+    NSString* shapeAName = @"userShapeA";
+    NSString* shapeBName = @"userShapeB";
+    
+    int shapeAId = 0;
+    int shapeBId = 0;
+    
+    if(shapeA){
+        shapeAName = [shapeA shapeName];
+        shapeAId = [shapeA shapeID];
+    }
+    if(shapeB){
+        shapeBName = [shapeB shapeName];
+        shapeBId = [shapeB shapeID];
+    }
+    
     
     //in case of sensors - call begin contact with 0 impulse
     LHContactInfo* info = [LHContactInfo contactInfoWithNodeA:nodeA
                                                         nodeB:nodeB
-                                                   shapeAName:[shapeA shapeName]
-                                                   shapeBName:[shapeB shapeName]
-                                                     shapeAID:[shapeA shapeID]
-                                                     shapeBID:[shapeB shapeID]
+                                                   shapeAName:shapeAName
+                                                   shapeBName:shapeBName
+                                                     shapeAID:shapeAId
+                                                     shapeBID:shapeBId
                                                         point:[self getPointFromContact:contact]
                                                       impulse:0
                                                     b2Contact:contact];
@@ -258,14 +285,27 @@ void lhContactEndContactCaller(void* object,
     LHBodyShape* shapeA = [LHBodyShape shapeForB2Fixture:contact->GetFixtureA()];
     LHBodyShape* shapeB = [LHBodyShape shapeForB2Fixture:contact->GetFixtureB()];
     
-    if(!shapeA || !shapeB)return;
+    NSString* shapeAName = @"userShapeA";
+    NSString* shapeBName = @"userShapeB";
+    
+    int shapeAId = 0;
+    int shapeBId = 0;
+    
+    if(shapeA){
+        shapeAName = [shapeA shapeName];
+        shapeAId = [shapeA shapeID];
+    }
+    if(shapeB){
+        shapeBName = [shapeB shapeName];
+        shapeBId = [shapeB shapeID];
+    }
     
     LHContactInfo* info = [LHContactInfo contactInfoWithNodeA:nodeA
                                                         nodeB:nodeB
-                                                   shapeAName:[shapeA shapeName]
-                                                   shapeBName:[shapeB shapeName]
-                                                     shapeAID:[shapeA shapeID]
-                                                     shapeBID:[shapeB shapeID]
+                                                   shapeAName:shapeAName
+                                                   shapeBName:shapeBName
+                                                     shapeAID:shapeAId
+                                                     shapeBID:shapeBId
                                                         point:CGPointZero
                                                       impulse:0
                                                     b2Contact:contact];
