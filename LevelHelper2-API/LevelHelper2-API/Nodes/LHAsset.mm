@@ -125,7 +125,6 @@
     if(self = [super init]){
         
         [prnt addChild:self];
-        [self setName:newName];
         
         LHScene* scene = (LHScene*)[prnt scene];
         
@@ -178,7 +177,7 @@
 //        debugShapeNode.strokeColor = [SKColor greenColor];
 //        [self addChild:debugShapeNode];
 //#endif
-        
+        [self setName:newName];        
         [self update:0 delta:0];
         
         
