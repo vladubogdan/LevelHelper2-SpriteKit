@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>appName</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan Daniel</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>format</key>
+	<string>APPL</string>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>test-667.png</string>
+			<key>size</key>
+			<string>{54.000000, 108.000000}</string>
+			<key>subimages</key>
+			<array>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>red</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{50.000000, 50.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 2}, {50, 50}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>blue</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{50.000000, 50.000000}</string>
+					<key>textureRect</key>
+					<string>{{2, 56}, {50, 50}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

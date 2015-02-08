@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>about</key>
+	<dict>
+		<key>appName</key>
+		<string>LevelHelper 2</string>
+		<key>author</key>
+		<string>Vladu Bogdan Daniel</string>
+		<key>web</key>
+		<string>http://www.gamedevhelper.com</string>
+	</dict>
+	<key>format</key>
+	<string>APPL</string>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>girlSoldierParts-736@2x.png</string>
+			<key>size</key>
+			<string>{664.000000, 666.000000}</string>
+			<key>subimages</key>
+			<array>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>Gun</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{311.000000, 74.000000}</string>
+					<key>textureRect</key>
+					<string>{{4, 4}, {311, 74}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>footBack_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{84.000000, 45.000000}</string>
+					<key>textureRect</key>
+					<string>{{141, 548}, {84, 45}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>HeadNormal</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{239.000000, 219.000000}</string>
+					<key>textureRect</key>
+					<string>{{323, 4}, {239, 219}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>Grenade</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{76.000000, 85.000000}</string>
+					<key>textureRect</key>
+					<string>{{4, 548}, {76, 85}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>hand_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{52.000000, 51.000000}</string>
+					<key>textureRect</key>
+					<string>{{141, 601}, {52, 51}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>Knife</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{112.000000, 29.000000}</string>
+					<key>textureRect</key>
+					<string>{{539, 489}, {112, 29}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>HeadHurt</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{238.000000, 219.000000}</string>
+					<key>textureRect</key>
+					<string>{{318, 231}, {238, 219}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>TailBack</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{89.000000, 154.000000}</string>
+					<key>textureRect</key>
+					<string>{{570, 4}, {89, 154}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>Tail</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{89.000000, 154.000000}</string>
+					<key>textureRect</key>
+					<string>{{570, 166}, {89, 154}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>foot_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{96.000000, 46.000000}</string>
+					<key>textureRect</key>
+					<string>{{564, 328}, {96, 46}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>HeadHappy</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{238.000000, 227.000000}</string>
+					<key>textureRect</key>
+					<string>{{4, 86}, {238, 227}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>lowerLegBack_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{57.000000, 67.000000}</string>
+					<key>textureRect</key>
+					<string>{{250, 315}, {57, 67}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>Body</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{111.000000, 141.000000}</string>
+					<key>textureRect</key>
+					<string>{{402, 521}, {111, 141}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>lowerLegBack_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{57.000000, 67.000000}</string>
+					<key>textureRect</key>
+					<string>{{235, 453}, {57, 67}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>lowerArm_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{42.000000, 63.000000}</string>
+					<key>textureRect</key>
+					<string>{{352, 526}, {42, 63}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>lowerLeg_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{59.000000, 67.000000}</string>
+					<key>textureRect</key>
+					<string>{{250, 240}, {59, 67}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>HandKnife</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{129.000000, 55.000000}</string>
+					<key>textureRect</key>
+					<string>{{402, 458}, {129, 55}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>hand_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{67.000000, 55.000000}</string>
+					<key>textureRect</key>
+					<string>{{235, 390}, {67, 55}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>HeadBack</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{223.000000, 219.000000}</string>
+					<key>textureRect</key>
+					<string>{{4, 321}, {223, 219}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>foot_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{96.000000, 46.000000}</string>
+					<key>textureRect</key>
+					<string>{{564, 382}, {96, 46}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>lowerArm_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{42.000000, 62.000000}</string>
+					<key>textureRect</key>
+					<string>{{300, 458}, {42, 62}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>HandOpen</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{62.000000, 71.000000}</string>
+					<key>textureRect</key>
+					<string>{{250, 86}, {62, 71}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>lowerLeg_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{60.000000, 67.000000}</string>
+					<key>textureRect</key>
+					<string>{{250, 165}, {60, 67}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>upperArm_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{36.000000, 50.000000}</string>
+					<key>textureRect</key>
+					<string>{{352, 597}, {36, 50}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>upperLeg_L</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{45.000000, 64.000000}</string>
+					<key>textureRect</key>
+					<string>{{521, 526}, {45, 64}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>upperArm_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{44.000000, 60.000000}</string>
+					<key>textureRect</key>
+					<string>{{350, 458}, {44, 60}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>upperLeg_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{45.000000, 64.000000}</string>
+					<key>textureRect</key>
+					<string>{{88, 548}, {45, 64}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>BodyBack</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{109.000000, 129.000000}</string>
+					<key>textureRect</key>
+					<string>{{235, 528}, {109, 129}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>body</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<integer>0</integer>
+						<key>angularVelocity</key>
+						<integer>0</integer>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>gravityScale</key>
+						<integer>1</integer>
+						<key>linearDamping</key>
+						<integer>0</integer>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shapes</key>
+						<array/>
+						<key>type</key>
+						<integer>3</integer>
+					</dict>
+					<key>isFullyOpaque</key>
+					<false/>
+					<key>name</key>
+					<string>footBack_R</string>
+					<key>spriteOffset</key>
+					<string>{0, 0}</string>
+					<key>spriteSourceSize</key>
+					<string>{84.000000, 45.000000}</string>
+					<key>textureRect</key>
+					<string>{{564, 436}, {84, 45}}</string>
+					<key>textureRotated</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

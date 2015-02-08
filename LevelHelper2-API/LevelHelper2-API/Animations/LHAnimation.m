@@ -40,6 +40,11 @@
 
 #import "LHCameraActivateProperty.h"
 
+#import "LHRootBoneProperty.h"
+#import "LHBoneFrame.h"
+#import "LHBone.h"
+#import "LHBoneNodes.h"
+
 #import "LHGameWorldNode.h"
 #import "LHBackUINode.h"
 #import "LHUINode.h"
@@ -292,6 +297,14 @@
                                    node:animNode];
     }
     ////////////////////////////////////////////////////////////////////
+    else if([prop isKindOfClass:[LHRootBoneProperty class]])
+    {
+        [self animateRootBonesToTime:time
+                          beginFrame:beginFrm
+                            endFrame:endFrm
+                                node:animNode];
+    }
+    ////////////////////////////////////////////////////////////////////
     else if([prop isKindOfClass:[LHChildrenRotationsProperty class]])
     {
         [self animateNodeChildrenRotationsToTime:time
@@ -498,6 +511,139 @@
                                     forNode:(SKNode*)animNode];
         
         [animNode setPosition:newPos];
+    }
+}
+
+-(void)animateRootBonesToTime:(float)time
+                   beginFrame:(LHFrame*)beginFrm
+                     endFrame:(LHFrame*)endFrm
+                         node:(id<LHNodeAnimationProtocol, LHNodeProtocol>)nd
+{
+    LHBoneFrame* beginFrame    = (LHBoneFrame*)beginFrm;
+    LHBoneFrame* endFrame      = (LHBoneFrame*)endFrm;
+    
+    if(![beginFrame isKindOfClass:[LHBoneFrame class]] ||
+       ![endFrame isKindOfClass:[LHBoneFrame class]])
+        return;
+    
+    LHBone* rootBone = (LHBone*)nd;
+    
+    if([rootBone isKindOfClass:[LHBone class]] && [rootBone isRoot])
+    {
+        NSArray* allBones = [rootBone childrenOfType:[LHBone class]];
+        
+        if(beginFrame && endFrame && beginFrm != endFrm)
+        {
+            double beginTime = [beginFrame frameNumber]*(1.0/_fps);
+            double endTime = [endFrame frameNumber]*(1.0/_fps);
+            
+            double framesTimeDistance = endTime - beginTime;
+            double timeUnit = (time-beginTime)/framesTimeDistance; //a value between 0 and 1
+            
+            LHBoneFrameInfo* beginFrmInfo = [beginFrame boneFrameInfoForBoneNamed:@"__rootBone__"];
+            LHBoneFrameInfo* endFrmInfo = [endFrame boneFrameInfoForBoneNamed:@"__rootBone__"];
+            
+            if(beginFrmInfo && endFrmInfo)
+            {
+                float beginRotation =  [beginFrmInfo rotation];
+                float endRotation = [endFrmInfo rotation];
+                
+                float shortest_angle = fmodf( (fmodf( (endRotation - beginRotation), 360.0f) + 540.0f), 360.0) - 180.0f;
+                //lets calculate the new value based on the start - end and unit time
+                float newRotation = beginRotation + shortest_angle*timeUnit;
+                
+                CGPoint beginPosition = [beginFrmInfo position];
+                CGPoint endPosition = [endFrmInfo position];
+                
+                //lets calculate the new node position based on the start - end and unit time
+                double newX = beginPosition.x + (endPosition.x - beginPosition.x)*timeUnit;
+                double newY = beginPosition.y + (endPosition.y - beginPosition.y)*timeUnit;
+                
+                CGPoint newPos = CGPointMake(newX, -newY);
+                
+                newPos = [self convertFramePosition:newPos
+                                            forNode:rootBone];
+                
+                [rootBone setZRotation:LH_DEGREES_TO_RADIANS(-newRotation)];
+                [rootBone setPosition:newPos];
+            }
+            
+            for(LHBone* b in allBones)
+            {
+                beginFrmInfo = [beginFrame boneFrameInfoForBoneNamed:[b name]];
+                endFrmInfo = [endFrame boneFrameInfoForBoneNamed:[b name]];
+                
+                if(beginFrmInfo && endFrmInfo)
+                {
+                    
+                    float beginRotation =  [beginFrmInfo rotation];
+                    float endRotation = [endFrmInfo rotation];
+                    
+                    float shortest_angle = fmodf( (fmodf( (endRotation - beginRotation), 360.0f) + 540.0f), 360.0) - 180.0f;
+                    //lets calculate the new value based on the start - end and unit time
+                    float newRotation = beginRotation + shortest_angle*timeUnit;
+                    
+                    [b setZRotation:LH_DEGREES_TO_RADIANS(-newRotation)];
+                    
+                    if(![b rigid])
+                    {
+                        CGPoint beginPosition = [beginFrmInfo position];
+                        CGPoint endPosition = [endFrmInfo position];
+                        
+                        //lets calculate the new node position based on the start - end and unit time
+                        double newX = beginPosition.x + (endPosition.x - beginPosition.x)*timeUnit;
+                        double newY = beginPosition.y + (endPosition.y - beginPosition.y)*timeUnit;
+                        
+                        CGPoint newPos = CGPointMake(newX, -newY);
+                        
+                        newPos = [self convertFramePosition:newPos
+                                                    forNode:b];
+                        
+                        [b setPosition:newPos];
+                    }
+                }
+            }
+        }
+        else if(beginFrame && !endFrame){
+            
+            LHBoneFrameInfo* beginFrmInfo = [beginFrame boneFrameInfoForBoneNamed:@"__rootBone__"];
+            
+            if(beginFrmInfo)
+            {
+                CGPoint beginPosition = [beginFrmInfo position];
+                CGPoint newPos = CGPointMake(beginPosition.x, -beginPosition.y);
+                
+                newPos = [self convertFramePosition:newPos
+                                            forNode:rootBone];
+                
+                float beginRot =  [beginFrmInfo rotation];
+                
+                [rootBone setZRotation:LH_DEGREES_TO_RADIANS(-beginRot)];
+                [rootBone setPosition:newPos];
+            }
+            
+            for(LHBone* b in allBones)
+            {
+                beginFrmInfo = [beginFrame boneFrameInfoForBoneNamed:[b name]];
+                
+                if(beginFrmInfo)
+                {
+                    float newRotation = [beginFrmInfo rotation];
+                    [b setZRotation:LH_DEGREES_TO_RADIANS(-newRotation)];
+                    
+                    if(![b rigid])
+                    {
+                        CGPoint beginPosition = [beginFrmInfo position];
+                        CGPoint newPos = CGPointMake(beginPosition.x, -beginPosition.y);
+                        
+                        newPos = [self convertFramePosition:newPos
+                                                    forNode:b];
+                        
+                        [b setPosition:newPos];
+                    }
+                }
+            }
+        }
     }
 }
 

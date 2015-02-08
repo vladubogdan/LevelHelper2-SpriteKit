@@ -7,16 +7,21 @@
 //
 
 #import "SKNode+Transforms.h"
+#import "LHUtils.h"
 
 @implementation SKNode (Transforms)
 
 #pragma mark - TRANSFORMS
--(CGSize)size{
+-(CGSize)contentSize{
     return CGSizeMake(64, 64);
 }
 
 -(CGRect)rect{
-    CGSize size = [self size];
+    
+    CGSize size = [self contentSize];
+    if([self isKindOfClass:[SKSpriteNode class]]){
+        size = [(SKSpriteNode*)self size];
+    }
     
     return CGRectMake(-size.width*0.5,
                       -size.height*0.5,
@@ -30,13 +35,19 @@
 
 - (CGPoint)anchorPointInPoints{
     CGPoint anc = [self anchor];
-    CGSize size = [self size];
+    CGSize size = [self contentSize];
+    if([self isKindOfClass:[SKSpriteNode class]]){
+        size = [(SKSpriteNode*)self size];
+    }
     return CGPointMake(size.width*anc.x, size.height*anc.y);
 }
 
 - (CGAffineTransform)nodeToParentTransform
 {
-    CGSize size = [self size];
+    CGSize size = [self contentSize];
+    if([self isKindOfClass:[SKSpriteNode class]]){
+        size = [(SKSpriteNode*)self size];
+    }
     
     
     CGFloat anchorPointX = size.width*[self anchor].x;
@@ -112,7 +123,10 @@
 
 - (CGPoint)convertToUnitPoint:(CGPoint)nodePoint
 {
-    CGSize size = [self size];
+    CGSize size = [self contentSize];
+    if([self isKindOfClass:[SKSpriteNode class]]){
+        size = [(SKSpriteNode*)self size];
+    }
     nodePoint.x = nodePoint.x/size.width;
     nodePoint.y = nodePoint.y/size.height;
     return nodePoint;
@@ -165,4 +179,42 @@
     return ga;
 }
 
+-(float) convertToWorldAngle:(float)rotation
+{
+    CGPoint rot = LHPointForAngle(-LH_DEGREES_TO_RADIANS(rotation));
+    CGPoint worldPt = [self convertToWorldSpace:rot];
+    CGPoint worldOriginPt = [self convertToWorldSpace:CGPointZero];
+    CGPoint worldVec = LHPointSub(worldPt, worldOriginPt);
+    float ang = -LH_RADIANS_TO_DEGREES(LHPointToAngle(worldVec));
+    return LHNormalAbsoluteAngleDegrees(ang);
+}
+
+-(float) convertToNodeAngle:(float)rotation
+{
+    CGPoint rot = LHPointForAngle(-LH_DEGREES_TO_RADIANS(rotation));
+    CGPoint nodePt = [self convertToNodeSpace:rot];
+    CGPoint nodeOriginPt = [self convertToNodeSpace:CGPointZero];
+    CGPoint nodeVec = LHPointSub(nodePt, nodeOriginPt);
+    float ang = -LH_RADIANS_TO_DEGREES(LHPointToAngle(nodeVec));
+    return LHNormalAbsoluteAngleDegrees(ang);
+}
+
+
+-(CGPoint)unitForGlobalPosition:(CGPoint)globalpt
+{
+    CGPoint local = [self convertToNodeSpace:globalpt];
+    
+    CGSize sizer = [self contentSize];
+    if([self isKindOfClass:[SKSpriteNode class]]){
+        sizer = [(SKSpriteNode*)self size];
+    }
+    
+    float centerPointX = sizer.width*0.5;
+    float centerPointY = sizer.height*0.5;
+    
+    local.x += centerPointX;
+    local.y += centerPointY;
+    
+    return  CGPointMake(local.x/sizer.width, local.y/sizer.height);
+}
 @end

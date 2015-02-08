@@ -12,21 +12,27 @@
 #import "LHScene.h"
 #import "LHUserPropertyProtocol.h"
 
-#import "LHSprite.h"
 #import "LHGameWorldNode.h"
 #import "LHBackUINode.h"
 #import "LHUINode.h"
+
+#import "LHSprite.h"
 #import "LHBezier.h"
 #import "LHShape.h"
 #import "LHNode.h"
 #import "LHWater.h"
 #import "LHGravityArea.h"
+#import "LHAsset.h"
+#import "LHCamera.h"
+
 #import "LHParallax.h"
 #import "LHParallaxLayer.h"
-#import "LHAsset.h"
+
+#import "LHBone.h"
+#import "LHBoneNodes.h"
+
 #import "LHWeldJointNode.h"
 #import "LHRopeJointNode.h"
-#import "LHCamera.h"
 #import "LHRevoluteJointNode.h"
 #import "LHDistanceJointNode.h"
 #import "LHPrismaticJointNode.h"
@@ -146,7 +152,6 @@
                 [_node setPosition:pos];
             }
             
-            
             if([dict objectForKey:@"size"] && [_node respondsToSelector:@selector(setSize:)]){
                 ((SKSpriteNode*)_node).size = [dict sizeForKey:@"size"];
             }
@@ -247,17 +252,29 @@
                                                         parent:prnt];
         return pNode;
     }
-    if([nodeType isEqualToString:@"LHSprite"])
+    else if([nodeType isEqualToString:@"LHSprite"])
     {
         LHSprite* spr = [LHSprite nodeWithDictionary:childInfo
                                               parent:prnt];
         return spr;
+    }
+    else if([nodeType isEqualToString:@"LHBone"])
+    {
+        LHBone* pNode = [LHBone nodeWithDictionary:childInfo
+                                              parent:prnt];
+        return pNode;
     }
     else if([nodeType isEqualToString:@"LHNode"])
     {
         LHNode* nd = [LHNode nodeWithDictionary:childInfo
                                          parent:prnt];
         return nd;
+    }
+    else if([nodeType isEqualToString:@"LHBoneNodes"])
+    {
+        LHBoneNodes* pNode = [LHBoneNodes nodeWithDictionary:childInfo
+                                                      parent:prnt];
+        return pNode;
     }
     else if([nodeType isEqualToString:@"LHBezier"])
     {

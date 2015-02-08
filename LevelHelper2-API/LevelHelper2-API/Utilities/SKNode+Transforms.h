@@ -31,7 +31,11 @@
 -(CGPoint)convertToWorldScale:(CGPoint)nodeScale;
 -(CGPoint)convertToNodeScale:(CGPoint)worldScale;
 
--(float)globalAngleFromLocalAngle:(float)la;
--(float)localAngleFromGlobalAngle:(float)ga;
+-(float) globalAngleFromLocalAngle:(float)la;//by adding
+-(float) localAngleFromGlobalAngle:(float)ga;//by substracting
 
+-(float) convertToWorldAngle:(float)rotation;//actual calculation
+-(float) convertToNodeAngle:(float)rotation;//actual calculation
+
+-(CGPoint)unitForGlobalPosition:(CGPoint)globalpt;
 @end
