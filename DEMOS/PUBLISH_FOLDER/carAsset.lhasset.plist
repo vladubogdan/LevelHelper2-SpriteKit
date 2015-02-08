@@ -36,7 +36,7 @@
 				<key>fixedRotation</key>
 				<false/>
 				<key>fixtureUUID</key>
-				<string>A0D11AC4-0326-47E9-92E8-85F1520D61D5</string>
+				<string>CB25385D-81D4-48A4-9097-DE8B70AB3586</string>
 				<key>genericFixture</key>
 				<dict>
 					<key>category</key>
@@ -70,7 +70,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>BBA9D81B-3B6D-4DB2-9EAC-313B8496D7E4</string>
+			<string>DA786F77-58E4-4584-B4BB-1AA2E05C3F89</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -112,7 +112,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>BBA9D81B-3B6D-4DB2-9EAC-313B8496D7E4</string>
+			<string>DA786F77-58E4-4584-B4BB-1AA2E05C3F89</string>
 			<key>relativePosA</key>
 			<string>{0.000000, 0.000000}</string>
 			<key>spriteAUUID</key>
@@ -148,7 +148,7 @@
 			<key>nodeType</key>
 			<string>LHRevoluteJoint</string>
 			<key>parentUUID</key>
-			<string>BBA9D81B-3B6D-4DB2-9EAC-313B8496D7E4</string>
+			<string>DA786F77-58E4-4584-B4BB-1AA2E05C3F89</string>
 			<key>relativePosA</key>
 			<string>{0.000000, 0.000000}</string>
 			<key>spriteAUUID</key>
@@ -222,7 +222,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>BBA9D81B-3B6D-4DB2-9EAC-313B8496D7E4</string>
+			<string>DA786F77-58E4-4584-B4BB-1AA2E05C3F89</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -302,7 +302,7 @@
 			<key>nodeType</key>
 			<string>LHSprite</string>
 			<key>parentUUID</key>
-			<string>BBA9D81B-3B6D-4DB2-9EAC-313B8496D7E4</string>
+			<string>DA786F77-58E4-4584-B4BB-1AA2E05C3F89</string>
 			<key>relativeImagePath</key>
 			<string>PUBLISH_FOLDER/</string>
 			<key>rotation</key>
@@ -347,7 +347,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>A0D11AC4-0326-47E9-92E8-85F1520D61D5</key>
+		<key>CB25385D-81D4-48A4-9097-DE8B70AB3586</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>
@@ -407,7 +407,7 @@
 		</array>
 	</dict>
 	<key>uuid</key>
-	<string>BBA9D81B-3B6D-4DB2-9EAC-313B8496D7E4</string>
+	<string>DA786F77-58E4-4584-B4BB-1AA2E05C3F89</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>

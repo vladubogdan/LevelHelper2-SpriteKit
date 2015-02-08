@@ -179,24 +179,22 @@
     return ga;
 }
 
--(float) convertToWorldAngle:(float)rotation
+-(float) convertToWorldAngle:(float)localRadians
 {
-    CGPoint rot = LHPointForAngle(-LH_DEGREES_TO_RADIANS(rotation));
+    CGPoint rot = LHPointForAngle(localRadians);
     CGPoint worldPt = [self convertToWorldSpace:rot];
     CGPoint worldOriginPt = [self convertToWorldSpace:CGPointZero];
     CGPoint worldVec = LHPointSub(worldPt, worldOriginPt);
-    float ang = -LH_RADIANS_TO_DEGREES(LHPointToAngle(worldVec));
-    return LHNormalAbsoluteAngleDegrees(ang);
+    return LHPointToAngle(worldVec);
 }
 
--(float) convertToNodeAngle:(float)rotation
+-(float) convertToNodeAngle:(float)worldRadians
 {
-    CGPoint rot = LHPointForAngle(-LH_DEGREES_TO_RADIANS(rotation));
+    CGPoint rot = LHPointForAngle(worldRadians);
     CGPoint nodePt = [self convertToNodeSpace:rot];
     CGPoint nodeOriginPt = [self convertToNodeSpace:CGPointZero];
     CGPoint nodeVec = LHPointSub(nodePt, nodeOriginPt);
-    float ang = -LH_RADIANS_TO_DEGREES(LHPointToAngle(nodeVec));
-    return LHNormalAbsoluteAngleDegrees(ang);
+    return LHPointToAngle(nodeVec);
 }
 
 

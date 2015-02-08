@@ -50,6 +50,8 @@
     BOOL b2WorldDirty;
     __unsafe_unretained SKNode* _node;
     
+    CGPoint _anchor;
+    CGSize _contentSize;
     NSString*           _uuid;
     NSMutableArray*     _tags;
     id<LHUserPropertyProtocol> _userProperty;
@@ -67,6 +69,7 @@
 + (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd{
     return LH_AUTORELEASED([[self alloc] initNodeProtocolImpWithDictionary:dict node:nd]);
 }
+
 
 - (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd{
     
@@ -110,6 +113,14 @@
             }
             
             
+            if([dict objectForKey:@"anchor"]){
+                _anchor = [dict pointForKey:@"anchor"];
+                 _anchor.y = 1.0f - _anchor.y;
+            }
+            
+            if([dict objectForKey:@"size"]){
+                _contentSize = [dict sizeForKey:@"size"];
+            }
             
             if([dict objectForKey:@"generalPosition"]&&
                ![_node isKindOfClass:[LHUINode class]] &&
@@ -135,26 +146,51 @@
                     }
                 }
                 
-                if([dict objectForKey:@"anchor"] && [_node respondsToSelector:@selector(anchorPoint)]){
-                    CGPoint anchor = [dict pointForKey:@"anchor"];
-                    anchor.y = 1.0f - anchor.y;
-                    [(LHSprite*)_node setAnchorPoint:anchor];
+                if([_node respondsToSelector:@selector(anchorPoint)]){
+                    //CGPoint anchor = [dict pointForKey:@"anchor"];
+                    //anchor.y = 1.0f - anchor.y;
+                    [(LHSprite*)_node setAnchorPoint:_anchor];
                 }
 
                 SKNode* prnt = [_node parent];
-                if([prnt isKindOfClass:[SKSpriteNode class]]){
-                    SKSpriteNode* p = (SKSpriteNode*)prnt;
-                    CGPoint anc = [p anchorPoint];
-                    pos.x -= p.size.width*(anc.x - 0.5f);
-                    pos.y -= p.size.height*(anc.y- 0.5f);
-                }
+                //if([prnt isKindOfClass:[SKSpriteNode class]]){
+                    if([prnt respondsToSelector:@selector(lhAnchor)])
+                    {
+                        CGPoint anc = [(id<LHNodeProtocol>)prnt lhAnchor];
+                        CGSize contentSize = [(id<LHNodeProtocol>)prnt lhContentSize];
+                        //SKSpriteNode* p = (SKSpriteNode*)prnt;
+                        //CGPoint anc = [p anchorPoint];
+                        //pos.x -= p.size.width*(anc.x - 0.5f);
+                        //pos.y -= p.size.height*(anc.y- 0.5f);
+                        
+                        pos.x -= contentSize.width*(anc.x - 0.5f);
+                        pos.y -= contentSize.height*(anc.y- 0.5f);
+                    }
+                //}
                 
                 [_node setPosition:pos];
+                
+//                if([_node isKindOfClass:[LHNode class]]){
+//                    //we dont have anchor so if node does not have a 0.5, 0.5 anchor in LH then the position
+//                    //will be wrong
+//                    CGPoint anchor = [dict pointForKey:@"anchor"];
+//                    anchor.y = 1.0f - anchor.y;
+//                    CGSize size = [dict sizeForKey:@"size"];
+//                    
+//                    pos.x -= size.width*(anchor.x - 0.5f);
+//                    pos.y -= size.height*(anchor.y - 0.5f);
+//                    
+//                    [_node setPosition:pos];
+//                    
+//                    NSLog(@"DICT %@", dict);
+//                    
+//                }
             }
             
-            if([dict objectForKey:@"size"] && [_node respondsToSelector:@selector(setSize:)]){
-                ((SKSpriteNode*)_node).size = [dict sizeForKey:@"size"];
+            if([dict objectForKey:@"size"]  && [_node respondsToSelector:@selector(setSize:)]){
+                ((SKSpriteNode*)_node).size = _contentSize;
             }
+            
             
             if([dict objectForKey:@"alpha"])
                 [_node setAlpha:[dict floatForKey:@"alpha"]/255.0f];
@@ -494,6 +530,13 @@
         }
     }
     return temp;
+}
+
+-(CGPoint)anchor{
+    return _anchor;
+}
+-(CGSize)contentSize{
+    return _contentSize;
 }
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt

@@ -94,8 +94,8 @@
     
     if(!node)return;
     
-    float boneWorldAngle = [[bone parent] convertToWorldAngle:LH_RADIANS_TO_DEGREES([bone zRotation])];
-    float spriteWorldAngle = [[node parent] convertToWorldAngle:LH_RADIANS_TO_DEGREES([node zRotation])];
+    float boneWorldAngle = [[bone parent] convertToWorldAngle:[bone zRotation]];
+    float spriteWorldAngle = [[node parent] convertToWorldAngle:[node zRotation]];
     angleDelta = spriteWorldAngle - boneWorldAngle;
 
     CGPoint nodeWorldPos = [node convertToWorldSpaceAR:CGPointZero];
@@ -248,7 +248,7 @@
 
 -(void)transformConnectedSprites
 {
-    float curWorldAngle = [[self parent] convertToWorldAngle:LH_RADIANS_TO_DEGREES([self zRotation])];
+    float curWorldAngle = [[self parent] convertToWorldAngle:[self zRotation]];
     CGPoint curWorldPos = [[self parent] convertToWorldSpace:[self position]];
 
     for(LHBoneConnection* con in connections)
@@ -257,7 +257,7 @@
         if(sprite)
         {
             CGPoint unit = [sprite unitForGlobalPosition:curWorldPos];
-
+            
             float newSpriteAngle = [[sprite parent] convertToNodeAngle:curWorldAngle] + [con angleDelta];
 
             CGPoint prevAnchor = CGPointMake(0.5, 0.5);
@@ -268,7 +268,7 @@
             }
             
             
-            [sprite setZRotation:LH_DEGREES_TO_RADIANS(newSpriteAngle)];
+            [sprite setZRotation:newSpriteAngle];
             if([sprite isKindOfClass:[SKSpriteNode class]]){
                 [(SKSpriteNode*)sprite setAnchorPoint:prevAnchor];
             }

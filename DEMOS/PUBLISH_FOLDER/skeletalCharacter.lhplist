@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>aspect</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>backgroundColor</key>
 	<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 	<key>children</key>
@@ -226,7 +226,7 @@
 									<key>angleDelta</key>
 									<real>0.0</real>
 									<key>nodeName</key>
-									<string>blue</string>
+									<string>blue1</string>
 									<key>positionDelta</key>
 									<string>{1.422120, -1.113036}</string>
 								</dict>
@@ -310,7 +310,7 @@
 							<array>
 								<dict>
 									<key>active</key>
-									<false/>
+									<true/>
 									<key>fps</key>
 									<integer>24</integer>
 									<key>name</key>
@@ -441,91 +441,91 @@
 															<key>pos</key>
 															<string>{-0.192960, -4.672000}</string>
 															<key>rot</key>
-															<real>0.0</real>
+															<real>350</real>
 														</dict>
 														<key>UntitledBone_1</key>
 														<dict>
 															<key>pos</key>
 															<string>{12.379200, -8.794240}</string>
 															<key>rot</key>
-															<real>71.000030517578125</real>
+															<real>78.337821960449219</real>
 														</dict>
 														<key>UntitledBone_10</key>
 														<dict>
 															<key>pos</key>
 															<string>{-17.090880, -21.533440}</string>
 															<key>rot</key>
-															<real>258.45928955078125</real>
+															<real>290.50839233398438</real>
 														</dict>
 														<key>UntitledBone_11</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.000000, -11.246080}</string>
 															<key>rot</key>
-															<real>322.69073486328125</real>
+															<real>271.34844970703125</real>
 														</dict>
 														<key>UntitledBone_12</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.000000, -10.533760}</string>
 															<key>rot</key>
-															<real>358.007080078125</real>
+															<real>284.68856811523438</real>
 														</dict>
 														<key>UntitledBone_13</key>
 														<dict>
 															<key>pos</key>
 															<string>{-4.920000, -32.849920}</string>
 															<key>rot</key>
-															<real>10.115752220153809</real>
+															<real>33.160293579101562</real>
 														</dict>
 														<key>UntitledBone_2</key>
 														<dict>
 															<key>pos</key>
 															<string>{-0.049920, -10.592640}</string>
 															<key>rot</key>
-															<real>103.53823852539062</real>
+															<real>72.314895629882812</real>
 														</dict>
 														<key>UntitledBone_4</key>
 														<dict>
 															<key>pos</key>
 															<string>{-13.709760, -9.242880}</string>
 															<key>rot</key>
-															<real>187.89291381835938</real>
+															<real>260.97943115234375</real>
 														</dict>
 														<key>UntitledBone_5</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.154560, -13.141760}</string>
 															<key>rot</key>
-															<real>0.0</real>
+															<real>299.2274169921875</real>
 														</dict>
 														<key>UntitledBone_6</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.288000, -12.723200}</string>
 															<key>rot</key>
-															<real>73.028564453125</real>
+															<real>340</real>
 														</dict>
 														<key>UntitledBone_7</key>
 														<dict>
 															<key>pos</key>
 															<string>{13.246080, -24.512640}</string>
 															<key>rot</key>
-															<real>92.42578125</real>
+															<real>115.34063720703125</real>
 														</dict>
 														<key>UntitledBone_8</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.000000, -7.822720}</string>
 															<key>rot</key>
-															<real>5.5465173721313477</real>
+															<real>24.882898330688477</real>
 														</dict>
 														<key>UntitledBone_9</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.052800, -11.745280}</string>
 															<key>rot</key>
-															<real>1.2563207149505615</real>
+															<real>302.1336669921875</real>
 														</dict>
 														<key>__rootBone__</key>
 														<dict>
@@ -539,7 +539,7 @@
 															<key>pos</key>
 															<string>{-0.718080, -11.832320}</string>
 															<key>rot</key>
-															<real>20</real>
+															<real>15.521649360656738</real>
 														</dict>
 													</dict>
 													<key>frameIndex</key>
@@ -1991,6 +1991,107 @@
 					<key>zOrder</key>
 					<integer>0</integer>
 				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 1.000000}</string>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.500000, 0.500000}</string>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{0.052083, 0.078125}</string>
+							<key>name</key>
+							<string>UntitledNode2</string>
+							<key>nodeType</key>
+							<string>LHNode</string>
+							<key>parentUUID</key>
+							<string>76459435-8879-499D-90AF-A2C32F8BCAE5</string>
+							<key>rotation</key>
+							<real>0.0</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{50.000000, 50.000000}</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>D17065C4-FD91-4AB7-90DE-B519BCB18F97</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.338542, 0.625000}</string>
+					<key>name</key>
+					<string>UntitledNode1</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{50.000000, 50.000000}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>76459435-8879-499D-90AF-A2C32F8BCAE5</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.390625, 0.585938}</string>
+					<key>imageFileName</key>
+					<string>test.png</string>
+					<key>name</key>
+					<string>blue1</string>
+					<key>nodeType</key>
+					<string>LHSprite</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>relativeImagePath</key>
+					<string>PUBLISH_FOLDER/</string>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{50.000000, 50.000000}</string>
+					<key>spriteName</key>
+					<string>blue</string>
+					<key>spriteUUID</key>
+					<string>DBF3F339-CEB8-4592-A504-BDAB2E2A328C</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>9AFE2CCB-B647-4891-8619-61FD81FEE87B</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
 			</array>
 			<key>colorOverlay</key>
 			<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
@@ -2109,6 +2210,8 @@
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
 	<dict>
+		<key>1136x640</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>960x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
@@ -2122,7 +2225,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>A0D11AC4-0326-47E9-92E8-85F1520D61D5</key>
+		<key>CB25385D-81D4-48A4-9097-DE8B70AB3586</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>
