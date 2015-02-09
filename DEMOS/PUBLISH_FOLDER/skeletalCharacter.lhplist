@@ -49,7 +49,2474 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>waveing</string>
+							<key>properties</key>
+							<dict>
+								<key>Children Positions</key>
+								<dict>
+									<key>Frames</key>
+									<array/>
+									<key>subproperties</key>
+									<dict>
+										<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+										<dict>
+											<key>Frames</key>
+											<array>
+												<dict>
+													<key>frameIndex</key>
+													<integer>0</integer>
+													<key>positions</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<string>{3.734302, -40.446936}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>5</integer>
+													<key>positions</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<string>{3.734302, -40.446936}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>11</integer>
+													<key>positions</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<string>{106.578852, 8.154905}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>16</integer>
+													<key>positions</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<string>{72.644986, -18.421647}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>21</integer>
+													<key>positions</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<string>{22.483974, -50.223716}</string>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>26</integer>
+													<key>positions</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<string>{3.734302, -40.446936}</string>
+													</dict>
+												</dict>
+											</array>
+											<key>locked</key>
+											<false/>
+											<key>type</key>
+											<string>LHPositionProperty</string>
+										</dict>
+									</dict>
+									<key>type</key>
+									<string>LHChildrenPositionsProperty</string>
+								</dict>
+								<key>Children Rotations</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>-11.89794921875</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>5</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>263.901123046875</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>11</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>297.59237670898438</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>56.405910491943359</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>85.501792907714844</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>16</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>297.59237670898438</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>18.696359634399414</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>58.728855133056641</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>21</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>253.03814697265625</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>40.159095764160156</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>32.841781616210938</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>26</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>236.12619018554688</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>58.464351654052734</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>7.8434262275695801</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>31</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>283.62802124023438</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>11.10453987121582</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>7.8434262275695801</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>36</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>-0.84014892578125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>358.30905151367188</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>-11.89794921875</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>3.8631041049957275</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>5.8066048622131348</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>356.06317138671875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+									</array>
+									<key>subproperties</key>
+									<dict>
+										<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+										<dict>
+											<key>Frames</key>
+											<array>
+												<dict>
+													<key>frameIndex</key>
+													<integer>0</integer>
+													<key>rotations</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<real>-720.5911865234375</real>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>5</integer>
+													<key>rotations</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<real>-720.5911865234375</real>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>11</integer>
+													<key>rotations</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<real>81.701004028320312</real>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>16</integer>
+													<key>rotations</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<real>51.018688201904297</real>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>21</integer>
+													<key>rotations</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<real>26.487506866455078</real>
+													</dict>
+												</dict>
+												<dict>
+													<key>frameIndex</key>
+													<integer>26</integer>
+													<key>rotations</key>
+													<dict>
+														<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+														<real>-720.5911865234375</real>
+													</dict>
+												</dict>
+											</array>
+											<key>locked</key>
+											<false/>
+											<key>type</key>
+											<string>LHRotationProperty</string>
+										</dict>
+									</dict>
+									<key>type</key>
+									<string>LHChildrenRotationsProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>40</integer>
+						</dict>
+						<dict>
+							<key>active</key>
+							<false/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>softWalk</string>
+							<key>properties</key>
+							<dict>
+								<key>Children Positions</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>positions</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<string>{-21.283415, 17.003551}</string>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<string>{2.679425, 42.091570}</string>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<string>{-15.984279, -37.829607}</string>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<string>{-2.548548, 75.453868}</string>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<string>{-2.584900, -50.641575}</string>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<string>{0.938620, 23.440787}</string>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<string>{2.120959, 24.586924}</string>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<string>{12.829013, 16.191175}</string>
+												<key>51C872BD-220A-4CD8-92BE-E44CDFE7BAF8</key>
+												<string>{825.000001, 450.000001}</string>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<string>{3.734302, -40.446936}</string>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<string>{-26.362466, 89.529282}</string>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<string>{-4.749597, 0.702195}</string>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<string>{6.214601, -2.849737}</string>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<string>{-7.543760, 24.121711}</string>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<string>{14.444283, -41.872054}</string>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<string>{3.208011, 89.510471}</string>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<string>{-2.638585, 1.004278}</string>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<string>{-22.291909, 16.099456}</string>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<string>{-42.941512, 74.976538}</string>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<string>{12.987622, -0.808326}</string>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<string>{-0.712976, -8.699875}</string>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<string>{19.853297, 20.576124}</string>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<string>{-3.400630, 19.820896}</string>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<string>{-3.857013, 22.330789}</string>
+												<key>D8D18E1C-FD46-49B8-A92B-32A60BB46E7C</key>
+												<string>{-1.833035, -52.724146}</string>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<string>{-12.464931, 16.068483}</string>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<string>{-14.590223, 20.930803}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>positions</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<string>{-21.283415, 17.003551}</string>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<string>{2.679425, 42.091570}</string>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<string>{-15.984279, -37.829607}</string>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<string>{-2.548548, 75.453868}</string>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<string>{0.000000, -50.000000}</string>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<string>{0.938620, 23.440787}</string>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<string>{2.120959, 24.586924}</string>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<string>{12.829013, 16.191175}</string>
+												<key>51C872BD-220A-4CD8-92BE-E44CDFE7BAF8</key>
+												<string>{825.000001, 450.000001}</string>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<string>{3.734302, -40.446936}</string>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<string>{-26.362466, 89.529282}</string>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<string>{-4.749597, 0.702195}</string>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<string>{6.214601, -2.849737}</string>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<string>{-7.543760, 24.121711}</string>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<string>{14.444283, -41.872054}</string>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<string>{3.208011, 89.510471}</string>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<string>{-2.638585, 1.004278}</string>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<string>{-22.291909, 20.995505}</string>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<string>{-42.941512, 74.976538}</string>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<string>{12.987622, -0.808326}</string>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<string>{-0.712976, -8.699875}</string>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<string>{19.853297, 20.576124}</string>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<string>{-3.400630, 19.820896}</string>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<string>{-3.857013, 22.330789}</string>
+												<key>D8D18E1C-FD46-49B8-A92B-32A60BB46E7C</key>
+												<string>{-1.833035, -52.724146}</string>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<string>{-12.464931, 16.068483}</string>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<string>{-14.590223, 25.826852}</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>positions</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<string>{-21.283415, 17.003551}</string>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<string>{2.679425, 42.091570}</string>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<string>{-15.984279, -37.829607}</string>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<string>{-2.548548, 75.453868}</string>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<string>{-2.584900, -50.641575}</string>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<string>{0.938620, 23.440787}</string>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<string>{2.120959, 24.586924}</string>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<string>{12.829013, 16.191175}</string>
+												<key>51C872BD-220A-4CD8-92BE-E44CDFE7BAF8</key>
+												<string>{825.000001, 450.000001}</string>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<string>{3.734302, -40.446936}</string>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<string>{-26.362466, 89.529282}</string>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<string>{-4.749597, 0.702195}</string>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<string>{6.214601, -2.849737}</string>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<string>{-7.543760, 24.121711}</string>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<string>{14.444283, -41.872054}</string>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<string>{3.208011, 89.510471}</string>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<string>{-2.638585, 1.004278}</string>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<string>{-22.291909, 16.099456}</string>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<string>{-42.941512, 74.976538}</string>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<string>{12.987622, -0.808326}</string>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<string>{-0.712976, -8.699875}</string>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<string>{19.853297, 20.576124}</string>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<string>{-3.400630, 19.820896}</string>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<string>{-3.857013, 22.330789}</string>
+												<key>D8D18E1C-FD46-49B8-A92B-32A60BB46E7C</key>
+												<string>{-1.833035, -52.724146}</string>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<string>{-12.464931, 16.068483}</string>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<string>{-14.590223, 20.930803}</string>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHChildrenPositionsProperty</string>
+								</dict>
+								<key>Children Rotations</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>339.27520751953125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>335.66824340820312</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>26.34033203125</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>15.3485107421875</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>14.189248085021973</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>29.105976104736328</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>4</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>331.27407836914062</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>344.103271484375</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>34.424324035644531</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>21.62359619140625</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>19.121999740600586</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>33.030860900878906</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>9</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>316.16635131835938</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>349.42483520507812</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>54.149612426757812</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>69.710205078125</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>16.375267028808594</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>336.6571044921875</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>312.64907836914062</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>11.139859199523926</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>54.149612426757812</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>15.890469551086426</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>13.580708503723145</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>352.11965942382812</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>325.48794555664062</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>19</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>323.35696411132812</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>16.097196578979492</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>41.133914947509766</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>20.624252319335938</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>18.492010116577148</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>352.11965942382812</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>344.986572265625</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>357.51266479492188</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>24</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>337.34805297851562</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>317.5111083984375</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>26.402847290039062</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>357.58273315429688</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>57.848991394042969</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>5.4651145935058594</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>10.046196937561035</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>356.66864013671875</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+										<dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+											<key>rotations</key>
+											<dict>
+												<key>07475BAF-BEF6-4135-89B2-3C6B50F7C702</key>
+												<real>339.27520751953125</real>
+												<key>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</key>
+												<real>-1.4785642623901367</real>
+												<key>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</key>
+												<real>335.66824340820312</real>
+												<key>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</key>
+												<real>-357.94183349609375</real>
+												<key>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</key>
+												<real>26.34033203125</real>
+												<key>40602E5A-349E-42CD-897C-33C4C0730F14</key>
+												<real>15.3485107421875</real>
+												<key>437C0122-02A2-459F-8A46-098D715871D3</key>
+												<real>14.189248085021973</real>
+												<key>5181C571-6CBF-4EBF-9B06-3F45443E3816</key>
+												<real>7.1650009155273438</real>
+												<key>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</key>
+												<real>-720.5911865234375</real>
+												<key>642609C5-6281-41EC-AD54-00D65DC585F5</key>
+												<real>-359.287841796875</real>
+												<key>6B81A95C-E4A0-475A-9104-B6719124B0CE</key>
+												<real>359.82867431640625</real>
+												<key>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</key>
+												<real>-1.9139679670333862</real>
+												<key>70B3EE3D-7225-42A2-B63D-A001DCA241D9</key>
+												<real>357.92868041992188</real>
+												<key>8805BA5C-2E18-44F1-916E-D776F09E2F14</key>
+												<real>29.105976104736328</real>
+												<key>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</key>
+												<real>-359.287841796875</real>
+												<key>A39F6130-26A7-4CDD-8936-D4DA25F254C5</key>
+												<real>1.6841177940368652</real>
+												<key>AEEE2784-B13D-4278-869F-5919F68DB39D</key>
+												<real>3.4335906505584717</real>
+												<key>B5B8103E-2E9F-4008-B091-0B5DA5F25304</key>
+												<real>-359.82415771484375</real>
+												<key>C91A3302-2444-4AD7-A1E4-2E667CD0408F</key>
+												<real>8.4649419784545898</real>
+												<key>CB37A04D-AA90-4314-846E-F576B11D1284</key>
+												<real>-1.9139679670333862</real>
+												<key>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</key>
+												<real>-1.9139679670333862</real>
+												<key>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</key>
+												<real>356.08987426757812</real>
+												<key>D1356942-36BA-46E6-A207-4A27B1106ED3</key>
+												<real>1.1981198787689209</real>
+												<key>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</key>
+												<real>356.3387451171875</real>
+												<key>F113FFA9-B00F-4B1F-98DD-80FC273A6447</key>
+												<real>0.57369029521942139</real>
+											</dict>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHChildrenRotationsProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>2</integer>
+							<key>totalFrames</key>
+							<integer>30</integer>
+						</dict>
+					</array>
+					<key>children</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.228572, 0.151891}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.139088, 0.287134}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.240796, 0.457780}</string>
+											<key>colorOverlay</key>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+											<key>generalPosition</key>
+											<string>{0.013529, -0.001263}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>hand_L_outline.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>5181C571-6CBF-4EBF-9B06-3F45443E3816</string>
+											<key>relativeImagePath</key>
+											<string>PUBLISH_FOLDER/</string>
+											<key>rotation</key>
+											<real>8.4649419784545898</real>
+											<key>scale</key>
+											<string>{1.000000, 1.000000}</string>
+											<key>size</key>
+											<string>{31.000000, 35.000000}</string>
+											<key>spriteName</key>
+											<string>hand_L_outline.png</string>
+											<key>spriteUUID</key>
+											<string>00E7A15D-F08B-486E-89AA-F61CB3B01FC1</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>C91A3302-2444-4AD7-A1E4-2E667CD0408F</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{0.013364, 0.025299}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>forearm_L_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>7.1650009155273438</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{51.000000, 29.000000}</string>
+									<key>spriteName</key>
+									<string>forearm_L_outline.png</string>
+									<key>spriteUUID</key>
+									<string>3A565676-B217-4A03-8B4C-6778BB7AFF26</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>5181C571-6CBF-4EBF-9B06-3F45443E3816</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{-0.002693, -0.079127}</string>
+							<key>imageFileName</key>
+							<string>officer.png</string>
+							<key>name</key>
+							<string>shoulder_L_outline.png</string>
+							<key>nodeType</key>
+							<string>LHSprite</string>
+							<key>parentUUID</key>
+							<string>51C872BD-220A-4CD8-92BE-E44CDFE7BAF8</string>
+							<key>relativeImagePath</key>
+							<string>PUBLISH_FOLDER/</string>
+							<key>rotation</key>
+							<real>-11.89794921875</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{44.000000, 63.000000}</string>
+							<key>spriteName</key>
+							<string>shoulder_L_outline.png</string>
+							<key>spriteUUID</key>
+							<string>E00DCC2C-D3BC-4A53-AC00-D698E2F0D7F2</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>2BCE39FD-6563-4D84-BAAD-AFCB8FEACEB5</string>
+							<key>zOrder</key>
+							<integer>-2</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.469799, 0.045409}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.001909, -0.082381}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>pelvis.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>F113FFA9-B00F-4B1F-98DD-80FC273A6447</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>0.0</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{68.000000, 50.000000}</string>
+									<key>spriteName</key>
+									<string>pelvis.png</string>
+									<key>spriteUUID</key>
+									<string>EEB1E088-DE50-4684-81DA-E26419D642A5</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>D8D18E1C-FD46-49B8-A92B-32A60BB46E7C</string>
+									<key>zOrder</key>
+									<integer>-1</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.473919, 0.137284}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.450184, 0.140118}</string>
+											<key>children</key>
+											<array>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.271646, 0.328476}</string>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>generalPosition</key>
+													<string>{-0.004018, 0.034892}</string>
+													<key>imageFileName</key>
+													<string>officer.png</string>
+													<key>name</key>
+													<string>foot_LEFT.png</string>
+													<key>nodeType</key>
+													<string>LHSprite</string>
+													<key>parentUUID</key>
+													<string>40602E5A-349E-42CD-897C-33C4C0730F14</string>
+													<key>relativeImagePath</key>
+													<string>PUBLISH_FOLDER/</string>
+													<key>rotation</key>
+													<real>1.1981198787689209</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{58.000000, 30.000000}</string>
+													<key>spriteName</key>
+													<string>foot_LEFT.png</string>
+													<key>spriteUUID</key>
+													<string>379AC1F4-D7DB-46D1-A9C2-DE845FE267F0</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>D1356942-36BA-46E6-A207-4A27B1106ED3</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+											</array>
+											<key>colorOverlay</key>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+											<key>generalPosition</key>
+											<string>{0.000978, 0.036626}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>leg_lower_L_outline.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>8805BA5C-2E18-44F1-916E-D776F09E2F14</string>
+											<key>relativeImagePath</key>
+											<string>PUBLISH_FOLDER/</string>
+											<key>rotation</key>
+											<real>3.8631041049957275</real>
+											<key>scale</key>
+											<string>{1.000000, 1.000000}</string>
+											<key>size</key>
+											<string>{40.000000, 66.000000}</string>
+											<key>spriteName</key>
+											<string>leg_lower_L_outline.png</string>
+											<key>spriteUUID</key>
+											<string>C8BD3DE9-2B40-4DED-8358-EB775AAA2E4B</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>40602E5A-349E-42CD-897C-33C4C0730F14</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{0.015046, -0.065425}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>leg_upper_L_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>F113FFA9-B00F-4B1F-98DD-80FC273A6447</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>356.06317138671875</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{38.000000, 74.000000}</string>
+									<key>spriteName</key>
+									<string>leg_upper_L_outline.png</string>
+									<key>spriteUUID</key>
+									<string>5B53AB47-346B-4106-9A91-9359045F674E</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>8805BA5C-2E18-44F1-916E-D776F09E2F14</string>
+									<key>zOrder</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.557872, 0.097571}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.732651, 0.248344}</string>
+											<key>children</key>
+											<array>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.246223, 0.265227}</string>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>generalPosition</key>
+													<string>{-0.007858, 0.037690}</string>
+													<key>imageFileName</key>
+													<string>officer.png</string>
+													<key>name</key>
+													<string>foot_RIGHT.png</string>
+													<key>nodeType</key>
+													<string>LHSprite</string>
+													<key>parentUUID</key>
+													<string>437C0122-02A2-459F-8A46-098D715871D3</string>
+													<key>relativeImagePath</key>
+													<string>PUBLISH_FOLDER/</string>
+													<key>rotation</key>
+													<real>357.92868041992188</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{58.000000, 30.000000}</string>
+													<key>spriteName</key>
+													<string>foot_RIGHT.png</string>
+													<key>spriteUUID</key>
+													<string>B6DA3C3D-3A09-4C1E-9936-B2D2207A165F</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>70B3EE3D-7225-42A2-B63D-A001DCA241D9</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+											</array>
+											<key>colorOverlay</key>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+											<key>generalPosition</key>
+											<string>{0.002209, 0.038417}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>leg_lower_R_outline.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</string>
+											<key>relativeImagePath</key>
+											<string>PUBLISH_FOLDER/</string>
+											<key>rotation</key>
+											<real>5.8066048622131348</real>
+											<key>scale</key>
+											<string>{1.000000, 1.000000}</string>
+											<key>size</key>
+											<string>{42.000000, 63.000000}</string>
+											<key>spriteName</key>
+											<string>leg_lower_R_outline.png</string>
+											<key>spriteUUID</key>
+											<string>05E1EDF9-579B-42AE-A74E-109C0584DEAF</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>437C0122-02A2-459F-8A46-098D715871D3</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.016650, -0.059109}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>leg_upper_R_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>F113FFA9-B00F-4B1F-98DD-80FC273A6447</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>358.30905151367188</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{45.000000, 69.000000}</string>
+									<key>spriteName</key>
+									<string>leg_upper_R_outline.png</string>
+									<key>spriteUUID</key>
+									<string>94813C28-48CE-4F9E-B88E-8CA0EEB033B1</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>0E2DAC9F-C9FE-4153-BEDF-6C3D88AEE192</string>
+									<key>zOrder</key>
+									<integer>2</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{-0.015198, 0.032704}</string>
+							<key>name</key>
+							<string>lowerBody</string>
+							<key>nodeType</key>
+							<string>LHNode</string>
+							<key>parentUUID</key>
+							<string>51C872BD-220A-4CD8-92BE-E44CDFE7BAF8</string>
+							<key>rotation</key>
+							<real>0.57369029521942139</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{116.545082, 144.567810}</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>F113FFA9-B00F-4B1F-98DD-80FC273A6447</string>
+							<key>zOrder</key>
+							<integer>-1</integer>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>anchor</key>
+							<string>{0.444409, 0.900373}</string>
+							<key>children</key>
+							<array>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.337482, 0.843485}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.388650, 0.930799}</string>
+											<key>children</key>
+											<array>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.500000, 0.500000}</string>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>generalPosition</key>
+													<string>{0.020681, 0.032150}</string>
+													<key>imageFileName</key>
+													<string>officer.png</string>
+													<key>name</key>
+													<string>mouth.png</string>
+													<key>nodeType</key>
+													<string>LHSprite</string>
+													<key>parentUUID</key>
+													<string>A39F6130-26A7-4CDD-8936-D4DA25F254C5</string>
+													<key>relativeImagePath</key>
+													<string>PUBLISH_FOLDER/</string>
+													<key>rotation</key>
+													<real>-1.9139679670333862</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{24.000000, 16.000000}</string>
+													<key>spriteName</key>
+													<string>mouth.png</string>
+													<key>spriteUUID</key>
+													<string>B5C51836-9688-4792-ABEE-4EC1BB67AFEF</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>CBA4B5DD-7DDF-4BB8-9828-520D39850B32</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.253149, 0.271504}</string>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>generalPosition</key>
+													<string>{0.006474, -0.004453}</string>
+													<key>imageFileName</key>
+													<string>officer.png</string>
+													<key>name</key>
+													<string>eyes_OPEN.png</string>
+													<key>nodeType</key>
+													<string>LHSprite</string>
+													<key>parentUUID</key>
+													<string>A39F6130-26A7-4CDD-8936-D4DA25F254C5</string>
+													<key>relativeImagePath</key>
+													<string>PUBLISH_FOLDER/</string>
+													<key>rotation</key>
+													<real>-1.9139679670333862</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{38.000000, 25.000000}</string>
+													<key>spriteName</key>
+													<string>eyes_OPEN.png</string>
+													<key>spriteUUID</key>
+													<string>4BC3E757-EDDE-4818-B19E-704C3499EAA2</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>6F30A2FC-5587-452D-8E9D-AC409FD2D00C</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.500000, 0.500000}</string>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>generalPosition</key>
+													<string>{-0.000743, -0.013594}</string>
+													<key>imageFileName</key>
+													<string>officer.png</string>
+													<key>name</key>
+													<string>hair.png</string>
+													<key>nodeType</key>
+													<string>LHSprite</string>
+													<key>parentUUID</key>
+													<string>A39F6130-26A7-4CDD-8936-D4DA25F254C5</string>
+													<key>relativeImagePath</key>
+													<string>PUBLISH_FOLDER/</string>
+													<key>rotation</key>
+													<real>-1.9139679670333862</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{72.000000, 69.000000}</string>
+													<key>spriteName</key>
+													<string>hair.png</string>
+													<key>spriteUUID</key>
+													<string>0C92FBC2-A5B5-4D6E-AD4A-FD69CE2F01A0</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>CB37A04D-AA90-4314-846E-F576B11D1284</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.500000, 0.500000}</string>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>generalPosition</key>
+													<string>{0.003890, -0.063198}</string>
+													<key>imageFileName</key>
+													<string>officer.png</string>
+													<key>name</key>
+													<string>hat.png</string>
+													<key>nodeType</key>
+													<string>LHSprite</string>
+													<key>parentUUID</key>
+													<string>A39F6130-26A7-4CDD-8936-D4DA25F254C5</string>
+													<key>relativeImagePath</key>
+													<string>PUBLISH_FOLDER/</string>
+													<key>rotation</key>
+													<real>-720.5911865234375</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{100.000000, 58.000000}</string>
+													<key>spriteName</key>
+													<string>hat.png</string>
+													<key>spriteUUID</key>
+													<string>30CFF8A4-718A-4D6E-BEB9-0BE9C0B77DC6</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>5FDB7290-8BB4-4D7F-91F3-509DE8BA2B72</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+											</array>
+											<key>colorOverlay</key>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+											<key>generalPosition</key>
+											<string>{-0.002749, 0.001569}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>head.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>6B81A95C-E4A0-475A-9104-B6719124B0CE</string>
+											<key>relativeImagePath</key>
+											<string>PUBLISH_FOLDER/</string>
+											<key>rotation</key>
+											<real>1.6841177940368652</real>
+											<key>scale</key>
+											<string>{1.000000, 1.000000}</string>
+											<key>size</key>
+											<string>{71.000000, 83.000000}</string>
+											<key>spriteName</key>
+											<string>head.png</string>
+											<key>spriteUUID</key>
+											<string>7179BDC7-3698-4413-83A4-A4C7145B19E0</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>A39F6130-26A7-4CDD-8936-D4DA25F254C5</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.004947, 0.001097}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>neck_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>359.82867431640625</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{33.000000, 28.000000}</string>
+									<key>spriteName</key>
+									<string>neck_outline.png</string>
+									<key>spriteUUID</key>
+									<string>D279AF55-F641-4024-8AAE-EA6215F74549</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>6B81A95C-E4A0-475A-9104-B6719124B0CE</string>
+									<key>zOrder</key>
+									<integer>-1</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{0.003342, 0.139860}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>gun-belt.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>-359.287841796875</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{71.000000, 21.000000}</string>
+									<key>spriteName</key>
+									<string>gun-belt.png</string>
+									<key>spriteUUID</key>
+									<string>464A0E31-8F77-4397-8E5E-B7F07ED56CA7</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>8BDEFC7E-B1DA-49C0-AE14-FBBA5B6FC0A5</string>
+									<key>zOrder</key>
+									<integer>-1</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.437001, 0.816016}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.002655, 0.117897}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>torso_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>-357.94183349609375</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{77.000000, 104.000000}</string>
+									<key>spriteName</key>
+									<string>torso_outline.png</string>
+									<key>spriteUUID</key>
+									<string>4AC4D7DF-638D-4D26-B6AC-BF5D59F61501</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>208E484E-6DD2-41BD-844A-D5DAAB3EC90A</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{0.002791, 0.065768}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>vest_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>-1.4785642623901367</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{76.000000, 93.000000}</string>
+									<key>spriteName</key>
+									<string>vest_outline.png</string>
+									<key>spriteUUID</key>
+									<string>C9B55117-9B00-41C8-999D-53A2C0189BC8</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>0DBA9B51-8171-436B-8AAE-FECCE10CFB08</string>
+									<key>zOrder</key>
+									<integer>1</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.310907, 0.214645}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.044731, 0.117151}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>gun.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>-359.82415771484375</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{31.000000, 42.000000}</string>
+									<key>spriteName</key>
+									<string>gun.png</string>
+									<key>spriteUUID</key>
+									<string>A59EA0EC-6D13-4D6C-BAE7-B6C652254F6C</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>B5B8103E-2E9F-4008-B091-0B5DA5F25304</string>
+									<key>zOrder</key>
+									<integer>2</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.027461, 0.139890}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>gun-holster.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>-359.287841796875</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{27.000000, 41.000000}</string>
+									<key>spriteName</key>
+									<string>gun-holster.png</string>
+									<key>spriteUUID</key>
+									<string>D2C4D003-9E5B-4A04-8C88-140EBEED4262</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>642609C5-6281-41EC-AD54-00D65DC585F5</string>
+									<key>zOrder</key>
+									<integer>3</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.835133, 0.178600}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.706234, 0.106946}</string>
+											<key>children</key>
+											<array>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.430030, 0.131231}</string>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>generalPosition</key>
+													<string>{-0.003542, 0.030970}</string>
+													<key>imageFileName</key>
+													<string>officer.png</string>
+													<key>name</key>
+													<string>hand_R_outline.png</string>
+													<key>nodeType</key>
+													<string>LHSprite</string>
+													<key>parentUUID</key>
+													<string>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</string>
+													<key>relativeImagePath</key>
+													<string>PUBLISH_FOLDER/</string>
+													<key>rotation</key>
+													<real>356.08987426757812</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{34.000000, 36.000000}</string>
+													<key>spriteName</key>
+													<string>hand_R_outline.png</string>
+													<key>spriteUUID</key>
+													<string>E644259F-50EA-4E5A-B5C2-678F46CDB230</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>CDA1A822-D9CC-4CA1-BC9D-E511931DDE95</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+											</array>
+											<key>colorOverlay</key>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+											<key>generalPosition</key>
+											<string>{-0.012984, 0.025107}</string>
+											<key>imageFileName</key>
+											<string>officer.png</string>
+											<key>name</key>
+											<string>forearm_R_outline.png</string>
+											<key>nodeType</key>
+											<string>LHSprite</string>
+											<key>parentUUID</key>
+											<string>07475BAF-BEF6-4135-89B2-3C6B50F7C702</string>
+											<key>relativeImagePath</key>
+											<string>PUBLISH_FOLDER/</string>
+											<key>rotation</key>
+											<real>356.3387451171875</real>
+											<key>scale</key>
+											<string>{1.000000, 1.000000}</string>
+											<key>size</key>
+											<string>{32.000000, 54.000000}</string>
+											<key>spriteName</key>
+											<string>forearm_R_outline.png</string>
+											<key>spriteUUID</key>
+											<string>9F828740-428F-4279-88E1-F37EC5BDABA9</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>F0EE891C-A868-41DE-A1C8-7BEB15FE3648</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{-0.022170, 0.026568}</string>
+									<key>imageFileName</key>
+									<string>officer.png</string>
+									<key>name</key>
+									<string>shoulder_R_outline.png</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>-0.84014892578125</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{54.000000, 54.000000}</string>
+									<key>spriteName</key>
+									<string>shoulder_R_outline.png</string>
+									<key>spriteUUID</key>
+									<string>FB46BFDD-6BD1-47DB-9391-D2DB7FFEEBC0</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>07475BAF-BEF6-4135-89B2-3C6B50F7C702</string>
+									<key>zOrder</key>
+									<integer>4</integer>
+								</dict>
+							</array>
+							<key>colorOverlay</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>generalPosition</key>
+							<string>{-0.023221, 0.025155}</string>
+							<key>name</key>
+							<string>upperBody</string>
+							<key>nodeType</key>
+							<string>LHNode</string>
+							<key>parentUUID</key>
+							<string>51C872BD-220A-4CD8-92BE-E44CDFE7BAF8</string>
+							<key>rotation</key>
+							<real>3.4335906505584717</real>
+							<key>scale</key>
+							<string>{1.000000, 1.000000}</string>
+							<key>size</key>
+							<string>{144.590103, 200.135269}</string>
+							<key>tags</key>
+							<array>
+								<string>DEFAULT</string>
+							</array>
+							<key>uuid</key>
+							<string>AEEE2784-B13D-4278-869F-5919F68DB39D</string>
+							<key>zOrder</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>colorOverlay</key>
+					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+					<key>devicePositions</key>
+					<dict>
+						<key>1024x768</key>
+						<string>{0.859375, 0.703125}</string>
+						<key>1136x640</key>
+						<string>{0.111745, 0.747136}</string>
+						<key>1334x750</key>
+						<string>{0.728974, 0.828911}</string>
+						<key>2048x1536</key>
+						<string>{0.228056, 0.845433}</string>
+						<key>2208x1242</key>
+						<string>{0.524451, 0.466662}</string>
+						<key>960x640</key>
+						<string>{0.500982, 0.745908}</string>
+					</dict>
+					<key>generalPosition</key>
+					<string>{0.859375, 0.703125}</string>
+					<key>name</key>
+					<string>Officer</string>
+					<key>nodeType</key>
+					<string>LHNode</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>perDevicePosition</key>
+					<true/>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{193.735931, 346.626526}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>uuid</key>
+					<string>51C872BD-220A-4CD8-92BE-E44CDFE7BAF8</string>
+					<key>zOrder</key>
+					<integer>-2</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
 					<string>{0.500000, 1.000000}</string>
+					<key>animations</key>
+					<array>
+						<dict>
+							<key>active</key>
+							<true/>
+							<key>fps</key>
+							<integer>24</integer>
+							<key>name</key>
+							<string>test</string>
+							<key>properties</key>
+							<dict>
+								<key>Skeletal Transform</key>
+								<dict>
+									<key>Frames</key>
+									<array>
+										<dict>
+											<key>bonesInfo</key>
+											<dict>
+												<key>UntitledBone</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, 0.000000}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_1</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -24.774813}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_2</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -25.319134}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_3</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -74.886894}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_4</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -25.375549}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>__rootBone__</key>
+												<dict>
+													<key>pos</key>
+													<string>{225.000000, 400.000000}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+											</dict>
+											<key>frameIndex</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>bonesInfo</key>
+											<dict>
+												<key>UntitledBone</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, 0.000000}</string>
+													<key>rot</key>
+													<real>315</real>
+												</dict>
+												<key>UntitledBone_1</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -24.774813}</string>
+													<key>rot</key>
+													<real>90</real>
+												</dict>
+												<key>UntitledBone_2</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -25.319134}</string>
+													<key>rot</key>
+													<real>315</real>
+												</dict>
+												<key>UntitledBone_3</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -74.886894}</string>
+													<key>rot</key>
+													<real>135</real>
+												</dict>
+												<key>UntitledBone_4</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -25.375549}</string>
+													<key>rot</key>
+													<real>225</real>
+												</dict>
+												<key>__rootBone__</key>
+												<dict>
+													<key>pos</key>
+													<string>{225.000000, 400.000000}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+											</dict>
+											<key>frameIndex</key>
+											<integer>14</integer>
+										</dict>
+										<dict>
+											<key>bonesInfo</key>
+											<dict>
+												<key>UntitledBone</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, 0.000000}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_1</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -24.774813}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_2</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -25.319134}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_3</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -74.886894}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>UntitledBone_4</key>
+												<dict>
+													<key>pos</key>
+													<string>{0.000000, -25.375549}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+												<key>__rootBone__</key>
+												<dict>
+													<key>pos</key>
+													<string>{225.000000, 400.000000}</string>
+													<key>rot</key>
+													<real>0.0</real>
+												</dict>
+											</dict>
+											<key>frameIndex</key>
+											<integer>29</integer>
+										</dict>
+									</array>
+									<key>type</key>
+									<string>LHRootBoneProperty</string>
+								</dict>
+							</dict>
+							<key>repetitions</key>
+							<integer>0</integer>
+							<key>totalFrames</key>
+							<integer>30</integer>
+						</dict>
+					</array>
 					<key>children</key>
 					<array>
 						<dict>
@@ -67,7 +2534,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{0.001481, -0.052914}</string>
+									<string>{0.000000, -0.032813}</string>
 									<key>imageFileName</key>
 									<string>test.png</string>
 									<key>name</key>
@@ -105,7 +2572,7 @@
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>generalPosition</key>
-									<string>{-0.027027, -0.098066}</string>
+									<string>{0.000000, -0.110937}</string>
 									<key>imageFileName</key>
 									<string>test.png</string>
 									<key>name</key>
@@ -117,7 +2584,7 @@
 									<key>relativeImagePath</key>
 									<string>PUBLISH_FOLDER/</string>
 									<key>rotation</key>
-									<real>270</real>
+									<real>0.0</real>
 									<key>scale</key>
 									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
@@ -132,6 +2599,120 @@
 									</array>
 									<key>uuid</key>
 									<string>D0C5AD3A-3EFD-4DB7-9690-CBD1FBB6AE57</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{0.000000, -0.189062}</string>
+									<key>imageFileName</key>
+									<string>test.png</string>
+									<key>name</key>
+									<string>blue_1</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>8A2DE740-6C05-434D-8DCC-E994313A3701</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>0.0</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{50.000000, 50.000000}</string>
+									<key>spriteName</key>
+									<string>blue</string>
+									<key>spriteUUID</key>
+									<string>DBF3F339-CEB8-4592-A504-BDAB2E2A328C</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>C9CEC603-5DEB-40ED-8269-52CCC6455084</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{0.000000, -0.345313}</string>
+									<key>imageFileName</key>
+									<string>test.png</string>
+									<key>name</key>
+									<string>red_1</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>8A2DE740-6C05-434D-8DCC-E994313A3701</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>0.0</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{50.000000, 50.000000}</string>
+									<key>spriteName</key>
+									<string>red</string>
+									<key>spriteUUID</key>
+									<string>8019554D-37CF-45B8-BA8A-1D1F9460EE86</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>5EA15486-EE98-4693-9C01-8044728BDC81</string>
+									<key>zOrder</key>
+									<integer>0</integer>
+								</dict>
+								<dict>
+									<key>alpha</key>
+									<real>255</real>
+									<key>anchor</key>
+									<string>{0.500000, 0.500000}</string>
+									<key>colorOverlay</key>
+									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+									<key>generalPosition</key>
+									<string>{0.000000, -0.423438}</string>
+									<key>imageFileName</key>
+									<string>test.png</string>
+									<key>name</key>
+									<string>blue_2</string>
+									<key>nodeType</key>
+									<string>LHSprite</string>
+									<key>parentUUID</key>
+									<string>8A2DE740-6C05-434D-8DCC-E994313A3701</string>
+									<key>relativeImagePath</key>
+									<string>PUBLISH_FOLDER/</string>
+									<key>rotation</key>
+									<real>0.0</real>
+									<key>scale</key>
+									<string>{1.000000, 1.000000}</string>
+									<key>size</key>
+									<string>{50.000000, 50.000000}</string>
+									<key>spriteName</key>
+									<string>blue</string>
+									<key>spriteUUID</key>
+									<string>DBF3F339-CEB8-4592-A504-BDAB2E2A328C</string>
+									<key>tags</key>
+									<array>
+										<string>DEFAULT</string>
+									</array>
+									<key>uuid</key>
+									<string>EBF04063-18A7-4534-BC54-9F3F02619F4C</string>
 									<key>zOrder</key>
 									<integer>0</integer>
 								</dict>
@@ -175,6 +2756,156 @@
 									<real>255</real>
 									<key>anchor</key>
 									<string>{0.500000, 1.000000}</string>
+									<key>children</key>
+									<array>
+										<dict>
+											<key>alpha</key>
+											<real>255</real>
+											<key>anchor</key>
+											<string>{0.500000, 1.000000}</string>
+											<key>children</key>
+											<array>
+												<dict>
+													<key>alpha</key>
+													<real>255</real>
+													<key>anchor</key>
+													<string>{0.500000, 1.000000}</string>
+													<key>children</key>
+													<array>
+														<dict>
+															<key>alpha</key>
+															<real>255</real>
+															<key>anchor</key>
+															<string>{0.500000, 1.000000}</string>
+															<key>colorOverlay</key>
+															<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+															<key>connections</key>
+															<array>
+																<dict>
+																	<key>angleDelta</key>
+																	<real>0.0</real>
+																	<key>nodeName</key>
+																	<string>blue_2</string>
+																	<key>positionDelta</key>
+																	<string>{0.000000, 0.203872}</string>
+																</dict>
+															</array>
+															<key>generalPosition</key>
+															<string>{0.000000, -0.039649}</string>
+															<key>maxAngle</key>
+															<real>180</real>
+															<key>minAngle</key>
+															<real>-180</real>
+															<key>name</key>
+															<string>UntitledBone_4</string>
+															<key>nodeType</key>
+															<string>LHBone</string>
+															<key>parentUUID</key>
+															<string>1F80B0A2-37B3-47A4-90D6-C4887FB861A4</string>
+															<key>rigid</key>
+															<true/>
+															<key>rotation</key>
+															<real>0.0</real>
+															<key>scale</key>
+															<string>{1.000000, 1.000000}</string>
+															<key>size</key>
+															<string>{4.000000, 50.408203}</string>
+															<key>tags</key>
+															<array>
+																<string>DEFAULT</string>
+															</array>
+															<key>uuid</key>
+															<string>F13AC0D5-F118-45A4-8684-D2FBB47FA0D7</string>
+															<key>zOrder</key>
+															<integer>0</integer>
+														</dict>
+													</array>
+													<key>colorOverlay</key>
+													<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+													<key>connections</key>
+													<array>
+														<dict>
+															<key>angleDelta</key>
+															<real>0.0</real>
+															<key>nodeName</key>
+															<string>red_1</string>
+															<key>positionDelta</key>
+															<string>{0.000000, -0.375590}</string>
+														</dict>
+													</array>
+													<key>generalPosition</key>
+													<string>{0.000000, -0.117011}</string>
+													<key>maxAngle</key>
+													<real>180</real>
+													<key>minAngle</key>
+													<real>-180</real>
+													<key>name</key>
+													<string>UntitledBone_3</string>
+													<key>nodeType</key>
+													<string>LHBone</string>
+													<key>parentUUID</key>
+													<string>FF0FE9AE-DFC5-4318-9DEF-BAE12D8FDB52</string>
+													<key>rigid</key>
+													<true/>
+													<key>rotation</key>
+													<real>0.0</real>
+													<key>scale</key>
+													<string>{1.000000, 1.000000}</string>
+													<key>size</key>
+													<string>{4.000000, 49.248901}</string>
+													<key>tags</key>
+													<array>
+														<string>DEFAULT</string>
+													</array>
+													<key>uuid</key>
+													<string>1F80B0A2-37B3-47A4-90D6-C4887FB861A4</string>
+													<key>zOrder</key>
+													<integer>0</integer>
+												</dict>
+											</array>
+											<key>colorOverlay</key>
+											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+											<key>connections</key>
+											<array>
+												<dict>
+													<key>angleDelta</key>
+													<real>0.0</real>
+													<key>nodeName</key>
+													<string>blue_1</string>
+													<key>positionDelta</key>
+													<string>{0.000000, 0.113559}</string>
+												</dict>
+											</array>
+											<key>generalPosition</key>
+											<string>{0.000000, -0.039561}</string>
+											<key>maxAngle</key>
+											<real>180</real>
+											<key>minAngle</key>
+											<real>-180</real>
+											<key>name</key>
+											<string>UntitledBone_2</string>
+											<key>nodeType</key>
+											<string>LHBone</string>
+											<key>parentUUID</key>
+											<string>D78462ED-5935-49EC-9897-7C7AE883715C</string>
+											<key>rigid</key>
+											<true/>
+											<key>rotation</key>
+											<real>0.0</real>
+											<key>scale</key>
+											<string>{1.000000, 1.000000}</string>
+											<key>size</key>
+											<string>{4.000000, 50.226212}</string>
+											<key>tags</key>
+											<array>
+												<string>DEFAULT</string>
+											</array>
+											<key>uuid</key>
+											<string>FF0FE9AE-DFC5-4318-9DEF-BAE12D8FDB52</string>
+											<key>zOrder</key>
+											<integer>0</integer>
+										</dict>
+									</array>
 									<key>colorOverlay</key>
 									<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 									<key>connections</key>
@@ -185,35 +2916,48 @@
 											<key>nodeName</key>
 											<string>red</string>
 											<key>positionDelta</key>
-											<string>{1.258695, -0.189259}</string>
+											<string>{0.000000, -0.318586}</string>
 										</dict>
 									</array>
+									<key>devicePositions</key>
+									<dict>
+										<key>1024x768</key>
+										<string>{0.000000, -0.038711}</string>
+										<key>1136x640</key>
+										<string>{0.000000, -0.038711}</string>
+										<key>2048x1536</key>
+										<string>{0.000000, -0.038711}</string>
+										<key>960x640</key>
+										<string>{0.000000, -0.038711}</string>
+									</dict>
 									<key>generalPosition</key>
-									<string>{0.000000, -0.044925}</string>
+									<string>{0.000000, -0.038711}</string>
 									<key>maxAngle</key>
 									<real>180</real>
 									<key>minAngle</key>
 									<real>-180</real>
 									<key>name</key>
-									<string>redBone</string>
+									<string>UntitledBone_1</string>
 									<key>nodeType</key>
 									<string>LHBone</string>
 									<key>parentUUID</key>
-									<string>FB835F55-6F02-4162-A69D-98A734F70979</string>
+									<string>99300FF3-0727-4DEA-B933-37F9D471FC68</string>
+									<key>perDevicePosition</key>
+									<true/>
 									<key>rigid</key>
 									<true/>
 									<key>rotation</key>
-									<real>270</real>
+									<real>0.0</real>
 									<key>scale</key>
 									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
-									<string>{4.000000, 51.512409}</string>
+									<string>{4.000000, 49.361732}</string>
 									<key>tags</key>
 									<array>
 										<string>DEFAULT</string>
 									</array>
 									<key>uuid</key>
-									<string>3E15CE1E-2574-4D3B-B27F-88C49AE506FA</string>
+									<string>D78462ED-5935-49EC-9897-7C7AE883715C</string>
 									<key>zOrder</key>
 									<integer>0</integer>
 								</dict>
@@ -226,19 +2970,19 @@
 									<key>angleDelta</key>
 									<real>0.0</real>
 									<key>nodeName</key>
-									<string>blue1</string>
+									<string>blue</string>
 									<key>positionDelta</key>
-									<string>{1.422120, -1.113036}</string>
+									<string>{0.000000, 0.224867}</string>
 								</dict>
 							</array>
 							<key>generalPosition</key>
-							<string>{0.000000, -0.006250}</string>
+							<string>{0.000000, 0.000000}</string>
 							<key>maxAngle</key>
 							<real>180</real>
 							<key>minAngle</key>
 							<real>-180</real>
 							<key>name</key>
-							<string>blueBone</string>
+							<string>UntitledBone</string>
 							<key>nodeType</key>
 							<string>LHBone</string>
 							<key>parentUUID</key>
@@ -250,13 +2994,13 @@
 							<key>scale</key>
 							<string>{1.000000, 1.000000}</string>
 							<key>size</key>
-							<string>{4.000000, 57.503723}</string>
+							<string>{4.000000, 42.450375}</string>
 							<key>tags</key>
 							<array>
 								<string>DEFAULT</string>
 							</array>
 							<key>uuid</key>
-							<string>FB835F55-6F02-4162-A69D-98A734F70979</string>
+							<string>99300FF3-0727-4DEA-B933-37F9D471FC68</string>
 							<key>zOrder</key>
 							<integer>0</integer>
 						</dict>
@@ -266,7 +3010,7 @@
 					<key>connections</key>
 					<array/>
 					<key>generalPosition</key>
-					<string>{0.254249, 0.645189}</string>
+					<string>{0.234375, 0.625000}</string>
 					<key>maxAngle</key>
 					<real>180</real>
 					<key>minAngle</key>
@@ -312,7 +3056,7 @@
 									<key>active</key>
 									<true/>
 									<key>fps</key>
-									<integer>24</integer>
+									<integer>4</integer>
 									<key>name</key>
 									<string>anim</string>
 									<key>properties</key>
@@ -376,9 +3120,9 @@
 														<key>UntitledBone_4</key>
 														<dict>
 															<key>pos</key>
-															<string>{-13.709760, -9.242880}</string>
+															<string>{-18.643344, 2.538865}</string>
 															<key>rot</key>
-															<real>187.89291381835938</real>
+															<real>179.25637817382812</real>
 														</dict>
 														<key>UntitledBone_5</key>
 														<dict>
@@ -441,91 +3185,91 @@
 															<key>pos</key>
 															<string>{-0.192960, -4.672000}</string>
 															<key>rot</key>
-															<real>350</real>
+															<real>0.0</real>
 														</dict>
 														<key>UntitledBone_1</key>
 														<dict>
 															<key>pos</key>
 															<string>{12.379200, -8.794240}</string>
 															<key>rot</key>
-															<real>78.337821960449219</real>
+															<real>86.004440307617188</real>
 														</dict>
 														<key>UntitledBone_10</key>
 														<dict>
 															<key>pos</key>
 															<string>{-17.090880, -21.533440}</string>
 															<key>rot</key>
-															<real>290.50839233398438</real>
+															<real>340</real>
 														</dict>
 														<key>UntitledBone_11</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.000000, -11.246080}</string>
 															<key>rot</key>
-															<real>271.34844970703125</real>
+															<real>220</real>
 														</dict>
 														<key>UntitledBone_12</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.000000, -10.533760}</string>
 															<key>rot</key>
-															<real>284.68856811523438</real>
+															<real>90</real>
 														</dict>
 														<key>UntitledBone_13</key>
 														<dict>
 															<key>pos</key>
 															<string>{-4.920000, -32.849920}</string>
 															<key>rot</key>
-															<real>33.160293579101562</real>
+															<real>350</real>
 														</dict>
 														<key>UntitledBone_2</key>
 														<dict>
 															<key>pos</key>
 															<string>{-0.049920, -10.592640}</string>
 															<key>rot</key>
-															<real>72.314895629882812</real>
+															<real>90.37890625</real>
 														</dict>
 														<key>UntitledBone_4</key>
 														<dict>
 															<key>pos</key>
-															<string>{-13.709760, -9.242880}</string>
+															<string>{-18.643344, 2.538865}</string>
 															<key>rot</key>
-															<real>260.97943115234375</real>
+															<real>274.05572509765625</real>
 														</dict>
 														<key>UntitledBone_5</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.154560, -13.141760}</string>
 															<key>rot</key>
-															<real>299.2274169921875</real>
+															<real>0.0</real>
 														</dict>
 														<key>UntitledBone_6</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.288000, -12.723200}</string>
 															<key>rot</key>
-															<real>340</real>
+															<real>73.028564453125</real>
 														</dict>
 														<key>UntitledBone_7</key>
 														<dict>
 															<key>pos</key>
 															<string>{13.246080, -24.512640}</string>
 															<key>rot</key>
-															<real>115.34063720703125</real>
+															<real>92.42578125</real>
 														</dict>
 														<key>UntitledBone_8</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.000000, -7.822720}</string>
 															<key>rot</key>
-															<real>24.882898330688477</real>
+															<real>92.04010009765625</real>
 														</dict>
 														<key>UntitledBone_9</key>
 														<dict>
 															<key>pos</key>
 															<string>{0.052800, -11.745280}</string>
 															<key>rot</key>
-															<real>302.1336669921875</real>
+															<real>290</real>
 														</dict>
 														<key>__rootBone__</key>
 														<dict>
@@ -539,7 +3283,7 @@
 															<key>pos</key>
 															<string>{-0.718080, -11.832320}</string>
 															<key>rot</key>
-															<real>15.521649360656738</real>
+															<real>20</real>
 														</dict>
 													</dict>
 													<key>frameIndex</key>
@@ -600,9 +3344,9 @@
 														<key>UntitledBone_4</key>
 														<dict>
 															<key>pos</key>
-															<string>{-13.709760, -9.242880}</string>
+															<string>{-18.643344, 2.538865}</string>
 															<key>rot</key>
-															<real>187.89291381835938</real>
+															<real>179.25637817382812</real>
 														</dict>
 														<key>UntitledBone_5</key>
 														<dict>
@@ -977,7 +3721,7 @@
 															<key>relativeImagePath</key>
 															<string>PUBLISH_FOLDER/</string>
 															<key>rotation</key>
-															<real>-2.3018341064453125</real>
+															<real>357.69821166992188</real>
 															<key>scale</key>
 															<string>{1.000000, 1.000000}</string>
 															<key>size</key>
@@ -1033,7 +3777,7 @@
 											<key>colorOverlay</key>
 											<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 											<key>generalPosition</key>
-											<string>{-0.015421, 0.004049}</string>
+											<string>{-0.018696, 0.022505}</string>
 											<key>imageFileName</key>
 											<string>girlSoldierParts.png</string>
 											<key>name</key>
@@ -1045,7 +3789,7 @@
 											<key>relativeImagePath</key>
 											<string>PUBLISH_FOLDER/</string>
 											<key>rotation</key>
-											<real>3.97515869140625</real>
+											<real>355.338623046875</real>
 											<key>scale</key>
 											<string>{1.000000, 1.000000}</string>
 											<key>size</key>
@@ -1809,11 +4553,11 @@
 													<array>
 														<dict>
 															<key>angleDelta</key>
-															<real>-253.87576293945312</real>
+															<real>106.124267578125</real>
 															<key>nodeName</key>
 															<string>foot_R</string>
 															<key>positionDelta</key>
-															<string>{-2.526657, -0.943876}</string>
+															<string>{-2.526569, -0.943919}</string>
 														</dict>
 													</array>
 													<key>generalPosition</key>
@@ -1856,7 +4600,7 @@
 													<key>nodeName</key>
 													<string>lowerLeg_R</string>
 													<key>positionDelta</key>
-													<string>{1.345365, 3.640602}</string>
+													<string>{1.345432, 3.640674}</string>
 												</dict>
 											</array>
 											<key>generalPosition</key>
@@ -1895,15 +4639,15 @@
 									<array>
 										<dict>
 											<key>angleDelta</key>
-											<real>-183.91775512695312</real>
+											<real>176.08224487304688</real>
 											<key>nodeName</key>
 											<string>upperLeg_R</string>
 											<key>positionDelta</key>
-											<string>{-0.541070, 2.386896}</string>
+											<string>{-0.541003, 2.386968}</string>
 										</dict>
 									</array>
 									<key>generalPosition</key>
-									<string>{-0.014281, -0.014442}</string>
+									<string>{-0.019420, 0.003967}</string>
 									<key>maxAngle</key>
 									<real>-240</real>
 									<key>minAngle</key>
@@ -1917,7 +4661,7 @@
 									<key>rigid</key>
 									<true/>
 									<key>rotation</key>
-									<real>187.89291381835938</real>
+									<real>179.25637817382812</real>
 									<key>scale</key>
 									<string>{1.000000, 1.000000}</string>
 									<key>size</key>
@@ -1969,9 +4713,104 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.557707, 0.547004}</string>
+					<string>{0.625000, 0.312500}</string>
 					<key>name</key>
 					<string>UntitledNode</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+							<key>shapeID</key>
+							<integer>0</integer>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>ovalShape</key>
+						<array>
+							<array>
+								<string>{-6.4296894597534651e-15, -108.77463531494141}</string>
+								<string>{6.8284730911254883, -106.68456268310547}</string>
+								<string>{13.394532203674316, -100.49465942382812}</string>
+								<string>{19.445846557617188, -90.442802429199219}</string>
+								<string>{24.749868392944336, -76.915283203125}</string>
+								<string>{-19.445846557617188, -90.442802429199219}</string>
+								<string>{-13.394532203674316, -100.49465942382812}</string>
+								<string>{-6.8284730911254883, -106.68456268310547}</string>
+							</array>
+							<array>
+								<string>{-19.445846557617188, -90.442802429199219}</string>
+								<string>{24.749868392944336, -76.915283203125}</string>
+								<string>{29.102766036987305, -60.431949615478516}</string>
+								<string>{32.337261199951172, -41.626251220703125}</string>
+								<string>{34.329051971435547, -21.220878601074219}</string>
+								<string>{-32.337261199951172, -41.626251220703125}</string>
+								<string>{-29.102766036987305, -60.431949615478516}</string>
+								<string>{-24.749868392944336, -76.915283203125}</string>
+							</array>
+							<array>
+								<string>{-32.337261199951172, -41.626251220703125}</string>
+								<string>{34.329051971435547, -21.220878601074219}</string>
+								<string>{35.001598358154297, 0}</string>
+								<string>{34.329051971435547, 21.220878601074219}</string>
+								<string>{-32.337261199951172, 41.626251220703125}</string>
+								<string>{-34.329051971435547, 21.220878601074219}</string>
+								<string>{-35.001598358154297, 1.3321050839276097e-14}</string>
+								<string>{-34.329051971435547, -21.220878601074219}</string>
+							</array>
+							<array>
+								<string>{34.329051971435547, 21.220878601074219}</string>
+								<string>{32.337261199951172, 41.626251220703125}</string>
+								<string>{29.102766036987305, 60.431949615478516}</string>
+								<string>{24.749868392944336, 76.915283203125}</string>
+								<string>{-19.445846557617188, 90.442802429199219}</string>
+								<string>{-24.749868392944336, 76.915283203125}</string>
+								<string>{-29.102766036987305, 60.431949615478516}</string>
+								<string>{-32.337261199951172, 41.626251220703125}</string>
+							</array>
+							<array>
+								<string>{24.749868392944336, 76.915283203125}</string>
+								<string>{19.445846557617188, 90.442802429199219}</string>
+								<string>{13.394532203674316, 100.49465942382812}</string>
+								<string>{6.8284730911254883, 106.68456268310547}</string>
+								<string>{2.1432296787456638e-15, 108.77463531494141}</string>
+								<string>{-6.8284730911254883, 106.68456268310547}</string>
+								<string>{-13.394532203674316, 100.49465942382812}</string>
+								<string>{-19.445846557617188, 90.442802429199219}</string>
+							</array>
+						</array>
+						<key>shape</key>
+						<integer>4</integer>
+						<key>type</key>
+						<integer>2</integer>
+					</dict>
 					<key>nodeType</key>
 					<string>LHNode</string>
 					<key>parentUUID</key>
@@ -1979,7 +4818,7 @@
 					<key>rotation</key>
 					<real>0.0</real>
 					<key>scale</key>
-					<string>{1.000000, 1.000000}</string>
+					<string>{2.000000, 2.000000}</string>
 					<key>size</key>
 					<string>{70.003197, 217.549271}</string>
 					<key>tags</key>
@@ -1995,7 +4834,7 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.500000, 1.000000}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>children</key>
 					<array>
 						<dict>
@@ -2008,7 +4847,49 @@
 							<key>generalPosition</key>
 							<string>{0.052083, 0.078125}</string>
 							<key>name</key>
-							<string>UntitledNode2</string>
+							<string>node2</string>
+							<key>nodePhysics</key>
+							<dict>
+								<key>allowSleep</key>
+								<true/>
+								<key>angularDamping</key>
+								<real>0.0</real>
+								<key>angularVelocity</key>
+								<real>0.0</real>
+								<key>bullet</key>
+								<false/>
+								<key>fixedRotation</key>
+								<false/>
+								<key>genericFixture</key>
+								<dict>
+									<key>category</key>
+									<integer>1</integer>
+									<key>density</key>
+									<real>0.10000000149011612</real>
+									<key>friction</key>
+									<real>0.20000000298023224</real>
+									<key>mask</key>
+									<integer>65535</integer>
+									<key>name</key>
+									<string>GenericFixture</string>
+									<key>restitution</key>
+									<real>0.0</real>
+									<key>sensor</key>
+									<false/>
+									<key>shapeID</key>
+									<integer>0</integer>
+								</dict>
+								<key>gravityScale</key>
+								<real>1</real>
+								<key>linearDamping</key>
+								<real>0.0</real>
+								<key>linearVelocity</key>
+								<string>{0.000000, 0.000000}</string>
+								<key>shape</key>
+								<integer>0</integer>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
 							<key>nodeType</key>
 							<string>LHNode</string>
 							<key>parentUUID</key>
@@ -2032,9 +4913,51 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.338542, 0.625000}</string>
+					<string>{0.338542, 0.585938}</string>
 					<key>name</key>
-					<string>UntitledNode1</string>
+					<string>node1</string>
+					<key>nodePhysics</key>
+					<dict>
+						<key>allowSleep</key>
+						<true/>
+						<key>angularDamping</key>
+						<real>0.0</real>
+						<key>angularVelocity</key>
+						<real>0.0</real>
+						<key>bullet</key>
+						<false/>
+						<key>fixedRotation</key>
+						<false/>
+						<key>genericFixture</key>
+						<dict>
+							<key>category</key>
+							<integer>1</integer>
+							<key>density</key>
+							<real>0.10000000149011612</real>
+							<key>friction</key>
+							<real>0.20000000298023224</real>
+							<key>mask</key>
+							<integer>65535</integer>
+							<key>name</key>
+							<string>GenericFixture</string>
+							<key>restitution</key>
+							<real>0.0</real>
+							<key>sensor</key>
+							<false/>
+							<key>shapeID</key>
+							<integer>0</integer>
+						</dict>
+						<key>gravityScale</key>
+						<real>1</real>
+						<key>linearDamping</key>
+						<real>0.0</real>
+						<key>linearVelocity</key>
+						<string>{0.000000, 0.000000}</string>
+						<key>shape</key>
+						<integer>0</integer>
+						<key>type</key>
+						<integer>0</integer>
+					</dict>
 					<key>nodeType</key>
 					<string>LHNode</string>
 					<key>parentUUID</key>
@@ -2058,11 +4981,11 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.500000, 0.500000}</string>
+					<string>{0.500000, 1.000000}</string>
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.390625, 0.585938}</string>
+					<string>{0.390625, 0.625000}</string>
 					<key>imageFileName</key>
 					<string>test.png</string>
 					<key>name</key>
@@ -2210,12 +5133,16 @@
 	<string>LHScene</string>
 	<key>physicsBoundaries</key>
 	<dict>
+		<key>1024x768</key>
+		<string>{{0.000000, -0.078125}, {1.000000, 0.781250}}</string>
 		<key>1136x640</key>
+		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<key>2048x1536</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>960x640</key>
 		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
 		<key>general</key>
-		<string>{{0.000000, 0.000000}, {1.000000, 1.000000}}</string>
+		<string>{{0.000000, -0.078125}, {1.000000, 0.781250}}</string>
 	</dict>
 	<key>sceneFormat</key>
 	<real>1</real>
@@ -2225,7 +5152,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>CB25385D-81D4-48A4-9097-DE8B70AB3586</key>
+		<key>007E083D-D63F-4E00-8242-1B89C1B8DFF5</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>

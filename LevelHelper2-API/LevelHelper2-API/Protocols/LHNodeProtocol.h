@@ -103,6 +103,7 @@
 -(id<LHUserPropertyProtocol>)userProperty;
 
 -(CGPoint)anchor;
+-(void)setAnchor:(CGPoint)pt;
 -(CGSize)contentSize;
 
 -(SKNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name;

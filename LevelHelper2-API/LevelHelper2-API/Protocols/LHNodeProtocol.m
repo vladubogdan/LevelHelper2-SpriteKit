@@ -37,6 +37,8 @@
 #import "LHDistanceJointNode.h"
 #import "LHPrismaticJointNode.h"
 
+#import "SKNode+Transforms.h"
+
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
 -(void)addLateLoadingNode:(SKNode*)node;
@@ -147,51 +149,24 @@
                 }
                 
                 if([_node respondsToSelector:@selector(anchorPoint)]){
-                    //CGPoint anchor = [dict pointForKey:@"anchor"];
-                    //anchor.y = 1.0f - anchor.y;
                     [(LHSprite*)_node setAnchorPoint:_anchor];
                 }
 
                 SKNode* prnt = [_node parent];
-                //if([prnt isKindOfClass:[SKSpriteNode class]]){
-                    if([prnt respondsToSelector:@selector(lhAnchor)])
-                    {
-                        CGPoint anc = [(id<LHNodeProtocol>)prnt lhAnchor];
-                        CGSize contentSize = [(id<LHNodeProtocol>)prnt lhContentSize];
-                        //SKSpriteNode* p = (SKSpriteNode*)prnt;
-                        //CGPoint anc = [p anchorPoint];
-                        //pos.x -= p.size.width*(anc.x - 0.5f);
-                        //pos.y -= p.size.height*(anc.y- 0.5f);
-                        
-                        pos.x -= contentSize.width*(anc.x - 0.5f);
-                        pos.y -= contentSize.height*(anc.y- 0.5f);
-                    }
-                //}
-                
+                if([prnt isKindOfClass:[SKSpriteNode class]]){
+                    SKSpriteNode* p = (SKSpriteNode*)prnt;
+                    CGPoint anc = [p anchorPoint];
+                    pos.x -= p.size.width*(anc.x - 0.5f);
+                    pos.y -= p.size.height*(anc.y- 0.5f);
+                }
+
                 [_node setPosition:pos];
-                
-//                if([_node isKindOfClass:[LHNode class]]){
-//                    //we dont have anchor so if node does not have a 0.5, 0.5 anchor in LH then the position
-//                    //will be wrong
-//                    CGPoint anchor = [dict pointForKey:@"anchor"];
-//                    anchor.y = 1.0f - anchor.y;
-//                    CGSize size = [dict sizeForKey:@"size"];
-//                    
-//                    pos.x -= size.width*(anchor.x - 0.5f);
-//                    pos.y -= size.height*(anchor.y - 0.5f);
-//                    
-//                    [_node setPosition:pos];
-//                    
-//                    NSLog(@"DICT %@", dict);
-//                    
-//                }
             }
             
             if([dict objectForKey:@"size"]  && [_node respondsToSelector:@selector(setSize:)]){
                 ((SKSpriteNode*)_node).size = _contentSize;
             }
-            
-            
+                        
             if([dict objectForKey:@"alpha"])
                 [_node setAlpha:[dict floatForKey:@"alpha"]/255.0f];
             
@@ -534,6 +509,9 @@
 
 -(CGPoint)anchor{
     return _anchor;
+}
+-(void)setAnchor:(CGPoint)pt{
+    _anchor = pt;
 }
 -(CGSize)contentSize{
     return _contentSize;

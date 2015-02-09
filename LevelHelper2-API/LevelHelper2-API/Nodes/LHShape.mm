@@ -95,6 +95,24 @@
         _animationProtocolImp = [[LHNodeAnimationProtocolImp alloc] initAnimationProtocolImpWithDictionary:dict
                                                                                                       node:self];
         
+//#if LH_DEBUG
+//        {
+//            CGSize _size = [dict sizeForKey:@"size"];
+//            CGPoint _scl = [dict pointForKey:@"scale"];
+//            _size.width *= _scl.x;
+//            _size.height *= _scl.y;
+//            SKShapeNode* debugShapeNode = [SKShapeNode node];
+//            CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
+//                                                                -_size.height*0.5,
+//                                                                _size.width,
+//                                                                _size.height),
+//                                                     nil);
+//            debugShapeNode.path = pathRef;
+//            CGPathRelease(pathRef);
+//            debugShapeNode.strokeColor = [SKColor greenColor];
+//            [self addChild:debugShapeNode];
+//        }
+//#endif
     }
     
     return self;

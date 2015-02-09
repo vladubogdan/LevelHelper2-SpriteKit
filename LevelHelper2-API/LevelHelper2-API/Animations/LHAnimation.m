@@ -8,6 +8,8 @@
 
 #import "LHAnimation.h"
 
+#import "LHNodeProtocol.h"
+
 #import "LHNode.h"
 #import "LHSprite.h"
 #import "LHCamera.h"
@@ -404,6 +406,17 @@
         newPos.x -= p.size.width*(anc.x - 0.5f);
         newPos.y -= p.size.height*(anc.y- 0.5f);
     }
+
+//    SKNode* p = (SKSpriteNode*)[animNode parent];
+//    if([p respondsToSelector:@selector(lhAnchor)])
+//    {
+//        CGPoint anc = [(id<LHNodeProtocol>)p lhAnchor];
+//        CGSize contentSize = [(id<LHNodeProtocol>)p lhContentSize];
+       
+//        newPos.x -= contentSize.width*(anc.x - 0.5f);
+//        newPos.y -= contentSize.height*(anc.y- 0.5f);
+//    }
+
     
     return newPos;
 }

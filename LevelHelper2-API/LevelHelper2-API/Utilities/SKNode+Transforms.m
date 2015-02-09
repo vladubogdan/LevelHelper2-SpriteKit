@@ -8,12 +8,36 @@
 
 #import "SKNode+Transforms.h"
 #import "LHUtils.h"
+#import "LHGameWorldNode.h"
+#import "LHUINode.h"
+#import "LHBackUINode.h"
 
 @implementation SKNode (Transforms)
 
 #pragma mark - TRANSFORMS
 -(CGSize)contentSize{
-    return CGSizeMake(64, 64);
+    if([self respondsToSelector:@selector(size)]){
+        return [(SKSpriteNode*)self size];
+    }
+    
+    if([self respondsToSelector:@selector(lhContentSize)]){
+        return [(id<LHNodeProtocol>)self lhContentSize];
+    }
+    
+    return CGSizeMake(32, 32);
+}
+
+-(CGPoint)nodeAnchor{
+    
+    if([self respondsToSelector:@selector(anchorPoint)]){
+        return [(SKSpriteNode*)self anchorPoint];
+    }
+    
+    if([self respondsToSelector:@selector(lhAnchor)]){
+        return [(id<LHNodeProtocol>)self lhAnchor];
+    }
+    
+    return CGPointMake(0.5, 0.5);
 }
 
 -(CGRect)rect{
@@ -29,12 +53,8 @@
                       size.height);
 }
 
--(CGPoint)anchor{
-    return CGPointMake(0.5, 0.5);
-}
-
 - (CGPoint)anchorPointInPoints{
-    CGPoint anc = [self anchor];
+    CGPoint anc = [self nodeAnchor];
     CGSize size = [self contentSize];
     if([self isKindOfClass:[SKSpriteNode class]]){
         size = [(SKSpriteNode*)self size];
@@ -49,9 +69,9 @@
         size = [(SKSpriteNode*)self size];
     }
     
-    
-    CGFloat anchorPointX = size.width*[self anchor].x;
-    CGFloat anchorPointY = size.height*[self anchor].y;
+    CGPoint anc = [self nodeAnchor];
+    CGFloat anchorPointX = size.width*anc.x;
+    CGFloat anchorPointY = size.height*anc.y;
     
     CGFloat centerPointX = size.width*0.5;
     CGFloat centerPointY = size.height*0.5;
@@ -82,8 +102,14 @@
 {
 	CGAffineTransform t = [self nodeToParentTransform];
     
-	for (SKNode *p = [self parent]; p != nil/* && ![p isKindOfClass:[SKScene class]]*/; p = p.parent)
+//	for (SKNode *p = [self parent]; p != nil/* && ![p isKindOfClass:[SKScene class]]*/; p = p.parent)
+//		t = CGAffineTransformConcat(t, [p nodeToParentTransform]);
+
+    for (SKNode *p = [self parent];
+         p != nil && ![p isKindOfClass:[LHGameWorldNode class]] && ![p isKindOfClass:[LHUINode class]] && ![p isKindOfClass:[LHBackUINode class]];
+         p = p.parent)
 		t = CGAffineTransformConcat(t, [p nodeToParentTransform]);
+
     
 	return t;
 }
@@ -115,8 +141,10 @@
 {
     CGRect sprRect = [self rect];
     
-    CGPoint pt = CGPointMake(nodePoint.x + (sprRect.origin.x + [self anchor].x * sprRect.size.width),
-                             - nodePoint.y + (sprRect.origin.y + [self anchor].y * sprRect.size.height));
+    CGPoint anc = [self nodeAnchor];
+    
+    CGPoint pt = CGPointMake(nodePoint.x + (sprRect.origin.x + anc.x * sprRect.size.width),
+                             - nodePoint.y + (sprRect.origin.y + anc.y * sprRect.size.height));
     
     return [self convertToWorldSpace:pt];
 }
@@ -215,4 +243,5 @@
     
     return  CGPointMake(local.x/sizer.width, local.y/sizer.height);
 }
+
 @end

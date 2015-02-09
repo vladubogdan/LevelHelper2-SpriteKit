@@ -433,7 +433,7 @@
 						<key>fixedRotation</key>
 						<false/>
 						<key>fixtureUUID</key>
-						<string>53AF7150-C446-4964-B03F-4B9622058591</string>
+						<string>92913095-6852-4AA0-8DEA-013AADB03061</string>
 						<key>genericFixture</key>
 						<dict>
 							<key>category</key>
@@ -497,7 +497,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 0.670116}, {0.706462, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.948766, 0.569927}</string>
+					<string>{0.884623, 0.569927}</string>
 					<key>name</key>
 					<string>UntitledTexturedShape</string>
 					<key>nodePhysics</key>
@@ -678,7 +678,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 0.670116}, {0.706462, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{0.935952, 0.189020}</string>
+					<string>{0.894631, 0.199956}</string>
 					<key>name</key>
 					<string>UntitledTexturedShape_1</string>
 					<key>nodePhysics</key>
@@ -1285,6 +1285,88 @@
 					<key>anchor</key>
 					<string>{0.500000, 0.500000}</string>
 					<key>colorOverlay</key>
+					<string>{{1.000000, 0.670116}, {0.706462, 1.000000}}</string>
+					<key>generalPosition</key>
+					<string>{0.326273, 0.154255}</string>
+					<key>name</key>
+					<string>UntitledTexturedShape_2</string>
+					<key>nodeType</key>
+					<string>LHTexturedShape</string>
+					<key>parentUUID</key>
+					<string>_GAME_WORLD_NODE_UUID_</string>
+					<key>points</key>
+					<array>
+						<dict>
+							<key>point</key>
+							<string>{75.000000, 0.000000}</string>
+						</dict>
+						<dict>
+							<key>point</key>
+							<string>{-75.000000, 86.602540}</string>
+						</dict>
+						<dict>
+							<key>point</key>
+							<string>{-75.000000, -86.602540}</string>
+						</dict>
+					</array>
+					<key>rotation</key>
+					<real>0.0</real>
+					<key>scale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>size</key>
+					<string>{150.000000, 173.205078}</string>
+					<key>tags</key>
+					<array>
+						<string>DEFAULT</string>
+					</array>
+					<key>tileScale</key>
+					<string>{1.000000, 1.000000}</string>
+					<key>tileTexture</key>
+					<false/>
+					<key>triangles</key>
+					<array>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>color</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>point</key>
+							<string>{75.000000, 0.000000}</string>
+							<key>uv</key>
+							<string>{0.890625, 0.500000}</string>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>color</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>point</key>
+							<string>{-75.000000, 86.602540}</string>
+							<key>uv</key>
+							<string>{0.304688, 0.838291}</string>
+						</dict>
+						<dict>
+							<key>alpha</key>
+							<real>255</real>
+							<key>color</key>
+							<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
+							<key>point</key>
+							<string>{-75.000000, -86.602540}</string>
+							<key>uv</key>
+							<string>{0.304688, 0.161709}</string>
+						</dict>
+					</array>
+					<key>uuid</key>
+					<string>33953FDE-B994-4D11-8357-1F6A0C6DA7B9</string>
+					<key>zOrder</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>alpha</key>
+					<real>255</real>
+					<key>anchor</key>
+					<string>{0.500000, 0.500000}</string>
+					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
 					<string>{0.691741, 0.159596}</string>
@@ -1528,7 +1610,7 @@
 	</array>
 	<key>tracedFixtures</key>
 	<dict>
-		<key>53AF7150-C446-4964-B03F-4B9622058591</key>
+		<key>92913095-6852-4AA0-8DEA-013AADB03061</key>
 		<array>
 			<array>
 				<string>{-39.75, -30.75}</string>

@@ -60,19 +60,19 @@
                                                                                                       node:self];
 
 
-#if LH_DEBUG
-        CGSize _size = [dict sizeForKey:@"size"];
-        SKShapeNode* debugShapeNode = [SKShapeNode node];
-        CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
-                                                            -_size.height*0.5,
-                                                            _size.width,
-                                                            _size.height),
-                                                 nil);
-        debugShapeNode.path = pathRef;
-        CGPathRelease(pathRef);
-        debugShapeNode.strokeColor = [SKColor greenColor];
-        [self addChild:debugShapeNode];
-#endif
+//#if LH_DEBUG
+//        CGSize _size = [dict sizeForKey:@"size"];
+//        SKShapeNode* debugShapeNode = [SKShapeNode node];
+//        CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
+//                                                            -_size.height*0.5,
+//                                                            _size.width,
+//                                                            _size.height),
+//                                                 nil);
+//        debugShapeNode.path = pathRef;
+//        CGPathRelease(pathRef);
+//        debugShapeNode.strokeColor = [SKColor greenColor];
+//        [self addChild:debugShapeNode];
+//#endif
     }
     
     return self;

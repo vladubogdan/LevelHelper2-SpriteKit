@@ -170,41 +170,33 @@
         }
 
         
-        
-#if LH_DEBUG
-        
-//        CGSize _size = [dict sizeForKey:@"size"];
-//        SKShapeNode* debugShapeNode = [SKShapeNode node];
-//        CGPathRef pathRef = CGPathCreateWithRect(CGRectMake(-_size.width*0.5,
-//                                                            -_size.height*0.5,
-//                                                            _size.width,
-//                                                            _size.height),
-//                                                 nil);
-//        debugShapeNode.path = pathRef;
-//        CGPathRelease(pathRef);
-//        debugShapeNode.strokeColor = [SKColor greenColor];
-//        [self addChild:debugShapeNode];
+//#if LH_DEBUG
 //
-        
-        CGSize size = [dict sizeForKey:@"size"];
-        
-        SKShapeNode* debugShapeNode = [SKShapeNode node];
-        
-        CGPoint pos = CGPointMake(size.width*0.5, 0);
-        [debugShapeNode setPosition:pos];
-         
-        CGMutablePathRef debugLinePath = CGPathCreateMutable();
-        CGPathMoveToPoint(debugLinePath, nil, size.width*0.5, 0);
-        CGPathAddLineToPoint(debugLinePath, nil, size.width*0.5, size.height);
-        
-        
-        debugShapeNode.path = debugLinePath;
-        CGPathRelease(debugLinePath);
-        
-        debugShapeNode.strokeColor = [SKColor greenColor];
-        [self addChild:debugShapeNode];
-        
-#endif//LH_DEBUG
+//        
+//        CGSize size = [dict sizeForKey:@"size"];
+//        
+//        CGSize prntSize = CGSizeZero;
+//        if([prnt respondsToSelector:@selector(lhContentSize)]){
+//            prntSize = [(id<LHNodeProtocol>)prnt lhContentSize];
+//        }
+//        
+//        SKShapeNode* debugShapeNode = [SKShapeNode node];
+//        
+//        CGPoint pos = CGPointMake(size.width*0.5, -prntSize.height*0.5);
+//        [debugShapeNode setPosition:pos];
+//         
+//        CGMutablePathRef debugLinePath = CGPathCreateMutable();
+//        CGPathMoveToPoint(debugLinePath, nil, size.width*0.5, 0);
+//        CGPathAddLineToPoint(debugLinePath, nil, size.width*0.5, size.height);
+//        
+//        
+//        debugShapeNode.path = debugLinePath;
+//        CGPathRelease(debugLinePath);
+//        
+//        debugShapeNode.strokeColor = [SKColor yellowColor];
+//        [self addChild:debugShapeNode];
+//        
+//#endif//LH_DEBUG
         
     }
     
