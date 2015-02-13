@@ -28,11 +28,11 @@
  */
 -(BOOL)isActive;
 
-/**
- Set this animation as the active one.
- @param active A BOOL value specifying the active state of the animation.
+/*!
+ * Set this animation as the active one.
+ * @param value A BOOL value specifying the active state of the animation.
  */
--(void)setActive:(BOOL)active;
+-(void)setActive:(BOOL)value;
 
 /**
  The time it takes for the animation to finish a loop.
