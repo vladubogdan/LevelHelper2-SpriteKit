@@ -46,6 +46,15 @@
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt;
 
+/**
+ Some SpriteKit nodes like SKNode do not have an anchor. This method returns the anchor as defined in LevelHelper.
+ */
+-(CGPoint)lhAnchor;
+
+/**
+ Some SpriteKit nodes like SKNode do not have a size. This method returns the anchor as defined in LevelHelper.
+ */
+-(CGSize)lhContentSize;
 @optional
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -93,6 +102,10 @@
 -(NSArray*)tags;
 -(id<LHUserPropertyProtocol>)userProperty;
 
+-(CGPoint)anchor;
+-(void)setAnchor:(CGPoint)pt;
+-(CGSize)contentSize;
+
 -(SKNode <LHNodeProtocol>*)childNodeWithName:(NSString*)name;
 -(SKNode <LHNodeProtocol>*)childNodeWithUUID:(NSString*)uuid;
 -(NSMutableArray*)childrenWithTags:(NSArray*)tagValues containsAny:(BOOL)any;
@@ -118,6 +131,14 @@ return [_nodeProtocolImp uuid];\
 \
 -(NSArray*)tags{ \
 return [_nodeProtocolImp tags]; \
+} \
+\
+-(CGPoint)lhAnchor{ \
+return [_nodeProtocolImp anchor]; \
+} \
+\
+-(CGSize)lhContentSize{ \
+return [_nodeProtocolImp contentSize]; \
 } \
 \
 -(id<LHUserPropertyProtocol>)userProperty{\

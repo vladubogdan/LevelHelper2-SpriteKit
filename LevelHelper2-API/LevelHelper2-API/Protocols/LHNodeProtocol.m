@@ -12,24 +12,32 @@
 #import "LHScene.h"
 #import "LHUserPropertyProtocol.h"
 
-#import "LHSprite.h"
 #import "LHGameWorldNode.h"
 #import "LHBackUINode.h"
 #import "LHUINode.h"
+
+#import "LHSprite.h"
 #import "LHBezier.h"
 #import "LHShape.h"
 #import "LHNode.h"
 #import "LHWater.h"
 #import "LHGravityArea.h"
+#import "LHAsset.h"
+#import "LHCamera.h"
+
 #import "LHParallax.h"
 #import "LHParallaxLayer.h"
-#import "LHAsset.h"
+
+#import "LHBone.h"
+#import "LHBoneNodes.h"
+
 #import "LHWeldJointNode.h"
 #import "LHRopeJointNode.h"
-#import "LHCamera.h"
 #import "LHRevoluteJointNode.h"
 #import "LHDistanceJointNode.h"
 #import "LHPrismaticJointNode.h"
+
+#import "SKNode+Transforms.h"
 
 
 @interface LHScene (LH_SCENE_NODES_PRIVATE_UTILS)
@@ -44,6 +52,8 @@
     BOOL b2WorldDirty;
     __unsafe_unretained SKNode* _node;
     
+    CGPoint _anchor;
+    CGSize _contentSize;
     NSString*           _uuid;
     NSMutableArray*     _tags;
     id<LHUserPropertyProtocol> _userProperty;
@@ -61,6 +71,7 @@
 + (instancetype)nodeProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd{
     return LH_AUTORELEASED([[self alloc] initNodeProtocolImpWithDictionary:dict node:nd]);
 }
+
 
 - (instancetype)initNodeProtocolImpWithDictionary:(NSDictionary*)dict node:(SKNode*)nd{
     
@@ -104,6 +115,14 @@
             }
             
             
+            if([dict objectForKey:@"anchor"]){
+                _anchor = [dict pointForKey:@"anchor"];
+                 _anchor.y = 1.0f - _anchor.y;
+            }
+            
+            if([dict objectForKey:@"size"]){
+                _contentSize = [dict sizeForKey:@"size"];
+            }
             
             if([dict objectForKey:@"generalPosition"]&&
                ![_node isKindOfClass:[LHUINode class]] &&
@@ -129,10 +148,8 @@
                     }
                 }
                 
-                if([dict objectForKey:@"anchor"] && [_node respondsToSelector:@selector(anchorPoint)]){
-                    CGPoint anchor = [dict pointForKey:@"anchor"];
-                    anchor.y = 1.0f - anchor.y;
-                    [(LHSprite*)_node setAnchorPoint:anchor];
+                if([_node respondsToSelector:@selector(anchorPoint)]){
+                    [(LHSprite*)_node setAnchorPoint:_anchor];
                 }
 
                 SKNode* prnt = [_node parent];
@@ -142,15 +159,14 @@
                     pos.x -= p.size.width*(anc.x - 0.5f);
                     pos.y -= p.size.height*(anc.y- 0.5f);
                 }
-                
+
                 [_node setPosition:pos];
             }
             
-            
-            if([dict objectForKey:@"size"] && [_node respondsToSelector:@selector(setSize:)]){
-                ((SKSpriteNode*)_node).size = [dict sizeForKey:@"size"];
+            if([dict objectForKey:@"size"]  && [_node respondsToSelector:@selector(setSize:)]){
+                ((SKSpriteNode*)_node).size = _contentSize;
             }
-            
+                        
             if([dict objectForKey:@"alpha"])
                 [_node setAlpha:[dict floatForKey:@"alpha"]/255.0f];
             
@@ -247,17 +263,29 @@
                                                         parent:prnt];
         return pNode;
     }
-    if([nodeType isEqualToString:@"LHSprite"])
+    else if([nodeType isEqualToString:@"LHSprite"])
     {
         LHSprite* spr = [LHSprite nodeWithDictionary:childInfo
                                               parent:prnt];
         return spr;
+    }
+    else if([nodeType isEqualToString:@"LHBone"])
+    {
+        LHBone* pNode = [LHBone nodeWithDictionary:childInfo
+                                              parent:prnt];
+        return pNode;
     }
     else if([nodeType isEqualToString:@"LHNode"])
     {
         LHNode* nd = [LHNode nodeWithDictionary:childInfo
                                          parent:prnt];
         return nd;
+    }
+    else if([nodeType isEqualToString:@"LHBoneNodes"])
+    {
+        LHBoneNodes* pNode = [LHBoneNodes nodeWithDictionary:childInfo
+                                                      parent:prnt];
+        return pNode;
     }
     else if([nodeType isEqualToString:@"LHBezier"])
     {
@@ -477,6 +505,16 @@
         }
     }
     return temp;
+}
+
+-(CGPoint)anchor{
+    return _anchor;
+}
+-(void)setAnchor:(CGPoint)pt{
+    _anchor = pt;
+}
+-(CGSize)contentSize{
+    return _contentSize;
 }
 
 - (void)update:(NSTimeInterval)currentTime delta:(float)dt

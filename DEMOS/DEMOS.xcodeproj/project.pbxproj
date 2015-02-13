@@ -29,6 +29,9 @@
 		6E72A6081983747F00143439 /* Info-Box2d.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EBEA33A1959C01800726044 /* Info-Box2d.plist */; };
 		6E72A6611983770000143439 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E72A6601983770000143439 /* Cocoa.framework */; };
 		6E72A6631983770700143439 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E72A6621983770700143439 /* SpriteKit.framework */; };
+		6E77DFA81A87357600159958 /* LHSceneSkeletalCharacterDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFA71A87357600159958 /* LHSceneSkeletalCharacterDemo.mm */; };
+		6E77DFA91A87357600159958 /* LHSceneSkeletalCharacterDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFA71A87357600159958 /* LHSceneSkeletalCharacterDemo.mm */; };
+		6E77DFAA1A87357600159958 /* LHSceneSkeletalCharacterDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E77DFA71A87357600159958 /* LHSceneSkeletalCharacterDemo.mm */; };
 		6E89FCF7192E0A390040478F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCF6192E0A390040478F /* Foundation.framework */; };
 		6E89FCF9192E0A390040478F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCF8192E0A390040478F /* CoreGraphics.framework */; };
 		6E89FCFB192E0A390040478F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E89FCFA192E0A390040478F /* UIKit.framework */; };
@@ -252,6 +255,8 @@
 		6E72A6101983748000143439 /* Info-Box2d-Mac.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Box2d-Mac.plist"; path = "/Volumes/PersonalFiles/ActiveProjects/LevelHelper2-API-GITHUB/SpriteKit/Info-Box2d-Mac.plist"; sourceTree = "<absolute>"; };
 		6E72A6601983770000143439 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		6E72A6621983770700143439 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		6E77DFA61A87357600159958 /* LHSceneSkeletalCharacterDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHSceneSkeletalCharacterDemo.h; path = SourceCode/LHSceneSkeletalCharacterDemo.h; sourceTree = SOURCE_ROOT; };
+		6E77DFA71A87357600159958 /* LHSceneSkeletalCharacterDemo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LHSceneSkeletalCharacterDemo.mm; path = SourceCode/LHSceneSkeletalCharacterDemo.mm; sourceTree = SOURCE_ROOT; };
 		6E89FCF3192E0A390040478F /* DEMOS - iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMOS - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E89FCF6192E0A390040478F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E89FCF8192E0A390040478F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -429,6 +434,8 @@
 			children = (
 				6EDACB891A6E833400BE3867 /* LHSceneDemo.h */,
 				6EDACB8A1A6E833400BE3867 /* LHSceneDemo.mm */,
+				6E77DFA61A87357600159958 /* LHSceneSkeletalCharacterDemo.h */,
+				6E77DFA71A87357600159958 /* LHSceneSkeletalCharacterDemo.mm */,
 				6ECA5F8A1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.h */,
 				6ECA5F8B1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm */,
 				6ECA5F991A6EA67A003F8F0F /* LHSceneOnTheFlySpritesWithPhysicsDemo.h */,
@@ -784,6 +791,7 @@
 				6EDACBB41A6E833400BE3867 /* LHSceneCameraDemo.mm in Sources */,
 				6EDACBA81A6E833400BE3867 /* BlueRobotSprite.mm in Sources */,
 				6EDACBBA1A6E833400BE3867 /* LHSceneCharacterAnimationDemo.mm in Sources */,
+				6E77DFA91A87357600159958 /* LHSceneSkeletalCharacterDemo.mm in Sources */,
 				6EDACBEA1A6E833400BE3867 /* LHSceneWaterAreaDemo.mm in Sources */,
 				6EDACBDB1A6E833400BE3867 /* LHSceneRemoveOnCollisionDemo.mm in Sources */,
 				6EDACBE11A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
@@ -809,6 +817,7 @@
 				6EDACBD61A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
 				6ECA5F8E1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
 				6EDACBE81A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6E77DFAA1A87357600159958 /* LHSceneSkeletalCharacterDemo.mm in Sources */,
 				6EDACBE21A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
 				6EDACBE51A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
 				6EDACBD91A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,
@@ -845,6 +854,7 @@
 				6EDACBD41A6E833400BE3867 /* LHSceneParallaxDemo.mm in Sources */,
 				6ECA5F8C1A6E8AE4003F8F0F /* LHSceneAdvancedPhysicsDemo.mm in Sources */,
 				6EDACBE61A6E833400BE3867 /* LHSceneUserPropertiesDemo.mm in Sources */,
+				6E77DFA81A87357600159958 /* LHSceneSkeletalCharacterDemo.mm in Sources */,
 				6EDACBE01A6E833400BE3867 /* LHSceneShapesDemo.mm in Sources */,
 				6EDACBE31A6E833400BE3867 /* LHSceneSpriteSheetAnimationDemo.mm in Sources */,
 				6EDACBD71A6E833400BE3867 /* LHScenePhysicsBodiesDemo.mm in Sources */,

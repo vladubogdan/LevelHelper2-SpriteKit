@@ -120,6 +120,29 @@ NS_INLINE CGPoint LHPointAdd(CGPoint ptA, CGPoint ptB)
     return CGPointMake(ptA.x + ptB.x, ptA.y + ptB.y);
 }
 
+//Converts radians to a normalized vector.
+NS_INLINE CGPoint LHPointForAngle(const CGFloat a)
+{
+	return CGPointMake((CGFloat)cos(a), (CGFloat)sin(a));
+}
+
+// Calculates difference of two points.
+NS_INLINE CGPoint LHPointSub(const CGPoint v1, const CGPoint v2)
+{
+	return CGPointMake(v1.x - v2.x, v1.y - v2.y);
+}
+
+// Converts a vector to radians.
+NS_INLINE CGFloat LHPointToAngle(const CGPoint v)
+{
+	return (CGFloat)atan2(v.y, v.x);
+}
+
+NS_INLINE double LHNormalAbsoluteAngleDegrees(double angle) {
+    angle = fmod(angle, 360.0f);
+    return angle >= 0 ? angle : (angle + 360.0f);
+}
+
 NS_INLINE float LHDistanceBetweenPoints(CGPoint pointA, CGPoint pointB)
 {
     return sqrt((pointB.x - pointA.x)*(pointB.x - pointA.x) +

@@ -644,7 +644,7 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.469799, 0.045409}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>children</key>
 					<array>
 						<dict>
@@ -929,7 +929,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{-0.015198, 0.032704}</string>
+					<string>{-0.012217, 0.135440}</string>
 					<key>name</key>
 					<string>lowerBody</string>
 					<key>nodeType</key>
@@ -955,7 +955,7 @@
 					<key>alpha</key>
 					<real>255</real>
 					<key>anchor</key>
-					<string>{0.444409, 0.900373}</string>
+					<string>{0.500000, 0.500000}</string>
 					<key>children</key>
 					<array>
 						<dict>
@@ -1626,7 +1626,7 @@
 					<key>colorOverlay</key>
 					<string>{{1.000000, 1.000000}, {1.000000, 1.000000}}</string>
 					<key>generalPosition</key>
-					<string>{-0.023221, 0.025155}</string>
+					<string>{-0.009864, -0.099069}</string>
 					<key>name</key>
 					<string>upperBody</string>
 					<key>nodeType</key>
@@ -1753,7 +1753,7 @@
 			<key>nodeType</key>
 			<string>LHNode</string>
 			<key>parentUUID</key>
-			<string>57FB43EE-9CA3-45FC-AA84-61E619C3C238</string>
+			<string>D662F6EA-975B-4EAC-A0BD-6D5C0852D0BD</string>
 			<key>rotation</key>
 			<real>0.0</real>
 			<key>scale</key>
@@ -1779,7 +1779,7 @@
 	<key>nodeType</key>
 	<string>LHAsset</string>
 	<key>parentUUID</key>
-	<string>7242219E-DF9E-4321-8B14-ECCEAD5F24EE</string>
+	<string>9B966CD1-FFCE-40ED-9ACD-DB733E51785D</string>
 	<key>rotation</key>
 	<real>0.0</real>
 	<key>scale</key>
@@ -1791,7 +1791,7 @@
 		<string>DEFAULT</string>
 	</array>
 	<key>uuid</key>
-	<string>57FB43EE-9CA3-45FC-AA84-61E619C3C238</string>
+	<string>D662F6EA-975B-4EAC-A0BD-6D5C0852D0BD</string>
 	<key>zOrder</key>
 	<integer>0</integer>
 </dict>
