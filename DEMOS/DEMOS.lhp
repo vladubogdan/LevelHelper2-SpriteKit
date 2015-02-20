@@ -18,7 +18,7 @@
 			<key>SuffixName</key>
 			<string></string>
 			<key>color</key>
-			<string>{{0.04005897045135498, 0}, {0.040770318359136581, 1}}</string>
+			<string>{{0.039777018129825592, 0}, {0.040761556476354599, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -46,7 +46,7 @@
 			<key>SuffixName</key>
 			<string>-667</string>
 			<key>color</key>
-			<string>{{0.04005897045135498, 0}, {0.040770318359136581, 1}}</string>
+			<string>{{0.039777018129825592, 0}, {0.040761556476354599, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -60,7 +60,7 @@
 			<key>SuffixName</key>
 			<string>-736@2x</string>
 			<key>color</key>
-			<string>{{0.04005897045135498, 0}, {0.040770318359136581, 1}}</string>
+			<string>{{0.039777018129825592, 0}, {0.040761556476354599, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -74,7 +74,7 @@
 			<key>SuffixName</key>
 			<string>-ipad</string>
 			<key>color</key>
-			<string>{{0.028805084526538849, 0}, {0.23379379510879517, 1}}</string>
+			<string>{{0.032339703291654587, 0}, {0.17742452025413513, 1}}</string>
 		</dict>
 		<dict>
 			<key>DeviceName</key>
@@ -88,7 +88,7 @@
 			<key>SuffixName</key>
 			<string>-ipad@2x</string>
 			<key>color</key>
-			<string>{{0.028805084526538849, 0}, {0.23379379510879517, 1}}</string>
+			<string>{{0.032339703291654587, 0}, {0.17742452025413513, 1}}</string>
 		</dict>
 	</array>
 	<key>engine</key>
@@ -159,6 +159,16 @@
 					<true/>
 				</dict>
 				<key>introductionScene.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>multiLevelsBlueRobots.lhs</key>
+				<dict>
+					<key>publish</key>
+					<true/>
+				</dict>
+				<key>multiLevelsPinkRobots.lhs</key>
 				<dict>
 					<key>publish</key>
 					<true/>

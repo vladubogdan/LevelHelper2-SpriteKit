@@ -34,6 +34,8 @@
 #import "LHSceneOnTheFlySpritesWithPhysicsDemo.h"
 #import "LHSceneSkeletalCharacterDemo.h"
 
+#import "LHSceneLoadMultipleLevels.h"
+
 //test
 #import "LHSceneNodePositioningTest.h"
 
@@ -62,6 +64,8 @@
         
         availableScenes = [[NSMutableArray alloc] init];
         [availableScenes addObject:[LHSceneIntroduction class]];
+        
+        [availableScenes addObject:[LHSceneLoadMultipleLevels class]];
         
         [availableScenes addObject:[LHSceneSkeletalCharacterDemo class]];
         
