@@ -100,11 +100,7 @@
 
 -(void)dealloc
 {
-    
-#if TARGET_OS_IPHONE
-    [[self view] removeGestureRecognizer:pinchRecognizer];
-    LH_SAFE_RELEASE(pinchRecognizer);
-#endif
+    [self removePinchRecognizer];
     
     _animationsDelegate = nil;
     _collisionsDelegate = nil;
@@ -260,9 +256,28 @@
 
 - (void)didMoveToView:(SKView *)view
 {
+    [self addPinchRecognizer];
+}
+
+-(void)addPinchRecognizer
+{
 #if TARGET_OS_IPHONE
-    pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
-    [[self view] addGestureRecognizer:pinchRecognizer];
+    if(!pinchRecognizer)
+    {
+        pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+        [[self view] addGestureRecognizer:pinchRecognizer];
+    }
+#endif
+}
+
+-(void)removePinchRecognizer
+{
+#if TARGET_OS_IPHONE
+    if(pinchRecognizer)
+    {
+        [[self view] removeGestureRecognizer:pinchRecognizer];
+        LH_SAFE_RELEASE(pinchRecognizer);
+    }
 #endif
 }
 
@@ -485,8 +500,6 @@
 - (void) pinch:(UIPinchGestureRecognizer *)recognizer{
     
     CGPoint touchLocation = [recognizer locationInView:recognizer.view];
-    
-//    NSLog(@"PINCH %f %f", touchLocation.x, touchLocation.y);
     
     touchLocation = [self convertToNodeSpace:touchLocation];
     

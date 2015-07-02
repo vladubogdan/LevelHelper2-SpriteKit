@@ -241,6 +241,15 @@
 #endif
 
 
+#pragma mark - TOUCHES
+
+#if __CC_PLATFORM_IOS
+-(void)addPinchRecognizer;
+-(void)removePinchRecognizer;//if you are trying to do multi-touch on multiple nodes you should remove the pinch recognized or else the touch will get canceled. Camere zoom will no longer work by pinch
+-(void)pinch:(UIPinchGestureRecognizer *)recognizer;
+#endif
+
+
 #pragma mark - Box2d Support
 
 #if LH_USE_BOX2D
