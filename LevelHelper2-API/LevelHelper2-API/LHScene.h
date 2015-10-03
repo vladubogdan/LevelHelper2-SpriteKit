@@ -243,7 +243,7 @@
 
 #pragma mark - TOUCHES
 
-#if __CC_PLATFORM_IOS
+#if TARGET_OS_IPHONE
 -(void)addPinchRecognizer;
 -(void)removePinchRecognizer;//if you are trying to do multi-touch on multiple nodes you should remove the pinch recognized or else the touch will get canceled. Camere zoom will no longer work by pinch
 -(void)pinch:(UIPinchGestureRecognizer *)recognizer;

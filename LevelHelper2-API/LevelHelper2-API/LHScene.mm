@@ -256,6 +256,10 @@
 
 - (void)didMoveToView:(SKView *)view
 {
+#if TARGET_OS_IPHONE
+    [self view].multipleTouchEnabled = YES;
+#endif
+    
     [self addPinchRecognizer];
 }
 

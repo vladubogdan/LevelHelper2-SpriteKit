@@ -107,7 +107,7 @@ offset, increment, velocity, left, right, halfWidth, middle;
     }
     float v = (waveBlock != nil ? waveBlock((position - left + offset) / wavelength) : 1.0f) * amplitude;
     if(clampBlock != nil) {
-        v = clampBlock(abs(position - middle), v, -v, halfWidth);
+        v = clampBlock((float)abs(position - middle), v, -v, halfWidth);
     }
     return v;
 }

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Version</key>
-	<integer>23</integer>
+	<integer>24</integer>
 	<key>NewProjectQuestion</key>
 	<string>Do you want to use the basic Sprite Kit Xcode project template?</string>
 	<key>NewProjectInfo</key>
